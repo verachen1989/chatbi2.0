@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>chatbi2.0 Demo</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(198, 235, 213, 0.45), transparent 28%),
+        linear-gradient(180deg, #f7fbf8 0%, #ffffff 24%, #ffffff 100%);
+      color: #2b2f36;
+    }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 248px;
+      padding: 20px 14px;
+      background: linear-gradient(180deg, #f9fcfa 0%, #ffffff 100%);
+      border-right: 1px solid #edf1ef;
+    }
+
+    .brand {
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #dcefe2, #f2f9f4);
+      margin-bottom: 18px;
+    }
+
+    .new-chat {
+      width: 100%;
+      height: 48px;
+      border: 0;
+      border-radius: 10px;
+      color: #fff;
+      background: #1f7a4f;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 18px;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .menu-item {
+      padding: 12px 14px;
+      border-radius: 10px;
+      color: #4b5563;
+      background: transparent;
+      font-size: 15px;
+    }
+
+    .menu-item.active {
+      background: #f4f7f5;
+      color: #1f2937;
+      font-weight: 600;
+    }
+
+    .main {
+      flex: 1;
+      position: relative;
+      padding: 28px 36px 36px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #2d3748;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .header-badge {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #ffcc68, #f59e0b);
+    }
+
+    .chat-shell {
+      max-width: 1320px;
+      margin: 0 auto;
+      min-height: calc(100vh - 120px);
+      position: relative;
+    }
+
+    .chat-shell.landing {
+      min-height: calc(100vh - 120px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+    }
+
+    .landing-hero {
+      max-width: 900px;
+      text-align: center;
+    }
+
+    .landing-hero.hidden {
+      display: none;
+    }
+
+    .landing-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 28px;
+      font-weight: 600;
+      color: #1f7a4f;
+      margin-bottom: 18px;
+    }
+
+    .landing-title strong {
+      color: #1f7a4f;
+    }
+
+    .landing-bot {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #eef8f1;
+      box-shadow: inset 0 0 0 1px #d7efde;
+      font-size: 24px;
+    }
+
+    .landing-subtitle {
+      font-size: 15px;
+      line-height: 1.9;
+      color: #6b7280;
+    }
+
+    .user-row {
+      display: flex;
+      justify-content: flex-end;
+      margin: 22px 16px 28px;
+    }
+
+    .user-row.hidden {
+      display: none;
+    }
+
+    .user-bubble {
+      max-width: 460px;
+      background: #f1f3f6;
+      color: #2d3748;
+      padding: 16px 20px;
+      border-radius: 16px;
+      font-size: 16px;
+      line-height: 1.7;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+    }
+
+    .agent-block {
+      width: 620px;
+      margin-left: 220px;
+      margin-top: 36px;
+    }
+
+    .agent-block.hidden {
+      display: none;
+    }
+
+    .agent-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .agent-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      background: #eef8f1;
+      box-shadow: inset 0 0 0 1px #d7efde;
+    }
+
+    .agent-status-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+    }
+
+    .agent-status {
+      font-size: 18px;
+      color: #4b5563;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .typing-dots {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .typing-dots span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #9ca3af;
+      animation: blink 1.2s infinite ease-in-out;
+    }
+
+    .typing-dots span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .typing-dots span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes blink {
+      0%, 80%, 100% {
+        opacity: 0.25;
+        transform: translateY(0);
+      }
+      40% {
+        opacity: 1;
+        transform: translateY(-2px);
+      }
+    }
+
+    .event-stream {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .thought-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #f8fafb;
+      border: 1px solid #e9eef2;
+      color: #6b7280;
+      font-size: 13px;
+    }
+
+    .thought-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #eef3f6;
+      color: #64748b;
+      font-size: 11px;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 9px;
+      margin-left: 2px;
+      color: #9aa4b2;
+      animation: blinkCursor 1s infinite;
+    }
+
+    @keyframes blinkCursor {
+      0%, 45% {
+        opacity: 1;
+      }
+      46%, 100% {
+        opacity: 0;
+      }
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #65b784;
+      box-shadow: 0 0 0 4px rgba(101, 183, 132, 0.12);
+    }
+
+    .result-card {
+      margin-top: 4px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1px solid #e8edf2;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.05);
+      overflow: hidden;
+    }
+
+    .result-card.hidden {
+      display: none;
+    }
+
+    .result-head {
+      padding: 18px 20px 8px;
+    }
+
+    .result-title {
+      display: none;
+    }
+
+    .result-summary {
+      font-size: 15px;
+      line-height: 1.9;
+      color: #2f3541;
+      white-space: pre-wrap;
+    }
+
+    .result-summary.loading {
+      min-height: 64px;
+    }
+
+    .answer-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 0 0;
+    }
+
+    .answer-action {
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: #94a3b8;
+      font-size: 16px;
+      line-height: 1;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .answer-action svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .answer-action:hover {
+      color: #475569;
+      background: #f8fafc;
+    }
+
+    .answer-action.active {
+      color: #1f7a4f;
+      background: #eefaf2;
+      border-color: #d9ece0;
+    }
+
+    .answer-action.copy-action {
+      width: 30px;
+      padding: 0;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      padding: 0 20px 18px;
+    }
+
+    .metric-card {
+      padding: 14px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #fbfcfd, #f6f9fb);
+      border: 1px solid #edf1f5;
+    }
+
+    .metric-label {
+      font-size: 12px;
+      color: #94a3b8;
+      margin-bottom: 8px;
+    }
+
+    .metric-value {
+      font-size: 24px;
+      line-height: 1;
+      color: #111827;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .metric-trend {
+      font-size: 12px;
+      color: #1f7a4f;
+    }
+
+    .highlight-list {
+      padding: 0 20px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .highlight-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: #4b5563;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .highlight-bullet {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #7fc69a;
+      margin-top: 9px;
+      flex: none;
+    }
+
+    .table-card {
+      margin: 0 20px 20px;
+      border: 1px solid #e8edf2;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #fff;
+      display: none;
+    }
+
+    .table-card.show {
+      display: block;
+      animation: fadeUp 0.32s ease;
+    }
+
+    .table-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      background: #fbfcfd;
+      border-bottom: 1px solid #edf1f5;
+    }
+
+    .table-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .table-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .action-btn {
+      height: 32px;
+      padding: 0 12px;
+      border-radius: 10px;
+      border: 1px solid #d8e0e8;
+      background: #fff;
+      color: #475569;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .action-btn:hover {
+      border-color: #9ed1b1;
+      color: #1f7a4f;
+      background: #f6fcf8;
+    }
+
+    .action-btn.success {
+      border-color: #b9e3c7;
+      color: #1f7a4f;
+      background: #eefaf2;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    .result-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      color: #374151;
+    }
+
+    .result-table th,
+    .result-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #eef2f5;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    .result-table th {
+      background: #fcfdfd;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    .download-menu {
+      position: relative;
+    }
+
+    .download-panel {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 8px);
+      min-width: 128px;
+      padding: 6px;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px solid #e5ebf0;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.10);
+      display: none;
+      z-index: 5;
+    }
+
+    .download-panel.show {
+      display: block;
+      animation: fadeUp 0.2s ease;
+    }
+
+    .download-item {
+      width: 100%;
+      height: 34px;
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      text-align: left;
+      padding: 0 10px;
+      color: #374151;
+      cursor: pointer;
+    }
+
+    .download-item:hover {
+      background: #f6f8fa;
+    }
+
+    .skeleton {
+      position: relative;
+      overflow: hidden;
+      background: #f3f6f8;
+    }
+
+    .skeleton::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      transform: translateX(-100%);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.72), transparent);
+      animation: shimmer 1.25s infinite;
+    }
+
+    @keyframes shimmer {
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    .summary-skeleton-line {
+      height: 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .summary-skeleton-line:last-child {
+      width: 68%;
+      margin-bottom: 0;
+    }
+
+    .metric-card.loading {
+      min-height: 88px;
+    }
+
+    .metric-card.loading .metric-label,
+    .metric-card.loading .metric-value,
+    .metric-card.loading .metric-trend {
+      height: 12px;
+      border-radius: 999px;
+      color: transparent;
+      background: #eef2f5;
+    }
+
+    .metric-card.loading .metric-value {
+      height: 22px;
+      width: 62%;
+      margin-bottom: 10px;
+    }
+
+    .metric-card.loading .metric-label {
+      width: 48%;
+      margin-bottom: 12px;
+    }
+
+    .metric-card.loading .metric-trend {
+      width: 56%;
+    }
+
+    .highlight-item.loading {
+      align-items: center;
+    }
+
+    .highlight-item.loading .highlight-bullet {
+      background: #d8e7dd;
+      margin-top: 0;
+    }
+
+    .highlight-line {
+      height: 12px;
+      border-radius: 999px;
+      flex: 1;
+      background: #eef2f5;
+    }
+
+    .fade-in {
+      animation: fadeUp 0.32s ease;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .process-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .process-card {
+      opacity: 0;
+      transform: translateY(12px);
+      background: #f5f7fa;
+      border: 1px solid #e8edf2;
+      border-radius: 12px;
+      padding: 14px 16px;
+      transition: all 0.38s ease;
+      cursor: pointer;
+    }
+
+    .process-card.skill-card {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 250, 252, 0.96)) padding-box,
+        linear-gradient(135deg, rgba(79, 172, 254, 0.42), rgba(0, 242, 254, 0.36), rgba(121, 40, 202, 0.34)) border-box;
+      border: 1px solid transparent;
+      box-shadow: 0 10px 24px rgba(79, 172, 254, 0.10);
+    }
+
+    .process-card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .process-title {
+      font-size: 15px;
+      color: #111827;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    .process-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .process-desc {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #6b7280;
+    }
+
+    .process-token {
+      flex: none;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #eef6f1;
+      color: #1f7a4f;
+      font-size: 12px;
+      line-height: 1;
+      border: 1px solid #d9ece0;
+    }
+
+    .process-card.skill-card .process-title {
+      background: linear-gradient(90deg, #2563eb, #0ea5e9 45%, #7c3aed 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .process-card.skill-card .process-token {
+      background: linear-gradient(135deg, rgba(79, 172, 254, 0.10), rgba(121, 40, 202, 0.10));
+      color: #4c51bf;
+      border-color: rgba(99, 102, 241, 0.18);
+    }
+
+    .process-meta {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    .process-detail {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.28s ease, margin-top 0.28s ease;
+      margin-top: 0;
+    }
+
+    .process-detail-inner {
+      overflow: hidden;
+    }
+
+    .process-card.expanded .process-detail {
+      grid-template-rows: 1fr;
+      margin-top: 10px;
+    }
+
+    .detail-code {
+      margin: 0;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: #ffffff;
+      border: 1px solid #e5eaf0;
+      color: #475569;
+      font-size: 12px;
+      line-height: 1.7;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .suggest-block {
+      margin-top: 12px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.35s ease;
+    }
+
+    .suggest-block.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .suggest-title {
+      margin-bottom: 10px;
+      color: #4b5563;
+      font-size: 14px;
+    }
+
+    .suggest-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .suggest-btn {
+      border: 1px solid #d7dde5;
+      background: #fff;
+      color: #374151;
+      font-size: 14px;
+      line-height: 1;
+      border-radius: 10px;
+      padding: 12px 16px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .suggest-btn:hover {
+      border-color: #9ed1b1;
+      color: #1f7a4f;
+      background: #f6fcf8;
+    }
+
+    .final-answer {
+      min-height: 56px;
+    }
+
+    .foot-note {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #9ca3af;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .foot-note.show {
+      opacity: 1;
+    }
+
+    .composer {
+      position: sticky;
+      bottom: 18px;
+      max-width: 1070px;
+      margin: 38px auto 0;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(8px);
+      border: 1px solid #e8edf2;
+      border-radius: 18px;
+      min-height: 156px;
+      box-shadow: 0 18px 44px rgba(15, 23, 42, 0.06);
+      padding: 18px 22px 56px;
+    }
+
+    .chat-shell.landing .composer {
+      width: min(1080px, 100%);
+      margin-top: 0;
+      position: relative;
+      bottom: auto;
+    }
+
+    .composer-input {
+      width: 100%;
+      min-height: 78px;
+      border: 0;
+      outline: none;
+      resize: none;
+      background: transparent;
+      color: #1f2937;
+      font-size: 15px;
+      line-height: 1.8;
+      font-family: inherit;
+    }
+
+    .composer-input::placeholder {
+      color: #b0b8c3;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .tool-btn {
+      height: 30px;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid #d7dde5;
+      background: #fff;
+      color: #475569;
+      cursor: pointer;
+      font-size: 13px;
+      transition: all 0.2s ease;
+    }
+
+    .tool-btn:hover {
+      border-color: #9ed1b1;
+      color: #1f7a4f;
+      background: #f6fcf8;
+    }
+
+    .composer-footer {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .agent-tag {
+      height: 30px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid #9ed1b1;
+      color: #1f7a4f;
+      display: inline-flex;
+      align-items: center;
+      font-size: 14px;
+      background: #f5fcf7;
+    }
+
+    .send-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #b8ead0, #8bd6ae);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      border: 0;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 8px 18px rgba(139, 214, 174, 0.34);
+    }
+
+    .send-btn:hover {
+      transform: translateY(-1px) scale(1.02);
+    }
+
+    .send-btn:disabled {
+      cursor: not-allowed;
+      opacity: 0.55;
+      box-shadow: none;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 1100px) {
+      .sidebar {
+        display: none;
+      }
+
+      .main {
+        padding: 18px;
+      }
+
+      .agent-block {
+        width: auto;
+        margin-left: 0;
+      }
+
+      .composer {
+        margin-top: 20px;
+      }
+
+      .metric-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"></div>
+      <button class="new-chat">新建对话</button>
+      <div class="menu">
+        <div class="menu-item active">问数智能体</div>
+        <div class="menu-item">制度智能体</div>
+        <div class="menu-item">运营分析报告</div>
+        <div class="menu-item">项目会议指标智库</div>
+        <div class="menu-item">职能知识库</div>
+        <div class="menu-item">更多智能体</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="header">
+        <div class="header-badge"></div>
+        <div>问数智能体</div>
+      </div>
+
+      <div id="chatShell" class="chat-shell landing">
+        <div id="landingHero" class="landing-hero">
+          <div class="landing-title">
+            <span class="landing-bot">🤖</span>
+            <span>Hi～ 我是小绿同学，<strong>问数智能体</strong></span>
+          </div>
+          <div class="landing-subtitle">
+            货值、计划、认购、签约、回款、到访；人数统计、人才分析、招聘效能，这些数据我都有！您想查什么数，来问我吧～
+          </div>
+        </div>
+
+        <div class="user-row hidden">
+          <div class="user-bubble" id="userBubble"></div>
+        </div>
+
+        <div id="agentBlock" class="agent-block hidden">
+          <div class="agent-header">
+            <div class="agent-avatar">🤖</div>
+            <div class="agent-status-wrap">
+              <div id="agentStatus" class="agent-status">等待发送问题</div>
+              <div class="typing-dots" id="typingDots">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+
+          <div id="eventStream" class="event-stream hidden">
+            <div class="thought-pill">
+              <span class="thought-icon">··</span>
+              <span id="statusInlineText">等待提问</span>
+            </div>
+            <div id="processCards" class="process-cards"></div>
+          </div>
+
+          <div class="result-card">
+            <div class="result-head">
+              <div id="finalAnswer" class="final-answer result-summary"></div>
+            </div>
+            <div id="metricGrid" class="metric-grid"></div>
+            <div id="highlightList" class="highlight-list"></div>
+            <div id="tableCard" class="table-card">
+              <div class="table-toolbar">
+                <div class="table-title">月度销售明细表</div>
+                <div class="table-actions">
+                  <button id="sendFeishuBtn" class="action-btn">发送到飞书</button>
+                  <div class="download-menu">
+                    <button id="downloadBtn" class="action-btn">下载</button>
+                    <div id="downloadPanel" class="download-panel">
+                      <button class="download-item" data-format="CSV">下载 CSV</button>
+                      <button class="download-item" data-format="Excel">下载 Excel</button>
+                      <button class="download-item" data-format="图片">下载图片</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-wrap">
+                <table class="result-table">
+                  <thead>
+                    <tr>
+                      <th>月份</th>
+                      <th>销售额</th>
+                      <th>环比</th>
+                      <th>项目数</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tableBody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="answer-actions">
+            <button id="likeBtn" class="answer-action" aria-label="点赞" title="点赞">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10v10"></path>
+                <path d="M14 4l-4 6v10h7.2a2 2 0 0 0 2-1.6l1.3-6A2 2 0 0 0 18.6 10H14V6a2 2 0 0 0-2-2z"></path>
+                <path d="M5 10h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H5z"></path>
+              </svg>
+            </button>
+            <button id="dislikeBtn" class="answer-action" aria-label="点踩" title="点踩">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 4v10"></path>
+                <path d="M14 20l-4-6V4h7.2a2 2 0 0 1 2 1.6l1.3 6A2 2 0 0 1 18.6 14H14v4a2 2 0 0 1-2 2z"></path>
+                <path d="M5 4h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H5z"></path>
+              </svg>
+            </button>
+            <button id="copyBtn" class="answer-action copy-action" aria-label="复制答案" title="复制答案">
+              <span id="copyIcon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="9" y="9" width="10" height="10" rx="2"></rect>
+                  <path d="M7 15H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </span>
+            </button>
+          </div>
+
+          <div id="footNote" class="foot-note">分析完成，耗时 2.8 秒</div>
+
+          <div id="suggestBlock" class="suggest-block">
+            <div class="suggest-title">猜你想继续问：</div>
+            <div class="suggest-list">
+              <button class="suggest-btn" data-query="华北区域销售业绩完成率，按项目展示">【经营指挥】销售业绩完成率</button>
+              <button class="suggest-btn" data-query="华北区域流速分析，按月展示">【经营指挥】流速分析</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="composer">
+          <textarea id="composerInput" class="composer-input" placeholder="有问题尽管问我，Ctrl+Enter/Shift+Enter 换行"></textarea>
+          <div class="composer-footer">
+            <div class="toolbar">
+              <div class="agent-tag">小绿同学</div>
+              <button id="replayBtn" class="tool-btn">重播流程</button>
+              <button id="clearBtn" class="tool-btn">清空过程</button>
+            </div>
+            <button id="sendBtn" class="send-btn">▶</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const chatShellEl = document.getElementById("chatShell");
+    const landingHeroEl = document.getElementById("landingHero");
+    const agentBlockEl = document.getElementById("agentBlock");
+    const statusEl = document.getElementById("agentStatus");
+    const userRowEl = document.querySelector(".user-row");
+    const eventStreamEl = document.getElementById("eventStream");
+    const cardsEl = document.getElementById("processCards");
+    const answerEl = document.getElementById("finalAnswer");
+    const suggestEl = document.getElementById("suggestBlock");
+    const footNoteEl = document.getElementById("footNote");
+    const typingDotsEl = document.getElementById("typingDots");
+    const statusInlineTextEl = document.getElementById("statusInlineText");
+    const metricGridEl = document.getElementById("metricGrid");
+    const highlightListEl = document.getElementById("highlightList");
+    const inputEl = document.getElementById("composerInput");
+    const sendBtnEl = document.getElementById("sendBtn");
+    const replayBtnEl = document.getElementById("replayBtn");
+    const clearBtnEl = document.getElementById("clearBtn");
+    const likeBtnEl = document.getElementById("likeBtn");
+    const dislikeBtnEl = document.getElementById("dislikeBtn");
+    const copyBtnEl = document.getElementById("copyBtn");
+    const copyIconEl = document.getElementById("copyIcon");
+    const tableCardEl = document.getElementById("tableCard");
+    const tableBodyEl = document.getElementById("tableBody");
+    const sendFeishuBtnEl = document.getElementById("sendFeishuBtn");
+    const downloadBtnEl = document.getElementById("downloadBtn");
+    const downloadPanelEl = document.getElementById("downloadPanel");
+    const downloadItemEls = [...document.querySelectorAll(".download-item")];
+    const userBubbleEl = document.getElementById("userBubble");
+    const suggestBtnEls = [...document.querySelectorAll(".suggest-btn")];
+
+    let activeRunId = 0;
+    let lastQuestion = "";
+    let isRunning = false;
+    let thoughtStartTime = 0;
+    let thoughtTimer = null;
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    function buildScenario(question) {
+      const normalized = question.replace(/\s+/g, "");
+      const isFlow = normalized.includes("流速");
+      const isCompletion = normalized.includes("完成率");
+
+      if (isFlow) {
+        return {
+          metrics: [
+            { label: "月均去化速度", value: "1.8月", trend: "较上期提升 12%" },
+            { label: "成交转化率", value: "14.6%", trend: "较上期提升 2.1pt" },
+            { label: "库存压力", value: "中等", trend: "重点关注尾部项目" }
+          ],
+          highlights: [
+            "二季度后流速改善明显，6 月到 8 月提升最显著。",
+            "成交套数增长与库存去化周期缩短同步发生，说明去化效率在提升。",
+            "建议优先下钻尾部项目，进一步看价格策略和来访转化。"
+          ],
+          timeline: [
+            {
+              status: "正在识别您的意图",
+              step: "意图识别",
+              card: {
+                title: "意图识别",
+                desc: "已识别为流速分析问题，需要查看华北区域项目近阶段销售去化节奏。",
+                tokens: 86,
+                detail: JSON.stringify({ event: "reasoning_start", skill: "data-query", displayName: "数据查询", confidence: 0.95 }, null, 2)
+              },
+              delay: 700
+            },
+            {
+              status: "调用了数据查询技能",
+              step: "技能调用",
+              card: {
+                title: "调用了销售流速分析技能",
+                desc: "已选择销售流速分析技能，准备查询成交套数、来访转化率和库存去化周期。",
+                tokens: 132,
+                kind: "skill",
+                detail: JSON.stringify({ event: "skill_activated", skillName: "销售流速分析技能", toolName: "data-query", params: { region: "华北", metric: "流速" } }, null, 2)
+              },
+              delay: 900
+            },
+            {
+              status: "正在查询对应数据集",
+              step: "数据查询",
+              card: {
+                title: "查询了 sales_flow 数据集",
+                desc: "已返回 12 条月度记录，并完成按月份聚合，可继续下钻到城市公司或单项目。",
+                tokens: 248,
+                detail: JSON.stringify({ event: "tool_result", dataset: "sales_flow", summary: "返回 12 条月度记录，支持项目下钻" }, null, 2)
+              },
+              delay: 750
+            }
+          ],
+          finalText:
+            "华北区域流速整体在二季度后明显改善，6 月到 8 月去化效率提升较快。\n\n如果继续展开，建议优先看成交套数与库存去化周期的联动变化，我也可以继续按城市公司拆分。",
+          totalTokens: 466,
+          footText: "分析完成，耗时 2.4 秒，消耗 466 tokens"
+        };
+      }
+
+      if (isCompletion) {
+        return {
+          metrics: [
+            { label: "整体完成率", value: "92%", trend: "接近目标区间" },
+            { label: "高完成项目", value: "6个", trend: "表现稳定" },
+            { label: "低完成项目", value: "3个", trend: "建议重点跟进" }
+          ],
+          highlights: [
+            "头部项目完成率较高，整体处于目标区间内。",
+            "尾部项目与目标存在差距，项目间分化较明显。",
+            "建议结合来访与成交转化一起看，更容易定位偏差原因。"
+          ],
+          timeline: [
+            {
+              status: "正在识别您的意图",
+              step: "意图识别",
+              card: {
+                title: "意图识别",
+                desc: "已识别为经营目标完成率分析，需要对比目标值与实际销售结果。",
+                tokens: 74,
+                detail: JSON.stringify({ event: "reasoning_start", metric: "销售业绩完成率", dimensions: ["区域", "项目"] }, null, 2)
+              },
+              delay: 700
+            },
+            {
+              status: "调用了数据查询技能",
+              step: "技能调用",
+              card: {
+                title: "调用了销售完成率分析技能",
+                desc: "已进入销售完成率分析技能，准备对比目标值与实际销售结果。",
+                tokens: 118,
+                kind: "skill",
+                detail: JSON.stringify({ event: "skill_activated", skillName: "销售完成率分析技能", toolName: "data-query", arguments: { datasetCode: "sales_target_compare", params: { region: "华北" } } }, null, 2)
+              },
+              delay: 900
+            },
+            {
+              status: "正在查询对应数据集",
+              step: "数据查询",
+              card: {
+                title: "查询了 sales_target_compare 数据集",
+                desc: "已同时获取目标任务与实际完成数据，并完成完成率计算。",
+                tokens: 226,
+                detail: JSON.stringify({ event: "tool_result", dataset: "sales_target_compare", totalTokens: 1830, byNode: { reasoning: 520, response: 780 } }, null, 2)
+              },
+              delay: 750
+            }
+          ],
+          finalText:
+            "华北区域销售业绩完成率整体处于目标区间内，但项目间分化较明显。\n\n其中头部项目完成率较高，尾部项目与目标存在一定差距，建议优先关注低完成率项目的来访与转化情况。",
+          totalTokens: 418,
+          footText: "分析完成，耗时 2.6 秒，消耗 418 tokens"
+        };
+      }
+
+      return {
+          metrics: [
+            { label: "累计销售额", value: "12.6亿", trend: "同比提升 8.4%" },
+            { label: "高点月份", value: "3月/8月", trend: "阶段性拉升明显" },
+            { label: "月均表现", value: "1.05亿", trend: "整体波动上行" }
+          ],
+        tableData: [
+          { month: "1月", sales: "0.82亿", mom: "+5.2%", projects: 8 },
+          { month: "2月", sales: "0.91亿", mom: "+11.0%", projects: 8 },
+          { month: "3月", sales: "1.34亿", mom: "+47.3%", projects: 9 },
+          { month: "4月", sales: "1.06亿", mom: "-20.9%", projects: 9 },
+          { month: "5月", sales: "0.98亿", mom: "-7.5%", projects: 9 },
+          { month: "6月", sales: "1.08亿", mom: "+10.2%", projects: 10 }
+        ],
+        highlights: [
+          "一季度稳步爬升，二季度略有波动，三季度再次抬升。",
+          "3 月和 8 月为阶段性高点，月度表现存在季节性特征。",
+          "如果继续追问，建议按项目或城市公司拆分，定位贡献来源。"
+        ],
+        timeline: [
+          {
+            status: "正在识别您的意图",
+            step: "意图识别",
+            card: {
+              title: "意图识别",
+              desc: "已识别为经营数据查询问题，目标是查看华北区域项目今年销售情况，并按月份进行展示。",
+              tokens: 92,
+              detail: JSON.stringify({ event: "reasoning_start", name: "data-query", displayName: "数据查询", extractedParams: { region: "华北区域", time: "今年", metric: "销售情况", dimension: "月" } }, null, 2)
+            },
+            delay: 800
+          },
+          {
+            status: "调用了数据查询技能",
+            step: "技能调用",
+            card: {
+              title: "调用了月度销售趋势分析技能",
+              desc: "开始进入月度销售趋势分析技能，准备拉取华北区域今年销售情况。",
+              tokens: 146,
+              kind: "skill",
+              detail: JSON.stringify({ event: "skill_activated", skillName: "月度销售趋势分析技能", toolName: "data-query", arguments: { datasetCode: "sales_data", params: { region: "华北区域", year: "今年", dimension: "month" } } }, null, 2)
+            },
+            delay: 1100
+          },
+          {
+            status: "正在查询对应数据集",
+            step: "数据查询",
+            card: {
+              title: "查询了 sales_data 数据集",
+              desc: "已返回 12 个时间点的数据，并完成按月份汇总，可用于趋势图和项目明细展示。",
+              tokens: 264,
+              detail: JSON.stringify({ event: "tool_result", dataset: "sales_data", summary: "共返回 12 个时间点，支持图表渲染与项目下钻" }, null, 2)
+            },
+            delay: 850
+          }
+        ],
+        finalText:
+          "华北区域各项目今年销售情况整体呈波动上升趋势，其中 3 月和 8 月为阶段性高点。\n\n如果按月展示，可看到一季度稳步爬升，二季度略有波动，三季度再次抬升，四季度当前保持平稳。若需要，我可以继续按项目名称、城市公司或业态类型为您进一步拆分。",
+        totalTokens: 502,
+        footText: "分析完成，耗时 2.8 秒，消耗 502 tokens"
+      };
+    }
+
+    function renderMetrics(metrics) {
+      metricGridEl.innerHTML = metrics.map(item => `
+        <div class="metric-card fade-in">
+          <div class="metric-label">${item.label}</div>
+          <div class="metric-value">${item.value}</div>
+          <div class="metric-trend">${item.trend}</div>
+        </div>
+      `).join("");
+    }
+
+    function renderHighlights(items) {
+      highlightListEl.innerHTML = items.map(text => `
+        <div class="highlight-item fade-in">
+          <span class="highlight-bullet"></span>
+          <span>${text}</span>
+        </div>
+      `).join("");
+    }
+
+    function renderTable(rows) {
+      if (!rows || !rows.length) {
+        tableCardEl.classList.remove("show");
+        tableBodyEl.innerHTML = "";
+        return;
+      }
+
+      tableBodyEl.innerHTML = rows.map(row => `
+        <tr>
+          <td>${row.month}</td>
+          <td>${row.sales}</td>
+          <td>${row.mom}</td>
+          <td>${row.projects}</td>
+        </tr>
+      `).join("");
+      tableCardEl.classList.add("show");
+    }
+
+    function renderLoadingState() {
+      answerEl.classList.add("loading");
+      answerEl.innerHTML = `
+        <div class="summary-skeleton-line skeleton"></div>
+        <div class="summary-skeleton-line skeleton" style="width: 42%"></div>
+      `;
+      metricGridEl.innerHTML = "";
+      highlightListEl.innerHTML = "";
+    }
+
+    function addCard(card) {
+      const node = document.createElement("div");
+      node.className = `process-card${card.kind === "skill" ? " skill-card" : ""}`;
+      node.innerHTML = `
+        <div class="process-header-row">
+          <div class="process-title">${card.title}</div>
+          <div class="process-token">${card.tokens || 0} tokens</div>
+        </div>
+        <div class="process-desc">${card.desc}</div>
+        <div class="process-meta">点击查看事件详情</div>
+        <div class="process-detail">
+          <div class="process-detail-inner">
+            <pre class="detail-code">${card.detail || ""}</pre>
+          </div>
+        </div>
+      `;
+      node.addEventListener("click", () => {
+        node.classList.toggle("expanded");
+      });
+      cardsEl.appendChild(node);
+      requestAnimationFrame(() => node.classList.add("show"));
+    }
+
+    async function typeText(el, text, speed) {
+      el.classList.remove("loading");
+      el.textContent = "";
+      for (let i = 0; i < text.length; i++) {
+        el.textContent += text[i];
+        await sleep(speed);
+      }
+    }
+
+    function setAnswerStreamingState() {
+      answerEl.classList.remove("loading");
+      answerEl.innerHTML = `<span class="cursor">|</span>`;
+    }
+
+    function clearThoughtTimer() {
+      if (thoughtTimer) {
+        window.clearInterval(thoughtTimer);
+        thoughtTimer = null;
+      }
+    }
+
+    function startThoughtTimer() {
+      clearThoughtTimer();
+      thoughtStartTime = Date.now();
+      thoughtTimer = window.setInterval(() => {
+        const seconds = Math.max(1, Math.round((Date.now() - thoughtStartTime) / 1000));
+        statusInlineTextEl.textContent = `已思考 ${seconds} 秒`;
+      }, 250);
+    }
+
+    async function updateStatus(text) {
+      statusEl.style.opacity = "0.35";
+      statusEl.style.transform = "translateY(2px)";
+      await sleep(130);
+      statusEl.textContent = text;
+      statusEl.style.opacity = "1";
+      statusEl.style.transform = "translateY(0)";
+    }
+
+    function resetView() {
+      chatShellEl.classList.add("landing");
+      landingHeroEl.classList.remove("hidden");
+      agentBlockEl.classList.add("hidden");
+      cardsEl.innerHTML = "";
+      answerEl.textContent = "";
+      suggestEl.classList.remove("show");
+      footNoteEl.classList.remove("show");
+      typingDotsEl.style.display = "flex";
+      statusEl.textContent = "等待发送问题";
+      footNoteEl.textContent = "";
+      statusInlineTextEl.textContent = "等待提问";
+      metricGridEl.innerHTML = "";
+      highlightListEl.innerHTML = "";
+      answerEl.classList.remove("loading");
+      document.querySelector(".result-card").classList.add("hidden");
+      tableCardEl.classList.remove("show");
+      tableBodyEl.innerHTML = "";
+      downloadPanelEl.classList.remove("show");
+      sendFeishuBtnEl.textContent = "发送到飞书";
+      sendFeishuBtnEl.classList.remove("success");
+      downloadBtnEl.textContent = "下载";
+      downloadBtnEl.classList.remove("success");
+      likeBtnEl.classList.remove("active");
+      dislikeBtnEl.classList.remove("active");
+      copyBtnEl.classList.remove("active");
+      copyIconEl.innerHTML = `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="9" y="9" width="10" height="10" rx="2"></rect>
+          <path d="M7 15H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v1"></path>
+        </svg>
+      `;
+      eventStreamEl.classList.add("hidden");
+      userRowEl.classList.add("hidden");
+      clearThoughtTimer();
+    }
+
+    function setRunning(running) {
+      isRunning = running;
+      sendBtnEl.disabled = running;
+      replayBtnEl.disabled = running;
+      clearBtnEl.disabled = running;
+      inputEl.disabled = running;
+    }
+
+    async function playFlow(question) {
+      const runId = ++activeRunId;
+      const scenario = buildScenario(question);
+      const steps = scenario.timeline;
+
+      resetView();
+      setRunning(true);
+      chatShellEl.classList.remove("landing");
+      landingHeroEl.classList.add("hidden");
+      agentBlockEl.classList.remove("hidden");
+      userRowEl.classList.remove("hidden");
+      eventStreamEl.classList.remove("hidden");
+      userBubbleEl.textContent = question;
+      renderLoadingState();
+      statusInlineTextEl.textContent = "正在思考";
+      startThoughtTimer();
+
+      for (let i = 0; i < steps.length; i++) {
+        if (runId !== activeRunId) {
+          return;
+        }
+
+        const item = steps[i];
+        await updateStatus(item.status);
+        addCard(item.card);
+        await sleep(item.delay);
+      }
+
+      if (runId !== activeRunId) {
+        return;
+      }
+
+      await updateStatus("正在生成最终回答");
+      clearThoughtTimer();
+      statusInlineTextEl.textContent = "结果展示中";
+      document.querySelector(".result-card").classList.remove("hidden");
+      setAnswerStreamingState();
+      await typeText(answerEl, scenario.finalText, 20);
+      renderMetrics(scenario.metrics);
+      await sleep(160);
+      renderHighlights(scenario.highlights);
+      if (scenario.tableData) {
+        await sleep(180);
+        renderTable(scenario.tableData);
+      }
+      suggestEl.classList.add("show");
+      footNoteEl.textContent = scenario.footText;
+      footNoteEl.classList.add("show");
+      typingDotsEl.style.display = "none";
+      await updateStatus("分析完成");
+      statusInlineTextEl.textContent = "回答已生成";
+      setRunning(false);
+    }
+
+    async function submitQuestion(question) {
+      const nextQuestion = question.trim();
+      if (!nextQuestion || isRunning) {
+        return;
+      }
+
+      lastQuestion = nextQuestion;
+      await playFlow(nextQuestion);
+    }
+
+    sendBtnEl.addEventListener("click", () => {
+      submitQuestion(inputEl.value);
+    });
+
+    replayBtnEl.addEventListener("click", () => {
+      if (lastQuestion) {
+        inputEl.value = lastQuestion;
+        submitQuestion(lastQuestion);
+      }
+    });
+
+    clearBtnEl.addEventListener("click", () => {
+      activeRunId += 1;
+      setRunning(false);
+      chatShellEl.classList.add("landing");
+      landingHeroEl.classList.remove("hidden");
+      agentBlockEl.classList.add("hidden");
+      answerEl.textContent = "";
+      cardsEl.innerHTML = "";
+      suggestEl.classList.remove("show");
+      footNoteEl.classList.remove("show");
+      footNoteEl.textContent = "";
+      typingDotsEl.style.display = "none";
+      statusEl.textContent = "等待发送问题";
+      statusInlineTextEl.textContent = "等待提问";
+      metricGridEl.innerHTML = "";
+      highlightListEl.innerHTML = "";
+      document.querySelector(".result-card").classList.add("hidden");
+      eventStreamEl.classList.add("hidden");
+      userRowEl.classList.add("hidden");
+      inputEl.value = "";
+      clearThoughtTimer();
+    });
+
+    inputEl.addEventListener("keydown", event => {
+      if (event.key === "Enter" && !event.shiftKey && !event.ctrlKey) {
+        event.preventDefault();
+        submitQuestion(inputEl.value);
+      }
+    });
+
+    suggestBtnEls.forEach(button => {
+      button.addEventListener("click", () => {
+        const query = button.dataset.query || button.textContent.trim();
+        inputEl.value = query;
+        submitQuestion(query);
+      });
+    });
+
+    likeBtnEl.addEventListener("click", () => {
+      likeBtnEl.classList.add("active");
+      dislikeBtnEl.classList.remove("active");
+    });
+
+    dislikeBtnEl.addEventListener("click", () => {
+      dislikeBtnEl.classList.add("active");
+      likeBtnEl.classList.remove("active");
+    });
+
+    copyBtnEl.addEventListener("click", async () => {
+      const text = answerEl.textContent.trim();
+      if (!text) {
+        return;
+      }
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch (error) {
+      }
+      copyBtnEl.classList.add("active");
+      copyIconEl.innerHTML = `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 12l4 4 10-10"></path>
+        </svg>
+      `;
+    });
+
+    sendFeishuBtnEl.addEventListener("click", async () => {
+      if (!tableCardEl.classList.contains("show")) {
+        return;
+      }
+      sendFeishuBtnEl.textContent = "发送中...";
+      await sleep(900);
+      sendFeishuBtnEl.textContent = "已发送到飞书";
+      sendFeishuBtnEl.classList.add("success");
+    });
+
+    downloadBtnEl.addEventListener("click", () => {
+      downloadPanelEl.classList.toggle("show");
+    });
+
+    downloadItemEls.forEach(button => {
+      button.addEventListener("click", async () => {
+        const format = button.dataset.format;
+        downloadPanelEl.classList.remove("show");
+        downloadBtnEl.textContent = `下载${format}中...`;
+        await sleep(700);
+        downloadBtnEl.textContent = `已下载${format}`;
+        downloadBtnEl.classList.add("success");
+      });
+    });
+
+    resetView();
+  </script>
+</body>
+</html>
