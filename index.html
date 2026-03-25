@@ -253,6 +253,87 @@
       margin-bottom: 14px;
     }
 
+    .event-summary {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .event-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .event-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid #e8edf2;
+      background: #f7f9fb;
+      color: #4b5563;
+      font-size: 13px;
+      line-height: 1;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.22s ease, transform 0.22s ease, border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+
+    .event-chip.reveal-hidden {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+
+    .event-chip.muted {
+      color: #6b7280;
+      background: #fafbfc;
+    }
+
+    .event-chip.button {
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .event-chip.button:hover {
+      color: #334155;
+      border-color: #dce4eb;
+      background: #f2f6f9;
+    }
+
+    .event-arrow {
+      font-size: 14px;
+      color: #94a3b8;
+      transition: transform 0.2s ease;
+    }
+
+    .event-stream.expanded .event-arrow {
+      transform: rotate(180deg);
+    }
+
+    .event-body {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.28s ease, opacity 0.2s ease;
+      opacity: 0;
+    }
+
+    .event-body-inner {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .event-stream.expanded .event-body {
+      grid-template-rows: 1fr;
+      opacity: 1;
+    }
+
     .thought-pill {
       display: inline-flex;
       align-items: center;
@@ -1011,11 +1092,25 @@
           </div>
 
           <div id="eventStream" class="event-stream hidden">
-            <div class="thought-pill">
-              <span class="thought-icon">··</span>
-              <span id="statusInlineText">等待提问</span>
+            <div class="event-summary">
+              <div class="event-chip-row">
+                <span id="eventCount" class="event-chip">已完成 0 步分析</span>
+                <button id="eventSummary" class="event-chip button muted" type="button">
+                  <span>查看思考过程</span>
+                  <span class="event-arrow">⌄</span>
+                </button>
+                <span id="eventTokenTotal" class="event-chip muted">本次消耗 0 tokens</span>
+              </div>
             </div>
-            <div id="processCards" class="process-cards"></div>
+            <div class="event-body">
+              <div class="event-body-inner">
+                <div class="thought-pill">
+                  <span class="thought-icon">··</span>
+                  <span id="statusInlineText">等待提问</span>
+                </div>
+                <div id="processCards" class="process-cards"></div>
+              </div>
+            </div>
           </div>
 
           <div class="result-card">
@@ -1114,6 +1209,10 @@
     const statusEl = document.getElementById("agentStatus");
     const userRowEl = document.querySelector(".user-row");
     const eventStreamEl = document.getElementById("eventStream");
+    const eventSummaryEl = document.getElementById("eventSummary");
+    const eventCountEl = document.getElementById("eventCount");
+    const eventTokenTotalEl = document.getElementById("eventTokenTotal");
+    const eventChips = [eventCountEl, eventSummaryEl, eventTokenTotalEl];
     const cardsEl = document.getElementById("processCards");
     const answerEl = document.getElementById("finalAnswer");
     const suggestEl = document.getElementById("suggestBlock");
@@ -1144,6 +1243,35 @@
     let isRunning = false;
     let thoughtStartTime = 0;
     let thoughtTimer = null;
+
+    function setEventExpanded(expanded) {
+      if (expanded) {
+        eventStreamEl.classList.add("expanded");
+        eventSummaryEl.setAttribute("aria-expanded", "true");
+      } else {
+        eventStreamEl.classList.remove("expanded");
+        eventSummaryEl.setAttribute("aria-expanded", "false");
+      }
+    }
+
+    function updateEventSummary() {
+      const count = cardsEl.children.length;
+      const tokenTotal = Array.from(cardsEl.querySelectorAll(".process-token")).reduce((sum, node) => {
+        const value = Number((node.textContent || "0").replace(/[^\d]/g, ""));
+        return sum + value;
+      }, 0);
+      eventCountEl.textContent = `已完成 ${count} 步分析`;
+      eventTokenTotalEl.textContent = `本次消耗 ${tokenTotal} tokens`;
+    }
+
+    async function revealEventSummary() {
+      eventChips.forEach(node => node.classList.add("reveal-hidden"));
+      await sleep(70);
+      for (const node of eventChips) {
+        node.classList.remove("reveal-hidden");
+        await sleep(120);
+      }
+    }
 
     function sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
@@ -1468,6 +1596,9 @@
         </svg>
       `;
       eventStreamEl.classList.add("hidden");
+      setEventExpanded(false);
+      updateEventSummary();
+      eventChips.forEach(node => node.classList.remove("reveal-hidden"));
       userRowEl.classList.add("hidden");
       clearThoughtTimer();
     }
@@ -1492,6 +1623,7 @@
       agentBlockEl.classList.remove("hidden");
       userRowEl.classList.remove("hidden");
       eventStreamEl.classList.remove("hidden");
+      setEventExpanded(true);
       userBubbleEl.textContent = question;
       renderLoadingState();
       statusInlineTextEl.textContent = "正在思考";
@@ -1505,6 +1637,7 @@
         const item = steps[i];
         await updateStatus(item.status);
         addCard(item.card);
+        updateEventSummary();
         await sleep(item.delay);
       }
 
@@ -1531,6 +1664,8 @@
       typingDotsEl.style.display = "none";
       await updateStatus("分析完成");
       statusInlineTextEl.textContent = "回答已生成";
+      setEventExpanded(false);
+      await revealEventSummary();
       setRunning(false);
     }
 
@@ -1573,6 +1708,9 @@
       highlightListEl.innerHTML = "";
       document.querySelector(".result-card").classList.add("hidden");
       eventStreamEl.classList.add("hidden");
+      setEventExpanded(false);
+      updateEventSummary();
+      eventChips.forEach(node => node.classList.remove("reveal-hidden"));
       userRowEl.classList.add("hidden");
       inputEl.value = "";
       clearThoughtTimer();
@@ -1591,6 +1729,12 @@
         inputEl.value = query;
         submitQuestion(query);
       });
+    });
+
+    eventSummaryEl.addEventListener("click", () => {
+      if (cardsEl.children.length) {
+        setEventExpanded(!eventStreamEl.classList.contains("expanded"));
+      }
     });
 
     likeBtnEl.addEventListener("click", () => {
