@@ -380,9 +380,47 @@ function monthRank(label) {
 function activeMonthLabel() {
   return months().filter(monthParts).sort((a,b)=>monthRank(b)-monthRank(a))[0] || periodLabel();
 }
+function selectedRealMonths() {
+  return months().filter(month => DATA.months.includes(month));
+}
+function sortedRealMonths(values=selectedRealMonths()) {
+  return values.slice().sort((a,b)=>monthRank(a)-monthRank(b));
+}
+function periodMetricLabel() {
+  if (!hasMulti(state.periods)) return "全部月份";
+  const values = sortedRealMonths();
+  if (!values.length) return periodLabel();
+  if (values.length === 1) return values[0];
+  const parts = values.map(monthParts);
+  const contiguous = parts.every(Boolean) && parts.every((part, index) => {
+    if (index === 0) return true;
+    return part.year * 12 + part.month === parts[index - 1].year * 12 + parts[index - 1].month + 1;
+  });
+  if (contiguous) {
+    const first = parts[0];
+    const last = parts[parts.length - 1];
+    if (first.year === last.year) return `${String(first.year % 100).padStart(2, "0")}年${first.month}-${last.month}月`;
+    return `${values[0]}-${values[values.length - 1]}`;
+  }
+  return values.length <= 3 ? values.join("、") : `${values[0]}等${values.length}月`;
+}
 function monthSuites(projects, month) {
   if (!DATA.months.includes(month)) return null;
   return projects.reduce((sum, p) => sum + (p.monthly[month]?.suites || 0), 0);
+}
+function aggregateSpecificMonths(projects, monthList) {
+  if (!monthList?.length || monthList.some(month => !DATA.months.includes(month))) return null;
+  const suites = projects.reduce((sum, p) => sum + monthList.reduce((s, m) => s + (p.monthly[m]?.suites || 0), 0), 0);
+  const area = projects.reduce((sum, p) => sum + monthList.reduce((s, m) => s + (p.monthly[m]?.area || 0), 0), 0);
+  const amount = projects.reduce((sum, p) => sum + monthList.reduce((s, m) => s + (p.monthly[m]?.amount || 0), 0), 0);
+  return { suites, area, amount, price: area ? amount * 10000 / area : 0 };
+}
+function shiftedPeriodMonths(offset) {
+  const values = selectedRealMonths().filter(monthParts);
+  if (!hasMulti(state.periods) || !values.length) return null;
+  const shifted = values.map(month => shiftedMonthLabel(month, offset));
+  if (shifted.some(month => !DATA.months.includes(month))) return null;
+  return [...new Set(shifted)];
 }
 function changeText(current, base) {
   if (!base) return null;
@@ -817,14 +855,18 @@ function renderMapHud() {
   const projects = state.activePlate ? scopedProjects().filter(p => p.plate === state.activePlate) : scopedProjects();
   const stats = aggregate(projects);
   const scopeName = state.activePlate ? `${state.activePlate}板块` : (state.districts.length ? state.districts.join("、") : "全市");
-  const currentMonth = activeMonthLabel();
-  const currentSuites = monthSuites(projects, currentMonth);
-  const displaySuites = currentSuites ?? stats.suites;
-  const yoySuites = currentSuites == null ? null : monthSuites(projects, shiftedMonthLabel(currentMonth, -12));
-  const momSuites = currentSuites == null ? null : monthSuites(projects, shiftedMonthLabel(currentMonth, -1));
-  const yoyText = changeText(displaySuites, yoySuites);
-  const momText = changeText(displaySuites, momSuites);
-  const bannerParts = [`${scopeName}`, `${scopeLabel()}${fmt.format(projects.length)}个`, `${currentMonth}成交${fmt.format(displaySuites)}套`];
+  const yoyStats = aggregateSpecificMonths(projects, shiftedPeriodMonths(-12));
+  const momStats = aggregateSpecificMonths(projects, shiftedPeriodMonths(-1));
+  const yoyText = changeText(stats.suites, yoyStats?.suites);
+  const momText = changeText(stats.suites, momStats?.suites);
+  const bannerParts = [
+    `${scopeName}`,
+    `${scopeLabel()}${fmt.format(projects.length)}个`,
+    `${periodMetricLabel()}成交${fmt.format(stats.suites)}套`,
+    `金额${fmt1.format(stats.amount / 10000)}亿`,
+    `面积${fmt1.format(stats.area / 10000)}万㎡`,
+    `均价${fmt.format(stats.price)}元/㎡`
+  ];
   if (yoyText) bannerParts.push(`同比${yoyText}`);
   if (momText) bannerParts.push(`环比${momText}`);
   banner.textContent = bannerParts.join("｜");
