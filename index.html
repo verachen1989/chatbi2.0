@@ -1253,11 +1253,8 @@ ${projectSummarySource(p)}`;
   return `<b class="project-name-summary" data-project-summary-id="${escapeHtml(p.id)}" data-project-summary="${escapeHtml(summary)}" title="${escapeHtml(title)}" onmouseenter="const t=document.getElementById('projectSummaryTooltip');t.innerHTML=this.dataset.projectSummary;t.classList.add('show')" onmousemove="const t=document.getElementById('projectSummaryTooltip'),w=Math.min(440,window.innerWidth-24),g=16;t.style.left=Math.min(window.innerWidth-w-12,Math.max(12,event.clientX+g))+'px';t.style.top=Math.max(12,Math.min(window.innerHeight-t.offsetHeight-12,event.clientY+g))+'px'" onmouseleave="document.getElementById('projectSummaryTooltip').classList.remove('show')">${escapeHtml(p.project)}</b>`;
 }
 function projectSummarySource(p) {
-  const maySource = p.mayDataSource || "天朗";
-  const validation = p.fangValidationConclusion
-    ? `；房天下校验：${p.fangValidationConclusion}`
-    : "";
-  return `信源：2026年1–4月为天朗；2026年5月为${maySource}${validation}`;
+  const maySource = String(p.mayDataSource || "").includes("克而瑞") ? "克而瑞" : "天朗";
+  return `数据来源：2026年1–4月为天朗；2026年5月为${maySource}`;
 }
 function ensureProjectSummaryTooltip() {
   let tooltip = document.getElementById("projectSummaryTooltip");
@@ -1462,15 +1459,10 @@ function trendMonthText(month) {
 }
 function projectMonthSource(p, month) {
   if (month === "26年5月") {
-    const source = p.mayDataSource || "天朗";
-    const label = source.includes("克而瑞") ? "克而瑞（5月优先信源）" : "天朗（5月补充信源）";
-    return {
-      label,
-      note: p.maySourceNote || "",
-      validation: p.fangValidationConclusion ? `房天下校验：${p.fangValidationConclusion}` : ""
-    };
+    const label = String(p.mayDataSource || "").includes("克而瑞") ? "克而瑞" : "天朗";
+    return { label };
   }
-  return { label:"天朗去化分析表", note:"", validation:"" };
+  return { label:"天朗" };
 }
 function renderProjectTrend(p, metricKey="suites") {
   const target = document.getElementById("projectTrendChart");
@@ -1540,10 +1532,7 @@ function renderProjectTrend(p, metricKey="suites") {
         <div class="project-trend-tooltip-row"><span>网签金额</span><b>${trendValueText(item.amount, "amount")}</b></div>
         <div class="project-trend-tooltip-row"><span>成交面积</span><b>${trendValueText(item.area, "area")}</b></div>
         <div class="project-trend-tooltip-row"><span>成交均价</span><b>${trendValueText(price, "price")}</b></div>
-        <div class="project-trend-tooltip-source"><b>数据来源：</b>${escapeHtml(source.label)}
-          ${source.note ? `<br>${escapeHtml(source.note)}` : ""}
-          ${source.validation ? `<br>${escapeHtml(source.validation)}` : ""}
-        </div>`;
+        <div class="project-trend-tooltip-source"><b>数据来源：</b>${escapeHtml(source.label)}</div>`;
       const targetRect = target.getBoundingClientRect();
       const hitRect = hit.getBoundingClientRect();
       const desiredLeft = hitRect.left + hitRect.width / 2 - targetRect.left;
