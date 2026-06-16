@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","name":"beijing_custom_plate_boundaries_amap","metadata":{"generatedAt":"2026-06-16T06:11:54.911Z","source":"高德 Web 服务：行政区域查询","note":"仅收录高德实际返回polyline的板块；未返回polyline的街镇/商圈不生成模拟面。","totalPlates":38,"boundaryCount":0},"features":[]}
