@@ -47,6 +47,7 @@ body { margin:0; height:100vh; overflow:hidden; color:var(--text); background:#1
 .view-switch button { height:34px; min-width:60px; border:0; border-right:1px solid #333; background:transparent; color:#8f96a3; font-weight:800; cursor:pointer; }
 .view-switch button:last-child { border-right:0; }
 .view-switch button.active { background:var(--orange2); color:#fff; }
+.amap-preview-link { display:inline-flex; align-items:center; height:34px; padding:0 12px; border:1px solid #333; border-radius:6px; background:#1E1E1E; color:#f5b15f; text-decoration:none; font-size:13px; font-weight:900; white-space:nowrap; }
 select { height:36px; border:1px solid #333; border-radius:7px; background:#1E1E1E; color:#E4E3E0; padding:0 10px; font-size:13px; font-weight:800; outline:none; }
 .stage { position:relative; overflow:hidden; background:#e8e2d6; }
 .stage::before { display:none; }
@@ -383,6 +384,7 @@ body { color:var(--text); background:#f8fafc; }
 .view-switch { border-color:#dadce0; background:#fff; box-shadow:0 1px 2px rgba(60,64,67,.08); }
 .view-switch button { border-right-color:#dadce0; color:#5f6368; }
 .view-switch button.active { background:var(--brand-blue); color:#fff; }
+.amap-preview-link { border-color:#dadce0; background:#fff; color:#0f8c7f; box-shadow:0 1px 2px rgba(60,64,67,.08); }
 select { border-color:#dadce0; background:#fff; color:#202124; }
 .filter-trigger { color:#202124; }
 .filter-trigger:hover { background:#f1f3f4; }
@@ -489,6 +491,7 @@ tr:hover td { background:#f1f3f4; color:#202124; }
       </div>
       <div class="topbar-meta toolbar-meta">
         <div class="cutoff"><i>▣</i><span>数据截至：</span><b>2026年5月</b></div>
+        <a class="amap-preview-link" href="./amap_plate_preview.html" target="_blank" rel="noreferrer">高德绘制版</a>
         <div class="view-switch"><button class="active" data-view="map">地图</button><button data-view="table">表格</button></div>
       </div>
     </div>

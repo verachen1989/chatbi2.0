@@ -1,1 +1,1231 @@
-{"type":"FeatureCollection","name":"beijing_custom_plate_centers_final","metadata":{"generatedAt":"2026-06-16T06:15:01.290Z","totalPlates":38,"centerCount":38,"note":"已补齐38/38个板块中心点；高德Web服务未返回北京自定义板块真实polyline边界，页面不绘制模拟板块面。"},"features":[{"type":"Feature","properties":{"plate":"上地","matched":"上地","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.31825256347656,40.04045867919922]}},{"type":"Feature","properties":{"plate":"中央别墅区","matched":"中央别墅区","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.5842056274414,40.03563690185547]}},{"type":"Feature","properties":{"plate":"丽泽","matched":"丽泽桥","confidence":"中","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.31971740722656,39.873966217041016]}},{"type":"Feature","properties":{"plate":"仁和","matched":"顺义城","confidence":"中","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.65216064453125,40.13093566894531]}},{"type":"Feature","properties":{"plate":"北七家","matched":"北七家","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.4373550415039,40.124183654785156]}},{"type":"Feature","properties":{"plate":"十八里店","matched":"十八里店","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.50244903564453,39.850364685058594]}},{"type":"Feature","properties":{"plate":"南邵","matched":"南邵","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.29241943359375,40.21438217163086]}},{"type":"Feature","properties":{"plate":"后沙峪","matched":"后沙峪","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.53878021240234,40.11865234375]}},{"type":"Feature","properties":{"plate":"四季青","matched":"四季青","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.26902770996094,39.96097183227539]}},{"type":"Feature","properties":{"plate":"回龙观","matched":"回龙观","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.33309936523438,40.09676742553711]}},{"type":"Feature","properties":{"plate":"宋庄东","matched":"宋庄","confidence":"中","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.73635864257812,39.95441818237305]}},{"type":"Feature","properties":{"plate":"新宫","matched":"新宫","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.37213134765625,39.81790542602539]}},{"type":"Feature","properties":{"plate":"朝青","matched":"朝青","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.53652954101562,39.94194412231445]}},{"type":"Feature","properties":{"plate":"梨园","matched":"梨园","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.68269348144531,39.86956024169922]}},{"type":"Feature","properties":{"plate":"次渠","matched":"次渠","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.6220932006836,39.821163177490234]}},{"type":"Feature","properties":{"plate":"沙河","matched":"沙河","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.31241607666016,40.14664077758789]}},{"type":"Feature","properties":{"plate":"河西","matched":"亦庄","confidence":"低","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.5242919921875,39.80095291137695]}},{"type":"Feature","properties":{"plate":"清河","matched":"清河","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.36847686767578,40.04431915283203]}},{"type":"Feature","properties":{"plate":"百善","matched":"百善镇","confidence":"中","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.29508972167969,40.19200897216797]}},{"type":"Feature","properties":{"plate":"管庄","matched":"管庄","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.60589599609375,39.9149055480957]}},{"type":"Feature","properties":{"plate":"翠湖","matched":"温泉镇","confidence":"中","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.18717193603516,40.05494689941406]}},{"type":"Feature","properties":{"plate":"良乡","matched":"良乡","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.18173217773438,39.71607971191406]}},{"type":"Feature","properties":{"plate":"苹果园","matched":"苹果园","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.19513702392578,39.9391975402832]}},{"type":"Feature","properties":{"plate":"西红门","matched":"西红门","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.36445617675781,39.79478073120117]}},{"type":"Feature","properties":{"plate":"运河商务区","matched":"运河大街","confidence":"中","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.6697769165039,39.90073013305664]}},{"type":"Feature","properties":{"plate":"通州老城","matched":"通州北苑","confidence":"中","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.64289093017578,39.90956497192383]}},{"type":"Feature","properties":{"plate":"酒仙桥","matched":"酒仙桥","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.50799560546875,39.97623062133789]}},{"type":"Feature","properties":{"plate":"长阳","matched":"长阳","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.20499420166016,39.764808654785156]}},{"type":"Feature","properties":{"plate":"门头沟新城","matched":"永定","confidence":"中","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.11483764648438,39.91083526611328]}},{"type":"Feature","properties":{"plate":"高米店","matched":"高米店","confidence":"高","source":"房天下公开地图商圈中心点","sourceUrl":"https://map.fang.com/bj/t2/","note":""},"geometry":{"type":"Point","coordinates":[116.33840942382812,39.76905822753906]}},{"type":"Feature","properties":{"plate":"高立庄","matched":"花乡街道","confidence":"中","source":"高德中心点","sourceUrl":"https://restapi.amap.com/v3/config/district","note":"高德匹配到花乡街道，作为板块中心辅助定位"},"geometry":{"type":"Point","coordinates":[116.295197,39.790954]}},{"type":"Feature","properties":{"plate":"金盏北","matched":"北京市朝阳区金盏乡","confidence":"中","source":"高德中心点","sourceUrl":"https://restapi.amap.com/v3/config/district","note":"高德匹配到金盏乡，作为板块中心辅助定位"},"geometry":{"type":"Point","coordinates":[116.568902,40.003503]}},{"type":"Feature","properties":{"plate":"京西商务","matched":"苹果园街道","confidence":"低","source":"高德中心点","sourceUrl":"https://restapi.amap.com/v3/config/district","note":"高德匹配到苹果园街道，业务板块中心需人工复核"},"geometry":{"type":"Point","coordinates":[116.174836,39.960642]}},{"type":"Feature","properties":{"plate":"狼垡","matched":"北京市大兴区狼垡","confidence":"中","source":"高德中心点","sourceUrl":"https://restapi.amap.com/v3/config/district","note":"高德匹配到狼垡村庄点，作为板块中心辅助定位"},"geometry":{"type":"Point","coordinates":[116.280451,39.778869]}},{"type":"Feature","properties":{"plate":"马池口","matched":"马池口镇","confidence":"高","source":"高德中心点","sourceUrl":"https://restapi.amap.com/v3/config/district","note":"高德匹配到马池口镇，作为板块中心辅助定位"},"geometry":{"type":"Point","coordinates":[116.221856,40.201378]}},{"type":"Feature","properties":{"plate":"小屯","matched":"北京市丰台区小屯","confidence":"中","source":"高德中心点","sourceUrl":"https://restapi.amap.com/v3/config/district","note":"高德匹配到小屯村庄点，作为板块中心辅助定位"},"geometry":{"type":"Point","coordinates":[116.246667,39.865465]}},{"type":"Feature","properties":{"plate":"总部基地","matched":"看丹街道","confidence":"中","source":"高德中心点","sourceUrl":"https://restapi.amap.com/v3/config/district","note":"高德匹配到看丹街道，作为总部基地板块辅助定位"},"geometry":{"type":"Point","coordinates":[116.275831,39.820784]}},{"type":"Feature","properties":{"plate":"永丰","matched":"永丰板块项目坐标聚合中心","confidence":"中","source":"项目坐标聚合中心点","sourceUrl":"北京各板块项目去化分析项目坐标","note":"高德未返回可靠永丰板块边界或中心，使用该板块已核验项目坐标均值辅助定位"},"geometry":{"type":"Point","coordinates":[116.237067,40.075618]}}]}
+{
+  "type": "FeatureCollection",
+  "name": "beijing_custom_plate_centers_final",
+  "metadata": {
+    "generatedAt": "2026-06-16T07:09:35.914Z",
+    "totalPlates": 38,
+    "centerCount": 38,
+    "note": "已补齐38/38个板块中心点；本文件附带板块项目数与26年5月去化摘要，供高德JS API绘制页使用。",
+    "dataSource": "index.html DATA.projects 聚合",
+    "metricsMonth": "26年5月",
+    "totalProjects": 61
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "上地",
+        "matched": "上地",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "海淀区",
+        "group": "北部组团",
+        "color": "#31d5ff",
+        "projectCount": 3,
+        "activeProjectCount": 3,
+        "maySuites": 36,
+        "mayArea": 8352,
+        "mayAmount": 116379.65,
+        "mayAvgPrice": 139343,
+        "cumulativeSuites": 1151,
+        "cumulativeAmount": 1843196.72,
+        "projects": "和樾望雲、和樾玉鸣、中海安澜北京",
+        "representativeProjects": "和樾望雲、和樾玉鸣、中海安澜北京",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.31825256347656,
+          40.04045867919922
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "中央别墅区",
+        "matched": "中央别墅区",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "顺义区",
+        "group": "东北组团",
+        "color": "#b8ff6a",
+        "projectCount": 2,
+        "activeProjectCount": 2,
+        "maySuites": 50,
+        "mayArea": 14794,
+        "mayAmount": 109192.42,
+        "mayAvgPrice": 73809,
+        "cumulativeSuites": 324,
+        "cumulativeAmount": 635946.95,
+        "projects": "华润北美乡间 北京润园、懋源薛大人庄 懋源骊橒臺",
+        "representativeProjects": "华润北美乡间 北京润园、懋源薛大人庄 懋源骊橒臺",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.5842056274414,
+          40.03563690185547
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "丽泽",
+        "matched": "丽泽桥",
+        "confidence": "中",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "丰台区",
+        "group": "西南组团",
+        "color": "#a78bfa",
+        "projectCount": 2,
+        "activeProjectCount": 2,
+        "maySuites": 30,
+        "mayArea": 3942,
+        "mayAmount": 35695.26,
+        "mayAvgPrice": 90551,
+        "cumulativeSuites": 439,
+        "cumulativeAmount": 604521.95,
+        "projects": "中海丽金府、中海丽泽叁號院",
+        "representativeProjects": "中海丽金府、中海丽泽叁號院",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.31971740722656,
+          39.873966217041016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "仁和",
+        "matched": "顺义城",
+        "confidence": "中",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "顺义区",
+        "group": "东北组团",
+        "color": "#b8ff6a",
+        "projectCount": 3,
+        "activeProjectCount": 3,
+        "maySuites": 95,
+        "mayArea": 9387,
+        "mayAmount": 35137.81,
+        "mayAvgPrice": 37432,
+        "cumulativeSuites": 1336,
+        "cumulativeAmount": 475608.68,
+        "projects": "住总芳华里、星悦时光、龙湖宸翰",
+        "representativeProjects": "住总芳华里、星悦时光、龙湖宸翰",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.65216064453125,
+          40.13093566894531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "北七家",
+        "matched": "北七家",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "昌平区",
+        "group": "北部组团",
+        "color": "#31d5ff",
+        "projectCount": 1,
+        "activeProjectCount": 1,
+        "maySuites": 21,
+        "mayArea": 2295,
+        "mayAmount": 11597.86,
+        "mayAvgPrice": 50535,
+        "cumulativeSuites": 615,
+        "cumulativeAmount": 341101.95,
+        "projects": "北京国贤府贰期",
+        "representativeProjects": "北京国贤府贰期",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.4373550415039,
+          40.124183654785156
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "十八里店",
+        "matched": "十八里店",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "朝阳区",
+        "group": "CBD-副中心组团",
+        "color": "#ffcf5a",
+        "projectCount": 1,
+        "activeProjectCount": 1,
+        "maySuites": 1,
+        "mayArea": 121,
+        "mayAmount": 870.79,
+        "mayAvgPrice": 71966,
+        "cumulativeSuites": 244,
+        "cumulativeAmount": 241225.07,
+        "projects": "北京隅东序",
+        "representativeProjects": "北京隅东序",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.50244903564453,
+          39.850364685058594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "南邵",
+        "matched": "南邵",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "昌平区",
+        "group": "北部组团",
+        "color": "#31d5ff",
+        "projectCount": 1,
+        "activeProjectCount": 1,
+        "maySuites": 14,
+        "mayArea": 1211,
+        "mayAmount": 4721.98,
+        "mayAvgPrice": 38992,
+        "cumulativeSuites": 71,
+        "cumulativeAmount": 26250.19,
+        "projects": "龙湖恩祥凌雲颂",
+        "representativeProjects": "龙湖恩祥凌雲颂",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.29241943359375,
+          40.21438217163086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "后沙峪",
+        "matched": "后沙峪",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "顺义区",
+        "group": "东北组团",
+        "color": "#b8ff6a",
+        "projectCount": 2,
+        "activeProjectCount": 1,
+        "maySuites": 8,
+        "mayArea": 1915.09,
+        "mayAmount": 11116.15,
+        "mayAvgPrice": 58045,
+        "cumulativeSuites": 325,
+        "cumulativeAmount": 284258.82,
+        "projects": "星宸和煦、懋源云纪",
+        "representativeProjects": "星宸和煦、懋源云纪",
+        "statuses": "住宅售罄、在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.53878021240234,
+          40.11865234375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "四季青",
+        "matched": "四季青",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "海淀区",
+        "group": "西部组团",
+        "color": "#ff6aa6",
+        "projectCount": 3,
+        "activeProjectCount": 2,
+        "maySuites": 99,
+        "mayArea": 11996,
+        "mayAmount": 100834.98,
+        "mayAvgPrice": 84057,
+        "cumulativeSuites": 433,
+        "cumulativeAmount": 439694.36,
+        "projects": "半壁店地块 保利熙瑞、宝山0016地块 海宸元境、宝山0017地块 北京隅海岄",
+        "representativeProjects": "半壁店地块 保利熙瑞、宝山0016地块 海宸元境、宝山0017地块 北京隅海岄",
+        "statuses": "取证未售、在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.26902770996094,
+          39.96097183227539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "回龙观",
+        "matched": "回龙观",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "昌平区",
+        "group": "北部组团",
+        "color": "#31d5ff",
+        "projectCount": 3,
+        "activeProjectCount": 3,
+        "maySuites": 77,
+        "mayArea": 8001,
+        "mayAmount": 41122.22,
+        "mayAvgPrice": 51396,
+        "cumulativeSuites": 1180,
+        "cumulativeAmount": 662298.27,
+        "projects": "龙湖观萃、中海未来之境、国誉星城",
+        "representativeProjects": "龙湖观萃、中海未来之境、国誉星城",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.33309936523438,
+          40.09676742553711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "宋庄东",
+        "matched": "宋庄",
+        "confidence": "中",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "通州区",
+        "group": "CBD-副中心组团",
+        "color": "#ffcf5a",
+        "projectCount": 1,
+        "activeProjectCount": 1,
+        "maySuites": 11,
+        "mayArea": 1258,
+        "mayAmount": 5431.46,
+        "mayAvgPrice": 43175,
+        "cumulativeSuites": 316,
+        "cumulativeAmount": 150589.02,
+        "projects": "城建国誉颂",
+        "representativeProjects": "城建国誉颂",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.73635864257812,
+          39.95441818237305
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "新宫",
+        "matched": "新宫",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "丰台区",
+        "group": "西南组团",
+        "color": "#a78bfa",
+        "projectCount": 2,
+        "activeProjectCount": 2,
+        "maySuites": 46,
+        "mayArea": 5710,
+        "mayAmount": 42528.22,
+        "mayAvgPrice": 74480,
+        "cumulativeSuites": 569,
+        "cumulativeAmount": 552760.2,
+        "projects": "建发金茂观宸、槐新02地块 建发金茂观宸二期",
+        "representativeProjects": "建发金茂观宸、槐新02地块 建发金茂观宸二期",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.37213134765625,
+          39.81790542602539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "朝青",
+        "matched": "朝青",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "朝阳区",
+        "group": "CBD-副中心组团",
+        "color": "#ffcf5a",
+        "projectCount": 2,
+        "activeProjectCount": 2,
+        "maySuites": 79,
+        "mayArea": 13707,
+        "mayAmount": 134968.84,
+        "mayAvgPrice": 98467,
+        "cumulativeSuites": 523,
+        "cumulativeAmount": 821305.54,
+        "projects": "黄衫木店（紫京宸园）、黄衫木店（璞樾）",
+        "representativeProjects": "黄衫木店（紫京宸园）、黄衫木店（璞樾）",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.53652954101562,
+          39.94194412231445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "梨园",
+        "matched": "梨园",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "通州区",
+        "group": "CBD-副中心组团",
+        "color": "#ffcf5a",
+        "projectCount": 2,
+        "activeProjectCount": 2,
+        "maySuites": 29,
+        "mayArea": 2871,
+        "mayAmount": 14423.84,
+        "mayAvgPrice": 50240,
+        "cumulativeSuites": 466,
+        "cumulativeAmount": 246296.18,
+        "projects": "招商云璟揽阅、中国铁建花语璟云",
+        "representativeProjects": "招商云璟揽阅、中国铁建花语璟云",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.68269348144531,
+          39.86956024169922
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "次渠",
+        "matched": "次渠",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "通州区",
+        "group": "大亦庄组团",
+        "color": "#5eead4",
+        "projectCount": 1,
+        "activeProjectCount": 1,
+        "maySuites": 60,
+        "mayArea": 7440,
+        "mayAmount": 42132.22,
+        "mayAvgPrice": 56629,
+        "cumulativeSuites": 964,
+        "cumulativeAmount": 650589.99,
+        "projects": "北京润府",
+        "representativeProjects": "北京润府",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.6220932006836,
+          39.821163177490234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "沙河",
+        "matched": "沙河",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "昌平区",
+        "group": "北部组团",
+        "color": "#31d5ff",
+        "projectCount": 1,
+        "activeProjectCount": 1,
+        "maySuites": 22,
+        "mayArea": 2338,
+        "mayAmount": 11019.92,
+        "mayAvgPrice": 47134,
+        "cumulativeSuites": 265,
+        "cumulativeAmount": 143672.13,
+        "projects": "越秀星耀未来",
+        "representativeProjects": "越秀星耀未来",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.31241607666016,
+          40.14664077758789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "河西",
+        "matched": "亦庄",
+        "confidence": "低",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "大兴区",
+        "group": "大亦庄组团",
+        "color": "#5eead4",
+        "projectCount": 1,
+        "activeProjectCount": 1,
+        "maySuites": 16,
+        "mayArea": 1854,
+        "mayAmount": 11847.9,
+        "mayAvgPrice": 63905,
+        "cumulativeSuites": 247,
+        "cumulativeAmount": 183850.23,
+        "projects": "招商序",
+        "representativeProjects": "招商序",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.5242919921875,
+          39.80095291137695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "清河",
+        "matched": "清河",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "海淀区",
+        "group": "北部组团",
+        "color": "#31d5ff",
+        "projectCount": 2,
+        "activeProjectCount": 2,
+        "maySuites": 59,
+        "mayArea": 11092,
+        "mayAmount": 137573.49,
+        "mayAvgPrice": 124029,
+        "cumulativeSuites": 551,
+        "cumulativeAmount": 1463088.08,
+        "projects": "华润臻澐、建发海晏",
+        "representativeProjects": "华润臻澐、建发海晏",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.36847686767578,
+          40.04431915283203
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "百善",
+        "matched": "百善镇",
+        "confidence": "中",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "昌平区",
+        "group": "北部组团",
+        "color": "#31d5ff",
+        "projectCount": 1,
+        "activeProjectCount": 1,
+        "maySuites": 14,
+        "mayArea": 1300,
+        "mayAmount": 5489.88,
+        "mayAvgPrice": 42230,
+        "cumulativeSuites": 283,
+        "cumulativeAmount": 113679.34,
+        "projects": "住总清樾府",
+        "representativeProjects": "住总清樾府",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.29508972167969,
+          40.19200897216797
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "管庄",
+        "matched": "管庄",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "朝阳区",
+        "group": "CBD-副中心组团",
+        "color": "#ffcf5a",
+        "projectCount": 2,
+        "activeProjectCount": 2,
+        "maySuites": 64,
+        "mayArea": 8518,
+        "mayAmount": 63275.66,
+        "mayAvgPrice": 74285,
+        "cumulativeSuites": 732,
+        "cumulativeAmount": 721639.62,
+        "projects": "保利朝观天珺、金茂满曜",
+        "representativeProjects": "保利朝观天珺、金茂满曜",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.60589599609375,
+          39.9149055480957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "翠湖",
+        "matched": "温泉镇",
+        "confidence": "中",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "海淀区",
+        "group": "北部组团",
+        "color": "#31d5ff",
+        "projectCount": 1,
+        "activeProjectCount": 1,
+        "maySuites": 2,
+        "mayArea": 305,
+        "mayAmount": 1990.81,
+        "mayAvgPrice": 65272,
+        "cumulativeSuites": 90,
+        "cumulativeAmount": 99449.46,
+        "projects": "翠湖玖章",
+        "representativeProjects": "翠湖玖章",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.18717193603516,
+          40.05494689941406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "良乡",
+        "matched": "良乡",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "房山区",
+        "group": "西南组团",
+        "color": "#a78bfa",
+        "projectCount": 2,
+        "activeProjectCount": 1,
+        "maySuites": 0,
+        "mayArea": 0,
+        "mayAmount": 0,
+        "mayAvgPrice": 0,
+        "cumulativeSuites": 115,
+        "cumulativeAmount": 35580.27,
+        "projects": "颐知筑、房山区长阳镇FS00-0101-0002、0003地块",
+        "representativeProjects": "颐知筑、房山区长阳镇FS00-0101-0002、0003地块",
+        "statuses": "在售、未取证"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.18173217773438,
+          39.71607971191406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "苹果园",
+        "matched": "苹果园",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "石景山区",
+        "group": "西部组团",
+        "color": "#ff6aa6",
+        "projectCount": 1,
+        "activeProjectCount": 1,
+        "maySuites": 40,
+        "mayArea": 4431,
+        "mayAmount": 27205.59,
+        "mayAvgPrice": 61398,
+        "cumulativeSuites": 511,
+        "cumulativeAmount": 332533.64,
+        "projects": "西黄村地块 中海瑞文里",
+        "representativeProjects": "西黄村地块 中海瑞文里",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.19513702392578,
+          39.9391975402832
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "西红门",
+        "matched": "西红门",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "大兴区",
+        "group": "西南组团",
+        "color": "#a78bfa",
+        "projectCount": 2,
+        "activeProjectCount": 1,
+        "maySuites": 65,
+        "mayArea": 6998,
+        "mayAmount": 35118.79,
+        "mayAvgPrice": 50184,
+        "cumulativeSuites": 505,
+        "cumulativeAmount": 269577.01,
+        "projects": "御璟星城元启、西红门6030地块",
+        "representativeProjects": "御璟星城元启、西红门6030地块",
+        "statuses": "在售、未取证"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.36445617675781,
+          39.79478073120117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "运河商务区",
+        "matched": "运河大街",
+        "confidence": "中",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "通州区",
+        "group": "CBD-副中心组团",
+        "color": "#ffcf5a",
+        "projectCount": 1,
+        "activeProjectCount": 1,
+        "maySuites": 44,
+        "mayArea": 6727,
+        "mayAmount": 42556.9,
+        "mayAvgPrice": 63263,
+        "cumulativeSuites": 1298,
+        "cumulativeAmount": 1056201.58,
+        "projects": "中建运河玖院",
+        "representativeProjects": "中建运河玖院",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.6697769165039,
+          39.90073013305664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "通州老城",
+        "matched": "通州北苑",
+        "confidence": "中",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "通州区",
+        "group": "CBD-副中心组团",
+        "color": "#ffcf5a",
+        "projectCount": 2,
+        "activeProjectCount": 2,
+        "maySuites": 93,
+        "mayArea": 9983,
+        "mayAmount": 51549.9,
+        "mayAvgPrice": 51638,
+        "cumulativeSuites": 1154,
+        "cumulativeAmount": 640126.95,
+        "projects": "金隅花溪云锦、招商朝棠揽阅",
+        "representativeProjects": "金隅花溪云锦、招商朝棠揽阅",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.64289093017578,
+          39.90956497192383
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "酒仙桥",
+        "matched": "酒仙桥",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "朝阳区",
+        "group": "东北组团",
+        "color": "#b8ff6a",
+        "projectCount": 2,
+        "activeProjectCount": 2,
+        "maySuites": 12,
+        "mayArea": 2403,
+        "mayAmount": 25068.86,
+        "mayAvgPrice": 104323,
+        "cumulativeSuites": 848,
+        "cumulativeAmount": 1702408.84,
+        "projects": "北京宸园、中海萬吉玖序",
+        "representativeProjects": "北京宸园、中海萬吉玖序",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.50799560546875,
+          39.97623062133789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "长阳",
+        "matched": "长阳",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "房山区",
+        "group": "西南组团",
+        "color": "#a78bfa",
+        "projectCount": 1,
+        "activeProjectCount": 1,
+        "maySuites": 61,
+        "mayArea": 6994,
+        "mayAmount": 21725.78,
+        "mayAvgPrice": 31063,
+        "cumulativeSuites": 463,
+        "cumulativeAmount": 154706.59,
+        "projects": "璟贤瑞庭",
+        "representativeProjects": "璟贤瑞庭",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.20499420166016,
+          39.764808654785156
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "门头沟新城",
+        "matched": "永定",
+        "confidence": "中",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "门头沟区",
+        "group": "西部组团",
+        "color": "#ff6aa6",
+        "projectCount": 1,
+        "activeProjectCount": 1,
+        "maySuites": 1,
+        "mayArea": 165,
+        "mayAmount": 552.51,
+        "mayAvgPrice": 33485,
+        "cumulativeSuites": 564,
+        "cumulativeAmount": 266541.4,
+        "projects": "长安华曦府",
+        "representativeProjects": "长安华曦府",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.11483764648438,
+          39.91083526611328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "高米店",
+        "matched": "高米店",
+        "confidence": "高",
+        "source": "房天下公开地图商圈中心点",
+        "sourceUrl": "https://map.fang.com/bj/t2/",
+        "note": "",
+        "district": "大兴区",
+        "group": "西南组团",
+        "color": "#a78bfa",
+        "projectCount": 1,
+        "activeProjectCount": 0,
+        "maySuites": 0,
+        "mayArea": 0,
+        "mayAmount": 0,
+        "mayAvgPrice": 0,
+        "cumulativeSuites": 0,
+        "cumulativeAmount": 0,
+        "projects": "大兴经济开发区DX00-0302-0021、0022地块",
+        "representativeProjects": "大兴经济开发区DX00-0302-0021、0022地块",
+        "statuses": "未取证"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.33840942382812,
+          39.76905822753906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "高立庄",
+        "matched": "花乡街道",
+        "confidence": "中",
+        "source": "高德中心点",
+        "sourceUrl": "https://restapi.amap.com/v3/config/district",
+        "note": "高德匹配到花乡街道，作为板块中心辅助定位",
+        "district": "丰台区",
+        "group": "西南组团",
+        "color": "#a78bfa",
+        "projectCount": 1,
+        "activeProjectCount": 1,
+        "maySuites": 0,
+        "mayArea": 0,
+        "mayAmount": 0,
+        "mayAvgPrice": 0,
+        "cumulativeSuites": 470,
+        "cumulativeAmount": 259228.2,
+        "projects": "中建花鄕壹号 中建壹品花香壹号",
+        "representativeProjects": "中建花鄕壹号 中建壹品花香壹号",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.295197,
+          39.790954
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "金盏北",
+        "matched": "北京市朝阳区金盏乡",
+        "confidence": "中",
+        "source": "高德中心点",
+        "sourceUrl": "https://restapi.amap.com/v3/config/district",
+        "note": "高德匹配到金盏乡，作为板块中心辅助定位",
+        "district": "朝阳区",
+        "group": "东北组团",
+        "color": "#b8ff6a",
+        "projectCount": 1,
+        "activeProjectCount": 1,
+        "maySuites": 6,
+        "mayArea": 874,
+        "mayAmount": 6242.3,
+        "mayAvgPrice": 71422,
+        "cumulativeSuites": 418,
+        "cumulativeAmount": 480674.03,
+        "projects": "璞园PARK",
+        "representativeProjects": "璞园PARK",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.568902,
+          40.003503
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "京西商务",
+        "matched": "苹果园街道",
+        "confidence": "低",
+        "source": "高德中心点",
+        "sourceUrl": "https://restapi.amap.com/v3/config/district",
+        "note": "高德匹配到苹果园街道，业务板块中心需人工复核",
+        "district": "石景山区",
+        "group": "西部组团",
+        "color": "#ff6aa6",
+        "projectCount": 2,
+        "activeProjectCount": 2,
+        "maySuites": 37,
+        "mayArea": 4189,
+        "mayAmount": 23366.11,
+        "mayAvgPrice": 55780,
+        "cumulativeSuites": 560,
+        "cumulativeAmount": 368985.22,
+        "projects": "中海长安源境、首钢璟悦长安",
+        "representativeProjects": "中海长安源境、首钢璟悦长安",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.174836,
+          39.960642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "狼垡",
+        "matched": "北京市大兴区狼垡",
+        "confidence": "中",
+        "source": "高德中心点",
+        "sourceUrl": "https://restapi.amap.com/v3/config/district",
+        "note": "高德匹配到狼垡村庄点，作为板块中心辅助定位",
+        "district": "大兴区",
+        "group": "西南组团",
+        "color": "#a78bfa",
+        "projectCount": 1,
+        "activeProjectCount": 1,
+        "maySuites": 8,
+        "mayArea": 1436,
+        "mayAmount": 5497.45,
+        "mayAvgPrice": 38283,
+        "cumulativeSuites": 43,
+        "cumulativeAmount": 32380.14,
+        "projects": "大兴西片区0003等地块 大兴发展梧桐府",
+        "representativeProjects": "大兴西片区0003等地块 大兴发展梧桐府",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.280451,
+          39.778869
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "马池口",
+        "matched": "马池口镇",
+        "confidence": "高",
+        "source": "高德中心点",
+        "sourceUrl": "https://restapi.amap.com/v3/config/district",
+        "note": "高德匹配到马池口镇，作为板块中心辅助定位",
+        "district": "昌平区",
+        "group": "北部组团",
+        "color": "#31d5ff",
+        "projectCount": 1,
+        "activeProjectCount": 0,
+        "maySuites": 0,
+        "mayArea": 0,
+        "mayAmount": 0,
+        "mayAvgPrice": 0,
+        "cumulativeSuites": 0,
+        "cumulativeAmount": 0,
+        "projects": "国誉燕园朗润",
+        "representativeProjects": "国誉燕园朗润",
+        "statuses": "取证未售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.221856,
+          40.201378
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "小屯",
+        "matched": "北京市丰台区小屯",
+        "confidence": "中",
+        "source": "高德中心点",
+        "sourceUrl": "https://restapi.amap.com/v3/config/district",
+        "note": "高德匹配到小屯村庄点，作为板块中心辅助定位",
+        "district": "丰台区",
+        "group": "西部组团",
+        "color": "#ff6aa6",
+        "projectCount": 2,
+        "activeProjectCount": 2,
+        "maySuites": 9,
+        "mayArea": 1034,
+        "mayAmount": 5802.55,
+        "mayAvgPrice": 56118,
+        "cumulativeSuites": 221,
+        "cumulativeAmount": 167069.51,
+        "projects": "京能西贤府、中建和颂九里",
+        "representativeProjects": "京能西贤府、中建和颂九里",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.246667,
+          39.865465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "总部基地",
+        "matched": "看丹街道",
+        "confidence": "中",
+        "source": "高德中心点",
+        "sourceUrl": "https://restapi.amap.com/v3/config/district",
+        "note": "高德匹配到看丹街道，作为总部基地板块辅助定位",
+        "district": "丰台区",
+        "group": "西南组团",
+        "color": "#a78bfa",
+        "projectCount": 1,
+        "activeProjectCount": 1,
+        "maySuites": 15,
+        "mayArea": 1753,
+        "mayAmount": 12666.72,
+        "mayAvgPrice": 72257,
+        "cumulativeSuites": 161,
+        "cumulativeAmount": 147423.61,
+        "projects": "北京隅西颂",
+        "representativeProjects": "北京隅西颂",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.275831,
+          39.820784
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "plate": "永丰",
+        "matched": "永丰板块项目坐标聚合中心",
+        "confidence": "中",
+        "source": "项目坐标聚合中心点",
+        "sourceUrl": "北京各板块项目去化分析项目坐标",
+        "note": "高德未返回可靠永丰板块边界或中心，使用该板块已核验项目坐标均值辅助定位",
+        "district": "海淀区",
+        "group": "北部组团",
+        "color": "#31d5ff",
+        "projectCount": 2,
+        "activeProjectCount": 2,
+        "maySuites": 45,
+        "mayArea": 5136,
+        "mayAmount": 40940.69,
+        "mayAvgPrice": 79713,
+        "cumulativeSuites": 942,
+        "cumulativeAmount": 997785.67,
+        "projects": "颐海澐颂、嘉华天珺",
+        "representativeProjects": "颐海澐颂、嘉华天珺",
+        "statuses": "在售"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.237067,
+          40.075618
+        ]
+      }
+    }
+  ]
+}
