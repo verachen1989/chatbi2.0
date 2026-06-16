@@ -133,17 +133,18 @@ select { height:36px; border:1px solid #333; border-radius:7px; background:#1E1E
 .year-rail button.active { background:#f97316; color:#fff; box-shadow:0 4px 12px rgba(249,115,22,.24); }
 .leaflet-tooltip.plate-label { background:rgba(255,255,255,.94); color:#111827; border:1px solid rgba(17,24,39,.12); border-radius:5px; padding:4px 8px; box-shadow:0 8px 20px rgba(0,0,0,.18); font-size:12px; font-weight:900; }
 .leaflet-tooltip.project-label { background:rgba(17,24,39,.94); color:#fff; border:0; border-radius:5px; padding:4px 8px; font-size:12px; font-weight:800; }
-.leaflet-tooltip.plate-project-tooltip { width:270px; max-width:270px; padding:0; border:1px solid rgba(37,99,235,.18); border-radius:10px; background:rgba(255,255,255,.98); color:#202124; box-shadow:0 12px 32px rgba(60,64,67,.26); overflow:hidden; }
+.leaflet-tooltip.plate-project-tooltip { width:340px; max-width:min(340px, calc(100vw - 32px)); padding:0; border:1px solid rgba(37,99,235,.18); border-radius:10px; background:rgba(255,255,255,.98); color:#202124; box-shadow:0 12px 32px rgba(60,64,67,.26); overflow:hidden; }
 .plate-project-tip { padding:12px 13px; }
 .plate-project-tip h3 { margin:0; display:flex; align-items:center; justify-content:space-between; gap:10px; color:#111827; font-size:15px; font-weight:950; }
 .plate-project-tip h3 span { flex:1 1 auto; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .plate-project-tip h3 em { flex:0 0 auto; padding:3px 7px; border-radius:999px; background:var(--brand-blue-soft); color:var(--brand-blue); font-style:normal; font-size:11px; font-weight:950; }
 .plate-project-tip p { margin:4px 0 9px; color:#6b7280; font-size:11px; font-weight:700; line-height:1.45; }
 .plate-project-tip ul { list-style:none; margin:0; padding:0; display:grid; gap:7px; }
-.plate-project-tip li { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px; align-items:center; padding:7px 8px; border-radius:8px; background:#f8fafc; }
-.plate-project-tip strong { overflow:hidden; color:#202124; font-size:12px; font-weight:950; text-overflow:ellipsis; white-space:nowrap; }
-.plate-project-tip small { color:#6b7280; font-size:10px; font-weight:750; }
-.plate-project-tip b { color:var(--brand-blue); font-size:12px; font-weight:950; white-space:nowrap; }
+.plate-project-tip li { min-width:0; display:grid; grid-template-columns:minmax(0,1fr) 52px; gap:10px; align-items:center; padding:7px 8px; border-radius:8px; background:#f8fafc; }
+.plate-project-tip li > span { min-width:0; display:grid; gap:2px; }
+.plate-project-tip strong { display:block; overflow:hidden; color:#202124; font-size:12px; font-weight:950; line-height:1.35; text-overflow:ellipsis; white-space:nowrap; }
+.plate-project-tip small { display:block; overflow:hidden; color:#6b7280; font-size:10px; font-weight:750; line-height:1.35; text-overflow:ellipsis; white-space:nowrap; }
+.plate-project-tip b { justify-self:end; color:var(--brand-blue); font-size:12px; font-weight:950; white-space:nowrap; }
 .plate-project-tip .more { display:block; margin-top:8px; color:#6b7280; font-size:11px; font-weight:800; text-align:center; }
 .leaflet-tooltip.district-project-tooltip { width:430px; max-width:min(430px, calc(100vw - 32px)); padding:0; border:1px solid rgba(37,99,235,.18); border-radius:10px; background:rgba(255,255,255,.98); color:#202124; box-shadow:0 12px 32px rgba(60,64,67,.26); overflow:hidden; }
 .district-project-tip { padding:12px 13px; }
