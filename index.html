@@ -315,11 +315,14 @@ td.num, th.num { text-align:right; font-family:ui-monospace, SFMono-Regular, Men
 .project-trend-line { fill:none; stroke-linecap:round; stroke-linejoin:round; stroke-width:3; }
 .project-trend-point { stroke:#fff; stroke-width:3; }
 .project-trend-hit { fill:transparent; cursor:pointer; }
-.project-trend-tooltip { position:absolute; z-index:4; min-width:184px; padding:12px 14px; border:1px solid #dadce0; border-radius:8px; background:rgba(255,255,255,.98); color:#202124; box-shadow:0 8px 24px rgba(60,64,67,.22); pointer-events:none; opacity:0; transform:translate(-50%, calc(-100% - 14px)); transition:opacity .12s ease; }
+.project-trend-tooltip { position:absolute; z-index:4; width:232px; padding:12px 14px; border:1px solid #dadce0; border-radius:8px; background:rgba(255,255,255,.98); color:#202124; box-shadow:0 8px 24px rgba(60,64,67,.22); pointer-events:none; opacity:0; transform:translate(-50%, calc(-100% - 14px)); transition:opacity .12s ease; }
+.project-trend-tooltip.is-left { transform:translate(calc(-100% - 18px), -50%); }
+.project-trend-tooltip.is-right { transform:translate(18px, -50%); }
 .project-trend-tooltip.show { opacity:1; }
 .project-trend-tooltip strong { display:block; margin-bottom:8px; font-size:16px; }
-.project-trend-tooltip-row { display:flex; align-items:center; justify-content:space-between; gap:20px; line-height:1.9; color:#5f6368; font-size:14px; }
-.project-trend-tooltip-row b { color:#202124; font-size:15px; }
+.project-trend-tooltip-row { display:grid; grid-template-columns:70px minmax(0,1fr); align-items:center; gap:14px; line-height:1.9; color:#5f6368; font-size:14px; }
+.project-trend-tooltip-row span { white-space:nowrap; }
+.project-trend-tooltip-row b { color:#202124; font-size:15px; text-align:right; white-space:nowrap; }
 .project-trend-tooltip-source { margin-top:8px; padding-top:8px; border-top:1px solid #e5e7eb; color:#5f6368; font-size:12px; line-height:1.55; }
 .project-trend-tooltip-source b { color:#202124; }
 .project-trend-empty { min-height:250px; display:grid; place-items:center; color:#8a8f99; font-size:13px; }
@@ -1609,16 +1612,20 @@ function makeSquareIcon(p) {
   });
 }
 function makeProjectCoordinateIcon(p, active=false) {
-  const width = Math.min(310, Math.max(186, p.project.length * 13 + 136));
+  const width = active
+    ? Math.min(220, Math.max(96, p.project.length * 14 + 42))
+    : Math.min(310, Math.max(186, p.project.length * 13 + 136));
+  const height = active ? 34 : 42;
   return L.divIcon({
     className:"",
     html:projectCoordinateHtml(p, active),
-    iconSize:[width, 42],
-    iconAnchor:[active ? 9 : 7, 21]
+    iconSize:[width, height],
+    iconAnchor:[active ? 9 : 7, height / 2]
   });
 }
 function projectCoordinateHtml(p, active=false) {
   const metrics = projectMapMetrics(p);
+  if (active) return `<div class="project-coordinate-marker active"><i></i><span><b>${escapeHtml(metrics.name)}</b></span></div>`;
   return `<div class="project-coordinate-marker${active ? " active" : ""}"><i></i><span><b>${escapeHtml(metrics.name)}</b><small><em>住宅${projectMapCountText(metrics.total)}</em><em>未签${projectMapCountText(metrics.unsigned)}</em><em>均价${projectMapPriceText(metrics.price)}</em></small></span></div>`;
 }
 const rankingMetrics = {
@@ -1759,7 +1766,7 @@ function renderRealMapAmap(preserveViewport=false) {
         const marker = new mainAmap.Marker({
           position:point,
           content:projectCoordinateHtml(p, selected),
-          offset:new mainAmap.Pixel(-(selected ? 9 : 7), -21),
+          offset:new mainAmap.Pixel(-(selected ? 9 : 7), selected ? -17 : -21),
           title:p.project,
           zIndex:selected ? 180 : 130
         });
@@ -2504,8 +2511,21 @@ function renderProjectTrend(p, metricKey="suites") {
       const hitRect = hit.getBoundingClientRect();
       const desiredLeft = hitRect.left + hitRect.width / 2 - targetRect.left;
       const desiredTop = hitRect.top + hitRect.height / 2 - targetRect.top;
-      tooltip.style.left = `${Math.max(96, Math.min(targetRect.width - 96, desiredLeft))}px`;
-      tooltip.style.top = `${Math.max(105, desiredTop)}px`;
+      const tooltipWidth = Math.max(232, tooltip.offsetWidth || 232);
+      const edgePadding = 24;
+      tooltip.classList.remove("is-left", "is-right");
+      if (desiredLeft + tooltipWidth / 2 > targetRect.width - edgePadding) {
+        tooltip.classList.add("is-left");
+        tooltip.style.left = `${Math.max(tooltipWidth + edgePadding, desiredLeft)}px`;
+        tooltip.style.top = `${Math.max(120, Math.min(targetRect.height - 42, desiredTop))}px`;
+      } else if (desiredLeft - tooltipWidth / 2 < edgePadding) {
+        tooltip.classList.add("is-right");
+        tooltip.style.left = `${Math.min(targetRect.width - tooltipWidth - edgePadding, desiredLeft)}px`;
+        tooltip.style.top = `${Math.max(120, Math.min(targetRect.height - 42, desiredTop))}px`;
+      } else {
+        tooltip.style.left = `${desiredLeft}px`;
+        tooltip.style.top = `${Math.max(145, desiredTop)}px`;
+      }
       tooltip.classList.add("show");
     };
     hit.addEventListener("mouseenter", showTooltip);
