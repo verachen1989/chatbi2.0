@@ -233,6 +233,7 @@ td.num, th.num { text-align:right; font-family:ui-monospace, SFMono-Regular, Men
 .trend-table .base-col { width:92px; }
 .trend-table .status-col { width:82px; }
 .trend-table .date-col { width:108px; }
+.trend-table .inventory-col { width:88px; }
 .trend-table .suite-metric { width:82px; }
 .trend-table .area-metric { width:106px; }
 .trend-table .price-metric { width:92px; }
@@ -343,6 +344,8 @@ td.num, th.num { text-align:right; font-family:ui-monospace, SFMono-Regular, Men
 .transaction-link-button { display:inline-flex; align-items:center; justify-content:center; min-width:34px; height:28px; padding:0 7px; border:1px solid transparent; border-radius:7px; background:transparent; color:#202124; font:inherit; font-weight:950; cursor:pointer; }
 .transaction-link-button:hover { border-color:var(--brand-blue-border); background:var(--brand-blue-soft); color:var(--brand-blue); box-shadow:0 1px 4px rgba(60,64,67,.12); }
 .transaction-link-button.has-detail { color:var(--brand-blue); text-decoration:underline; text-underline-offset:3px; }
+.official-inventory-link { display:inline-flex; align-items:center; justify-content:flex-end; min-width:42px; color:var(--brand-blue); font-weight:950; text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
+.official-inventory-link:hover { color:#174ea6; text-decoration-thickness:2px; }
 .similar-projects-section { display:none; margin:0 0 18px; border:1px solid #dbe5f4; border-radius:9px; background:#f8fbff; overflow:hidden; }
 .similar-projects-section.open { display:block; }
 .similar-projects-head { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; padding:14px 16px; border-bottom:1px solid #e3eaf3; background:#eef5ff; }
@@ -1954,7 +1957,7 @@ function projectMonths(p) {
   return isRecentLaunchProject(p) ? recentLaunchMonths : DATA.months;
 }
 function trendTableStyle(monthList) {
-  const width = 676 + monthList.length * 396;
+  const width = 852 + monthList.length * 396;
   return `style="min-width:${width}px;width:${width}px"`;
 }
 function drawerTrendTableStyle(monthList) {
@@ -1976,7 +1979,26 @@ function monthMetricHeaders(monthList=DATA.months) {
 }
 function trendColGroup(monthList=DATA.months) {
   const monthCols = monthList.map(() => `<col class="suite-metric"><col class="area-metric"><col class="price-metric"><col class="amount-metric">`).join("");
-  return `<colgroup><col class="project-sticky"><col class="base-col"><col class="base-col"><col class="base-col"><col class="status-col"><col class="date-col">${monthCols}</colgroup>`;
+  return `<colgroup><col class="project-sticky"><col class="base-col"><col class="base-col"><col class="base-col"><col class="status-col"><col class="date-col"><col class="inventory-col"><col class="inventory-col">${monthCols}</colgroup>`;
+}
+function officialInventoryPrimaryUrl(p) {
+  return String(p.officialInventoryEvidenceUrl || "").split(/\s+/).find(value => /^https?:\/\//.test(value)) || "";
+}
+function officialInventoryValue(value) {
+  return Number.isFinite(Number(value)) ? Number(value) : null;
+}
+function officialInventoryLink(p, value, label) {
+  const numeric = officialInventoryValue(value);
+  if (numeric === null) return "-";
+  const url = officialInventoryPrimaryUrl(p);
+  const text = metricText(numeric);
+  if (!url) return text;
+  const title = `打开住建委页面：${p.officialProjectName || p.summaryRecordName || p.project} ${label}`;
+  return `<a class="official-inventory-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" title="${escapeHtml(title)}">${text}</a>`;
+}
+function officialInventoryCells(p) {
+  return `<td class="${metricClass(p.officialResidentialTotal)} inventory-col">${officialInventoryLink(p, p.officialResidentialTotal, "住宅总套数")}</td>
+    <td class="${metricClass(p.officialUnsignedSuites)} inventory-col">${officialInventoryLink(p, p.officialUnsignedSuites, "剩余套数")}</td>`;
 }
 function monthMetricCells(p, monthList=DATA.months) {
   return monthList.map(month => {
@@ -2126,6 +2148,8 @@ function tableSortValue(project) {
   if (tableSort.key === "plate") return project.plate || "";
   if (tableSort.key === "status") return project.status || "";
   if (tableSort.key === "landDate") return project.landDate || "";
+  if (tableSort.key === "officialTotal") return Number(project.officialResidentialTotal) || 0;
+  if (tableSort.key === "officialUnsigned") return Number(project.officialUnsignedSuites) || 0;
   return projectPeriod(project).amount;
 }
 function sortedTableProjects() {
@@ -2167,9 +2191,9 @@ function renderTableView(preserveScroll=false) {
   document.getElementById("tableSub").textContent = `${scopeLabel()}｜按北京各板块项目去化分析原始月度结构展示：每月包含套数、面积、均价、网签金额，可横向滚动查看趋势`;
   document.getElementById("tableCount").textContent = `${rows.length} 个项目`;
   tableWrap.innerHTML = `<table class="trend-table" ${trendTableStyle(monthList)}>${trendColGroup(monthList)}<thead>
-    <tr><th class="project-sticky" rowspan="2">${tableSortButton("项目名称", "project")}</th><th class="base-col" rowspan="2">${tableSortButton("行政区划", "district")}</th><th class="base-col" rowspan="2">${tableSortButton("组团", "group")}</th><th class="base-col" rowspan="2">${tableSortButton("板块", "plate")}</th><th class="status-col" rowspan="2">${tableSortButton("状态", "status")}</th><th class="date-col" rowspan="2">${tableSortButton("出让时间", "landDate")}</th>${monthGroupHeaders(monthList)}</tr>
+    <tr><th class="project-sticky" rowspan="2">${tableSortButton("项目名称", "project")}</th><th class="base-col" rowspan="2">${tableSortButton("行政区划", "district")}</th><th class="base-col" rowspan="2">${tableSortButton("组团", "group")}</th><th class="base-col" rowspan="2">${tableSortButton("板块", "plate")}</th><th class="status-col" rowspan="2">${tableSortButton("状态", "status")}</th><th class="date-col" rowspan="2">${tableSortButton("出让时间", "landDate")}</th><th class="num inventory-col" rowspan="2">${tableSortButton("总套数", "officialTotal")}</th><th class="num inventory-col" rowspan="2">${tableSortButton("剩余套数", "officialUnsigned")}</th>${monthGroupHeaders(monthList)}</tr>
     <tr class="metric-head">${monthMetricHeaders(monthList)}</tr>
-    </thead><tbody>${rows.map(p=>`<tr data-id="${p.id}"><td class="project-sticky">${projectNameSummary(p)}<small>累计 ${fmt.format(p.suitesAll)} 套 / ${fmt1.format(p.amountAll)} 万元</small></td><td>${p.district||"-"}</td><td>${p.group}</td><td>${p.plate}</td><td><span class="tag">${p.status}</span></td><td>${p.landDate||"-"}</td>${monthMetricCells(p, monthList)}</tr>`).join("")}</tbody></table>`;
+    </thead><tbody>${rows.map(p=>`<tr data-id="${p.id}"><td class="project-sticky">${projectNameSummary(p)}<small>累计 ${fmt.format(p.suitesAll)} 套 / ${fmt1.format(p.amountAll)} 万元</small></td><td>${p.district||"-"}</td><td>${p.group}</td><td>${p.plate}</td><td><span class="tag">${p.status}</span></td><td>${p.landDate||"-"}</td>${officialInventoryCells(p)}${monthMetricCells(p, monthList)}</tr>`).join("")}</tbody></table>`;
   bindProjectSummaryHovers();
   bindTableSort();
   document.querySelectorAll("#tableWrap [data-transaction-project]").forEach(button => {
