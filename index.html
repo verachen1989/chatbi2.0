@@ -2627,12 +2627,6 @@ async function renderProjectDetailMapAmap(p, mapEl) {
     title:p.project,
     zIndex:120
   }));
-  projectDetailMap.add(new AMap.Marker({
-    position:point,
-    content:`<div class="amap-tooltip project-label">${projectMapTooltipContent(p)}</div>`,
-    offset:new AMap.Pixel(-30, -48),
-    zIndex:130
-  }));
   const note = document.createElement("div");
   note.className = "project-location-note";
   note.textContent = `坐标来源：${p.coordSource || "公开地图"}；匹配点：${p.matchedName || p.address || p.project}`;
@@ -2668,14 +2662,7 @@ function renderProjectDetailMapLeaflet(p, mapEl) {
     fillOpacity:.14,
     opacity:.9
   }).addTo(projectDetailMap);
-  L.marker([p.lat, p.lng], { icon:makeProjectIcon(true), title:p.project })
-    .addTo(projectDetailMap)
-    .bindTooltip(projectMapTooltipContent(p), {
-      permanent:true,
-      direction:"top",
-      offset:[0,-12],
-      className:"project-label"
-    });
+  L.marker([p.lat, p.lng], { icon:makeProjectIcon(true), title:p.project }).addTo(projectDetailMap);
   const note = document.createElement("div");
   note.className = "project-location-note";
   note.textContent = `坐标来源：${p.coordSource || "公开地图"}；匹配点：${p.matchedName || p.address || p.project}`;
