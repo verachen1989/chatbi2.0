@@ -1348,6 +1348,7 @@ function closeProjectDetail() {
   document.getElementById("drawer")?.classList.remove("with-detail");
   const expand = document.getElementById("expandDetail");
   if (expand) expand.textContent = "全屏";
+  resizeMainMapSoon();
 }
 function closePlateDrawer() {
   const drawer = document.getElementById("drawer");
@@ -1356,6 +1357,7 @@ function closePlateDrawer() {
   document.getElementById("detail")?.classList.remove("sidecar");
   const expand = document.getElementById("expandDrawer");
   if (expand) expand.textContent = "全屏";
+  resizeMainMapSoon();
 }
 function syncDetailDocking() {
   const detail = document.getElementById("detail");
@@ -1369,6 +1371,33 @@ function syncDetailDocking() {
     Boolean(state.activePlate);
   detail.classList.toggle("sidecar", docked);
   drawer.classList.toggle("with-detail", docked);
+}
+function mainMapPanelRightInset(extra=24) {
+  if (state.view !== "map") return 0;
+  const panels = [document.getElementById("drawer"), document.getElementById("detail")]
+    .filter(panel => panel?.classList.contains("open") && !panel.classList.contains("fullscreen"));
+  if (!panels.length) return 0;
+  const left = Math.min(...panels.map(panel => panel.getBoundingClientRect().left));
+  return Math.max(0, Math.round(window.innerWidth - left + extra));
+}
+function mainMapPanelPanX() {
+  return Math.min(560, Math.round(mainMapPanelRightInset(0) * .48));
+}
+function resizeMainMapSoon(delay=80) {
+  if (!mainMap) return;
+  window.setTimeout(() => {
+    if (isAmapMain()) mainMap.resize();
+    else mainMap.invalidateSize();
+  }, delay);
+}
+function panMainMapAwayFromPanels(delay=420) {
+  if (!mainMap) return;
+  const offset = mainMapPanelPanX();
+  if (!offset) return;
+  window.setTimeout(() => {
+    if (isAmapMain()) mainMap.panBy(offset, 0);
+    else mainMap.panBy([offset, 0], { animate:true, duration:.25 });
+  }, delay);
 }
 function renderYearRail() {
   const rail = document.getElementById("yearRail");
@@ -1435,6 +1464,7 @@ function initFilters() {
     drawer.classList.toggle("fullscreen");
     document.getElementById("expandDrawer").textContent = drawer.classList.contains("fullscreen") ? "退出全屏" : "全屏";
     syncDetailDocking();
+    resizeMainMapSoon();
     setTimeout(() => resizeMapInstance(linkedMap), 80);
   };
   document.getElementById("closeDetail").onclick = closeProjectDetail;
@@ -1444,6 +1474,7 @@ function initFilters() {
     detail.classList.toggle("fullscreen");
     document.getElementById("expandDetail").textContent = detail.classList.contains("fullscreen") ? "退出全屏" : "全屏";
     syncDetailDocking();
+    resizeMainMapSoon();
     const project = findProjectById(state.project);
     setTimeout(() => {
       if (project) renderProjectTrend(project, activeMetric);
@@ -1873,16 +1904,15 @@ function renderRealMap(preserveViewport=false) {
 }
 function shiftMainMapForDrawer(row, zoom=12) {
   if (!mainMap || !row?.loc) return;
-  const drawer = document.getElementById("drawer");
-  const panelWidth = drawer.classList.contains("open") ? drawer.offsetWidth : 0;
+  const panX = mainMapPanelPanX();
   if (isAmapMain()) {
     mainMap.setZoomAndCenter(zoom, [row.loc.lng, row.loc.lat]);
-    if (panelWidth) setTimeout(() => mainMap.panBy(Math.round(panelWidth * .42), 0), 390);
+    if (panX) setTimeout(() => mainMap.panBy(panX, 0), 390);
     return;
   }
   mainMap.flyTo([row.loc.lat, row.loc.lng], zoom, { duration:.35 });
-  if (panelWidth) {
-    setTimeout(() => mainMap.panBy([Math.round(panelWidth * .42), 0], { animate:true, duration:.25 }), 390);
+  if (panX) {
+    setTimeout(() => mainMap.panBy([panX, 0], { animate:true, duration:.25 }), 390);
   }
 }
 function focusPlateProjectCoordinates(row) {
@@ -1897,18 +1927,22 @@ function focusPlateProjectCoordinates(row) {
   if (isAmapMain()) {
     if (points.length === 1) {
       mainMap.setZoomAndCenter(PROJECT_LAYER_ZOOM + .8, [points[0][1], points[0][0]]);
+      panMainMapAwayFromPanels(390);
     } else {
-      amapFitLatLngs(points, { padding:[120,90,90,90], maxZoom:PROJECT_LAYER_ZOOM + .8 });
+      const rightInset = mainMapPanelRightInset();
+      amapFitLatLngs(points, { padding:[120,90 + rightInset,90,90], maxZoom:PROJECT_LAYER_ZOOM + .8 });
     }
     window.setTimeout(() => renderRealMap(true), 420);
     return;
   }
   if (points.length === 1) {
     mainMap.flyTo(points[0], PROJECT_LAYER_ZOOM + .8, { duration:.35 });
+    panMainMapAwayFromPanels(390);
   } else {
+    const rightInset = mainMapPanelRightInset();
     mainMap.fitBounds(L.latLngBounds(points).pad(.28), {
       paddingTopLeft:[90,120],
-      paddingBottomRight:[90,90],
+      paddingBottomRight:[90 + rightInset,90],
       maxZoom:PROJECT_LAYER_ZOOM + .8
     });
   }
@@ -2242,6 +2276,8 @@ function openDrawer(row) {
   drawer.classList.add("open");
   document.getElementById("expandDrawer").textContent = drawer.classList.contains("fullscreen") ? "退出全屏" : "全屏";
   syncDetailDocking();
+  resizeMainMapSoon();
+  setTimeout(() => focusPlateProjectCoordinates(row), 90);
   setTimeout(() => renderLinkedMap(row), 80);
 }
 function makeProjectIcon(active=false) {
@@ -2408,10 +2444,7 @@ function focusMainProject(p) {
       renderRealMap(true);
       const marker = mainProjectMarkers.get(p.id);
       if (marker) marker.openTooltip();
-      const detail = document.getElementById("detail");
-      if (detail?.classList.contains("open") && !detail.classList.contains("fullscreen")) {
-        mainMap.panBy(Math.min(300, Math.round(detail.offsetWidth * .38)), 0);
-      }
+      panMainMapAwayFromPanels(0);
     }, 460);
     return;
   }
@@ -2420,10 +2453,7 @@ function focusMainProject(p) {
     renderRealMap(true);
     const marker = mainProjectMarkers.get(p.id);
     if (marker) marker.openTooltip();
-    const detail = document.getElementById("detail");
-    if (detail?.classList.contains("open") && !detail.classList.contains("fullscreen")) {
-      mainMap.panBy([Math.min(300, Math.round(detail.offsetWidth * .38)), 0], { animate:true, duration:.25 });
-    }
+    panMainMapAwayFromPanels(0);
   }, 460);
 }
 const projectTrendMetrics = {
@@ -2732,8 +2762,6 @@ function openDetail(p, options={}) {
   state.activePlate = p.plate;
   renderRankingPanel();
   renderMap();
-  focusMainProject(p);
-  focusLinkedProject(p);
   const s = projectPeriod(p);
   document.getElementById("detailTitle").textContent = p.project;
   const coordText = Number.isFinite(p.lat) && Number.isFinite(p.lng) ? ` · 坐标：${p.coordConfidence || "待核验"} / ${p.coordSource || "公开地图"} / ${p.matchedName || p.address || "POI"}` : "";
@@ -2766,6 +2794,11 @@ function openDetail(p, options={}) {
   detail.classList.add("open");
   document.getElementById("expandDetail").textContent = detail.classList.contains("fullscreen") ? "退出全屏" : "全屏";
   syncDetailDocking();
+  resizeMainMapSoon();
+  setTimeout(() => {
+    focusMainProject(p);
+    focusLinkedProject(p);
+  }, 90);
   if (options.scrollToTransactions) {
     setTimeout(() => {
       const body = document.getElementById("detailBody");
