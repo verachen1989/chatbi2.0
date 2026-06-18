@@ -2026,8 +2026,35 @@ function trendColGroup(monthList=DATA.months) {
   const monthCols = monthList.map(() => `<col class="suite-metric"><col class="area-metric"><col class="price-metric"><col class="amount-metric">`).join("");
   return `<colgroup><col class="project-sticky"><col class="base-col"><col class="base-col"><col class="base-col"><col class="status-col"><col class="date-col"><col class="inventory-col"><col class="inventory-col">${monthCols}</colgroup>`;
 }
+function officialInventoryUrls(p) {
+  return String(p.officialInventoryEvidenceUrl || "").split(/\s+/).filter(value => /^https?:\/\//.test(value));
+}
 function officialInventoryPrimaryUrl(p) {
-  return String(p.officialInventoryEvidenceUrl || "").split(/\s+/).find(value => /^https?:\/\//.test(value)) || "";
+  return officialInventoryUrls(p)[0] || "";
+}
+function officialInventoryBuildingListUrl(p) {
+  if (p.officialBuildingListUrl) return p.officialBuildingListUrl;
+  const urls = officialInventoryUrls(p);
+  const existing = urls.find(url => /[?&]pageId=411612\b/.test(url));
+  if (existing) return existing;
+  for (const url of urls) {
+    try {
+      const source = new URL(url);
+      const permitId = source.searchParams.get("projectID") || source.searchParams.get("salePermitId") || source.searchParams.get("id");
+      if (!permitId) continue;
+      const listUrl = new URL("http://bjjs.zjw.beijing.gov.cn/eportal/ui");
+      listUrl.searchParams.set("pageId", "411612");
+      listUrl.searchParams.set("systemId", source.searchParams.get("systemID") || source.searchParams.get("systemId") || "2");
+      listUrl.searchParams.set("srcId", source.searchParams.get("srcId") || "1");
+      listUrl.searchParams.set("id", permitId);
+      const recordCount = p.officialBuildingRecordCount || p.officialInventoryBuildingRecordCount || (permitId === "7904369" ? "21" : "");
+      if (recordCount) listUrl.searchParams.set("rowcount", recordCount);
+      return listUrl.toString();
+    } catch (error) {
+      continue;
+    }
+  }
+  return "";
 }
 function officialInventoryValue(value) {
   return Number.isFinite(Number(value)) ? Number(value) : null;
@@ -2035,10 +2062,12 @@ function officialInventoryValue(value) {
 function officialInventoryLink(p, value, label) {
   const numeric = officialInventoryValue(value);
   if (numeric === null) return "-";
-  const url = officialInventoryPrimaryUrl(p);
+  const url = label === "住宅总套数"
+    ? (officialInventoryBuildingListUrl(p) || officialInventoryPrimaryUrl(p))
+    : officialInventoryPrimaryUrl(p);
   const text = metricText(numeric);
   if (!url) return text;
-  const note = label === "住宅总套数" ? "；总套数按批准住宅、已签约+剩余、累计成交+剩余取最大值校验" : "";
+  const note = label === "住宅总套数" ? "；打开楼盘表列表页，查看各楼栋批准销售套数" : "";
   const title = `打开住建委页面：${p.officialProjectName || p.summaryRecordName || p.project} ${label}${note}`;
   return `<a class="official-inventory-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" title="${escapeHtml(title)}">${text}</a>`;
 }
