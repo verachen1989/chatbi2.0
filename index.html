@@ -1310,11 +1310,18 @@ function renderMultiFilter(def) {
       event.stopPropagation();
       toggleFilterValue(def.key, input.dataset.value);
       if (["districts", "groups", "scopes", "years"].includes(def.key)) syncPlateFilter();
-      state.activePlate = null;
+      const focusPlateName = def.key === "plates" && state.plates.length === 1 ? state.plates[0] : "";
+      state.activePlate = focusPlateName || null;
       closeProjectDetail();
-      closePlateDrawer();
-      openFilterId = def.id;
+      if (!focusPlateName) closePlateDrawer();
+      openFilterId = focusPlateName ? null : def.id;
       render();
+      if (focusPlateName) {
+        setTimeout(() => {
+          const row = plateRows().find(item => item.plate === focusPlateName);
+          if (row) openDrawer(row);
+        }, 120);
+      }
     };
   });
 }
@@ -1971,10 +1978,9 @@ function locateCurrentMapScope() {
 function selectPlate(row) {
   state.activePlate = row.plate;
   state.project = null;
-  closePlateDrawer();
   closeProjectDetail();
   renderMap();
-  focusPlateProjectCoordinates(row);
+  openDrawer(row);
 }
 function renderMap() {
   renderRealMap();
