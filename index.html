@@ -2201,6 +2201,21 @@ function transactionSection(p) {
 function mayTransactionSection(p) {
   return transactionSection(p);
 }
+function updateTransactionSectionForMonth(p, month, options={}) {
+  if (!p || !month) return;
+  state.detailTransactionMonth = month;
+  const oldSection = document.getElementById("mayTransactionSection");
+  if (!oldSection) return;
+  const wrapper = document.createElement("div");
+  wrapper.innerHTML = transactionSection(p).trim();
+  const newSection = wrapper.firstElementChild;
+  if (!newSection) return;
+  oldSection.replaceWith(newSection);
+  if (options.scroll) {
+    const body = document.getElementById("detailBody");
+    if (body) body.scrollTo({ top:Math.max(0, newSection.offsetTop - 10), behavior:"smooth" });
+  }
+}
 function projectNameSummary(p) {
   const title = `住建委备案名：${p.summaryRecordName || "暂未补充"}
 预售证：${p.summaryPresalePermit || "暂未补充"}
@@ -2666,6 +2681,12 @@ function renderProjectTrend(p, metricKey="suites") {
     };
     hit.addEventListener("mouseenter", showTooltip);
     hit.addEventListener("mousemove", showTooltip);
+    hit.addEventListener("click", event => {
+      event.stopPropagation();
+      const month = months[Number(hit.dataset.trendIndex)];
+      updateTransactionSectionForMonth(p, month, { scroll:true });
+      showTooltip(event);
+    });
     hit.addEventListener("mouseleave", () => tooltip.classList.remove("show"));
   });
 }
