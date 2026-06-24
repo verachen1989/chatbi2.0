@@ -2709,13 +2709,15 @@ function similarProjectsSection(p) {
   const recommendations = similarPriceProjects(p);
   const cards = recommendations.length
     ? recommendations.map(({ project, stats, difference }) => {
-        const differenceText = Math.abs(difference) < .05
-          ? "价格相近"
+        const priceDiffText = Math.abs(difference) < .05
+          ? "持平"
           : `${difference > 0 ? "高" : "低"}${fmt1.format(Math.abs(difference))}%`;
+        const suiteDiff = (Number(stats.suites) || 0) - (Number(currentStats.suites) || 0);
+        const suiteDiffText = `${suiteDiff >= 0 ? "+" : ""}${fmt.format(suiteDiff)}套`;
         return `<button class="similar-project-card" type="button" data-similar-project="${escapeHtml(project.id)}" title="查看${escapeHtml(project.project)}">
           <strong>${escapeHtml(project.project)}</strong>
           <small>${escapeHtml(project.district || "-")} · ${escapeHtml(project.group)} · ${escapeHtml(project.plate)}</small>
-          <span class="similar-project-stats"><b>${fmt.format(stats.price)}元/㎡</b><span>${fmt.format(stats.suites)}套 · ${differenceText}</span></span>
+          <span class="similar-project-stats"><b>${fmt.format(stats.price)}元/㎡（${priceDiffText}）</b><span>${suiteDiffText}</span></span>
         </button>`;
       }).join("")
     : `<div class="similar-project-empty">当前筛选范围暂无同价位楼盘对比数据</div>`;
