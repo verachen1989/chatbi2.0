@@ -346,6 +346,12 @@ td.num, th.num { text-align:right; font-family:ui-monospace, SFMono-Regular, Men
 .transaction-link-button.has-detail { color:var(--brand-blue); text-decoration:underline; text-underline-offset:3px; }
 .official-inventory-link { display:inline-flex; align-items:center; justify-content:flex-end; min-width:42px; color:var(--brand-blue); font-weight:950; text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
 .official-inventory-link:hover { color:#174ea6; text-decoration-thickness:2px; }
+.project-inventory-strip { display:flex; align-items:stretch; gap:10px; flex-wrap:wrap; margin:0 0 16px; }
+.project-inventory-card { flex:1 1 190px; min-height:46px; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 13px; border:1px solid #dbe5f4; border-radius:8px; background:#f8fbff; }
+.project-inventory-card span { color:#5f6368; font-size:12px; font-weight:850; white-space:nowrap; }
+.project-inventory-card b { display:inline-flex; align-items:baseline; justify-content:flex-end; gap:2px; color:#202124; font-size:20px; font-weight:950; white-space:nowrap; }
+.project-inventory-card em { color:#5f6368; font-size:12px; font-style:normal; font-weight:850; }
+.project-inventory-card .official-inventory-link { min-width:0; font-size:20px; }
 .similar-projects-section { display:none; margin:0 0 18px; border:1px solid #dbe5f4; border-radius:9px; background:#f8fbff; overflow:hidden; }
 .similar-projects-section.open { display:block; }
 .similar-projects-head { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; padding:14px 16px; border-bottom:1px solid #e3eaf3; background:#eef5ff; }
@@ -2729,11 +2735,25 @@ function similarProjectsSection(p) {
     <div class="similar-projects-list">${cards}</div>
   </section>`;
 }
+function projectInventoryMetric(p, value, label) {
+  const numeric = officialInventoryValue(value);
+  if (numeric === null) return `<b>待核</b>`;
+  return `<b>${officialInventoryLink(p, numeric, label)}<em>套</em></b>`;
+}
+function projectInventoryStrip(p) {
+  const total = projectOfficialDisplayTotal(p);
+  const unsigned = cleanCount(p.officialUnsignedSuites);
+  return `<section class="project-inventory-strip" aria-label="住建委库存数据">
+    <div class="project-inventory-card"><span>住宅总套数</span>${projectInventoryMetric(p, total, "住宅总套数")}</div>
+    <div class="project-inventory-card"><span>剩余套数</span>${projectInventoryMetric(p, unsigned, "剩余套数")}</div>
+  </section>`;
+}
 function projectDetailTable(p) {
   const hasLocation = Number.isFinite(p.lat) && Number.isFinite(p.lng);
   const filteredStats = projectPeriod(p);
   const filteredPeriod = periodMetricLabel();
-  return `${similarProjectsSection(p)}
+  return `${projectInventoryStrip(p)}
+  ${similarProjectsSection(p)}
   <section class="single-project-section">
     <div class="single-project-section-head">
       <div class="single-project-section-copy">
