@@ -1389,7 +1389,7 @@ function mainMapPanelRightInset(extra=24) {
   return Math.max(0, Math.round(window.innerWidth - left + extra));
 }
 function mainMapPanelPanX() {
-  return Math.min(560, Math.round(mainMapPanelRightInset(0) * .48));
+  return -Math.min(640, Math.round(mainMapPanelRightInset(0) * .58));
 }
 function resizeMainMapSoon(delay=80) {
   if (!mainMap) return;
