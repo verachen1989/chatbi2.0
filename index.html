@@ -1751,8 +1751,7 @@ function renderRealMapAmap(preserveViewport=false) {
   renderDistrictHighlight(preserveViewport);
   const rows = plateRows().filter(r => r.loc);
   const visibleLabels = visiblePlateLabelNames(rows);
-  const zoom = mainMap.getZoom();
-  const showPlateLayer = zoom >= PLATE_LAYER_ZOOM || Boolean(state.activePlate || state.plates.length || state.districts.length || state.search);
+  const showPlateLayer = true;
   const projectMode = Boolean(state.activePlate);
   const bounds = [];
   renderAmapPlateBoundaries(rows, showPlateLayer, projectMode);
@@ -1846,8 +1845,7 @@ function renderRealMap(preserveViewport=false) {
   renderDistrictHighlight(preserveViewport);
   const rows = plateRows().filter(r => r.loc);
   const visibleLabels = visiblePlateLabelNames(rows);
-  const zoom = mainMap.getZoom();
-  const showPlateLayer = zoom >= PLATE_LAYER_ZOOM || Boolean(state.activePlate || state.plates.length || state.districts.length || state.search);
+  const showPlateLayer = true;
   const projectMode = Boolean(state.activePlate);
   const bounds = [];
   rows.forEach(row => {
