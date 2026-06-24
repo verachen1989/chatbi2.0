@@ -1319,13 +1319,13 @@ function renderMultiFilter(def) {
       const focusPlateName = def.key === "plates" && state.plates.length === 1 ? state.plates[0] : "";
       state.activePlate = focusPlateName || null;
       closeProjectDetail();
-      if (!focusPlateName) closePlateDrawer();
+      closePlateDrawer();
       openFilterId = focusPlateName ? null : def.id;
       render();
       if (focusPlateName) {
         setTimeout(() => {
           const row = plateRows().find(item => item.plate === focusPlateName);
-          if (row) openDrawer(row);
+          if (row) focusPlateProjectCoordinates(row);
         }, 120);
       }
     };
@@ -1985,8 +1985,9 @@ function selectPlate(row) {
   state.activePlate = row.plate;
   state.project = null;
   closeProjectDetail();
+  closePlateDrawer();
   renderMap();
-  openDrawer(row);
+  setTimeout(() => focusPlateProjectCoordinates(row), 90);
 }
 function renderMap() {
   renderRealMap();
