@@ -363,9 +363,11 @@ td.num, th.num { text-align:right; font-family:ui-monospace, SFMono-Regular, Men
 .similar-project-card:hover { background:#f1f6ff; }
 .similar-project-card strong { display:block; overflow:hidden; font-size:14px; line-height:1.4; text-overflow:ellipsis; white-space:nowrap; }
 .similar-project-card small { display:block; margin-top:4px; overflow:hidden; color:#6b7280; font-size:11px; text-overflow:ellipsis; white-space:nowrap; }
-.similar-project-stats { display:flex; align-items:baseline; justify-content:space-between; gap:8px; margin-top:9px; }
+.similar-project-stats { display:flex; align-items:flex-start; justify-content:space-between; gap:8px; margin-top:9px; }
 .similar-project-stats b { color:var(--brand-blue); font-size:15px; white-space:nowrap; }
-.similar-project-stats span { color:#5f6368; font-size:11px; white-space:nowrap; }
+.similar-project-suite { flex:0 0 auto; display:grid; justify-items:end; gap:2px; color:#5f6368; font-size:11px; line-height:1.25; white-space:nowrap; }
+.similar-project-suite span { color:#3c4043; font-weight:850; white-space:nowrap; }
+.similar-project-suite em { color:#6b7280; font-size:10px; font-style:normal; white-space:nowrap; }
 .similar-project-empty { padding:22px 16px; background:#fff; color:#6b7280; font-size:13px; text-align:center; }
 .project-location-section { margin-top:18px; border-top:1px solid #e5e7eb; }
 .project-location-head { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; padding:16px 0 10px; }
@@ -2698,7 +2700,7 @@ function similarProjectsSection(p) {
         return `<button class="similar-project-card" type="button" data-similar-project="${escapeHtml(project.id)}" title="查看${escapeHtml(project.project)}">
           <strong>${escapeHtml(project.project)}</strong>
           <small>${escapeHtml(project.district || "-")} · ${escapeHtml(project.group)} · ${escapeHtml(project.plate)}</small>
-          <span class="similar-project-stats"><b>${fmt.format(stats.price)}元/㎡（${priceDiffText}）</b><span>${suiteDiffText}</span></span>
+          <span class="similar-project-stats"><b>${fmt.format(stats.price)}元/㎡（${priceDiffText}）</b><span class="similar-project-suite"><span>周期成交 ${fmt.format(stats.suites)}套</span><em>较本项目 ${suiteDiffText}</em></span></span>
         </button>`;
       }).join("")
     : `<div class="similar-project-empty">当前筛选范围暂无同价位楼盘对比数据</div>`;
