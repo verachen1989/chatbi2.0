@@ -116,7 +116,8 @@ select { height:36px; border:1px solid #333; border-radius:7px; background:#1E1E
 .project-coordinate-marker b { display:block; overflow:hidden; font-size:12px; line-height:1.15; text-overflow:ellipsis; white-space:nowrap; }
 .project-coordinate-marker small { display:flex; flex-wrap:wrap; gap:4px 7px; color:#5f6b7a; font-size:10px; font-weight:850; line-height:1.15; }
 .project-coordinate-marker em { color:#f97316; font-style:normal; font-size:10px; white-space:nowrap; }
-.project-coordinate-marker.active i { width:18px; height:18px; flex-basis:18px; background:var(--brand-blue); box-shadow:0 0 0 5px rgba(53,107,216,.22),0 6px 16px rgba(0,0,0,.30); }
+.project-coordinate-marker.active { min-height:30px; }
+.project-coordinate-marker.active i { width:18px; height:18px; flex-basis:18px; background:#f97316; box-shadow:0 0 0 5px rgba(249,115,22,.22),0 6px 16px rgba(0,0,0,.30); }
 .project-coordinate-marker.active span { border-color:var(--brand-blue); background:var(--brand-blue); color:#fff; box-shadow:0 6px 18px rgba(53,107,216,.30); }
 .project-coordinate-marker.active small { color:rgba(255,255,255,.86); }
 .project-coordinate-marker.active em { color:#fff; }
@@ -1674,19 +1675,19 @@ function makeSquareIcon(p) {
 }
 function makeProjectCoordinateIcon(p, active=false) {
   const width = active
-    ? Math.min(220, Math.max(96, p.project.length * 14 + 42))
+    ? 30
     : Math.min(310, Math.max(186, p.project.length * 13 + 136));
-  const height = active ? 34 : 42;
+  const height = active ? 30 : 42;
   return L.divIcon({
     className:"",
     html:projectCoordinateHtml(p, active),
     iconSize:[width, height],
-    iconAnchor:[active ? 9 : 7, height / 2]
+    iconAnchor:[active ? 15 : 7, height / 2]
   });
 }
 function projectCoordinateHtml(p, active=false) {
   const metrics = projectMapMetrics(p);
-  if (active) return `<div class="project-coordinate-marker active"><i></i><span><b>${escapeHtml(metrics.name)}</b></span></div>`;
+  if (active) return `<div class="project-coordinate-marker active"><i></i></div>`;
   return `<div class="project-coordinate-marker${active ? " active" : ""}"><i></i><span><b>${escapeHtml(metrics.name)}</b><small><em>住宅${projectMapCountText(metrics.total)}</em><em>未签${projectMapCountText(metrics.unsigned)}</em><em>均价${projectMapPriceText(metrics.price)}</em></small></span></div>`;
 }
 const rankingMetrics = {
@@ -1814,11 +1815,11 @@ function renderRealMapAmap(preserveViewport=false) {
         const circle = new mainAmap.Circle({
           center:point,
           radius:selected ? 420 : 260,
-          strokeColor:selected ? BRAND_BLUE : "#f97316",
+          strokeColor:"#f97316",
           strokeWeight:selected ? 3 : 1.5,
           strokeStyle:selected ? "solid" : "dashed",
           strokeOpacity:selected ? .95 : .72,
-          fillColor:selected ? BRAND_BLUE : "#f97316",
+          fillColor:"#f97316",
           fillOpacity:selected ? .14 : .07,
           zIndex:selected ? 95 : 72,
           bubble:true
@@ -1827,7 +1828,7 @@ function renderRealMapAmap(preserveViewport=false) {
         const marker = new mainAmap.Marker({
           position:point,
           content:projectCoordinateHtml(p, selected),
-          offset:new mainAmap.Pixel(-(selected ? 9 : 7), selected ? -17 : -21),
+          offset:new mainAmap.Pixel(selected ? -15 : -7, selected ? -15 : -21),
           title:p.project,
           zIndex:selected ? 180 : 130
         });
@@ -1894,10 +1895,10 @@ function renderRealMap(preserveViewport=false) {
         const selected = String(state.project) === String(p.id);
         L.circle([p.lat, p.lng], {
           radius:selected ? 420 : 260,
-          color:selected ? BRAND_BLUE : "#f97316",
+          color:"#f97316",
           weight:selected ? 3 : 1.5,
           dashArray:selected ? null : "5 5",
-          fillColor:selected ? BRAND_BLUE : "#f97316",
+          fillColor:"#f97316",
           fillOpacity:selected ? .14 : .07,
           opacity:selected ? .95 : .72,
           interactive:false
@@ -2566,8 +2567,11 @@ function trendMonthText(month) {
   return month.replace("年", "/").replace("月", "");
 }
 function projectMonthSource(p, month) {
+  if (["26年1月", "26年2月", "26年3月", "26年4月"].includes(month)) {
+    return { label:"克尔瑞" };
+  }
   if (month === "26年5月") {
-    const label = String(p.mayDataSource || "").includes("克而瑞") ? "克而瑞" : "天朗";
+    const label = /克[而尔]瑞/.test(String(p.mayDataSource || "")) ? "克尔瑞" : "天朗";
     return { label };
   }
   return { label:"天朗" };
