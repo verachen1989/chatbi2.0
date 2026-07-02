@@ -416,7 +416,6 @@ def refresh_aggregates(data: dict[str, Any]) -> None:
 
 
 def ensure_june_controls(html: str, data: dict[str, Any]) -> str:
-    latest = data["months"][-1]
     full = "2026年6月"
     period_options = list(reversed(data["months"]))
     html = re.sub(
@@ -427,7 +426,7 @@ def ensure_june_controls(html: str, data: dict[str, Any]) -> str:
     )
     html = re.sub(
         r"const DEFAULT_PERIODS = \[[^\]]*\];",
-        f"const DEFAULT_PERIODS = {json.dumps([latest], ensure_ascii=False)};",
+        "const DEFAULT_PERIODS = [];",
         html,
         count=1,
     )
