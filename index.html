@@ -671,8 +671,144 @@ const LAUNCH_OFFICIAL_INVENTORY_OVERRIDES = {
   }
 };
 DATA.launchProjects.forEach(project => Object.assign(project, LAUNCH_OFFICIAL_INVENTORY_OVERRIDES[project.id] || {}));
+const ZJW_PRESALE_ISSUE_RECORDS = [{"name":"通睿大厦","permit":"京房售证字(2026)55号","date":"2026-07-01"},{"name":"璟悦坊","permit":"京房售证字(2026)54号","date":"2026-06-30"},{"name":"嘉棠家苑","permit":"京房售证字(2026)53号","date":"2026-06-30"},{"name":"国樾天颂府","permit":"京房售证字(2026)52号","date":"2026-06-26"},{"name":"金阙华院","permit":"京房售证字(2026)51号","date":"2026-06-24"},{"name":"青和家园","permit":"京房售证字(2026)50号","date":"2026-06-18"},{"name":"橒颂雅园","permit":"京房售证字(2026)49号","date":"2026-06-15"},{"name":"海岄雅苑","permit":"京房售证字(2026)48号","date":"2026-06-06"},{"name":"鲲熙盛园","permit":"京房售证字(2026)47号","date":"2026-06-05"},{"name":"栖云嘉苑","permit":"京房售证字(2026)46号","date":"2026-05-30"},{"name":"颐海云颂嘉苑","permit":"京房售证字(2026)45号","date":"2026-05-28"},{"name":"嘉棠雅苑","permit":"京房售证字(2026)44号","date":"2026-05-27"},{"name":"万象茗筑小区","permit":"京房售证字(2026)43号","date":"2026-05-27"},{"name":"铂瑞府","permit":"京房售证字(2026)42号","date":"2026-05-23"},{"name":"金阙华院","permit":"京房售证字(2026)41号","date":"2026-05-16"},{"name":"满和苑","permit":"京房售证字(2026)40号","date":"2026-05-10"},{"name":"樾序海苑","permit":"京房售证字(2026)39号","date":"2026-05-10"},{"name":"朝棠雅苑（二期）","permit":"京房售证字(2026)38号","date":"2026-04-25"},{"name":"朝棠雅苑（一期）","permit":"京房售证字(2026)37号","date":"2026-04-25"},{"name":"玉章苑","permit":"京房售证字(2026)36号","date":"2026-04-24"},{"name":"璟瑞家园","permit":"京房售证字(2026)35号","date":"2026-04-23"},{"name":"熙区嘉园","permit":"京房售证字(2026)34号","date":"2026-04-20"},{"name":"润榆园","permit":"京房售证字(2026)33号","date":"2026-04-17"},{"name":"瑞宸苑","permit":"京房售证字(2026)32号","date":"2026-04-16"},{"name":"瑞玉苑","permit":"京房售证字(2026)31号","date":"2026-04-16"},{"name":"瑞璟佳苑","permit":"京房售证字(2026)30号","date":"2026-04-15"},{"name":"瑞璟佳苑","permit":"京房售证字(2026)29号","date":"2026-04-15"},{"name":"云溪花园小区","permit":"京房售证字(2026)28号","date":"2026-04-09"},{"name":"满和苑","permit":"京房售证字(2026)27号","date":"2026-04-03"},{"name":"栖云嘉苑","permit":"京房售证字(2026)26号","date":"2026-03-28"},{"name":"玖运佳苑（二期）","permit":"京房售证字(2026)25号","date":"2026-03-27"},{"name":"朝棠雅苑（一期）","permit":"京房售证字(2026)24号","date":"2026-03-26"},{"name":"金阙华院","permit":"京房售证字(2026)23号","date":"2026-03-21"},{"name":"贤岸湾庭","permit":"京房售证字(2026)22号","date":"2026-03-21"},{"name":"缦云福苑（二期）","permit":"京房售证字(2026)21号","date":"2026-03-21"},{"name":"玖运佳苑（一期）","permit":"京房售证字(2026)20号","date":"2026-03-21"},{"name":"寰逸佳苑","permit":"京房售证字(2026)19号","date":"2026-03-21"},{"name":"润榆园","permit":"京房售证字(2026)18号","date":"2026-03-20"},{"name":"璞樾家园","permit":"京房售证字(2026)17号","date":"2026-03-17"},{"name":"满和苑","permit":"京房售证字(2026)16号","date":"2026-03-12"},{"name":"壹兴雅苑","permit":"京房售证字(2026)15号","date":"2026-02-13"},{"name":"壹兴雅苑","permit":"京房售证字(2026)14号","date":"2026-02-13"},{"name":"兰庭雅苑","permit":"京房售证字(2026)13号","date":"2026-02-13"},{"name":"源颂苑","permit":"京房售证字(2026)12号","date":"2026-02-13"},{"name":"璞樾家园","permit":"京房售证字(2026)11号","date":"2026-02-13"},{"name":"御林湾苑","permit":"京房售证字(2026)10号","date":"2026-02-07"},{"name":"瑞璟佳苑","permit":"京房售证字(2026)9号","date":"2026-02-05"},{"name":"誉淙家园","permit":"京房售证字(2026)8号","date":"2026-02-05"},{"name":"长河花园","permit":"京房售证字(2026)7号","date":"2026-01-30"},{"name":"星洵家园","permit":"京房售证字(2026)6号","date":"2026-01-28"},{"name":"嘉棠家苑","permit":"京房售证字(2026)5号","date":"2026-01-28"},{"name":"瑞玉苑","permit":"京房售证字(2026)4号","date":"2026-01-26"},{"name":"瑞宸苑","permit":"京房售证字(2026)3号","date":"2026-01-26"},{"name":"玉章苑","permit":"京房售证字(2026)2号","date":"2026-01-26"},{"name":"瑞璟佳苑","permit":"京房售证字(2026)1号","date":"2026-01-26"}];
+const ZJW_OFFICIAL_NEW_LAUNCH_PROJECTS = [{"officialProjectName":"玉章苑","district":"石景山区","group":"西部组团","plate":"苹果园","lat":39.939198,"lng":116.195137,"coordConfidence":"中","address":"石景山区西黄村棚户区改造土地开发项目1606-640地块","developer":"北京鑫安兴业房地产开发有限公司","permits":["京房售证字(2026)2号","京房售证字(2026)36号"],"issueDates":["2026-01-26","2026-04-24"],"residentialTotal":20,"approvedTotalSuites":239,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8156387&systemID=2&srcId=1","http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195901&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)2号20套。"},{"officialProjectName":"长河花园","district":"昌平区","group":"北部组团","plate":"小汤山","lat":40.1769,"lng":116.3912,"coordConfidence":"低","address":"昌平区小汤山镇马坊村农业高科技示范园住宅小区专家公寓","developer":"北京天成天房地产开发有限公司","permits":["京房售证字(2026)7号"],"issueDates":["2026-01-30"],"residentialTotal":16,"approvedTotalSuites":16,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157960&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)7号16套。"},{"officialProjectName":"誉淙家园","district":"昌平区","group":"北部组团","plate":"回龙观","lat":40.096767,"lng":116.333099,"coordConfidence":"低","address":"昌平区中关村生命科学园三期（CP01-0601-0078地块）","developer":"北京城昌贝越置业有限公司","permits":["京房售证字(2026)8号"],"issueDates":["2026-02-05"],"residentialTotal":303,"approvedTotalSuites":303,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8161845&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)8号303套。"},{"officialProjectName":"御林湾苑","district":"朝阳区","group":"东北组团","plate":"金盏北","lat":40.003503,"lng":116.568902,"coordConfidence":"中","address":"朝阳区崔各庄乡来广营北路29-323地块；崔各庄乡来广营北路29-324地块","developer":"北京东洲房地产开发有限公司","permits":["京房售证字(2026)10号"],"issueDates":["2026-02-07"],"residentialTotal":1023,"approvedTotalSuites":1023,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157959&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)10号1023套。"},{"officialProjectName":"壹兴雅苑","district":"大兴区","group":"西南组团","plate":"高米店","lat":39.769058,"lng":116.338409,"coordConfidence":"低","address":"大兴区大兴新城核心区土地一级开发项目DX00-0101-055地块二类居住用地项目；大兴区大兴新城核心区土地一级开发项目DX00-0101-053地块二类居住用地项目","developer":"北京壹兴置业有限公司","permits":["京房售证字(2026)15号","京房售证字(2026)14号"],"issueDates":["2026-02-13","2026-02-13"],"residentialTotal":0,"approvedTotalSuites":606,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8167889&systemID=2&srcId=1","http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8167890&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。"},{"officialProjectName":"缦云福苑（二期）","district":"通州区","group":"CBD-副中心组团","plate":"通州老城","lat":39.909565,"lng":116.642891,"coordConfidence":"低","address":"通州区FZX-0401-6081地块","developer":"北京顺开房地产开发有限公司","permits":["京房售证字(2026)21号"],"issueDates":["2026-03-21"],"residentialTotal":135,"approvedTotalSuites":135,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176579&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)21号135套。"},{"officialProjectName":"云溪花园小区","district":"密云区","group":"其他组团","plate":"溪翁庄","lat":40.49,"lng":116.85,"coordConfidence":"低","address":"密云区溪翁庄镇","developer":"北京宁溪房地产开发有限责任公司","permits":["京房售证字(2026)28号"],"issueDates":["2026-04-09"],"residentialTotal":56,"approvedTotalSuites":56,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8186681&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)28号56套。"},{"officialProjectName":"熙区嘉园","district":"朝阳区","group":"东北组团","plate":"金盏北","lat":40.003503,"lng":116.568902,"coordConfidence":"中","address":"朝阳区东坝车辆基地综合利用项目1101-A002-3地块","developer":"北京京投润德置业有限公司","permits":["京房售证字(2026)34号"],"issueDates":["2026-04-20"],"residentialTotal":546,"approvedTotalSuites":546,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191996&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)34号546套。"},{"officialProjectName":"璟瑞家园","district":"石景山区","group":"西部组团","plate":"京西商务","lat":39.960642,"lng":116.174836,"coordConfidence":"中","address":"石景山区1609街区新首钢核心区SS00-1609-0012地块","developer":"北京首景房地产开发有限公司","permits":["京房售证字(2026)35号"],"issueDates":["2026-04-23"],"residentialTotal":379,"approvedTotalSuites":379,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195341&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)35号379套。"},{"officialProjectName":"樾序海苑","district":"昌平区","group":"北部组团","plate":"天通苑","lat":40.075255,"lng":116.412795,"coordConfidence":"中","address":"昌平区东小口镇","developer":"北京城华房地产开发有限公司","permits":["京房售证字(2026)39号"],"issueDates":["2026-05-10"],"residentialTotal":594,"approvedTotalSuites":594,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)39号594套。"},{"officialProjectName":"铂瑞府","district":"房山区","group":"西南组团","plate":"良乡","lat":39.71608,"lng":116.181732,"coordConfidence":"中","address":"房山区良乡组团FS00-0105街区（0015、0016地块）、良乡组团FS00-0105街区（0019地块）","developer":"北京城建瑞泰投资发展有限公司","permits":["京房售证字(2026)42号"],"issueDates":["2026-05-23"],"residentialTotal":383,"approvedTotalSuites":383,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8207359&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)42号383套。"},{"officialProjectName":"嘉棠雅苑","district":"丰台区","group":"西南组团","plate":"高立庄","lat":39.790954,"lng":116.295197,"coordConfidence":"中","address":"丰台区花乡中部组团城中村改造项目B区FT00-2405-0001地块","developer":"北京丰合嘉汇置业有限公司","permits":["京房售证字(2026)44号"],"issueDates":["2026-05-27"],"residentialTotal":446,"approvedTotalSuites":446,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)44号446套。"},{"officialProjectName":"鲲熙盛园","district":"朝阳区","group":"东北组团","plate":"中央别墅区","lat":40.035637,"lng":116.584206,"coordConfidence":"低","address":"朝阳区孙河组团土地储备项目2902-73地块","developer":"北京兴昶房地产开发有限公司","permits":["京房售证字(2026)47号"],"issueDates":["2026-06-05"],"residentialTotal":0,"approvedTotalSuites":5,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8216693&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。"},{"officialProjectName":"青和家园","district":"顺义区","group":"东北组团","plate":"后沙峪","lat":40.118652,"lng":116.53878,"coordConfidence":"中","address":"顺义区后沙峪镇（SY00-2301-0004地块）","developer":"北京铁工城市开发建设有限公司","permits":["京房售证字(2026)50号"],"issueDates":["2026-06-18"],"residentialTotal":400,"approvedTotalSuites":400,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)50号400套。"},{"officialProjectName":"国樾天颂府","district":"密云区","group":"其他组团","plate":"密云新城","lat":40.3774,"lng":116.8426,"coordConfidence":"低","address":"密云区密云新城0104街区","developer":"北京绿州博园投资有限公司","permits":["京房售证字(2026)52号"],"issueDates":["2026-06-26"],"residentialTotal":314,"approvedTotalSuites":314,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8227940&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)52号314套。"},{"officialProjectName":"璟悦坊","district":"石景山区","group":"西部组团","plate":"京西商务","lat":39.960642,"lng":116.174836,"coordConfidence":"中","address":"石景山区首钢设备处收储项目SS00-1617-0001地块","developer":"北京首景房地产开发有限公司","permits":["京房售证字(2026)54号"],"issueDates":["2026-06-30"],"residentialTotal":0,"approvedTotalSuites":7,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8231704&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。"},{"officialProjectName":"通睿大厦","district":"朝阳区","group":"CBD-副中心组团","plate":"CBD核心区","lat":39.913,"lng":116.466,"coordConfidence":"低","address":"朝阳区东三环商务中心区（CBD）核心区Z6地块","developer":"北京天江通睿置业有限公司","permits":["京房售证字(2026)55号"],"issueDates":["2026-07-01"],"residentialTotal":0,"approvedTotalSuites":1,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8232638&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。"}];
+function normalizePresaleName(value) {
+  return String(value || "")
+    .replace(/[·・\s（）()《》]/g, "")
+    .replace(/[一二三四五六七八九十]+期/g, "")
+    .toLowerCase();
+}
+function projectPresaleMatchNames(project) {
+  return [
+    project.project, project.matchedName, project.summaryRecordName, project.officialProjectName,
+    project.cricProjectName, project.janAprMatchedName, project.junMatchedName, project.junCricProjectName
+  ].map(normalizePresaleName).filter(Boolean);
+}
+function presaleRecordMatchesProject(record, project) {
+  const recordName = normalizePresaleName(record.name);
+  const projectNames = projectPresaleMatchNames(project);
+  const permitText = String(project.summaryPresalePermit || "");
+  return Boolean(
+    record.permit && permitText.includes(record.permit) ||
+    recordName && projectNames.some(name => name === recordName || name.includes(recordName) || recordName.includes(name))
+  );
+}
+function dashboardProjectRows() {
+  const seen = new Set();
+  return [...(DATA.projects || []), ...(DATA.launchProjects || [])].filter(project => {
+    const key = String(project.id);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+function officialNewLaunchMonthly() {
+  return DATA.months.reduce((acc, month) => {
+    acc[month] = { suites:0, area:0, price:0, amount:0 };
+    return acc;
+  }, {});
+}
+function officialNewLaunchRecords(item) {
+  return (item.permits || []).map((permit, index) => ({
+    name: item.officialProjectName,
+    permit,
+    date: item.issueDates?.[index] || item.issueDates?.[0] || ""
+  }));
+}
+function officialNewLaunchProjectId(item, index) {
+  const firstPermit = String(item.permits?.[0] || "").match(/\d{4}\)?\d+/)?.[0] || "";
+  return `zjw-launch-${firstPermit || normalizePresaleName(item.officialProjectName) || index}`;
+}
+function buildOfficialNewLaunchProject(item, index) {
+  const records = officialNewLaunchRecords(item);
+  const issueDates = [...new Set(records.map(record => record.date).filter(Boolean))];
+  const residentialTotal = Number.isFinite(Number(item.residentialTotal)) ? Number(item.residentialTotal) : 0;
+  const approvedTotalSuites = Number.isFinite(Number(item.approvedTotalSuites)) ? Number(item.approvedTotalSuites) : null;
+  return {
+    id: officialNewLaunchProjectId(item, index),
+    group: item.group,
+    plate: item.plate,
+    project: item.officialProjectName,
+    landDate: issueDates[0] || "",
+    status: residentialTotal > 0 ? "新取证" : "新取证(非住宅)",
+    x: 50,
+    y: 50,
+    lat: Number(item.lat),
+    lng: Number(item.lng),
+    monthly: officialNewLaunchMonthly(),
+    suites34: 0,
+    area34: 0,
+    amount34: 0,
+    price4: 0,
+    amountAll: 0,
+    suitesAll: 0,
+    district: item.district,
+    address: item.address,
+    coordSource: "住建委坐落位置 + 业务板块近似定位",
+    coordSourceUrl: officialInventoryPrimaryUrl({ officialInventoryEvidenceUrl:(item.detailUrls || []).join("\n") }),
+    coordConfidence: item.coordConfidence || "低",
+    coordSystem: "GCJ-02近似板块中心",
+    matchedName: `${item.plate}板块近似点`,
+    summaryRecordName: item.officialProjectName,
+    summaryPresalePermit: (item.permits || []).join(" / "),
+    summaryDeveloper: item.developer || "住建委项目详情页",
+    officialProjectName: item.officialProjectName,
+    officialResidentialTotal: residentialTotal,
+    officialUnsignedSuites: null,
+    officialAvailableSuites: null,
+    officialSignedSuites: null,
+    officialInventoryEvidenceUrl: (item.detailUrls || []).join("\n"),
+    officialInventoryFetchedAt: "2026-07-06 住建委预售证详情页抓取",
+    officialInventoryMatchStatus: "住建委新发预售证项目；原成交样本表未覆盖",
+    officialDetailSignedSuites: null,
+    officialInventoryTotalAuditNote: item.inventoryNote,
+    approvedTotalSuites,
+    source: "zjwNewLaunch",
+    presaleIssueRecords: records,
+    presaleIssueDates: issueDates
+  };
+}
+function officialNewLaunchRows() {
+  const existing = dashboardProjectRows();
+  return (ZJW_OFFICIAL_NEW_LAUNCH_PROJECTS || [])
+    .map(buildOfficialNewLaunchProject)
+    .filter(project => !(project.presaleIssueRecords || []).some(record =>
+      existing.some(row => presaleRecordMatchesProject(record, row))
+    ));
+}
+function attachOfficialNewLaunchPlateLocations() {
+  (ZJW_OFFICIAL_NEW_LAUNCH_PROJECTS || []).forEach(item => {
+    if (item.plate && !DATA.plateLocations[item.plate] && Number.isFinite(Number(item.lat)) && Number.isFinite(Number(item.lng))) {
+      DATA.plateLocations[item.plate] = {
+        lat: Number(item.lat),
+        lng: Number(item.lng),
+        matched: `${item.plate}近似中心`,
+        confidence: item.coordConfidence || "低",
+        source: "住建委坐落位置 + 业务板块近似定位",
+        sourceUrl: (item.detailUrls || [])[0] || "",
+        note: "官方预售证地址未稳定命中POI，使用业务板块近似落点，需后续人工精修。"
+      };
+    }
+    if (item.plate && item.district && !DATA.plateDistricts[item.plate]) DATA.plateDistricts[item.plate] = item.district;
+  });
+}
+function attachPresaleIssueRecords() {
+  allProjectRows().forEach(project => {
+    const existing = (project.presaleIssueRecords || []).slice();
+    ZJW_PRESALE_ISSUE_RECORDS.forEach(record => {
+      if (presaleRecordMatchesProject(record, project)) existing.push(record);
+    });
+    const byKey = new Map();
+    existing.forEach(record => {
+      if (record?.date) byKey.set(`${record.date}|${record.permit || ""}`, record);
+    });
+    project.presaleIssueRecords = [...byKey.values()].sort((a,b) => String(a.date).localeCompare(String(b.date)));
+    project.presaleIssueDates = project.presaleIssueRecords.map(record => record.date);
+  });
+}
 const DEFAULT_PERIODS = [];
-const state = { groups:[], districts:[], scopes:[], periods:[...DEFAULT_PERIODS], years:[], plates:[], search:"", view:"map", activePlate:null, project:null, detailTransactionMonth:"", rankingMetric:"suites", mapMode:"real", abstractZoom:1, showOverlay:true };
+const state = { groups:[], districts:[], issueMonths:[], periods:[...DEFAULT_PERIODS], years:[], plates:[], search:"", view:"map", activePlate:null, project:null, detailTransactionMonth:"", rankingMetric:"suites", mapMode:"real", abstractZoom:1, showOverlay:true };
 const latestSortMonth = DATA.months.filter(monthParts).sort((a,b)=>monthRank(b)-monthRank(a))[0] || "26年6月";
 const tableSort = { key:"monthly", month:latestSortMonth, metric:"suites", direction:"desc" };
 const TRANSACTION_INDEX = window.TRANSACTION_DETAILS || { summary:{ months:0, projects:0, rows:0, skippedRows:0 }, months:{} };
@@ -687,18 +823,53 @@ const matchesMulti = (values, value) => !hasMulti(values) || values.includes(val
 const selectedPeriods = () => hasMulti(state.periods) ? state.periods : periodOptions.map(([value]) => value);
 const months = () => [...new Set(selectedPeriods().flatMap(value => value.split("|")))];
 const periodLabel = () => selectedPeriods().map(value => (periodOptions.find(p=>p[0]===value)||[value,value])[1]).join("、");
-const usesRecentLaunchScope = () => state.scopes.includes("recentLaunch") && !state.scopes.includes("全部") && state.scopes.length;
+function issueMonthFromDate(value) {
+  const match = /^(\d{4})-(\d{2})-\d{2}$/.exec(value || "");
+  return match ? monthLabel(Number(match[1]), Number(match[2])) : "";
+}
+function projectIssueMonths(project) {
+  return [...new Set((project.presaleIssueDates || []).map(issueMonthFromDate).filter(Boolean))]
+    .sort((a,b) => monthRank(b) - monthRank(a));
+}
+function issueMonthFilterLabel() {
+  const values = (state.issueMonths || []).filter(monthParts).sort((a,b) => monthRank(a) - monthRank(b));
+  if (!values.length) return "全部取证时间";
+  if (values.length === 1) return values[0];
+  const parts = values.map(monthParts);
+  const contiguous = parts.every(Boolean) && parts.every((part, index) => {
+    if (index === 0) return true;
+    return part.year * 12 + part.month === parts[index - 1].year * 12 + parts[index - 1].month + 1;
+  });
+  if (contiguous) {
+    const first = parts[0];
+    const last = parts[parts.length - 1];
+    return first.year === last.year
+      ? `${String(first.year % 100).padStart(2, "0")}年${first.month}-${last.month}月`
+      : `${values[0]}-${values[values.length - 1]}`;
+  }
+  return values.length <= 3 ? values.join("、") : `${values[0]}等${values.length}月`;
+}
+function issueMonthOptions() {
+  return [...new Set(allProjectRows().flatMap(projectIssueMonths))]
+    .sort((a,b) => monthRank(b) - monthRank(a))
+    .map(month => [month, month]);
+}
+function matchesIssueMonths(project) {
+  return !hasMulti(state.issueMonths) || projectIssueMonths(project).some(month => state.issueMonths.includes(month));
+}
 function allProjectRows() {
   const seen = new Set();
-  return [...(DATA.projects || []), ...(DATA.launchProjects || [])].filter(project => {
+  return [...dashboardProjectRows(), ...officialNewLaunchRows()].filter(project => {
     const key = String(project.id);
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
   });
 }
-const projectSource = () => usesRecentLaunchScope() ? DATA.launchProjects : allProjectRows();
-const scopeLabel = () => usesRecentLaunchScope() ? "最近两月新开盘" : "全部项目";
+attachOfficialNewLaunchPlateLocations();
+attachPresaleIssueRecords();
+const projectSource = () => allProjectRows();
+const scopeLabel = () => hasMulti(state.issueMonths) ? `取证时间：${issueMonthFilterLabel()}` : "全部取证时间";
 const findProjectById = id => projectSource().find(p => String(p.id) === String(id)) || DATA.projects.find(p => String(p.id) === String(id)) || DATA.launchProjects.find(p => String(p.id) === String(id));
 const groupLabel = group => group.endsWith("组块") ? group : group.replace("组团", "");
 const projectPeriod = p => {
@@ -846,6 +1017,7 @@ function matchesSearch(p) {
 const scopedProjects = () => projectSource().filter(p =>
   matchesMulti(state.groups, p.group) &&
   matchesMulti(state.districts, p.district) &&
+  matchesIssueMonths(p) &&
   (!hasMulti(state.years) || state.years.some(year => p.landDate.startsWith(year))) &&
   matchesMulti(state.plates, p.plate) &&
   matchesSearch(p)
@@ -1396,6 +1568,7 @@ function plateOptions() {
   const plates = projectSource().filter(p =>
     matchesMulti(state.groups, p.group) &&
     matchesMulti(state.districts, p.district) &&
+    matchesIssueMonths(p) &&
     (!hasMulti(state.years) || state.years.some(year => p.landDate.startsWith(year)))
   ).map(p => p.plate);
   return [...new Set(plates)].sort((a,b)=>a.localeCompare(b, "zh-Hans-CN"));
@@ -1425,7 +1598,7 @@ function toggleFilterValue(key, value) {
   state[key] = [...current].filter(v => v !== "全部");
 }
 function filterDefinitions() {
-  const groupOptions = [...new Set([...DATA.groupTotals.map(g => g.group), ...DATA.launchProjects.map(p => p.group)])]
+  const groupOptions = [...new Set(allProjectRows().map(p => p.group).filter(Boolean))]
     .sort((a,b)=>a.localeCompare(b, "zh-Hans-CN"))
     .map(group => [group, groupLabel(group)]);
   const yearOptions = [...new Set(allProjectRows().map(p => p.landDate.slice(0,4)).filter(Boolean))]
@@ -1435,7 +1608,7 @@ function filterDefinitions() {
     { id:"districtFilter", key:"districts", label:"行政区划", allLabel:"行政区划", allOptionLabel:"不限行政区", unit:"区", options: DATA.districts.map(d => [d, d]) },
     { id:"plateFilter", key:"plates", label:"板块", allLabel:"板块", allOptionLabel:"不限板块", unit:"个", options: plateOptions().map(plate => [plate, plate]) },
     { id:"groupFilter", key:"groups", label:"组团", allLabel:"组团", allOptionLabel:"不限组团", unit:"组", options: groupOptions },
-    { id:"scopeFilter", key:"scopes", label:"项目范围", allLabel:"项目范围", allOptionLabel:"全部项目", unit:"项", options: [["recentLaunch", "最近两月新开盘"]] },
+    { id:"scopeFilter", key:"issueMonths", label:"取证时间", allLabel:"取证时间", allOptionLabel:"全部取证时间", unit:"月", options: issueMonthOptions() },
     { id:"yearFilter", key:"years", label:"拿地年份", allLabel:"拿地年份", allOptionLabel:"不限年份", unit:"年", options: yearOptions },
     { id:"periodFilter", key:"periods", label:"成交月份", allLabel:"成交月份", allOptionLabel:"全部月份", unit:"月", options: periodOptions },
   ];
@@ -1447,7 +1620,9 @@ function renderMultiFilter(def) {
   const allChecked = !hasMulti(selected);
   const label = def.key === "periods" && hasMulti(selected)
     ? periodMetricLabel()
-    : filterSummary(selected, def.allLabel, def.options, def.unit);
+    : (def.key === "issueMonths" && hasMulti(selected)
+      ? issueMonthFilterLabel()
+      : filterSummary(selected, def.allLabel, def.options, def.unit));
   const optionsHtml = [
     `<label class="filter-option"><input type="checkbox" data-value="全部" ${allChecked ? "checked" : ""}>${escapeHtml(def.allOptionLabel || def.allLabel)}</label>`,
     ...def.options.map(([value, text]) => `<label class="filter-option"><input type="checkbox" data-value="${escapeHtml(value)}" ${selected.includes(value) ? "checked" : ""}>${escapeHtml(text)}</label>`)
@@ -1463,7 +1638,7 @@ function renderMultiFilter(def) {
     input.onchange = event => {
       event.stopPropagation();
       toggleFilterValue(def.key, input.dataset.value);
-      if (["districts", "groups", "scopes", "years"].includes(def.key)) syncPlateFilter();
+      if (["districts", "groups", "issueMonths", "years"].includes(def.key)) syncPlateFilter();
       const focusPlateName = def.key === "plates" && state.plates.length === 1 ? state.plates[0] : "";
       state.activePlate = focusPlateName || null;
       closeProjectDetail();
@@ -1486,7 +1661,7 @@ function renderFilterControls() {
 function resetFilters() {
   state.groups = [];
   state.districts = [];
-  state.scopes = [];
+  state.issueMonths = [];
   state.periods = [...DEFAULT_PERIODS];
   state.years = [];
   state.plates = [];
@@ -2156,12 +2331,15 @@ const recentLaunchMonths = ["26年5月", "26年6月"].filter(month => DATA.month
 function isRecentLaunchProject(p) {
   return String(p?.id || "").startsWith("launch-");
 }
+function isNewLaunchOnlyProject(p) {
+  return isRecentLaunchProject(p) || p?.source === "zjwNewLaunch";
+}
 function tableMonths(rows=[]) {
-  const useRecentMonths = rows.length ? rows.every(isRecentLaunchProject) : (state.scopes.includes("recentLaunch") && state.scopes.length);
+  const useRecentMonths = rows.length && rows.every(isNewLaunchOnlyProject);
   return (useRecentMonths ? recentLaunchMonths : DATA.months).slice().reverse();
 }
 function projectMonths(p) {
-  if (!isRecentLaunchProject(p)) return DATA.months;
+  if (!isNewLaunchOnlyProject(p)) return DATA.months;
   const meaningful = DATA.months.filter(month => {
     const item = p.monthly?.[month] || {};
     return ["suites", "amount", "price", "area"].some(key => Number(item[key]) > 0) ||
@@ -2201,7 +2379,7 @@ function officialInventoryPrimaryUrl(p) {
   return officialInventoryUrls(p)[0] || "";
 }
 function officialInventoryPendingText(p, label) {
-  const text = p?.source === "recentLaunch" ? "待补" : "-";
+  const text = p?.source === "recentLaunch" ? "待补" : (p?.source === "zjwNewLaunch" ? "待核" : "-");
   const url = officialInventoryPrimaryUrl(p);
   if (!url) return text;
   const title = `打开住建委页面：${p.officialProjectName || p.summaryRecordName || p.project} ${label}待补；待补充官方库存数`;
@@ -2385,21 +2563,29 @@ function updateTransactionSectionForMonth(p, month, options={}) {
     if (body) body.scrollTo({ top:Math.max(0, newSection.offsetTop - 10), behavior:"smooth" });
   }
 }
+function projectIssueDateText(p) {
+  const records = (p?.presaleIssueRecords || []).slice().sort((a,b) => String(a.date).localeCompare(String(b.date)));
+  if (!records.length) return "暂未匹配";
+  return records.map(record => `${record.date}${record.permit ? ` ${record.permit}` : ""}`).join("；");
+}
 function projectNameSummary(p) {
   const title = `住建委备案名：${p.summaryRecordName || "暂未补充"}
 预售证：${p.summaryPresalePermit || "暂未补充"}
+取证日期：${projectIssueDateText(p)}
 开发商：${p.summaryDeveloper || "暂未补充"}
 ${projectSummarySource(p)}`;
   const summary = `<h4>${escapeHtml(p.project)}</h4>
     <div class="project-summary-grid">
       <div class="project-summary-item"><span>住建委备案名</span><b>${escapeHtml(p.summaryRecordName || "暂未补充")}</b></div>
       <div class="project-summary-item"><span>预售证</span><b>${escapeHtml(p.summaryPresalePermit || "暂未补充")}</b></div>
+      <div class="project-summary-item"><span>取证日期</span><b>${escapeHtml(projectIssueDateText(p))}</b></div>
       <div class="project-summary-item"><span>开发商</span><b>${escapeHtml(p.summaryDeveloper || "暂未补充")}</b></div>
     </div>
     <div class="project-summary-source">${escapeHtml(projectSummarySource(p))}</div>`;
   return `<b class="project-name-summary" data-project-summary-id="${escapeHtml(p.id)}" data-project-summary="${escapeHtml(summary)}" title="${escapeHtml(title)}" onmouseenter="const t=document.getElementById('projectSummaryTooltip');t.innerHTML=this.dataset.projectSummary;t.classList.add('show')" onmousemove="const t=document.getElementById('projectSummaryTooltip'),w=Math.min(440,window.innerWidth-24),g=16;t.style.left=Math.min(window.innerWidth-w-12,Math.max(12,event.clientX+g))+'px';t.style.top=Math.max(12,Math.min(window.innerHeight-t.offsetHeight-12,event.clientY+g))+'px'" onmouseleave="document.getElementById('projectSummaryTooltip').classList.remove('show')">${escapeHtml(p.project)}</b>`;
 }
 function projectSummarySource(p) {
+  if (p?.source === "zjwNewLaunch") return "新取证来源：北京市住建委预售许可证项目公示；成交明细暂未进入克尔瑞样本表";
   return "成交明细来源：全部取自克尔瑞交易明细，已排除车库/车位";
 }
 function ensureProjectSummaryTooltip() {
@@ -2428,6 +2614,7 @@ function showProjectSummary(event, projectId) {
     <div class="project-summary-grid">
       <div class="project-summary-item"><span>住建委备案名</span><b>${escapeHtml(project.summaryRecordName || "暂未补充")}</b></div>
       <div class="project-summary-item"><span>预售证</span><b>${escapeHtml(project.summaryPresalePermit || "暂未补充")}</b></div>
+      <div class="project-summary-item"><span>取证日期</span><b>${escapeHtml(projectIssueDateText(project))}</b></div>
       <div class="project-summary-item"><span>开发商</span><b>${escapeHtml(project.summaryDeveloper || "暂未补充")}</b></div>
     </div>
     <div class="project-summary-source">${escapeHtml(projectSummarySource(project))}</div>`;
@@ -2491,7 +2678,7 @@ function renderTableView(preserveScroll=false) {
   document.getElementById("tableSub").textContent = `${scopeLabel()}｜按北京各板块项目去化分析原始月度结构展示：每月包含套数、面积、均价、网签金额，可横向滚动查看趋势`;
   document.getElementById("tableCount").textContent = `${rows.length} 个项目`;
   tableWrap.innerHTML = `<table class="trend-table" ${trendTableStyle(monthList)}>${trendColGroup(monthList)}<thead>
-    <tr><th class="project-sticky" rowspan="2">${tableSortButton("项目名称", "project")}</th><th class="base-col" rowspan="2">${tableSortButton("行政区划", "district")}</th><th class="base-col" rowspan="2">${tableSortButton("组团", "group")}</th><th class="base-col" rowspan="2">${tableSortButton("板块", "plate")}</th><th class="status-col" rowspan="2">${tableSortButton("状态", "status")}</th><th class="date-col" rowspan="2">${tableSortButton("出让时间", "landDate")}</th><th class="num inventory-col" rowspan="2">${tableSortButton("总套数", "officialTotal")}</th><th class="num inventory-col" rowspan="2">${tableSortButton("剩余套数", "officialUnsigned")}</th>${monthGroupHeaders(monthList)}</tr>
+    <tr><th class="project-sticky" rowspan="2">${tableSortButton("项目名称", "project")}</th><th class="base-col" rowspan="2">${tableSortButton("行政区划", "district")}</th><th class="base-col" rowspan="2">${tableSortButton("组团", "group")}</th><th class="base-col" rowspan="2">${tableSortButton("板块", "plate")}</th><th class="status-col" rowspan="2">${tableSortButton("状态", "status")}</th><th class="date-col" rowspan="2">${tableSortButton("出让/取证时间", "landDate")}</th><th class="num inventory-col" rowspan="2">${tableSortButton("总套数", "officialTotal")}</th><th class="num inventory-col" rowspan="2">${tableSortButton("剩余套数", "officialUnsigned")}</th>${monthGroupHeaders(monthList)}</tr>
     <tr class="metric-head">${monthMetricHeaders(monthList)}</tr>
     </thead><tbody>${rows.map(p=>`<tr data-id="${p.id}"><td class="project-sticky">${projectNameSummary(p)}<small>累计 ${fmt.format(p.suitesAll)} 套 / ${fmt1.format(p.amountAll)} 万元</small></td><td>${p.district||"-"}</td><td>${p.group}</td><td>${p.plate}</td><td><span class="tag">${p.status}</span></td><td>${p.landDate||"-"}</td>${officialInventoryCells(p)}${monthMetricCells(p, monthList)}</tr>`).join("")}</tbody></table>`;
   bindProjectSummaryHovers();
@@ -2518,7 +2705,7 @@ function openDrawer(row) {
   const monthList = tableMonths(rows);
   document.getElementById("drawerTitle").textContent = `${row.plate}板块项目明细`;
   document.getElementById("drawerSub").textContent = `${scopeLabel()}｜共找到 ${rows.length} 个楼盘，横向展示各月网签金额和套数趋势`;
-  document.getElementById("projectTable").innerHTML = `<table class="drawer-trend-table" ${drawerTrendTableStyle(monthList)}><thead><tr><th class="project-sticky">项目名称</th><th>状态</th><th>出让时间</th>${drawerMonthHeaders(monthList)}</tr></thead><tbody>${rows.map(p=>`<tr data-id="${p.id}"><td class="project-sticky">${projectNameSummary(p)}<div style="color:#777;font-size:11px;margin-top:3px">${p.district||"-"} · ${p.group} · ${p.plate}</div></td><td><span class="tag">${p.status}</span></td><td>${p.landDate||"-"}</td>${drawerMonthCells(p, monthList)}</tr>`).join("")}</tbody></table>`;
+  document.getElementById("projectTable").innerHTML = `<table class="drawer-trend-table" ${drawerTrendTableStyle(monthList)}><thead><tr><th class="project-sticky">项目名称</th><th>状态</th><th>出让/取证时间</th>${drawerMonthHeaders(monthList)}</tr></thead><tbody>${rows.map(p=>`<tr data-id="${p.id}"><td class="project-sticky">${projectNameSummary(p)}<div style="color:#777;font-size:11px;margin-top:3px">${p.district||"-"} · ${p.group} · ${p.plate}</div></td><td><span class="tag">${p.status}</span></td><td>${p.landDate||"-"}</td>${drawerMonthCells(p, monthList)}</tr>`).join("")}</tbody></table>`;
   bindProjectSummaryHovers();
   document.querySelectorAll("#projectTable tr[data-id]").forEach(tr => tr.onclick = () => {
     const project = findProjectById(tr.dataset.id);
@@ -3046,7 +3233,7 @@ function openDetail(p, options={}) {
   const s = projectPeriod(p);
   document.getElementById("detailTitle").textContent = p.project;
   const coordText = Number.isFinite(p.lat) && Number.isFinite(p.lng) ? ` · 坐标：${p.coordConfidence || "待核验"} / ${p.coordSource || "公开地图"} / ${p.matchedName || p.address || "POI"}` : "";
-  document.getElementById("detailSub").textContent = `${p.district||"-"} · ${p.group} · ${p.plate} · ${p.status} · 出让时间 ${p.landDate||"-"}${coordText}`;
+  document.getElementById("detailSub").textContent = `${p.district||"-"} · ${p.group} · ${p.plate} · ${p.status} · 出让/取证时间 ${p.landDate||"-"}${coordText}`;
   document.getElementById("detailBody").innerHTML = projectDetailTable(p);
   renderProjectTrend(p);
   const similarToggle = document.getElementById("similarProjectsToggle");
