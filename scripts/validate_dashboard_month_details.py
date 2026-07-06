@@ -9,7 +9,10 @@ import re
 from pathlib import Path
 
 
-DATA_RE = re.compile(r"const DATA = (.*?);\nconst DEFAULT_PERIODS", re.S)
+DATA_RE = re.compile(
+    r"const DATA = (.*?);\n(?:const LAUNCH_OFFICIAL_INVENTORY_OVERRIDES|const DEFAULT_PERIODS)",
+    re.S,
+)
 DETAIL_RE = re.compile(
     r"window\.TRANSACTION_DETAILS = (.*?);\nwindow\.MAY_TRANSACTION_DETAILS",
     re.S,
@@ -63,6 +66,8 @@ def project_candidates(project: dict) -> list[str]:
         "project",
         "cricProjectName",
         "janAprMatchedName",
+        "junMatchedName",
+        "junCricProjectName",
         "matchedName",
         "summaryRecordName",
         "officialProjectName",
@@ -115,7 +120,7 @@ def main() -> None:
     missing = []
     mismatches = []
 
-    for project in dashboard.get("projects", []):
+    for project in dashboard.get("projects", []) + dashboard.get("launchProjects", []):
         candidates = project_candidates(project)
         for month in args.months:
             suites = project.get("monthly", {}).get(month, {}).get("suites", 0)

@@ -23,7 +23,10 @@ from typing import Any
 from openpyxl import load_workbook
 
 
-DATA_RE = re.compile(r"const DATA = (.*?);\nconst DEFAULT_PERIODS", re.S)
+DATA_RE = re.compile(
+    r"const DATA = (.*?);\n(const LAUNCH_OFFICIAL_INVENTORY_OVERRIDES|const DEFAULT_PERIODS)",
+    re.S,
+)
 MONTH = "26年6月"
 MONTH_FULL = "2026年6月"
 DETAIL_GLOBAL_RE = re.compile(r'(<script src="transaction_details\.js[^"]*"></script>)')
@@ -208,17 +211,26 @@ def project_candidate_names(project: dict[str, Any]) -> list[str]:
     fields = [
         "cricProjectName",
         "janAprMatchedName",
+        "junMatchedName",
+        "junCricProjectName",
         "matchedName",
         "project",
         "summaryRecordName",
         "officialProjectName",
     ]
+    manual_aliases = {
+        "北投栖澐湾": ["北投·云帆汀澜", "北投云帆汀澜"],
+        "中海玖樹满和": ["中海·九树满和", "中海九树满和"],
+        "中建方程国贤府": ["方程国贤府", "中建·方程国贤府"],
+        "未来城星寰时代": ["未来城·星寰时代"],
+    }
     names: list[str] = []
     for field in fields:
         value = clean(project.get(field))
         if not value:
             continue
         names.extend(re.split(r"[；;、/\n]+", value))
+    names.extend(manual_aliases.get(clean(project.get("project")), []))
     output: list[str] = []
     for name in names:
         name = clean(name)
@@ -605,7 +617,7 @@ def main() -> None:
                 )
 
     refresh_aggregates(data)
-    replacement = "const DATA = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\nconst DEFAULT_PERIODS"
+    replacement = "const DATA = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n" + match.group(2)
     html = DATA_RE.sub(lambda _: replacement, html, count=1)
     html = ensure_june_controls(html, data)
     args.html.write_text(html, encoding="utf-8")
