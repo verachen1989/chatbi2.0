@@ -2724,10 +2724,25 @@ function projectIssueDateText(p) {
 function projectIssueDateCell(p) {
   return earliestPresaleIssueRecord(p)?.date || "-";
 }
+function projectPresalePermitText(p) {
+  const permits = [];
+  const seen = new Set();
+  const addPermit = value => {
+    const text = String(value || "").trim();
+    if (!text) return;
+    const key = text.match(/京房售证字\(\d{4}\)\d+号/)?.[0] || text;
+    if (seen.has(key)) return;
+    seen.add(key);
+    permits.push(text);
+  };
+  (p?.presaleIssueRecords || []).forEach(record => addPermit(record?.permit));
+  String(p?.summaryPresalePermit || "").split(/\s*\/\s*/).forEach(addPermit);
+  return permits.length ? permits.join(" / ") : "暂未补充";
+}
 function projectNameSummary(p) {
   const issueWarning = projectIssueAuditWarning(p);
   const title = `住建委备案名：${p.summaryRecordName || "暂未补充"}
-预售证：${p.summaryPresalePermit || "暂未补充"}
+预售证：${projectPresalePermitText(p)}
 最早取证日期：${projectIssueDateText(p)}
 开发商：${p.summaryDeveloper || "暂未补充"}
 ${issueWarning || ""}
@@ -2735,7 +2750,7 @@ ${projectSummarySource(p)}`;
   const summary = `<h4>${escapeHtml(p.project)}</h4>
     <div class="project-summary-grid">
       <div class="project-summary-item"><span>住建委备案名</span><b>${escapeHtml(p.summaryRecordName || "暂未补充")}</b></div>
-      <div class="project-summary-item"><span>预售证</span><b>${escapeHtml(p.summaryPresalePermit || "暂未补充")}</b></div>
+      <div class="project-summary-item"><span>预售证</span><b>${escapeHtml(projectPresalePermitText(p))}</b></div>
       <div class="project-summary-item"><span>最早取证日期</span><b>${escapeHtml(projectIssueDateText(p))}</b></div>
       <div class="project-summary-item"><span>开发商</span><b>${escapeHtml(p.summaryDeveloper || "暂未补充")}</b></div>
     </div>
@@ -2773,7 +2788,7 @@ function showProjectSummary(event, projectId) {
   tooltip.innerHTML = `<h4>${escapeHtml(project.project)}</h4>
     <div class="project-summary-grid">
       <div class="project-summary-item"><span>住建委备案名</span><b>${escapeHtml(project.summaryRecordName || "暂未补充")}</b></div>
-      <div class="project-summary-item"><span>预售证</span><b>${escapeHtml(project.summaryPresalePermit || "暂未补充")}</b></div>
+      <div class="project-summary-item"><span>预售证</span><b>${escapeHtml(projectPresalePermitText(project))}</b></div>
       <div class="project-summary-item"><span>最早取证日期</span><b>${escapeHtml(projectIssueDateText(project))}</b></div>
       <div class="project-summary-item"><span>开发商</span><b>${escapeHtml(project.summaryDeveloper || "暂未补充")}</b></div>
     </div>
