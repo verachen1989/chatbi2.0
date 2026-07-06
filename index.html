@@ -645,9 +645,9 @@ const LAUNCH_OFFICIAL_INVENTORY_OVERRIDES = {
       "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8226661&systemID=2&srcId=1"
     ].join("\n"),
     officialInventoryFetchedAt: "2026-07-06 住建委项目公示核验",
-    officialInventoryMatchStatus: "公开网备案名线索+住建委项目名匹配；2026-51号为地下车位/库房证，不计入住宅总套数",
+    officialInventoryMatchStatus: "公开网备案名线索+住建委项目名匹配；多张住宅预售证合并口径；2026-51号为地下车位/库房证，不计入住宅总套数",
     officialDetailSignedSuites: 482,
-    officialInventoryTotalAuditNote: "住建委楼盘表按住宅楼汇总：京房售证字(2026)23号476套 + 京房售证字(2026)41号32套 = 508套；京房售证字(2026)51号为地下车位/丙二类库房，未计住宅；房源状态复核：可售26套、已预订0套、已签约/网上联机备案482套，剩余套数按绿色可售房源计。"
+    officialInventoryTotalAuditNote: "住建委楼盘表按住宅楼汇总：京房售证字(2026)23号476套 + 京房售证字(2026)41号32套 = 508套；京房售证字(2026)51号为地下车位/丙二类库房，未计住宅；签约统计复核：8177162页住宅已签452套、8205387页住宅已签30套，合计482套；房源状态复核：可售26套、已预订0套，剩余套数按绿色可售住宅房源计。"
   },
   "launch-6": {
     summaryRecordName: "栖云嘉苑",
@@ -722,7 +722,8 @@ function officialNewLaunchProjectId(item, index) {
 }
 function buildOfficialNewLaunchProject(item, index) {
   const records = officialNewLaunchRecords(item);
-  const issueDates = [...new Set(records.map(record => record.date).filter(Boolean))];
+  const issueDates = [...new Set(records.map(record => record.date).filter(Boolean))]
+    .sort((a,b) => String(a).localeCompare(String(b)));
   const residentialTotal = Number.isFinite(Number(item.residentialTotal)) ? Number(item.residentialTotal) : 0;
   const approvedTotalSuites = Number.isFinite(Number(item.approvedTotalSuites)) ? Number(item.approvedTotalSuites) : null;
   return {
@@ -827,13 +828,19 @@ function issueMonthFromDate(value) {
   const match = /^(\d{4})-(\d{2})-\d{2}$/.exec(value || "");
   return match ? monthLabel(Number(match[1]), Number(match[2])) : "";
 }
+function earliestPresaleIssueRecord(project) {
+  return (project?.presaleIssueRecords || [])
+    .filter(record => record?.date)
+    .slice()
+    .sort((a,b) => String(a.date).localeCompare(String(b.date)))[0] || null;
+}
 function projectIssueMonths(project) {
-  return [...new Set((project.presaleIssueDates || []).map(issueMonthFromDate).filter(Boolean))]
-    .sort((a,b) => monthRank(b) - monthRank(a));
+  const month = issueMonthFromDate(earliestPresaleIssueRecord(project)?.date || "");
+  return month ? [month] : [];
 }
 function issueMonthFilterLabel() {
   const values = (state.issueMonths || []).filter(monthParts).sort((a,b) => monthRank(a) - monthRank(b));
-  if (!values.length) return "全部取证时间";
+  if (!values.length) return "全部取证时间（最早）";
   if (values.length === 1) return values[0];
   const parts = values.map(monthParts);
   const contiguous = parts.every(Boolean) && parts.every((part, index) => {
@@ -869,7 +876,7 @@ function allProjectRows() {
 attachOfficialNewLaunchPlateLocations();
 attachPresaleIssueRecords();
 const projectSource = () => allProjectRows();
-const scopeLabel = () => hasMulti(state.issueMonths) ? `取证时间：${issueMonthFilterLabel()}` : "全部取证时间";
+const scopeLabel = () => hasMulti(state.issueMonths) ? `取证时间（最早）：${issueMonthFilterLabel()}` : "全部取证时间（最早）";
 const findProjectById = id => projectSource().find(p => String(p.id) === String(id)) || DATA.projects.find(p => String(p.id) === String(id)) || DATA.launchProjects.find(p => String(p.id) === String(id));
 const groupLabel = group => group.endsWith("组块") ? group : group.replace("组团", "");
 const projectPeriod = p => {
@@ -892,10 +899,11 @@ function officialInventoryValue(value, p) {
 }
 function projectOfficialDisplayTotal(p) {
   const approved = officialInventoryValue(p.officialResidentialTotal, p);
+  if (approved !== null) return approved;
   const unsigned = officialInventoryValue(p.officialUnsignedSuites, p);
   const detailSigned = officialInventoryValue(p.officialDetailSignedSuites, p);
   const cumulativeSold = cleanCount(p.suitesAll);
-  const candidates = [approved];
+  const candidates = [];
   if (unsigned !== null && detailSigned !== null) candidates.push(unsigned + detailSigned);
   if (unsigned !== null && cumulativeSold !== null) candidates.push(unsigned + cumulativeSold);
   const valid = candidates.filter(value => Number.isFinite(value));
@@ -1608,7 +1616,7 @@ function filterDefinitions() {
     { id:"districtFilter", key:"districts", label:"行政区划", allLabel:"行政区划", allOptionLabel:"不限行政区", unit:"区", options: DATA.districts.map(d => [d, d]) },
     { id:"plateFilter", key:"plates", label:"板块", allLabel:"板块", allOptionLabel:"不限板块", unit:"个", options: plateOptions().map(plate => [plate, plate]) },
     { id:"groupFilter", key:"groups", label:"组团", allLabel:"组团", allOptionLabel:"不限组团", unit:"组", options: groupOptions },
-    { id:"scopeFilter", key:"issueMonths", label:"取证时间", allLabel:"取证时间", allOptionLabel:"全部取证时间", unit:"月", options: issueMonthOptions() },
+    { id:"scopeFilter", key:"issueMonths", label:"取证时间（最早）", allLabel:"取证时间（最早）", allOptionLabel:"全部取证时间（最早）", unit:"月", options: issueMonthOptions() },
     { id:"yearFilter", key:"years", label:"拿地年份", allLabel:"拿地年份", allOptionLabel:"不限年份", unit:"年", options: yearOptions },
     { id:"periodFilter", key:"periods", label:"成交月份", allLabel:"成交月份", allOptionLabel:"全部月份", unit:"月", options: periodOptions },
   ];
@@ -2391,8 +2399,10 @@ function officialInventoryLink(p, value, label) {
   const url = officialInventoryPrimaryUrl(p);
   const text = metricText(numeric);
   if (!url) return text;
-  const note = "；打开住建委项目详情页，查看项目公示和销售统计信息";
-  const title = `打开住建委页面：${p.officialProjectName || p.summaryRecordName || p.project} ${label}${note}`;
+  const sourceCount = officialInventoryUrls(p).length;
+  const multiUrlNote = sourceCount > 1 ? `；该项目合并${sourceCount}个住建委页面，点击打开第一张证` : "";
+  const note = p.officialInventoryTotalAuditNote ? `；${p.officialInventoryTotalAuditNote}` : "；打开住建委项目详情页，查看项目公示和销售统计信息";
+  const title = `打开住建委页面：${p.officialProjectName || p.summaryRecordName || p.project} ${label}${multiUrlNote}${note}`;
   return `<a class="official-inventory-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" title="${escapeHtml(title)}">${text}</a>`;
 }
 function officialInventoryCells(p) {
@@ -2566,19 +2576,19 @@ function updateTransactionSectionForMonth(p, month, options={}) {
 function projectIssueDateText(p) {
   const records = (p?.presaleIssueRecords || []).slice().sort((a,b) => String(a.date).localeCompare(String(b.date)));
   if (!records.length) return "暂未匹配";
-  return records.map(record => `${record.date}${record.permit ? ` ${record.permit}` : ""}`).join("；");
+  return records[0].date || "暂未匹配";
 }
 function projectNameSummary(p) {
   const title = `住建委备案名：${p.summaryRecordName || "暂未补充"}
 预售证：${p.summaryPresalePermit || "暂未补充"}
-取证日期：${projectIssueDateText(p)}
+最早取证日期：${projectIssueDateText(p)}
 开发商：${p.summaryDeveloper || "暂未补充"}
 ${projectSummarySource(p)}`;
   const summary = `<h4>${escapeHtml(p.project)}</h4>
     <div class="project-summary-grid">
       <div class="project-summary-item"><span>住建委备案名</span><b>${escapeHtml(p.summaryRecordName || "暂未补充")}</b></div>
       <div class="project-summary-item"><span>预售证</span><b>${escapeHtml(p.summaryPresalePermit || "暂未补充")}</b></div>
-      <div class="project-summary-item"><span>取证日期</span><b>${escapeHtml(projectIssueDateText(p))}</b></div>
+      <div class="project-summary-item"><span>最早取证日期</span><b>${escapeHtml(projectIssueDateText(p))}</b></div>
       <div class="project-summary-item"><span>开发商</span><b>${escapeHtml(p.summaryDeveloper || "暂未补充")}</b></div>
     </div>
     <div class="project-summary-source">${escapeHtml(projectSummarySource(p))}</div>`;
@@ -2614,7 +2624,7 @@ function showProjectSummary(event, projectId) {
     <div class="project-summary-grid">
       <div class="project-summary-item"><span>住建委备案名</span><b>${escapeHtml(project.summaryRecordName || "暂未补充")}</b></div>
       <div class="project-summary-item"><span>预售证</span><b>${escapeHtml(project.summaryPresalePermit || "暂未补充")}</b></div>
-      <div class="project-summary-item"><span>取证日期</span><b>${escapeHtml(projectIssueDateText(project))}</b></div>
+      <div class="project-summary-item"><span>最早取证日期</span><b>${escapeHtml(projectIssueDateText(project))}</b></div>
       <div class="project-summary-item"><span>开发商</span><b>${escapeHtml(project.summaryDeveloper || "暂未补充")}</b></div>
     </div>
     <div class="project-summary-source">${escapeHtml(projectSummarySource(project))}</div>`;
