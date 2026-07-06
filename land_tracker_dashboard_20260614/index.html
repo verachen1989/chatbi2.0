@@ -72,6 +72,9 @@ tbody tr:nth-child(odd) .sticky-1, tbody tr:nth-child(odd) .sticky-2, tbody tr:n
 tbody tr:nth-child(even) .sticky-1, tbody tr:nth-child(even) .sticky-2, tbody tr:nth-child(even) .sticky-3 { background:var(--row-blue); }
 tbody tr:hover .sticky-1, tbody tr:hover .sticky-2, tbody tr:hover .sticky-3 { background:#e9f1ff; }
 .tag { display:block; max-width:100%; overflow:hidden; text-overflow:ellipsis; color:var(--blue); font-size:12px; font-weight:900; white-space:nowrap; }
+.project-link { width:100%; display:block; padding:0; border:0; background:transparent; color:var(--blue); font:inherit; font-size:12px; font-weight:900; line-height:1.35; text-align:left; cursor:pointer; overflow:hidden; text-overflow:ellipsis; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; white-space:nowrap; }
+.project-link:hover { color:var(--blue-dark); text-decoration-thickness:2px; }
+.project-link:focus-visible { outline:2px solid var(--blue); outline-offset:2px; border-radius:3px; }
 .land-name-cell { font-weight:700; }
 .land-link { width:100%; display:block; padding:0; border:0; background:transparent; color:var(--blue); font:inherit; font-weight:850; line-height:1.35; text-align:left; cursor:pointer; overflow:hidden; text-overflow:ellipsis; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; }
 .land-link:hover { color:var(--blue-dark); text-decoration-thickness:2px; }
@@ -196,6 +199,8 @@ const LAND_ROWS = [{"seq":1,"landName":"北京市通州区老城范围内平房�
 const fmtAmount = new Intl.NumberFormat("zh-CN", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 const fmtInt = new Intl.NumberFormat("zh-CN", { maximumFractionDigits: 0 });
 const state = { search:"", district:"", plate:"", brand:"", landYear:"", node:"", dealSort:"desc" };
+const ROOT_DASHBOARD_URL = new URL("../index.html", window.location.href).href;
+let pendingProjectRequestId = "";
 const fields = [
   "seq","landName","landCode","projectName","district","plate","dealDate","bidder","brand",
   "amount","floorPrice","planningPermit","constructionPlan","constructionPermit","firstPresale","firstCompletion"
@@ -292,6 +297,34 @@ function rowMatches(row) {
   if (state.node === "missing-project" && row.projectName) return false;
   return true;
 }
+function projectDashboardUrl(row) {
+  const url = new URL(ROOT_DASHBOARD_URL);
+  url.searchParams.set("projectName", row.projectName);
+  if (row.landCode) url.searchParams.set("landCode", row.landCode);
+  return url.href;
+}
+function openProjectInDashboard(row) {
+  if (!row?.projectName) return;
+  const requestId = "land-" + row.seq + "-" + Date.now();
+  pendingProjectRequestId = requestId;
+  const payload = {
+    type: "chatbi2:open-project-detail",
+    requestId,
+    projectName: row.projectName,
+    landCode: row.landCode || "",
+    landName: row.landName || "",
+    source: "land_tracker_dashboard_20260614"
+  };
+  if (window.parent && window.parent !== window) {
+    const origin = window.location.origin && window.location.origin !== "null" ? window.location.origin : "*";
+    window.parent.postMessage(payload, origin);
+    window.setTimeout(() => {
+      if (pendingProjectRequestId === requestId) window.location.href = projectDashboardUrl(row);
+    }, 260);
+    return;
+  }
+  window.location.href = projectDashboardUrl(row);
+}
 function render() {
   const rows = LAND_ROWS.filter(rowMatches).slice().sort((a, b) => {
     const diff = dateValue(a.dealDate) - dateValue(b.dealDate);
@@ -304,7 +337,7 @@ function render() {
   sortButton.setAttribute("aria-sort", state.dealSort === "asc" ? "ascending" : "descending");
   document.getElementById("tableCount").textContent = rows.length + " 条";
   document.getElementById("tableBody").innerHTML = rows.map(row => {
-    const project = row.projectName ? '<span class="tag">' + html(row.projectName) + '</span>' : '<span class="empty">-</span>';
+    const project = row.projectName ? '<button class="project-link" type="button" data-project-seq="' + row.seq + '" title="打开项目详情：' + html(row.projectName) + '">' + html(row.projectName) + '</button>' : '<span class="empty">-</span>';
     const landButton = '<button class="land-link" type="button" data-land-seq="' + row.seq + '" title="' + html(row.landName) + '">' + display(row.landName) + '</button>';
     return '<tr>' +
       '<td class="center sticky-1">' + row.seq + '</td>' +
@@ -464,6 +497,12 @@ document.getElementById("dealDateSort").addEventListener("click", () => {
   render();
 });
 document.getElementById("tableBody").addEventListener("click", event => {
+  const projectButton = event.target.closest("[data-project-seq]");
+  if (projectButton) {
+    const row = LAND_ROWS.find(item => String(item.seq) === projectButton.dataset.projectSeq);
+    if (row) openProjectInDashboard(row);
+    return;
+  }
   const button = event.target.closest("[data-land-seq]");
   if (!button) return;
   const row = LAND_ROWS.find(item => String(item.seq) === button.dataset.landSeq);
@@ -475,6 +514,11 @@ document.getElementById("mapModal").addEventListener("click", event => {
 });
 document.addEventListener("keydown", event => {
   if (event.key === "Escape") closeMapModal();
+});
+window.addEventListener("message", event => {
+  const trustedOrigin = !event.origin || event.origin === "null" || event.origin === window.location.origin;
+  if (!trustedOrigin || !event.data || event.data.type !== "chatbi2:open-project-detail:ack") return;
+  if (!event.data.requestId || event.data.requestId === pendingProjectRequestId) pendingProjectRequestId = "";
 });
 document.getElementById("resetFilters").addEventListener("click", () => {
   state.search = ""; state.district = ""; state.plate = ""; state.brand = ""; state.landYear = ""; state.node = ""; state.dealSort = "desc";

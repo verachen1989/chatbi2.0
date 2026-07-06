@@ -869,6 +869,7 @@ const PROJECT_NAME_ALIASES = {
   "未来城星寰时代": ["寰逸佳苑", "未来城·星寰时代"],
   "中海玖樹满和": ["满和苑", "中海·九树满和", "中海九树满和", "中海·玖樹满和"],
   "中建方程国贤府": ["金阙华院", "方程国贤府", "中建·方程国贤府"],
+  "中建臻源府": ["源境苑", "源颂苑", "中建·臻源府", "臻源府"],
   "北投栖澐湾": ["栖云嘉苑", "北投栖云湾", "北投·栖澐湾", "北投·云帆汀澜", "北投云帆汀澜"],
   "颐海澐颂": ["颐海云颂嘉苑", "颐海云颂", "海开颐海澐颂", "海开颐海云颂"],
   "懋源薛大人庄 懋源骊橒臺": ["琅橒园", "橒颂雅园", "懋源·骊橒臺", "懋源骊橒臺", "懋源骊橒台", "懋源骊云台"],
@@ -1148,6 +1149,85 @@ const scopeLabel = () => {
   return labels.length ? labels.join("｜") : "全部首次/最新取证时间";
 };
 const findProjectById = id => projectSource().find(p => String(p.id) === String(id)) || DATA.projects.find(p => String(p.id) === String(id)) || DATA.launchProjects.find(p => String(p.id) === String(id));
+function externalProjectNameInputs(value) {
+  return splitProjectNameParts(value).flatMap(name => [
+    name,
+    name.replace(/^(北京建工|北京城建|北京城建地产|中国铁建|中建|中海|保利|华润|龙湖|招商蛇口|招商|金茂|建发|越秀|北投|长安|金隅)[·・\s-]*/u, "")
+  ]).map(normalizePresaleName).filter(key => key.length >= 3);
+}
+function findProjectByExternalName(value) {
+  const inputs = [...new Set(externalProjectNameInputs(value))];
+  if (!inputs.length) return null;
+  let best = null;
+  projectSource().forEach(project => {
+    projectNameAliasCandidates(project).forEach(candidate => {
+      const key = normalizePresaleName(candidate);
+      if (key.length < 3) return;
+      inputs.forEach(input => {
+        let score = 0;
+        if (input === key) score = 1000 + key.length;
+        else if (input.includes(key) && key.length >= 3) score = 760 + key.length;
+        else if (key.includes(input) && input.length >= 3) score = 620 + input.length;
+        if (score && (!best || score > best.score)) best = { project, score };
+      });
+    });
+  });
+  return best?.project || null;
+}
+function openProjectDetailRequest(request={}, options={}) {
+  const project = request.projectId ? findProjectById(request.projectId) : findProjectByExternalName(request.projectName || request.name || "");
+  if (!project) {
+    const fallbackSearch = String(request.projectName || request.name || "").trim();
+    if (fallbackSearch) {
+      state.view = "map";
+      state.search = fallbackSearch;
+      document.querySelectorAll("[data-view]").forEach(btn => btn.classList.toggle("active", btn.dataset.view === "map"));
+      const searchInput = document.getElementById("searchInput");
+      if (searchInput) searchInput.value = fallbackSearch;
+      closeProjectDetail();
+      closePlateDrawer();
+      render();
+    }
+    console.warn("未找到外部项目详情入口对应项目", request);
+    return false;
+  }
+  state.view = "map";
+  document.querySelectorAll("[data-view]").forEach(btn => btn.classList.toggle("active", btn.dataset.view === "map"));
+  document.getElementById("tableView")?.classList.remove("open");
+  openFilterId = null;
+  openDetail(project, options);
+  return true;
+}
+function projectDetailRequestFromUrl() {
+  const params = new URLSearchParams(window.location.search || "");
+  const request = {
+    projectId: params.get("projectId") || params.get("project_id") || "",
+    projectName: params.get("projectName") || params.get("project_name") || params.get("project") || ""
+  };
+  if ((!request.projectId && !request.projectName) && window.location.hash) {
+    const hash = window.location.hash.replace(/^#\/?/, "");
+    const hashParams = new URLSearchParams(hash);
+    request.projectId = hashParams.get("projectId") || hashParams.get("project_id") || "";
+    request.projectName = hashParams.get("projectName") || hashParams.get("project_name") || hashParams.get("project") || "";
+  }
+  return request.projectId || request.projectName ? request : null;
+}
+function openProjectDetailFromUrl() {
+  const request = projectDetailRequestFromUrl();
+  if (request) openProjectDetailRequest(request);
+}
+function installExternalProjectDetailHandlers() {
+  window.addEventListener("message", event => {
+    const trustedOrigin = !event.origin || event.origin === "null" || event.origin === window.location.origin;
+    if (!trustedOrigin || !event.data || event.data.type !== "chatbi2:open-project-detail") return;
+    const ok = openProjectDetailRequest(event.data);
+    if (event.source?.postMessage) {
+      const targetOrigin = event.origin && event.origin !== "null" ? event.origin : "*";
+      event.source.postMessage({ type:"chatbi2:open-project-detail:ack", requestId:event.data.requestId || "", ok }, targetOrigin);
+    }
+  });
+  window.addEventListener("hashchange", openProjectDetailFromUrl);
+}
 const groupLabel = group => group.endsWith("组块") ? group : group.replace("组团", "");
 const projectPeriod = p => {
   const ms = months();
@@ -3696,9 +3776,11 @@ function render() {
   syncDetailDocking();
   applyMapMode();
 }
+installExternalProjectDetailHandlers();
 initFilters();
 const mainMapInit = initMainMap();
 render();
+openProjectDetailFromUrl();
 if (mainMapInit?.then) {
   mainMapInit.then(() => {
     renderRealMap(true);
