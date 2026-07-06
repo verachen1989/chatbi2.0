@@ -42,6 +42,151 @@ OFFICIAL_PROJECT_ALIASES = {
     "龍樾海序": ["樾序海苑", "龙樾海序"],
 }
 
+OFFICIAL_INVENTORY_STATUS_OVERRIDES = {
+    "熙区嘉园": {
+        "unsignedSuites": 546,
+        "availableSuites": 546,
+        "bookedSuites": 0,
+        "contractSignedSuites": 0,
+        "filingSuites": 0,
+        "signedSuites": 0,
+        "inventoryNote": (
+            "住建委楼盘表4栋住宅楼房源状态复核：共546套，绿色可售546套，"
+            "已预订/已签约/网上联机备案0套；剩余套数按绿色可售住宅房源计。"
+        ),
+    },
+    "铂瑞府": {
+        "unsignedSuites": 382,
+        "availableSuites": 382,
+        "bookedSuites": 1,
+        "contractSignedSuites": 0,
+        "filingSuites": 0,
+        "signedSuites": 0,
+        "inventoryNote": (
+            "住建委楼盘表8栋住宅楼房源状态复核：共383套，绿色可售382套，已预订1套，"
+            "已签约/网上联机备案0套；剩余套数按绿色可售住宅房源计。"
+        ),
+    },
+    "国樾天颂府": {
+        "unsignedSuites": 305,
+        "availableSuites": 305,
+        "bookedSuites": 9,
+        "contractSignedSuites": 0,
+        "filingSuites": 0,
+        "signedSuites": 0,
+        "inventoryNote": (
+            "住建委楼盘表8栋楼房源状态复核：共314套，绿色可售305套，已预订9套，"
+            "已签约/网上联机备案0套；剩余套数按绿色可售住宅房源计。"
+        ),
+    },
+    "青和家园": {
+        "unsignedSuites": 313,
+        "availableSuites": 313,
+        "bookedSuites": 19,
+        "contractSignedSuites": 50,
+        "filingSuites": 18,
+        "signedSuites": 68,
+        "inventoryNote": (
+            "住建委楼盘表8栋住宅楼房源状态复核：共400套，绿色可售313套，已预订19套，"
+            "已签约50套，网上联机备案18套；剩余套数按绿色可售住宅房源计。"
+        ),
+    },
+}
+
+OFFICIAL_SIGNED_STATS_OVERRIDES = {
+    "玉章苑": {
+        "signedStatsSuites": 11,
+        "signedStatsArea": 2046.22,
+        "signedStatsAvgPrice": 72854.93,
+        "inventoryNote": (
+            "住建委期房签约统计：住宅已签约11套，已签约面积2046.22㎡，"
+            "成交均价72854.93元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+        ),
+    },
+    "长河花园": {
+        "signedStatsSuites": 8,
+        "signedStatsArea": 4067.08,
+        "signedStatsAvgPrice": 28404.45,
+        "inventoryNote": (
+            "住建委期房签约统计：用途列为住宅、设备用房，已签约8套，已签约面积4067.08㎡，"
+            "成交均价28404.45元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+        ),
+    },
+    "誉淙家园": {
+        "signedStatsSuites": 108,
+        "signedStatsArea": 9965.19,
+        "signedStatsAvgPrice": 50216.1,
+        "inventoryNote": (
+            "住建委期房签约统计：住宅已签约108套，已签约面积9965.19㎡，"
+            "成交均价50216.1元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+        ),
+    },
+    "御林湾苑": {
+        "signedStatsSuites": 15,
+        "signedStatsArea": 2273.46,
+        "signedStatsAvgPrice": 60523.74,
+        "inventoryNote": (
+            "住建委期房签约统计：住宅已签约15套，已签约面积2273.46㎡，"
+            "成交均价60523.74元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+        ),
+    },
+    "缦云福苑（二期）": {
+        "signedStatsSuites": 14,
+        "signedStatsArea": 2951.66,
+        "signedStatsAvgPrice": 56620.51,
+        "inventoryNote": (
+            "住建委期房签约统计：住宅已签约14套，已签约面积2951.66㎡，"
+            "成交均价56620.51元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+        ),
+    },
+    "云溪花园小区": {
+        "signedStatsSuites": 1,
+        "signedStatsArea": 97.77,
+        "signedStatsAvgPrice": 15137.57,
+        "inventoryNote": (
+            "住建委期房签约统计：住宅已签约1套，已签约面积97.77㎡，"
+            "成交均价15137.57元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+        ),
+    },
+    "璟瑞家园": {
+        "signedStatsSuites": 210,
+        "signedStatsArea": 20833.94,
+        "signedStatsAvgPrice": 61332.5,
+        "inventoryNote": (
+            "住建委期房签约统计：住宅已签约210套，已签约面积20833.94㎡，"
+            "成交均价61332.5元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+        ),
+    },
+    "万象茗筑小区": {
+        "signedStatsSuites": 31,
+        "signedStatsArea": 2947.84,
+        "signedStatsAvgPrice": 49338.05,
+        "inventoryNote": (
+            "住建委期房签约统计：住宅已签约31套，已签约面积2947.84㎡，"
+            "成交均价49338.05元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+        ),
+    },
+    "嘉棠雅苑": {
+        "signedStatsSuites": 174,
+        "signedStatsArea": 18881.34,
+        "signedStatsAvgPrice": 69642.6,
+        "inventoryNote": (
+            "住建委期房签约统计：住宅已签约174套，已签约面积18881.34㎡，"
+            "成交均价69642.6元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+        ),
+    },
+    "樾序海苑": {
+        "signedStatsSuites": 680,
+        "signedStatsArea": 65216.2,
+        "signedStatsAvgPrice": 54378.52,
+        "inventoryNote": (
+            "住建委期房签约统计：住宅已签约680套，已签约面积65216.2㎡，"
+            "成交均价54378.52元/㎡。当前详情页仅展示8/12个楼栋信息，"
+            "批准住宅套数按已签约套数下限兜底展示。"
+        ),
+    },
+}
+
 
 def clean(value: Any) -> str:
     return "" if value is None else str(value).strip()
@@ -232,7 +377,7 @@ def normalize_official_item(item: dict[str, Any]) -> dict[str, Any]:
         if item.get("approvedTotalSuites") not in (None, "")
         else item.get("approvedTotalSuites")
     )
-    return {
+    normalized = {
         "officialProjectName": clean(item.get("officialProjectName") or item.get("recordName")),
         "recordName": clean(item.get("recordName") or item.get("officialProjectName")),
         "district": clean(item.get("district")),
@@ -250,6 +395,18 @@ def normalize_official_item(item: dict[str, Any]) -> dict[str, Any]:
         "detailUrls": [clean(value) for value in detail_urls if clean(value)],
         "inventoryNote": clean(item.get("inventoryNote")),
     }
+    for override in (
+        OFFICIAL_INVENTORY_STATUS_OVERRIDES.get(normalized["officialProjectName"]),
+        OFFICIAL_SIGNED_STATS_OVERRIDES.get(normalized["officialProjectName"]),
+    ):
+        if not override:
+            continue
+        for key, value in override.items():
+            if key == "inventoryNote":
+                normalized[key] = " ".join(part for part in [normalized.get(key), value] if part)
+            else:
+                normalized[key] = value
+    return normalized
 
 
 def official_item_names(item: dict[str, Any]) -> list[str]:
@@ -405,6 +562,18 @@ def sync_official_presale_fields(
     set_if_needed("summaryPresalePermit", " / ".join(official_item.get("permits") or []), overwrite=force)
     set_if_needed("officialResidentialTotal", official_item.get("residentialTotal"), overwrite=force)
     set_if_needed("approvedTotalSuites", official_item.get("approvedTotalSuites"), overwrite=force)
+    signed_stats_suites = official_item.get("signedStatsSuites")
+    signed_suites = official_item.get("signedSuites")
+    set_if_needed("officialUnsignedSuites", official_item.get("unsignedSuites"), overwrite=force)
+    set_if_needed("officialAvailableSuites", official_item.get("availableSuites"), overwrite=force)
+    set_if_needed("officialBookedSuites", official_item.get("bookedSuites"), overwrite=force)
+    set_if_needed("officialContractSignedSuites", official_item.get("contractSignedSuites"), overwrite=force)
+    set_if_needed("officialFilingSuites", official_item.get("filingSuites"), overwrite=force)
+    set_if_needed("officialSignedStatsSuites", signed_stats_suites, overwrite=force)
+    set_if_needed("officialSignedStatsArea", official_item.get("signedStatsArea"), overwrite=force)
+    set_if_needed("officialSignedStatsAvgPrice", official_item.get("signedStatsAvgPrice"), overwrite=force)
+    set_if_needed("officialSignedSuites", signed_stats_suites if signed_stats_suites is not None else signed_suites, overwrite=force)
+    set_if_needed("officialDetailSignedSuites", signed_stats_suites if signed_stats_suites is not None else signed_suites, overwrite=force)
     set_if_needed("officialInventoryEvidenceUrl", "\n".join(official_item.get("detailUrls") or []), overwrite=force)
     set_if_needed("officialInventoryFetchedAt", "2026-07-06 住建委预售证详情页抓取", overwrite=force)
     set_if_needed("officialInventoryMatchStatus", "项目名匹配-住建委新发预售证", overwrite=force)
