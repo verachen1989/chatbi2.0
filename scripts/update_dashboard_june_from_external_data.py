@@ -468,25 +468,33 @@ def ensure_june_controls(html: str, data: dict[str, Any]) -> str:
             html,
             count=1,
         )
-    html = html.replace(
-        "26年5月沿用原页面明细，已排除车库/车位",
-        "26年6月为克尔瑞项目明细；1–5月沿用原页面明细，已排除车库/车位",
+    html = re.sub(
+        r'return "成交明细来源：[^"]*";',
+        'return "成交明细来源：全部取自克尔瑞交易明细，已排除车库/车位";',
+        html,
+        count=1,
     )
-    html = html.replace(
+    html = re.sub(
+        r'  if \(month === "26年5月"\) \{\n(?:    .*\n)+?  \}',
         '  if (month === "26年5月") {\n'
-        '    const label = /克[而尔]瑞/.test(String(p.mayDataSource || "")) ? "克尔瑞" : "天朗";\n'
-        '    return { label };\n'
-        '  }\n'
-        '  return { label:"天朗" };\n',
-        '  if (month === "26年5月") {\n'
-        '    const label = /克[而尔]瑞/.test(String(p.mayDataSource || "")) ? "克尔瑞" : "天朗";\n'
-        '    return { label };\n'
-        '  }\n'
-        '  if (month === "26年6月") {\n'
         '    return { label:"克尔瑞" };\n'
-        '  }\n'
-        '  return { label:"天朗" };\n',
+        '  }',
+        html,
+        count=1,
     )
+    if 'if (month === "26年6月")' not in html:
+        html = html.replace(
+            '  return { label:"天朗" };\n'
+            '}\n'
+            'function renderProjectTrend',
+            '  if (month === "26年6月") {\n'
+            '    return { label:"克尔瑞" };\n'
+            '  }\n'
+            '  return { label:"天朗" };\n'
+            '}\n'
+            'function renderProjectTrend',
+            1,
+        )
     return html
 
 
