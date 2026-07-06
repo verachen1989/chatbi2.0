@@ -27,9 +27,20 @@ DATA_RE = re.compile(
     r"const DATA = (.*?);\n(const LAUNCH_OFFICIAL_INVENTORY_OVERRIDES|const DEFAULT_PERIODS)",
     re.S,
 )
+OFFICIAL_LAUNCH_RE = re.compile(
+    r"const ZJW_OFFICIAL_NEW_LAUNCH_PROJECTS = (.*?);\nconst ZJW_NEW_LAUNCH_INVENTORY_STATUS_OVERRIDES",
+    re.S,
+)
 MONTH = "26年6月"
 MONTH_FULL = "2026年6月"
 DETAIL_GLOBAL_RE = re.compile(r'(<script src="transaction_details\.js[^"]*"></script>)')
+
+OFFICIAL_PROJECT_ALIASES = {
+    "万象茗筑": ["万象茗筑小区", "兴创万象茗筑"],
+    "嘉棠雅序": ["嘉棠雅苑"],
+    "青雲国樾": ["青和家园", "青云国樾"],
+    "龍樾海序": ["樾序海苑", "龙樾海序"],
+}
 
 
 def clean(value: Any) -> str:
@@ -207,6 +218,87 @@ def load_details(folder: Path) -> dict[str, dict[str, Any]]:
     return grouped
 
 
+def normalize_official_item(item: dict[str, Any]) -> dict[str, Any]:
+    permits = item.get("permits") or [item.get("permit")]
+    issue_dates = item.get("issueDates") or [item.get("issueDate")]
+    detail_urls = item.get("detailUrls") or [item.get("detailUrl")]
+    residential_total = (
+        item.get("residentialTotal")
+        if item.get("residentialTotal") not in (None, "")
+        else item.get("approvedResidentialSuites")
+    )
+    approved_total = (
+        item.get("approvedTotalSuites")
+        if item.get("approvedTotalSuites") not in (None, "")
+        else item.get("approvedTotalSuites")
+    )
+    return {
+        "officialProjectName": clean(item.get("officialProjectName") or item.get("recordName")),
+        "recordName": clean(item.get("recordName") or item.get("officialProjectName")),
+        "district": clean(item.get("district")),
+        "group": clean(item.get("group")),
+        "plate": clean(item.get("plate")),
+        "lat": item.get("lat"),
+        "lng": item.get("lng"),
+        "coordConfidence": clean(item.get("coordConfidence")),
+        "address": clean(item.get("address") or item.get("location")),
+        "developer": clean(item.get("developer")),
+        "permits": [clean(value) for value in permits if clean(value)],
+        "issueDates": [clean(value) for value in issue_dates if clean(value)],
+        "residentialTotal": int(round(number(residential_total))),
+        "approvedTotalSuites": int(round(number(approved_total))),
+        "detailUrls": [clean(value) for value in detail_urls if clean(value)],
+        "inventoryNote": clean(item.get("inventoryNote")),
+    }
+
+
+def official_item_names(item: dict[str, Any]) -> list[str]:
+    names = [item.get("officialProjectName"), item.get("recordName")]
+    output: list[str] = []
+    for name in names:
+        text = clean(name)
+        if text and text not in output:
+            output.append(text)
+    return output
+
+
+def add_official_index_item(index: dict[str, list[dict[str, Any]]], item: dict[str, Any]) -> None:
+    if not item.get("officialProjectName"):
+        return
+    for name in official_item_names(item):
+        key = normalize_name(name)
+        if key:
+            index.setdefault(key, []).append(item)
+
+
+def load_official_presales(html: str, output_root: Path = Path("outputs")) -> dict[str, list[dict[str, Any]]]:
+    index: dict[str, list[dict[str, Any]]] = {}
+    match = OFFICIAL_LAUNCH_RE.search(html)
+    if match:
+        for item in json.loads(match.group(1), strict=False):
+            add_official_index_item(index, normalize_official_item(item))
+
+    for path in sorted(output_root.glob("zjw_new_launch_presales_202*/beijing_new_launch_presales_*.json")):
+        try:
+            rows = json.loads(path.read_text(encoding="utf-8"), strict=False)
+        except (OSError, json.JSONDecodeError):
+            continue
+        for item in rows:
+            add_official_index_item(index, normalize_official_item(item))
+
+    return index
+
+
+def project_manual_aliases(project_name: str) -> list[str]:
+    names = []
+    for canonical, aliases in OFFICIAL_PROJECT_ALIASES.items():
+        group = [canonical, *aliases]
+        normalized = {normalize_name(name) for name in group}
+        if normalize_name(project_name) in normalized:
+            names.extend(group)
+    return names
+
+
 def project_candidate_names(project: dict[str, Any]) -> list[str]:
     fields = [
         "cricProjectName",
@@ -223,6 +315,10 @@ def project_candidate_names(project: dict[str, Any]) -> list[str]:
         "中海玖樹满和": ["中海·九树满和", "中海九树满和"],
         "中建方程国贤府": ["方程国贤府", "中建·方程国贤府"],
         "未来城星寰时代": ["未来城·星寰时代"],
+        "万象茗筑": ["万象茗筑小区", "兴创万象茗筑"],
+        "嘉棠雅序": ["嘉棠雅苑"],
+        "青雲国樾": ["青和家园", "青云国樾"],
+        "龍樾海序": ["樾序海苑", "龙樾海序"],
     }
     names: list[str] = []
     for field in fields:
@@ -231,6 +327,7 @@ def project_candidate_names(project: dict[str, Any]) -> list[str]:
             continue
         names.extend(re.split(r"[；;、/\n]+", value))
     names.extend(manual_aliases.get(clean(project.get("project")), []))
+    names.extend(project_manual_aliases(clean(project.get("project"))))
     output: list[str] = []
     for name in names:
         name = clean(name)
@@ -245,6 +342,114 @@ def match_record(records: dict[str, Any], project: dict[str, Any]) -> tuple[str,
         if key and key in records:
             return key, records[key], name
     return "", None, ""
+
+
+def match_official_presale(
+    records: dict[str, list[dict[str, Any]]],
+    project: dict[str, Any],
+) -> tuple[str, dict[str, Any] | None, str]:
+    for name in project_candidate_names(project):
+        key = normalize_name(name)
+        if key and key in records:
+            candidates = sorted(
+                records[key],
+                key=lambda item: item.get("issueDates", [""])[0] if item.get("issueDates") else "",
+            )
+            return key, candidates[0], name
+    return "", None, ""
+
+
+def merge_presale_issue_records(
+    existing: list[dict[str, Any]] | None,
+    official_item: dict[str, Any],
+) -> list[dict[str, Any]]:
+    records = list(existing or [])
+    name = official_item.get("officialProjectName") or official_item.get("recordName")
+    for index, permit in enumerate(official_item.get("permits") or []):
+        date = (official_item.get("issueDates") or [""])[index] if index < len(official_item.get("issueDates") or []) else ""
+        records.append({"name": name, "permit": permit, "date": date})
+    by_key = {}
+    for record in records:
+        date = clean(record.get("date"))
+        permit = clean(record.get("permit"))
+        if date or permit:
+            by_key[f"{date}|{permit}"] = {"name": clean(record.get("name")), "permit": permit, "date": date}
+    return sorted(by_key.values(), key=lambda record: (record.get("date") or "", record.get("permit") or ""))
+
+
+def should_refresh_official_fields(project: dict[str, Any]) -> bool:
+    return bool(project.get("isNewFromJuneCric")) or not clean(project.get("summaryRecordName"))
+
+
+def sync_official_presale_fields(
+    project: dict[str, Any],
+    official_item: dict[str, Any],
+) -> bool:
+    changed = False
+    force = should_refresh_official_fields(project)
+
+    def set_if_needed(key: str, value: Any, *, overwrite: bool = False) -> None:
+        nonlocal changed
+        if value in (None, "", []):
+            return
+        if overwrite or project.get(key) in (None, "", []):
+            if project.get(key) != value:
+                project[key] = value
+                changed = True
+
+    set_if_needed("summaryRecordName", official_item.get("recordName") or official_item.get("officialProjectName"), overwrite=force)
+    set_if_needed("officialProjectName", official_item.get("officialProjectName"), overwrite=force)
+    set_if_needed("summaryDeveloper", official_item.get("developer"), overwrite=force)
+    set_if_needed("district", official_item.get("district"))
+    set_if_needed("address", official_item.get("address"), overwrite=force)
+    set_if_needed("summaryPresalePermit", " / ".join(official_item.get("permits") or []), overwrite=force)
+    set_if_needed("officialResidentialTotal", official_item.get("residentialTotal"), overwrite=force)
+    set_if_needed("approvedTotalSuites", official_item.get("approvedTotalSuites"), overwrite=force)
+    set_if_needed("officialInventoryEvidenceUrl", "\n".join(official_item.get("detailUrls") or []), overwrite=force)
+    set_if_needed("officialInventoryFetchedAt", "2026-07-06 住建委预售证详情页抓取", overwrite=force)
+    set_if_needed("officialInventoryMatchStatus", "项目名匹配-住建委新发预售证", overwrite=force)
+    set_if_needed("officialInventoryTotalAuditNote", official_item.get("inventoryNote"), overwrite=force)
+
+    lat = official_item.get("lat")
+    lng = official_item.get("lng")
+    confidence_rank = {"": 0, "低": 1, "中": 2, "高": 3}
+    current_rank = confidence_rank.get(clean(project.get("coordConfidence")), 0)
+    next_rank = confidence_rank.get(clean(official_item.get("coordConfidence")), 0)
+    if number(lat) and number(lng) and (force or not number(project.get("lat")) or next_rank > current_rank):
+        set_if_needed("lat", lat, overwrite=True)
+        set_if_needed("lng", lng, overwrite=True)
+        set_if_needed("coordConfidence", official_item.get("coordConfidence") or "中", overwrite=True)
+        set_if_needed("coordSource", "住建委坐落位置 + 业务板块近似定位", overwrite=True)
+        detail_urls = official_item.get("detailUrls") or []
+        if detail_urls:
+            set_if_needed("coordSourceUrl", detail_urls[0], overwrite=True)
+        set_if_needed("coordSystem", "GCJ-02近似板块中心", overwrite=True)
+
+    records = merge_presale_issue_records(project.get("presaleIssueRecords"), official_item)
+    if records != project.get("presaleIssueRecords"):
+        project["presaleIssueRecords"] = records
+        project["presaleIssueDates"] = [record["date"] for record in records if record.get("date")]
+        changed = True
+
+    return changed
+
+
+def sync_official_presales(data: dict[str, Any], official_records: dict[str, list[dict[str, Any]]]) -> list[dict[str, Any]]:
+    synced: list[dict[str, Any]] = []
+    if not official_records:
+        return synced
+    for project in all_dashboard_projects(data):
+        key, official_item, matched_by = match_official_presale(official_records, project)
+        if not official_item:
+            continue
+        if sync_official_presale_fields(project, official_item):
+            synced.append({
+                "project": project.get("project"),
+                "officialProject": official_item.get("officialProjectName"),
+                "matchedBy": matched_by,
+                "key": key,
+            })
+    return synced
 
 
 def all_dashboard_projects(data: dict[str, Any]) -> list[dict[str, Any]]:
@@ -573,6 +778,8 @@ def main() -> None:
     summary = load_summary(args.summary)
     details = load_details(args.detail_dir)
     added_projects = add_new_detail_projects(data, summary, details)
+    official_records = load_official_presales(html)
+    synced_official_projects = sync_official_presales(data, official_records)
 
     matched_projects = 0
     unmatched_dashboard: list[dict[str, Any]] = []
@@ -664,6 +871,7 @@ if (window.TRANSACTION_DETAILS) {
         "dashboardProjects": len(data["projects"]),
         "matchedSummaryProjects": matched_projects,
         "addedProjects": added_projects,
+        "syncedOfficialProjects": synced_official_projects,
         "summaryRecords": len(summary),
         "detailProjects": len(details),
         "diffRows": diff_rows,
@@ -678,6 +886,7 @@ if (window.TRANSACTION_DETAILS) {
         "month": MONTH,
         "matchedSummaryProjects": matched_projects,
         "addedProjects": len(added_projects),
+        "syncedOfficialProjects": len(synced_official_projects),
         "diffRows": len(diff_rows),
         "unmatchedDashboard": len(unmatched_dashboard),
         "unmatchedSummaryWithSuites": len(unmatched_summary),
