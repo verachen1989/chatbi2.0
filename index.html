@@ -2491,7 +2491,8 @@ function officialInventoryPrimaryUrl(p) {
   return officialInventoryUrls(p)[0] || "";
 }
 function officialInventoryPendingText(p, label) {
-  const text = p?.source === "recentLaunch" ? "待补" : (p?.source === "zjwNewLaunch" ? "待核" : "-");
+  const hasOfficialEvidence = Boolean(p?.officialInventoryEvidenceUrl);
+  const text = p?.source === "recentLaunch" ? "待补" : (p?.source === "zjwNewLaunch" || p?.isNewFromJuneCric || hasOfficialEvidence ? "待核" : "-");
   const url = officialInventoryPrimaryUrl(p);
   if (!url) return text;
   const title = `打开住建委页面：${p.officialProjectName || p.summaryRecordName || p.project} ${label}待补；待补充官方库存数`;
