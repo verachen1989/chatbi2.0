@@ -357,6 +357,10 @@ td.num, th.num { text-align:right; font-family:ui-monospace, SFMono-Regular, Men
 .project-inventory-card b { display:inline-flex; align-items:baseline; justify-content:flex-end; gap:2px; color:#202124; font-size:20px; font-weight:950; white-space:nowrap; }
 .project-inventory-card em { color:#5f6368; font-size:12px; font-style:normal; font-weight:850; }
 .project-inventory-card .official-inventory-link { min-width:0; font-size:20px; }
+.project-inventory-source { display:flex; justify-content:flex-end; margin:-2px 0 8px; }
+.data-source-chip { display:inline-flex; align-items:center; justify-content:center; height:20px; padding:0 7px; border:1px solid #dbe5f4; border-radius:999px; background:#f8fbff; color:#6b7280; font-size:11px; font-weight:850; line-height:1; white-space:nowrap; }
+.section-title-with-source { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.section-title-with-source h3 { margin:0; }
 .similar-projects-section { display:none; margin:0 0 18px; border:1px solid #dbe5f4; border-radius:9px; background:#f8fbff; overflow:hidden; }
 .similar-projects-section.open { display:block; }
 .similar-projects-head { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; padding:14px 16px; border-bottom:1px solid #e3eaf3; background:#eef5ff; }
@@ -3584,7 +3588,8 @@ function projectInventoryStrip(p) {
   const soldCard = sold !== null
     ? `<div class="project-inventory-card"><span title="${escapeHtml(officialCumulativeSoldNote(p))}">累计已售</span>${projectInventoryMetric(p, sold, "累计已售")}</div>`
     : "";
-  return `<section class="project-inventory-strip" aria-label="住建委库存数据">
+  return `<div class="project-inventory-source"><span class="data-source-chip" title="取自住建委，数据截至当前月份">住建委 · 截至当前月份</span></div>
+  <section class="project-inventory-strip" aria-label="住建委库存数据">
     <div class="project-inventory-card"><span>住宅总套数</span>${projectInventoryMetric(p, total, "住宅总套数")}</div>
     <div class="project-inventory-card"><span>剩余套数</span>${projectInventoryMetric(p, unsigned, "剩余套数")}</div>
     ${soldCard}
@@ -3599,7 +3604,7 @@ function projectDetailTable(p) {
   <section class="single-project-section">
     <div class="single-project-section-head">
       <div class="single-project-section-copy">
-        <div><h3>月度去化趋势</h3><p>与顶部筛选条件同步</p></div>
+        <div><div class="section-title-with-source"><h3>月度去化趋势</h3><span class="data-source-chip" title="取自克尔瑞外部机构，数据截至上月底">克尔瑞 · 截至上月底</span></div><p>与顶部筛选条件同步</p></div>
         <p><b>${escapeHtml(filteredPeriod)}</b> · 成交 <b>${fmt.format(filteredStats.suites)}套</b> · 金额 <b>${fmt1.format(filteredStats.amount / 10000)}亿</b> · 面积 <b>${fmt1.format(filteredStats.area / 10000)}万㎡</b> · 均价 <b>${fmt.format(filteredStats.price)}元/㎡</b></p>
       </div>
       <div class="project-trend-toolbar">

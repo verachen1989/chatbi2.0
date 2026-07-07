@@ -149,12 +149,12 @@ OFFICIAL_SIGNED_STATS_OVERRIDES = {
         ),
     },
     "璟瑞家园": {
-        "signedStatsSuites": 210,
-        "signedStatsArea": 20833.94,
-        "signedStatsAvgPrice": 61332.5,
+        "signedStatsSuites": 211,
+        "signedStatsArea": 20920.8,
+        "signedStatsAvgPrice": 61309.46,
         "inventoryNote": (
-            "住建委期房签约统计：住宅已签约210套，已签约面积20833.94㎡，"
-            "成交均价61332.5元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+            "住建委期房签约统计：住宅已签约211套，已签约面积20920.8㎡，"
+            "成交均价61309.46元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
         ),
     },
     "万象茗筑小区": {
