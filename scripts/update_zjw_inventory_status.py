@@ -18,6 +18,14 @@ from typing import Any
 
 
 BASE_URL = "http://bjjs.zjw.beijing.gov.cn"
+DATA_RE = re.compile(
+    r"const DATA = (.*?);\nconst LAUNCH_OFFICIAL_INVENTORY_OVERRIDES",
+    re.S,
+)
+LAUNCH_OVERRIDES_RE = re.compile(
+    r"const LAUNCH_OFFICIAL_INVENTORY_OVERRIDES = \{(.*?)\n\};\nDATA\.launchProjects",
+    re.S,
+)
 OFFICIAL_PROJECTS_RE = re.compile(
     r"const ZJW_OFFICIAL_NEW_LAUNCH_PROJECTS = (.*?);\nconst ZJW_NEW_LAUNCH_INVENTORY_STATUS_OVERRIDES",
     re.S,
@@ -94,6 +102,28 @@ def item_urls(item: dict[str, Any]) -> list[str]:
         return [str(url) for url in urls if url]
     url = item.get("url")
     return [str(url)] if url else []
+
+
+def urls_from_value(value: Any) -> list[str]:
+    if isinstance(value, list):
+        values = [str(item) for item in value]
+    else:
+        values = re.split(r"\s+", str(value or ""))
+    return [value for value in values if re.match(r"^https?://", value)]
+
+
+def split_permits(value: Any) -> list[str]:
+    text = str(value or "")
+    permits = re.findall(r"京房售证字[（(]\d{4}[）)](?:开)?\d+号", text)
+    return permits or [item.strip() for item in re.split(r"[/、；;\n]+", text) if item.strip()]
+
+
+def issue_dates_from_project(project: dict[str, Any]) -> list[str]:
+    dates = project.get("presaleIssueDates") or []
+    if dates:
+        return sorted({str(date) for date in dates if date})
+    records = project.get("presaleIssueRecords") or []
+    return sorted({str(record.get("date")) for record in records if record.get("date")})
 
 
 def table_cells(row_html: str) -> list[str]:
@@ -310,15 +340,20 @@ def scrape_project(item: dict[str, Any], delay: float, timeout: int, max_workers
         "projectId": project_id_from_url(primary_url(item)),
         "officialProjectName": official_name,
         "dashboardName": item.get("dashboardName") or item.get("name") or official_name,
+        "dashboardId": item.get("dashboardId"),
+        "dashboardCollection": item.get("dashboardCollection") or "",
+        "source": item.get("source") or "dashboard",
         "url": primary_url(item),
         "urls": urls,
         "fetchedAt": fetched_at,
-        "isNewLaunchResidential": True,
+        "isNewLaunchResidential": item.get("source") == "officialNewLaunch",
         "firstIssueDate": first_issue_date(item),
         "latestIssueDate": latest_issue_date(item),
         "issueDates": issue_dates(item),
         "presalePermits": item.get("permits") or [],
         "presalePermitText": presale_permit_text(item),
+        "summaryRecordName": item.get("summaryRecordName") or "",
+        "summaryDeveloper": item.get("summaryDeveloper") or "",
         "developer": item.get("developer") or "",
         "district": item.get("district") or "",
         "plate": item.get("plate") or "",
@@ -360,20 +395,143 @@ def load_watchlist(path: Path) -> list[dict[str, Any]]:
     return projects
 
 
-def load_official_projects_from_dashboard(path: Path) -> list[dict[str, Any]]:
+def extract_js_string(body: str, key: str) -> str:
+    match = re.search(rf"\b{re.escape(key)}:\s*(\"(?:\\.|[^\"\\])*\"|'(?:\\.|[^'\\])*')", body)
+    if not match:
+        return ""
+    raw = match.group(1)
+    if raw.startswith('"'):
+        try:
+            return str(json.loads(raw))
+        except json.JSONDecodeError:
+            return raw.strip('"')
+    return raw.strip("'")
+
+
+def extract_js_number(body: str, key: str) -> int | None:
+    match = re.search(rf"\b{re.escape(key)}:\s*(-?\d+)", body)
+    return int(match.group(1)) if match else None
+
+
+def parse_launch_inventory_overrides(text: str) -> dict[str, dict[str, Any]]:
+    match = LAUNCH_OVERRIDES_RE.search(text)
+    if not match:
+        return {}
+    overrides: dict[str, dict[str, Any]] = {}
+    body = match.group(1)
+    body_start = match.start(1)
+    offset = 0
+    while True:
+        key_match = re.search(r'"([^"]+)":\s*\{', body[offset:])
+        if not key_match:
+            break
+        key = key_match.group(1)
+        open_index = body_start + offset + key_match.end() - 1
+        close_index = find_matching_brace(text, open_index)
+        entry = text[open_index : close_index + 1]
+        urls = re.findall(r"https?://[^\"\\\s]+", entry)
+        item: dict[str, Any] = {}
+        for field in (
+            "summaryRecordName",
+            "summaryPresalePermit",
+            "summaryDeveloper",
+            "officialProjectName",
+            "officialInventoryFetchedAt",
+            "officialInventoryMatchStatus",
+            "officialInventoryTotalAuditNote",
+        ):
+            value = extract_js_string(entry, field)
+            if value:
+                item[field] = value
+        for field in (
+            "officialResidentialTotal",
+            "officialUnsignedSuites",
+            "officialAvailableSuites",
+            "officialBookedSuites",
+            "officialSignedSuites",
+            "officialDetailSignedSuites",
+        ):
+            value = extract_js_number(entry, field)
+            if value is not None:
+                item[field] = value
+        if urls:
+            item["officialInventoryEvidenceUrl"] = "\n".join(urls)
+        overrides[key] = item
+        offset = close_index - body_start + 1
+    return overrides
+
+
+def load_dashboard_data(path: Path) -> tuple[str, dict[str, Any]]:
     text = path.read_text(encoding="utf-8")
+    match = DATA_RE.search(text)
+    if not match:
+        raise ValueError(f"未找到 DATA 项目池: {path}")
+    return text, json.loads(match.group(1))
+
+
+def watchlist_item_from_dashboard_project(project: dict[str, Any], collection_name: str) -> dict[str, Any] | None:
+    urls = urls_from_value(project.get("officialInventoryEvidenceUrl"))
+    if not urls:
+        return None
+    display_name = project.get("project") or project.get("officialProjectName") or project.get("summaryRecordName")
+    return {
+        "source": "dashboard",
+        "dashboardId": project.get("id"),
+        "dashboardCollection": collection_name,
+        "name": project.get("officialProjectName") or project.get("summaryRecordName") or display_name,
+        "dashboardName": display_name,
+        "summaryRecordName": project.get("summaryRecordName") or "",
+        "summaryDeveloper": project.get("summaryDeveloper") or "",
+        "urls": urls,
+        "url": urls[0],
+        "permits": split_permits(project.get("summaryPresalePermit")),
+        "issueDates": issue_dates_from_project(project),
+        "developer": project.get("summaryDeveloper") or "",
+        "district": project.get("district") or "",
+        "group": project.get("group") or "",
+        "plate": project.get("plate") or "",
+        "residentialTotal": parse_number(project.get("officialResidentialTotal")) or parse_number(project.get("approvedTotalSuites")) or 0,
+        "approvedTotalSuites": project.get("approvedTotalSuites") or project.get("officialResidentialTotal"),
+        "inventoryNote": project.get("officialInventoryTotalAuditNote") or "",
+    }
+
+
+def load_official_projects_from_dashboard(path: Path) -> list[dict[str, Any]]:
+    text, data = load_dashboard_data(path)
+    launch_overrides = parse_launch_inventory_overrides(text)
+    watchlist: list[dict[str, Any]] = []
+    seen_sources: set[str] = set()
+
+    for collection_name in ("projects", "launchProjects"):
+        for raw_project in data.get(collection_name, []):
+            project = dict(raw_project)
+            if collection_name == "launchProjects":
+                project.update(launch_overrides.get(str(project.get("id")), {}))
+            item = watchlist_item_from_dashboard_project(project, collection_name)
+            if not item:
+                continue
+            source_key = "|".join(sorted(project_id_from_url(url) or url for url in item_urls(item)))
+            if source_key in seen_sources:
+                continue
+            seen_sources.add(source_key)
+            watchlist.append(item)
+
     match = OFFICIAL_PROJECTS_RE.search(text)
     if not match:
         raise ValueError(f"未找到页面新开盘项目清单: {path}")
     projects = json.loads(match.group(1))
-    watchlist = []
     for project in projects:
         residential_total = int(parse_number(project.get("residentialTotal")) or 0)
         detail_urls = project.get("detailUrls") or []
         if residential_total <= 0 or not detail_urls:
             continue
+        source_key = "|".join(sorted(project_id_from_url(url) or url for url in detail_urls))
+        if source_key in seen_sources:
+            continue
+        seen_sources.add(source_key)
         watchlist.append(
             {
+                "source": "officialNewLaunch",
                 "name": project.get("officialProjectName"),
                 "dashboardName": project.get("officialProjectName"),
                 "urls": detail_urls,
@@ -390,7 +548,7 @@ def load_official_projects_from_dashboard(path: Path) -> list[dict[str, Any]]:
             }
         )
     if not watchlist:
-        raise ValueError(f"页面没有可抓取的新开盘住宅项目: {path}")
+        raise ValueError(f"页面没有可抓取的住建委库存项目: {path}")
     return watchlist
 
 
@@ -426,7 +584,8 @@ def project_snapshot(result: dict[str, Any]) -> dict[str, Any]:
     return {
         "projectName": result["dashboardName"],
         "officialProjectName": result["officialProjectName"],
-        "isNewLaunchResidential": True,
+        "source": result.get("source") or "dashboard",
+        "isNewLaunchResidential": bool(result.get("isNewLaunchResidential")),
         "firstIssueDate": result.get("firstIssueDate") or "",
         "latestIssueDate": result.get("latestIssueDate") or "",
         "presalePermitText": result.get("presalePermitText") or "",
@@ -453,9 +612,9 @@ def write_snapshot(path: Path, results: list[dict[str, Any]], failures: list[dic
     generated_at = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S")
     snapshot = {
         "generatedAt": generated_at,
-        "scope": "新开盘住宅项目；取证时间按住建委预售许可证发证日期；总套数/剩余套数/累计已售取自住建委楼盘表房源状态。",
+        "scope": "页面全部已匹配住建委项目 + 页面未覆盖的新开盘住宅补充项目；取证时间按住建委预售许可证发证日期；总套数/剩余套数/累计已售取自住建委楼盘表房源状态。",
         "fields": {
-            "projectName": "新开盘住宅项目",
+            "projectName": "项目名称",
             "firstIssueDate": "首次取证时间",
             "latestIssueDate": "最新取证时间",
             "totalSuites": "住宅总套数",
@@ -521,6 +680,89 @@ def js_string(value: Any) -> str:
     return json.dumps(value, ensure_ascii=False)
 
 
+def merge_issue_records(existing: list[dict[str, Any]] | None, result: dict[str, Any]) -> list[dict[str, Any]]:
+    records = list(existing or [])
+    permits = result.get("presalePermits") or []
+    dates = result.get("issueDates") or []
+    name = result.get("officialProjectName") or result.get("dashboardName")
+    for index, permit in enumerate(permits):
+        date = dates[index] if index < len(dates) else (dates[0] if dates else "")
+        records.append({"name": name, "permit": permit, "date": date})
+    by_key: dict[str, dict[str, Any]] = {}
+    for record in records:
+        date = str(record.get("date") or "")
+        permit = str(record.get("permit") or "")
+        if date or permit:
+            by_key[f"{date}|{permit}"] = {"name": str(record.get("name") or name or ""), "permit": permit, "date": date}
+    return sorted(by_key.values(), key=lambda record: (record.get("date") or "", record.get("permit") or ""))
+
+
+def patch_dashboard_project(project: dict[str, Any], result: dict[str, Any]) -> None:
+    project["officialProjectName"] = result.get("officialProjectName") or project.get("officialProjectName") or result["dashboardName"]
+    project["officialResidentialTotal"] = result["residentialTotal"]
+    project["officialUnsignedSuites"] = result["unsignedSuites"]
+    project["officialAvailableSuites"] = result["availableSuites"]
+    project["officialUnsignedBlueSuites"] = 0
+    project["officialBookedSuites"] = result["bookedSuites"]
+    project["officialContractSignedSuites"] = result["contractSignedSuites"]
+    project["officialFilingSuites"] = result["filedSuites"]
+    project["officialSignedStatsSuites"] = result.get("signedStatsSuites")
+    project["officialSignedStatsArea"] = result.get("signedStatsArea")
+    project["officialSignedStatsAvgPrice"] = result.get("signedStatsAvgPrice")
+    project["officialSignedSuites"] = result.get("signedStatsSuites") if result.get("signedStatsSuites") is not None else result["signedSuites"]
+    project["officialDetailSignedSuites"] = result["signedSuites"]
+    project["officialInventoryEvidenceUrl"] = "\n".join(result.get("urls") or [result["url"]])
+    project["officialInventoryFetchedAt"] = result["fetchedAt"]
+    project["officialInventoryMatchStatus"] = "住建委楼盘表每日抓取"
+    project["officialInventoryTotalAuditNote"] = result["auditNote"]
+    project["approvedTotalSuites"] = result["residentialTotal"]
+    if result.get("summaryRecordName") and not project.get("summaryRecordName"):
+        project["summaryRecordName"] = result["summaryRecordName"]
+    elif not project.get("summaryRecordName") and result.get("officialProjectName"):
+        project["summaryRecordName"] = result["officialProjectName"]
+    if result.get("presalePermitText") and not project.get("summaryPresalePermit"):
+        project["summaryPresalePermit"] = result["presalePermitText"]
+    if result.get("developer") and not project.get("summaryDeveloper"):
+        project["summaryDeveloper"] = result["developer"]
+    records = merge_issue_records(project.get("presaleIssueRecords"), result)
+    if records:
+        project["presaleIssueRecords"] = records
+        project["presaleIssueDates"] = [record["date"] for record in records if record.get("date")]
+
+
+def update_data_json(text: str, results: list[dict[str, Any]]) -> str:
+    match = DATA_RE.search(text)
+    if not match:
+        raise ValueError("未找到 DATA")
+    data = json.loads(match.group(1))
+    by_key = {
+        (result.get("dashboardCollection"), str(result.get("dashboardId"))): result
+        for result in results
+        if result.get("source") == "dashboard" and result.get("dashboardId") is not None
+    }
+    if not by_key:
+        return text
+    changed = False
+    for collection_name in ("projects", "launchProjects"):
+        for project in data.get(collection_name, []):
+            key = (collection_name, str(project.get("id")))
+            result = by_key.get(key)
+            if not result:
+                continue
+            before = json.dumps(project, ensure_ascii=False, sort_keys=True)
+            patch_dashboard_project(project, result)
+            after = json.dumps(project, ensure_ascii=False, sort_keys=True)
+            changed = changed or before != after
+    if not changed:
+        return text
+    replacement = (
+        "const DATA = "
+        + json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+        + ";\nconst LAUNCH_OFFICIAL_INVENTORY_OVERRIDES"
+    )
+    return text[: match.start()] + replacement + text[match.end() :]
+
+
 def render_override_entry(result: dict[str, Any]) -> str:
     lines = [
         f'  "{result["dashboardName"]}": {{',
@@ -535,6 +777,33 @@ def render_override_entry(result: dict[str, Any]) -> str:
         f"    signedStatsAvgPrice: {result.get('signedStatsAvgPrice', 0)},",
         f"    fetchedAt: {js_string(result['fetchedAt'])},",
         f"    auditNote: {js_string(result['auditNote'])}",
+        "  }",
+    ]
+    return "\n".join(lines)
+
+
+def render_launch_override_entry(result: dict[str, Any]) -> str:
+    summary_name = result.get("summaryRecordName") or result.get("officialProjectName") or result["dashboardName"]
+    developer = result.get("developer") or result.get("summaryDeveloper") or ""
+    lines = [
+        f'  "{result["dashboardId"]}": {{',
+        f"    summaryRecordName: {js_string(summary_name)},",
+        f"    summaryPresalePermit: {js_string(result.get('presalePermitText') or '')},",
+        f"    summaryDeveloper: {js_string(developer)},",
+        f"    officialProjectName: {js_string(result.get('officialProjectName') or summary_name)},",
+        f"    officialResidentialTotal: {result['residentialTotal']},",
+        f"    officialUnsignedSuites: {result['unsignedSuites']},",
+        f"    officialAvailableSuites: {result['availableSuites']},",
+        "    officialUnsignedBlueSuites: 0,",
+        f"    officialBookedSuites: {result['bookedSuites']},",
+        f"    officialSignedSuites: {result['signedSuites']},",
+        f"    officialContractSignedSuites: {result['contractSignedSuites']},",
+        f"    officialFilingSuites: {result['filedSuites']},",
+        f"    officialInventoryEvidenceUrl: {js_string(chr(10).join(result.get('urls') or [result['url']]))},",
+        f"    officialInventoryFetchedAt: {js_string(result['fetchedAt'])},",
+        '    officialInventoryMatchStatus: "住建委楼盘表每日抓取",',
+        f"    officialDetailSignedSuites: {result['signedSuites']},",
+        f"    officialInventoryTotalAuditNote: {js_string(result['auditNote'])}",
         "  }",
     ]
     return "\n".join(lines)
@@ -566,12 +835,41 @@ def update_override_object(text: str, result: dict[str, Any]) -> str:
     return text[:object_end] + insert + text[object_end:]
 
 
+def update_launch_override_object(text: str, result: dict[str, Any]) -> str:
+    const_marker = "const LAUNCH_OFFICIAL_INVENTORY_OVERRIDES = {"
+    const_start = text.find(const_marker)
+    if const_start < 0:
+        raise ValueError("未找到 LAUNCH_OFFICIAL_INVENTORY_OVERRIDES")
+    object_start = text.find("{", const_start)
+    object_end = find_matching_brace(text, object_start)
+    key = f'  "{result["dashboardId"]}":'
+    key_start = text.find(key, object_start, object_end)
+    rendered = render_launch_override_entry(result)
+    if key_start >= 0:
+        value_start = text.find("{", key_start)
+        value_end = find_matching_brace(text, value_start) + 1
+        has_comma = text[value_end:object_end].lstrip().startswith(",")
+        if has_comma:
+            rendered += ","
+            comma_start = value_end + len(text[value_end:object_end]) - len(text[value_end:object_end].lstrip())
+            comma_end = comma_start + 1
+            return text[:key_start] + rendered + text[comma_end:]
+        return text[:key_start] + rendered + text[value_end:]
+    insert = "\n" + rendered
+    if text[object_start + 1 : object_end].strip():
+        insert = ",\n" + rendered
+    return text[:object_end] + insert + text[object_end:]
+
+
 def apply_dashboard(path: Path, results: list[dict[str, Any]]) -> bool:
     original = path.read_text(encoding="utf-8")
-    text = original
+    text = update_data_json(original, results)
     for result in results:
-        text = update_official_project_json(text, result)
-        text = update_override_object(text, result)
+        if result.get("source") == "officialNewLaunch":
+            text = update_official_project_json(text, result)
+            text = update_override_object(text, result)
+        elif result.get("dashboardCollection") == "launchProjects":
+            text = update_launch_override_object(text, result)
     text = text.replace(
         'const inventoryFetchedAt = hasInventoryStatus\n    ? "2026-07-06 住建委楼盘表房源状态复核"\n    : (hasSignedStats ? "2026-07-06 住建委期房签约统计复核" : "2026-07-06 住建委预售证详情页抓取");',
         'const inventoryFetchedAt = inventoryStatus.fetchedAt || (hasInventoryStatus\n    ? "2026-07-06 住建委楼盘表房源状态复核"\n    : (hasSignedStats ? "2026-07-06 住建委期房签约统计复核" : "2026-07-06 住建委预售证详情页抓取"));',
