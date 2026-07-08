@@ -781,76 +781,137 @@ const ZJW_PRESALE_ISSUE_BACKFILL_RECORDS = [
   {"name":"云纪雅园","permit":"京房售证字(2025)57号","date":"2025-05-28"}
 ];
 const ZJW_ALL_PRESALE_ISSUE_RECORDS = [...ZJW_PRESALE_ISSUE_RECORDS, ...ZJW_PRESALE_ISSUE_BACKFILL_RECORDS];
-const ZJW_OFFICIAL_NEW_LAUNCH_PROJECTS = [{"officialProjectName":"玉章苑","district":"石景山区","group":"西部组团","plate":"苹果园","lat":39.939198,"lng":116.195137,"coordConfidence":"中","address":"石景山区西黄村棚户区改造土地开发项目1606-640地块","developer":"北京鑫安兴业房地产开发有限公司","permits":["京房售证字(2026)2号","京房售证字(2026)36号"],"issueDates":["2026-01-26","2026-04-24"],"residentialTotal":20,"approvedTotalSuites":239,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8156387&systemID=2&srcId=1","http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195901&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)2号20套。"},{"officialProjectName":"长河花园","district":"昌平区","group":"北部组团","plate":"小汤山","lat":40.1769,"lng":116.3912,"coordConfidence":"低","address":"昌平区小汤山镇马坊村农业高科技示范园住宅小区专家公寓","developer":"北京天成天房地产开发有限公司","permits":["京房售证字(2026)7号"],"issueDates":["2026-01-30"],"residentialTotal":16,"approvedTotalSuites":16,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157960&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)7号16套。"},{"officialProjectName":"誉淙家园","district":"昌平区","group":"北部组团","plate":"回龙观","lat":40.096767,"lng":116.333099,"coordConfidence":"低","address":"昌平区中关村生命科学园三期（CP01-0601-0078地块）","developer":"北京城昌贝越置业有限公司","permits":["京房售证字(2026)8号"],"issueDates":["2026-02-05"],"residentialTotal":303,"approvedTotalSuites":303,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8161845&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)8号303套。"},{"officialProjectName":"御林湾苑","district":"朝阳区","group":"东北组团","plate":"金盏北","lat":40.003503,"lng":116.568902,"coordConfidence":"中","address":"朝阳区崔各庄乡来广营北路29-323地块；崔各庄乡来广营北路29-324地块","developer":"北京东洲房地产开发有限公司","permits":["京房售证字(2026)10号"],"issueDates":["2026-02-07"],"residentialTotal":1023,"approvedTotalSuites":1023,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157959&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)10号1023套。"},{"officialProjectName":"壹兴雅苑","district":"大兴区","group":"西南组团","plate":"高米店","lat":39.769058,"lng":116.338409,"coordConfidence":"低","address":"大兴区大兴新城核心区土地一级开发项目DX00-0101-055地块二类居住用地项目；大兴区大兴新城核心区土地一级开发项目DX00-0101-053地块二类居住用地项目","developer":"北京壹兴置业有限公司","permits":["京房售证字(2026)15号","京房售证字(2026)14号"],"issueDates":["2026-02-13","2026-02-13"],"residentialTotal":0,"approvedTotalSuites":606,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8167889&systemID=2&srcId=1","http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8167890&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。"},{"officialProjectName":"缦云福苑（二期）","district":"通州区","group":"CBD-副中心组团","plate":"通州老城","lat":39.909565,"lng":116.642891,"coordConfidence":"低","address":"通州区FZX-0401-6081地块","developer":"北京顺开房地产开发有限公司","permits":["京房售证字(2026)21号"],"issueDates":["2026-03-21"],"residentialTotal":135,"approvedTotalSuites":135,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176579&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)21号135套。"},{"officialProjectName":"云溪花园小区","district":"密云区","group":"其他组团","plate":"溪翁庄","lat":40.49,"lng":116.85,"coordConfidence":"低","address":"密云区溪翁庄镇","developer":"北京宁溪房地产开发有限责任公司","permits":["京房售证字(2026)28号"],"issueDates":["2026-04-09"],"residentialTotal":56,"approvedTotalSuites":56,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8186681&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)28号56套。"},{"officialProjectName":"熙区嘉园","district":"朝阳区","group":"东北组团","plate":"金盏北","lat":40.003503,"lng":116.568902,"coordConfidence":"中","address":"朝阳区东坝车辆基地综合利用项目1101-A002-3地块","developer":"北京京投润德置业有限公司","permits":["京房售证字(2026)34号"],"issueDates":["2026-04-20"],"residentialTotal":546,"approvedTotalSuites":546,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191996&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)34号546套。"},{"officialProjectName":"璟瑞家园","district":"石景山区","group":"西部组团","plate":"京西商务","lat":39.960642,"lng":116.174836,"coordConfidence":"中","address":"石景山区1609街区新首钢核心区SS00-1609-0012地块","developer":"北京首景房地产开发有限公司","permits":["京房售证字(2026)35号"],"issueDates":["2026-04-23"],"residentialTotal":379,"approvedTotalSuites":379,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195341&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)35号379套。"},{"officialProjectName":"樾序海苑","district":"昌平区","group":"北部组团","plate":"天通苑","lat":40.075255,"lng":116.412795,"coordConfidence":"中","address":"昌平区东小口镇","developer":"北京城华房地产开发有限公司","permits":["京房售证字(2026)39号"],"issueDates":["2026-05-10"],"residentialTotal":594,"approvedTotalSuites":594,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)39号594套。"},{"officialProjectName":"铂瑞府","district":"房山区","group":"西南组团","plate":"良乡","lat":39.71608,"lng":116.181732,"coordConfidence":"中","address":"房山区良乡组团FS00-0105街区（0015、0016地块）、良乡组团FS00-0105街区（0019地块）","developer":"北京城建瑞泰投资发展有限公司","permits":["京房售证字(2026)42号"],"issueDates":["2026-05-23"],"residentialTotal":383,"approvedTotalSuites":383,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8207359&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)42号383套。"},{"officialProjectName":"嘉棠雅苑","district":"丰台区","group":"西南组团","plate":"高立庄","lat":39.790954,"lng":116.295197,"coordConfidence":"中","address":"丰台区花乡中部组团城中村改造项目B区FT00-2405-0001地块","developer":"北京丰合嘉汇置业有限公司","permits":["京房售证字(2026)44号"],"issueDates":["2026-05-27"],"residentialTotal":446,"approvedTotalSuites":446,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)44号446套。"},{"officialProjectName":"鲲熙盛园","district":"朝阳区","group":"东北组团","plate":"中央别墅区","lat":40.035637,"lng":116.584206,"coordConfidence":"低","address":"朝阳区孙河组团土地储备项目2902-73地块","developer":"北京兴昶房地产开发有限公司","permits":["京房售证字(2026)47号"],"issueDates":["2026-06-05"],"residentialTotal":0,"approvedTotalSuites":5,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8216693&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。"},{"officialProjectName":"青和家园","district":"顺义区","group":"东北组团","plate":"后沙峪","lat":40.118652,"lng":116.53878,"coordConfidence":"中","address":"顺义区后沙峪镇（SY00-2301-0004地块）","developer":"北京铁工城市开发建设有限公司","permits":["京房售证字(2026)50号"],"issueDates":["2026-06-18"],"residentialTotal":400,"approvedTotalSuites":400,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)50号400套。"},{"officialProjectName":"国樾天颂府","district":"密云区","group":"其他组团","plate":"密云新城","lat":40.3774,"lng":116.8426,"coordConfidence":"低","address":"密云区密云新城0104街区","developer":"北京绿州博园投资有限公司","permits":["京房售证字(2026)52号"],"issueDates":["2026-06-26"],"residentialTotal":314,"approvedTotalSuites":314,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8227940&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)52号314套。"},{"officialProjectName":"璟悦坊","district":"石景山区","group":"西部组团","plate":"京西商务","lat":39.960642,"lng":116.174836,"coordConfidence":"中","address":"石景山区首钢设备处收储项目SS00-1617-0001地块","developer":"北京首景房地产开发有限公司","permits":["京房售证字(2026)54号"],"issueDates":["2026-06-30"],"residentialTotal":0,"approvedTotalSuites":7,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8231704&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。"},{"officialProjectName":"通睿大厦","district":"朝阳区","group":"CBD-副中心组团","plate":"CBD核心区","lat":39.913,"lng":116.466,"coordConfidence":"低","address":"朝阳区东三环商务中心区（CBD）核心区Z6地块","developer":"北京天江通睿置业有限公司","permits":["京房售证字(2026)55号"],"issueDates":["2026-07-01"],"residentialTotal":0,"approvedTotalSuites":1,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8232638&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。"}];
+const ZJW_OFFICIAL_NEW_LAUNCH_PROJECTS = [{"officialProjectName":"玉章苑","district":"石景山区","group":"西部组团","plate":"苹果园","lat":39.939198,"lng":116.195137,"coordConfidence":"中","address":"石景山区西黄村棚户区改造土地开发项目1606-640地块","developer":"北京鑫安兴业房地产开发有限公司","permits":["京房售证字(2026)2号","京房售证字(2026)36号"],"issueDates":["2026-01-26","2026-04-24"],"residentialTotal":20,"approvedTotalSuites":20,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8156387&systemID=2&srcId=1","http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195901&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)2号20套。"},{"officialProjectName":"长河花园","district":"昌平区","group":"北部组团","plate":"小汤山","lat":40.1769,"lng":116.3912,"coordConfidence":"低","address":"昌平区小汤山镇马坊村农业高科技示范园住宅小区专家公寓","developer":"北京天成天房地产开发有限公司","permits":["京房售证字(2026)7号"],"issueDates":["2026-01-30"],"residentialTotal":16,"approvedTotalSuites":16,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157960&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)7号16套。"},{"officialProjectName":"誉淙家园","district":"昌平区","group":"北部组团","plate":"回龙观","lat":40.096767,"lng":116.333099,"coordConfidence":"低","address":"昌平区中关村生命科学园三期（CP01-0601-0078地块）","developer":"北京城昌贝越置业有限公司","permits":["京房售证字(2026)8号"],"issueDates":["2026-02-05"],"residentialTotal":303,"approvedTotalSuites":303,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8161845&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)8号303套。"},{"officialProjectName":"御林湾苑","district":"朝阳区","group":"东北组团","plate":"金盏北","lat":40.003503,"lng":116.568902,"coordConfidence":"中","address":"朝阳区崔各庄乡来广营北路29-323地块；崔各庄乡来广营北路29-324地块","developer":"北京东洲房地产开发有限公司","permits":["京房售证字(2026)10号"],"issueDates":["2026-02-07"],"residentialTotal":1023,"approvedTotalSuites":1023,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157959&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)10号1023套。"},{"officialProjectName":"壹兴雅苑","district":"大兴区","group":"西南组团","plate":"高米店","lat":39.769058,"lng":116.338409,"coordConfidence":"低","address":"大兴区大兴新城核心区土地一级开发项目DX00-0101-055地块二类居住用地项目；大兴区大兴新城核心区土地一级开发项目DX00-0101-053地块二类居住用地项目","developer":"北京壹兴置业有限公司","permits":["京房售证字(2026)15号","京房售证字(2026)14号"],"issueDates":["2026-02-13","2026-02-13"],"residentialTotal":0,"approvedTotalSuites":606,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8167889&systemID=2&srcId=1","http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8167890&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。"},{"officialProjectName":"缦云福苑（二期）","district":"通州区","group":"CBD-副中心组团","plate":"通州老城","lat":39.909565,"lng":116.642891,"coordConfidence":"低","address":"通州区FZX-0401-6081地块","developer":"北京顺开房地产开发有限公司","permits":["京房售证字(2026)21号"],"issueDates":["2026-03-21"],"residentialTotal":135,"approvedTotalSuites":135,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176579&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)21号135套。"},{"officialProjectName":"云溪花园小区","district":"密云区","group":"其他组团","plate":"溪翁庄","lat":40.49,"lng":116.85,"coordConfidence":"低","address":"密云区溪翁庄镇","developer":"北京宁溪房地产开发有限责任公司","permits":["京房售证字(2026)28号"],"issueDates":["2026-04-09"],"residentialTotal":56,"approvedTotalSuites":56,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8186681&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)28号56套。"},{"officialProjectName":"熙区嘉园","district":"朝阳区","group":"东北组团","plate":"金盏北","lat":40.003503,"lng":116.568902,"coordConfidence":"中","address":"朝阳区东坝车辆基地综合利用项目1101-A002-3地块","developer":"北京京投润德置业有限公司","permits":["京房售证字(2026)34号"],"issueDates":["2026-04-20"],"residentialTotal":546,"approvedTotalSuites":546,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191996&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)34号546套。"},{"officialProjectName":"璟瑞家园","district":"石景山区","group":"西部组团","plate":"京西商务","lat":39.960642,"lng":116.174836,"coordConfidence":"中","address":"石景山区1609街区新首钢核心区SS00-1609-0012地块","developer":"北京首景房地产开发有限公司","permits":["京房售证字(2026)35号"],"issueDates":["2026-04-23"],"residentialTotal":379,"approvedTotalSuites":379,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195341&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)35号379套。"},{"officialProjectName":"樾序海苑","district":"昌平区","group":"北部组团","plate":"天通苑","lat":40.075255,"lng":116.412795,"coordConfidence":"中","address":"昌平区东小口镇","developer":"北京城华房地产开发有限公司","permits":["京房售证字(2026)39号"],"issueDates":["2026-05-10"],"residentialTotal":594,"approvedTotalSuites":594,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)39号594套。"},{"officialProjectName":"铂瑞府","district":"房山区","group":"西南组团","plate":"良乡","lat":39.71608,"lng":116.181732,"coordConfidence":"中","address":"房山区良乡组团FS00-0105街区（0015、0016地块）、良乡组团FS00-0105街区（0019地块）","developer":"北京城建瑞泰投资发展有限公司","permits":["京房售证字(2026)42号"],"issueDates":["2026-05-23"],"residentialTotal":383,"approvedTotalSuites":383,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8207359&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)42号383套。"},{"officialProjectName":"嘉棠雅苑","district":"丰台区","group":"西南组团","plate":"高立庄","lat":39.790954,"lng":116.295197,"coordConfidence":"中","address":"丰台区花乡中部组团城中村改造项目B区FT00-2405-0001地块","developer":"北京丰合嘉汇置业有限公司","permits":["京房售证字(2026)44号"],"issueDates":["2026-05-27"],"residentialTotal":446,"approvedTotalSuites":446,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)44号446套。"},{"officialProjectName":"鲲熙盛园","district":"朝阳区","group":"东北组团","plate":"中央别墅区","lat":40.035637,"lng":116.584206,"coordConfidence":"低","address":"朝阳区孙河组团土地储备项目2902-73地块","developer":"北京兴昶房地产开发有限公司","permits":["京房售证字(2026)47号"],"issueDates":["2026-06-05"],"residentialTotal":0,"approvedTotalSuites":5,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8216693&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。"},{"officialProjectName":"青和家园","district":"顺义区","group":"东北组团","plate":"后沙峪","lat":40.118652,"lng":116.53878,"coordConfidence":"中","address":"顺义区后沙峪镇（SY00-2301-0004地块）","developer":"北京铁工城市开发建设有限公司","permits":["京房售证字(2026)50号"],"issueDates":["2026-06-18"],"residentialTotal":400,"approvedTotalSuites":400,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)50号400套。"},{"officialProjectName":"国樾天颂府","district":"密云区","group":"其他组团","plate":"密云新城","lat":40.3774,"lng":116.8426,"coordConfidence":"低","address":"密云区密云新城0104街区","developer":"北京绿州博园投资有限公司","permits":["京房售证字(2026)52号"],"issueDates":["2026-06-26"],"residentialTotal":314,"approvedTotalSuites":314,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8227940&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)52号314套。"},{"officialProjectName":"璟悦坊","district":"石景山区","group":"西部组团","plate":"京西商务","lat":39.960642,"lng":116.174836,"coordConfidence":"中","address":"石景山区首钢设备处收储项目SS00-1617-0001地块","developer":"北京首景房地产开发有限公司","permits":["京房售证字(2026)54号"],"issueDates":["2026-06-30"],"residentialTotal":0,"approvedTotalSuites":7,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8231704&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。"},{"officialProjectName":"通睿大厦","district":"朝阳区","group":"CBD-副中心组团","plate":"CBD核心区","lat":39.913,"lng":116.466,"coordConfidence":"低","address":"朝阳区东三环商务中心区（CBD）核心区Z6地块","developer":"北京天江通睿置业有限公司","permits":["京房售证字(2026)55号"],"issueDates":["2026-07-01"],"residentialTotal":0,"approvedTotalSuites":1,"detailUrls":["http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8232638&systemID=2&srcId=1"],"inventoryNote":"住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。"}];
 const ZJW_NEW_LAUNCH_INVENTORY_STATUS_OVERRIDES = {
   "玉章苑": {
+    unsignedSuites: 5,
+    availableSuites: 5,
+    bookedSuites: 4,
+    contractSignedSuites: 0,
+    filedSuites: 10,
+    signedSuites: 10,
     signedStatsSuites: 11,
     signedStatsArea: 2046.22,
     signedStatsAvgPrice: 72854.93,
-    auditNote: "住建委期房签约统计：住宅已签约11套，已签约面积2046.22㎡，成交均价72854.93元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+    fetchedAt: "2026-07-08 17:18:26",
+    auditNote: "住建委楼盘表1栋住宅楼房源状态复核：共20套，绿色可售5套，已预订4套，已签约0套，网上联机备案10套，未知状态1套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约11套，已签约面积2046.22㎡，成交均价72854.93元/㎡。"
   },
   "长河花园": {
+    unsignedSuites: 6,
+    availableSuites: 6,
+    bookedSuites: 0,
+    contractSignedSuites: 0,
+    filedSuites: 1,
+    signedSuites: 1,
     signedStatsSuites: 8,
     signedStatsArea: 4067.08,
     signedStatsAvgPrice: 28404.45,
-    auditNote: "住建委期房签约统计：用途列为住宅、设备用房，已签约8套，已签约面积4067.08㎡，成交均价28404.45元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+    fetchedAt: "2026-07-08 17:18:30",
+    auditNote: "住建委楼盘表7栋住宅楼房源状态复核：共16套，绿色可售6套，已预订0套，已签约0套，网上联机备案1套，未知状态9套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约8套，已签约面积4067.08㎡，成交均价28404.45元/㎡。"
   },
   "誉淙家园": {
+    unsignedSuites: 192,
+    availableSuites: 192,
+    bookedSuites: 0,
+    contractSignedSuites: 0,
+    filedSuites: 105,
+    signedSuites: 105,
     signedStatsSuites: 108,
     signedStatsArea: 9965.19,
     signedStatsAvgPrice: 50216.1,
-    auditNote: "住建委期房签约统计：住宅已签约108套，已签约面积9965.19㎡，成交均价50216.1元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+    fetchedAt: "2026-07-08 17:18:35",
+    auditNote: "住建委楼盘表6栋住宅楼房源状态复核：共303套，绿色可售192套，已预订0套，已签约0套，网上联机备案105套，未知状态6套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约108套，已签约面积9965.19㎡，成交均价50216.1元/㎡。"
   },
   "御林湾苑": {
+    unsignedSuites: 913,
+    availableSuites: 913,
+    bookedSuites: 92,
+    contractSignedSuites: 0,
+    filedSuites: 10,
+    signedSuites: 10,
     signedStatsSuites: 15,
     signedStatsArea: 2273.46,
     signedStatsAvgPrice: 60523.74,
-    auditNote: "住建委期房签约统计：住宅已签约15套，已签约面积2273.46㎡，成交均价60523.74元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+    fetchedAt: "2026-07-08 17:18:51",
+    auditNote: "住建委楼盘表8栋住宅楼房源状态复核：共1023套，绿色可售913套，已预订92套，已签约0套，网上联机备案10套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约15套，已签约面积2273.46㎡，成交均价60523.74元/㎡。"
   },
   "熙区嘉园": {
-    unsignedSuites: 546,
-    availableSuites: 546,
+    unsignedSuites: 542,
+    availableSuites: 542,
     bookedSuites: 0,
     contractSignedSuites: 0,
     filedSuites: 0,
     signedSuites: 0,
-    auditNote: "住建委楼盘表4栋住宅楼房源状态复核：共546套，绿色可售546套，已预订/已签约/网上联机备案0套；剩余套数按绿色可售住宅房源计。"
+    signedStatsSuites: 0,
+    signedStatsArea: 0,
+    signedStatsAvgPrice: 0,
+    fetchedAt: "2026-07-08 17:19:07",
+    auditNote: "住建委楼盘表4栋住宅楼房源状态复核：共546套，绿色可售542套，已预订0套，已签约0套，网上联机备案0套，未知状态4套；剩余套数按绿色可售住宅房源计。"
   },
   "缦云福苑（二期）": {
+    unsignedSuites: 109,
+    availableSuites: 109,
+    bookedSuites: 11,
+    contractSignedSuites: 1,
+    filedSuites: 13,
+    signedSuites: 14,
     signedStatsSuites: 14,
     signedStatsArea: 2951.66,
     signedStatsAvgPrice: 56620.51,
-    auditNote: "住建委期房签约统计：住宅已签约14套，已签约面积2951.66㎡，成交均价56620.51元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+    fetchedAt: "2026-07-08 17:18:54",
+    auditNote: "住建委楼盘表1栋住宅楼房源状态复核：共135套，绿色可售109套，已预订11套，已签约1套，网上联机备案13套，未知状态1套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约14套，已签约面积2951.66㎡，成交均价56620.51元/㎡。"
   },
   "云溪花园小区": {
+    unsignedSuites: 53,
+    availableSuites: 53,
+    bookedSuites: 0,
+    contractSignedSuites: 0,
+    filedSuites: 1,
+    signedSuites: 1,
     signedStatsSuites: 1,
     signedStatsArea: 97.77,
     signedStatsAvgPrice: 15137.57,
-    auditNote: "住建委期房签约统计：住宅已签约1套，已签约面积97.77㎡，成交均价15137.57元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+    fetchedAt: "2026-07-08 17:18:57",
+    auditNote: "住建委楼盘表2栋住宅楼房源状态复核：共56套，绿色可售53套，已预订0套，已签约0套，网上联机备案1套，未知状态2套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约1套，已签约面积97.77㎡，成交均价15137.57元/㎡。"
   },
   "璟瑞家园": {
-    signedStatsSuites: 210,
-    signedStatsArea: 20833.94,
-    signedStatsAvgPrice: 61332.5,
-    auditNote: "住建委期房签约统计：住宅已签约210套，已签约面积20833.94㎡，成交均价61332.5元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+    unsignedSuites: 162,
+    availableSuites: 162,
+    bookedSuites: 5,
+    contractSignedSuites: 20,
+    filedSuites: 185,
+    signedSuites: 205,
+    signedStatsSuites: 211,
+    signedStatsArea: 20920.8,
+    signedStatsAvgPrice: 61309.46,
+    fetchedAt: "2026-07-08 17:19:12",
+    auditNote: "住建委楼盘表7栋住宅楼房源状态复核：共379套，绿色可售162套，已预订5套，已签约20套，网上联机备案185套，未知状态7套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约211套，已签约面积20920.8㎡，成交均价61309.46元/㎡。"
   },
   "铂瑞府": {
-    unsignedSuites: 382,
-    availableSuites: 382,
-    bookedSuites: 1,
-    contractSignedSuites: 0,
+    unsignedSuites: 360,
+    availableSuites: 360,
+    bookedSuites: 14,
+    contractSignedSuites: 1,
     filedSuites: 0,
-    signedSuites: 0,
-    auditNote: "住建委楼盘表8栋住宅楼房源状态复核：共383套，绿色可售382套，已预订1套，已签约/网上联机备案0套；剩余套数按绿色可售住宅房源计。"
+    signedSuites: 1,
+    signedStatsSuites: 2,
+    signedStatsArea: 179.55,
+    signedStatsAvgPrice: 37051.47,
+    fetchedAt: "2026-07-08 17:19:36",
+    auditNote: "住建委楼盘表8栋住宅楼房源状态复核：共383套，绿色可售360套，已预订14套，已签约1套，网上联机备案0套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约2套，已签约面积179.55㎡，成交均价37051.47元/㎡。"
   },
   "国樾天颂府": {
-    unsignedSuites: 305,
-    availableSuites: 305,
+    unsignedSuites: 297,
+    availableSuites: 297,
     bookedSuites: 9,
     contractSignedSuites: 0,
     filedSuites: 0,
     signedSuites: 0,
-    auditNote: "住建委楼盘表8栋楼房源状态复核：共314套，绿色可售305套，已预订9套，已签约/网上联机备案0套；剩余套数按绿色可售住宅房源计。"
+    signedStatsSuites: 0,
+    signedStatsArea: 0,
+    signedStatsAvgPrice: 0,
+    fetchedAt: "2026-07-08 17:20:07",
+    auditNote: "住建委楼盘表8栋住宅楼房源状态复核：共314套，绿色可售297套，已预订9套，已签约0套，网上联机备案0套，未知状态8套；剩余套数按绿色可售住宅房源计。"
   },
   "青和家园": {
     unsignedSuites: 304,
@@ -862,10 +923,35 @@ const ZJW_NEW_LAUNCH_INVENTORY_STATUS_OVERRIDES = {
     signedStatsSuites: 72,
     signedStatsArea: 7266.05,
     signedStatsAvgPrice: 54541.3,
-    fetchedAt: "2026-07-08 16:53:54",
+    fetchedAt: "2026-07-08 17:20:01",
     auditNote: "住建委楼盘表8栋住宅楼房源状态复核：共400套，绿色可售304套，已预订18套，已签约52套，网上联机备案18套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约72套，已签约面积7266.05㎡，成交均价54541.3元/㎡。"
-  }
-};
+  },
+  "樾序海苑": {
+    unsignedSuites: 91,
+    availableSuites: 91,
+    bookedSuites: 19,
+    contractSignedSuites: 36,
+    filedSuites: 440,
+    signedSuites: 476,
+    signedStatsSuites: 682,
+    signedStatsArea: 65416.38,
+    signedStatsAvgPrice: 54376.37,
+    fetchedAt: "2026-07-08 17:19:24",
+    auditNote: "住建委楼盘表8栋住宅楼房源状态复核：共594套，绿色可售91套，已预订19套，已签约36套，网上联机备案440套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约682套，已签约面积65416.38㎡，成交均价54376.37元/㎡。"
+  },
+  "嘉棠雅苑": {
+    unsignedSuites: 286,
+    availableSuites: 286,
+    bookedSuites: 11,
+    contractSignedSuites: 141,
+    filedSuites: 0,
+    signedSuites: 141,
+    signedStatsSuites: 182,
+    signedStatsArea: 19744.29,
+    signedStatsAvgPrice: 69619.9,
+    fetchedAt: "2026-07-08 17:19:52",
+    auditNote: "住建委楼盘表8栋住宅楼房源状态复核：共446套，绿色可售286套，已预订11套，已签约141套，网上联机备案0套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约182套，已签约面积19744.29㎡，成交均价69619.9元/㎡。"
+  }};
 function normalizePresaleName(value) {
   return String(value || "")
     .replace(/[·・\s（）()《》]/g, "")

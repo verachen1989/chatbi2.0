@@ -7,7 +7,24 @@
           "officialProjectName": "青和家园",
           "dashboardName": "青和家园",
           "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1",
-          "fetchedAt": "2026-07-08 16:53:54",
+          "urls": [
+            "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1"
+          ],
+          "fetchedAt": "2026-07-08 17:20:01",
+          "isNewLaunchResidential": true,
+          "firstIssueDate": "2026-06-18",
+          "latestIssueDate": "2026-06-18",
+          "issueDates": [
+            "2026-06-18"
+          ],
+          "presalePermits": [
+            "京房售证字(2026)50号"
+          ],
+          "presalePermitText": "京房售证字(2026)50号",
+          "developer": "北京铁工城市开发建设有限公司",
+          "district": "顺义区",
+          "plate": "后沙峪",
+          "group": "东北组团",
           "residentialTotal": 400,
           "approvedResidentialTotal": 400,
           "roomStatusTotal": 400,
@@ -29,6 +46,7 @@
             "unknown": 8,
             "total": 400
           },
+          "buildingStatusErrors": [],
           "buildingCount": 8,
           "buildings": [
             {
@@ -99,7 +117,16 @@
           "signedStatsSuites": 72,
           "signedStatsArea": 7266.05,
           "signedStatsAvgPrice": 54541.3,
-          "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共400套，绿色可售304套，已预订18套，已签约52套，网上联机备案18套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约72套，已签约面积7266.05㎡，成交均价54541.3元/㎡。"
+          "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共400套，绿色可售304套，已预订18套，已签约52套，网上联机备案18套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约72套，已签约面积7266.05㎡，成交均价54541.3元/㎡。",
+          "screenshotInfo": {
+            "住建委备案名": "青和家园",
+            "预售证": "京房售证字(2026)50号",
+            "首次取证日期": "2026-06-18",
+            "最新取证日期": "2026-06-18",
+            "开发商": "北京铁工城市开发建设有限公司",
+            "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1",
+            "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+          }
         }
       ],
       "latest": {
@@ -107,7 +134,24 @@
         "officialProjectName": "青和家园",
         "dashboardName": "青和家园",
         "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1",
-        "fetchedAt": "2026-07-08 16:53:54",
+        "urls": [
+          "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1"
+        ],
+        "fetchedAt": "2026-07-08 17:20:01",
+        "isNewLaunchResidential": true,
+        "firstIssueDate": "2026-06-18",
+        "latestIssueDate": "2026-06-18",
+        "issueDates": [
+          "2026-06-18"
+        ],
+        "presalePermits": [
+          "京房售证字(2026)50号"
+        ],
+        "presalePermitText": "京房售证字(2026)50号",
+        "developer": "北京铁工城市开发建设有限公司",
+        "district": "顺义区",
+        "plate": "后沙峪",
+        "group": "东北组团",
         "residentialTotal": 400,
         "approvedResidentialTotal": 400,
         "roomStatusTotal": 400,
@@ -129,6 +173,7 @@
           "unknown": 8,
           "total": 400
         },
+        "buildingStatusErrors": [],
         "buildingCount": 8,
         "buildings": [
           {
@@ -199,7 +244,2634 @@
         "signedStatsSuites": 72,
         "signedStatsArea": 7266.05,
         "signedStatsAvgPrice": 54541.3,
-        "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共400套，绿色可售304套，已预订18套，已签约52套，网上联机备案18套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约72套，已签约面积7266.05㎡，成交均价54541.3元/㎡。"
+        "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共400套，绿色可售304套，已预订18套，已签约52套，网上联机备案18套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约72套，已签约面积7266.05㎡，成交均价54541.3元/㎡。",
+        "screenshotInfo": {
+          "住建委备案名": "青和家园",
+          "预售证": "京房售证字(2026)50号",
+          "首次取证日期": "2026-06-18",
+          "最新取证日期": "2026-06-18",
+          "开发商": "北京铁工城市开发建设有限公司",
+          "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1",
+          "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+        }
+      }
+    },
+    "玉章苑": {
+      "history": [
+        {
+          "projectId": "8156387",
+          "officialProjectName": "玉章苑",
+          "dashboardName": "玉章苑",
+          "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8156387&systemID=2&srcId=1",
+          "urls": [
+            "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8156387&systemID=2&srcId=1",
+            "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195901&systemID=2&srcId=1"
+          ],
+          "fetchedAt": "2026-07-08 17:18:26",
+          "isNewLaunchResidential": true,
+          "firstIssueDate": "2026-01-26",
+          "latestIssueDate": "2026-04-24",
+          "issueDates": [
+            "2026-01-26",
+            "2026-04-24"
+          ],
+          "presalePermits": [
+            "京房售证字(2026)2号",
+            "京房售证字(2026)36号"
+          ],
+          "presalePermitText": "京房售证字(2026)2号 / 京房售证字(2026)36号",
+          "developer": "北京鑫安兴业房地产开发有限公司",
+          "district": "石景山区",
+          "plate": "苹果园",
+          "group": "西部组团",
+          "residentialTotal": 20,
+          "approvedResidentialTotal": 20,
+          "roomStatusTotal": 20,
+          "unsignedSuites": 5,
+          "availableSuites": 5,
+          "bookedSuites": 4,
+          "contractSignedSuites": 0,
+          "filedSuites": 10,
+          "qualificationSuites": 0,
+          "signedSuites": 10,
+          "statusCounts": {
+            "available": 5,
+            "booked": 4,
+            "contractSigned": 0,
+            "filed": 10,
+            "qualification": 0,
+            "mortgage": 0,
+            "nonSale": 0,
+            "unknown": 1,
+            "total": 20
+          },
+          "buildingStatusErrors": [],
+          "buildingCount": 1,
+          "buildings": [
+            {
+              "buildingName": "4#住宅楼",
+              "approvedSuites": 20,
+              "approvedArea": 3720.4,
+              "saleStatus": "正在预售",
+              "listPrice": 85000,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8156387&buildingId=570474"
+            }
+          ],
+          "signedStatsSuites": 11,
+          "signedStatsArea": 2046.22,
+          "signedStatsAvgPrice": 72854.93,
+          "auditNote": "住建委楼盘表1栋住宅楼房源状态复核：共20套，绿色可售5套，已预订4套，已签约0套，网上联机备案10套，未知状态1套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约11套，已签约面积2046.22㎡，成交均价72854.93元/㎡。",
+          "screenshotInfo": {
+            "住建委备案名": "玉章苑",
+            "预售证": "京房售证字(2026)2号 / 京房售证字(2026)36号",
+            "首次取证日期": "2026-01-26",
+            "最新取证日期": "2026-04-24",
+            "开发商": "北京鑫安兴业房地产开发有限公司",
+            "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8156387&systemID=2&srcId=1",
+            "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+          }
+        }
+      ],
+      "latest": {
+        "projectId": "8156387",
+        "officialProjectName": "玉章苑",
+        "dashboardName": "玉章苑",
+        "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8156387&systemID=2&srcId=1",
+        "urls": [
+          "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8156387&systemID=2&srcId=1",
+          "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195901&systemID=2&srcId=1"
+        ],
+        "fetchedAt": "2026-07-08 17:18:26",
+        "isNewLaunchResidential": true,
+        "firstIssueDate": "2026-01-26",
+        "latestIssueDate": "2026-04-24",
+        "issueDates": [
+          "2026-01-26",
+          "2026-04-24"
+        ],
+        "presalePermits": [
+          "京房售证字(2026)2号",
+          "京房售证字(2026)36号"
+        ],
+        "presalePermitText": "京房售证字(2026)2号 / 京房售证字(2026)36号",
+        "developer": "北京鑫安兴业房地产开发有限公司",
+        "district": "石景山区",
+        "plate": "苹果园",
+        "group": "西部组团",
+        "residentialTotal": 20,
+        "approvedResidentialTotal": 20,
+        "roomStatusTotal": 20,
+        "unsignedSuites": 5,
+        "availableSuites": 5,
+        "bookedSuites": 4,
+        "contractSignedSuites": 0,
+        "filedSuites": 10,
+        "qualificationSuites": 0,
+        "signedSuites": 10,
+        "statusCounts": {
+          "available": 5,
+          "booked": 4,
+          "contractSigned": 0,
+          "filed": 10,
+          "qualification": 0,
+          "mortgage": 0,
+          "nonSale": 0,
+          "unknown": 1,
+          "total": 20
+        },
+        "buildingStatusErrors": [],
+        "buildingCount": 1,
+        "buildings": [
+          {
+            "buildingName": "4#住宅楼",
+            "approvedSuites": 20,
+            "approvedArea": 3720.4,
+            "saleStatus": "正在预售",
+            "listPrice": 85000,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8156387&buildingId=570474"
+          }
+        ],
+        "signedStatsSuites": 11,
+        "signedStatsArea": 2046.22,
+        "signedStatsAvgPrice": 72854.93,
+        "auditNote": "住建委楼盘表1栋住宅楼房源状态复核：共20套，绿色可售5套，已预订4套，已签约0套，网上联机备案10套，未知状态1套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约11套，已签约面积2046.22㎡，成交均价72854.93元/㎡。",
+        "screenshotInfo": {
+          "住建委备案名": "玉章苑",
+          "预售证": "京房售证字(2026)2号 / 京房售证字(2026)36号",
+          "首次取证日期": "2026-01-26",
+          "最新取证日期": "2026-04-24",
+          "开发商": "北京鑫安兴业房地产开发有限公司",
+          "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8156387&systemID=2&srcId=1",
+          "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+        }
+      }
+    },
+    "长河花园": {
+      "history": [
+        {
+          "projectId": "8157960",
+          "officialProjectName": "长河花园",
+          "dashboardName": "长河花园",
+          "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157960&systemID=2&srcId=1",
+          "urls": [
+            "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157960&systemID=2&srcId=1"
+          ],
+          "fetchedAt": "2026-07-08 17:18:30",
+          "isNewLaunchResidential": true,
+          "firstIssueDate": "2026-01-30",
+          "latestIssueDate": "2026-01-30",
+          "issueDates": [
+            "2026-01-30"
+          ],
+          "presalePermits": [
+            "京房售证字(2026)7号"
+          ],
+          "presalePermitText": "京房售证字(2026)7号",
+          "developer": "北京天成天房地产开发有限公司",
+          "district": "昌平区",
+          "plate": "小汤山",
+          "group": "北部组团",
+          "residentialTotal": 16,
+          "approvedResidentialTotal": 14,
+          "roomStatusTotal": 16,
+          "unsignedSuites": 6,
+          "availableSuites": 6,
+          "bookedSuites": 0,
+          "contractSignedSuites": 0,
+          "filedSuites": 1,
+          "qualificationSuites": 0,
+          "signedSuites": 1,
+          "statusCounts": {
+            "available": 6,
+            "booked": 0,
+            "contractSigned": 0,
+            "filed": 1,
+            "qualification": 0,
+            "mortgage": 0,
+            "nonSale": 0,
+            "unknown": 9,
+            "total": 16
+          },
+          "buildingStatusErrors": [],
+          "buildingCount": 7,
+          "buildings": [
+            {
+              "buildingName": "E-11#住宅楼",
+              "approvedSuites": 2,
+              "approvedArea": 998.86,
+              "saleStatus": "正在预售",
+              "listPrice": 37499.76,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157960&buildingId=462436"
+            },
+            {
+              "buildingName": "E-13#住宅楼",
+              "approvedSuites": 2,
+              "approvedArea": 998.86,
+              "saleStatus": "正在预售",
+              "listPrice": 37999.84,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157960&buildingId=462434"
+            },
+            {
+              "buildingName": "E-17#住宅楼",
+              "approvedSuites": 2,
+              "approvedArea": 1035.28,
+              "saleStatus": "2026/2/2 0:00:00开盘",
+              "listPrice": 42500.58,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157960&buildingId=462465"
+            },
+            {
+              "buildingName": "E-18#住宅楼",
+              "approvedSuites": 2,
+              "approvedArea": 1035.28,
+              "saleStatus": "2026/2/2 0:00:00开盘",
+              "listPrice": 42500.58,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157960&buildingId=462464"
+            },
+            {
+              "buildingName": "E-19#住宅楼",
+              "approvedSuites": 2,
+              "approvedArea": 1035.28,
+              "saleStatus": "正在预售",
+              "listPrice": 42000,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157960&buildingId=462463"
+            },
+            {
+              "buildingName": "E-5#住宅楼",
+              "approvedSuites": 2,
+              "approvedArea": 1035.28,
+              "saleStatus": "2026/2/2 0:00:00开盘",
+              "listPrice": 42500.58,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157960&buildingId=462471"
+            },
+            {
+              "buildingName": "E-6#住宅楼",
+              "approvedSuites": 2,
+              "approvedArea": 1035.28,
+              "saleStatus": "正在预售",
+              "listPrice": 42500.58,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157960&buildingId=462470"
+            }
+          ],
+          "signedStatsSuites": 8,
+          "signedStatsArea": 4067.08,
+          "signedStatsAvgPrice": 28404.45,
+          "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共16套，绿色可售6套，已预订0套，已签约0套，网上联机备案1套，未知状态9套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约8套，已签约面积4067.08㎡，成交均价28404.45元/㎡。",
+          "screenshotInfo": {
+            "住建委备案名": "长河花园",
+            "预售证": "京房售证字(2026)7号",
+            "首次取证日期": "2026-01-30",
+            "最新取证日期": "2026-01-30",
+            "开发商": "北京天成天房地产开发有限公司",
+            "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157960&systemID=2&srcId=1",
+            "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+          }
+        }
+      ],
+      "latest": {
+        "projectId": "8157960",
+        "officialProjectName": "长河花园",
+        "dashboardName": "长河花园",
+        "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157960&systemID=2&srcId=1",
+        "urls": [
+          "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157960&systemID=2&srcId=1"
+        ],
+        "fetchedAt": "2026-07-08 17:18:30",
+        "isNewLaunchResidential": true,
+        "firstIssueDate": "2026-01-30",
+        "latestIssueDate": "2026-01-30",
+        "issueDates": [
+          "2026-01-30"
+        ],
+        "presalePermits": [
+          "京房售证字(2026)7号"
+        ],
+        "presalePermitText": "京房售证字(2026)7号",
+        "developer": "北京天成天房地产开发有限公司",
+        "district": "昌平区",
+        "plate": "小汤山",
+        "group": "北部组团",
+        "residentialTotal": 16,
+        "approvedResidentialTotal": 14,
+        "roomStatusTotal": 16,
+        "unsignedSuites": 6,
+        "availableSuites": 6,
+        "bookedSuites": 0,
+        "contractSignedSuites": 0,
+        "filedSuites": 1,
+        "qualificationSuites": 0,
+        "signedSuites": 1,
+        "statusCounts": {
+          "available": 6,
+          "booked": 0,
+          "contractSigned": 0,
+          "filed": 1,
+          "qualification": 0,
+          "mortgage": 0,
+          "nonSale": 0,
+          "unknown": 9,
+          "total": 16
+        },
+        "buildingStatusErrors": [],
+        "buildingCount": 7,
+        "buildings": [
+          {
+            "buildingName": "E-11#住宅楼",
+            "approvedSuites": 2,
+            "approvedArea": 998.86,
+            "saleStatus": "正在预售",
+            "listPrice": 37499.76,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157960&buildingId=462436"
+          },
+          {
+            "buildingName": "E-13#住宅楼",
+            "approvedSuites": 2,
+            "approvedArea": 998.86,
+            "saleStatus": "正在预售",
+            "listPrice": 37999.84,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157960&buildingId=462434"
+          },
+          {
+            "buildingName": "E-17#住宅楼",
+            "approvedSuites": 2,
+            "approvedArea": 1035.28,
+            "saleStatus": "2026/2/2 0:00:00开盘",
+            "listPrice": 42500.58,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157960&buildingId=462465"
+          },
+          {
+            "buildingName": "E-18#住宅楼",
+            "approvedSuites": 2,
+            "approvedArea": 1035.28,
+            "saleStatus": "2026/2/2 0:00:00开盘",
+            "listPrice": 42500.58,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157960&buildingId=462464"
+          },
+          {
+            "buildingName": "E-19#住宅楼",
+            "approvedSuites": 2,
+            "approvedArea": 1035.28,
+            "saleStatus": "正在预售",
+            "listPrice": 42000,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157960&buildingId=462463"
+          },
+          {
+            "buildingName": "E-5#住宅楼",
+            "approvedSuites": 2,
+            "approvedArea": 1035.28,
+            "saleStatus": "2026/2/2 0:00:00开盘",
+            "listPrice": 42500.58,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157960&buildingId=462471"
+          },
+          {
+            "buildingName": "E-6#住宅楼",
+            "approvedSuites": 2,
+            "approvedArea": 1035.28,
+            "saleStatus": "正在预售",
+            "listPrice": 42500.58,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157960&buildingId=462470"
+          }
+        ],
+        "signedStatsSuites": 8,
+        "signedStatsArea": 4067.08,
+        "signedStatsAvgPrice": 28404.45,
+        "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共16套，绿色可售6套，已预订0套，已签约0套，网上联机备案1套，未知状态9套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约8套，已签约面积4067.08㎡，成交均价28404.45元/㎡。",
+        "screenshotInfo": {
+          "住建委备案名": "长河花园",
+          "预售证": "京房售证字(2026)7号",
+          "首次取证日期": "2026-01-30",
+          "最新取证日期": "2026-01-30",
+          "开发商": "北京天成天房地产开发有限公司",
+          "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157960&systemID=2&srcId=1",
+          "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+        }
+      }
+    },
+    "誉淙家园": {
+      "history": [
+        {
+          "projectId": "8161845",
+          "officialProjectName": "誉淙家园",
+          "dashboardName": "誉淙家园",
+          "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8161845&systemID=2&srcId=1",
+          "urls": [
+            "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8161845&systemID=2&srcId=1"
+          ],
+          "fetchedAt": "2026-07-08 17:18:35",
+          "isNewLaunchResidential": true,
+          "firstIssueDate": "2026-02-05",
+          "latestIssueDate": "2026-02-05",
+          "issueDates": [
+            "2026-02-05"
+          ],
+          "presalePermits": [
+            "京房售证字(2026)8号"
+          ],
+          "presalePermitText": "京房售证字(2026)8号",
+          "developer": "北京城昌贝越置业有限公司",
+          "district": "昌平区",
+          "plate": "回龙观",
+          "group": "北部组团",
+          "residentialTotal": 303,
+          "approvedResidentialTotal": 303,
+          "roomStatusTotal": 303,
+          "unsignedSuites": 192,
+          "availableSuites": 192,
+          "bookedSuites": 0,
+          "contractSignedSuites": 0,
+          "filedSuites": 105,
+          "qualificationSuites": 0,
+          "signedSuites": 105,
+          "statusCounts": {
+            "available": 192,
+            "booked": 0,
+            "contractSigned": 0,
+            "filed": 105,
+            "qualification": 0,
+            "mortgage": 0,
+            "nonSale": 0,
+            "unknown": 6,
+            "total": 303
+          },
+          "buildingStatusErrors": [],
+          "buildingCount": 6,
+          "buildings": [
+            {
+              "buildingName": "2-2#住宅楼",
+              "approvedSuites": 69,
+              "approvedArea": 7772.47,
+              "saleStatus": "2026/2/8 0:00:00开盘",
+              "listPrice": 62601.78,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8161845&buildingId=575895"
+            },
+            {
+              "buildingName": "2-3#住宅楼",
+              "approvedSuites": 69,
+              "approvedArea": 7774.17,
+              "saleStatus": "2026/2/8 0:00:00开盘",
+              "listPrice": 63187.83,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8161845&buildingId=575891"
+            },
+            {
+              "buildingName": "2-4#住宅楼",
+              "approvedSuites": 61,
+              "approvedArea": 5541.56,
+              "saleStatus": "正在预售",
+              "listPrice": 65162.17,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8161845&buildingId=575894"
+            },
+            {
+              "buildingName": "2-5#住宅楼",
+              "approvedSuites": 44,
+              "approvedArea": 4223.78,
+              "saleStatus": "正在预售",
+              "listPrice": 66768.54,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8161845&buildingId=575893"
+            },
+            {
+              "buildingName": "2-6#住宅楼",
+              "approvedSuites": 44,
+              "approvedArea": 4058.53,
+              "saleStatus": "正在预售",
+              "listPrice": 66578.26,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8161845&buildingId=575881"
+            },
+            {
+              "buildingName": "2-7#住宅楼",
+              "approvedSuites": 16,
+              "approvedArea": 1369.86,
+              "saleStatus": "正在预售",
+              "listPrice": 64941.24,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8161845&buildingId=575892"
+            }
+          ],
+          "signedStatsSuites": 108,
+          "signedStatsArea": 9965.19,
+          "signedStatsAvgPrice": 50216.1,
+          "auditNote": "住建委楼盘表6栋住宅楼房源状态复核：共303套，绿色可售192套，已预订0套，已签约0套，网上联机备案105套，未知状态6套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约108套，已签约面积9965.19㎡，成交均价50216.1元/㎡。",
+          "screenshotInfo": {
+            "住建委备案名": "誉淙家园",
+            "预售证": "京房售证字(2026)8号",
+            "首次取证日期": "2026-02-05",
+            "最新取证日期": "2026-02-05",
+            "开发商": "北京城昌贝越置业有限公司",
+            "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8161845&systemID=2&srcId=1",
+            "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+          }
+        }
+      ],
+      "latest": {
+        "projectId": "8161845",
+        "officialProjectName": "誉淙家园",
+        "dashboardName": "誉淙家园",
+        "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8161845&systemID=2&srcId=1",
+        "urls": [
+          "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8161845&systemID=2&srcId=1"
+        ],
+        "fetchedAt": "2026-07-08 17:18:35",
+        "isNewLaunchResidential": true,
+        "firstIssueDate": "2026-02-05",
+        "latestIssueDate": "2026-02-05",
+        "issueDates": [
+          "2026-02-05"
+        ],
+        "presalePermits": [
+          "京房售证字(2026)8号"
+        ],
+        "presalePermitText": "京房售证字(2026)8号",
+        "developer": "北京城昌贝越置业有限公司",
+        "district": "昌平区",
+        "plate": "回龙观",
+        "group": "北部组团",
+        "residentialTotal": 303,
+        "approvedResidentialTotal": 303,
+        "roomStatusTotal": 303,
+        "unsignedSuites": 192,
+        "availableSuites": 192,
+        "bookedSuites": 0,
+        "contractSignedSuites": 0,
+        "filedSuites": 105,
+        "qualificationSuites": 0,
+        "signedSuites": 105,
+        "statusCounts": {
+          "available": 192,
+          "booked": 0,
+          "contractSigned": 0,
+          "filed": 105,
+          "qualification": 0,
+          "mortgage": 0,
+          "nonSale": 0,
+          "unknown": 6,
+          "total": 303
+        },
+        "buildingStatusErrors": [],
+        "buildingCount": 6,
+        "buildings": [
+          {
+            "buildingName": "2-2#住宅楼",
+            "approvedSuites": 69,
+            "approvedArea": 7772.47,
+            "saleStatus": "2026/2/8 0:00:00开盘",
+            "listPrice": 62601.78,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8161845&buildingId=575895"
+          },
+          {
+            "buildingName": "2-3#住宅楼",
+            "approvedSuites": 69,
+            "approvedArea": 7774.17,
+            "saleStatus": "2026/2/8 0:00:00开盘",
+            "listPrice": 63187.83,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8161845&buildingId=575891"
+          },
+          {
+            "buildingName": "2-4#住宅楼",
+            "approvedSuites": 61,
+            "approvedArea": 5541.56,
+            "saleStatus": "正在预售",
+            "listPrice": 65162.17,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8161845&buildingId=575894"
+          },
+          {
+            "buildingName": "2-5#住宅楼",
+            "approvedSuites": 44,
+            "approvedArea": 4223.78,
+            "saleStatus": "正在预售",
+            "listPrice": 66768.54,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8161845&buildingId=575893"
+          },
+          {
+            "buildingName": "2-6#住宅楼",
+            "approvedSuites": 44,
+            "approvedArea": 4058.53,
+            "saleStatus": "正在预售",
+            "listPrice": 66578.26,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8161845&buildingId=575881"
+          },
+          {
+            "buildingName": "2-7#住宅楼",
+            "approvedSuites": 16,
+            "approvedArea": 1369.86,
+            "saleStatus": "正在预售",
+            "listPrice": 64941.24,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8161845&buildingId=575892"
+          }
+        ],
+        "signedStatsSuites": 108,
+        "signedStatsArea": 9965.19,
+        "signedStatsAvgPrice": 50216.1,
+        "auditNote": "住建委楼盘表6栋住宅楼房源状态复核：共303套，绿色可售192套，已预订0套，已签约0套，网上联机备案105套，未知状态6套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约108套，已签约面积9965.19㎡，成交均价50216.1元/㎡。",
+        "screenshotInfo": {
+          "住建委备案名": "誉淙家园",
+          "预售证": "京房售证字(2026)8号",
+          "首次取证日期": "2026-02-05",
+          "最新取证日期": "2026-02-05",
+          "开发商": "北京城昌贝越置业有限公司",
+          "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8161845&systemID=2&srcId=1",
+          "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+        }
+      }
+    },
+    "御林湾苑": {
+      "history": [
+        {
+          "projectId": "8157959",
+          "officialProjectName": "御林湾苑",
+          "dashboardName": "御林湾苑",
+          "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157959&systemID=2&srcId=1",
+          "urls": [
+            "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157959&systemID=2&srcId=1"
+          ],
+          "fetchedAt": "2026-07-08 17:18:51",
+          "isNewLaunchResidential": true,
+          "firstIssueDate": "2026-02-07",
+          "latestIssueDate": "2026-02-07",
+          "issueDates": [
+            "2026-02-07"
+          ],
+          "presalePermits": [
+            "京房售证字(2026)10号"
+          ],
+          "presalePermitText": "京房售证字(2026)10号",
+          "developer": "北京东洲房地产开发有限公司",
+          "district": "朝阳区",
+          "plate": "金盏北",
+          "group": "东北组团",
+          "residentialTotal": 1023,
+          "approvedResidentialTotal": 1023,
+          "roomStatusTotal": 1023,
+          "unsignedSuites": 913,
+          "availableSuites": 913,
+          "bookedSuites": 92,
+          "contractSignedSuites": 0,
+          "filedSuites": 10,
+          "qualificationSuites": 0,
+          "signedSuites": 10,
+          "statusCounts": {
+            "available": 913,
+            "booked": 92,
+            "contractSigned": 0,
+            "filed": 10,
+            "qualification": 0,
+            "mortgage": 0,
+            "nonSale": 0,
+            "unknown": 8,
+            "total": 1023
+          },
+          "buildingStatusErrors": [],
+          "buildingCount": 8,
+          "buildings": [
+            {
+              "buildingName": "南10#住宅楼",
+              "approvedSuites": 107,
+              "approvedArea": 15203.86,
+              "saleStatus": "正在预售",
+              "listPrice": 73810.09,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157959&buildingId=575074"
+            },
+            {
+              "buildingName": "南11#住宅楼",
+              "approvedSuites": 142,
+              "approvedArea": 17346.02,
+              "saleStatus": "正在预售",
+              "listPrice": 75357.96,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157959&buildingId=574765"
+            },
+            {
+              "buildingName": "南12#住宅楼",
+              "approvedSuites": 144,
+              "approvedArea": 17579.56,
+              "saleStatus": "正在预售",
+              "listPrice": 73015.38,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157959&buildingId=574766"
+            },
+            {
+              "buildingName": "南13#住宅楼",
+              "approvedSuites": 72,
+              "approvedArea": 10454.36,
+              "saleStatus": "正在预售",
+              "listPrice": 76934.08,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157959&buildingId=575075"
+            },
+            {
+              "buildingName": "南14#住宅楼",
+              "approvedSuites": 150,
+              "approvedArea": 21366.47,
+              "saleStatus": "正在预售",
+              "listPrice": 75174.59,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157959&buildingId=574767"
+            },
+            {
+              "buildingName": "南15#住宅楼",
+              "approvedSuites": 138,
+              "approvedArea": 16846.94,
+              "saleStatus": "正在预售",
+              "listPrice": 79669.14,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157959&buildingId=574768"
+            },
+            {
+              "buildingName": "南16#住宅楼",
+              "approvedSuites": 70,
+              "approvedArea": 10452.96,
+              "saleStatus": "正在预售",
+              "listPrice": 83775.27,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157959&buildingId=575076"
+            },
+            {
+              "buildingName": "南17#住宅楼",
+              "approvedSuites": 200,
+              "approvedArea": 21240.08,
+              "saleStatus": "正在预售",
+              "listPrice": 71702.01,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157959&buildingId=574769"
+            }
+          ],
+          "signedStatsSuites": 15,
+          "signedStatsArea": 2273.46,
+          "signedStatsAvgPrice": 60523.74,
+          "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共1023套，绿色可售913套，已预订92套，已签约0套，网上联机备案10套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约15套，已签约面积2273.46㎡，成交均价60523.74元/㎡。",
+          "screenshotInfo": {
+            "住建委备案名": "御林湾苑",
+            "预售证": "京房售证字(2026)10号",
+            "首次取证日期": "2026-02-07",
+            "最新取证日期": "2026-02-07",
+            "开发商": "北京东洲房地产开发有限公司",
+            "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157959&systemID=2&srcId=1",
+            "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+          }
+        }
+      ],
+      "latest": {
+        "projectId": "8157959",
+        "officialProjectName": "御林湾苑",
+        "dashboardName": "御林湾苑",
+        "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157959&systemID=2&srcId=1",
+        "urls": [
+          "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157959&systemID=2&srcId=1"
+        ],
+        "fetchedAt": "2026-07-08 17:18:51",
+        "isNewLaunchResidential": true,
+        "firstIssueDate": "2026-02-07",
+        "latestIssueDate": "2026-02-07",
+        "issueDates": [
+          "2026-02-07"
+        ],
+        "presalePermits": [
+          "京房售证字(2026)10号"
+        ],
+        "presalePermitText": "京房售证字(2026)10号",
+        "developer": "北京东洲房地产开发有限公司",
+        "district": "朝阳区",
+        "plate": "金盏北",
+        "group": "东北组团",
+        "residentialTotal": 1023,
+        "approvedResidentialTotal": 1023,
+        "roomStatusTotal": 1023,
+        "unsignedSuites": 913,
+        "availableSuites": 913,
+        "bookedSuites": 92,
+        "contractSignedSuites": 0,
+        "filedSuites": 10,
+        "qualificationSuites": 0,
+        "signedSuites": 10,
+        "statusCounts": {
+          "available": 913,
+          "booked": 92,
+          "contractSigned": 0,
+          "filed": 10,
+          "qualification": 0,
+          "mortgage": 0,
+          "nonSale": 0,
+          "unknown": 8,
+          "total": 1023
+        },
+        "buildingStatusErrors": [],
+        "buildingCount": 8,
+        "buildings": [
+          {
+            "buildingName": "南10#住宅楼",
+            "approvedSuites": 107,
+            "approvedArea": 15203.86,
+            "saleStatus": "正在预售",
+            "listPrice": 73810.09,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157959&buildingId=575074"
+          },
+          {
+            "buildingName": "南11#住宅楼",
+            "approvedSuites": 142,
+            "approvedArea": 17346.02,
+            "saleStatus": "正在预售",
+            "listPrice": 75357.96,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157959&buildingId=574765"
+          },
+          {
+            "buildingName": "南12#住宅楼",
+            "approvedSuites": 144,
+            "approvedArea": 17579.56,
+            "saleStatus": "正在预售",
+            "listPrice": 73015.38,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157959&buildingId=574766"
+          },
+          {
+            "buildingName": "南13#住宅楼",
+            "approvedSuites": 72,
+            "approvedArea": 10454.36,
+            "saleStatus": "正在预售",
+            "listPrice": 76934.08,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157959&buildingId=575075"
+          },
+          {
+            "buildingName": "南14#住宅楼",
+            "approvedSuites": 150,
+            "approvedArea": 21366.47,
+            "saleStatus": "正在预售",
+            "listPrice": 75174.59,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157959&buildingId=574767"
+          },
+          {
+            "buildingName": "南15#住宅楼",
+            "approvedSuites": 138,
+            "approvedArea": 16846.94,
+            "saleStatus": "正在预售",
+            "listPrice": 79669.14,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157959&buildingId=574768"
+          },
+          {
+            "buildingName": "南16#住宅楼",
+            "approvedSuites": 70,
+            "approvedArea": 10452.96,
+            "saleStatus": "正在预售",
+            "listPrice": 83775.27,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157959&buildingId=575076"
+          },
+          {
+            "buildingName": "南17#住宅楼",
+            "approvedSuites": 200,
+            "approvedArea": 21240.08,
+            "saleStatus": "正在预售",
+            "listPrice": 71702.01,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8157959&buildingId=574769"
+          }
+        ],
+        "signedStatsSuites": 15,
+        "signedStatsArea": 2273.46,
+        "signedStatsAvgPrice": 60523.74,
+        "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共1023套，绿色可售913套，已预订92套，已签约0套，网上联机备案10套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约15套，已签约面积2273.46㎡，成交均价60523.74元/㎡。",
+        "screenshotInfo": {
+          "住建委备案名": "御林湾苑",
+          "预售证": "京房售证字(2026)10号",
+          "首次取证日期": "2026-02-07",
+          "最新取证日期": "2026-02-07",
+          "开发商": "北京东洲房地产开发有限公司",
+          "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157959&systemID=2&srcId=1",
+          "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+        }
+      }
+    },
+    "缦云福苑（二期）": {
+      "history": [
+        {
+          "projectId": "8176579",
+          "officialProjectName": "缦云福苑（二期）",
+          "dashboardName": "缦云福苑（二期）",
+          "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176579&systemID=2&srcId=1",
+          "urls": [
+            "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176579&systemID=2&srcId=1"
+          ],
+          "fetchedAt": "2026-07-08 17:18:54",
+          "isNewLaunchResidential": true,
+          "firstIssueDate": "2026-03-21",
+          "latestIssueDate": "2026-03-21",
+          "issueDates": [
+            "2026-03-21"
+          ],
+          "presalePermits": [
+            "京房售证字(2026)21号"
+          ],
+          "presalePermitText": "京房售证字(2026)21号",
+          "developer": "北京顺开房地产开发有限公司",
+          "district": "通州区",
+          "plate": "通州老城",
+          "group": "CBD-副中心组团",
+          "residentialTotal": 135,
+          "approvedResidentialTotal": 135,
+          "roomStatusTotal": 135,
+          "unsignedSuites": 109,
+          "availableSuites": 109,
+          "bookedSuites": 11,
+          "contractSignedSuites": 1,
+          "filedSuites": 13,
+          "qualificationSuites": 0,
+          "signedSuites": 14,
+          "statusCounts": {
+            "available": 109,
+            "booked": 11,
+            "contractSigned": 1,
+            "filed": 13,
+            "qualification": 0,
+            "mortgage": 0,
+            "nonSale": 0,
+            "unknown": 1,
+            "total": 135
+          },
+          "buildingStatusErrors": [],
+          "buildingCount": 1,
+          "buildings": [
+            {
+              "buildingName": "11#住宅楼",
+              "approvedSuites": 135,
+              "approvedArea": 28474.98,
+              "saleStatus": "正在预售",
+              "listPrice": 67061.56,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8176579&buildingId=573444"
+            }
+          ],
+          "signedStatsSuites": 14,
+          "signedStatsArea": 2951.66,
+          "signedStatsAvgPrice": 56620.51,
+          "auditNote": "住建委楼盘表1栋住宅楼房源状态复核：共135套，绿色可售109套，已预订11套，已签约1套，网上联机备案13套，未知状态1套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约14套，已签约面积2951.66㎡，成交均价56620.51元/㎡。",
+          "screenshotInfo": {
+            "住建委备案名": "缦云福苑（二期）",
+            "预售证": "京房售证字(2026)21号",
+            "首次取证日期": "2026-03-21",
+            "最新取证日期": "2026-03-21",
+            "开发商": "北京顺开房地产开发有限公司",
+            "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176579&systemID=2&srcId=1",
+            "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+          }
+        }
+      ],
+      "latest": {
+        "projectId": "8176579",
+        "officialProjectName": "缦云福苑（二期）",
+        "dashboardName": "缦云福苑（二期）",
+        "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176579&systemID=2&srcId=1",
+        "urls": [
+          "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176579&systemID=2&srcId=1"
+        ],
+        "fetchedAt": "2026-07-08 17:18:54",
+        "isNewLaunchResidential": true,
+        "firstIssueDate": "2026-03-21",
+        "latestIssueDate": "2026-03-21",
+        "issueDates": [
+          "2026-03-21"
+        ],
+        "presalePermits": [
+          "京房售证字(2026)21号"
+        ],
+        "presalePermitText": "京房售证字(2026)21号",
+        "developer": "北京顺开房地产开发有限公司",
+        "district": "通州区",
+        "plate": "通州老城",
+        "group": "CBD-副中心组团",
+        "residentialTotal": 135,
+        "approvedResidentialTotal": 135,
+        "roomStatusTotal": 135,
+        "unsignedSuites": 109,
+        "availableSuites": 109,
+        "bookedSuites": 11,
+        "contractSignedSuites": 1,
+        "filedSuites": 13,
+        "qualificationSuites": 0,
+        "signedSuites": 14,
+        "statusCounts": {
+          "available": 109,
+          "booked": 11,
+          "contractSigned": 1,
+          "filed": 13,
+          "qualification": 0,
+          "mortgage": 0,
+          "nonSale": 0,
+          "unknown": 1,
+          "total": 135
+        },
+        "buildingStatusErrors": [],
+        "buildingCount": 1,
+        "buildings": [
+          {
+            "buildingName": "11#住宅楼",
+            "approvedSuites": 135,
+            "approvedArea": 28474.98,
+            "saleStatus": "正在预售",
+            "listPrice": 67061.56,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8176579&buildingId=573444"
+          }
+        ],
+        "signedStatsSuites": 14,
+        "signedStatsArea": 2951.66,
+        "signedStatsAvgPrice": 56620.51,
+        "auditNote": "住建委楼盘表1栋住宅楼房源状态复核：共135套，绿色可售109套，已预订11套，已签约1套，网上联机备案13套，未知状态1套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约14套，已签约面积2951.66㎡，成交均价56620.51元/㎡。",
+        "screenshotInfo": {
+          "住建委备案名": "缦云福苑（二期）",
+          "预售证": "京房售证字(2026)21号",
+          "首次取证日期": "2026-03-21",
+          "最新取证日期": "2026-03-21",
+          "开发商": "北京顺开房地产开发有限公司",
+          "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176579&systemID=2&srcId=1",
+          "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+        }
+      }
+    },
+    "云溪花园小区": {
+      "history": [
+        {
+          "projectId": "8186681",
+          "officialProjectName": "云溪花园小区",
+          "dashboardName": "云溪花园小区",
+          "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8186681&systemID=2&srcId=1",
+          "urls": [
+            "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8186681&systemID=2&srcId=1"
+          ],
+          "fetchedAt": "2026-07-08 17:18:57",
+          "isNewLaunchResidential": true,
+          "firstIssueDate": "2026-04-09",
+          "latestIssueDate": "2026-04-09",
+          "issueDates": [
+            "2026-04-09"
+          ],
+          "presalePermits": [
+            "京房售证字(2026)28号"
+          ],
+          "presalePermitText": "京房售证字(2026)28号",
+          "developer": "北京宁溪房地产开发有限责任公司",
+          "district": "密云区",
+          "plate": "溪翁庄",
+          "group": "其他组团",
+          "residentialTotal": 56,
+          "approvedResidentialTotal": 56,
+          "roomStatusTotal": 56,
+          "unsignedSuites": 53,
+          "availableSuites": 53,
+          "bookedSuites": 0,
+          "contractSignedSuites": 0,
+          "filedSuites": 1,
+          "qualificationSuites": 0,
+          "signedSuites": 1,
+          "statusCounts": {
+            "available": 53,
+            "booked": 0,
+            "contractSigned": 0,
+            "filed": 1,
+            "qualification": 0,
+            "mortgage": 0,
+            "nonSale": 0,
+            "unknown": 2,
+            "total": 56
+          },
+          "buildingStatusErrors": [],
+          "buildingCount": 2,
+          "buildings": [
+            {
+              "buildingName": "云溪花园A-02地块住宅小区47#住宅楼",
+              "approvedSuites": 28,
+              "approvedArea": 4466.68,
+              "saleStatus": "",
+              "listPrice": 33403.66,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8186681&buildingId=576748"
+            },
+            {
+              "buildingName": "云溪花园A-02地块住宅小区48#住宅楼",
+              "approvedSuites": 28,
+              "approvedArea": 4475.45,
+              "saleStatus": "正在预售",
+              "listPrice": 33403.83,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8186681&buildingId=576747"
+            }
+          ],
+          "signedStatsSuites": 1,
+          "signedStatsArea": 97.77,
+          "signedStatsAvgPrice": 15137.57,
+          "auditNote": "住建委楼盘表2栋住宅楼房源状态复核：共56套，绿色可售53套，已预订0套，已签约0套，网上联机备案1套，未知状态2套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约1套，已签约面积97.77㎡，成交均价15137.57元/㎡。",
+          "screenshotInfo": {
+            "住建委备案名": "云溪花园小区",
+            "预售证": "京房售证字(2026)28号",
+            "首次取证日期": "2026-04-09",
+            "最新取证日期": "2026-04-09",
+            "开发商": "北京宁溪房地产开发有限责任公司",
+            "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8186681&systemID=2&srcId=1",
+            "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+          }
+        }
+      ],
+      "latest": {
+        "projectId": "8186681",
+        "officialProjectName": "云溪花园小区",
+        "dashboardName": "云溪花园小区",
+        "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8186681&systemID=2&srcId=1",
+        "urls": [
+          "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8186681&systemID=2&srcId=1"
+        ],
+        "fetchedAt": "2026-07-08 17:18:57",
+        "isNewLaunchResidential": true,
+        "firstIssueDate": "2026-04-09",
+        "latestIssueDate": "2026-04-09",
+        "issueDates": [
+          "2026-04-09"
+        ],
+        "presalePermits": [
+          "京房售证字(2026)28号"
+        ],
+        "presalePermitText": "京房售证字(2026)28号",
+        "developer": "北京宁溪房地产开发有限责任公司",
+        "district": "密云区",
+        "plate": "溪翁庄",
+        "group": "其他组团",
+        "residentialTotal": 56,
+        "approvedResidentialTotal": 56,
+        "roomStatusTotal": 56,
+        "unsignedSuites": 53,
+        "availableSuites": 53,
+        "bookedSuites": 0,
+        "contractSignedSuites": 0,
+        "filedSuites": 1,
+        "qualificationSuites": 0,
+        "signedSuites": 1,
+        "statusCounts": {
+          "available": 53,
+          "booked": 0,
+          "contractSigned": 0,
+          "filed": 1,
+          "qualification": 0,
+          "mortgage": 0,
+          "nonSale": 0,
+          "unknown": 2,
+          "total": 56
+        },
+        "buildingStatusErrors": [],
+        "buildingCount": 2,
+        "buildings": [
+          {
+            "buildingName": "云溪花园A-02地块住宅小区47#住宅楼",
+            "approvedSuites": 28,
+            "approvedArea": 4466.68,
+            "saleStatus": "",
+            "listPrice": 33403.66,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8186681&buildingId=576748"
+          },
+          {
+            "buildingName": "云溪花园A-02地块住宅小区48#住宅楼",
+            "approvedSuites": 28,
+            "approvedArea": 4475.45,
+            "saleStatus": "正在预售",
+            "listPrice": 33403.83,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8186681&buildingId=576747"
+          }
+        ],
+        "signedStatsSuites": 1,
+        "signedStatsArea": 97.77,
+        "signedStatsAvgPrice": 15137.57,
+        "auditNote": "住建委楼盘表2栋住宅楼房源状态复核：共56套，绿色可售53套，已预订0套，已签约0套，网上联机备案1套，未知状态2套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约1套，已签约面积97.77㎡，成交均价15137.57元/㎡。",
+        "screenshotInfo": {
+          "住建委备案名": "云溪花园小区",
+          "预售证": "京房售证字(2026)28号",
+          "首次取证日期": "2026-04-09",
+          "最新取证日期": "2026-04-09",
+          "开发商": "北京宁溪房地产开发有限责任公司",
+          "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8186681&systemID=2&srcId=1",
+          "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+        }
+      }
+    },
+    "熙区嘉园": {
+      "history": [
+        {
+          "projectId": "8191996",
+          "officialProjectName": "熙区嘉园",
+          "dashboardName": "熙区嘉园",
+          "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191996&systemID=2&srcId=1",
+          "urls": [
+            "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191996&systemID=2&srcId=1"
+          ],
+          "fetchedAt": "2026-07-08 17:19:07",
+          "isNewLaunchResidential": true,
+          "firstIssueDate": "2026-04-20",
+          "latestIssueDate": "2026-04-20",
+          "issueDates": [
+            "2026-04-20"
+          ],
+          "presalePermits": [
+            "京房售证字(2026)34号"
+          ],
+          "presalePermitText": "京房售证字(2026)34号",
+          "developer": "北京京投润德置业有限公司",
+          "district": "朝阳区",
+          "plate": "金盏北",
+          "group": "东北组团",
+          "residentialTotal": 546,
+          "approvedResidentialTotal": 546,
+          "roomStatusTotal": 546,
+          "unsignedSuites": 542,
+          "availableSuites": 542,
+          "bookedSuites": 0,
+          "contractSignedSuites": 0,
+          "filedSuites": 0,
+          "qualificationSuites": 0,
+          "signedSuites": 0,
+          "statusCounts": {
+            "available": 542,
+            "booked": 0,
+            "contractSigned": 0,
+            "filed": 0,
+            "qualification": 0,
+            "mortgage": 0,
+            "nonSale": 0,
+            "unknown": 4,
+            "total": 546
+          },
+          "buildingStatusErrors": [],
+          "buildingCount": 4,
+          "buildings": [
+            {
+              "buildingName": "三区1#住宅楼",
+              "approvedSuites": 162,
+              "approvedArea": 14871.06,
+              "saleStatus": "2026/4/20 0:00:00开盘",
+              "listPrice": 84280.27,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8191996&buildingId=578322"
+            },
+            {
+              "buildingName": "三区12#住宅楼",
+              "approvedSuites": 60,
+              "approvedArea": 6477.54,
+              "saleStatus": "2026/4/20 0:00:00开盘",
+              "listPrice": 87379.82,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8191996&buildingId=578327"
+            },
+            {
+              "buildingName": "三区2#住宅楼",
+              "approvedSuites": 162,
+              "approvedArea": 14871.06,
+              "saleStatus": "2026/4/20 0:00:00开盘",
+              "listPrice": 85280.04,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8191996&buildingId=578323"
+            },
+            {
+              "buildingName": "三区3#住宅楼",
+              "approvedSuites": 162,
+              "approvedArea": 14871.06,
+              "saleStatus": "2026/4/20 0:00:00开盘",
+              "listPrice": 85280.02,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8191996&buildingId=578324"
+            }
+          ],
+          "auditNote": "住建委楼盘表4栋住宅楼房源状态复核：共546套，绿色可售542套，已预订0套，已签约0套，网上联机备案0套，未知状态4套；剩余套数按绿色可售住宅房源计。",
+          "screenshotInfo": {
+            "住建委备案名": "熙区嘉园",
+            "预售证": "京房售证字(2026)34号",
+            "首次取证日期": "2026-04-20",
+            "最新取证日期": "2026-04-20",
+            "开发商": "北京京投润德置业有限公司",
+            "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191996&systemID=2&srcId=1",
+            "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+          }
+        }
+      ],
+      "latest": {
+        "projectId": "8191996",
+        "officialProjectName": "熙区嘉园",
+        "dashboardName": "熙区嘉园",
+        "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191996&systemID=2&srcId=1",
+        "urls": [
+          "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191996&systemID=2&srcId=1"
+        ],
+        "fetchedAt": "2026-07-08 17:19:07",
+        "isNewLaunchResidential": true,
+        "firstIssueDate": "2026-04-20",
+        "latestIssueDate": "2026-04-20",
+        "issueDates": [
+          "2026-04-20"
+        ],
+        "presalePermits": [
+          "京房售证字(2026)34号"
+        ],
+        "presalePermitText": "京房售证字(2026)34号",
+        "developer": "北京京投润德置业有限公司",
+        "district": "朝阳区",
+        "plate": "金盏北",
+        "group": "东北组团",
+        "residentialTotal": 546,
+        "approvedResidentialTotal": 546,
+        "roomStatusTotal": 546,
+        "unsignedSuites": 542,
+        "availableSuites": 542,
+        "bookedSuites": 0,
+        "contractSignedSuites": 0,
+        "filedSuites": 0,
+        "qualificationSuites": 0,
+        "signedSuites": 0,
+        "statusCounts": {
+          "available": 542,
+          "booked": 0,
+          "contractSigned": 0,
+          "filed": 0,
+          "qualification": 0,
+          "mortgage": 0,
+          "nonSale": 0,
+          "unknown": 4,
+          "total": 546
+        },
+        "buildingStatusErrors": [],
+        "buildingCount": 4,
+        "buildings": [
+          {
+            "buildingName": "三区1#住宅楼",
+            "approvedSuites": 162,
+            "approvedArea": 14871.06,
+            "saleStatus": "2026/4/20 0:00:00开盘",
+            "listPrice": 84280.27,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8191996&buildingId=578322"
+          },
+          {
+            "buildingName": "三区12#住宅楼",
+            "approvedSuites": 60,
+            "approvedArea": 6477.54,
+            "saleStatus": "2026/4/20 0:00:00开盘",
+            "listPrice": 87379.82,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8191996&buildingId=578327"
+          },
+          {
+            "buildingName": "三区2#住宅楼",
+            "approvedSuites": 162,
+            "approvedArea": 14871.06,
+            "saleStatus": "2026/4/20 0:00:00开盘",
+            "listPrice": 85280.04,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8191996&buildingId=578323"
+          },
+          {
+            "buildingName": "三区3#住宅楼",
+            "approvedSuites": 162,
+            "approvedArea": 14871.06,
+            "saleStatus": "2026/4/20 0:00:00开盘",
+            "listPrice": 85280.02,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8191996&buildingId=578324"
+          }
+        ],
+        "auditNote": "住建委楼盘表4栋住宅楼房源状态复核：共546套，绿色可售542套，已预订0套，已签约0套，网上联机备案0套，未知状态4套；剩余套数按绿色可售住宅房源计。",
+        "screenshotInfo": {
+          "住建委备案名": "熙区嘉园",
+          "预售证": "京房售证字(2026)34号",
+          "首次取证日期": "2026-04-20",
+          "最新取证日期": "2026-04-20",
+          "开发商": "北京京投润德置业有限公司",
+          "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191996&systemID=2&srcId=1",
+          "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+        }
+      }
+    },
+    "璟瑞家园": {
+      "history": [
+        {
+          "projectId": "8195341",
+          "officialProjectName": "璟瑞家园",
+          "dashboardName": "璟瑞家园",
+          "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195341&systemID=2&srcId=1",
+          "urls": [
+            "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195341&systemID=2&srcId=1"
+          ],
+          "fetchedAt": "2026-07-08 17:19:12",
+          "isNewLaunchResidential": true,
+          "firstIssueDate": "2026-04-23",
+          "latestIssueDate": "2026-04-23",
+          "issueDates": [
+            "2026-04-23"
+          ],
+          "presalePermits": [
+            "京房售证字(2026)35号"
+          ],
+          "presalePermitText": "京房售证字(2026)35号",
+          "developer": "北京首景房地产开发有限公司",
+          "district": "石景山区",
+          "plate": "京西商务",
+          "group": "西部组团",
+          "residentialTotal": 379,
+          "approvedResidentialTotal": 379,
+          "roomStatusTotal": 379,
+          "unsignedSuites": 162,
+          "availableSuites": 162,
+          "bookedSuites": 5,
+          "contractSignedSuites": 20,
+          "filedSuites": 185,
+          "qualificationSuites": 0,
+          "signedSuites": 205,
+          "statusCounts": {
+            "available": 162,
+            "booked": 5,
+            "contractSigned": 20,
+            "filed": 185,
+            "qualification": 0,
+            "mortgage": 0,
+            "nonSale": 0,
+            "unknown": 7,
+            "total": 379
+          },
+          "buildingStatusErrors": [],
+          "buildingCount": 7,
+          "buildings": [
+            {
+              "buildingName": "1#住宅楼",
+              "approvedSuites": 88,
+              "approvedArea": 7721.2,
+              "saleStatus": "正在预售",
+              "listPrice": 72220.21,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8195341&buildingId=578110"
+            },
+            {
+              "buildingName": "2#住宅楼",
+              "approvedSuites": 88,
+              "approvedArea": 8729.91,
+              "saleStatus": "正在预售",
+              "listPrice": 72201.85,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8195341&buildingId=578166"
+            },
+            {
+              "buildingName": "3#住宅楼",
+              "approvedSuites": 14,
+              "approvedArea": 1283.09,
+              "saleStatus": "正在预售",
+              "listPrice": 72049.44,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8195341&buildingId=578165"
+            },
+            {
+              "buildingName": "4#住宅楼",
+              "approvedSuites": 40,
+              "approvedArea": 4957.74,
+              "saleStatus": "正在预售",
+              "listPrice": 73354.13,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8195341&buildingId=578109"
+            },
+            {
+              "buildingName": "5#住宅楼",
+              "approvedSuites": 14,
+              "approvedArea": 1286.01,
+              "saleStatus": "正在预售",
+              "listPrice": 72049.2,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8195341&buildingId=578164"
+            },
+            {
+              "buildingName": "6#住宅楼",
+              "approvedSuites": 63,
+              "approvedArea": 5616.13,
+              "saleStatus": "正在预售",
+              "listPrice": 71116.71,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8195341&buildingId=578163"
+            },
+            {
+              "buildingName": "7#住宅楼",
+              "approvedSuites": 72,
+              "approvedArea": 6323,
+              "saleStatus": "正在预售",
+              "listPrice": 71156.52,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8195341&buildingId=578162"
+            }
+          ],
+          "signedStatsSuites": 211,
+          "signedStatsArea": 20920.8,
+          "signedStatsAvgPrice": 61309.46,
+          "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共379套，绿色可售162套，已预订5套，已签约20套，网上联机备案185套，未知状态7套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约211套，已签约面积20920.8㎡，成交均价61309.46元/㎡。",
+          "screenshotInfo": {
+            "住建委备案名": "璟瑞家园",
+            "预售证": "京房售证字(2026)35号",
+            "首次取证日期": "2026-04-23",
+            "最新取证日期": "2026-04-23",
+            "开发商": "北京首景房地产开发有限公司",
+            "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195341&systemID=2&srcId=1",
+            "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+          }
+        }
+      ],
+      "latest": {
+        "projectId": "8195341",
+        "officialProjectName": "璟瑞家园",
+        "dashboardName": "璟瑞家园",
+        "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195341&systemID=2&srcId=1",
+        "urls": [
+          "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195341&systemID=2&srcId=1"
+        ],
+        "fetchedAt": "2026-07-08 17:19:12",
+        "isNewLaunchResidential": true,
+        "firstIssueDate": "2026-04-23",
+        "latestIssueDate": "2026-04-23",
+        "issueDates": [
+          "2026-04-23"
+        ],
+        "presalePermits": [
+          "京房售证字(2026)35号"
+        ],
+        "presalePermitText": "京房售证字(2026)35号",
+        "developer": "北京首景房地产开发有限公司",
+        "district": "石景山区",
+        "plate": "京西商务",
+        "group": "西部组团",
+        "residentialTotal": 379,
+        "approvedResidentialTotal": 379,
+        "roomStatusTotal": 379,
+        "unsignedSuites": 162,
+        "availableSuites": 162,
+        "bookedSuites": 5,
+        "contractSignedSuites": 20,
+        "filedSuites": 185,
+        "qualificationSuites": 0,
+        "signedSuites": 205,
+        "statusCounts": {
+          "available": 162,
+          "booked": 5,
+          "contractSigned": 20,
+          "filed": 185,
+          "qualification": 0,
+          "mortgage": 0,
+          "nonSale": 0,
+          "unknown": 7,
+          "total": 379
+        },
+        "buildingStatusErrors": [],
+        "buildingCount": 7,
+        "buildings": [
+          {
+            "buildingName": "1#住宅楼",
+            "approvedSuites": 88,
+            "approvedArea": 7721.2,
+            "saleStatus": "正在预售",
+            "listPrice": 72220.21,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8195341&buildingId=578110"
+          },
+          {
+            "buildingName": "2#住宅楼",
+            "approvedSuites": 88,
+            "approvedArea": 8729.91,
+            "saleStatus": "正在预售",
+            "listPrice": 72201.85,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8195341&buildingId=578166"
+          },
+          {
+            "buildingName": "3#住宅楼",
+            "approvedSuites": 14,
+            "approvedArea": 1283.09,
+            "saleStatus": "正在预售",
+            "listPrice": 72049.44,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8195341&buildingId=578165"
+          },
+          {
+            "buildingName": "4#住宅楼",
+            "approvedSuites": 40,
+            "approvedArea": 4957.74,
+            "saleStatus": "正在预售",
+            "listPrice": 73354.13,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8195341&buildingId=578109"
+          },
+          {
+            "buildingName": "5#住宅楼",
+            "approvedSuites": 14,
+            "approvedArea": 1286.01,
+            "saleStatus": "正在预售",
+            "listPrice": 72049.2,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8195341&buildingId=578164"
+          },
+          {
+            "buildingName": "6#住宅楼",
+            "approvedSuites": 63,
+            "approvedArea": 5616.13,
+            "saleStatus": "正在预售",
+            "listPrice": 71116.71,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8195341&buildingId=578163"
+          },
+          {
+            "buildingName": "7#住宅楼",
+            "approvedSuites": 72,
+            "approvedArea": 6323,
+            "saleStatus": "正在预售",
+            "listPrice": 71156.52,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8195341&buildingId=578162"
+          }
+        ],
+        "signedStatsSuites": 211,
+        "signedStatsArea": 20920.8,
+        "signedStatsAvgPrice": 61309.46,
+        "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共379套，绿色可售162套，已预订5套，已签约20套，网上联机备案185套，未知状态7套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约211套，已签约面积20920.8㎡，成交均价61309.46元/㎡。",
+        "screenshotInfo": {
+          "住建委备案名": "璟瑞家园",
+          "预售证": "京房售证字(2026)35号",
+          "首次取证日期": "2026-04-23",
+          "最新取证日期": "2026-04-23",
+          "开发商": "北京首景房地产开发有限公司",
+          "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195341&systemID=2&srcId=1",
+          "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+        }
+      }
+    },
+    "樾序海苑": {
+      "history": [
+        {
+          "projectId": "8203707",
+          "officialProjectName": "樾序海苑",
+          "dashboardName": "樾序海苑",
+          "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1",
+          "urls": [
+            "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1"
+          ],
+          "fetchedAt": "2026-07-08 17:19:24",
+          "isNewLaunchResidential": true,
+          "firstIssueDate": "2026-05-10",
+          "latestIssueDate": "2026-05-10",
+          "issueDates": [
+            "2026-05-10"
+          ],
+          "presalePermits": [
+            "京房售证字(2026)39号"
+          ],
+          "presalePermitText": "京房售证字(2026)39号",
+          "developer": "北京城华房地产开发有限公司",
+          "district": "昌平区",
+          "plate": "天通苑",
+          "group": "北部组团",
+          "residentialTotal": 594,
+          "approvedResidentialTotal": 594,
+          "roomStatusTotal": 594,
+          "unsignedSuites": 91,
+          "availableSuites": 91,
+          "bookedSuites": 19,
+          "contractSignedSuites": 36,
+          "filedSuites": 440,
+          "qualificationSuites": 0,
+          "signedSuites": 476,
+          "statusCounts": {
+            "available": 91,
+            "booked": 19,
+            "contractSigned": 36,
+            "filed": 440,
+            "qualification": 0,
+            "mortgage": 0,
+            "nonSale": 0,
+            "unknown": 8,
+            "total": 594
+          },
+          "buildingStatusErrors": [],
+          "buildingCount": 8,
+          "buildings": [
+            {
+              "buildingName": "1#住宅楼",
+              "approvedSuites": 70,
+              "approvedArea": 7483.45,
+              "saleStatus": "正在预售",
+              "listPrice": 61275.49,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8203707&buildingId=579049"
+            },
+            {
+              "buildingName": "10#住宅楼",
+              "approvedSuites": 64,
+              "approvedArea": 4726.32,
+              "saleStatus": "正在预售",
+              "listPrice": 62177.29,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8203707&buildingId=579048"
+            },
+            {
+              "buildingName": "11#住宅楼",
+              "approvedSuites": 64,
+              "approvedArea": 4705.54,
+              "saleStatus": "正在预售",
+              "listPrice": 62358.77,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8203707&buildingId=579047"
+            },
+            {
+              "buildingName": "12#住宅楼",
+              "approvedSuites": 52,
+              "approvedArea": 3851.99,
+              "saleStatus": "正在预售",
+              "listPrice": 61822.68,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8203707&buildingId=579046"
+            },
+            {
+              "buildingName": "2#住宅楼",
+              "approvedSuites": 105,
+              "approvedArea": 11139.58,
+              "saleStatus": "正在预售",
+              "listPrice": 61509.72,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8203707&buildingId=579044"
+            },
+            {
+              "buildingName": "3#住宅楼",
+              "approvedSuites": 104,
+              "approvedArea": 12155.85,
+              "saleStatus": "正在预售",
+              "listPrice": 65151.59,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8203707&buildingId=579043"
+            },
+            {
+              "buildingName": "4#住宅楼",
+              "approvedSuites": 71,
+              "approvedArea": 5309.8,
+              "saleStatus": "正在预售",
+              "listPrice": 59398.31,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8203707&buildingId=579042"
+            },
+            {
+              "buildingName": "5#住宅楼",
+              "approvedSuites": 64,
+              "approvedArea": 5627.02,
+              "saleStatus": "正在预售",
+              "listPrice": 66754.44,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8203707&buildingId=579041"
+            }
+          ],
+          "signedStatsSuites": 682,
+          "signedStatsArea": 65416.38,
+          "signedStatsAvgPrice": 54376.37,
+          "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共594套，绿色可售91套，已预订19套，已签约36套，网上联机备案440套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约682套，已签约面积65416.38㎡，成交均价54376.37元/㎡。",
+          "screenshotInfo": {
+            "住建委备案名": "樾序海苑",
+            "预售证": "京房售证字(2026)39号",
+            "首次取证日期": "2026-05-10",
+            "最新取证日期": "2026-05-10",
+            "开发商": "北京城华房地产开发有限公司",
+            "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1",
+            "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+          }
+        }
+      ],
+      "latest": {
+        "projectId": "8203707",
+        "officialProjectName": "樾序海苑",
+        "dashboardName": "樾序海苑",
+        "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1",
+        "urls": [
+          "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1"
+        ],
+        "fetchedAt": "2026-07-08 17:19:24",
+        "isNewLaunchResidential": true,
+        "firstIssueDate": "2026-05-10",
+        "latestIssueDate": "2026-05-10",
+        "issueDates": [
+          "2026-05-10"
+        ],
+        "presalePermits": [
+          "京房售证字(2026)39号"
+        ],
+        "presalePermitText": "京房售证字(2026)39号",
+        "developer": "北京城华房地产开发有限公司",
+        "district": "昌平区",
+        "plate": "天通苑",
+        "group": "北部组团",
+        "residentialTotal": 594,
+        "approvedResidentialTotal": 594,
+        "roomStatusTotal": 594,
+        "unsignedSuites": 91,
+        "availableSuites": 91,
+        "bookedSuites": 19,
+        "contractSignedSuites": 36,
+        "filedSuites": 440,
+        "qualificationSuites": 0,
+        "signedSuites": 476,
+        "statusCounts": {
+          "available": 91,
+          "booked": 19,
+          "contractSigned": 36,
+          "filed": 440,
+          "qualification": 0,
+          "mortgage": 0,
+          "nonSale": 0,
+          "unknown": 8,
+          "total": 594
+        },
+        "buildingStatusErrors": [],
+        "buildingCount": 8,
+        "buildings": [
+          {
+            "buildingName": "1#住宅楼",
+            "approvedSuites": 70,
+            "approvedArea": 7483.45,
+            "saleStatus": "正在预售",
+            "listPrice": 61275.49,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8203707&buildingId=579049"
+          },
+          {
+            "buildingName": "10#住宅楼",
+            "approvedSuites": 64,
+            "approvedArea": 4726.32,
+            "saleStatus": "正在预售",
+            "listPrice": 62177.29,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8203707&buildingId=579048"
+          },
+          {
+            "buildingName": "11#住宅楼",
+            "approvedSuites": 64,
+            "approvedArea": 4705.54,
+            "saleStatus": "正在预售",
+            "listPrice": 62358.77,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8203707&buildingId=579047"
+          },
+          {
+            "buildingName": "12#住宅楼",
+            "approvedSuites": 52,
+            "approvedArea": 3851.99,
+            "saleStatus": "正在预售",
+            "listPrice": 61822.68,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8203707&buildingId=579046"
+          },
+          {
+            "buildingName": "2#住宅楼",
+            "approvedSuites": 105,
+            "approvedArea": 11139.58,
+            "saleStatus": "正在预售",
+            "listPrice": 61509.72,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8203707&buildingId=579044"
+          },
+          {
+            "buildingName": "3#住宅楼",
+            "approvedSuites": 104,
+            "approvedArea": 12155.85,
+            "saleStatus": "正在预售",
+            "listPrice": 65151.59,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8203707&buildingId=579043"
+          },
+          {
+            "buildingName": "4#住宅楼",
+            "approvedSuites": 71,
+            "approvedArea": 5309.8,
+            "saleStatus": "正在预售",
+            "listPrice": 59398.31,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8203707&buildingId=579042"
+          },
+          {
+            "buildingName": "5#住宅楼",
+            "approvedSuites": 64,
+            "approvedArea": 5627.02,
+            "saleStatus": "正在预售",
+            "listPrice": 66754.44,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8203707&buildingId=579041"
+          }
+        ],
+        "signedStatsSuites": 682,
+        "signedStatsArea": 65416.38,
+        "signedStatsAvgPrice": 54376.37,
+        "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共594套，绿色可售91套，已预订19套，已签约36套，网上联机备案440套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约682套，已签约面积65416.38㎡，成交均价54376.37元/㎡。",
+        "screenshotInfo": {
+          "住建委备案名": "樾序海苑",
+          "预售证": "京房售证字(2026)39号",
+          "首次取证日期": "2026-05-10",
+          "最新取证日期": "2026-05-10",
+          "开发商": "北京城华房地产开发有限公司",
+          "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1",
+          "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+        }
+      }
+    },
+    "铂瑞府": {
+      "history": [
+        {
+          "projectId": "8207359",
+          "officialProjectName": "铂瑞府",
+          "dashboardName": "铂瑞府",
+          "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8207359&systemID=2&srcId=1",
+          "urls": [
+            "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8207359&systemID=2&srcId=1"
+          ],
+          "fetchedAt": "2026-07-08 17:19:36",
+          "isNewLaunchResidential": true,
+          "firstIssueDate": "2026-05-23",
+          "latestIssueDate": "2026-05-23",
+          "issueDates": [
+            "2026-05-23"
+          ],
+          "presalePermits": [
+            "京房售证字(2026)42号"
+          ],
+          "presalePermitText": "京房售证字(2026)42号",
+          "developer": "北京城建瑞泰投资发展有限公司",
+          "district": "房山区",
+          "plate": "良乡",
+          "group": "西南组团",
+          "residentialTotal": 383,
+          "approvedResidentialTotal": 383,
+          "roomStatusTotal": 383,
+          "unsignedSuites": 360,
+          "availableSuites": 360,
+          "bookedSuites": 14,
+          "contractSignedSuites": 1,
+          "filedSuites": 0,
+          "qualificationSuites": 0,
+          "signedSuites": 1,
+          "statusCounts": {
+            "available": 360,
+            "booked": 14,
+            "contractSigned": 1,
+            "filed": 0,
+            "qualification": 0,
+            "mortgage": 0,
+            "nonSale": 0,
+            "unknown": 8,
+            "total": 383
+          },
+          "buildingStatusErrors": [],
+          "buildingCount": 8,
+          "buildings": [
+            {
+              "buildingName": "1516-1#住宅楼",
+              "approvedSuites": 54,
+              "approvedArea": 4700.01,
+              "saleStatus": "",
+              "listPrice": 42942.44,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8207359&buildingId=579104"
+            },
+            {
+              "buildingName": "1516-2#住宅楼",
+              "approvedSuites": 54,
+              "approvedArea": 5905.45,
+              "saleStatus": "正在预售",
+              "listPrice": 45235.23,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8207359&buildingId=579103"
+            },
+            {
+              "buildingName": "1516-3#住宅楼",
+              "approvedSuites": 54,
+              "approvedArea": 4700.55,
+              "saleStatus": "正在预售",
+              "listPrice": 44173.01,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8207359&buildingId=579102"
+            },
+            {
+              "buildingName": "1516-4#住宅楼",
+              "approvedSuites": 36,
+              "approvedArea": 3185.14,
+              "saleStatus": "",
+              "listPrice": 43976.63,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8207359&buildingId=579101"
+            },
+            {
+              "buildingName": "1516-5#住宅楼",
+              "approvedSuites": 57,
+              "approvedArea": 7899.1,
+              "saleStatus": "正在预售",
+              "listPrice": 46836.97,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8207359&buildingId=579077"
+            },
+            {
+              "buildingName": "1516-6#住宅楼",
+              "approvedSuites": 18,
+              "approvedArea": 1943.8,
+              "saleStatus": "正在预售",
+              "listPrice": 45707.41,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8207359&buildingId=579076"
+            },
+            {
+              "buildingName": "1516-7#住宅楼",
+              "approvedSuites": 44,
+              "approvedArea": 3835.14,
+              "saleStatus": "正在预售",
+              "listPrice": 42643.5,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8207359&buildingId=579075"
+            },
+            {
+              "buildingName": "1516-8#住宅楼",
+              "approvedSuites": 66,
+              "approvedArea": 7801.66,
+              "saleStatus": "正在预售",
+              "listPrice": 43825.33,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8207359&buildingId=579074"
+            }
+          ],
+          "signedStatsSuites": 2,
+          "signedStatsArea": 179.55,
+          "signedStatsAvgPrice": 37051.47,
+          "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共383套，绿色可售360套，已预订14套，已签约1套，网上联机备案0套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约2套，已签约面积179.55㎡，成交均价37051.47元/㎡。",
+          "screenshotInfo": {
+            "住建委备案名": "铂瑞府",
+            "预售证": "京房售证字(2026)42号",
+            "首次取证日期": "2026-05-23",
+            "最新取证日期": "2026-05-23",
+            "开发商": "北京城建瑞泰投资发展有限公司",
+            "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8207359&systemID=2&srcId=1",
+            "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+          }
+        }
+      ],
+      "latest": {
+        "projectId": "8207359",
+        "officialProjectName": "铂瑞府",
+        "dashboardName": "铂瑞府",
+        "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8207359&systemID=2&srcId=1",
+        "urls": [
+          "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8207359&systemID=2&srcId=1"
+        ],
+        "fetchedAt": "2026-07-08 17:19:36",
+        "isNewLaunchResidential": true,
+        "firstIssueDate": "2026-05-23",
+        "latestIssueDate": "2026-05-23",
+        "issueDates": [
+          "2026-05-23"
+        ],
+        "presalePermits": [
+          "京房售证字(2026)42号"
+        ],
+        "presalePermitText": "京房售证字(2026)42号",
+        "developer": "北京城建瑞泰投资发展有限公司",
+        "district": "房山区",
+        "plate": "良乡",
+        "group": "西南组团",
+        "residentialTotal": 383,
+        "approvedResidentialTotal": 383,
+        "roomStatusTotal": 383,
+        "unsignedSuites": 360,
+        "availableSuites": 360,
+        "bookedSuites": 14,
+        "contractSignedSuites": 1,
+        "filedSuites": 0,
+        "qualificationSuites": 0,
+        "signedSuites": 1,
+        "statusCounts": {
+          "available": 360,
+          "booked": 14,
+          "contractSigned": 1,
+          "filed": 0,
+          "qualification": 0,
+          "mortgage": 0,
+          "nonSale": 0,
+          "unknown": 8,
+          "total": 383
+        },
+        "buildingStatusErrors": [],
+        "buildingCount": 8,
+        "buildings": [
+          {
+            "buildingName": "1516-1#住宅楼",
+            "approvedSuites": 54,
+            "approvedArea": 4700.01,
+            "saleStatus": "",
+            "listPrice": 42942.44,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8207359&buildingId=579104"
+          },
+          {
+            "buildingName": "1516-2#住宅楼",
+            "approvedSuites": 54,
+            "approvedArea": 5905.45,
+            "saleStatus": "正在预售",
+            "listPrice": 45235.23,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8207359&buildingId=579103"
+          },
+          {
+            "buildingName": "1516-3#住宅楼",
+            "approvedSuites": 54,
+            "approvedArea": 4700.55,
+            "saleStatus": "正在预售",
+            "listPrice": 44173.01,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8207359&buildingId=579102"
+          },
+          {
+            "buildingName": "1516-4#住宅楼",
+            "approvedSuites": 36,
+            "approvedArea": 3185.14,
+            "saleStatus": "",
+            "listPrice": 43976.63,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8207359&buildingId=579101"
+          },
+          {
+            "buildingName": "1516-5#住宅楼",
+            "approvedSuites": 57,
+            "approvedArea": 7899.1,
+            "saleStatus": "正在预售",
+            "listPrice": 46836.97,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8207359&buildingId=579077"
+          },
+          {
+            "buildingName": "1516-6#住宅楼",
+            "approvedSuites": 18,
+            "approvedArea": 1943.8,
+            "saleStatus": "正在预售",
+            "listPrice": 45707.41,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8207359&buildingId=579076"
+          },
+          {
+            "buildingName": "1516-7#住宅楼",
+            "approvedSuites": 44,
+            "approvedArea": 3835.14,
+            "saleStatus": "正在预售",
+            "listPrice": 42643.5,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8207359&buildingId=579075"
+          },
+          {
+            "buildingName": "1516-8#住宅楼",
+            "approvedSuites": 66,
+            "approvedArea": 7801.66,
+            "saleStatus": "正在预售",
+            "listPrice": 43825.33,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8207359&buildingId=579074"
+          }
+        ],
+        "signedStatsSuites": 2,
+        "signedStatsArea": 179.55,
+        "signedStatsAvgPrice": 37051.47,
+        "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共383套，绿色可售360套，已预订14套，已签约1套，网上联机备案0套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约2套，已签约面积179.55㎡，成交均价37051.47元/㎡。",
+        "screenshotInfo": {
+          "住建委备案名": "铂瑞府",
+          "预售证": "京房售证字(2026)42号",
+          "首次取证日期": "2026-05-23",
+          "最新取证日期": "2026-05-23",
+          "开发商": "北京城建瑞泰投资发展有限公司",
+          "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8207359&systemID=2&srcId=1",
+          "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+        }
+      }
+    },
+    "嘉棠雅苑": {
+      "history": [
+        {
+          "projectId": "8211283",
+          "officialProjectName": "嘉棠雅苑",
+          "dashboardName": "嘉棠雅苑",
+          "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1",
+          "urls": [
+            "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1"
+          ],
+          "fetchedAt": "2026-07-08 17:19:52",
+          "isNewLaunchResidential": true,
+          "firstIssueDate": "2026-05-27",
+          "latestIssueDate": "2026-05-27",
+          "issueDates": [
+            "2026-05-27"
+          ],
+          "presalePermits": [
+            "京房售证字(2026)44号"
+          ],
+          "presalePermitText": "京房售证字(2026)44号",
+          "developer": "北京丰合嘉汇置业有限公司",
+          "district": "丰台区",
+          "plate": "高立庄",
+          "group": "西南组团",
+          "residentialTotal": 446,
+          "approvedResidentialTotal": 446,
+          "roomStatusTotal": 446,
+          "unsignedSuites": 286,
+          "availableSuites": 286,
+          "bookedSuites": 11,
+          "contractSignedSuites": 141,
+          "filedSuites": 0,
+          "qualificationSuites": 0,
+          "signedSuites": 141,
+          "statusCounts": {
+            "available": 286,
+            "booked": 11,
+            "contractSigned": 141,
+            "filed": 0,
+            "qualification": 0,
+            "mortgage": 0,
+            "nonSale": 0,
+            "unknown": 8,
+            "total": 446
+          },
+          "buildingStatusErrors": [],
+          "buildingCount": 8,
+          "buildings": [
+            {
+              "buildingName": "1#住宅楼",
+              "approvedSuites": 108,
+              "approvedArea": 10967.08,
+              "saleStatus": "正在预售",
+              "listPrice": 82614.83,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8211283&buildingId=579390"
+            },
+            {
+              "buildingName": "10#住宅楼",
+              "approvedSuites": 28,
+              "approvedArea": 3078.31,
+              "saleStatus": "正在预售",
+              "listPrice": 83082.24,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8211283&buildingId=579389"
+            },
+            {
+              "buildingName": "11#住宅楼",
+              "approvedSuites": 18,
+              "approvedArea": 1998.63,
+              "saleStatus": "正在预售",
+              "listPrice": 82963.94,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8211283&buildingId=579372"
+            },
+            {
+              "buildingName": "2#住宅楼",
+              "approvedSuites": 143,
+              "approvedArea": 14067.37,
+              "saleStatus": "正在预售",
+              "listPrice": 82800.63,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8211283&buildingId=579371"
+            },
+            {
+              "buildingName": "3#住宅楼",
+              "approvedSuites": 68,
+              "approvedArea": 7112.46,
+              "saleStatus": "正在预售",
+              "listPrice": 82377.18,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8211283&buildingId=579388"
+            },
+            {
+              "buildingName": "4#住宅楼",
+              "approvedSuites": 16,
+              "approvedArea": 1980.08,
+              "saleStatus": "正在预售",
+              "listPrice": 83572.61,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8211283&buildingId=579387"
+            },
+            {
+              "buildingName": "5#住宅楼",
+              "approvedSuites": 24,
+              "approvedArea": 2955.1,
+              "saleStatus": "正在预售",
+              "listPrice": 83690.51,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8211283&buildingId=579386"
+            },
+            {
+              "buildingName": "6#住宅楼",
+              "approvedSuites": 41,
+              "approvedArea": 5703.03,
+              "saleStatus": "正在预售",
+              "listPrice": 84151.99,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8211283&buildingId=579385"
+            }
+          ],
+          "signedStatsSuites": 182,
+          "signedStatsArea": 19744.29,
+          "signedStatsAvgPrice": 69619.9,
+          "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共446套，绿色可售286套，已预订11套，已签约141套，网上联机备案0套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约182套，已签约面积19744.29㎡，成交均价69619.9元/㎡。",
+          "screenshotInfo": {
+            "住建委备案名": "嘉棠雅苑",
+            "预售证": "京房售证字(2026)44号",
+            "首次取证日期": "2026-05-27",
+            "最新取证日期": "2026-05-27",
+            "开发商": "北京丰合嘉汇置业有限公司",
+            "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1",
+            "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+          }
+        }
+      ],
+      "latest": {
+        "projectId": "8211283",
+        "officialProjectName": "嘉棠雅苑",
+        "dashboardName": "嘉棠雅苑",
+        "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1",
+        "urls": [
+          "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1"
+        ],
+        "fetchedAt": "2026-07-08 17:19:52",
+        "isNewLaunchResidential": true,
+        "firstIssueDate": "2026-05-27",
+        "latestIssueDate": "2026-05-27",
+        "issueDates": [
+          "2026-05-27"
+        ],
+        "presalePermits": [
+          "京房售证字(2026)44号"
+        ],
+        "presalePermitText": "京房售证字(2026)44号",
+        "developer": "北京丰合嘉汇置业有限公司",
+        "district": "丰台区",
+        "plate": "高立庄",
+        "group": "西南组团",
+        "residentialTotal": 446,
+        "approvedResidentialTotal": 446,
+        "roomStatusTotal": 446,
+        "unsignedSuites": 286,
+        "availableSuites": 286,
+        "bookedSuites": 11,
+        "contractSignedSuites": 141,
+        "filedSuites": 0,
+        "qualificationSuites": 0,
+        "signedSuites": 141,
+        "statusCounts": {
+          "available": 286,
+          "booked": 11,
+          "contractSigned": 141,
+          "filed": 0,
+          "qualification": 0,
+          "mortgage": 0,
+          "nonSale": 0,
+          "unknown": 8,
+          "total": 446
+        },
+        "buildingStatusErrors": [],
+        "buildingCount": 8,
+        "buildings": [
+          {
+            "buildingName": "1#住宅楼",
+            "approvedSuites": 108,
+            "approvedArea": 10967.08,
+            "saleStatus": "正在预售",
+            "listPrice": 82614.83,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8211283&buildingId=579390"
+          },
+          {
+            "buildingName": "10#住宅楼",
+            "approvedSuites": 28,
+            "approvedArea": 3078.31,
+            "saleStatus": "正在预售",
+            "listPrice": 83082.24,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8211283&buildingId=579389"
+          },
+          {
+            "buildingName": "11#住宅楼",
+            "approvedSuites": 18,
+            "approvedArea": 1998.63,
+            "saleStatus": "正在预售",
+            "listPrice": 82963.94,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8211283&buildingId=579372"
+          },
+          {
+            "buildingName": "2#住宅楼",
+            "approvedSuites": 143,
+            "approvedArea": 14067.37,
+            "saleStatus": "正在预售",
+            "listPrice": 82800.63,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8211283&buildingId=579371"
+          },
+          {
+            "buildingName": "3#住宅楼",
+            "approvedSuites": 68,
+            "approvedArea": 7112.46,
+            "saleStatus": "正在预售",
+            "listPrice": 82377.18,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8211283&buildingId=579388"
+          },
+          {
+            "buildingName": "4#住宅楼",
+            "approvedSuites": 16,
+            "approvedArea": 1980.08,
+            "saleStatus": "正在预售",
+            "listPrice": 83572.61,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8211283&buildingId=579387"
+          },
+          {
+            "buildingName": "5#住宅楼",
+            "approvedSuites": 24,
+            "approvedArea": 2955.1,
+            "saleStatus": "正在预售",
+            "listPrice": 83690.51,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8211283&buildingId=579386"
+          },
+          {
+            "buildingName": "6#住宅楼",
+            "approvedSuites": 41,
+            "approvedArea": 5703.03,
+            "saleStatus": "正在预售",
+            "listPrice": 84151.99,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8211283&buildingId=579385"
+          }
+        ],
+        "signedStatsSuites": 182,
+        "signedStatsArea": 19744.29,
+        "signedStatsAvgPrice": 69619.9,
+        "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共446套，绿色可售286套，已预订11套，已签约141套，网上联机备案0套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约182套，已签约面积19744.29㎡，成交均价69619.9元/㎡。",
+        "screenshotInfo": {
+          "住建委备案名": "嘉棠雅苑",
+          "预售证": "京房售证字(2026)44号",
+          "首次取证日期": "2026-05-27",
+          "最新取证日期": "2026-05-27",
+          "开发商": "北京丰合嘉汇置业有限公司",
+          "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1",
+          "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+        }
+      }
+    },
+    "国樾天颂府": {
+      "history": [
+        {
+          "projectId": "8227940",
+          "officialProjectName": "国樾天颂府",
+          "dashboardName": "国樾天颂府",
+          "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8227940&systemID=2&srcId=1",
+          "urls": [
+            "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8227940&systemID=2&srcId=1"
+          ],
+          "fetchedAt": "2026-07-08 17:20:07",
+          "isNewLaunchResidential": true,
+          "firstIssueDate": "2026-06-26",
+          "latestIssueDate": "2026-06-26",
+          "issueDates": [
+            "2026-06-26"
+          ],
+          "presalePermits": [
+            "京房售证字(2026)52号"
+          ],
+          "presalePermitText": "京房售证字(2026)52号",
+          "developer": "北京绿州博园投资有限公司",
+          "district": "密云区",
+          "plate": "密云新城",
+          "group": "其他组团",
+          "residentialTotal": 314,
+          "approvedResidentialTotal": 314,
+          "roomStatusTotal": 314,
+          "unsignedSuites": 297,
+          "availableSuites": 297,
+          "bookedSuites": 9,
+          "contractSignedSuites": 0,
+          "filedSuites": 0,
+          "qualificationSuites": 0,
+          "signedSuites": 0,
+          "statusCounts": {
+            "available": 297,
+            "booked": 9,
+            "contractSigned": 0,
+            "filed": 0,
+            "qualification": 0,
+            "mortgage": 0,
+            "nonSale": 0,
+            "unknown": 8,
+            "total": 314
+          },
+          "buildingStatusErrors": [],
+          "buildingCount": 8,
+          "buildings": [
+            {
+              "buildingName": "10号楼",
+              "approvedSuites": 18,
+              "approvedArea": 2025.37,
+              "saleStatus": "",
+              "listPrice": 29486.41,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8227940&buildingId=577554"
+            },
+            {
+              "buildingName": "11号楼",
+              "approvedSuites": 22,
+              "approvedArea": 2495.34,
+              "saleStatus": "",
+              "listPrice": 29059.35,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8227940&buildingId=577553"
+            },
+            {
+              "buildingName": "1号楼",
+              "approvedSuites": 72,
+              "approvedArea": 6310.74,
+              "saleStatus": "正在预售",
+              "listPrice": 29141.58,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8227940&buildingId=577508"
+            },
+            {
+              "buildingName": "2号楼",
+              "approvedSuites": 48,
+              "approvedArea": 4207.44,
+              "saleStatus": "正在预售",
+              "listPrice": 30659.67,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8227940&buildingId=577890"
+            },
+            {
+              "buildingName": "3号楼",
+              "approvedSuites": 28,
+              "approvedArea": 2497.22,
+              "saleStatus": "",
+              "listPrice": 30388.85,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8227940&buildingId=577551"
+            },
+            {
+              "buildingName": "4号楼",
+              "approvedSuites": 66,
+              "approvedArea": 5825.84,
+              "saleStatus": "",
+              "listPrice": 31079.62,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8227940&buildingId=577509"
+            },
+            {
+              "buildingName": "5号楼",
+              "approvedSuites": 20,
+              "approvedArea": 2161.12,
+              "saleStatus": "",
+              "listPrice": 32158.68,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8227940&buildingId=577510"
+            },
+            {
+              "buildingName": "6号楼",
+              "approvedSuites": 40,
+              "approvedArea": 3037.64,
+              "saleStatus": "正在预售",
+              "listPrice": 29622.15,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8227940&buildingId=577511"
+            }
+          ],
+          "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共314套，绿色可售297套，已预订9套，已签约0套，网上联机备案0套，未知状态8套；剩余套数按绿色可售住宅房源计。",
+          "screenshotInfo": {
+            "住建委备案名": "国樾天颂府",
+            "预售证": "京房售证字(2026)52号",
+            "首次取证日期": "2026-06-26",
+            "最新取证日期": "2026-06-26",
+            "开发商": "北京绿州博园投资有限公司",
+            "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8227940&systemID=2&srcId=1",
+            "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+          }
+        }
+      ],
+      "latest": {
+        "projectId": "8227940",
+        "officialProjectName": "国樾天颂府",
+        "dashboardName": "国樾天颂府",
+        "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8227940&systemID=2&srcId=1",
+        "urls": [
+          "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8227940&systemID=2&srcId=1"
+        ],
+        "fetchedAt": "2026-07-08 17:20:07",
+        "isNewLaunchResidential": true,
+        "firstIssueDate": "2026-06-26",
+        "latestIssueDate": "2026-06-26",
+        "issueDates": [
+          "2026-06-26"
+        ],
+        "presalePermits": [
+          "京房售证字(2026)52号"
+        ],
+        "presalePermitText": "京房售证字(2026)52号",
+        "developer": "北京绿州博园投资有限公司",
+        "district": "密云区",
+        "plate": "密云新城",
+        "group": "其他组团",
+        "residentialTotal": 314,
+        "approvedResidentialTotal": 314,
+        "roomStatusTotal": 314,
+        "unsignedSuites": 297,
+        "availableSuites": 297,
+        "bookedSuites": 9,
+        "contractSignedSuites": 0,
+        "filedSuites": 0,
+        "qualificationSuites": 0,
+        "signedSuites": 0,
+        "statusCounts": {
+          "available": 297,
+          "booked": 9,
+          "contractSigned": 0,
+          "filed": 0,
+          "qualification": 0,
+          "mortgage": 0,
+          "nonSale": 0,
+          "unknown": 8,
+          "total": 314
+        },
+        "buildingStatusErrors": [],
+        "buildingCount": 8,
+        "buildings": [
+          {
+            "buildingName": "10号楼",
+            "approvedSuites": 18,
+            "approvedArea": 2025.37,
+            "saleStatus": "",
+            "listPrice": 29486.41,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8227940&buildingId=577554"
+          },
+          {
+            "buildingName": "11号楼",
+            "approvedSuites": 22,
+            "approvedArea": 2495.34,
+            "saleStatus": "",
+            "listPrice": 29059.35,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8227940&buildingId=577553"
+          },
+          {
+            "buildingName": "1号楼",
+            "approvedSuites": 72,
+            "approvedArea": 6310.74,
+            "saleStatus": "正在预售",
+            "listPrice": 29141.58,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8227940&buildingId=577508"
+          },
+          {
+            "buildingName": "2号楼",
+            "approvedSuites": 48,
+            "approvedArea": 4207.44,
+            "saleStatus": "正在预售",
+            "listPrice": 30659.67,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8227940&buildingId=577890"
+          },
+          {
+            "buildingName": "3号楼",
+            "approvedSuites": 28,
+            "approvedArea": 2497.22,
+            "saleStatus": "",
+            "listPrice": 30388.85,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8227940&buildingId=577551"
+          },
+          {
+            "buildingName": "4号楼",
+            "approvedSuites": 66,
+            "approvedArea": 5825.84,
+            "saleStatus": "",
+            "listPrice": 31079.62,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8227940&buildingId=577509"
+          },
+          {
+            "buildingName": "5号楼",
+            "approvedSuites": 20,
+            "approvedArea": 2161.12,
+            "saleStatus": "",
+            "listPrice": 32158.68,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8227940&buildingId=577510"
+          },
+          {
+            "buildingName": "6号楼",
+            "approvedSuites": 40,
+            "approvedArea": 3037.64,
+            "saleStatus": "正在预售",
+            "listPrice": 29622.15,
+            "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8227940&buildingId=577511"
+          }
+        ],
+        "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共314套，绿色可售297套，已预订9套，已签约0套，网上联机备案0套，未知状态8套；剩余套数按绿色可售住宅房源计。",
+        "screenshotInfo": {
+          "住建委备案名": "国樾天颂府",
+          "预售证": "京房售证字(2026)52号",
+          "首次取证日期": "2026-06-26",
+          "最新取证日期": "2026-06-26",
+          "开发商": "北京绿州博园投资有限公司",
+          "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8227940&systemID=2&srcId=1",
+          "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
+        }
       }
     }
   }

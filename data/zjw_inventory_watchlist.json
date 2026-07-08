@@ -1,9 +1,280 @@
 {
   "projects": [
     {
+      "name": "玉章苑",
+      "dashboardName": "玉章苑",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8156387&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195901&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8156387&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)2号",
+        "京房售证字(2026)36号"
+      ],
+      "issueDates": [
+        "2026-01-26",
+        "2026-04-24"
+      ],
+      "developer": "北京鑫安兴业房地产开发有限公司",
+      "district": "石景山区",
+      "group": "西部组团",
+      "plate": "苹果园",
+      "residentialTotal": 20,
+      "approvedTotalSuites": 20,
+      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)2号20套。"
+    },
+    {
+      "name": "长河花园",
+      "dashboardName": "长河花园",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157960&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157960&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)7号"
+      ],
+      "issueDates": [
+        "2026-01-30"
+      ],
+      "developer": "北京天成天房地产开发有限公司",
+      "district": "昌平区",
+      "group": "北部组团",
+      "plate": "小汤山",
+      "residentialTotal": 16,
+      "approvedTotalSuites": 16,
+      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)7号16套。"
+    },
+    {
+      "name": "誉淙家园",
+      "dashboardName": "誉淙家园",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8161845&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8161845&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)8号"
+      ],
+      "issueDates": [
+        "2026-02-05"
+      ],
+      "developer": "北京城昌贝越置业有限公司",
+      "district": "昌平区",
+      "group": "北部组团",
+      "plate": "回龙观",
+      "residentialTotal": 303,
+      "approvedTotalSuites": 303,
+      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)8号303套。"
+    },
+    {
+      "name": "御林湾苑",
+      "dashboardName": "御林湾苑",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157959&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157959&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)10号"
+      ],
+      "issueDates": [
+        "2026-02-07"
+      ],
+      "developer": "北京东洲房地产开发有限公司",
+      "district": "朝阳区",
+      "group": "东北组团",
+      "plate": "金盏北",
+      "residentialTotal": 1023,
+      "approvedTotalSuites": 1023,
+      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)10号1023套。"
+    },
+    {
+      "name": "缦云福苑（二期）",
+      "dashboardName": "缦云福苑（二期）",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176579&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176579&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)21号"
+      ],
+      "issueDates": [
+        "2026-03-21"
+      ],
+      "developer": "北京顺开房地产开发有限公司",
+      "district": "通州区",
+      "group": "CBD-副中心组团",
+      "plate": "通州老城",
+      "residentialTotal": 135,
+      "approvedTotalSuites": 135,
+      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)21号135套。"
+    },
+    {
+      "name": "云溪花园小区",
+      "dashboardName": "云溪花园小区",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8186681&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8186681&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)28号"
+      ],
+      "issueDates": [
+        "2026-04-09"
+      ],
+      "developer": "北京宁溪房地产开发有限责任公司",
+      "district": "密云区",
+      "group": "其他组团",
+      "plate": "溪翁庄",
+      "residentialTotal": 56,
+      "approvedTotalSuites": 56,
+      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)28号56套。"
+    },
+    {
+      "name": "熙区嘉园",
+      "dashboardName": "熙区嘉园",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191996&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191996&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)34号"
+      ],
+      "issueDates": [
+        "2026-04-20"
+      ],
+      "developer": "北京京投润德置业有限公司",
+      "district": "朝阳区",
+      "group": "东北组团",
+      "plate": "金盏北",
+      "residentialTotal": 546,
+      "approvedTotalSuites": 546,
+      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)34号546套。"
+    },
+    {
+      "name": "璟瑞家园",
+      "dashboardName": "璟瑞家园",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195341&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195341&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)35号"
+      ],
+      "issueDates": [
+        "2026-04-23"
+      ],
+      "developer": "北京首景房地产开发有限公司",
+      "district": "石景山区",
+      "group": "西部组团",
+      "plate": "京西商务",
+      "residentialTotal": 379,
+      "approvedTotalSuites": 379,
+      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)35号379套。"
+    },
+    {
+      "name": "樾序海苑",
+      "dashboardName": "樾序海苑",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)39号"
+      ],
+      "issueDates": [
+        "2026-05-10"
+      ],
+      "developer": "北京城华房地产开发有限公司",
+      "district": "昌平区",
+      "group": "北部组团",
+      "plate": "天通苑",
+      "residentialTotal": 594,
+      "approvedTotalSuites": 594,
+      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)39号594套。"
+    },
+    {
+      "name": "铂瑞府",
+      "dashboardName": "铂瑞府",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8207359&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8207359&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)42号"
+      ],
+      "issueDates": [
+        "2026-05-23"
+      ],
+      "developer": "北京城建瑞泰投资发展有限公司",
+      "district": "房山区",
+      "group": "西南组团",
+      "plate": "良乡",
+      "residentialTotal": 383,
+      "approvedTotalSuites": 383,
+      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)42号383套。"
+    },
+    {
+      "name": "嘉棠雅苑",
+      "dashboardName": "嘉棠雅苑",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)44号"
+      ],
+      "issueDates": [
+        "2026-05-27"
+      ],
+      "developer": "北京丰合嘉汇置业有限公司",
+      "district": "丰台区",
+      "group": "西南组团",
+      "plate": "高立庄",
+      "residentialTotal": 446,
+      "approvedTotalSuites": 446,
+      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)44号446套。"
+    },
+    {
       "name": "青和家园",
       "dashboardName": "青和家园",
-      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1"
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)50号"
+      ],
+      "issueDates": [
+        "2026-06-18"
+      ],
+      "developer": "北京铁工城市开发建设有限公司",
+      "district": "顺义区",
+      "group": "东北组团",
+      "plate": "后沙峪",
+      "residentialTotal": 400,
+      "approvedTotalSuites": 400,
+      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)50号400套。"
+    },
+    {
+      "name": "国樾天颂府",
+      "dashboardName": "国樾天颂府",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8227940&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8227940&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)52号"
+      ],
+      "issueDates": [
+        "2026-06-26"
+      ],
+      "developer": "北京绿州博园投资有限公司",
+      "district": "密云区",
+      "group": "其他组团",
+      "plate": "密云新城",
+      "residentialTotal": 314,
+      "approvedTotalSuites": 314,
+      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)52号314套。"
     }
   ]
 }
