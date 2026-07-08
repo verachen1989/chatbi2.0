@@ -203,6 +203,8 @@ def normalize_name(value: Any) -> str:
         "號": "号",
         "鄕": "乡",
         "臺": "台",
+        "萬": "万",
+        "灣": "湾",
         "橒": "云",
         "叁": "三",
         "贰": "二",
@@ -330,10 +332,28 @@ def read_detail_file(path: Path) -> list[dict[str, Any]]:
         wb.close()
 
 
+def detail_row_signature(row: dict[str, Any]) -> tuple[Any, ...]:
+    return (
+        row.get("date"),
+        normalize_name(row.get("sourceProject")),
+        row.get("permit"),
+        row.get("building"),
+        row.get("unit"),
+        row.get("room"),
+        row.get("area"),
+        row.get("totalWan"),
+    )
+
+
 def load_details(folder: Path) -> dict[str, dict[str, Any]]:
     grouped: dict[str, dict[str, Any]] = {}
+    seen_rows: set[tuple[Any, ...]] = set()
     for path in detail_file_paths(folder):
         for row in read_detail_file(path):
+            signature = detail_row_signature(row)
+            if signature in seen_rows:
+                continue
+            seen_rows.add(signature)
             key = normalize_name(row["sourceProject"])
             group = grouped.setdefault(
                 key,
