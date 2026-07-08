@@ -1452,6 +1452,18 @@ function monthRank(label) {
   const parts = monthParts(label);
   return parts ? parts.year * 12 + parts.month : -Infinity;
 }
+function fullMonthLabel(label) {
+  const parts = monthParts(label);
+  return parts ? `${parts.year}年${parts.month}月` : label;
+}
+function cricCutoffMonthLabel() {
+  const month = DATA.months.filter(monthParts).sort((a,b)=>monthRank(b)-monthRank(a))[0] || latestSortMonth;
+  return fullMonthLabel(month);
+}
+function cricSourceChip() {
+  const cutoffMonth = cricCutoffMonthLabel();
+  return `<span class="data-source-chip" title="取自克尔瑞外部机构，数据截至${escapeHtml(cutoffMonth)}">克尔瑞 · 截至${escapeHtml(cutoffMonth)}</span>`;
+}
 function activeMonthLabel() {
   return months().filter(monthParts).sort((a,b)=>monthRank(b)-monthRank(a))[0] || periodLabel();
 }
@@ -3744,7 +3756,7 @@ function projectDetailTable(p) {
   <section class="single-project-section">
     <div class="single-project-section-head">
       <div class="single-project-section-copy">
-        <div><div class="section-title-with-source"><h3>月度去化趋势</h3><span class="data-source-chip" title="取自克尔瑞外部机构，数据截至最新导入月份">克尔瑞 · 截至最新导入月份</span></div><p>与顶部筛选条件同步</p></div>
+        <div><div class="section-title-with-source"><h3>月度去化趋势</h3>${cricSourceChip()}</div><p>与顶部筛选条件同步</p></div>
         <p><b>${escapeHtml(filteredPeriod)}</b> · 成交 <b>${fmt.format(filteredStats.suites)}套</b> · 金额 <b>${fmt1.format(filteredStats.amount / 10000)}亿</b> · 面积 <b>${fmt1.format(filteredStats.area / 10000)}万㎡</b> · 均价 <b>${fmt.format(filteredStats.price)}元/㎡</b></p>
       </div>
       <div class="project-trend-toolbar">
