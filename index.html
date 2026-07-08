@@ -1332,6 +1332,36 @@ const projectPeriod = p => {
   return { suites, area, amount, price: area ? amount*10000/area : 0 };
 };
 const cleanCount = value => value === null || value === undefined || value === "" ? null : (Number.isFinite(Number(value)) ? Number(value) : null);
+function officialInventoryRawSyncText(p) {
+  return String(p?.officialInventoryFetchedAt || "").trim();
+}
+function officialInventorySyncRank(text) {
+  const match = String(text || "").match(/(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{2}):(\d{2})(?::(\d{2}))?)?/);
+  if (!match) return "";
+  return `${match[1]}${match[2]}${match[3]}${match[4] || "00"}${match[5] || "00"}${match[6] || "00"}`;
+}
+function officialInventorySyncDisplay(text, compact=false) {
+  const raw = String(text || "").trim();
+  if (!raw) return "";
+  const match = raw.match(/^(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{2}):(\d{2})(?::(\d{2}))?)?(.*)$/);
+  if (!match) return raw;
+  const date = `${match[1]}-${match[2]}-${match[3]}`;
+  const time = match[4] ? `${match[4]}:${match[5]}${match[6] ? `:${match[6]}` : ""}` : "";
+  if (compact) return time ? `${match[2]}-${match[3]} ${match[4]}:${match[5]}` : date;
+  const suffix = String(match[7] || "").trim();
+  return `${date}${time ? ` ${time}` : ""}${suffix ? ` ${suffix}` : ""}`;
+}
+function latestOfficialInventorySyncText(rows=[]) {
+  return rows
+    .map(project => officialInventoryRawSyncText(project))
+    .filter(Boolean)
+    .map(text => ({ text, rank:officialInventorySyncRank(text) }))
+    .sort((a,b) => String(b.rank || b.text).localeCompare(String(a.rank || a.text)))[0]?.text || "";
+}
+function officialInventoryScopeNote(baseNote, rows=[]) {
+  const syncText = officialInventorySyncDisplay(latestOfficialInventorySyncText(rows));
+  return `${baseNote} 数据同步时间：${syncText || "待同步"}。`;
+}
 function hasOfficialInventoryAudit(p) {
   return Boolean(p?.officialInventoryFetchedAt || p?.officialInventoryMatchStatus);
 }
@@ -3266,7 +3296,7 @@ function renderTableView(preserveScroll=false) {
   document.getElementById("tableSub").textContent = `${scopeLabel()}｜按北京各板块项目去化分析原始月度结构展示：每月包含套数、面积、均价、网签金额，可横向滚动查看趋势`;
   document.getElementById("tableCount").textContent = `${rows.length} 个项目`;
   tableWrap.innerHTML = `<table class="trend-table" ${trendTableStyle(monthList)}>${trendColGroup(monthList)}<thead>
-    <tr><th class="project-sticky" rowspan="2">${tableSortButton("项目名称", "project")}</th><th class="base-col" rowspan="2">${tableSortButton("行政区划", "district")}</th><th class="base-col" rowspan="2">${tableSortButton("组团", "group")}</th><th class="base-col" rowspan="2">${tableSortButton("板块", "plate")}</th><th class="status-col" rowspan="2">${tableSortButton("状态", "status")}</th><th class="date-col" rowspan="2">${tableSortButton("拿地时间", "landDate")}</th><th class="date-col" rowspan="2">${tableSortButton("首次取证时间", "issueDate")}</th><th class="date-col" rowspan="2">${tableSortButton("最新取证时间", "latestIssueDate")}</th><th class="num inventory-col" rowspan="2">${tableSortButton("总套数", "officialTotal", { note:INVENTORY_TOTAL_SCOPE_NOTE })}</th><th class="num inventory-col" rowspan="2">${tableSortButton("剩余套数", "officialUnsigned", { note:INVENTORY_UNSIGNED_SCOPE_NOTE })}</th>${monthGroupHeaders(monthList)}</tr>
+    <tr><th class="project-sticky" rowspan="2">${tableSortButton("项目名称", "project")}</th><th class="base-col" rowspan="2">${tableSortButton("行政区划", "district")}</th><th class="base-col" rowspan="2">${tableSortButton("组团", "group")}</th><th class="base-col" rowspan="2">${tableSortButton("板块", "plate")}</th><th class="status-col" rowspan="2">${tableSortButton("状态", "status")}</th><th class="date-col" rowspan="2">${tableSortButton("拿地时间", "landDate")}</th><th class="date-col" rowspan="2">${tableSortButton("首次取证时间", "issueDate")}</th><th class="date-col" rowspan="2">${tableSortButton("最新取证时间", "latestIssueDate")}</th><th class="num inventory-col" rowspan="2">${tableSortButton("总套数", "officialTotal", { note:officialInventoryScopeNote(INVENTORY_TOTAL_SCOPE_NOTE, rows) })}</th><th class="num inventory-col" rowspan="2">${tableSortButton("剩余套数", "officialUnsigned", { note:officialInventoryScopeNote(INVENTORY_UNSIGNED_SCOPE_NOTE, rows) })}</th>${monthGroupHeaders(monthList)}</tr>
     <tr class="metric-head">${monthMetricHeaders(monthList)}</tr>
     </thead><tbody>${rows.map(p=>`<tr data-id="${p.id}"><td class="project-sticky">${projectNameSummary(p)}${projectCumulativeSummary(p)}</td><td>${p.district||"-"}</td><td>${p.group}</td><td>${p.plate}</td><td><span class="tag">${p.status}</span></td><td>${p.landDate||"-"}</td><td>${projectFirstIssueDateText(p)}</td><td>${projectLatestIssueDateText(p)}</td>${officialInventoryCells(p)}${monthMetricCells(p, monthList)}</tr>`).join("")}</tbody></table>`;
   bindProjectSummaryHovers();
@@ -3678,6 +3708,14 @@ function similarProjectsSection(p) {
     <div class="similar-projects-list">${cards}</div>
   </section>`;
 }
+function officialInventorySourceChip(p) {
+  const rawSyncText = officialInventoryRawSyncText(p);
+  const syncText = officialInventorySyncDisplay(rawSyncText);
+  const compactSyncText = officialInventorySyncDisplay(rawSyncText, true);
+  const title = `取自住建委，数据截至当前月份；数据同步时间：${syncText || "待同步"}`;
+  const label = compactSyncText ? `住建委 · ${compactSyncText}同步` : "住建委 · 截至当前月份";
+  return `<span class="data-source-chip" title="${escapeHtml(title)}">${escapeHtml(label)}</span>`;
+}
 function projectInventoryMetric(p, value, label) {
   const numeric = officialInventoryValue(value, p);
   if (numeric === null) return `<b>${officialInventoryPendingText(p, label)}</b>`;
@@ -3690,7 +3728,7 @@ function projectInventoryStrip(p) {
   const soldCard = sold !== null
     ? `<div class="project-inventory-card"><span title="${escapeHtml(officialCumulativeSoldNote(p))}">累计已售</span>${projectInventoryMetric(p, sold, "累计已售")}</div>`
     : "";
-  return `<div class="project-inventory-source"><span class="data-source-chip" title="取自住建委，数据截至当前月份">住建委 · 截至当前月份</span></div>
+  return `<div class="project-inventory-source">${officialInventorySourceChip(p)}</div>
   <section class="project-inventory-strip" aria-label="住建委库存数据">
     <div class="project-inventory-card"><span>住宅总套数</span>${projectInventoryMetric(p, total, "住宅总套数")}</div>
     <div class="project-inventory-card"><span>剩余套数</span>${projectInventoryMetric(p, unsigned, "剩余套数")}</div>
