@@ -853,13 +853,17 @@ const ZJW_NEW_LAUNCH_INVENTORY_STATUS_OVERRIDES = {
     auditNote: "住建委楼盘表8栋楼房源状态复核：共314套，绿色可售305套，已预订9套，已签约/网上联机备案0套；剩余套数按绿色可售住宅房源计。"
   },
   "青和家园": {
-    unsignedSuites: 313,
-    availableSuites: 313,
-    bookedSuites: 19,
-    contractSignedSuites: 50,
+    unsignedSuites: 304,
+    availableSuites: 304,
+    bookedSuites: 18,
+    contractSignedSuites: 52,
     filedSuites: 18,
-    signedSuites: 68,
-    auditNote: "住建委楼盘表8栋住宅楼房源状态复核：共400套，绿色可售313套，已预订19套，已签约50套，网上联机备案18套；剩余套数按绿色可售住宅房源计。"
+    signedSuites: 70,
+    signedStatsSuites: 72,
+    signedStatsArea: 7266.05,
+    signedStatsAvgPrice: 54541.3,
+    fetchedAt: "2026-07-08 16:47:40",
+    auditNote: "住建委楼盘表8栋住宅楼房源状态复核：共400套，绿色可售304套，已预订18套，已签约52套，网上联机备案18套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约72套，已签约面积7266.05㎡，成交均价54541.3元/㎡。 批准住宅套数400套，与楼盘表房源数392套不一致，已保留两项用于复核。"
   }
 };
 function normalizePresaleName(value) {
@@ -957,9 +961,9 @@ function buildOfficialNewLaunchProject(item, index) {
   const inventoryAuditNote = [item.inventoryNote, inventoryStatus.auditNote].filter(Boolean).join(" ");
   const hasInventoryStatus = inventoryStatus.unsignedSuites !== undefined || inventoryStatus.availableSuites !== undefined;
   const hasSignedStats = inventoryStatus.signedStatsSuites !== undefined;
-  const inventoryFetchedAt = hasInventoryStatus
+  const inventoryFetchedAt = inventoryStatus.fetchedAt || (hasInventoryStatus
     ? "2026-07-06 住建委楼盘表房源状态复核"
-    : (hasSignedStats ? "2026-07-06 住建委期房签约统计复核" : "2026-07-06 住建委预售证详情页抓取");
+    : (hasSignedStats ? "2026-07-06 住建委期房签约统计复核" : "2026-07-06 住建委预售证详情页抓取"));
   const inventoryMatchStatus = hasInventoryStatus
     ? "住建委新发预售证项目；楼盘表房源状态已复核"
     : (hasSignedStats ? "住建委新发预售证项目；期房签约统计已复核" : "住建委新发预售证项目；原成交样本表未覆盖");
