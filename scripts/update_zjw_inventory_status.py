@@ -164,6 +164,8 @@ def build_audit_note(building_count: int, total: int, counts: dict[str, int], st
     ]
     if counts.get("qualification", 0):
         parts.append(f"{STATUS_LABELS['qualification']}{counts['qualification']}套")
+    if counts.get("unknown", 0):
+        parts.append(f"{STATUS_LABELS['unknown']}{counts['unknown']}套")
     note = "，".join(parts) + "；剩余套数按绿色可售住宅房源计。"
     signed_stats = stats.get("signedStatsSuites")
     if signed_stats is not None:
@@ -194,6 +196,10 @@ def scrape_project(item: dict[str, Any], delay: float) -> dict[str, Any]:
     status_total = counts.get("total", 0)
     if status_total <= 0:
         raise ValueError(f"{item.get('name') or source_url} 未解析到楼盘表房源状态，已停止写入")
+    if approved_total and status_total < approved_total:
+        counts["unknown"] = counts.get("unknown", 0) + (approved_total - status_total)
+        counts["total"] = approved_total
+        status_total = approved_total
     residential_total = approved_total or status_total
     stats = parse_presell_stats(page_html)
     sold_from_status = int(counts.get("contractSigned", 0) + counts.get("filed", 0))
@@ -220,8 +226,6 @@ def scrape_project(item: dict[str, Any], delay: float) -> dict[str, Any]:
         **stats,
     }
     result["auditNote"] = build_audit_note(len(residential_buildings), int(residential_total), counts, stats)
-    if approved_total and status_total and approved_total != status_total:
-        result["auditNote"] += f" 批准住宅套数{approved_total}套，与楼盘表房源数{status_total}套不一致，已保留两项用于复核。"
     return result
 
 
@@ -246,6 +250,10 @@ def update_history(path: Path, results: list[dict[str, Any]]) -> None:
             item
             for item in bucket.setdefault("history", [])
             if int(item.get("approvedResidentialTotal") or item.get("roomStatusTotal") or 0) > 0
+        ]
+        fetch_date = str(result.get("fetchedAt", "")).split(" ")[0]
+        bucket["history"] = [
+            item for item in bucket["history"] if str(item.get("fetchedAt", "")).split(" ")[0] != fetch_date
         ]
         bucket["history"].append(result)
     path.parent.mkdir(parents=True, exist_ok=True)

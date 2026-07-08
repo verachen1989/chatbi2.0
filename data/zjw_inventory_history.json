@@ -7,10 +7,10 @@
           "officialProjectName": "青和家园",
           "dashboardName": "青和家园",
           "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1",
-          "fetchedAt": "2026-07-08 16:47:40",
+          "fetchedAt": "2026-07-08 16:53:54",
           "residentialTotal": 400,
           "approvedResidentialTotal": 400,
-          "roomStatusTotal": 392,
+          "roomStatusTotal": 400,
           "unsignedSuites": 304,
           "availableSuites": 304,
           "bookedSuites": 18,
@@ -26,8 +26,8 @@
             "qualification": 0,
             "mortgage": 0,
             "nonSale": 0,
-            "unknown": 0,
-            "total": 392
+            "unknown": 8,
+            "total": 400
           },
           "buildingCount": 8,
           "buildings": [
@@ -99,7 +99,7 @@
           "signedStatsSuites": 72,
           "signedStatsArea": 7266.05,
           "signedStatsAvgPrice": 54541.3,
-          "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共400套，绿色可售304套，已预订18套，已签约52套，网上联机备案18套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约72套，已签约面积7266.05㎡，成交均价54541.3元/㎡。 批准住宅套数400套，与楼盘表房源数392套不一致，已保留两项用于复核。"
+          "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共400套，绿色可售304套，已预订18套，已签约52套，网上联机备案18套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约72套，已签约面积7266.05㎡，成交均价54541.3元/㎡。"
         }
       ],
       "latest": {
@@ -107,10 +107,10 @@
         "officialProjectName": "青和家园",
         "dashboardName": "青和家园",
         "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1",
-        "fetchedAt": "2026-07-08 16:47:40",
+        "fetchedAt": "2026-07-08 16:53:54",
         "residentialTotal": 400,
         "approvedResidentialTotal": 400,
-        "roomStatusTotal": 392,
+        "roomStatusTotal": 400,
         "unsignedSuites": 304,
         "availableSuites": 304,
         "bookedSuites": 18,
@@ -126,8 +126,8 @@
           "qualification": 0,
           "mortgage": 0,
           "nonSale": 0,
-          "unknown": 0,
-          "total": 392
+          "unknown": 8,
+          "total": 400
         },
         "buildingCount": 8,
         "buildings": [
@@ -199,7 +199,7 @@
         "signedStatsSuites": 72,
         "signedStatsArea": 7266.05,
         "signedStatsAvgPrice": 54541.3,
-        "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共400套，绿色可售304套，已预订18套，已签约52套，网上联机备案18套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约72套，已签约面积7266.05㎡，成交均价54541.3元/㎡。 批准住宅套数400套，与楼盘表房源数392套不一致，已保留两项用于复核。"
+        "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共400套，绿色可售304套，已预订18套，已签约52套，网上联机备案18套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约72套，已签约面积7266.05㎡，成交均价54541.3元/㎡。"
       }
     }
   }
