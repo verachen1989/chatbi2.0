@@ -52,6 +52,36 @@ STATUS_LABELS = {
     "unknown": "未知状态",
 }
 
+TRANSIENT_ERROR_PATTERNS = (
+    "timed out",
+    "timeout",
+    "nodename nor servname",
+    "name or service not known",
+    "temporary failure",
+    "network is unreachable",
+    "connection reset",
+    "connection refused",
+    "remote end closed",
+    "urlopen error",
+    "http error 500",
+    "http error 502",
+    "http error 503",
+    "http error 504",
+)
+
+NON_RETRYABLE_ERROR_PATTERNS = (
+    "缺少住建委项目详情页",
+    "未解析到住宅楼栋",
+    "未找到",
+)
+
+
+def is_retryable_error(exc: Exception) -> bool:
+    text = str(exc).lower()
+    if any(pattern.lower() in text for pattern in NON_RETRYABLE_ERROR_PATTERNS):
+        return False
+    return any(pattern in text for pattern in TRANSIENT_ERROR_PATTERNS)
+
 
 def fetch_text(url: str, timeout: int = 12) -> str:
     req = urllib.request.Request(
@@ -281,7 +311,7 @@ def scrape_project(item: dict[str, Any], delay: float, timeout: int, max_workers
     all_building_rows: list[dict[str, Any]] = []
     presell_stats_items: list[dict[str, Any]] = []
     for source_url in urls:
-        page_html = fetch_text(source_url)
+        page_html = fetch_text(source_url, timeout=timeout)
         residential_permits = residential_permits_from_note(item)
         if residential_permits and not any(permit in page_html for permit in residential_permits):
             continue
@@ -326,6 +356,13 @@ def scrape_project(item: dict[str, Any], delay: float, timeout: int, max_workers
     approved_total = sum(int(row.get("approvedSuites") or 0) for row in residential_buildings)
     status_total = counts.get("total", 0)
     if status_total <= 0:
+        if building_status_errors:
+            error_text = "；".join(
+                f"{item['buildingName']}: {item['error']}" for item in building_status_errors[:5]
+            )
+            raise RuntimeError(
+                f"{item.get('name') or primary_url(item)} 未解析到楼盘表房源状态，已停止写入；楼栋抓取失败：{error_text}"
+            )
         raise ValueError(f"{item.get('name') or primary_url(item)} 未解析到楼盘表房源状态，已停止写入")
     target_total = max(expected_total, approved_total, status_total)
     if target_total and status_total < target_total:
@@ -385,6 +422,51 @@ def scrape_project(item: dict[str, Any], delay: float, timeout: int, max_workers
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。",
     }
     return result
+
+
+def scrape_project_with_retry(
+    item: dict[str, Any],
+    delay: float,
+    timeout: int,
+    max_workers: int,
+    retry_attempts: int,
+    retry_delay: float,
+    retry_timeout_step: int,
+) -> tuple[dict[str, Any] | None, list[dict[str, Any]], Exception | None]:
+    attempts: list[dict[str, Any]] = []
+    last_error: Exception | None = None
+    total_attempts = max(0, retry_attempts) + 1
+    for attempt_index in range(total_attempts):
+        current_timeout = timeout + attempt_index * max(0, retry_timeout_step)
+        current_workers = max_workers if attempt_index == 0 else 1
+        try:
+            result = scrape_project(item, delay=delay, timeout=current_timeout, max_workers=current_workers)
+            if attempts:
+                result["retryAttempts"] = len(attempts)
+                result["retryErrors"] = attempts
+            return result, attempts, None
+        except Exception as exc:
+            last_error = exc
+            retryable = is_retryable_error(exc)
+            attempts.append(
+                {
+                    "attempt": attempt_index + 1,
+                    "timeout": current_timeout,
+                    "maxWorkers": current_workers,
+                    "retryable": retryable,
+                    "error": str(exc),
+                }
+            )
+            if not retryable or attempt_index >= total_attempts - 1:
+                break
+            project_name = item.get("dashboardName") or item.get("name") or primary_url(item)
+            print(
+                f"  临时失败，准备第{attempt_index + 2}次重跑 {project_name}: {exc}",
+                file=sys.stderr,
+                flush=True,
+            )
+            time.sleep(max(0, retry_delay))
+    return None, attempts, last_error
 
 
 def load_watchlist(path: Path) -> list[dict[str, Any]]:
@@ -600,6 +682,7 @@ def project_snapshot(result: dict[str, Any]) -> dict[str, Any]:
         "filedSuites": result["filedSuites"],
         "bookedSuites": result["bookedSuites"],
         "signedStatsSuites": result.get("signedStatsSuites"),
+        "retryAttempts": result.get("retryAttempts", 0),
         "fetchedAt": result["fetchedAt"],
         "evidenceUrl": result["url"],
         "evidenceUrls": result.get("urls") or [result["url"]],
@@ -889,6 +972,9 @@ def main() -> int:
     parser.add_argument("--delay", type=float, default=0.4)
     parser.add_argument("--timeout", type=int, default=12)
     parser.add_argument("--max-workers", type=int, default=3)
+    parser.add_argument("--retry-attempts", type=int, default=2)
+    parser.add_argument("--retry-delay", type=float, default=1.0)
+    parser.add_argument("--retry-timeout-step", type=int, default=8)
     parser.add_argument("--max-projects", type=int, default=0)
     parser.add_argument("--apply-dashboard", action="store_true")
     parser.add_argument("--sync-watchlist-from-dashboard", action="store_true")
@@ -908,17 +994,26 @@ def main() -> int:
     failures: list[dict[str, Any]] = []
     for index, item in enumerate(watchlist, 1):
         print(f"[{index}/{len(watchlist)}] 抓取 {item.get('dashboardName') or item.get('name')}", file=sys.stderr, flush=True)
-        try:
-            results.append(
-                scrape_project(item, delay=args.delay, timeout=args.timeout, max_workers=args.max_workers)
-            )
-        except Exception as exc:
+        result, attempts, exc = scrape_project_with_retry(
+            item,
+            delay=args.delay,
+            timeout=args.timeout,
+            max_workers=args.max_workers,
+            retry_attempts=args.retry_attempts,
+            retry_delay=args.retry_delay,
+            retry_timeout_step=args.retry_timeout_step,
+        )
+        if result:
+            results.append(result)
+        else:
             failures.append(
                 {
                     "projectName": item.get("dashboardName") or item.get("name") or "",
                     "url": primary_url(item),
                     "urls": item_urls(item),
-                    "error": str(exc),
+                    "error": str(exc) if exc else "未知错误",
+                    "retryAttempts": max(0, len(attempts) - 1),
+                    "attempts": attempts,
                     "fetchedAt": datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S"),
                 }
             )
@@ -941,6 +1036,7 @@ def main() -> int:
                         "available": item["availableSuites"],
                         "sold": item["signedSuites"],
                         "signedStats": item.get("signedStatsSuites"),
+                        "retryAttempts": item.get("retryAttempts", 0),
                         "fetchedAt": item["fetchedAt"],
                     }
                     for item in results

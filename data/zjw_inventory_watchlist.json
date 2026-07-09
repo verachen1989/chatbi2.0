@@ -1,6 +1,1851 @@
 {
   "projects": [
     {
+      "source": "dashboard",
+      "dashboardId": 1,
+      "dashboardCollection": "projects",
+      "name": "瞰山佳苑",
+      "dashboardName": "翠湖玖章",
+      "summaryRecordName": "瞰山佳苑",
+      "summaryDeveloper": "星旅(北京)房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25165248&systemID=3&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25165248&systemID=3&srcId=1",
+      "permits": [
+        "京房售证字(2024)52号",
+        "京房售证字(2025)12号"
+      ],
+      "issueDates": [],
+      "developer": "星旅(北京)房地产开发有限公司",
+      "district": "海淀区",
+      "group": "北部组团",
+      "plate": "翠湖",
+      "residentialTotal": 173,
+      "approvedTotalSuites": 173,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 2,
+      "dashboardCollection": "projects",
+      "name": "清岳里",
+      "dashboardName": "住总清樾府",
+      "summaryRecordName": "清岳里",
+      "summaryDeveloper": "北京佰昌房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8138177&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8092296&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7885815&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8138177&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2024)63号",
+        "京房售证字(2025)92号",
+        "京房售证字(2025)143号"
+      ],
+      "issueDates": [],
+      "developer": "北京佰昌房地产开发有限公司",
+      "district": "昌平区",
+      "group": "北部组团",
+      "plate": "百善",
+      "residentialTotal": 144,
+      "approvedTotalSuites": 144,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 3,
+      "dashboardCollection": "projects",
+      "name": "萃雅家园",
+      "dashboardName": "龙湖观萃",
+      "summaryRecordName": "萃雅家园",
+      "summaryDeveloper": "北京宏望房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7909040&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7909040&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2024)77号"
+      ],
+      "issueDates": [],
+      "developer": "北京宏望房地产开发有限公司",
+      "district": "昌平区",
+      "group": "北部组团",
+      "plate": "回龙观",
+      "residentialTotal": 950,
+      "approvedTotalSuites": 950,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：950套；原页面显示801套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 4,
+      "dashboardCollection": "projects",
+      "name": "颐海云颂嘉苑",
+      "dashboardName": "颐海澐颂",
+      "summaryRecordName": "颐海云颂嘉苑",
+      "summaryDeveloper": "北京海开颐和房地产开发有限责任公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8212621&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7999428&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8212621&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)15号"
+      ],
+      "issueDates": [
+        "2026-05-28"
+      ],
+      "developer": "北京海开颐和房地产开发有限责任公司",
+      "district": "海淀区",
+      "group": "北部组团",
+      "plate": "永丰",
+      "residentialTotal": 1047,
+      "approvedTotalSuites": 493,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：1047套；原页面显示887套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 5,
+      "dashboardCollection": "projects",
+      "name": "誉燕润园",
+      "dashboardName": "国誉燕园朗润",
+      "summaryRecordName": "誉燕润园",
+      "summaryDeveloper": "北京城建兴荣房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8060687&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8060687&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)72号"
+      ],
+      "issueDates": [],
+      "developer": "北京城建兴荣房地产开发有限公司",
+      "district": "昌平区",
+      "group": "北部组团",
+      "plate": "马池口",
+      "residentialTotal": 828,
+      "approvedTotalSuites": 828,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：828套；原页面显示542套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 6,
+      "dashboardCollection": "projects",
+      "name": "嘉华珺园",
+      "dashboardName": "嘉华天珺",
+      "summaryRecordName": "嘉华珺园",
+      "summaryDeveloper": "北京建工嘉境房地产开发有限公司/嘉华珺园账户线索",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8105806&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8018643&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7976631&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8105806&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)1号",
+        "京房售证字(2025)31号"
+      ],
+      "issueDates": [],
+      "developer": "北京建工嘉境房地产开发有限公司/嘉华珺园账户线索",
+      "district": "海淀区",
+      "group": "北部组团",
+      "plate": "永丰",
+      "residentialTotal": 1524,
+      "approvedTotalSuites": 1524,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：1524套；原页面显示1062套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 7,
+      "dashboardCollection": "projects",
+      "name": "水畔芳邻嘉园",
+      "dashboardName": "越秀星耀未来",
+      "summaryRecordName": "水畔芳邻嘉园",
+      "summaryDeveloper": "未来科学城置业；越秀地产",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8083301&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8017587&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8083301&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)30号"
+      ],
+      "issueDates": [],
+      "developer": "未来科学城置业；越秀地产",
+      "district": "昌平区",
+      "group": "北部组团",
+      "plate": "沙河",
+      "residentialTotal": 1312,
+      "approvedTotalSuites": 1312,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：1312套；原页面显示644套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 8,
+      "dashboardCollection": "projects",
+      "name": "和樾苑",
+      "dashboardName": "和樾望雲",
+      "summaryRecordName": "和樾苑",
+      "summaryDeveloper": "北京海臻置业有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8033909&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8002662&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8033909&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)18号",
+        "京房售证字(2025)44号"
+      ],
+      "issueDates": [],
+      "developer": "北京海臻置业有限公司",
+      "district": "海淀区",
+      "group": "北部组团",
+      "plate": "上地",
+      "residentialTotal": 944,
+      "approvedTotalSuites": 944,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：944套；原页面显示755套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 9,
+      "dashboardCollection": "projects",
+      "name": "玉鸣苑",
+      "dashboardName": "和樾玉鸣",
+      "summaryRecordName": "玉鸣苑",
+      "summaryDeveloper": "北京功意房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8034306&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8001612&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8034306&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)17号"
+      ],
+      "issueDates": [],
+      "developer": "北京功意房地产开发有限公司",
+      "district": "海淀区",
+      "group": "北部组团",
+      "plate": "上地",
+      "residentialTotal": 685,
+      "approvedTotalSuites": 685,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：685套；原页面显示464套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 10,
+      "dashboardCollection": "projects",
+      "name": "逸贤华庭",
+      "dashboardName": "北京国贤府贰期",
+      "summaryRecordName": "逸贤华庭",
+      "summaryDeveloper": "中建智地；未来科学城置业",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8104540&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8104541&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8025921&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8025920&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8104540&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)36号",
+        "京房售证字(2025)37号"
+      ],
+      "issueDates": [],
+      "developer": "中建智地；未来科学城置业",
+      "district": "昌平区",
+      "group": "北部组团",
+      "plate": "北七家",
+      "residentialTotal": 850,
+      "approvedTotalSuites": 850,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：850套；原页面显示762套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 11,
+      "dashboardCollection": "projects",
+      "name": "臻云雅苑",
+      "dashboardName": "华润臻澐",
+      "summaryRecordName": "臻云雅苑",
+      "summaryDeveloper": "北京华润招铁海泽置业有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8048704&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8048704&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)62号"
+      ],
+      "issueDates": [],
+      "developer": "北京华润招铁海泽置业有限公司",
+      "district": "海淀区",
+      "group": "北部组团",
+      "plate": "清河",
+      "residentialTotal": 521,
+      "approvedTotalSuites": 521,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：521套；原页面显示405套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 12,
+      "dashboardCollection": "projects",
+      "name": "海晏雅苑",
+      "dashboardName": "建发海晏",
+      "summaryRecordName": "海晏雅苑",
+      "summaryDeveloper": "北京兆盛房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8099037&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8051500&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8099037&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)63号",
+        "京房售证字(2025)96号"
+      ],
+      "issueDates": [],
+      "developer": "北京兆盛房地产开发有限公司",
+      "district": "海淀区",
+      "group": "北部组团",
+      "plate": "清河",
+      "residentialTotal": 604,
+      "approvedTotalSuites": 604,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：604套；原页面显示457套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 13,
+      "dashboardCollection": "projects",
+      "name": "光元里 / 光阅里",
+      "dashboardName": "中海未来之境",
+      "summaryRecordName": "中海未来之境",
+      "summaryDeveloper": "北京中海未来置业有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8064028&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8064029&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7918165&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25175268&systemID=3&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7823944&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8064028&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2024)95号"
+      ],
+      "issueDates": [],
+      "developer": "北京中海未来置业有限公司",
+      "district": "昌平区",
+      "group": "北部组团",
+      "plate": "回龙观",
+      "residentialTotal": 986,
+      "approvedTotalSuites": 986,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：986套；原页面显示861套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 14,
+      "dashboardCollection": "projects",
+      "name": "安和雅苑",
+      "dashboardName": "中海安澜北京",
+      "summaryRecordName": "安和雅苑",
+      "summaryDeveloper": "北京盈臻房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8130467&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8130467&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)131号"
+      ],
+      "issueDates": [],
+      "developer": "北京盈臻房地产开发有限公司",
+      "district": "海淀区",
+      "group": "北部组团",
+      "plate": "上地",
+      "residentialTotal": 268,
+      "approvedTotalSuites": 268,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：268套；原页面显示189套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 15,
+      "dashboardCollection": "projects",
+      "name": "星洵家园",
+      "dashboardName": "国誉星城",
+      "summaryRecordName": "星洵家园",
+      "summaryDeveloper": "北京越昌贝城置业有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8158008&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8106368&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8158008&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)114号",
+        "京房售证字(2026)6号"
+      ],
+      "issueDates": [
+        "2026-01-28"
+      ],
+      "developer": "北京越昌贝城置业有限公司",
+      "district": "昌平区",
+      "group": "北部组团",
+      "plate": "回龙观",
+      "residentialTotal": 449,
+      "approvedTotalSuites": 361,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 16,
+      "dashboardCollection": "projects",
+      "name": "凌匀颂雅苑",
+      "dashboardName": "龙湖恩祥凌雲颂",
+      "summaryRecordName": "凌匀颂雅苑",
+      "summaryDeveloper": "待核",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8147968&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8122343&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8147968&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)157号"
+      ],
+      "issueDates": [],
+      "developer": "待核",
+      "district": "昌平区",
+      "group": "北部组团",
+      "plate": "南邵",
+      "residentialTotal": 536,
+      "approvedTotalSuites": 536,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：536套；原页面显示283套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 17,
+      "dashboardCollection": "projects",
+      "name": "心意和园",
+      "dashboardName": "北京宸园",
+      "summaryRecordName": "心意和园",
+      "summaryDeveloper": "北京兴鼎房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8022869&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7916876&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8022869&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2024)91号",
+        "京房售证字(2025)32号"
+      ],
+      "issueDates": [],
+      "developer": "北京兴鼎房地产开发有限公司",
+      "district": "朝阳区",
+      "group": "东北组团",
+      "plate": "酒仙桥",
+      "residentialTotal": 799,
+      "approvedTotalSuites": 799,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：799套；原页面显示634套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 18,
+      "dashboardCollection": "projects",
+      "name": "璞隐雅园",
+      "dashboardName": "璞园PARK",
+      "summaryRecordName": "璞隐雅园",
+      "summaryDeveloper": "中建智地",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7982300&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7945014&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7922120&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7982300&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)4号"
+      ],
+      "issueDates": [],
+      "developer": "中建智地",
+      "district": "朝阳区",
+      "group": "东北组团",
+      "plate": "金盏北",
+      "residentialTotal": 573,
+      "approvedTotalSuites": 573,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：573套；原页面显示448套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 19,
+      "dashboardCollection": "projects",
+      "name": "万吉嘉苑",
+      "dashboardName": "中海萬吉玖序",
+      "summaryRecordName": "万吉嘉苑",
+      "summaryDeveloper": "北京新鑫兴业房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8078140&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8056121&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8030383&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8078140&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)43号",
+        "京房售证字(2025)66号",
+        "京房售证字(2025)80号"
+      ],
+      "issueDates": [],
+      "developer": "北京新鑫兴业房地产开发有限公司",
+      "district": "朝阳区",
+      "group": "东北组团",
+      "plate": "酒仙桥",
+      "residentialTotal": 467,
+      "approvedTotalSuites": 467,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 20,
+      "dashboardCollection": "projects",
+      "name": "馥华家园",
+      "dashboardName": "住总芳华里",
+      "summaryRecordName": "馥华家园",
+      "summaryDeveloper": "北京住顺置业有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8069990&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7893920&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8069990&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2024)67号",
+        "京房售证字(2025)78号"
+      ],
+      "issueDates": [],
+      "developer": "北京住顺置业有限公司",
+      "district": "顺义区",
+      "group": "东北组团",
+      "plate": "仁和",
+      "residentialTotal": 639,
+      "approvedTotalSuites": 639,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：639套；原页面显示526套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 21,
+      "dashboardCollection": "projects",
+      "name": "悦煦雅苑",
+      "dashboardName": "星宸和煦",
+      "summaryRecordName": "悦煦雅苑",
+      "summaryDeveloper": "待核",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7931668&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7879582&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7931668&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2024)105号"
+      ],
+      "issueDates": [],
+      "developer": "待核",
+      "district": "顺义区",
+      "group": "东北组团",
+      "plate": "后沙峪",
+      "residentialTotal": 349,
+      "approvedTotalSuites": 349,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：349套；原页面显示273套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 22,
+      "dashboardCollection": "projects",
+      "name": "峯逸园",
+      "dashboardName": "星悦时光",
+      "summaryRecordName": "峯逸园",
+      "summaryDeveloper": "北京城建南山置业有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7918227&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7918227&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2024)96号"
+      ],
+      "issueDates": [],
+      "developer": "北京城建南山置业有限公司",
+      "district": "顺义区",
+      "group": "东北组团",
+      "plate": "仁和",
+      "residentialTotal": 864,
+      "approvedTotalSuites": 864,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：864套；原页面显示662套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 23,
+      "dashboardCollection": "projects",
+      "name": "云纪雅园",
+      "dashboardName": "懋源云纪",
+      "summaryRecordName": "云纪雅园",
+      "summaryDeveloper": "待核",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8046106&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8046106&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)57号"
+      ],
+      "issueDates": [],
+      "developer": "待核",
+      "district": "顺义区",
+      "group": "东北组团",
+      "plate": "后沙峪",
+      "residentialTotal": 842,
+      "approvedTotalSuites": 842,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：842套；原页面显示216套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 24,
+      "dashboardCollection": "projects",
+      "name": "宸翰家园",
+      "dashboardName": "龙湖宸翰",
+      "summaryRecordName": "待核：宸翰相关备案名未在本轮住建委搜索命中",
+      "summaryDeveloper": "待核",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8099038&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8099038&systemID=2&srcId=1",
+      "permits": [
+        "待核"
+      ],
+      "issueDates": [],
+      "developer": "待核",
+      "district": "顺义区",
+      "group": "东北组团",
+      "plate": "仁和",
+      "residentialTotal": 551,
+      "approvedTotalSuites": 551,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：551套；原页面显示419套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 25,
+      "dashboardCollection": "projects",
+      "name": "润榆园",
+      "dashboardName": "华润北美乡间 北京润园",
+      "summaryRecordName": "润榆园",
+      "summaryDeveloper": "华润置地开发(北京)有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8192048&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8175638&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8131988&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8127305&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8192048&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)129号",
+        "京房售证字(2025)136号",
+        "京房售证字(2026)18号",
+        "京房售证字(2026)33号"
+      ],
+      "issueDates": [
+        "2026-03-20"
+      ],
+      "developer": "华润置地开发(北京)有限公司",
+      "district": "顺义区",
+      "group": "东北组团",
+      "plate": "中央别墅区",
+      "residentialTotal": 1346,
+      "approvedTotalSuites": 282,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：1346套；原页面显示440套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 26,
+      "dashboardCollection": "projects",
+      "name": "橒颂雅园",
+      "dashboardName": "懋源薛大人庄 懋源骊橒臺",
+      "summaryRecordName": "橒颂雅园",
+      "summaryDeveloper": "北京懋源璟鸿房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8222005&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8222005&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)49号"
+      ],
+      "issueDates": [
+        "2026-06-15"
+      ],
+      "developer": "北京懋源璟鸿房地产开发有限公司",
+      "district": "顺义区",
+      "group": "东北组团",
+      "plate": "中央别墅区",
+      "residentialTotal": 456,
+      "approvedTotalSuites": 376,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：456套；原页面显示445套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 27,
+      "dashboardCollection": "projects",
+      "name": "云华里",
+      "dashboardName": "北京隅东序",
+      "summaryRecordName": "云华里",
+      "summaryDeveloper": "北京隅新房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8026822&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7949140&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8026822&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)38号"
+      ],
+      "issueDates": [],
+      "developer": "北京隅新房地产开发有限公司",
+      "district": "朝阳区",
+      "group": "CBD-副中心组团",
+      "plate": "十八里店",
+      "residentialTotal": 824,
+      "approvedTotalSuites": 824,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：824套；原页面显示688套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 28,
+      "dashboardCollection": "projects",
+      "name": "天珺和苑",
+      "dashboardName": "保利朝观天珺",
+      "summaryRecordName": "天珺和苑",
+      "summaryDeveloper": "北京朝新善筑置业有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8081196&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8044423&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8081196&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)83号"
+      ],
+      "issueDates": [],
+      "developer": "北京朝新善筑置业有限公司",
+      "district": "朝阳区",
+      "group": "CBD-副中心组团",
+      "plate": "管庄",
+      "residentialTotal": 656,
+      "approvedTotalSuites": 656,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 29,
+      "dashboardCollection": "projects",
+      "name": "满茂嘉园",
+      "dashboardName": "金茂满曜",
+      "summaryRecordName": "金茂满曜",
+      "summaryDeveloper": "待核",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8102492&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8073237&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8048434&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8102492&systemID=2&srcId=1",
+      "permits": [
+        "待核"
+      ],
+      "issueDates": [],
+      "developer": "待核",
+      "district": "朝阳区",
+      "group": "CBD-副中心组团",
+      "plate": "管庄",
+      "residentialTotal": 693,
+      "approvedTotalSuites": 693,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：693套；原页面显示650套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 30,
+      "dashboardCollection": "projects",
+      "name": "东晏和园",
+      "dashboardName": "黄衫木店（紫京宸园）",
+      "summaryRecordName": "东晏和园",
+      "summaryDeveloper": "北京兴昶房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8144546&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8120854&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8104579&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8144546&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)110号",
+        "京房售证字(2025)153号"
+      ],
+      "issueDates": [],
+      "developer": "北京兴昶房地产开发有限公司",
+      "district": "朝阳区",
+      "group": "CBD-副中心组团",
+      "plate": "朝青",
+      "residentialTotal": 886,
+      "approvedTotalSuites": 886,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 31,
+      "dashboardCollection": "projects",
+      "name": "璞樾家园",
+      "dashboardName": "黄衫木店（璞樾）",
+      "summaryRecordName": "璞樾家园",
+      "summaryDeveloper": "北京茂越置业有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8174283&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8167867&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8122648&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8106274&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8174283&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)115号",
+        "京房售证字(2025)126号",
+        "京房售证字(2026)11号"
+      ],
+      "issueDates": [
+        "2026-02-13"
+      ],
+      "developer": "北京茂越置业有限公司",
+      "district": "朝阳区",
+      "group": "CBD-副中心组团",
+      "plate": "朝青",
+      "residentialTotal": 497,
+      "approvedTotalSuites": 69,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 32,
+      "dashboardCollection": "projects",
+      "name": "誉颂佳园",
+      "dashboardName": "城建国誉颂",
+      "summaryRecordName": "誉颂佳园",
+      "summaryDeveloper": "城建集团",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8141265&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8141266&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7995686&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7995685&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8141265&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)11号"
+      ],
+      "issueDates": [],
+      "developer": "城建集团",
+      "district": "通州区",
+      "group": "CBD-副中心组团",
+      "plate": "宋庄东",
+      "residentialTotal": 592,
+      "approvedTotalSuites": 592,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 33,
+      "dashboardCollection": "projects",
+      "name": "璟云雅苑",
+      "dashboardName": "招商云璟揽阅",
+      "summaryRecordName": "璟云雅苑",
+      "summaryDeveloper": "北京招鑫房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8016529&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7993836&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8016529&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)27号"
+      ],
+      "issueDates": [],
+      "developer": "北京招鑫房地产开发有限公司",
+      "district": "通州区",
+      "group": "CBD-副中心组团",
+      "plate": "梨园",
+      "residentialTotal": 32,
+      "approvedTotalSuites": 32,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 34,
+      "dashboardCollection": "projects",
+      "name": "花溪云锦佳苑",
+      "dashboardName": "金隅花溪云锦",
+      "summaryRecordName": "金隅花溪云锦",
+      "summaryDeveloper": "待核",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8083266&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8035375&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8083266&systemID=2&srcId=1",
+      "permits": [
+        "待核"
+      ],
+      "issueDates": [],
+      "developer": "待核",
+      "district": "通州区",
+      "group": "CBD-副中心组团",
+      "plate": "通州老城",
+      "residentialTotal": 338,
+      "approvedTotalSuites": 338,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 35,
+      "dashboardCollection": "projects",
+      "name": "朝棠雅苑（一期） / 朝棠雅苑（二期）",
+      "dashboardName": "招商朝棠揽阅",
+      "summaryRecordName": "朝棠雅苑（一期）/朝棠雅苑（二期）",
+      "summaryDeveloper": "北京招胜房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195954&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8177932&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8117988&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8074504&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8062576&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195953&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8129887&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8119448&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8093213&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195954&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)76号",
+        "京房售证字(2025)118号",
+        "京房售证字(2025)122号",
+        "京房售证字(2025)130号",
+        "京房售证字(2026)24号",
+        "京房售证字(2026)38号"
+      ],
+      "issueDates": [
+        "2026-03-26"
+      ],
+      "developer": "北京招胜房地产开发有限公司",
+      "district": "通州区",
+      "group": "CBD-副中心组团",
+      "plate": "通州老城",
+      "residentialTotal": 938,
+      "approvedTotalSuites": 36,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 36,
+      "dashboardCollection": "projects",
+      "name": "兰庭雅苑",
+      "dashboardName": "中国铁建花语璟云",
+      "summaryRecordName": "兰庭雅苑",
+      "summaryDeveloper": "待核",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8167201&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8142357&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8081461&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8167201&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)82号",
+        "京房售证字(2025)152号"
+      ],
+      "issueDates": [
+        "2026-02-13"
+      ],
+      "developer": "待核",
+      "district": "通州区",
+      "group": "CBD-副中心组团",
+      "plate": "梨园",
+      "residentialTotal": 202,
+      "approvedTotalSuites": 44,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 37,
+      "dashboardCollection": "projects",
+      "name": "玖运佳苑(一期) / 玖运佳苑（一期） / 玖运佳苑（二期）",
+      "dashboardName": "中建运河玖院",
+      "summaryRecordName": "玖运佳苑（一期/二期）",
+      "summaryDeveloper": "中建玖合",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176819&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8119453&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8099223&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8178961&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8141856&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176819&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)93号",
+        "京房售证字(2025)120号",
+        "京房售证字(2025)148号",
+        "京房售证字(2026)20号"
+      ],
+      "issueDates": [
+        "2026-03-21"
+      ],
+      "developer": "中建玖合",
+      "district": "通州区",
+      "group": "CBD-副中心组团",
+      "plate": "运河商务区",
+      "residentialTotal": 1443,
+      "approvedTotalSuites": 485,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：1443套；原页面显示1418套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 38,
+      "dashboardCollection": "projects",
+      "name": "润悦雅园",
+      "dashboardName": "北京润府",
+      "summaryRecordName": "润悦雅园",
+      "summaryDeveloper": "北京润悦置业有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8137847&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8128769&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8062717&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7837688&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8137847&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2024)开1号",
+        "京房售证字(2025)开4号",
+        "京房售证字(2025)开6号"
+      ],
+      "issueDates": [],
+      "developer": "北京润悦置业有限公司",
+      "district": "通州区",
+      "group": "大亦庄组团",
+      "plate": "次渠",
+      "residentialTotal": 643,
+      "approvedTotalSuites": 643,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 39,
+      "dashboardCollection": "projects",
+      "name": "亦序佳苑",
+      "dashboardName": "招商序",
+      "summaryRecordName": "亦序佳苑",
+      "summaryDeveloper": "北京招晨房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8087751&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8038343&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8038353&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8087751&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)开2号",
+        "京房售证字(2025)开3号",
+        "京房售证字(2025)开5号"
+      ],
+      "issueDates": [],
+      "developer": "北京招晨房地产开发有限公司",
+      "district": "大兴区",
+      "group": "大亦庄组团",
+      "plate": "河西",
+      "residentialTotal": 685,
+      "approvedTotalSuites": 685,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 40,
+      "dashboardCollection": "projects",
+      "name": "壹品馥丽园",
+      "dashboardName": "中建花鄕壹号 中建壹品花香壹号",
+      "summaryRecordName": "壹品馥丽园",
+      "summaryDeveloper": "北京丰园永定置业有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25219099&systemID=3&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25219101&systemID=3&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25219166&systemID=3&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25219223&systemID=3&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25219193&systemID=3&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25219197&systemID=3&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25218865&systemID=3&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25218944&systemID=3&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25266071&systemID=3&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25219099&systemID=3&srcId=1",
+      "permits": [
+        "京房售证字(2024)46号"
+      ],
+      "issueDates": [],
+      "developer": "北京丰园永定置业有限公司",
+      "district": "丰台区",
+      "group": "西南组团",
+      "plate": "高立庄",
+      "residentialTotal": 233,
+      "approvedTotalSuites": 233,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 41,
+      "dashboardCollection": "projects",
+      "name": "隅颂佳苑",
+      "dashboardName": "北京隅西颂",
+      "summaryRecordName": "隅颂佳苑",
+      "summaryDeveloper": "北京南苑嘉盛置业有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8101108&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8028609&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8101108&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)40号",
+        "京房售证字(2025)100号"
+      ],
+      "issueDates": [],
+      "developer": "北京南苑嘉盛置业有限公司",
+      "district": "丰台区",
+      "group": "西南组团",
+      "plate": "总部基地",
+      "residentialTotal": 479,
+      "approvedTotalSuites": 479,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 42,
+      "dashboardCollection": "projects",
+      "name": "观宸嘉园",
+      "dashboardName": "建发金茂观宸",
+      "summaryRecordName": "观宸嘉园",
+      "summaryDeveloper": "待核",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8033939&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8002827&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8033939&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)46号"
+      ],
+      "issueDates": [],
+      "developer": "待核",
+      "district": "丰台区",
+      "group": "西南组团",
+      "plate": "新宫",
+      "residentialTotal": 594,
+      "approvedTotalSuites": 594,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：594套；原页面显示522套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 43,
+      "dashboardCollection": "projects",
+      "name": "中海峯泽璟苑",
+      "dashboardName": "中海丽金府",
+      "summaryRecordName": "中海峯泽璟苑",
+      "summaryDeveloper": "北京中海鑫海房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8079201&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8038785&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8025945&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8025946&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8079201&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)34号",
+        "京房售证字(2025)35号",
+        "京房售证字(2025)51号",
+        "京房售证字(2025)79号"
+      ],
+      "issueDates": [],
+      "developer": "北京中海鑫海房地产开发有限公司",
+      "district": "丰台区",
+      "group": "西南组团",
+      "plate": "丽泽",
+      "residentialTotal": 1167,
+      "approvedTotalSuites": 1167,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 44,
+      "dashboardCollection": "projects",
+      "name": "中海藏峰佳苑",
+      "dashboardName": "中海丽泽叁號院",
+      "summaryRecordName": "中海藏峰佳苑",
+      "summaryDeveloper": "待核",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8099117&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8041658&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8041677&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8099117&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)52号",
+        "京房售证字(2025)53号"
+      ],
+      "issueDates": [],
+      "developer": "待核",
+      "district": "丰台区",
+      "group": "西南组团",
+      "plate": "丽泽",
+      "residentialTotal": 590,
+      "approvedTotalSuites": 590,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 45,
+      "dashboardCollection": "projects",
+      "name": "观璟嘉园",
+      "dashboardName": "槐新02地块 建发金茂观宸二期",
+      "summaryRecordName": "观璟嘉园",
+      "summaryDeveloper": "待核",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8121654&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8102295&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8121654&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)101号",
+        "京房售证字(2025)124号"
+      ],
+      "issueDates": [],
+      "developer": "待核",
+      "district": "丰台区",
+      "group": "西南组团",
+      "plate": "新宫",
+      "residentialTotal": 485,
+      "approvedTotalSuites": 485,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：485套；原页面显示280套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 46,
+      "dashboardCollection": "projects",
+      "name": "元启繁星园",
+      "dashboardName": "御璟星城元启",
+      "summaryRecordName": "元启繁星园",
+      "summaryDeveloper": "北京凤河桥北房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7904369&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7904369&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2024)74号"
+      ],
+      "issueDates": [],
+      "developer": "北京凤河桥北房地产开发有限公司",
+      "district": "大兴区",
+      "group": "西南组团",
+      "plate": "西红门",
+      "residentialTotal": 1065,
+      "approvedTotalSuites": 1065,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：1065套；原页面显示760套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 47,
+      "dashboardCollection": "projects",
+      "name": "润泽梧桐小区",
+      "dashboardName": "大兴西片区0003等地块 大兴发展梧桐府",
+      "summaryRecordName": "润泽梧桐小区",
+      "summaryDeveloper": "北京兴城发展建设开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8119449&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8069784&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8119449&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)74号",
+        "京房售证字(2025)121号"
+      ],
+      "issueDates": [],
+      "developer": "北京兴城发展建设开发有限公司",
+      "district": "大兴区",
+      "group": "西南组团",
+      "plate": "狼垡",
+      "residentialTotal": 366,
+      "approvedTotalSuites": 366,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：366套；原页面显示298套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 48,
+      "dashboardCollection": "projects",
+      "name": "理想家园 / 西红门经济适用住房一期底商部分 / 西红门项目二期 / 西红门项目二期Ⅲ组团 / 西红门项目二期一组团 / 西红门项目二期三组团 / 西红门项目二期二组团",
+      "dashboardName": "西红门6030地块",
+      "summaryRecordName": "",
+      "summaryDeveloper": "",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=21532808&systemID=3&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=21532831&systemID=3&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=21532878&systemID=3&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=925187&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=748177&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=659034&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=606162&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=563318&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=4544&systemID=1&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=21532808&systemID=3&srcId=1",
+      "permits": [],
+      "issueDates": [],
+      "developer": "",
+      "district": "大兴区",
+      "group": "西南组团",
+      "plate": "西红门",
+      "residentialTotal": 0,
+      "approvedTotalSuites": 0,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 50,
+      "dashboardCollection": "projects",
+      "name": "颐知筑西区",
+      "dashboardName": "颐知筑",
+      "summaryRecordName": "颐知筑西区",
+      "summaryDeveloper": "北京城建瑞泰投资发展有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8007906&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8007906&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)24号"
+      ],
+      "issueDates": [],
+      "developer": "北京城建瑞泰投资发展有限公司",
+      "district": "房山区",
+      "group": "西南组团",
+      "plate": "良乡",
+      "residentialTotal": 634,
+      "approvedTotalSuites": 634,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：634套；原页面显示347套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 52,
+      "dashboardCollection": "projects",
+      "name": "璟贤瑞庭",
+      "dashboardName": "璟贤瑞庭",
+      "summaryRecordName": "",
+      "summaryDeveloper": "",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8141305&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7963228&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8141305&systemID=2&srcId=1",
+      "permits": [],
+      "issueDates": [],
+      "developer": "",
+      "district": "房山区",
+      "group": "西南组团",
+      "plate": "长阳",
+      "residentialTotal": 1021,
+      "approvedTotalSuites": 1021,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：1021套；原页面显示771套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 53,
+      "dashboardCollection": "projects",
+      "name": "瑞璟佳苑",
+      "dashboardName": "半壁店地块 保利熙瑞",
+      "summaryRecordName": "瑞璟佳苑",
+      "summaryDeveloper": "北京慧海常筑置业有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8189721&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8189722&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8162284&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8156312&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8189721&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)9号",
+        "京房售证字(2026)29号",
+        "京房售证字(2026)30号"
+      ],
+      "issueDates": [
+        "2026-01-26"
+      ],
+      "developer": "北京慧海常筑置业有限公司",
+      "district": "海淀区",
+      "group": "西部组团",
+      "plate": "四季青",
+      "residentialTotal": 323,
+      "approvedTotalSuites": 78,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 54,
+      "dashboardCollection": "projects",
+      "name": "海辰里",
+      "dashboardName": "宝山0016地块 海宸元境",
+      "summaryRecordName": "海辰里",
+      "summaryDeveloper": "北京京麓雅颂房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8132033&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8132033&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)138号"
+      ],
+      "issueDates": [],
+      "developer": "北京京麓雅颂房地产开发有限公司",
+      "district": "海淀区",
+      "group": "西部组团",
+      "plate": "四季青",
+      "residentialTotal": 396,
+      "approvedTotalSuites": 396,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：396套；原页面显示343套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 55,
+      "dashboardCollection": "projects",
+      "name": "海岄雅苑",
+      "dashboardName": "宝山0017地块 北京隅海岄",
+      "summaryRecordName": "海岄雅苑",
+      "summaryDeveloper": "北京海隅建业房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8217311&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8132032&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8217311&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)137号",
+        "京房售证字(2026)48号"
+      ],
+      "issueDates": [
+        "2026-06-06"
+      ],
+      "developer": "北京海隅建业房地产开发有限公司",
+      "district": "海淀区",
+      "group": "西部组团",
+      "plate": "四季青",
+      "residentialTotal": 442,
+      "approvedTotalSuites": 457,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：442套；原页面显示361套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 56,
+      "dashboardCollection": "projects",
+      "name": "源境苑 / 源颂苑",
+      "dashboardName": "中海长安源境",
+      "summaryRecordName": "源境苑 / 源颂苑",
+      "summaryDeveloper": "北京海鑫兴业房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8057513&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7972843&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7913560&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8168122&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8129234&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8092297&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8057513&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2024)129号",
+        "京房售证字(2025)69号",
+        "京房售证字(2025)89号",
+        "京房售证字(2026)12号"
+      ],
+      "issueDates": [
+        "2026-02-13"
+      ],
+      "developer": "北京海鑫兴业房地产开发有限公司",
+      "district": "石景山区",
+      "group": "西部组团",
+      "plate": "京西商务",
+      "residentialTotal": 424,
+      "approvedTotalSuites": 358,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 57,
+      "dashboardCollection": "projects",
+      "name": "璟悦家园",
+      "dashboardName": "首钢璟悦长安",
+      "summaryRecordName": "璟悦家园",
+      "summaryDeveloper": "北京首景房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8067898&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8067898&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2025)73号"
+      ],
+      "issueDates": [],
+      "developer": "北京首景房地产开发有限公司",
+      "district": "石景山区",
+      "group": "西部组团",
+      "plate": "京西商务",
+      "residentialTotal": 700,
+      "approvedTotalSuites": 700,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：700套；原页面显示541套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 58,
+      "dashboardCollection": "projects",
+      "name": "瑞宸苑 / 瑞玉苑",
+      "dashboardName": "西黄村地块 中海瑞文里",
+      "summaryRecordName": "瑞玉苑 / 瑞宸苑",
+      "summaryDeveloper": "待核",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191696&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8156388&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8102776&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191695&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8156386&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8138322&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8116266&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8104625&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8104626&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191696&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)4号",
+        "京房售证字(2026)3号"
+      ],
+      "issueDates": [
+        "2026-01-26"
+      ],
+      "developer": "待核",
+      "district": "石景山区",
+      "group": "西部组团",
+      "plate": "苹果园",
+      "residentialTotal": 819,
+      "approvedTotalSuites": 56,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 59,
+      "dashboardCollection": "projects",
+      "name": "西贤嘉苑",
+      "dashboardName": "京能西贤府",
+      "summaryRecordName": "京能·西贤府",
+      "summaryDeveloper": "",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7870806&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7870806&systemID=2&srcId=1",
+      "permits": [],
+      "issueDates": [],
+      "developer": "",
+      "district": "丰台区",
+      "group": "西部组团",
+      "plate": "小屯",
+      "residentialTotal": 428,
+      "approvedTotalSuites": 428,
+      "inventoryNote": ""
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 60,
+      "dashboardCollection": "projects",
+      "name": "京南和颂家园",
+      "dashboardName": "中建和颂九里",
+      "summaryRecordName": "中建和颂九里（备案名需进一步从页内确认）",
+      "summaryDeveloper": "待核",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7864100&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7864100&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2024)49号"
+      ],
+      "issueDates": [],
+      "developer": "待核",
+      "district": "丰台区",
+      "group": "西部组团",
+      "plate": "小屯",
+      "residentialTotal": 572,
+      "approvedTotalSuites": 572,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：572套；原页面显示545套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 61,
+      "dashboardCollection": "projects",
+      "name": "长安锦和嘉苑",
+      "dashboardName": "长安华曦府",
+      "summaryRecordName": "长安锦和嘉苑",
+      "summaryDeveloper": "待核",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7976630&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7962637&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7976630&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2023)73号"
+      ],
+      "issueDates": [],
+      "developer": "待核",
+      "district": "门头沟区",
+      "group": "西部组团",
+      "plate": "门头沟新城",
+      "residentialTotal": 676,
+      "approvedTotalSuites": 676,
+      "inventoryNote": "住建委楼盘表全量批准销售套数复核：676套；原页面显示585套"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 62,
+      "dashboardCollection": "projects",
+      "name": "万象茗筑小区",
+      "dashboardName": "万象茗筑",
+      "summaryRecordName": "万象茗筑小区",
+      "summaryDeveloper": "北京和盛臻品房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211285&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211285&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)43号"
+      ],
+      "issueDates": [
+        "2026-05-27"
+      ],
+      "developer": "北京和盛臻品房地产开发有限公司",
+      "district": "大兴区",
+      "group": "西南组团",
+      "plate": "西红门",
+      "residentialTotal": 518,
+      "approvedTotalSuites": 518,
+      "inventoryNote": "住建委期房签约统计：住宅已签约31套，已签约面积2947.84㎡，成交均价49338.05元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 63,
+      "dashboardCollection": "projects",
+      "name": "嘉棠雅苑",
+      "dashboardName": "嘉棠雅序",
+      "summaryRecordName": "嘉棠雅苑",
+      "summaryDeveloper": "北京丰合嘉汇置业有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)44号"
+      ],
+      "issueDates": [
+        "2026-05-27"
+      ],
+      "developer": "北京丰合嘉汇置业有限公司",
+      "district": "丰台区",
+      "group": "未分组",
+      "plate": "丰科路",
+      "residentialTotal": 446,
+      "approvedTotalSuites": 446,
+      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)44号446套。 住建委期房签约统计：住宅已签约174套，已签约面积18881.34㎡，成交均价69642.6元/㎡；剩余套数按批准住宅总套数扣减已签约套数兜底展示。"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 64,
+      "dashboardCollection": "projects",
+      "name": "青和家园",
+      "dashboardName": "青雲国樾",
+      "summaryRecordName": "青和家园",
+      "summaryDeveloper": "北京铁工城市开发建设有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)50号"
+      ],
+      "issueDates": [
+        "2026-06-18"
+      ],
+      "developer": "北京铁工城市开发建设有限公司",
+      "district": "顺义区",
+      "group": "东北组团",
+      "plate": "后沙峪",
+      "residentialTotal": 400,
+      "approvedTotalSuites": 400,
+      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)50号400套。 住建委楼盘表8栋住宅楼房源状态复核：共400套，绿色可售313套，已预订19套，已签约50套，网上联机备案18套；剩余套数按绿色可售住宅房源计。"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": 65,
+      "dashboardCollection": "projects",
+      "name": "樾序海苑",
+      "dashboardName": "龍樾海序",
+      "summaryRecordName": "樾序海苑",
+      "summaryDeveloper": "北京城华房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)39号"
+      ],
+      "issueDates": [
+        "2026-05-10"
+      ],
+      "developer": "北京城华房地产开发有限公司",
+      "district": "昌平区",
+      "group": "未分组",
+      "plate": "东小口",
+      "residentialTotal": 594,
+      "approvedTotalSuites": 594,
+      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)39号594套。 住建委期房签约统计：住宅已签约680套，已签约面积65216.2㎡，成交均价54378.52元/㎡。当前详情页仅展示8/12个楼栋信息，批准住宅套数按已签约套数下限兜底展示。"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": "launch-1",
+      "dashboardCollection": "launchProjects",
+      "name": "嘉棠家苑",
+      "dashboardName": "嘉棠璟樾",
+      "summaryRecordName": "嘉棠家苑",
+      "summaryDeveloper": "北京建兴丰汇置业有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157580&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8228442&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157580&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)5号",
+        "京房售证字(2026)53号"
+      ],
+      "issueDates": [],
+      "developer": "北京建兴丰汇置业有限公司",
+      "district": "丰台区",
+      "group": "西南组团",
+      "plate": "六里桥",
+      "residentialTotal": 440,
+      "approvedTotalSuites": 440,
+      "inventoryNote": "住建委楼盘表按住宅楼汇总：京房售证字(2026)5号437套 + 京房售证字(2026)53号3套 = 440套；房源状态复核：可售137套、已预订78套、已签约/网上联机备案225套，剩余套数按绿色可售房源计。"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": "launch-2",
+      "dashboardCollection": "launchProjects",
+      "name": "贤岸湾庭",
+      "dashboardName": "国贤府PARK",
+      "summaryRecordName": "贤岸湾庭",
+      "summaryDeveloper": "北京合诚未来房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176764&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176764&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)22号"
+      ],
+      "issueDates": [],
+      "developer": "北京合诚未来房地产开发有限公司",
+      "district": "昌平区",
+      "group": "北部组团",
+      "plate": "天通苑",
+      "residentialTotal": 832,
+      "approvedTotalSuites": 832,
+      "inventoryNote": "住建委楼盘表全量18栋住宅楼汇总：832套，批准销售面积91,182.72㎡；房源状态复核：可售311套、已预订2套、已签约/网上联机备案519套，剩余套数按绿色可售房源计。"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": "launch-3",
+      "dashboardCollection": "launchProjects",
+      "name": "寰逸佳苑",
+      "dashboardName": "未来城星寰时代",
+      "summaryRecordName": "寰逸佳苑",
+      "summaryDeveloper": "北京未来科技城昌信置业有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176578&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176578&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)19号"
+      ],
+      "issueDates": [],
+      "developer": "北京未来科技城昌信置业有限公司",
+      "district": "昌平区",
+      "group": "北部组团",
+      "plate": "能源谷",
+      "residentialTotal": 647,
+      "approvedTotalSuites": 647,
+      "inventoryNote": "住建委楼盘表全量15栋住宅楼汇总：647套，批准销售面积61,946.93㎡；房源状态复核：可售218套、已预订137套、已签约/网上联机备案292套，剩余套数按绿色可售房源计。"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": "launch-4",
+      "dashboardCollection": "launchProjects",
+      "name": "满和苑",
+      "dashboardName": "中海玖樹满和",
+      "summaryRecordName": "满和苑",
+      "summaryDeveloper": "北京海铧房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8173128&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8185588&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203797&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8173128&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)16号",
+        "京房售证字(2026)27号",
+        "京房售证字(2026)40号"
+      ],
+      "issueDates": [],
+      "developer": "北京海铧房地产开发有限公司",
+      "district": "通州区",
+      "group": "CBD-副中心组团",
+      "plate": "果园",
+      "residentialTotal": 578,
+      "approvedTotalSuites": 578,
+      "inventoryNote": "住建委楼盘表按住宅楼汇总：京房售证字(2026)16号476套 + 京房售证字(2026)27号72套 + 京房售证字(2026)40号30套 = 578套；房源状态复核：可售19套、已预订0套、已签约/网上联机备案559套，剩余套数按绿色可售房源计。"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": "launch-5",
+      "dashboardCollection": "launchProjects",
+      "name": "金阙华院",
+      "dashboardName": "中建方程国贤府",
+      "summaryRecordName": "金阙华院",
+      "summaryDeveloper": "北京丰程置业有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8177162&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8205387&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8226661&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8177162&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)23号",
+        "京房售证字(2026)41号",
+        "京房售证字(2026)51号"
+      ],
+      "issueDates": [],
+      "developer": "北京丰程置业有限公司",
+      "district": "丰台区",
+      "group": "西南组团",
+      "plate": "园博园",
+      "residentialTotal": 508,
+      "approvedTotalSuites": 508,
+      "inventoryNote": "住建委楼盘表按住宅楼汇总：京房售证字(2026)23号476套 + 京房售证字(2026)41号32套 = 508套；京房售证字(2026)51号为地下车位/丙二类库房，未计住宅；签约统计复核：8177162页住宅已签452套、8205387页住宅已签30套，合计482套；房源状态复核：可售26套、已预订0套，剩余套数按绿色可售住宅房源计。"
+    },
+    {
+      "source": "dashboard",
+      "dashboardId": "launch-6",
+      "dashboardCollection": "launchProjects",
+      "name": "栖云嘉苑",
+      "dashboardName": "北投栖澐湾",
+      "summaryRecordName": "栖云嘉苑",
+      "summaryDeveloper": "北京北投宏象房地产开发有限公司",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8181215&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8213569&systemID=2&srcId=1"
+      ],
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8181215&systemID=2&srcId=1",
+      "permits": [
+        "京房售证字(2026)26号",
+        "京房售证字(2026)46号"
+      ],
+      "issueDates": [],
+      "developer": "北京北投宏象房地产开发有限公司",
+      "district": "通州区",
+      "group": "CBD-副中心组团",
+      "plate": "张家湾",
+      "residentialTotal": 350,
+      "approvedTotalSuites": 350,
+      "inventoryNote": "住建委楼盘表按住宅楼汇总：京房售证字(2026)26号246套 + 京房售证字(2026)46号104套 = 350套；房源状态复核：可售203套、已预订0套、已签约/网上联机备案147套，剩余套数按绿色可售房源计。"
+    },
+    {
+      "source": "officialNewLaunch",
       "name": "玉章苑",
       "dashboardName": "玉章苑",
       "urls": [
@@ -25,6 +1870,7 @@
       "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)2号20套。"
     },
     {
+      "source": "officialNewLaunch",
       "name": "长河花园",
       "dashboardName": "长河花园",
       "urls": [
@@ -46,6 +1892,7 @@
       "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)7号16套。"
     },
     {
+      "source": "officialNewLaunch",
       "name": "誉淙家园",
       "dashboardName": "誉淙家园",
       "urls": [
@@ -67,6 +1914,7 @@
       "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)8号303套。"
     },
     {
+      "source": "officialNewLaunch",
       "name": "御林湾苑",
       "dashboardName": "御林湾苑",
       "urls": [
@@ -88,6 +1936,7 @@
       "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)10号1023套。"
     },
     {
+      "source": "officialNewLaunch",
       "name": "缦云福苑（二期）",
       "dashboardName": "缦云福苑（二期）",
       "urls": [
@@ -109,6 +1958,7 @@
       "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)21号135套。"
     },
     {
+      "source": "officialNewLaunch",
       "name": "云溪花园小区",
       "dashboardName": "云溪花园小区",
       "urls": [
@@ -130,6 +1980,7 @@
       "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)28号56套。"
     },
     {
+      "source": "officialNewLaunch",
       "name": "熙区嘉园",
       "dashboardName": "熙区嘉园",
       "urls": [
@@ -151,6 +2002,7 @@
       "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)34号546套。"
     },
     {
+      "source": "officialNewLaunch",
       "name": "璟瑞家园",
       "dashboardName": "璟瑞家园",
       "urls": [
@@ -172,27 +2024,7 @@
       "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)35号379套。"
     },
     {
-      "name": "樾序海苑",
-      "dashboardName": "樾序海苑",
-      "urls": [
-        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1"
-      ],
-      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1",
-      "permits": [
-        "京房售证字(2026)39号"
-      ],
-      "issueDates": [
-        "2026-05-10"
-      ],
-      "developer": "北京城华房地产开发有限公司",
-      "district": "昌平区",
-      "group": "北部组团",
-      "plate": "天通苑",
-      "residentialTotal": 594,
-      "approvedTotalSuites": 594,
-      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)39号594套。"
-    },
-    {
+      "source": "officialNewLaunch",
       "name": "铂瑞府",
       "dashboardName": "铂瑞府",
       "urls": [
@@ -214,48 +2046,7 @@
       "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)42号383套。"
     },
     {
-      "name": "嘉棠雅苑",
-      "dashboardName": "嘉棠雅苑",
-      "urls": [
-        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1"
-      ],
-      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1",
-      "permits": [
-        "京房售证字(2026)44号"
-      ],
-      "issueDates": [
-        "2026-05-27"
-      ],
-      "developer": "北京丰合嘉汇置业有限公司",
-      "district": "丰台区",
-      "group": "西南组团",
-      "plate": "高立庄",
-      "residentialTotal": 446,
-      "approvedTotalSuites": 446,
-      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)44号446套。"
-    },
-    {
-      "name": "青和家园",
-      "dashboardName": "青和家园",
-      "urls": [
-        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1"
-      ],
-      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1",
-      "permits": [
-        "京房售证字(2026)50号"
-      ],
-      "issueDates": [
-        "2026-06-18"
-      ],
-      "developer": "北京铁工城市开发建设有限公司",
-      "district": "顺义区",
-      "group": "东北组团",
-      "plate": "后沙峪",
-      "residentialTotal": 400,
-      "approvedTotalSuites": 400,
-      "inventoryNote": "住建委预售证详情页地上住宅批准套数汇总；车位、地下库房、商办证不计入住宅总套数；不代表当前剩余套数。 计住宅证：京房售证字(2026)50号400套。"
-    },
-    {
+      "source": "officialNewLaunch",
       "name": "国樾天颂府",
       "dashboardName": "国樾天颂府",
       "urls": [
