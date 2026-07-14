@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-11 21:41:55",
+  "generatedAt": "2026-07-14 10:27:01",
   "scope": "页面全部已匹配住建委项目 + 页面未覆盖的新开盘住宅补充项目；取证时间按住建委预售许可证发证日期；总套数/剩余套数/累计已售取自住建委楼盘表房源状态。",
   "fields": {
     "projectName": "项目名称",
@@ -24,14 +24,14 @@
       "group": "西南组团",
       "plate": "西红门",
       "totalSuites": 518,
-      "remainingSuites": 490,
-      "cumulativeSoldSuites": 20,
+      "remainingSuites": 221,
+      "cumulativeSoldSuites": 9,
       "contractSignedSuites": 0,
-      "filedSuites": 20,
+      "filedSuites": 9,
       "bookedSuites": 0,
       "signedStatsSuites": 31,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 18:38:44",
+      "fetchedAt": "2026-07-14 10:21:12",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211285&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211285&systemID=2&srcId=1"
@@ -45,7 +45,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211285&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共518套，绿色可售490套，已预订0套，已签约0套，网上联机备案20套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约31套，已签约面积2947.84㎡，成交均价49338.05元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共518套，绿色可售221套，已预订0套，已签约0套，网上联机备案9套，未知状态288套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约31套，已签约面积2947.84㎡，成交均价49338.05元/㎡。"
     },
     {
       "projectName": "中国铁建花语璟云",
@@ -60,14 +60,14 @@
       "group": "CBD-副中心组团",
       "plate": "梨园",
       "totalSuites": 202,
-      "remainingSuites": 84,
-      "cumulativeSoldSuites": 110,
-      "contractSignedSuites": 1,
-      "filedSuites": 109,
-      "bookedSuites": 1,
-      "signedStatsSuites": 117,
-      "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 16:37:23",
+      "remainingSuites": 75,
+      "cumulativeSoldSuites": 99,
+      "contractSignedSuites": 2,
+      "filedSuites": 97,
+      "bookedSuites": 2,
+      "signedStatsSuites": 118,
+      "retryAttempts": 1,
+      "fetchedAt": "2026-07-14 10:06:49",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8167201&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8167201&systemID=2&srcId=1",
@@ -83,7 +83,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8167201&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共202套，绿色可售84套，已预订1套，已签约1套，网上联机备案109套，未知状态7套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约117套，已签约面积12168.2㎡，成交均价52251.12元/㎡。"
+      "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共202套，绿色可售75套，已预订2套，已签约2套，网上联机备案97套，未知状态26套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约118套，已签约面积12274.48㎡，成交均价52223.45元/㎡。"
     },
     {
       "projectName": "中建和颂九里",
@@ -119,7 +119,9 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7864100&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共572套，绿色可售154套，已预订1套，已签约0套，网上联机备案140套，未知状态277套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约189套，已签约面积22041.88㎡，成交均价59393.28元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共572套，绿色可售154套，已预订1套，已签约0套，网上联机备案140套，未知状态277套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约189套，已签约面积22041.88㎡，成交均价59393.28元/㎡。",
+      "preservedFromPrevious": true,
+      "latestFailureAt": "2026-07-14 10:20:38"
     },
     {
       "projectName": "中建方程国贤府",
@@ -134,14 +136,14 @@
       "group": "西南组团",
       "plate": "园博园",
       "totalSuites": 508,
-      "remainingSuites": 79,
-      "cumulativeSoldSuites": 190,
-      "contractSignedSuites": 4,
-      "filedSuites": 186,
+      "remainingSuites": 38,
+      "cumulativeSoldSuites": 30,
+      "contractSignedSuites": 0,
+      "filedSuites": 30,
       "bookedSuites": 0,
-      "signedStatsSuites": 485,
+      "signedStatsSuites": 31,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 19:39:35",
+      "fetchedAt": "2026-07-14 10:24:25",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8177162&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8177162&systemID=2&srcId=1",
@@ -157,7 +159,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8177162&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表15栋住宅楼房源状态复核：共508套，绿色可售79套，已预订0套，已签约4套，网上联机备案186套，未知状态239套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约485套，已签约面积45538.33㎡，成交均价45433.99元/㎡。"
+      "auditNote": "住建委楼盘表9栋住宅楼房源状态复核：共508套，绿色可售38套，已预订0套，已签约0套，网上联机备案30套，未知状态440套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约31套，已签约面积2569.25㎡，成交均价44997.68元/㎡。"
     },
     {
       "projectName": "中建运河玖院",
@@ -172,14 +174,14 @@
       "group": "CBD-副中心组团",
       "plate": "运河商务区",
       "totalSuites": 1443,
-      "remainingSuites": 107,
-      "cumulativeSoldSuites": 553,
-      "contractSignedSuites": 1,
-      "filedSuites": 552,
-      "bookedSuites": 21,
-      "signedStatsSuites": 1333,
-      "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 16:37:43",
+      "remainingSuites": 82,
+      "cumulativeSoldSuites": 427,
+      "contractSignedSuites": 2,
+      "filedSuites": 425,
+      "bookedSuites": 17,
+      "signedStatsSuites": 1336,
+      "retryAttempts": 1,
+      "fetchedAt": "2026-07-14 10:08:49",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176819&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176819&systemID=2&srcId=1",
@@ -197,7 +199,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176819&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表18栋住宅楼房源状态复核：共1443套，绿色可售107套，已预订21套，已签约1套，网上联机备案552套，未知状态762套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约1333套，已签约面积176713.19㎡，成交均价62080.18元/㎡。"
+      "auditNote": "住建委楼盘表18栋住宅楼房源状态复核：共1443套，绿色可售82套，已预订17套，已签约2套，网上联机备案425套，未知状态917套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约1336套，已签约面积177262.2㎡，成交均价62092.42元/㎡。"
     },
     {
       "projectName": "中海丽泽叁號院",
@@ -212,14 +214,14 @@
       "group": "西南组团",
       "plate": "丽泽",
       "totalSuites": 590,
-      "remainingSuites": 318,
-      "cumulativeSoldSuites": 218,
-      "contractSignedSuites": 14,
-      "filedSuites": 204,
-      "bookedSuites": 37,
-      "signedStatsSuites": 222,
+      "remainingSuites": 137,
+      "cumulativeSoldSuites": 112,
+      "contractSignedSuites": 11,
+      "filedSuites": 101,
+      "bookedSuites": 34,
+      "signedStatsSuites": 223,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 16:39:33",
+      "fetchedAt": "2026-07-14 10:15:16",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8099117&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8099117&systemID=2&srcId=1",
@@ -235,7 +237,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8099117&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表17栋住宅楼房源状态复核：共590套，绿色可售318套，已预订37套，已签约14套，网上联机备案204套，未知状态17套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约222套，已签约面积25995.56㎡，成交均价89358.12元/㎡。"
+      "auditNote": "住建委楼盘表17栋住宅楼房源状态复核：共590套，绿色可售137套，已预订34套，已签约11套，网上联机备案101套，未知状态307套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约223套，已签约面积26133.36㎡，成交均价89341.91元/㎡。"
     },
     {
       "projectName": "中海丽金府",
@@ -250,14 +252,14 @@
       "group": "西南组团",
       "plate": "丽泽",
       "totalSuites": 1167,
-      "remainingSuites": 871,
-      "cumulativeSoldSuites": 267,
-      "contractSignedSuites": 18,
-      "filedSuites": 249,
-      "bookedSuites": 10,
+      "remainingSuites": 381,
+      "cumulativeSoldSuites": 199,
+      "contractSignedSuites": 11,
+      "filedSuites": 188,
+      "bookedSuites": 9,
       "signedStatsSuites": 258,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 16:39:17",
+      "fetchedAt": "2026-07-14 10:14:22",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8079201&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8079201&systemID=2&srcId=1",
@@ -274,7 +276,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8079201&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表19栋住宅楼房源状态复核：共1167套，绿色可售871套，已预订10套，已签约18套，网上联机备案249套，未知状态19套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约258套，已签约面积39981.55㎡，成交均价103691.88元/㎡。"
+      "auditNote": "住建委楼盘表19栋住宅楼房源状态复核：共1167套，绿色可售381套，已预订9套，已签约11套，网上联机备案188套，未知状态578套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约258套，已签约面积39981.55㎡，成交均价103691.88元/㎡。"
     },
     {
       "projectName": "中海安澜北京",
@@ -291,12 +293,12 @@
       "totalSuites": 268,
       "remainingSuites": 103,
       "cumulativeSoldSuites": 65,
-      "contractSignedSuites": 2,
-      "filedSuites": 63,
+      "contractSignedSuites": 1,
+      "filedSuites": 64,
       "bookedSuites": 1,
       "signedStatsSuites": 82,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 12:32:56",
+      "fetchedAt": "2026-07-14 09:58:23",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8130467&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8130467&systemID=2&srcId=1"
@@ -310,7 +312,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8130467&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共268套，绿色可售103套，已预订1套，已签约2套，网上联机备案63套，未知状态99套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约82套，已签约面积20354.61㎡，成交均价145755.08元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共268套，绿色可售103套，已预订1套，已签约1套，网上联机备案64套，未知状态99套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约82套，已签约面积20354.61㎡，成交均价145755.08元/㎡。"
     },
     {
       "projectName": "中海未来之境",
@@ -325,14 +327,14 @@
       "group": "北部组团",
       "plate": "回龙观",
       "totalSuites": 986,
-      "remainingSuites": 91,
-      "cumulativeSoldSuites": 198,
+      "remainingSuites": 73,
+      "cumulativeSoldSuites": 190,
       "contractSignedSuites": 0,
-      "filedSuites": 198,
-      "bookedSuites": 47,
+      "filedSuites": 190,
+      "bookedSuites": 38,
       "signedStatsSuites": 974,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 12:32:51",
+      "fetchedAt": "2026-07-14 09:58:17",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8064028&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8064028&systemID=2&srcId=1",
@@ -350,7 +352,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8064028&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表6栋住宅楼房源状态复核：共986套，绿色可售91套，已预订47套，已签约0套，网上联机备案198套，未知状态650套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约974套，已签约面积111489.82㎡，成交均价60312.03元/㎡。"
+      "auditNote": "住建委楼盘表6栋住宅楼房源状态复核：共986套，绿色可售73套，已预订38套，已签约0套，网上联机备案190套，未知状态685套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约974套，已签约面积111489.82㎡，成交均价60312.03元/㎡。"
     },
     {
       "projectName": "中海玖樹满和",
@@ -365,14 +367,14 @@
       "group": "CBD-副中心组团",
       "plate": "果园",
       "totalSuites": 578,
-      "remainingSuites": 18,
-      "cumulativeSoldSuites": 304,
+      "remainingSuites": 15,
+      "cumulativeSoldSuites": 278,
       "contractSignedSuites": 3,
-      "filedSuites": 301,
+      "filedSuites": 275,
       "bookedSuites": 1,
-      "signedStatsSuites": 559,
+      "signedStatsSuites": 532,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 19:39:27",
+      "fetchedAt": "2026-07-14 10:23:52",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8173128&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8173128&systemID=2&srcId=1",
@@ -388,7 +390,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8173128&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表5栋住宅楼房源状态复核：共578套，绿色可售18套，已预订1套，已签约3套，网上联机备案301套，未知状态255套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约559套，已签约面积52276.85㎡，成交均价50943.91元/㎡。"
+      "auditNote": "住建委楼盘表4栋住宅楼房源状态复核：共578套，绿色可售15套，已预订1套，已签约3套，网上联机备案275套，未知状态284套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约532套，已签约面积49535.93㎡，成交均价51020.98元/㎡。"
     },
     {
       "projectName": "中海萬吉玖序",
@@ -403,14 +405,14 @@
       "group": "东北组团",
       "plate": "酒仙桥",
       "totalSuites": 467,
-      "remainingSuites": 117,
-      "cumulativeSoldSuites": 152,
-      "contractSignedSuites": 9,
-      "filedSuites": 143,
-      "bookedSuites": 9,
+      "remainingSuites": 146,
+      "cumulativeSoldSuites": 294,
+      "contractSignedSuites": 15,
+      "filedSuites": 279,
+      "bookedSuites": 11,
       "signedStatsSuites": 288,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 13:33:21",
+      "fetchedAt": "2026-07-14 09:59:15",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8078140&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8078140&systemID=2&srcId=1",
@@ -426,7 +428,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8078140&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表16栋住宅楼房源状态复核：共467套，绿色可售117套，已预订9套，已签约9套，网上联机备案143套，未知状态189套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约288套，已签约面积60478.86㎡，成交均价111956.17元/㎡。"
+      "auditNote": "住建委楼盘表16栋住宅楼房源状态复核：共467套，绿色可售146套，已预订11套，已签约15套，网上联机备案279套，未知状态16套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约288套，已签约面积60478.86㎡，成交均价111956.17元/㎡。"
     },
     {
       "projectName": "中海长安源境",
@@ -441,14 +443,14 @@
       "group": "西部组团",
       "plate": "京西商务",
       "totalSuites": 424,
-      "remainingSuites": 354,
-      "cumulativeSoldSuites": 42,
-      "contractSignedSuites": 4,
-      "filedSuites": 38,
-      "bookedSuites": 14,
+      "remainingSuites": 157,
+      "cumulativeSoldSuites": 28,
+      "contractSignedSuites": 2,
+      "filedSuites": 26,
+      "bookedSuites": 6,
       "signedStatsSuites": 256,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 18:27:13",
+      "fetchedAt": "2026-07-14 10:19:10",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8057513&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8057513&systemID=2&srcId=1",
@@ -467,7 +469,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8057513&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表14栋住宅楼房源状态复核：共424套，绿色可售354套，已预订14套，已签约4套，网上联机备案38套，未知状态14套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约256套，已签约面积30843.76㎡，成交均价58192.46元/㎡。"
+      "auditNote": "住建委楼盘表14栋住宅楼房源状态复核：共424套，绿色可售157套，已预订6套，已签约2套，网上联机备案26套，未知状态233套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约256套，已签约面积30843.76㎡，成交均价58192.46元/㎡。"
     },
     {
       "projectName": "云溪花园小区",
@@ -482,14 +484,14 @@
       "group": "其他组团",
       "plate": "溪翁庄",
       "totalSuites": 56,
-      "remainingSuites": 53,
-      "cumulativeSoldSuites": 1,
+      "remainingSuites": 27,
+      "cumulativeSoldSuites": 0,
       "contractSignedSuites": 0,
-      "filedSuites": 1,
+      "filedSuites": 0,
       "bookedSuites": 0,
       "signedStatsSuites": 1,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 20:40:57",
+      "fetchedAt": "2026-07-14 10:25:54",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8186681&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8186681&systemID=2&srcId=1"
@@ -503,7 +505,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8186681&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表2栋住宅楼房源状态复核：共56套，绿色可售53套，已预订0套，已签约0套，网上联机备案1套，未知状态2套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约1套，已签约面积97.77㎡，成交均价15137.57元/㎡。"
+      "auditNote": "住建委楼盘表2栋住宅楼房源状态复核：共56套，绿色可售27套，已预订0套，已签约0套，网上联机备案0套，未知状态29套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约1套，已签约面积97.77㎡，成交均价15137.57元/㎡。"
     },
     {
       "projectName": "京能西贤府",
@@ -518,14 +520,14 @@
       "group": "西部组团",
       "plate": "小屯",
       "totalSuites": 428,
-      "remainingSuites": 375,
-      "cumulativeSoldSuites": 44,
+      "remainingSuites": 246,
+      "cumulativeSoldSuites": 31,
       "contractSignedSuites": 0,
-      "filedSuites": 44,
+      "filedSuites": 31,
       "bookedSuites": 2,
       "signedStatsSuites": 44,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 18:27:43",
+      "fetchedAt": "2026-07-14 10:20:37",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7870806&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7870806&systemID=2&srcId=1"
@@ -539,7 +541,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7870806&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共428套，绿色可售375套，已预订2套，已签约0套，网上联机备案44套，未知状态7套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约44套，已签约面积6197.88㎡，成交均价68816.33元/㎡。"
+      "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共428套，绿色可售246套，已预订2套，已签约0套，网上联机备案31套，未知状态149套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约44套，已签约面积6197.88㎡，成交均价68816.33元/㎡。"
     },
     {
       "projectName": "住总芳华里",
@@ -554,14 +556,14 @@
       "group": "东北组团",
       "plate": "仁和",
       "totalSuites": 639,
-      "remainingSuites": 121,
-      "cumulativeSoldSuites": 250,
-      "contractSignedSuites": 4,
-      "filedSuites": 246,
-      "bookedSuites": 2,
-      "signedStatsSuites": 393,
+      "remainingSuites": 81,
+      "cumulativeSoldSuites": 141,
+      "contractSignedSuites": 1,
+      "filedSuites": 140,
+      "bookedSuites": 1,
+      "signedStatsSuites": 397,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 13:33:29",
+      "fetchedAt": "2026-07-14 09:59:22",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8069990&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8069990&systemID=2&srcId=1",
@@ -576,7 +578,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8069990&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表15栋住宅楼房源状态复核：共639套，绿色可售121套，已预订2套，已签约4套，网上联机备案246套，未知状态266套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约393套，已签约面积36579.83㎡，成交均价39102.28元/㎡。"
+      "auditNote": "住建委楼盘表15栋住宅楼房源状态复核：共639套，绿色可售81套，已预订1套，已签约1套，网上联机备案140套，未知状态416套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约397套，已签约面积36957.97㎡，成交均价39091.02元/㎡。"
     },
     {
       "projectName": "保利朝观天珺",
@@ -591,14 +593,14 @@
       "group": "CBD-副中心组团",
       "plate": "管庄",
       "totalSuites": 656,
-      "remainingSuites": 353,
-      "cumulativeSoldSuites": 290,
-      "contractSignedSuites": 15,
-      "filedSuites": 275,
-      "bookedSuites": 1,
-      "signedStatsSuites": 262,
+      "remainingSuites": 146,
+      "cumulativeSoldSuites": 29,
+      "contractSignedSuites": 2,
+      "filedSuites": 27,
+      "bookedSuites": 0,
+      "signedStatsSuites": 17,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 14:34:57",
+      "fetchedAt": "2026-07-14 10:00:41",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8081196&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8081196&systemID=2&srcId=1",
@@ -613,7 +615,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8081196&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表12栋住宅楼房源状态复核：共656套，绿色可售353套，已预订1套，已签约15套，网上联机备案275套，未知状态12套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约262套，已签约面积34654.29㎡，成交均价79902.35元/㎡。"
+      "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共656套，绿色可售146套，已预订0套，已签约2套，网上联机备案27套，未知状态481套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约17套，已签约面积2401.97㎡，成交均价81114.33元/㎡。"
     },
     {
       "projectName": "北京国贤府贰期",
@@ -652,7 +654,9 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8104540&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表17栋住宅楼房源状态复核：共850套，绿色可售120套，已预订1套，已签约3套，网上联机备案422套，未知状态304套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约662套，已签约面积70329.47㎡，成交均价52024.28元/㎡。"
+      "auditNote": "住建委楼盘表17栋住宅楼房源状态复核：共850套，绿色可售120套，已预订1套，已签约3套，网上联机备案422套，未知状态304套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约662套，已签约面积70329.47㎡，成交均价52024.28元/㎡。",
+      "preservedFromPrevious": true,
+      "latestFailureAt": "2026-07-14 09:57:20"
     },
     {
       "projectName": "北京宸园",
@@ -667,14 +671,14 @@
       "group": "东北组团",
       "plate": "酒仙桥",
       "totalSuites": 799,
-      "remainingSuites": 47,
-      "cumulativeSoldSuites": 266,
-      "contractSignedSuites": 1,
-      "filedSuites": 265,
+      "remainingSuites": 28,
+      "cumulativeSoldSuites": 47,
+      "contractSignedSuites": 0,
+      "filedSuites": 47,
       "bookedSuites": 0,
       "signedStatsSuites": 582,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 12:33:32",
+      "fetchedAt": "2026-07-14 09:58:44",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8022869&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8022869&systemID=2&srcId=1",
@@ -689,7 +693,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8022869&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表12栋住宅楼房源状态复核：共799套，绿色可售47套，已预订0套，已签约1套，网上联机备案265套，未知状态486套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约582套，已签约面积97143.32㎡，成交均价110348.36元/㎡。"
+      "auditNote": "住建委楼盘表12栋住宅楼房源状态复核：共799套，绿色可售28套，已预订0套，已签约0套，网上联机备案47套，未知状态724套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约582套，已签约面积97143.32㎡，成交均价110348.36元/㎡。"
     },
     {
       "projectName": "北京润府",
@@ -704,14 +708,14 @@
       "group": "大亦庄组团",
       "plate": "次渠",
       "totalSuites": 643,
-      "remainingSuites": 271,
-      "cumulativeSoldSuites": 353,
-      "contractSignedSuites": 2,
-      "filedSuites": 351,
-      "bookedSuites": 5,
-      "signedStatsSuites": 1033,
+      "remainingSuites": 106,
+      "cumulativeSoldSuites": 188,
+      "contractSignedSuites": 0,
+      "filedSuites": 188,
+      "bookedSuites": 1,
+      "signedStatsSuites": 489,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 16:37:54",
+      "fetchedAt": "2026-07-14 10:09:35",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8137847&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8137847&systemID=2&srcId=1",
@@ -728,7 +732,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8137847&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表14栋住宅楼房源状态复核：共643套，绿色可售271套，已预订5套，已签约2套，网上联机备案351套，未知状态14套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约1033套，已签约面积120917.8㎡，成交均价57633.37元/㎡。"
+      "auditNote": "住建委楼盘表14栋住宅楼房源状态复核：共643套，绿色可售106套，已预订1套，已签约0套，网上联机备案188套，未知状态348套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约489套，已签约面积56003.71㎡，成交均价56806.33元/㎡。"
     },
     {
       "projectName": "北京隅东序",
@@ -743,14 +747,14 @@
       "group": "CBD-副中心组团",
       "plate": "十八里店",
       "totalSuites": 824,
-      "remainingSuites": 418,
-      "cumulativeSoldSuites": 71,
-      "contractSignedSuites": 1,
-      "filedSuites": 70,
-      "bookedSuites": 2,
-      "signedStatsSuites": 266,
+      "remainingSuites": 267,
+      "cumulativeSoldSuites": 50,
+      "contractSignedSuites": 3,
+      "filedSuites": 47,
+      "bookedSuites": 1,
+      "signedStatsSuites": 268,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 14:34:47",
+      "fetchedAt": "2026-07-14 10:00:20",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8026822&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8026822&systemID=2&srcId=1",
@@ -765,7 +769,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8026822&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表13栋住宅楼房源状态复核：共824套，绿色可售418套，已预订2套，已签约1套，网上联机备案70套，未知状态333套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约266套，已签约面积35013.39㎡，成交均价75698.83元/㎡。"
+      "auditNote": "住建委楼盘表13栋住宅楼房源状态复核：共824套，绿色可售267套，已预订1套，已签约3套，网上联机备案47套，未知状态506套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约268套，已签约面积35344.13㎡，成交均价75649.93元/㎡。"
     },
     {
       "projectName": "北京隅西颂",
@@ -780,14 +784,14 @@
       "group": "西南组团",
       "plate": "总部基地",
       "totalSuites": 479,
-      "remainingSuites": 275,
-      "cumulativeSoldSuites": 191,
-      "contractSignedSuites": 12,
-      "filedSuites": 179,
-      "bookedSuites": 3,
-      "signedStatsSuites": 194,
-      "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 16:38:33",
+      "remainingSuites": 23,
+      "cumulativeSoldSuites": 0,
+      "contractSignedSuites": 0,
+      "filedSuites": 0,
+      "bookedSuites": 0,
+      "signedStatsSuites": null,
+      "retryAttempts": 1,
+      "fetchedAt": "2026-07-14 10:11:39",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8101108&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8101108&systemID=2&srcId=1",
@@ -802,7 +806,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8101108&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表10栋住宅楼房源状态复核：共479套，绿色可售275套，已预订3套，已签约12套，网上联机备案179套，未知状态10套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约194套，已签约面积22964.07㎡，成交均价76794.44元/㎡。"
+      "auditNote": "住建委楼盘表3栋住宅楼房源状态复核：共479套，绿色可售23套，已预订0套，已签约0套，网上联机备案0套，未知状态456套；剩余套数按绿色可售住宅房源计。"
     },
     {
       "projectName": "北投栖澐湾",
@@ -817,14 +821,14 @@
       "group": "CBD-副中心组团",
       "plate": "张家湾",
       "totalSuites": 350,
-      "remainingSuites": 192,
-      "cumulativeSoldSuites": 148,
-      "contractSignedSuites": 20,
-      "filedSuites": 128,
+      "remainingSuites": 27,
+      "cumulativeSoldSuites": 71,
+      "contractSignedSuites": 4,
+      "filedSuites": 67,
       "bookedSuites": 0,
-      "signedStatsSuites": 149,
+      "signedStatsSuites": 155,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 19:39:46",
+      "fetchedAt": "2026-07-14 10:24:53",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8181215&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8181215&systemID=2&srcId=1",
@@ -839,7 +843,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8181215&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表10栋住宅楼房源状态复核：共350套，绿色可售192套，已预订0套，已签约20套，网上联机备案128套，未知状态10套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约149套，已签约面积14857.61㎡，成交均价36245.67元/㎡。"
+      "auditNote": "住建委楼盘表10栋住宅楼房源状态复核：共350套，绿色可售27套，已预订0套，已签约4套，网上联机备案67套，未知状态252套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约155套，已签约面积15415.74㎡，成交均价36280.12元/㎡。"
     },
     {
       "projectName": "半壁店地块 保利熙瑞",
@@ -854,14 +858,14 @@
       "group": "西部组团",
       "plate": "四季青",
       "totalSuites": 323,
-      "remainingSuites": 309,
+      "remainingSuites": 186,
       "cumulativeSoldSuites": 0,
       "contractSignedSuites": 0,
       "filedSuites": 0,
       "bookedSuites": 0,
       "signedStatsSuites": null,
-      "retryAttempts": 1,
-      "fetchedAt": "2026-07-11 18:26:45",
+      "retryAttempts": 0,
+      "fetchedAt": "2026-07-14 10:17:54",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8189721&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8189721&systemID=2&srcId=1",
@@ -878,7 +882,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8189721&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表14栋住宅楼房源状态复核：共323套，绿色可售309套，已预订0套，已签约0套，网上联机备案0套，未知状态14套；剩余套数按绿色可售住宅房源计。"
+      "auditNote": "住建委楼盘表10栋住宅楼房源状态复核：共323套，绿色可售186套，已预订0套，已签约0套，网上联机备案0套，未知状态137套；剩余套数按绿色可售住宅房源计。"
     },
     {
       "projectName": "华润北美乡间 北京润园",
@@ -893,14 +897,14 @@
       "group": "东北组团",
       "plate": "中央别墅区",
       "totalSuites": 1346,
-      "remainingSuites": 128,
-      "cumulativeSoldSuites": 220,
+      "remainingSuites": 52,
+      "cumulativeSoldSuites": 120,
       "contractSignedSuites": 0,
-      "filedSuites": 220,
-      "bookedSuites": 10,
-      "signedStatsSuites": 334,
+      "filedSuites": 120,
+      "bookedSuites": 5,
+      "signedStatsSuites": 224,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 14:34:21",
+      "fetchedAt": "2026-07-14 09:59:52",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8192048&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8192048&systemID=2&srcId=1",
@@ -917,7 +921,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8192048&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表19栋住宅楼房源状态复核：共1346套，绿色可售128套，已预订10套，已签约0套，网上联机备案220套，未知状态988套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约334套，已签约面积110177.27㎡，成交均价71900.16元/㎡。"
+      "auditNote": "住建委楼盘表12栋住宅楼房源状态复核：共1346套，绿色可售52套，已预订5套，已签约0套，网上联机备案120套，未知状态1169套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约224套，已签约面积74509.42㎡，成交均价72949.28元/㎡。"
     },
     {
       "projectName": "华润臻澐",
@@ -932,14 +936,14 @@
       "group": "北部组团",
       "plate": "清河",
       "totalSuites": 521,
-      "remainingSuites": 178,
-      "cumulativeSoldSuites": 144,
-      "contractSignedSuites": 10,
-      "filedSuites": 134,
-      "bookedSuites": 4,
+      "remainingSuites": 147,
+      "cumulativeSoldSuites": 120,
+      "contractSignedSuites": 6,
+      "filedSuites": 114,
+      "bookedSuites": 3,
       "signedStatsSuites": 232,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 11:32:46",
+      "fetchedAt": "2026-07-14 09:57:37",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8048704&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8048704&systemID=2&srcId=1"
@@ -953,7 +957,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8048704&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共521套，绿色可售178套，已预订4套，已签约10套，网上联机备案134套，未知状态195套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约232套，已签约面积42294.07㎡，成交均价122238.66元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共521套，绿色可售147套，已预订3套，已签约6套，网上联机备案114套，未知状态251套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约232套，已签约面积42294.07㎡，成交均价122238.66元/㎡。"
     },
     {
       "projectName": "和樾望雲",
@@ -968,14 +972,14 @@
       "group": "北部组团",
       "plate": "上地",
       "totalSuites": 944,
-      "remainingSuites": 60,
-      "cumulativeSoldSuites": 291,
-      "contractSignedSuites": 17,
-      "filedSuites": 274,
+      "remainingSuites": 50,
+      "cumulativeSoldSuites": 215,
+      "contractSignedSuites": 6,
+      "filedSuites": 209,
       "bookedSuites": 0,
       "signedStatsSuites": 681,
-      "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 11:32:20",
+      "retryAttempts": 1,
+      "fetchedAt": "2026-07-14 09:57:04",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8033909&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8033909&systemID=2&srcId=1",
@@ -990,7 +994,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8033909&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表11栋住宅楼房源状态复核：共944套，绿色可售60套，已预订0套，已签约17套，网上联机备案274套，未知状态593套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约681套，已签约面积89541.56㎡，成交均价105116.91元/㎡。"
+      "auditNote": "住建委楼盘表11栋住宅楼房源状态复核：共944套，绿色可售50套，已预订0套，已签约6套，网上联机备案209套，未知状态679套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约681套，已签约面积89541.56㎡，成交均价105116.91元/㎡。"
     },
     {
       "projectName": "和樾玉鸣",
@@ -1012,7 +1016,7 @@
       "bookedSuites": 0,
       "signedStatsSuites": 407,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 11:32:31",
+      "fetchedAt": "2026-07-14 09:57:17",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8034306&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8034306&systemID=2&srcId=1",
@@ -1042,14 +1046,14 @@
       "group": "北部组团",
       "plate": "永丰",
       "totalSuites": 1524,
-      "remainingSuites": 696,
-      "cumulativeSoldSuites": 291,
-      "contractSignedSuites": 17,
-      "filedSuites": 274,
+      "remainingSuites": 447,
+      "cumulativeSoldSuites": 238,
+      "contractSignedSuites": 13,
+      "filedSuites": 225,
       "bookedSuites": 3,
       "signedStatsSuites": 354,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 11:32:00",
+      "fetchedAt": "2026-07-14 09:56:27",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8105806&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8105806&systemID=2&srcId=1",
@@ -1065,7 +1069,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8105806&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表23栋住宅楼房源状态复核：共1524套，绿色可售696套，已预订3套，已签约17套，网上联机备案274套，未知状态534套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约354套，已签约面积37053.02㎡，成交均价81496.15元/㎡。"
+      "auditNote": "住建委楼盘表23栋住宅楼房源状态复核：共1524套，绿色可售447套，已预订3套，已签约13套，网上联机备案225套，未知状态836套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约354套，已签约面积37053.02㎡，成交均价81496.15元/㎡。"
     },
     {
       "projectName": "嘉棠璟樾",
@@ -1080,14 +1084,14 @@
       "group": "西南组团",
       "plate": "六里桥",
       "totalSuites": 440,
-      "remainingSuites": 132,
-      "cumulativeSoldSuites": 226,
-      "contractSignedSuites": 14,
-      "filedSuites": 212,
-      "bookedSuites": 73,
-      "signedStatsSuites": 230,
+      "remainingSuites": 2,
+      "cumulativeSoldSuites": 0,
+      "contractSignedSuites": 0,
+      "filedSuites": 0,
+      "bookedSuites": 0,
+      "signedStatsSuites": null,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 19:05:46",
+      "fetchedAt": "2026-07-14 10:22:41",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157580&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157580&systemID=2&srcId=1",
@@ -1102,7 +1106,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157580&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表9栋住宅楼房源状态复核：共440套，绿色可售132套，已预订73套，已签约14套，网上联机备案212套，未知状态9套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约230套，已签约面积28090.13㎡，成交均价78077.02元/㎡。"
+      "auditNote": "住建委楼盘表1栋住宅楼房源状态复核：共440套，绿色可售2套，已预订0套，已签约0套，网上联机备案0套，未知状态438套；剩余套数按绿色可售住宅房源计。"
     },
     {
       "projectName": "嘉棠雅序",
@@ -1117,14 +1121,14 @@
       "group": "未分组",
       "plate": "丰科路",
       "totalSuites": 446,
-      "remainingSuites": 281,
-      "cumulativeSoldSuites": 143,
-      "contractSignedSuites": 143,
-      "filedSuites": 0,
-      "bookedSuites": 14,
-      "signedStatsSuites": 184,
-      "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 18:38:53",
+      "remainingSuites": 93,
+      "cumulativeSoldSuites": 48,
+      "contractSignedSuites": 35,
+      "filedSuites": 13,
+      "bookedSuites": 6,
+      "signedStatsSuites": 196,
+      "retryAttempts": 1,
+      "fetchedAt": "2026-07-14 10:22:13",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1"
@@ -1138,7 +1142,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共446套，绿色可售281套，已预订14套，已签约143套，网上联机备案0套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约184套，已签约面积19941.49㎡，成交均价69599.63元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共446套，绿色可售93套，已预订6套，已签约35套，网上联机备案13套，未知状态299套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约196套，已签约面积21256.07㎡，成交均价69598.41元/㎡。"
     },
     {
       "projectName": "国樾天颂府",
@@ -1153,14 +1157,14 @@
       "group": "其他组团",
       "plate": "密云新城",
       "totalSuites": 314,
-      "remainingSuites": 297,
+      "remainingSuites": 268,
       "cumulativeSoldSuites": 8,
       "contractSignedSuites": 8,
       "filedSuites": 0,
-      "bookedSuites": 1,
+      "bookedSuites": 3,
       "signedStatsSuites": 12,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 21:41:55",
+      "fetchedAt": "2026-07-14 10:27:01",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8227940&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8227940&systemID=2&srcId=1"
@@ -1174,7 +1178,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8227940&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共314套，绿色可售297套，已预订1套，已签约8套，网上联机备案0套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约12套，已签约面积1152.69㎡，成交均价23875.64元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共314套，绿色可售268套，已预订3套，已签约8套，网上联机备案0套，未知状态35套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约12套，已签约面积1152.69㎡，成交均价23875.64元/㎡。"
     },
     {
       "projectName": "国誉星城",
@@ -1189,14 +1193,14 @@
       "group": "北部组团",
       "plate": "回龙观",
       "totalSuites": 449,
-      "remainingSuites": 194,
-      "cumulativeSoldSuites": 174,
+      "remainingSuites": 18,
+      "cumulativeSoldSuites": 0,
       "contractSignedSuites": 0,
-      "filedSuites": 174,
-      "bookedSuites": 67,
-      "signedStatsSuites": 177,
+      "filedSuites": 0,
+      "bookedSuites": 0,
+      "signedStatsSuites": 4,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 12:33:04",
+      "fetchedAt": "2026-07-14 09:58:27",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8158008&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8158008&systemID=2&srcId=1",
@@ -1211,7 +1215,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8158008&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表14栋住宅楼房源状态复核：共449套，绿色可售194套，已预订67套，已签约0套，网上联机备案174套，未知状态14套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约177套，已签约面积17194.36㎡，成交均价52567.57元/㎡。"
+      "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共449套，绿色可售18套，已预订0套，已签约0套，网上联机备案0套，未知状态431套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约4套，已签约面积386.53㎡，成交均价53283.05元/㎡。"
     },
     {
       "projectName": "国誉燕园朗润",
@@ -1247,7 +1251,9 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8060687&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共828套，绿色可售534套，已预订0套，已签约0套，网上联机备案0套，未知状态294套；剩余套数按绿色可售住宅房源计。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共828套，绿色可售534套，已预订0套，已签约0套，网上联机备案0套，未知状态294套；剩余套数按绿色可售住宅房源计。",
+      "preservedFromPrevious": true,
+      "latestFailureAt": "2026-07-14 09:55:49"
     },
     {
       "projectName": "国贤府PARK",
@@ -1262,14 +1268,14 @@
       "group": "北部组团",
       "plate": "天通苑",
       "totalSuites": 832,
-      "remainingSuites": 247,
-      "cumulativeSoldSuites": 177,
-      "contractSignedSuites": 34,
-      "filedSuites": 143,
-      "bookedSuites": 4,
-      "signedStatsSuites": 525,
+      "remainingSuites": 124,
+      "cumulativeSoldSuites": 84,
+      "contractSignedSuites": 15,
+      "filedSuites": 69,
+      "bookedSuites": 0,
+      "signedStatsSuites": 533,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 19:05:54",
+      "fetchedAt": "2026-07-14 10:22:55",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176764&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176764&systemID=2&srcId=1"
@@ -1283,7 +1289,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176764&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共832套，绿色可售247套，已预订4套，已签约34套，网上联机备案143套，未知状态404套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约525套，已签约面积55059.66㎡，成交均价55590.51元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共832套，绿色可售124套，已预订0套，已签约15套，网上联机备案69套，未知状态624套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约533套，已签约面积55914.43㎡，成交均价55586.31元/㎡。"
     },
     {
       "projectName": "城建国誉颂",
@@ -1322,7 +1328,9 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8141265&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表16栋住宅楼房源状态复核：共592套，绿色可售239套，已预订1套，已签约2套，网上联机备案334套，未知状态16套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约347套，已签约面积38262.13㎡，成交均价42576.79元/㎡。"
+      "auditNote": "住建委楼盘表16栋住宅楼房源状态复核：共592套，绿色可售239套，已预订1套，已签约2套，网上联机备案334套，未知状态16套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约347套，已签约面积38262.13㎡，成交均价42576.79元/㎡。",
+      "preservedFromPrevious": true,
+      "latestFailureAt": "2026-07-14 10:03:46"
     },
     {
       "projectName": "大兴西片区0003等地块 大兴发展梧桐府",
@@ -1337,14 +1345,14 @@
       "group": "西南组团",
       "plate": "狼垡",
       "totalSuites": 366,
-      "remainingSuites": 244,
-      "cumulativeSoldSuites": 21,
+      "remainingSuites": 148,
+      "cumulativeSoldSuites": 15,
       "contractSignedSuites": 0,
-      "filedSuites": 21,
-      "bookedSuites": 3,
+      "filedSuites": 15,
+      "bookedSuites": 2,
       "signedStatsSuites": 45,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 17:37:33",
+      "fetchedAt": "2026-07-14 10:16:19",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8119449&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8119449&systemID=2&srcId=1",
@@ -1359,7 +1367,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8119449&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表10栋住宅楼房源状态复核：共366套，绿色可售244套，已预订3套，已签约0套，网上联机备案21套，未知状态98套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约45套，已签约面积8295.55㎡，成交均价40709.69元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共366套，绿色可售148套，已预订2套，已签约0套，网上联机备案15套，未知状态201套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约45套，已签约面积8295.55㎡，成交均价40709.69元/㎡。"
     },
     {
       "projectName": "宝山0016地块 海宸元境",
@@ -1374,14 +1382,14 @@
       "group": "西部组团",
       "plate": "四季青",
       "totalSuites": 396,
-      "remainingSuites": 75,
-      "cumulativeSoldSuites": 202,
-      "contractSignedSuites": 80,
-      "filedSuites": 122,
-      "bookedSuites": 13,
-      "signedStatsSuites": 268,
+      "remainingSuites": 72,
+      "cumulativeSoldSuites": 164,
+      "contractSignedSuites": 66,
+      "filedSuites": 98,
+      "bookedSuites": 11,
+      "signedStatsSuites": 270,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 18:26:49",
+      "fetchedAt": "2026-07-14 10:18:08",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8132033&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8132033&systemID=2&srcId=1"
@@ -1395,7 +1403,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8132033&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共396套，绿色可售75套，已预订13套，已签约80套，网上联机备案122套，未知状态106套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约268套，已签约面积31141.5㎡，成交均价83557.72元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共396套，绿色可售72套，已预订11套，已签约66套，网上联机备案98套，未知状态149套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约270套，已签约面积31328.64㎡，成交均价83537.58元/㎡。"
     },
     {
       "projectName": "宝山0017地块 北京隅海岄",
@@ -1432,7 +1440,9 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8217311&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表9栋住宅楼房源状态复核：共442套，绿色可售137套，已预订32套，已签约10套，网上联机备案126套，未知状态137套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约217套，已签约面积27554.59㎡，成交均价85346.38元/㎡。"
+      "auditNote": "住建委楼盘表9栋住宅楼房源状态复核：共442套，绿色可售137套，已预订32套，已签约10套，网上联机备案126套，未知状态137套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约217套，已签约面积27554.59㎡，成交均价85346.38元/㎡。",
+      "preservedFromPrevious": true,
+      "latestFailureAt": "2026-07-14 10:18:15"
     },
     {
       "projectName": "建发海晏",
@@ -1447,14 +1457,14 @@
       "group": "北部组团",
       "plate": "清河",
       "totalSuites": 604,
-      "remainingSuites": 0,
-      "cumulativeSoldSuites": 176,
+      "remainingSuites": 1,
+      "cumulativeSoldSuites": 186,
       "contractSignedSuites": 12,
-      "filedSuites": 164,
-      "bookedSuites": 2,
-      "signedStatsSuites": 349,
-      "retryAttempts": 1,
-      "fetchedAt": "2026-07-11 12:32:42",
+      "filedSuites": 174,
+      "bookedSuites": 1,
+      "signedStatsSuites": 348,
+      "retryAttempts": 0,
+      "fetchedAt": "2026-07-14 09:57:55",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8099037&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8099037&systemID=2&srcId=1",
@@ -1469,7 +1479,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8099037&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表11栋住宅楼房源状态复核：共604套，绿色可售0套，已预订2套，已签约12套，网上联机备案164套，未知状态339套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约349套，已签约面积75732.11㎡，成交均价134907.52元/㎡。"
+      "auditNote": "住建委楼盘表12栋住宅楼房源状态复核：共604套，绿色可售1套，已预订1套，已签约12套，网上联机备案174套，未知状态337套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约348套，已签约面积75549.62㎡，成交均价134910.84元/㎡。"
     },
     {
       "projectName": "建发金茂观宸",
@@ -1484,14 +1494,14 @@
       "group": "西南组团",
       "plate": "新宫",
       "totalSuites": 594,
-      "remainingSuites": 90,
-      "cumulativeSoldSuites": 297,
+      "remainingSuites": 56,
+      "cumulativeSoldSuites": 167,
       "contractSignedSuites": 0,
-      "filedSuites": 297,
-      "bookedSuites": 5,
+      "filedSuites": 167,
+      "bookedSuites": 3,
       "signedStatsSuites": 415,
-      "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 16:38:42",
+      "retryAttempts": 1,
+      "fetchedAt": "2026-07-14 10:12:35",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8033939&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8033939&systemID=2&srcId=1",
@@ -1506,7 +1516,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8033939&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表12栋住宅楼房源状态复核：共594套，绿色可售90套，已预订5套，已签约0套，网上联机备案297套，未知状态202套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约415套，已签约面积52181.75㎡，成交均价78436.21元/㎡。"
+      "auditNote": "住建委楼盘表12栋住宅楼房源状态复核：共594套，绿色可售56套，已预订3套，已签约0套，网上联机备案167套，未知状态368套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约415套，已签约面积52181.75㎡，成交均价78436.21元/㎡。"
     },
     {
       "projectName": "御林湾苑",
@@ -1542,7 +1552,9 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157959&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共1023套，绿色可售592套，已预订60套，已签约0套，网上联机备案8套，未知状态363套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约15套，已签约面积2273.46㎡，成交均价60523.74元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共1023套，绿色可售592套，已预订60套，已签约0套，网上联机备案8套，未知状态363套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约15套，已签约面积2273.46㎡，成交均价60523.74元/㎡。",
+      "preservedFromPrevious": true,
+      "latestFailureAt": "2026-07-14 10:25:23"
     },
     {
       "projectName": "御璟星城元启",
@@ -1557,14 +1569,14 @@
       "group": "西南组团",
       "plate": "西红门",
       "totalSuites": 1065,
-      "remainingSuites": 194,
-      "cumulativeSoldSuites": 311,
-      "contractSignedSuites": 9,
-      "filedSuites": 302,
-      "bookedSuites": 4,
-      "signedStatsSuites": 584,
+      "remainingSuites": 179,
+      "cumulativeSoldSuites": 210,
+      "contractSignedSuites": 4,
+      "filedSuites": 206,
+      "bookedSuites": 2,
+      "signedStatsSuites": 587,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 17:37:26",
+      "fetchedAt": "2026-07-14 10:16:02",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7904369&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7904369&systemID=2&srcId=1"
@@ -1578,7 +1590,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7904369&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共1065套，绿色可售194套，已预订4套，已签约9套，网上联机备案302套，未知状态556套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约584套，已签约面积60660.33㎡，成交均价51528.26元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共1065套，绿色可售179套，已预订2套，已签约4套，网上联机备案206套，未知状态674套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约587套，已签约面积60969.39㎡，成交均价51518.85元/㎡。"
     },
     {
       "projectName": "懋源云纪",
@@ -1600,7 +1612,7 @@
       "bookedSuites": 0,
       "signedStatsSuites": 107,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 13:33:45",
+      "fetchedAt": "2026-07-14 09:59:32",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8046106&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8046106&systemID=2&srcId=1"
@@ -1650,7 +1662,9 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8222005&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共456套，绿色可售368套，已预订0套，已签约0套，网上联机备案0套，未知状态88套；剩余套数按绿色可售住宅房源计。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共456套，绿色可售368套，已预订0套，已签约0套，网上联机备案0套，未知状态88套；剩余套数按绿色可售住宅房源计。",
+      "preservedFromPrevious": true,
+      "latestFailureAt": "2026-07-14 09:59:52"
     },
     {
       "projectName": "招商云璟揽阅",
@@ -1687,7 +1701,9 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8016529&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表1栋住宅楼房源状态复核：共32套，绿色可售1套，已预订0套，已签约0套，网上联机备案30套，未知状态1套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约365套，已签约面积34719.19㎡，成交均价55057.08元/㎡。"
+      "auditNote": "住建委楼盘表1栋住宅楼房源状态复核：共32套，绿色可售1套，已预订0套，已签约0套，网上联机备案30套，未知状态1套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约365套，已签约面积34719.19㎡，成交均价55057.08元/㎡。",
+      "preservedFromPrevious": true,
+      "latestFailureAt": "2026-07-14 10:03:58"
     },
     {
       "projectName": "招商序",
@@ -1702,14 +1718,14 @@
       "group": "大亦庄组团",
       "plate": "河西",
       "totalSuites": 685,
-      "remainingSuites": 344,
-      "cumulativeSoldSuites": 322,
-      "contractSignedSuites": 1,
-      "filedSuites": 321,
-      "bookedSuites": 6,
-      "signedStatsSuites": 331,
+      "remainingSuites": 274,
+      "cumulativeSoldSuites": 243,
+      "contractSignedSuites": 2,
+      "filedSuites": 241,
+      "bookedSuites": 7,
+      "signedStatsSuites": 334,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 16:38:14",
+      "fetchedAt": "2026-07-14 10:10:20",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8087751&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8087751&systemID=2&srcId=1",
@@ -1725,7 +1741,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8087751&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表13栋住宅楼房源状态复核：共685套，绿色可售344套，已预订6套，已签约1套，网上联机备案321套，未知状态13套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约331套，已签约面积36200.31㎡，成交均价67869.48元/㎡。"
+      "auditNote": "住建委楼盘表13栋住宅楼房源状态复核：共685套，绿色可售274套，已预订7套，已签约2套，网上联机备案241套，未知状态161套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约334套，已签约面积36496.03㎡，成交均价67866.84元/㎡。"
     },
     {
       "projectName": "招商朝棠揽阅",
@@ -1740,14 +1756,14 @@
       "group": "CBD-副中心组团",
       "plate": "通州老城",
       "totalSuites": 938,
-      "remainingSuites": 117,
-      "cumulativeSoldSuites": 687,
-      "contractSignedSuites": 9,
-      "filedSuites": 678,
-      "bookedSuites": 5,
-      "signedStatsSuites": 896,
+      "remainingSuites": 4,
+      "cumulativeSoldSuites": 2,
+      "contractSignedSuites": 2,
+      "filedSuites": 0,
+      "bookedSuites": 0,
+      "signedStatsSuites": null,
       "retryAttempts": 1,
-      "fetchedAt": "2026-07-11 16:37:18",
+      "fetchedAt": "2026-07-14 10:05:26",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195954&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195954&systemID=2&srcId=1",
@@ -1769,7 +1785,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195954&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表19栋住宅楼房源状态复核：共938套，绿色可售117套，已预订5套，已签约9套，网上联机备案678套，未知状态129套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约896套，已签约面积83987.23㎡，成交均价56249.15元/㎡。"
+      "auditNote": "住建委楼盘表3栋住宅楼房源状态复核：共938套，绿色可售4套，已预订0套，已签约2套，网上联机备案0套，未知状态932套；剩余套数按绿色可售住宅房源计。"
     },
     {
       "projectName": "星悦时光",
@@ -1784,14 +1800,14 @@
       "group": "东北组团",
       "plate": "仁和",
       "totalSuites": 864,
-      "remainingSuites": 11,
-      "cumulativeSoldSuites": 203,
+      "remainingSuites": 9,
+      "cumulativeSoldSuites": 147,
       "contractSignedSuites": 0,
-      "filedSuites": 203,
+      "filedSuites": 147,
       "bookedSuites": 0,
       "signedStatsSuites": 677,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 13:33:42",
+      "fetchedAt": "2026-07-14 09:59:27",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7918227&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7918227&systemID=2&srcId=1"
@@ -1805,7 +1821,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7918227&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表6栋住宅楼房源状态复核：共864套，绿色可售11套，已预订0套，已签约0套，网上联机备案203套，未知状态650套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约677套，已签约面积58189.92㎡，成交均价34106.72元/㎡。"
+      "auditNote": "住建委楼盘表6栋住宅楼房源状态复核：共864套，绿色可售9套，已预订0套，已签约0套，网上联机备案147套，未知状态708套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约677套，已签约面积58189.92㎡，成交均价34106.72元/㎡。"
     },
     {
       "projectName": "未来城星寰时代",
@@ -1820,14 +1836,14 @@
       "group": "北部组团",
       "plate": "能源谷",
       "totalSuites": 647,
-      "remainingSuites": 81,
-      "cumulativeSoldSuites": 168,
+      "remainingSuites": 72,
+      "cumulativeSoldSuites": 118,
       "contractSignedSuites": 5,
-      "filedSuites": 163,
-      "bookedSuites": 80,
-      "signedStatsSuites": 300,
-      "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 19:39:22",
+      "filedSuites": 113,
+      "bookedSuites": 67,
+      "signedStatsSuites": 306,
+      "retryAttempts": 1,
+      "fetchedAt": "2026-07-14 10:23:30",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176578&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176578&systemID=2&srcId=1"
@@ -1841,7 +1857,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176578&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共647套，绿色可售81套，已预订80套，已签约5套，网上联机备案163套，未知状态318套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约300套，已签约面积28108.63㎡，成交均价51694.52元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共647套，绿色可售72套，已预订67套，已签约5套，网上联机备案113套，未知状态390套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约306套，已签约面积28625.3㎡，成交均价51699.11元/㎡。"
     },
     {
       "projectName": "槐新02地块 建发金茂观宸二期",
@@ -1856,14 +1872,14 @@
       "group": "西南组团",
       "plate": "新宫",
       "totalSuites": 485,
-      "remainingSuites": 65,
-      "cumulativeSoldSuites": 79,
-      "contractSignedSuites": 1,
-      "filedSuites": 78,
-      "bookedSuites": 13,
-      "signedStatsSuites": 173,
+      "remainingSuites": 19,
+      "cumulativeSoldSuites": 11,
+      "contractSignedSuites": 0,
+      "filedSuites": 11,
+      "bookedSuites": 0,
+      "signedStatsSuites": 3,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 17:37:21",
+      "fetchedAt": "2026-07-14 10:15:32",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8121654&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8121654&systemID=2&srcId=1",
@@ -1878,7 +1894,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8121654&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表15栋住宅楼房源状态复核：共485套，绿色可售65套，已预订13套，已签约1套，网上联机备案78套，未知状态328套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约173套，已签约面积21504.78㎡，成交均价74928.84元/㎡。"
+      "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共485套，绿色可售19套，已预订0套，已签约0套，网上联机备案11套，未知状态455套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约3套，已签约面积509.01㎡，成交均价80933.95元/㎡。"
     },
     {
       "projectName": "熙区嘉园",
@@ -1893,14 +1909,14 @@
       "group": "东北组团",
       "plate": "金盏北",
       "totalSuites": 546,
-      "remainingSuites": 381,
+      "remainingSuites": 329,
       "cumulativeSoldSuites": 0,
       "contractSignedSuites": 0,
       "filedSuites": 0,
-      "bookedSuites": 0,
+      "bookedSuites": 52,
       "signedStatsSuites": null,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 21:41:23",
+      "fetchedAt": "2026-07-14 10:26:18",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191996&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191996&systemID=2&srcId=1"
@@ -1914,7 +1930,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191996&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表4栋住宅楼房源状态复核：共546套，绿色可售381套，已预订0套，已签约0套，网上联机备案0套，未知状态165套；剩余套数按绿色可售住宅房源计。"
+      "auditNote": "住建委楼盘表4栋住宅楼房源状态复核：共546套，绿色可售329套，已预订52套，已签约0套，网上联机备案0套，未知状态165套；剩余套数按绿色可售住宅房源计。"
     },
     {
       "projectName": "玉章苑",
@@ -1930,13 +1946,13 @@
       "plate": "苹果园",
       "totalSuites": 20,
       "remainingSuites": 5,
-      "cumulativeSoldSuites": 10,
+      "cumulativeSoldSuites": 11,
       "contractSignedSuites": 0,
-      "filedSuites": 10,
-      "bookedSuites": 4,
-      "signedStatsSuites": 11,
+      "filedSuites": 11,
+      "bookedSuites": 3,
+      "signedStatsSuites": 12,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 19:39:49",
+      "fetchedAt": "2026-07-14 10:25:08",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8156387&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8156387&systemID=2&srcId=1",
@@ -1951,7 +1967,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8156387&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表1栋住宅楼房源状态复核：共20套，绿色可售5套，已预订4套，已签约0套，网上联机备案10套，未知状态1套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约11套，已签约面积2046.22㎡，成交均价72854.93元/㎡。"
+      "auditNote": "住建委楼盘表1栋住宅楼房源状态复核：共20套，绿色可售5套，已预订3套，已签约0套，网上联机备案11套，未知状态1套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约12套，已签约面积2232.24㎡，成交均价72555.36元/㎡。"
     },
     {
       "projectName": "璞园PARK",
@@ -1966,14 +1982,14 @@
       "group": "东北组团",
       "plate": "金盏北",
       "totalSuites": 573,
-      "remainingSuites": 30,
-      "cumulativeSoldSuites": 135,
+      "remainingSuites": 23,
+      "cumulativeSoldSuites": 55,
       "contractSignedSuites": 0,
-      "filedSuites": 135,
+      "filedSuites": 55,
       "bookedSuites": 0,
-      "signedStatsSuites": 421,
+      "signedStatsSuites": 130,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 12:33:38",
+      "fetchedAt": "2026-07-14 09:58:49",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7982300&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7982300&systemID=2&srcId=1",
@@ -1989,7 +2005,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7982300&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表9栋住宅楼房源状态复核：共573套，绿色可售30套，已预订0套，已签约0套，网上联机备案135套，未知状态408套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约421套，已签约面积66239.27㎡，成交均价73083.37元/㎡。"
+      "auditNote": "住建委楼盘表6栋住宅楼房源状态复核：共573套，绿色可售23套，已预订0套，已签约0套，网上联机备案55套，未知状态495套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约130套，已签约面积21389.56㎡，成交均价73856.66元/㎡。"
     },
     {
       "projectName": "璟瑞家园",
@@ -2025,7 +2041,9 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195341&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共379套，绿色可售161套，已预订3套，已签约12套，网上联机备案196套，未知状态7套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约214套，已签约面积21186.55㎡，成交均价61274.36元/㎡。"
+      "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共379套，绿色可售161套，已预订3套，已签约12套，网上联机备案196套，未知状态7套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约214套，已签约面积21186.55㎡，成交均价61274.36元/㎡。",
+      "preservedFromPrevious": true,
+      "latestFailureAt": "2026-07-14 10:26:18"
     },
     {
       "projectName": "璟贤瑞庭",
@@ -2040,14 +2058,14 @@
       "group": "西南组团",
       "plate": "长阳",
       "totalSuites": 1021,
-      "remainingSuites": 262,
-      "cumulativeSoldSuites": 328,
-      "contractSignedSuites": 4,
-      "filedSuites": 324,
+      "remainingSuites": 148,
+      "cumulativeSoldSuites": 271,
+      "contractSignedSuites": 2,
+      "filedSuites": 269,
       "bookedSuites": 0,
-      "signedStatsSuites": 504,
+      "signedStatsSuites": 517,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 17:37:59",
+      "fetchedAt": "2026-07-14 10:17:23",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8141305&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8141305&systemID=2&srcId=1",
@@ -2062,7 +2080,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8141305&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表14栋住宅楼房源状态复核：共1021套，绿色可售262套，已预订0套，已签约4套，网上联机备案324套，未知状态431套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约504套，已签约面积53181.22㎡，成交均价31871.41元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共1021套，绿色可售148套，已预订0套，已签约2套，网上联机备案269套，未知状态602套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约517套，已签约面积54717.9㎡，成交均价31832.35元/㎡。"
     },
     {
       "projectName": "缦云福苑（二期）",
@@ -2084,7 +2102,7 @@
       "bookedSuites": 11,
       "signedStatsSuites": 14,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 20:40:54",
+      "fetchedAt": "2026-07-14 10:25:43",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176579&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176579&systemID=2&srcId=1"
@@ -2113,14 +2131,14 @@
       "group": "西部组团",
       "plate": "苹果园",
       "totalSuites": 819,
-      "remainingSuites": 186,
-      "cumulativeSoldSuites": 551,
-      "contractSignedSuites": 11,
-      "filedSuites": 540,
-      "bookedSuites": 66,
-      "signedStatsSuites": 567,
+      "remainingSuites": 110,
+      "cumulativeSoldSuites": 422,
+      "contractSignedSuites": 7,
+      "filedSuites": 415,
+      "bookedSuites": 53,
+      "signedStatsSuites": 568,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 18:27:38",
+      "fetchedAt": "2026-07-14 10:20:18",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191696&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191696&systemID=2&srcId=1",
@@ -2142,7 +2160,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191696&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表16栋住宅楼房源状态复核：共819套，绿色可售186套，已预订66套，已签约11套，网上联机备案540套，未知状态16套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约567套，已签约面积59823.86㎡，成交均价62066.03元/㎡。"
+      "auditNote": "住建委楼盘表16栋住宅楼房源状态复核：共819套，绿色可售110套，已预订53套，已签约7套，网上联机备案415套，未知状态234套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约568套，已签约面积59934.24㎡，成交均价62067.59元/㎡。"
     },
     {
       "projectName": "誉淙家园",
@@ -2178,7 +2196,9 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8161845&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表6栋住宅楼房源状态复核：共303套，绿色可售191套，已预订1套，已签约0套，网上联机备案105套，未知状态6套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约108套，已签约面积9965.19㎡，成交均价50216.1元/㎡。"
+      "auditNote": "住建委楼盘表6栋住宅楼房源状态复核：共303套，绿色可售191套，已预订1套，已签约0套，网上联机备案105套，未知状态6套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约108套，已签约面积9965.19㎡，成交均价50216.1元/㎡。",
+      "preservedFromPrevious": true,
+      "latestFailureAt": "2026-07-14 10:25:23"
     },
     {
       "projectName": "越秀星耀未来",
@@ -2215,7 +2235,9 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8083301&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表16栋住宅楼房源状态复核：共1312套，绿色可售291套，已预订0套，已签约6套，网上联机备案331套，未知状态684套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约306套，已签约面积30890.64㎡，成交均价52309.83元/㎡。"
+      "auditNote": "住建委楼盘表16栋住宅楼房源状态复核：共1312套，绿色可售291套，已预订0套，已签约6套，网上联机备案331套，未知状态684套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约306套，已签约面积30890.64㎡，成交均价52309.83元/㎡。",
+      "preservedFromPrevious": true,
+      "latestFailureAt": "2026-07-14 09:56:28"
     },
     {
       "projectName": "金茂满曜",
@@ -2230,14 +2252,14 @@
       "group": "CBD-副中心组团",
       "plate": "管庄",
       "totalSuites": 693,
-      "remainingSuites": 130,
-      "cumulativeSoldSuites": 194,
-      "contractSignedSuites": 2,
-      "filedSuites": 192,
-      "bookedSuites": 1,
-      "signedStatsSuites": 549,
+      "remainingSuites": 16,
+      "cumulativeSoldSuites": 51,
+      "contractSignedSuites": 0,
+      "filedSuites": 51,
+      "bookedSuites": 0,
+      "signedStatsSuites": 104,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 15:35:25",
+      "fetchedAt": "2026-07-14 10:00:58",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8102492&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8102492&systemID=2&srcId=1",
@@ -2253,7 +2275,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8102492&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表16栋住宅楼房源状态复核：共693套，绿色可售130套，已预订1套，已签约2套，网上联机备案192套，未知状态368套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约549套，已签约面积69595.18㎡，成交均价74525.66元/㎡。"
+      "auditNote": "住建委楼盘表11栋住宅楼房源状态复核：共693套，绿色可售16套，已预订0套，已签约0套，网上联机备案51套，未知状态626套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约104套，已签约面积13628.67㎡，成交均价72376.62元/㎡。"
     },
     {
       "projectName": "金隅花溪云锦",
@@ -2268,14 +2290,14 @@
       "group": "CBD-副中心组团",
       "plate": "通州老城",
       "totalSuites": 338,
-      "remainingSuites": 64,
-      "cumulativeSoldSuites": 220,
-      "contractSignedSuites": 4,
-      "filedSuites": 216,
-      "bookedSuites": 0,
-      "signedStatsSuites": 336,
+      "remainingSuites": 28,
+      "cumulativeSoldSuites": 221,
+      "contractSignedSuites": 2,
+      "filedSuites": 219,
+      "bookedSuites": 1,
+      "signedStatsSuites": 337,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 15:36:37",
+      "fetchedAt": "2026-07-14 10:04:36",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8083266&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8083266&systemID=2&srcId=1",
@@ -2290,7 +2312,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8083266&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表10栋住宅楼房源状态复核：共338套，绿色可售64套，已预订0套，已签约4套，网上联机备案216套，未知状态54套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约336套，已签约面积41555.79㎡，成交均价51576.73元/㎡。"
+      "auditNote": "住建委楼盘表6栋住宅楼房源状态复核：共338套，绿色可售28套，已预订1套，已签约2套，网上联机备案219套，未知状态88套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约337套，已签约面积41695.42㎡，成交均价51575.87元/㎡。"
     },
     {
       "projectName": "铂瑞府",
@@ -2305,14 +2327,14 @@
       "group": "西南组团",
       "plate": "良乡",
       "totalSuites": 383,
-      "remainingSuites": 334,
-      "cumulativeSoldSuites": 13,
-      "contractSignedSuites": 13,
+      "remainingSuites": 137,
+      "cumulativeSoldSuites": 19,
+      "contractSignedSuites": 19,
       "filedSuites": 0,
-      "bookedSuites": 28,
-      "signedStatsSuites": 19,
+      "bookedSuites": 13,
+      "signedStatsSuites": 41,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 21:41:43",
+      "fetchedAt": "2026-07-14 10:26:41",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8207359&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8207359&systemID=2&srcId=1"
@@ -2326,7 +2348,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8207359&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共383套，绿色可售334套，已预订28套，已签约13套，网上联机备案0套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约19套，已签约面积1952.7㎡，成交均价38002.8元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共383套，绿色可售137套，已预订13套，已签约19套，网上联机备案0套，未知状态214套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约41套，已签约面积4099.27㎡，成交均价37775.12元/㎡。"
     },
     {
       "projectName": "长安华曦府",
@@ -2341,14 +2363,14 @@
       "group": "西部组团",
       "plate": "门头沟新城",
       "totalSuites": 676,
-      "remainingSuites": 19,
-      "cumulativeSoldSuites": 475,
-      "contractSignedSuites": 9,
-      "filedSuites": 466,
-      "bookedSuites": 1,
-      "signedStatsSuites": 538,
+      "remainingSuites": 7,
+      "cumulativeSoldSuites": 158,
+      "contractSignedSuites": 1,
+      "filedSuites": 157,
+      "bookedSuites": 0,
+      "signedStatsSuites": 313,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 18:38:31",
+      "fetchedAt": "2026-07-14 10:20:52",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7976630&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7976630&systemID=2&srcId=1",
@@ -2363,7 +2385,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7976630&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表12栋住宅楼房源状态复核：共676套，绿色可售19套，已预订1套，已签约9套，网上联机备案466套，未知状态181套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约538套，已签约面积54145.02㎡，成交均价46353.4元/㎡。"
+      "auditNote": "住建委楼盘表6栋住宅楼房源状态复核：共676套，绿色可售7套，已预订0套，已签约1套，网上联机备案157套，未知状态511套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约313套，已签约面积32682.33㎡，成交均价47158.1元/㎡。"
     },
     {
       "projectName": "长河花园",
@@ -2378,14 +2400,14 @@
       "group": "北部组团",
       "plate": "小汤山",
       "totalSuites": 16,
-      "remainingSuites": 6,
-      "cumulativeSoldSuites": 1,
+      "remainingSuites": 3,
+      "cumulativeSoldSuites": 0,
       "contractSignedSuites": 0,
-      "filedSuites": 1,
+      "filedSuites": 0,
       "bookedSuites": 0,
       "signedStatsSuites": 8,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 19:39:52",
+      "fetchedAt": "2026-07-14 10:25:23",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157960&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157960&systemID=2&srcId=1"
@@ -2399,7 +2421,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157960&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共16套，绿色可售6套，已预订0套，已签约0套，网上联机备案1套，未知状态9套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约8套，已签约面积4067.08㎡，成交均价28404.45元/㎡。"
+      "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共16套，绿色可售3套，已预订0套，已签约0套，网上联机备案0套，未知状态13套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约8套，已签约面积4067.08㎡，成交均价28404.45元/㎡。"
     },
     {
       "projectName": "青雲国樾",
@@ -2435,7 +2457,9 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共400套，绿色可售295套，已预订22套，已签约15套，网上联机备案60套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约77套，已签约面积7807.91㎡，成交均价54615.04元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共400套，绿色可售295套，已预订22套，已签约15套，网上联机备案60套，未知状态8套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约77套，已签约面积7807.91㎡，成交均价54615.04元/㎡。",
+      "preservedFromPrevious": true,
+      "latestFailureAt": "2026-07-14 10:22:14"
     },
     {
       "projectName": "颐海澐颂",
@@ -2450,14 +2474,14 @@
       "group": "北部组团",
       "plate": "永丰",
       "totalSuites": 1047,
-      "remainingSuites": 192,
-      "cumulativeSoldSuites": 419,
-      "contractSignedSuites": 18,
-      "filedSuites": 401,
+      "remainingSuites": 135,
+      "cumulativeSoldSuites": 230,
+      "contractSignedSuites": 11,
+      "filedSuites": 219,
       "bookedSuites": 1,
-      "signedStatsSuites": 619,
-      "retryAttempts": 1,
-      "fetchedAt": "2026-07-11 11:31:43",
+      "signedStatsSuites": 620,
+      "retryAttempts": 0,
+      "fetchedAt": "2026-07-14 09:55:49",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8212621&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8212621&systemID=2&srcId=1",
@@ -2472,7 +2496,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8212621&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表13栋住宅楼房源状态复核：共1047套，绿色可售192套，已预订1套，已签约18套，网上联机备案401套，未知状态435套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约619套，已签约面积80152.76㎡，成交均价90312.34元/㎡。"
+      "auditNote": "住建委楼盘表13栋住宅楼房源状态复核：共1047套，绿色可售135套，已预订1套，已签约11套，网上联机备案219套，未知状态681套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约620套，已签约面积80276.82㎡，成交均价90313.97元/㎡。"
     },
     {
       "projectName": "颐知筑",
@@ -2487,14 +2511,14 @@
       "group": "西南组团",
       "plate": "良乡",
       "totalSuites": 634,
-      "remainingSuites": 221,
-      "cumulativeSoldSuites": 52,
-      "contractSignedSuites": 1,
-      "filedSuites": 51,
-      "bookedSuites": 3,
-      "signedStatsSuites": 117,
+      "remainingSuites": 177,
+      "cumulativeSoldSuites": 39,
+      "contractSignedSuites": 3,
+      "filedSuites": 36,
+      "bookedSuites": 2,
+      "signedStatsSuites": 122,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 17:37:48",
+      "fetchedAt": "2026-07-14 10:16:59",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8007906&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8007906&systemID=2&srcId=1"
@@ -2508,7 +2532,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8007906&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共634套，绿色可售221套，已预订3套，已签约1套，网上联机备案51套，未知状态358套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约117套，已签约面积11969.7㎡，成交均价30279.35元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共634套，绿色可售177套，已预订2套，已签约3套，网上联机备案36套，未知状态416套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约122套，已签约面积12482.95㎡，成交均价30285.58元/㎡。"
     },
     {
       "projectName": "首钢璟悦长安",
@@ -2544,7 +2568,9 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8067898&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共700套，绿色可售226套，已预订0套，已签约1套，网上联机备案154套，未知状态319套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约324套，已签约面积33414.66㎡，成交均价60406.34元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共700套，绿色可售226套，已预订0套，已签约1套，网上联机备案154套，未知状态319套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约324套，已签约面积33414.66㎡，成交均价60406.34元/㎡。",
+      "preservedFromPrevious": true,
+      "latestFailureAt": "2026-07-14 10:19:11"
     },
     {
       "projectName": "黄衫木店（璞樾）",
@@ -2559,14 +2585,14 @@
       "group": "CBD-副中心组团",
       "plate": "朝青",
       "totalSuites": 497,
-      "remainingSuites": 211,
-      "cumulativeSoldSuites": 269,
-      "contractSignedSuites": 2,
-      "filedSuites": 267,
-      "bookedSuites": 0,
-      "signedStatsSuites": 275,
+      "remainingSuites": 167,
+      "cumulativeSoldSuites": 167,
+      "contractSignedSuites": 3,
+      "filedSuites": 164,
+      "bookedSuites": 1,
+      "signedStatsSuites": 276,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 15:36:06",
+      "fetchedAt": "2026-07-14 10:03:14",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8174283&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8174283&systemID=2&srcId=1",
@@ -2583,7 +2609,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8174283&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表17栋住宅楼房源状态复核：共497套，绿色可售211套，已预订0套，已签约2套，网上联机备案267套，未知状态17套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约275套，已签约面积47551.28㎡，成交均价99902.38元/㎡。"
+      "auditNote": "住建委楼盘表17栋住宅楼房源状态复核：共497套，绿色可售167套，已预订1套，已签约3套，网上联机备案164套，未知状态162套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约276套，已签约面积47740.17㎡，成交均价99902.11元/㎡。"
     },
     {
       "projectName": "黄衫木店（紫京宸园）",
@@ -2598,14 +2624,14 @@
       "group": "CBD-副中心组团",
       "plate": "朝青",
       "totalSuites": 886,
-      "remainingSuites": 603,
-      "cumulativeSoldSuites": 254,
-      "contractSignedSuites": 16,
-      "filedSuites": 238,
-      "bookedSuites": 7,
+      "remainingSuites": 444,
+      "cumulativeSoldSuites": 210,
+      "contractSignedSuites": 10,
+      "filedSuites": 200,
+      "bookedSuites": 8,
       "signedStatsSuites": 314,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 15:35:52",
+      "fetchedAt": "2026-07-14 10:01:44",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8144546&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8144546&systemID=2&srcId=1",
@@ -2621,7 +2647,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8144546&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表22栋住宅楼房源状态复核：共886套，绿色可售603套，已预订7套，已签约16套，网上联机备案238套，未知状态22套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约314套，已签约面积51541.0㎡，成交均价97628.79元/㎡。"
+      "auditNote": "住建委楼盘表22栋住宅楼房源状态复核：共886套，绿色可售444套，已预订8套，已签约10套，网上联机备案200套，未知状态224套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约314套，已签约面积51541.0㎡，成交均价97628.79元/㎡。"
     },
     {
       "projectName": "龍樾海序",
@@ -2636,14 +2662,14 @@
       "group": "未分组",
       "plate": "东小口",
       "totalSuites": 594,
-      "remainingSuites": 59,
-      "cumulativeSoldSuites": 327,
-      "contractSignedSuites": 18,
-      "filedSuites": 309,
-      "bookedSuites": 5,
-      "signedStatsSuites": 692,
+      "remainingSuites": 37,
+      "cumulativeSoldSuites": 179,
+      "contractSignedSuites": 9,
+      "filedSuites": 170,
+      "bookedSuites": 13,
+      "signedStatsSuites": 698,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 19:05:30",
+      "fetchedAt": "2026-07-14 10:22:31",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1"
@@ -2657,7 +2683,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共594套，绿色可售59套，已预订5套，已签约18套，网上联机备案309套，未知状态203套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约692套，已签约面积66316.4㎡，成交均价54351.1元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共594套，绿色可售37套，已预订13套，已签约9套，网上联机备案170套，未知状态365套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约698套，已签约面积66811.64㎡，成交均价54334.4元/㎡。"
     },
     {
       "projectName": "龙湖宸翰",
@@ -2693,7 +2719,9 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8099038&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共551套，绿色可售48套，已预订0套，已签约1套，网上联机备案173套，未知状态329套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约386套，已签约面积45322.6㎡，成交均价40382.79元/㎡。"
+      "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共551套，绿色可售48套，已预订0套，已签约1套，网上联机备案173套，未知状态329套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约386套，已签约面积45322.6㎡，成交均价40382.79元/㎡。",
+      "preservedFromPrevious": true,
+      "latestFailureAt": "2026-07-14 09:59:32"
     },
     {
       "projectName": "龙湖恩祥凌雲颂",
@@ -2708,14 +2736,14 @@
       "group": "北部组团",
       "plate": "南邵",
       "totalSuites": 536,
-      "remainingSuites": 178,
-      "cumulativeSoldSuites": 41,
-      "contractSignedSuites": 16,
-      "filedSuites": 25,
+      "remainingSuites": 132,
+      "cumulativeSoldSuites": 40,
+      "contractSignedSuites": 14,
+      "filedSuites": 26,
       "bookedSuites": 0,
-      "signedStatsSuites": 118,
+      "signedStatsSuites": 119,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 12:33:12",
+      "fetchedAt": "2026-07-14 09:58:33",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8147968&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8147968&systemID=2&srcId=1",
@@ -2730,7 +2758,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8147968&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表12栋住宅楼房源状态复核：共536套，绿色可售178套，已预订0套，已签约16套，网上联机备案25套，未知状态317套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约118套，已签约面积10544.27㎡，成交均价39926.64元/㎡。"
+      "auditNote": "住建委楼盘表12栋住宅楼房源状态复核：共536套，绿色可售132套，已预订0套，已签约14套，网上联机备案26套，未知状态364套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约119套，已签约面积10640.32㎡，成交均价39913.96元/㎡。"
     },
     {
       "projectName": "龙湖观萃",
@@ -2745,14 +2773,14 @@
       "group": "北部组团",
       "plate": "回龙观",
       "totalSuites": 950,
-      "remainingSuites": 20,
-      "cumulativeSoldSuites": 163,
-      "contractSignedSuites": 1,
-      "filedSuites": 162,
+      "remainingSuites": 10,
+      "cumulativeSoldSuites": 93,
+      "contractSignedSuites": 0,
+      "filedSuites": 93,
       "bookedSuites": 0,
       "signedStatsSuites": 792,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-11 10:53:01",
+      "fetchedAt": "2026-07-14 09:55:07",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7909040&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7909040&systemID=2&srcId=1"
@@ -2766,7 +2794,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7909040&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表4栋住宅楼房源状态复核：共950套，绿色可售20套，已预订0套，已签约1套，网上联机备案162套，未知状态767套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约792套，已签约面积81891.46㎡，成交均价53687.88元/㎡。"
+      "auditNote": "住建委楼盘表4栋住宅楼房源状态复核：共950套，绿色可售10套，已预订0套，已签约0套，网上联机备案93套，未知状态847套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约792套，已签约面积81891.46㎡，成交均价53687.88元/㎡。"
     }
   ],
   "failures": [
@@ -2787,7 +2815,7 @@
           "error": "瞰山佳苑 未解析到住宅楼栋，已停止写入，避免把总套数误置为0"
         }
       ],
-      "fetchedAt": "2026-07-11 10:52:55"
+      "fetchedAt": "2026-07-14 09:54:10"
     },
     {
       "projectName": "住总清樾府",
@@ -2808,7 +2836,68 @@
           "error": "清岳里 未解析到住宅楼栋，已停止写入，避免把总套数误置为0"
         }
       ],
-      "fetchedAt": "2026-07-11 10:52:58"
+      "fetchedAt": "2026-07-14 09:54:17"
+    },
+    {
+      "projectName": "国誉燕园朗润",
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8060687&systemID=2&srcId=1",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8060687&systemID=2&srcId=1"
+      ],
+      "error": "誉燕润园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0",
+      "retryAttempts": 0,
+      "attempts": [
+        {
+          "attempt": 1,
+          "timeout": 8,
+          "maxWorkers": 3,
+          "retryable": false,
+          "error": "誉燕润园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0"
+        }
+      ],
+      "fetchedAt": "2026-07-14 09:55:49"
+    },
+    {
+      "projectName": "越秀星耀未来",
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8083301&systemID=2&srcId=1",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8083301&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8017587&systemID=2&srcId=1"
+      ],
+      "error": "水畔芳邻嘉园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0",
+      "retryAttempts": 0,
+      "attempts": [
+        {
+          "attempt": 1,
+          "timeout": 8,
+          "maxWorkers": 3,
+          "retryable": false,
+          "error": "水畔芳邻嘉园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0"
+        }
+      ],
+      "fetchedAt": "2026-07-14 09:56:28"
+    },
+    {
+      "projectName": "北京国贤府贰期",
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8104540&systemID=2&srcId=1",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8104540&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8104541&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8025921&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8025920&systemID=2&srcId=1"
+      ],
+      "error": "逸贤华庭 未解析到住宅楼栋，已停止写入，避免把总套数误置为0",
+      "retryAttempts": 0,
+      "attempts": [
+        {
+          "attempt": 1,
+          "timeout": 8,
+          "maxWorkers": 3,
+          "retryable": false,
+          "error": "逸贤华庭 未解析到住宅楼栋，已停止写入，避免把总套数误置为0"
+        }
+      ],
+      "fetchedAt": "2026-07-14 09:57:20"
     },
     {
       "projectName": "星宸和煦",
@@ -2828,7 +2917,94 @@
           "error": "悦煦雅苑 未解析到住宅楼栋，已停止写入，避免把总套数误置为0"
         }
       ],
-      "fetchedAt": "2026-07-11 13:33:31"
+      "fetchedAt": "2026-07-14 09:59:24"
+    },
+    {
+      "projectName": "龙湖宸翰",
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8099038&systemID=2&srcId=1",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8099038&systemID=2&srcId=1"
+      ],
+      "error": "宸翰家园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0",
+      "retryAttempts": 0,
+      "attempts": [
+        {
+          "attempt": 1,
+          "timeout": 8,
+          "maxWorkers": 3,
+          "retryable": false,
+          "error": "宸翰家园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0"
+        }
+      ],
+      "fetchedAt": "2026-07-14 09:59:32"
+    },
+    {
+      "projectName": "懋源薛大人庄 懋源骊橒臺",
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8222005&systemID=2&srcId=1",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8222005&systemID=2&srcId=1"
+      ],
+      "error": "橒颂雅园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0",
+      "retryAttempts": 0,
+      "attempts": [
+        {
+          "attempt": 1,
+          "timeout": 8,
+          "maxWorkers": 3,
+          "retryable": false,
+          "error": "橒颂雅园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0"
+        }
+      ],
+      "fetchedAt": "2026-07-14 09:59:52"
+    },
+    {
+      "projectName": "城建国誉颂",
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8141265&systemID=2&srcId=1",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8141265&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8141266&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7995686&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7995685&systemID=2&srcId=1"
+      ],
+      "error": "誉颂佳园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0",
+      "retryAttempts": 1,
+      "attempts": [
+        {
+          "attempt": 1,
+          "timeout": 8,
+          "maxWorkers": 3,
+          "retryable": true,
+          "error": "timed out"
+        },
+        {
+          "attempt": 2,
+          "timeout": 16,
+          "maxWorkers": 1,
+          "retryable": false,
+          "error": "誉颂佳园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0"
+        }
+      ],
+      "fetchedAt": "2026-07-14 10:03:46"
+    },
+    {
+      "projectName": "招商云璟揽阅",
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8016529&systemID=2&srcId=1",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8016529&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7993836&systemID=2&srcId=1"
+      ],
+      "error": "璟云雅苑 未解析到楼盘表房源状态，已停止写入",
+      "retryAttempts": 0,
+      "attempts": [
+        {
+          "attempt": 1,
+          "timeout": 8,
+          "maxWorkers": 3,
+          "retryable": false,
+          "error": "璟云雅苑 未解析到楼盘表房源状态，已停止写入"
+        }
+      ],
+      "fetchedAt": "2026-07-14 10:03:58"
     },
     {
       "projectName": "中建花鄕壹号 中建壹品花香壹号",
@@ -2845,17 +3021,24 @@
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25266071&systemID=3&srcId=1"
       ],
       "error": "壹品馥丽园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0",
-      "retryAttempts": 0,
+      "retryAttempts": 1,
       "attempts": [
         {
           "attempt": 1,
           "timeout": 8,
           "maxWorkers": 3,
+          "retryable": true,
+          "error": "timed out"
+        },
+        {
+          "attempt": 2,
+          "timeout": 16,
+          "maxWorkers": 1,
           "retryable": false,
           "error": "壹品馥丽园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0"
         }
       ],
-      "fetchedAt": "2026-07-11 16:38:24"
+      "fetchedAt": "2026-07-14 10:11:20"
     },
     {
       "projectName": "西红门6030地块",
@@ -2882,7 +3065,141 @@
           "error": "理想家园 / 西红门经济适用住房一期底商部分 / 西红门项目二期 / 西红门项目二期Ⅲ组团 / 西红门项目二期一组团 / 西红门项目二期三组团 / 西红门项目二期二组团 未解析到住宅楼栋，已停止写入，避免把总套数误置为0"
         }
       ],
-      "fetchedAt": "2026-07-11 17:37:43"
+      "fetchedAt": "2026-07-14 10:16:41"
+    },
+    {
+      "projectName": "宝山0017地块 北京隅海岄",
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8217311&systemID=2&srcId=1",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8217311&systemID=2&srcId=1",
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8132032&systemID=2&srcId=1"
+      ],
+      "error": "海岄雅苑 未解析到楼盘表房源状态，已停止写入",
+      "retryAttempts": 0,
+      "attempts": [
+        {
+          "attempt": 1,
+          "timeout": 8,
+          "maxWorkers": 3,
+          "retryable": false,
+          "error": "海岄雅苑 未解析到楼盘表房源状态，已停止写入"
+        }
+      ],
+      "fetchedAt": "2026-07-14 10:18:15"
+    },
+    {
+      "projectName": "首钢璟悦长安",
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8067898&systemID=2&srcId=1",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8067898&systemID=2&srcId=1"
+      ],
+      "error": "璟悦家园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0",
+      "retryAttempts": 0,
+      "attempts": [
+        {
+          "attempt": 1,
+          "timeout": 8,
+          "maxWorkers": 3,
+          "retryable": false,
+          "error": "璟悦家园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0"
+        }
+      ],
+      "fetchedAt": "2026-07-14 10:19:11"
+    },
+    {
+      "projectName": "中建和颂九里",
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7864100&systemID=2&srcId=1",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7864100&systemID=2&srcId=1"
+      ],
+      "error": "京南和颂家园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0",
+      "retryAttempts": 0,
+      "attempts": [
+        {
+          "attempt": 1,
+          "timeout": 8,
+          "maxWorkers": 3,
+          "retryable": false,
+          "error": "京南和颂家园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0"
+        }
+      ],
+      "fetchedAt": "2026-07-14 10:20:38"
+    },
+    {
+      "projectName": "青雲国樾",
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1"
+      ],
+      "error": "青和家园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0",
+      "retryAttempts": 0,
+      "attempts": [
+        {
+          "attempt": 1,
+          "timeout": 8,
+          "maxWorkers": 3,
+          "retryable": false,
+          "error": "青和家园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0"
+        }
+      ],
+      "fetchedAt": "2026-07-14 10:22:14"
+    },
+    {
+      "projectName": "誉淙家园",
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8161845&systemID=2&srcId=1",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8161845&systemID=2&srcId=1"
+      ],
+      "error": "誉淙家园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0",
+      "retryAttempts": 0,
+      "attempts": [
+        {
+          "attempt": 1,
+          "timeout": 8,
+          "maxWorkers": 3,
+          "retryable": false,
+          "error": "誉淙家园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0"
+        }
+      ],
+      "fetchedAt": "2026-07-14 10:25:23"
+    },
+    {
+      "projectName": "御林湾苑",
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157959&systemID=2&srcId=1",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157959&systemID=2&srcId=1"
+      ],
+      "error": "御林湾苑 未解析到住宅楼栋，已停止写入，避免把总套数误置为0",
+      "retryAttempts": 0,
+      "attempts": [
+        {
+          "attempt": 1,
+          "timeout": 8,
+          "maxWorkers": 3,
+          "retryable": false,
+          "error": "御林湾苑 未解析到住宅楼栋，已停止写入，避免把总套数误置为0"
+        }
+      ],
+      "fetchedAt": "2026-07-14 10:25:23"
+    },
+    {
+      "projectName": "璟瑞家园",
+      "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195341&systemID=2&srcId=1",
+      "urls": [
+        "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195341&systemID=2&srcId=1"
+      ],
+      "error": "璟瑞家园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0",
+      "retryAttempts": 0,
+      "attempts": [
+        {
+          "attempt": 1,
+          "timeout": 8,
+          "maxWorkers": 3,
+          "retryable": false,
+          "error": "璟瑞家园 未解析到住宅楼栋，已停止写入，避免把总套数误置为0"
+        }
+      ],
+      "fetchedAt": "2026-07-14 10:26:18"
     }
   ]
 }

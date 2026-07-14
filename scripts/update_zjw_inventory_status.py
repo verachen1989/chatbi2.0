@@ -693,6 +693,28 @@ def project_snapshot(result: dict[str, Any]) -> dict[str, Any]:
 
 def write_snapshot(path: Path, results: list[dict[str, Any]], failures: list[dict[str, Any]]) -> None:
     generated_at = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S")
+    projects_by_name = {
+        item["projectName"]: item
+        for item in (project_snapshot(result) for result in results)
+    }
+    failure_by_name = {
+        str(item.get("projectName") or ""): item
+        for item in failures
+        if item.get("projectName")
+    }
+    if path.exists() and failure_by_name:
+        try:
+            previous_snapshot = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            previous_snapshot = {}
+        for previous in previous_snapshot.get("projects") or []:
+            project_name = str(previous.get("projectName") or "")
+            if not project_name or project_name in projects_by_name or project_name not in failure_by_name:
+                continue
+            preserved = dict(previous)
+            preserved["preservedFromPrevious"] = True
+            preserved["latestFailureAt"] = failure_by_name[project_name].get("fetchedAt") or generated_at
+            projects_by_name[project_name] = preserved
     snapshot = {
         "generatedAt": generated_at,
         "scope": "页面全部已匹配住建委项目 + 页面未覆盖的新开盘住宅补充项目；取证时间按住建委预售许可证发证日期；总套数/剩余套数/累计已售取自住建委楼盘表房源状态。",
@@ -705,7 +727,7 @@ def write_snapshot(path: Path, results: list[dict[str, Any]], failures: list[dic
             "cumulativeSoldSuites": "累计已售（已签约+网上联机备案）",
             "screenshotInfo": "项目详情截图字段和证据链接信息",
         },
-        "projects": [project_snapshot(result) for result in sorted(results, key=lambda item: item["dashboardName"])],
+        "projects": [projects_by_name[name] for name in sorted(projects_by_name)],
         "failures": failures,
     }
     path.parent.mkdir(parents=True, exist_ok=True)
