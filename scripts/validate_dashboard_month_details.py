@@ -10,13 +10,18 @@ from pathlib import Path
 
 
 DATA_RE = re.compile(
-    r"const DATA = (.*?);\n(?:const LAUNCH_OFFICIAL_INVENTORY_OVERRIDES|const DEFAULT_PERIODS)",
+    r"const DATA = (.*?);\n(?:const PROJECT_METADATA_OVERRIDES|const LAUNCH_OFFICIAL_INVENTORY_OVERRIDES|const DEFAULT_PERIODS)",
     re.S,
 )
-DETAIL_RE = re.compile(
-    r"window\.TRANSACTION_DETAILS = (.*?);\nwindow\.MAY_TRANSACTION_DETAILS",
-    re.S,
+DETAIL_ASSIGNMENT_RE = re.compile(
+    r"window\.(TRANSACTION_DETAILS|NEW_LAUNCH_TRANSACTION_DETAILS|"
+    r"JUNE_TRANSACTION_DETAILS|JULY_TRANSACTION_DETAILS|JUL_TRANSACTION_DETAILS)\s*=\s*"
 )
+SINGLE_MONTH_VARIABLES = {
+    "JUNE_TRANSACTION_DETAILS": "26年6月",
+    "JULY_TRANSACTION_DETAILS": "26年7月",
+    "JUL_TRANSACTION_DETAILS": "26年7月",
+}
 
 CHAR_MAP = str.maketrans(
     {
@@ -29,7 +34,9 @@ CHAR_MAP = str.maketrans(
         "樹": "树",
         "玖": "九",
         "澐": "云",
+        "橒": "云",
         "雲": "云",
+        "臺": "台",
         "灣": "湾",
         "鳴": "鸣",
         "號": "号",
@@ -42,7 +49,7 @@ CHAR_MAP = str.maketrans(
 
 
 def norm(value: object) -> str:
-    return str(value or "").translate(CHAR_MAP)
+    return str(value or "").translate(CHAR_MAP).casefold()
 
 
 def load_dashboard(path: Path) -> dict:
@@ -53,12 +60,46 @@ def load_dashboard(path: Path) -> dict:
     return json.loads(match.group(1), strict=False)
 
 
-def load_details(path: Path) -> dict:
+def load_detail_source(path: Path) -> tuple[str, dict]:
     text = path.read_text(encoding="utf-8")
-    match = DETAIL_RE.search(text)
+    match = DETAIL_ASSIGNMENT_RE.search(text)
     if not match:
-        raise ValueError(f"未找到 TRANSACTION_DETAILS: {path}")
-    return json.loads(match.group(1))
+        raise ValueError(f"未找到明细数据变量: {path}")
+    data, _ = json.JSONDecoder(strict=False).raw_decode(text, match.end())
+    return match.group(1), data
+
+
+def merge_new_launch_details(details: dict, incoming: dict) -> None:
+    months = details.setdefault("months", {})
+    for month, month_data in incoming.get("months", {}).items():
+        target = months.setdefault(month, {"projects": {}, "aliases": {}})
+        target_projects = target.setdefault("projects", {})
+        for project_key, project_value in month_data.get("projects", {}).items():
+            target_projects.setdefault(project_key, project_value)
+        target["aliases"] = {
+            **month_data.get("aliases", {}),
+            **target.get("aliases", {}),
+        }
+
+
+def load_details(paths: Path | list[Path]) -> dict:
+    if isinstance(paths, Path):
+        paths = [paths]
+    sources = [load_detail_source(path) for path in paths]
+    details = {"months": {}}
+
+    for variable, data in sources:
+        if variable == "TRANSACTION_DETAILS":
+            details = data
+    months = details.setdefault("months", {})
+    for variable, data in sources:
+        if variable in SINGLE_MONTH_VARIABLES:
+            months[SINGLE_MONTH_VARIABLES[variable]] = data
+    for variable, data in sources:
+        if variable == "NEW_LAUNCH_TRANSACTION_DETAILS":
+            merge_new_launch_details(details, data)
+
+    return details
 
 
 def project_candidates(project: dict) -> list[str]:
@@ -103,7 +144,12 @@ def find_detail_key(month_data: dict, candidates: list[str]) -> str | None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--html", type=Path, default=Path("index.html"))
-    parser.add_argument("--details", type=Path, default=Path("transaction_details.js"))
+    parser.add_argument(
+        "--details",
+        type=Path,
+        nargs="+",
+        default=[Path("transaction_details.js")],
+    )
     parser.add_argument("--months", nargs="+", required=True)
     parser.add_argument(
         "--allow-missing",
@@ -155,8 +201,13 @@ def main() -> None:
                     }
                 )
 
+    base_project_count = len(dashboard.get("projects", []))
+    launch_project_count = len(dashboard.get("launchProjects", []))
     result = {
-        "projects": len(dashboard.get("projects", [])),
+        "projects": base_project_count,
+        "baseProjects": base_project_count,
+        "launchProjects": launch_project_count,
+        "totalProjects": base_project_count + launch_project_count,
         "months": args.months,
         "checkedNonZeroProjectMonths": checked,
         "missing": missing,

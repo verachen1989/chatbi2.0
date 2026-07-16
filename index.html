@@ -195,7 +195,7 @@ select { height:36px; border:1px solid #333; border-radius:7px; background:#1E1E
 .drawer { position:absolute; top:18px; right:18px; bottom:18px; width:min(540px, calc(100vw - 36px)); transform:translateX(calc(100% + 24px)); transition:transform .35s cubic-bezier(.2,.8,.2,1); background:#1A1A1A; border:1px solid #333; border-radius:8px; box-shadow:-22px 0 60px rgba(0,0,0,.45); z-index:2000; display:grid; grid-template-rows:auto minmax(0,1fr); overflow:hidden; }
 .drawer.open { transform:none; }
 .drawer.with-detail { width:min(520px, 54vw); }
-.drawer.fullscreen { inset:14px; width:auto; transform:none; border-radius:12px; z-index:2100; box-shadow:0 24px 80px rgba(0,0,0,.42); }
+.drawer.fullscreen { position:fixed; inset:14px; width:auto; transform:none; border-radius:12px; z-index:2100; box-shadow:0 24px 80px rgba(0,0,0,.42); }
 .drawer-head { position:relative; z-index:5; display:flex; align-items:center; justify-content:space-between; gap:14px; padding:16px 18px; border-bottom:1px solid #2A2A2A; background:inherit; }
 .drawer-head h2 { margin:0; font-size:20px; }
 .drawer-head p { margin:3px 0 0; color:#8a8f99; font-size:12px; }
@@ -273,7 +273,7 @@ td.num, th.num { text-align:right; font-family:ui-monospace, SFMono-Regular, Men
 .detail { position:absolute; inset:0 0 0 auto; width:min(760px, 54vw); transform:translateX(102%); transition:transform .35s cubic-bezier(.2,.8,.2,1); background:#111; border-left:1px solid #333; box-shadow:-24px 0 70px rgba(0,0,0,.55); z-index:50; display:grid; grid-template-rows:auto 1fr; }
 .detail.open { transform:translateX(0); }
 .detail.sidecar { top:18px; right:calc(min(520px, 54vw) + 30px); bottom:18px; width:clamp(300px, calc(100vw - min(520px, 54vw) - 66px), 520px); transform:none; border:1px solid #333; border-radius:8px; box-shadow:0 18px 54px rgba(0,0,0,.34); z-index:1990; overflow:hidden; }
-.detail.fullscreen { inset:14px; width:auto; transform:translateX(0); border:1px solid #333; border-radius:12px; box-shadow:0 24px 80px rgba(0,0,0,.42); z-index:2200; }
+.detail.fullscreen { position:fixed; inset:14px; width:auto; transform:translateX(0); border:1px solid #333; border-radius:12px; box-shadow:0 24px 80px rgba(0,0,0,.42); z-index:2200; }
 .detail-head { padding:22px 24px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #333; background:#1A1A1A; }
 .detail-head h2 { margin:0; font-size:24px; }
 .detail-head p { margin:4px 0 0; color:#8a8f99; font-size:12px; }
@@ -495,7 +495,8 @@ tr:hover td { background:#f1f3f4; color:#202124; }
 .stat-row b,.overview strong { color:#202124; }
 .overview { border-color:#dadce0; background:rgba(255,255,255,.92); box-shadow:0 8px 28px rgba(60,64,67,.20); }
 .overview p,.overview span { color:#5f6368; }
-@media (max-width:1180px) { .filter-toolbar { flex-wrap:wrap; padding-top:4px; padding-bottom:4px; } .filters { flex:1 1 640px; flex-wrap:wrap; } .toolbar-meta { margin-left:0; } .search { width:280px; flex-basis:280px; } .map-surface { width:100%; } .overview { display:none; } .drawer { top:12px; right:12px; bottom:12px; width:min(500px, calc(100vw - 24px)); } }
+@media (max-width:1460px) { .filter-toolbar { flex-wrap:wrap; padding-top:4px; padding-bottom:4px; } .filters { flex:1 1 640px; flex-wrap:wrap; } .toolbar-meta { margin-left:0; } .search { width:280px; flex-basis:280px; } }
+@media (max-width:1180px) { .map-surface { width:100%; } .overview { display:none; } .drawer { top:12px; right:12px; bottom:12px; width:min(500px, calc(100vw - 24px)); } }
 @media (max-width:860px) { .map-title-banner { top:12px; width:calc(100% - 24px); max-width:430px; padding:7px 10px; font-size:14px; line-height:1.35; text-align:center; } }
 @media (max-width:720px) { .filter-toolbar { padding:4px 12px; } .view-switch button { min-width:52px; } .cutoff span { display:none; } .search { width:100%; flex-basis:100%; } .filters { flex-basis:100%; } .drawer { left:12px; width:auto; } .drawer-body { grid-template-rows:minmax(220px, 1fr) minmax(210px, 38%); } .drawer-head h2 { font-size:17px; } .map-control-bar { left:12px; right:12px; bottom:14px; } .map-legend { left:58px; right:12px; bottom:14px; width:auto; } }
 @media (max-width:580px) { .map-card { display:block; } .ranking-panel { display:none; } }
