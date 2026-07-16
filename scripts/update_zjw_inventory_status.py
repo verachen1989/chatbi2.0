@@ -79,6 +79,10 @@ NON_RETRYABLE_ERROR_PATTERNS = (
 PROJECT_BUILDING_CACHE: dict[str, dict[str, dict[str, Any]]] = {}
 PROJECT_PERMIT_DETAIL_CACHE: dict[str, dict[str, dict[str, Any]]] = {}
 PROJECT_BUILDING_STATUS_CACHE: dict[str, dict[str, dict[str, Any]]] = {}
+# Do not probe guessed historical building IDs during the daily crawl.  Such
+# probes are useful only as an explicit audit job; they are not independent
+# coverage evidence and can consume dozens of requests per project.
+HISTORICAL_DISCOVERY_ENABLED = False
 
 # Coverage status categories — only "complete" updates official inventory
 COVERAGE_COMPLETE = "complete"       # 完整闭合，可更新正式看板
@@ -684,6 +688,16 @@ def discover_hidden_residential_buildings(
     residential_rows = [row for row in buildings_by_key.values() if "住宅" in str(row.get("buildingName") or "")]
     covered_total = sum(int(row.get("approvedSuites") or 0) for row in residential_rows)
     if expected_total <= 0 or covered_total >= expected_total:
+        return discovery_attempts
+    if not HISTORICAL_DISCOVERY_ENABLED:
+        discovery_attempts.append(
+            {
+                "error": (
+                    "历史楼栋ID探测未执行：未锚定的ID只能作为人工审计线索，"
+                    "不能用于补齐正式库存"
+                )
+            }
+        )
         return discovery_attempts
     rows_by_permit: dict[str, list[dict[str, Any]]] = {}
     for row in residential_rows:

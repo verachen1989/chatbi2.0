@@ -17,6 +17,7 @@
         "京房售证字(2025)12号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [],
       "developer": "星旅(北京)房地产开发有限公司",
       "district": "海淀区",
       "group": "北部组团",
@@ -45,6 +46,23 @@
         "京房售证字(2025)143号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "清岳里",
+          "permit": "京房售证字(2024)63号",
+          "date": ""
+        },
+        {
+          "name": "清岳里",
+          "permit": "京房售证字(2025)143号",
+          "date": ""
+        },
+        {
+          "name": "清岳里",
+          "permit": "京房售证字(2025)92号",
+          "date": ""
+        }
+      ],
       "developer": "北京佰昌房地产开发有限公司",
       "district": "昌平区",
       "group": "北部组团",
@@ -69,6 +87,13 @@
         "京房售证字(2024)77号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "萃雅家园",
+          "permit": "京房售证字(2024)77号",
+          "date": ""
+        }
+      ],
       "developer": "北京宏望房地产开发有限公司",
       "district": "昌平区",
       "group": "北部组团",
@@ -96,6 +121,18 @@
       "issueDates": [
         "2026-05-28"
       ],
+      "presaleIssueRecords": [
+        {
+          "name": "颐海云颂嘉苑",
+          "permit": "京房售证字(2025)15号",
+          "date": "2026-05-28"
+        },
+        {
+          "name": "颐海云颂嘉苑",
+          "permit": "京房售证字(2026)45号",
+          "date": "2026-05-28"
+        }
+      ],
       "developer": "北京海开颐和房地产开发有限责任公司",
       "district": "海淀区",
       "group": "北部组团",
@@ -120,6 +157,13 @@
         "京房售证字(2025)72号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "誉燕润园",
+          "permit": "京房售证字(2025)72号",
+          "date": ""
+        }
+      ],
       "developer": "北京城建兴荣房地产开发有限公司",
       "district": "昌平区",
       "group": "北部组团",
@@ -147,6 +191,18 @@
         "京房售证字(2025)31号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "嘉华珺园",
+          "permit": "京房售证字(2025)1号",
+          "date": ""
+        },
+        {
+          "name": "嘉华珺园",
+          "permit": "京房售证字(2025)31号",
+          "date": ""
+        }
+      ],
       "developer": "北京建工嘉境房地产开发有限公司/嘉华珺园账户线索",
       "district": "海淀区",
       "group": "北部组团",
@@ -172,6 +228,13 @@
         "京房售证字(2025)30号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "水畔芳邻嘉园",
+          "permit": "京房售证字(2025)30号",
+          "date": ""
+        }
+      ],
       "developer": "未来科学城置业；越秀地产",
       "district": "昌平区",
       "group": "北部组团",
@@ -198,6 +261,18 @@
         "京房售证字(2025)44号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "和樾苑",
+          "permit": "京房售证字(2025)18号",
+          "date": ""
+        },
+        {
+          "name": "和樾苑",
+          "permit": "京房售证字(2025)44号",
+          "date": ""
+        }
+      ],
       "developer": "北京海臻置业有限公司",
       "district": "海淀区",
       "group": "北部组团",
@@ -223,6 +298,13 @@
         "京房售证字(2025)17号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "玉鸣苑",
+          "permit": "京房售证字(2025)17号",
+          "date": ""
+        }
+      ],
       "developer": "北京功意房地产开发有限公司",
       "district": "海淀区",
       "group": "北部组团",
@@ -251,6 +333,18 @@
         "京房售证字(2025)37号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "逸贤华庭",
+          "permit": "京房售证字(2025)36号",
+          "date": ""
+        },
+        {
+          "name": "逸贤华庭",
+          "permit": "京房售证字(2025)37号",
+          "date": ""
+        }
+      ],
       "developer": "中建智地；未来科学城置业",
       "district": "昌平区",
       "group": "北部组团",
@@ -275,6 +369,13 @@
         "京房售证字(2025)62号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "臻云雅苑",
+          "permit": "京房售证字(2025)62号",
+          "date": ""
+        }
+      ],
       "developer": "北京华润招铁海泽置业有限公司",
       "district": "海淀区",
       "group": "北部组团",
@@ -301,6 +402,18 @@
         "京房售证字(2025)96号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "海晏雅苑",
+          "permit": "京房售证字(2025)63号",
+          "date": ""
+        },
+        {
+          "name": "海晏雅苑",
+          "permit": "京房售证字(2025)96号",
+          "date": ""
+        }
+      ],
       "developer": "北京兆盛房地产开发有限公司",
       "district": "海淀区",
       "group": "北部组团",
@@ -329,6 +442,13 @@
         "京房售证字(2024)95号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "光阅里",
+          "permit": "京房售证字(2024)95号",
+          "date": ""
+        }
+      ],
       "developer": "北京中海未来置业有限公司",
       "district": "昌平区",
       "group": "北部组团",
@@ -353,6 +473,13 @@
         "京房售证字(2025)131号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "安和雅苑",
+          "permit": "京房售证字(2025)131号",
+          "date": ""
+        }
+      ],
       "developer": "北京盈臻房地产开发有限公司",
       "district": "海淀区",
       "group": "北部组团",
@@ -381,6 +508,18 @@
       "issueDates": [
         "2026-01-28"
       ],
+      "presaleIssueRecords": [
+        {
+          "name": "星洵家园",
+          "permit": "京房售证字(2025)114号",
+          "date": "2026-01-28"
+        },
+        {
+          "name": "星洵家园",
+          "permit": "京房售证字(2026)6号",
+          "date": "2026-01-28"
+        }
+      ],
       "developer": "北京越昌贝城置业有限公司",
       "district": "昌平区",
       "group": "北部组团",
@@ -406,6 +545,13 @@
         "京房售证字(2025)157号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "凌匀颂雅苑",
+          "permit": "京房售证字(2025)157号",
+          "date": ""
+        }
+      ],
       "developer": "待核",
       "district": "昌平区",
       "group": "北部组团",
@@ -432,6 +578,18 @@
         "京房售证字(2025)32号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "心意和园",
+          "permit": "京房售证字(2024)91号",
+          "date": ""
+        },
+        {
+          "name": "心意和园",
+          "permit": "京房售证字(2025)32号",
+          "date": ""
+        }
+      ],
       "developer": "北京兴鼎房地产开发有限公司",
       "district": "朝阳区",
       "group": "东北组团",
@@ -458,6 +616,13 @@
         "京房售证字(2025)4号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "璞隐雅园",
+          "permit": "京房售证字(2025)4号",
+          "date": ""
+        }
+      ],
       "developer": "中建智地",
       "district": "朝阳区",
       "group": "东北组团",
@@ -486,6 +651,23 @@
         "京房售证字(2025)80号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "万吉嘉苑",
+          "permit": "京房售证字(2025)43号",
+          "date": ""
+        },
+        {
+          "name": "万吉嘉苑",
+          "permit": "京房售证字(2025)66号",
+          "date": ""
+        },
+        {
+          "name": "万吉嘉苑",
+          "permit": "京房售证字(2025)80号",
+          "date": ""
+        }
+      ],
       "developer": "北京新鑫兴业房地产开发有限公司",
       "district": "朝阳区",
       "group": "东北组团",
@@ -512,6 +694,18 @@
         "京房售证字(2025)78号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "馥华家园",
+          "permit": "京房售证字(2024)67号",
+          "date": ""
+        },
+        {
+          "name": "馥华家园",
+          "permit": "京房售证字(2025)78号",
+          "date": ""
+        }
+      ],
       "developer": "北京住顺置业有限公司",
       "district": "顺义区",
       "group": "东北组团",
@@ -537,6 +731,7 @@
         "京房售证字(2024)105号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [],
       "developer": "待核",
       "district": "顺义区",
       "group": "东北组团",
@@ -561,6 +756,13 @@
         "京房售证字(2024)96号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "峯逸园",
+          "permit": "京房售证字(2024)96号",
+          "date": ""
+        }
+      ],
       "developer": "北京城建南山置业有限公司",
       "district": "顺义区",
       "group": "东北组团",
@@ -585,6 +787,13 @@
         "京房售证字(2025)57号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "云纪雅园",
+          "permit": "京房售证字(2025)57号",
+          "date": ""
+        }
+      ],
       "developer": "待核",
       "district": "顺义区",
       "group": "东北组团",
@@ -609,6 +818,13 @@
         "待核"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "宸翰家园",
+          "permit": "待核",
+          "date": ""
+        }
+      ],
       "developer": "待核",
       "district": "顺义区",
       "group": "东北组团",
@@ -641,6 +857,28 @@
       "issueDates": [
         "2026-03-20"
       ],
+      "presaleIssueRecords": [
+        {
+          "name": "润榆园",
+          "permit": "京房售证字(2025)129号",
+          "date": "2026-03-20"
+        },
+        {
+          "name": "润榆园",
+          "permit": "京房售证字(2025)136号",
+          "date": "2026-03-20"
+        },
+        {
+          "name": "润榆园",
+          "permit": "京房售证字(2026)18号",
+          "date": "2026-03-20"
+        },
+        {
+          "name": "润榆园",
+          "permit": "京房售证字(2026)33号",
+          "date": "2026-03-20"
+        }
+      ],
       "developer": "华润置地开发(北京)有限公司",
       "district": "顺义区",
       "group": "东北组团",
@@ -667,6 +905,13 @@
       "issueDates": [
         "2026-06-15"
       ],
+      "presaleIssueRecords": [
+        {
+          "name": "橒颂雅园",
+          "permit": "京房售证字(2026)49号",
+          "date": "2026-06-15"
+        }
+      ],
       "developer": "北京懋源璟鸿房地产开发有限公司",
       "district": "顺义区",
       "group": "东北组团",
@@ -692,6 +937,13 @@
         "京房售证字(2025)38号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "云华里",
+          "permit": "京房售证字(2025)38号",
+          "date": ""
+        }
+      ],
       "developer": "北京隅新房地产开发有限公司",
       "district": "朝阳区",
       "group": "CBD-副中心组团",
@@ -717,6 +969,13 @@
         "京房售证字(2025)83号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "天珺和苑",
+          "permit": "京房售证字(2025)83号",
+          "date": ""
+        }
+      ],
       "developer": "北京朝新善筑置业有限公司",
       "district": "朝阳区",
       "group": "CBD-副中心组团",
@@ -743,6 +1002,13 @@
         "待核"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "满茂嘉园",
+          "permit": "待核",
+          "date": ""
+        }
+      ],
       "developer": "待核",
       "district": "朝阳区",
       "group": "CBD-副中心组团",
@@ -770,6 +1036,18 @@
         "京房售证字(2025)153号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "东晏和园",
+          "permit": "京房售证字(2025)110号",
+          "date": ""
+        },
+        {
+          "name": "东晏和园",
+          "permit": "京房售证字(2025)153号",
+          "date": ""
+        }
+      ],
       "developer": "北京兴昶房地产开发有限公司",
       "district": "朝阳区",
       "group": "CBD-副中心组团",
@@ -801,6 +1079,23 @@
       "issueDates": [
         "2026-02-13"
       ],
+      "presaleIssueRecords": [
+        {
+          "name": "璞樾家园",
+          "permit": "京房售证字(2025)115号",
+          "date": "2026-02-13"
+        },
+        {
+          "name": "璞樾家园",
+          "permit": "京房售证字(2025)126号",
+          "date": "2026-02-13"
+        },
+        {
+          "name": "璞樾家园",
+          "permit": "京房售证字(2026)11号",
+          "date": "2026-02-13"
+        }
+      ],
       "developer": "北京茂越置业有限公司",
       "district": "朝阳区",
       "group": "CBD-副中心组团",
@@ -828,6 +1123,13 @@
         "京房售证字(2025)11号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "誉颂佳园",
+          "permit": "京房售证字(2025)11号",
+          "date": ""
+        }
+      ],
       "developer": "城建集团",
       "district": "通州区",
       "group": "CBD-副中心组团",
@@ -853,6 +1155,13 @@
         "京房售证字(2025)27号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "璟云雅苑",
+          "permit": "京房售证字(2025)27号",
+          "date": ""
+        }
+      ],
       "developer": "北京招鑫房地产开发有限公司",
       "district": "通州区",
       "group": "CBD-副中心组团",
@@ -878,6 +1187,13 @@
         "待核"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "花溪云锦佳苑",
+          "permit": "待核",
+          "date": ""
+        }
+      ],
       "developer": "待核",
       "district": "通州区",
       "group": "CBD-副中心组团",
@@ -917,6 +1233,38 @@
       "issueDates": [
         "2026-03-26"
       ],
+      "presaleIssueRecords": [
+        {
+          "name": "朝棠雅苑（一期）",
+          "permit": "京房售证字(2025)118号",
+          "date": "2026-03-26"
+        },
+        {
+          "name": "朝棠雅苑（一期）",
+          "permit": "京房售证字(2025)122号",
+          "date": "2026-03-26"
+        },
+        {
+          "name": "朝棠雅苑（一期）",
+          "permit": "京房售证字(2025)130号",
+          "date": "2026-03-26"
+        },
+        {
+          "name": "朝棠雅苑（一期）",
+          "permit": "京房售证字(2025)76号",
+          "date": "2026-03-26"
+        },
+        {
+          "name": "朝棠雅苑（一期）",
+          "permit": "京房售证字(2026)24号",
+          "date": "2026-03-26"
+        },
+        {
+          "name": "朝棠雅苑（一期）",
+          "permit": "京房售证字(2026)38号",
+          "date": "2026-03-26"
+        }
+      ],
       "developer": "北京招胜房地产开发有限公司",
       "district": "通州区",
       "group": "CBD-副中心组团",
@@ -945,6 +1293,23 @@
       ],
       "issueDates": [
         "2026-02-13"
+      ],
+      "presaleIssueRecords": [
+        {
+          "name": "兰庭雅苑",
+          "permit": "京房售证字(2025)152号",
+          "date": "2026-02-13"
+        },
+        {
+          "name": "兰庭雅苑",
+          "permit": "京房售证字(2025)82号",
+          "date": "2026-02-13"
+        },
+        {
+          "name": "兰庭雅苑",
+          "permit": "京房售证字(2026)13号",
+          "date": "2026-02-13"
+        }
       ],
       "developer": "待核",
       "district": "通州区",
@@ -979,6 +1344,28 @@
       "issueDates": [
         "2026-03-21"
       ],
+      "presaleIssueRecords": [
+        {
+          "name": "玖运佳苑（一期）",
+          "permit": "京房售证字(2025)120号",
+          "date": "2026-03-21"
+        },
+        {
+          "name": "玖运佳苑（一期）",
+          "permit": "京房售证字(2025)148号",
+          "date": "2026-03-21"
+        },
+        {
+          "name": "玖运佳苑（一期）",
+          "permit": "京房售证字(2025)93号",
+          "date": "2026-03-21"
+        },
+        {
+          "name": "玖运佳苑（一期）",
+          "permit": "京房售证字(2026)20号",
+          "date": "2026-03-21"
+        }
+      ],
       "developer": "中建玖合",
       "district": "通州区",
       "group": "CBD-副中心组团",
@@ -1008,6 +1395,23 @@
         "京房售证字(2025)开6号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "润悦雅园",
+          "permit": "京房售证字(2024)开1号",
+          "date": ""
+        },
+        {
+          "name": "润悦雅园",
+          "permit": "京房售证字(2025)开4号",
+          "date": ""
+        },
+        {
+          "name": "润悦雅园",
+          "permit": "京房售证字(2025)开6号",
+          "date": ""
+        }
+      ],
       "developer": "北京润悦置业有限公司",
       "district": "通州区",
       "group": "大亦庄组团",
@@ -1036,6 +1440,23 @@
         "京房售证字(2025)开5号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "亦序佳苑",
+          "permit": "京房售证字(2025)开2号",
+          "date": ""
+        },
+        {
+          "name": "亦序佳苑",
+          "permit": "京房售证字(2025)开3号",
+          "date": ""
+        },
+        {
+          "name": "亦序佳苑",
+          "permit": "京房售证字(2025)开5号",
+          "date": ""
+        }
+      ],
       "developer": "北京招晨房地产开发有限公司",
       "district": "大兴区",
       "group": "大亦庄组团",
@@ -1068,6 +1489,7 @@
         "京房售证字(2024)46号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [],
       "developer": "北京丰园永定置业有限公司",
       "district": "丰台区",
       "group": "西南组团",
@@ -1094,6 +1516,18 @@
         "京房售证字(2025)100号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "隅颂佳苑",
+          "permit": "京房售证字(2025)100号",
+          "date": ""
+        },
+        {
+          "name": "隅颂佳苑",
+          "permit": "京房售证字(2025)40号",
+          "date": ""
+        }
+      ],
       "developer": "北京南苑嘉盛置业有限公司",
       "district": "丰台区",
       "group": "西南组团",
@@ -1119,6 +1553,13 @@
         "京房售证字(2025)46号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "观宸嘉园",
+          "permit": "京房售证字(2025)46号",
+          "date": ""
+        }
+      ],
       "developer": "待核",
       "district": "丰台区",
       "group": "西南组团",
@@ -1149,6 +1590,28 @@
         "京房售证字(2025)79号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "中海峯泽璟苑",
+          "permit": "京房售证字(2025)34号",
+          "date": ""
+        },
+        {
+          "name": "中海峯泽璟苑",
+          "permit": "京房售证字(2025)35号",
+          "date": ""
+        },
+        {
+          "name": "中海峯泽璟苑",
+          "permit": "京房售证字(2025)51号",
+          "date": ""
+        },
+        {
+          "name": "中海峯泽璟苑",
+          "permit": "京房售证字(2025)79号",
+          "date": ""
+        }
+      ],
       "developer": "北京中海鑫海房地产开发有限公司",
       "district": "丰台区",
       "group": "西南组团",
@@ -1176,6 +1639,18 @@
         "京房售证字(2025)53号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "中海藏峰佳苑",
+          "permit": "京房售证字(2025)52号",
+          "date": ""
+        },
+        {
+          "name": "中海藏峰佳苑",
+          "permit": "京房售证字(2025)53号",
+          "date": ""
+        }
+      ],
       "developer": "待核",
       "district": "丰台区",
       "group": "西南组团",
@@ -1202,6 +1677,18 @@
         "京房售证字(2025)124号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "观璟嘉园",
+          "permit": "京房售证字(2025)101号",
+          "date": ""
+        },
+        {
+          "name": "观璟嘉园",
+          "permit": "京房售证字(2025)124号",
+          "date": ""
+        }
+      ],
       "developer": "待核",
       "district": "丰台区",
       "group": "西南组团",
@@ -1226,6 +1713,13 @@
         "京房售证字(2024)74号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "元启繁星园",
+          "permit": "京房售证字(2024)74号",
+          "date": ""
+        }
+      ],
       "developer": "北京凤河桥北房地产开发有限公司",
       "district": "大兴区",
       "group": "西南组团",
@@ -1252,6 +1746,18 @@
         "京房售证字(2025)121号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "润泽梧桐小区",
+          "permit": "京房售证字(2025)121号",
+          "date": ""
+        },
+        {
+          "name": "润泽梧桐小区",
+          "permit": "京房售证字(2025)74号",
+          "date": ""
+        }
+      ],
       "developer": "北京兴城发展建设开发有限公司",
       "district": "大兴区",
       "group": "西南组团",
@@ -1282,6 +1788,7 @@
       "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=21532808&systemID=3&srcId=1",
       "permits": [],
       "issueDates": [],
+      "presaleIssueRecords": [],
       "developer": "",
       "district": "大兴区",
       "group": "西南组团",
@@ -1306,6 +1813,13 @@
         "京房售证字(2025)24号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "颐知筑西区",
+          "permit": "京房售证字(2025)24号",
+          "date": ""
+        }
+      ],
       "developer": "北京城建瑞泰投资发展有限公司",
       "district": "房山区",
       "group": "西南组团",
@@ -1329,6 +1843,7 @@
       "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8141305&systemID=2&srcId=1",
       "permits": [],
       "issueDates": [],
+      "presaleIssueRecords": [],
       "developer": "",
       "district": "房山区",
       "group": "西南组团",
@@ -1360,6 +1875,28 @@
       "issueDates": [
         "2026-01-26"
       ],
+      "presaleIssueRecords": [
+        {
+          "name": "瑞璟佳苑",
+          "permit": "京房售证字(2026)1号",
+          "date": "2026-01-26"
+        },
+        {
+          "name": "瑞璟佳苑",
+          "permit": "京房售证字(2026)29号",
+          "date": "2026-01-26"
+        },
+        {
+          "name": "瑞璟佳苑",
+          "permit": "京房售证字(2026)30号",
+          "date": "2026-01-26"
+        },
+        {
+          "name": "瑞璟佳苑",
+          "permit": "京房售证字(2026)9号",
+          "date": "2026-01-26"
+        }
+      ],
       "developer": "北京慧海常筑置业有限公司",
       "district": "海淀区",
       "group": "西部组团",
@@ -1384,6 +1921,13 @@
         "京房售证字(2025)138号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "海辰里",
+          "permit": "京房售证字(2025)138号",
+          "date": ""
+        }
+      ],
       "developer": "北京京麓雅颂房地产开发有限公司",
       "district": "海淀区",
       "group": "西部组团",
@@ -1411,6 +1955,18 @@
       ],
       "issueDates": [
         "2026-06-06"
+      ],
+      "presaleIssueRecords": [
+        {
+          "name": "海岄雅苑",
+          "permit": "京房售证字(2025)137号",
+          "date": "2026-06-06"
+        },
+        {
+          "name": "海岄雅苑",
+          "permit": "京房售证字(2026)48号",
+          "date": "2026-06-06"
+        }
       ],
       "developer": "北京海隅建业房地产开发有限公司",
       "district": "海淀区",
@@ -1446,6 +2002,28 @@
       "issueDates": [
         "2026-02-13"
       ],
+      "presaleIssueRecords": [
+        {
+          "name": "源境苑",
+          "permit": "京房售证字(2024)129号",
+          "date": "2026-02-13"
+        },
+        {
+          "name": "源境苑",
+          "permit": "京房售证字(2025)69号",
+          "date": "2026-02-13"
+        },
+        {
+          "name": "源境苑",
+          "permit": "京房售证字(2025)89号",
+          "date": "2026-02-13"
+        },
+        {
+          "name": "源境苑",
+          "permit": "京房售证字(2026)12号",
+          "date": "2026-02-13"
+        }
+      ],
       "developer": "北京海鑫兴业房地产开发有限公司",
       "district": "石景山区",
       "group": "西部组团",
@@ -1470,6 +2048,13 @@
         "京房售证字(2025)73号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "璟悦家园",
+          "permit": "京房售证字(2025)73号",
+          "date": ""
+        }
+      ],
       "developer": "北京首景房地产开发有限公司",
       "district": "石景山区",
       "group": "西部组团",
@@ -1505,6 +2090,18 @@
       "issueDates": [
         "2026-01-26"
       ],
+      "presaleIssueRecords": [
+        {
+          "name": "瑞玉苑",
+          "permit": "京房售证字(2026)3号",
+          "date": "2026-01-26"
+        },
+        {
+          "name": "瑞玉苑",
+          "permit": "京房售证字(2026)4号",
+          "date": "2026-01-26"
+        }
+      ],
       "developer": "待核",
       "district": "石景山区",
       "group": "西部组团",
@@ -1527,6 +2124,7 @@
       "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7870806&systemID=2&srcId=1",
       "permits": [],
       "issueDates": [],
+      "presaleIssueRecords": [],
       "developer": "",
       "district": "丰台区",
       "group": "西部组团",
@@ -1551,6 +2149,13 @@
         "京房售证字(2024)49号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "京南和颂家园",
+          "permit": "京房售证字(2024)49号",
+          "date": ""
+        }
+      ],
       "developer": "待核",
       "district": "丰台区",
       "group": "西部组团",
@@ -1576,6 +2181,13 @@
         "京房售证字(2023)73号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "长安锦和嘉苑",
+          "permit": "京房售证字(2023)73号",
+          "date": ""
+        }
+      ],
       "developer": "待核",
       "district": "门头沟区",
       "group": "西部组团",
@@ -1601,6 +2213,13 @@
       ],
       "issueDates": [
         "2026-05-27"
+      ],
+      "presaleIssueRecords": [
+        {
+          "name": "万象茗筑小区",
+          "permit": "京房售证字(2026)43号",
+          "date": "2026-05-27"
+        }
       ],
       "developer": "北京和盛臻品房地产开发有限公司",
       "district": "大兴区",
@@ -1628,6 +2247,13 @@
       "issueDates": [
         "2026-05-27"
       ],
+      "presaleIssueRecords": [
+        {
+          "name": "嘉棠雅苑",
+          "permit": "京房售证字(2026)44号",
+          "date": "2026-05-27"
+        }
+      ],
       "developer": "北京丰合嘉汇置业有限公司",
       "district": "丰台区",
       "group": "未分组",
@@ -1653,6 +2279,13 @@
       ],
       "issueDates": [
         "2026-06-18"
+      ],
+      "presaleIssueRecords": [
+        {
+          "name": "青和家园",
+          "permit": "京房售证字(2026)50号",
+          "date": "2026-06-18"
+        }
       ],
       "developer": "北京铁工城市开发建设有限公司",
       "district": "顺义区",
@@ -1680,6 +2313,13 @@
       "issueDates": [
         "2026-05-10"
       ],
+      "presaleIssueRecords": [
+        {
+          "name": "樾序海苑",
+          "permit": "京房售证字(2026)39号",
+          "date": "2026-05-10"
+        }
+      ],
       "developer": "北京城华房地产开发有限公司",
       "district": "昌平区",
       "group": "未分组",
@@ -1706,6 +2346,18 @@
         "京房售证字(2026)53号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "嘉棠家苑",
+          "permit": "京房售证字(2026)53号",
+          "date": ""
+        },
+        {
+          "name": "嘉棠家苑",
+          "permit": "京房售证字(2026)5号",
+          "date": ""
+        }
+      ],
       "developer": "北京建兴丰汇置业有限公司",
       "district": "丰台区",
       "group": "西南组团",
@@ -1730,6 +2382,13 @@
         "京房售证字(2026)22号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "贤岸湾庭",
+          "permit": "京房售证字(2026)22号",
+          "date": ""
+        }
+      ],
       "developer": "北京合诚未来房地产开发有限公司",
       "district": "昌平区",
       "group": "北部组团",
@@ -1754,6 +2413,13 @@
         "京房售证字(2026)19号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "寰逸佳苑",
+          "permit": "京房售证字(2026)19号",
+          "date": ""
+        }
+      ],
       "developer": "北京未来科技城昌信置业有限公司",
       "district": "昌平区",
       "group": "北部组团",
@@ -1782,6 +2448,23 @@
         "京房售证字(2026)40号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "满和苑",
+          "permit": "京房售证字(2026)16号",
+          "date": ""
+        },
+        {
+          "name": "满和苑",
+          "permit": "京房售证字(2026)27号",
+          "date": ""
+        },
+        {
+          "name": "满和苑",
+          "permit": "京房售证字(2026)40号",
+          "date": ""
+        }
+      ],
       "developer": "北京海铧房地产开发有限公司",
       "district": "通州区",
       "group": "CBD-副中心组团",
@@ -1810,6 +2493,23 @@
         "京房售证字(2026)51号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "金阙华院",
+          "permit": "京房售证字(2026)23号",
+          "date": ""
+        },
+        {
+          "name": "金阙华院",
+          "permit": "京房售证字(2026)41号",
+          "date": ""
+        },
+        {
+          "name": "金阙华院",
+          "permit": "京房售证字(2026)51号",
+          "date": ""
+        }
+      ],
       "developer": "北京丰程置业有限公司",
       "district": "丰台区",
       "group": "西南组团",
@@ -1836,6 +2536,18 @@
         "京房售证字(2026)46号"
       ],
       "issueDates": [],
+      "presaleIssueRecords": [
+        {
+          "name": "栖云嘉苑",
+          "permit": "京房售证字(2026)26号",
+          "date": ""
+        },
+        {
+          "name": "栖云嘉苑",
+          "permit": "京房售证字(2026)46号",
+          "date": ""
+        }
+      ],
       "developer": "北京北投宏象房地产开发有限公司",
       "district": "通州区",
       "group": "CBD-副中心组团",
@@ -1861,6 +2573,7 @@
         "2026-01-26",
         "2026-04-24"
       ],
+      "presaleIssueRecords": [],
       "developer": "北京鑫安兴业房地产开发有限公司",
       "district": "石景山区",
       "group": "西部组团",
@@ -1883,6 +2596,7 @@
       "issueDates": [
         "2026-01-30"
       ],
+      "presaleIssueRecords": [],
       "developer": "北京天成天房地产开发有限公司",
       "district": "昌平区",
       "group": "北部组团",
@@ -1905,6 +2619,7 @@
       "issueDates": [
         "2026-02-05"
       ],
+      "presaleIssueRecords": [],
       "developer": "北京城昌贝越置业有限公司",
       "district": "昌平区",
       "group": "北部组团",
@@ -1927,6 +2642,7 @@
       "issueDates": [
         "2026-02-07"
       ],
+      "presaleIssueRecords": [],
       "developer": "北京东洲房地产开发有限公司",
       "district": "朝阳区",
       "group": "东北组团",
@@ -1949,6 +2665,7 @@
       "issueDates": [
         "2026-03-21"
       ],
+      "presaleIssueRecords": [],
       "developer": "北京顺开房地产开发有限公司",
       "district": "通州区",
       "group": "CBD-副中心组团",
@@ -1971,6 +2688,7 @@
       "issueDates": [
         "2026-04-09"
       ],
+      "presaleIssueRecords": [],
       "developer": "北京宁溪房地产开发有限责任公司",
       "district": "密云区",
       "group": "其他组团",
@@ -1993,6 +2711,7 @@
       "issueDates": [
         "2026-04-20"
       ],
+      "presaleIssueRecords": [],
       "developer": "北京京投润德置业有限公司",
       "district": "朝阳区",
       "group": "东北组团",
@@ -2015,6 +2734,7 @@
       "issueDates": [
         "2026-04-23"
       ],
+      "presaleIssueRecords": [],
       "developer": "北京首景房地产开发有限公司",
       "district": "石景山区",
       "group": "西部组团",
@@ -2037,6 +2757,7 @@
       "issueDates": [
         "2026-05-23"
       ],
+      "presaleIssueRecords": [],
       "developer": "北京城建瑞泰投资发展有限公司",
       "district": "房山区",
       "group": "西南组团",
@@ -2059,6 +2780,7 @@
       "issueDates": [
         "2026-06-26"
       ],
+      "presaleIssueRecords": [],
       "developer": "北京绿州博园投资有限公司",
       "district": "密云区",
       "group": "其他组团",
