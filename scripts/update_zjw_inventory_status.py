@@ -19,7 +19,7 @@ from typing import Any
 
 BASE_URL = "http://bjjs.zjw.beijing.gov.cn"
 DATA_RE = re.compile(
-    r"const DATA = (.*?);\nconst LAUNCH_OFFICIAL_INVENTORY_OVERRIDES",
+    r"const DATA = (.*?);\nconst PROJECT_METADATA_OVERRIDES",
     re.S,
 )
 LAUNCH_OVERRIDES_RE = re.compile(
@@ -1663,7 +1663,7 @@ def update_data_json(text: str, results: list[dict[str, Any]]) -> str:
     replacement = (
         "const DATA = "
         + json.dumps(data, ensure_ascii=False, separators=(",", ":"))
-        + ";\nconst LAUNCH_OFFICIAL_INVENTORY_OVERRIDES"
+        + ";\nconst PROJECT_METADATA_OVERRIDES"
     )
     return text[: match.start()] + replacement + text[match.end() :]
 
