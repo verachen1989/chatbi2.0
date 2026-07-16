@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 import html
 import json
 import re
@@ -76,6 +77,8 @@ NON_RETRYABLE_ERROR_PATTERNS = (
 )
 
 PROJECT_BUILDING_CACHE: dict[str, dict[str, dict[str, Any]]] = {}
+PROJECT_PERMIT_DETAIL_CACHE: dict[str, dict[str, dict[str, Any]]] = {}
+PROJECT_BUILDING_STATUS_CACHE: dict[str, dict[str, dict[str, Any]]] = {}
 
 # Coverage status categories — only "complete" updates official inventory
 COVERAGE_COMPLETE = "complete"       # 完整闭合，可更新正式看板
@@ -220,6 +223,40 @@ def is_retryable_error(exc: Exception) -> bool:
     return any(pattern in text for pattern in TRANSIENT_ERROR_PATTERNS)
 
 
+def classify_failure_texts(texts: list[str]) -> tuple[str, bool]:
+    """Map audit text to the retry loop's failure class and retry policy."""
+    values = [str(text or "") for text in texts if str(text or "")]
+    lowered = [value.lower() for value in values]
+    if any(
+        any(pattern.lower() in value for pattern in TRANSIENT_ERROR_PATTERNS)
+        for value in lowered
+    ):
+        return "network", True
+    if any(
+        marker in value
+        for value in values
+        for marker in ("空壳", "页面过小", "频道不存在")
+    ):
+        return "shell", True
+    if any("无法识别" in value or "未知状态" in value for value in values):
+        return "color", False
+    if any(
+        marker in value
+        for value in values
+        for marker in ("不闭合", "差额", "覆盖不足", "超出预期", "重复楼栋")
+    ):
+        return "metric", False
+    if any(
+        marker in value
+        for value in values
+        for marker in ("未找到", "未解析", "未获得", "无法确定", "缺少")
+    ):
+        return "structure", False
+    # An unavailable result without a more specific signature is not safe to
+    # retry indefinitely; keep the old value and require audit review.
+    return "structure", False
+
+
 def fetch_text(url: str, timeout: int = 12) -> str:
     req = urllib.request.Request(
         url,
@@ -337,6 +374,127 @@ def latest_issue_date(item: dict[str, Any]) -> str:
 def presale_permit_text(item: dict[str, Any]) -> str:
     permits = item.get("permits") or []
     return " / ".join(str(permit) for permit in permits if permit)
+
+
+def normalize_permit_text(value: Any) -> str:
+    """Normalize a Beijing presale permit for identity matching."""
+    return re.sub(r"\s+", "", str(value or "")).replace("（", "(").replace("）", ")")
+
+
+def build_permit_batch_specs(item: dict[str, Any]) -> list[dict[str, Any]]:
+    """Build independent permit batches without assuming URL order is permit order."""
+    permits = list(item.get("permits") or [])
+    if not permits:
+        permits = split_permits(item.get("presalePermitText"))
+    records = {
+        normalize_permit_text(record.get("permit")): str(record.get("date") or "")
+        for record in (item.get("presaleIssueRecords") or [])
+        if record.get("permit")
+    }
+    dates = list(item.get("issueDates") or item.get("presaleIssueDates") or [])
+    specs: list[dict[str, Any]] = []
+    for index, permit in enumerate(permits):
+        permit_text = str(permit)
+        issue_date = records.get(normalize_permit_text(permit_text), "")
+        if not issue_date and index < len(dates):
+            issue_date = str(dates[index] or "")
+        specs.append(
+            {
+                "permit": permit_text,
+                "permitKey": normalize_permit_text(permit_text),
+                "issueDate": issue_date,
+                "detailUrls": [],
+            }
+        )
+    return specs
+
+
+def match_permit_for_page(page_html: str, permits: list[str]) -> tuple[str | None, str]:
+    """Match a detail page to a configured permit using page evidence, not URL order."""
+    normalized_page = normalize_permit_text(page_html)
+    matches = [
+        permit
+        for permit in permits
+        if normalize_permit_text(permit) and normalize_permit_text(permit) in normalized_page
+    ]
+    if len(matches) == 1:
+        return matches[0], ""
+    if len(matches) > 1:
+        return None, "详情页同时包含多个预售证号，无法确定批次"
+    if len(permits) == 1:
+        return permits[0], ""
+    return None, "详情页未找到可匹配的预售证号"
+
+
+def classify_permit_batch(batch: dict[str, Any]) -> tuple[str, str]:
+    """Apply the G1/G2 gates to one permit batch."""
+    if batch.get("detailStatus") != "complete":
+        error = str(batch.get("error") or "、".join(batch.get("errors") or []) or "详情页未闭合")
+        return COVERAGE_UNAVAILABLE, error
+    unknown = int(batch.get("unknown") or 0)
+    if unknown:
+        return COVERAGE_PARTIAL, f"存在{unknown}套无法识别的房源颜色"
+    approved = int(batch.get("approvedSuites") or 0)
+    room_status = int(batch.get("roomStatusTotal") or 0)
+    if approved != room_status:
+        return COVERAGE_MISMATCH, f"批准{approved}套，房源状态{room_status}套，不闭合"
+    return COVERAGE_COMPLETE, "预售证批次已完成逐栋闭合"
+
+
+def aggregate_permit_coverage(
+    batches: list[dict[str, Any]], expected_total: int
+) -> dict[str, Any]:
+    """Aggregate independently closed permit batches into a project gate."""
+    approved_total = sum(int(batch.get("approvedSuites") or 0) for batch in batches)
+    room_status_total = sum(int(batch.get("roomStatusTotal") or 0) for batch in batches)
+    unknown_total = sum(int(batch.get("unknown") or 0) for batch in batches)
+    batch_states = [classify_permit_batch(batch) for batch in batches]
+    missing_permits = [
+        str(batch.get("permit") or "")
+        for batch, (status, _note) in zip(batches, batch_states)
+        if status == COVERAGE_UNAVAILABLE
+    ]
+    building_keys: list[str] = []
+    for batch in batches:
+        building_keys.extend(str(key) for key in batch.get("buildingKeys") or [] if key)
+    duplicate_keys = sorted(
+        key for key, count in Counter(building_keys).items() if count > 1
+    )
+    if missing_permits:
+        status = COVERAGE_UNAVAILABLE
+        note = "预售证批次未闭合：" + "、".join(missing_permits)
+    elif any(status == COVERAGE_MISMATCH for status, _note in batch_states):
+        status = COVERAGE_MISMATCH
+        note = "至少一个预售证批次批准套数与房源状态数不闭合"
+    elif any(status == COVERAGE_PARTIAL for status, _note in batch_states):
+        status = COVERAGE_PARTIAL
+        note = "至少一个预售证批次存在未知房源状态"
+    elif duplicate_keys:
+        status = COVERAGE_MISMATCH
+        note = "重复楼栋证据：" + "、".join(duplicate_keys[:5])
+    elif expected_total <= 0:
+        status = COVERAGE_PARTIAL
+        note = "缺少独立的住宅总套数证据（expectedTotal<=0）"
+    elif expected_total > 0 and approved_total != expected_total:
+        status = COVERAGE_MISMATCH
+        diff = approved_total - expected_total
+        note = (
+            f"实际超出预期{diff}套(批准{approved_total} vs 预期{expected_total})"
+            if diff > 0
+            else f"覆盖不足{abs(diff)}套(批准{approved_total} vs 预期{expected_total})"
+        )
+    else:
+        status = COVERAGE_COMPLETE
+        note = "所有预售证批次逐栋批准套数与房源状态数已完整闭合"
+    return {
+        "coverageStatus": status,
+        "coverageNote": note,
+        "approvedSuites": approved_total,
+        "roomStatusTotal": room_status_total,
+        "unknown": unknown_total,
+        "missingPermits": missing_permits,
+        "duplicateBuildingKeys": duplicate_keys,
+    }
 
 
 def residential_permits_from_note(item: dict[str, Any]) -> list[str]:
@@ -555,6 +713,7 @@ def discover_hidden_residential_buildings(
         min_residential_id = min(residential_known_ids)
         max_residential_id = max(residential_known_ids)
         source_url = str(permit_rows[0].get("sourceUrl") or "")
+        permit_batch_key = str(permit_rows[0].get("permitBatchKey") or "")
         internal_ids = [
             building_id
             for building_id in range(min_residential_id, max_residential_id + 1)
@@ -618,6 +777,7 @@ def discover_hidden_residential_buildings(
             return audit_entry, {
                 "buildingName": building_name,
                 "salePermitId": permit_id,
+                "permitBatchKey": permit_batch_key,
                 "buildingId": str(building_id),
                 "buildingKey": candidate_key,
                 "approvedSuites": approved_suites,
@@ -876,6 +1036,27 @@ def scrape_project(
         raise ValueError(f"{item.get('name') or item.get('dashboardName')} 缺少住建委项目详情页 URL")
     expected_total = int(parse_number(item.get("residentialTotal")) or 0)
     residential_permits = residential_permits_from_note(item)
+    permit_specs = build_permit_batch_specs(item)
+    if not permit_specs:
+        permit_specs = [
+            {
+                "permit": "",
+                "permitKey": "__single_project_batch__",
+                "issueDate": "",
+                "detailUrls": [],
+            }
+        ]
+    permit_names = [str(spec.get("permit") or "") for spec in permit_specs]
+    permit_state = {
+        str(spec["permitKey"]): {
+            **spec,
+            "detailStatus": "pending",
+            "completedUrls": set(),
+            "rows": {},
+            "errors": [],
+        }
+        for spec in permit_specs
+    }
     cache_key = str(item.get("dashboardName") or item.get("name") or primary_url(item))
     official_names: list[str] = []
     buildings_by_key: dict[str, dict[str, Any]] = {
@@ -884,8 +1065,31 @@ def scrape_project(
     }
     stats_by_url: dict[str, dict[str, Any]] = {}
     completed_detail_urls: set[str] = set()
+    detail_retry_blocked: set[str] = set()
+    cached_batches = PROJECT_PERMIT_DETAIL_CACHE.get(cache_key, {})
+    for permit_key, cached in cached_batches.items():
+        if permit_key not in permit_state:
+            continue
+        cached_urls = [str(url) for url in cached.get("detailUrls") or []]
+        if not cached_urls or not all(url in urls for url in cached_urls):
+            continue
+        batch = permit_state[permit_key]
+        batch["detailStatus"] = "complete"
+        batch["completedUrls"].update(cached_urls)
+        batch["detailUrls"].extend(cached_urls)
+        batch["rows"].update({key: dict(value) for key, value in (cached.get("rows") or {}).items()})
+        if cached.get("stats"):
+            batch["stats"] = dict(cached["stats"])
+        completed_detail_urls.update(cached_urls)
+        for key, row in batch["rows"].items():
+            buildings_by_key.setdefault(key, dict(row))
+        for source_url, stats in (cached.get("statsByUrl") or {}).items():
+            stats_by_url[str(source_url)] = dict(stats)
     detail_attempts: list[dict[str, Any]] = []
-    total_detail_attempts = max(10, retry_attempts + 8)
+    # The CLI retry budget controls detail-page sampling too.  Do not hide a
+    # persistent structural failure behind ten unconditional requests; the
+    # outer validation loop will revisit only a retryable batch.
+    total_detail_attempts = max(1, retry_attempts + 1)
     residential_buildings: list[dict[str, Any]] = []
     unavailable_detail_urls: list[str] = []
     detail_attempt_index = 0
@@ -893,7 +1097,7 @@ def scrape_project(
         current_timeout = min(timeout + detail_attempt_index * max(0, retry_timeout_step), 20)
         attempt_errors: list[dict[str, str]] = []
         for source_url in urls:
-            if source_url in completed_detail_urls:
+            if source_url in completed_detail_urls or source_url in detail_retry_blocked:
                 continue
             try:
                 page_html = fetch_text(source_url, timeout=current_timeout)
@@ -902,9 +1106,22 @@ def scrape_project(
                 if not is_valid:
                     # 页面无效 → 记为 sourceUnavailable，不标记为完成
                     unavailable_detail_urls.append(source_url)
-                    attempt_errors.append({"url": source_url, "error": f"页面无效: {validity_reason}"})
+                    error_text = f"页面无效: {validity_reason}"
+                    attempt_errors.append({"url": source_url, "error": error_text})
+                    if not classify_failure_texts([error_text])[1]:
+                        detail_retry_blocked.add(source_url)
                     continue
-                if residential_permits and not any(permit in page_html for permit in residential_permits):
+                matched_permit, permit_reason = match_permit_for_page(page_html, permit_names)
+                if matched_permit is None:
+                    unavailable_detail_urls.append(source_url)
+                    attempt_errors.append({"url": source_url, "error": permit_reason})
+                    detail_retry_blocked.add(source_url)
+                    continue
+                permit_key = normalize_permit_text(matched_permit) or "__single_project_batch__"
+                batch = permit_state[permit_key]
+                if residential_permits and normalize_permit_text(matched_permit) not in {
+                    normalize_permit_text(permit) for permit in residential_permits
+                }:
                     # 预售证不匹配 → 不算完成，但也不是失败，跳过本轮
                     continue
                 official_name = parse_project_name(page_html)
@@ -915,7 +1132,11 @@ def scrape_project(
                     # 楼栋表空 ≠ 整个页面无效（可能有楼栋但无链接）
                     unavailable_detail_urls.append(source_url)
                     attempt_errors.append({"url": source_url, "error": "项目详情页未解析到楼栋表行"})
+                    batch["errors"].append("项目详情页未解析到楼栋表行")
+                    detail_retry_blocked.add(source_url)
+                    continue
                 for row in parsed_rows:
+                    row["permitBatchKey"] = permit_key
                     key = str(
                         row.get("buildingKey")
                         or building_key_from_url(str(row.get("url") or ""))
@@ -930,13 +1151,23 @@ def scrape_project(
                             f"同一楼栋 {key} 批准套数冲突："
                             f"{existing.get('approvedSuites')} / {row.get('approvedSuites')}"
                         )
+                    if existing:
+                        existing.setdefault("permitBatchKey", permit_key)
                     buildings_by_key.setdefault(key, row)
+                    batch["rows"][key] = dict(row)
+                batch["completedUrls"].add(source_url)
+                batch["detailStatus"] = "complete"
+                batch["detailUrls"].append(source_url)
                 completed_detail_urls.add(source_url)
                 stats = parse_presell_stats(page_html)
                 if stats:
                     stats_by_url[source_url] = stats
+                    batch["stats"] = stats
             except Exception as exc:
-                attempt_errors.append({"url": source_url, "error": str(exc)})
+                error_text = str(exc)
+                attempt_errors.append({"url": source_url, "error": error_text})
+                if not classify_failure_texts([error_text])[1]:
+                    detail_retry_blocked.add(source_url)
             time.sleep(max(0.5, delay))
         building_rows = list(buildings_by_key.values())
         residential_buildings = [row for row in building_rows if "住宅" in row["buildingName"]]
@@ -958,28 +1189,54 @@ def scrape_project(
         )
         if residential_buildings and len(completed_detail_urls) == len(urls):
             break
+        if all(
+            url in completed_detail_urls or url in detail_retry_blocked
+            for url in urls
+        ):
+            break
         if detail_attempt_index < total_detail_attempts - 1:
             time.sleep(max(0.5, retry_delay))
         detail_attempt_index += 1
     missing_detail_urls = [url for url in urls if url not in completed_detail_urls]
+    if permit_state:
+        cached_project_batches = PROJECT_PERMIT_DETAIL_CACHE.setdefault(cache_key, {})
+        for permit_key, batch in permit_state.items():
+            if batch.get("detailStatus") != "complete":
+                continue
+            cached_project_batches[permit_key] = {
+                "detailUrls": sorted(set(batch.get("detailUrls") or [])),
+                "rows": {key: dict(value) for key, value in batch.get("rows", {}).items()},
+                "stats": dict(batch.get("stats") or {}),
+                "statsByUrl": {url: dict(value) for url, value in stats_by_url.items() if url in batch.get("completedUrls", set())},
+            }
+    for batch in permit_state.values():
+        batch["detailUrls"] = sorted(set(batch.get("detailUrls") or []))
+        if batch.get("completedUrls"):
+            batch["detailStatus"] = "complete"
+        elif batch.get("detailStatus") == "pending":
+            batch["detailStatus"] = "unavailable"
+            batch["errors"].append("未获得可验证的详情页响应")
     if missing_detail_urls:
         PROJECT_BUILDING_CACHE[cache_key] = {
             key: dict(value) for key, value in buildings_by_key.items()
         }
-        raise RuntimeError(
-            f"{item.get('name') or primary_url(item)} 项目详情页未完成："
-            f"{len(missing_detail_urls)}/{len(urls)}个证据页连续返回空壳；"
-            + "、".join(missing_detail_urls)
+    discovery_attempts = []
+    if not missing_detail_urls:
+        # Historical ID-range probing is audit-only.  Run it on a copy so a
+        # guessed/legacy candidate can never satisfy the formal G1 coverage
+        # gate or be written into the project cache as official evidence.
+        discovery_buildings = {
+            key: dict(value) for key, value in buildings_by_key.items()
+        }
+        discovery_attempts = discover_hidden_residential_buildings(
+            discovery_buildings,
+            expected_total,
+            timeout,
+            retry_attempts,
+            retry_delay,
+            retry_timeout_step,
+            delay,
         )
-    discovery_attempts = discover_hidden_residential_buildings(
-        buildings_by_key,
-        expected_total,
-        timeout,
-        retry_attempts,
-        retry_delay,
-        retry_timeout_step,
-        delay,
-    )
     if discovery_attempts:
         detail_attempts.append(
             {
@@ -999,7 +1256,7 @@ def scrape_project(
         all_approved_total = sum(int(row.get("approvedSuites") or 0) for row in building_rows)
         if all_approved_total == expected_total:
             residential_buildings = building_rows
-    if not residential_buildings:
+    if not residential_buildings and not missing_detail_urls:
         raise ValueError(f"{item.get('name') or primary_url(item)} 未解析到住宅楼栋，已停止写入，避免把总套数误置为0")
     invalid_buildings = [row for row in residential_buildings if int(row.get("approvedSuites") or 0) <= 0]
     if invalid_buildings:
@@ -1009,15 +1266,32 @@ def scrape_project(
     status_items: list[dict[str, int]] = []
     building_status_errors: list[dict[str, str]] = []
     building_coverage: list[dict[str, Any]] = []
+    status_cache = PROJECT_BUILDING_STATUS_CACHE.setdefault(cache_key, {})
     with ThreadPoolExecutor(max_workers=max(1, max_workers)) as executor:
         futures = {}
         for row in residential_buildings:
+            building_cache_key = str(
+                row.get("buildingKey")
+                or building_key_from_url(str(row.get("url") or ""))
+                or row.get("buildingName")
+            )
+            cached_status = status_cache.get(building_cache_key)
+            if cached_status:
+                cached_counts = cached_status.get("statusCounts") or {}
+                if (
+                    int(cached_counts.get("total") or 0) == int(row.get("approvedSuites") or 0)
+                    and int(cached_counts.get("unknown") or 0) == 0
+                ):
+                    status_items.append(dict(cached_counts))
+                    building_coverage.append(dict(cached_status["coverage"]))
+                    continue
             if not row.get("url"):
                 approved_suites = int(row.get("approvedSuites") or 0)
                 if "已售完" not in str(row.get("saleStatus") or ""):
                     building_status_errors.append(
                         {
                             "buildingName": str(row.get("buildingName") or ""),
+                            "permitBatchKey": row.get("permitBatchKey") or "",
                             "url": "",
                             "error": f"无楼盘表链接且销售状态不是已售完：{row.get('saleStatus') or '空'}",
                         }
@@ -1027,21 +1301,25 @@ def scrape_project(
                 building_counts["soldOut"] = approved_suites
                 building_counts["total"] = approved_suites
                 status_items.append(building_counts)
-                building_coverage.append(
-                    {
-                        "buildingId": "",
-                        "salePermitId": row.get("salePermitId") or "",
-                        "buildingKey": row.get("buildingKey") or "",
-                        "buildingName": row.get("buildingName") or "",
-                        "approvedSuites": approved_suites,
-                        "parsedSuites": approved_suites,
-                        "retryAttempts": 0,
-                        "attempts": [],
-                        "statusSource": "项目详情页销售状态=已售完；住建委未提供楼盘表链接",
-                        "statusCounts": building_counts,
-                        "url": row.get("sourceUrl") or "",
-                    }
-                )
+                coverage_entry = {
+                    "buildingId": "",
+                    "salePermitId": row.get("salePermitId") or "",
+                    "permitBatchKey": row.get("permitBatchKey") or "",
+                    "buildingKey": row.get("buildingKey") or "",
+                    "buildingName": row.get("buildingName") or "",
+                    "approvedSuites": approved_suites,
+                    "parsedSuites": approved_suites,
+                    "retryAttempts": 0,
+                    "attempts": [],
+                    "statusSource": "项目详情页销售状态=已售完；住建委未提供楼盘表链接",
+                    "statusCounts": building_counts,
+                    "url": row.get("sourceUrl") or "",
+                }
+                building_coverage.append(coverage_entry)
+                status_cache[building_cache_key] = {
+                    "statusCounts": dict(building_counts),
+                    "coverage": dict(coverage_entry),
+                }
                 continue
             future = executor.submit(
                 fetch_building_status_checked,
@@ -1065,6 +1343,7 @@ def scrape_project(
                     building_status_errors.append(
                         {
                             "buildingName": str(row.get("buildingName") or ""),
+                            "permitBatchKey": row.get("permitBatchKey") or "",
                             "url": str(row.get("url") or ""),
                             "error": f"页面状态不完整：批准{approved_suites}套，解析{parsed_total}套，差额{approved_suites - parsed_total}套",
                         }
@@ -1080,24 +1359,29 @@ def scrape_project(
                     )
                     continue
                 status_items.append(building_counts)
-                building_coverage.append(
-                    {
-                        "buildingId": row.get("buildingId") or building_id_from_url(str(row.get("url") or "")),
-                        "salePermitId": row.get("salePermitId") or sale_permit_id_from_url(str(row.get("url") or "")),
-                        "buildingKey": row.get("buildingKey") or building_key_from_url(str(row.get("url") or "")),
-                        "buildingName": row.get("buildingName") or "",
-                        "approvedSuites": approved_suites,
-                        "parsedSuites": parsed_total,
-                        "retryAttempts": len(building_attempts),
-                        "attempts": building_attempts,
-                        "statusCounts": building_counts,
-                        "url": row.get("url") or "",
-                    }
-                )
+                coverage_entry = {
+                    "buildingId": row.get("buildingId") or building_id_from_url(str(row.get("url") or "")),
+                    "salePermitId": row.get("salePermitId") or sale_permit_id_from_url(str(row.get("url") or "")),
+                    "permitBatchKey": row.get("permitBatchKey") or "",
+                    "buildingKey": row.get("buildingKey") or building_key_from_url(str(row.get("url") or "")),
+                    "buildingName": row.get("buildingName") or "",
+                    "approvedSuites": approved_suites,
+                    "parsedSuites": parsed_total,
+                    "retryAttempts": len(building_attempts),
+                    "attempts": building_attempts,
+                    "statusCounts": building_counts,
+                    "url": row.get("url") or "",
+                }
+                building_coverage.append(coverage_entry)
+                status_cache[building_cache_key] = {
+                    "statusCounts": dict(building_counts),
+                    "coverage": dict(coverage_entry),
+                }
             except Exception as exc:
                 building_status_errors.append(
                     {
                         "buildingName": str(row.get("buildingName") or ""),
+                        "permitBatchKey": row.get("permitBatchKey") or "",
                         "url": str(row.get("url") or ""),
                         "error": str(exc),
                     }
@@ -1105,14 +1389,54 @@ def scrape_project(
     counts = merge_counts(status_items)
     status_total = counts.get("total", 0)
     unknown_count = int(counts.get("unknown") or 0)
+    permit_batches: list[dict[str, Any]] = []
+    for spec in permit_specs:
+        permit_key = str(spec.get("permitKey") or "")
+        batch = permit_state[permit_key]
+        batch_rows = [
+            row for row in residential_buildings
+            if str(row.get("permitBatchKey") or "") == permit_key
+        ]
+        batch_coverage = [
+            entry for entry in building_coverage
+            if str(entry.get("permitBatchKey") or "") == permit_key
+        ]
+        batch_counts = merge_counts(
+            [entry.get("statusCounts") or {} for entry in batch_coverage]
+        ) if batch_coverage else {status: 0 for status in STATUS_LABELS} | {"total": 0}
+        permit_batches.append(
+            {
+                "permit": batch.get("permit") or "未标识预售证",
+                "issueDate": batch.get("issueDate") or "",
+                "detailUrl": (batch.get("detailUrls") or [""])[0],
+                "detailUrls": batch.get("detailUrls") or [],
+                "detailStatus": batch.get("detailStatus"),
+                "approvedSuites": sum(int(row.get("approvedSuites") or 0) for row in batch_rows),
+                "roomStatusTotal": int(batch_counts.get("total") or 0),
+                "unknown": int(batch_counts.get("unknown") or 0),
+                "buildingCount": len(batch_rows),
+                "buildingKeys": [str(row.get("buildingKey") or "") for row in batch_rows if row.get("buildingKey")],
+                "errors": list(batch.get("errors") or []),
+            }
+        )
+    for batch in permit_batches:
+        batch_status, batch_note = classify_permit_batch(batch)
+        batch["coverageStatus"] = batch_status
+        batch["coverageNote"] = batch_note
+        if batch.get("errors"):
+            batch["error"] = "；".join(str(error) for error in batch["errors"])
+    permit_summary = aggregate_permit_coverage(permit_batches, expected_total)
     # 统一分类覆盖状态，不再在各处分散 raise
     coverage_status, coverage_note = classify_coverage(
         approved_total=approved_total if status_total > 0 else 0,
         expected_total=expected_total,
         unknown_count=unknown_count,
         building_status_errors=building_status_errors,
-        detail_url_failures=unavailable_detail_urls,
+        detail_url_failures=missing_detail_urls,
     )
+    if coverage_status == COVERAGE_COMPLETE:
+        coverage_status = permit_summary["coverageStatus"]
+        coverage_note = permit_summary["coverageNote"]
     # 特殊情况：完全没有解析到房源状态
     if status_total <= 0 and coverage_status != COVERAGE_UNAVAILABLE:
         coverage_status = COVERAGE_UNAVAILABLE
@@ -1126,6 +1450,24 @@ def scrape_project(
     residential_total = approved_total
     stats = merge_presell_stats(presell_stats_items)
     sold_from_status = int(counts.get("contractSigned", 0) + counts.get("filed", 0))
+    failure_texts = [coverage_note]
+    failure_texts.extend(
+        str(error.get("error") or "") for error in building_status_errors
+    )
+    failure_texts.extend(
+        str(error.get("error") or "")
+        for attempt in detail_attempts
+        for error in attempt.get("errors", [])
+        if isinstance(error, dict)
+    )
+    failure_texts.extend(
+        str(error)
+        for batch in permit_batches
+        for error in batch.get("errors", [])
+    )
+    failure_class, retryable = ("", False)
+    if coverage_status != COVERAGE_COMPLETE:
+        failure_class, retryable = classify_failure_texts(failure_texts)
     fetched_at = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S")
     result = {
         "projectId": project_id_from_url(primary_url(item)),
@@ -1156,6 +1498,10 @@ def scrape_project(
         "coverageStatus": coverage_status,
         "coverageComplete": coverage_status == COVERAGE_COMPLETE,
         "coverageNote": coverage_note,
+        "failureClass": failure_class,
+        "retryable": retryable,
+        "permitCoverage": permit_batches,
+        "missingPermitBatches": permit_summary.get("missingPermits") or [],
         "unsignedSuites": int(counts.get("available", 0)),
         "availableSuites": int(counts.get("available", 0)),
         "bookedSuites": int(counts.get("booked", 0)),
@@ -1348,6 +1694,7 @@ def watchlist_item_from_dashboard_project(project: dict[str, Any], collection_na
         "url": urls[0],
         "permits": split_permits(project.get("summaryPresalePermit")),
         "issueDates": issue_dates_from_project(project),
+        "presaleIssueRecords": project.get("presaleIssueRecords") or [],
         "developer": project.get("summaryDeveloper") or "",
         "district": project.get("district") or "",
         "group": project.get("group") or "",
@@ -1400,6 +1747,7 @@ def load_official_projects_from_dashboard(path: Path) -> list[dict[str, Any]]:
                 "url": detail_urls[0],
                 "permits": project.get("permits") or [],
                 "issueDates": project.get("issueDates") or [],
+                "presaleIssueRecords": project.get("presaleIssueRecords") or [],
                 "developer": project.get("developer") or "",
                 "district": project.get("district") or "",
                 "group": project.get("group") or "",
@@ -1462,6 +1810,10 @@ def project_snapshot(result: dict[str, Any]) -> dict[str, Any]:
         "coverageComplete": bool(result.get("coverageComplete")),
         "coverageStatus": result.get("coverageStatus", COVERAGE_COMPLETE),
         "coverageNote": result.get("coverageNote", ""),
+        "failureClass": result.get("failureClass", ""),
+        "retryable": bool(result.get("retryable")),
+        "permitCoverage": result.get("permitCoverage") or [],
+        "missingPermitBatches": result.get("missingPermitBatches") or [],
         "remainingSuites": result["unsignedSuites"],
         "cumulativeSoldSuites": result["signedSuites"],
         "contractSignedSuites": result["contractSignedSuites"],
@@ -1894,6 +2246,8 @@ def main() -> int:
                         "error": f"coverageStatus={coverage_status}: {coverage_note}",
                         "coverageStatus": coverage_status,
                         "coverageNote": coverage_note,
+                        "failureClass": result.get("failureClass") or "",
+                        "retryable": bool(result.get("retryable")),
                         "partialResult": {
                             "residentialTotal": result.get("residentialTotal"),
                             "approvedResidentialTotal": result.get("approvedResidentialTotal"),
@@ -1902,6 +2256,10 @@ def main() -> int:
                             "signedSuites": result.get("signedSuites"),
                             "buildingCount": result.get("buildingCount"),
                             "buildingStatusErrors": result.get("buildingStatusErrors"),
+                            "failureClass": result.get("failureClass") or "",
+                            "retryable": bool(result.get("retryable")),
+                            "permitCoverage": result.get("permitCoverage") or [],
+                            "missingPermitBatches": result.get("missingPermitBatches") or [],
                         },
                         "validationRounds": validation_round,
                         "retryAttempts": max(0, len(all_attempts) - 1),
@@ -1916,11 +2274,10 @@ def main() -> int:
                         file=sys.stderr,
                         flush=True,
                     )
-                    # partial/mismatch 不重试（结构性问题重试不会改变结果）
-                    if coverage_status in (COVERAGE_MISMATCH, COVERAGE_PARTIAL):
-                        continue
-                    # unavailable 可能因网络问题，仍可重试
-                    next_pending.append((item, all_attempts))
+                    # 只有空壳/网络失败回到 retry loop；结构、口径和颜色
+                    # 问题直接停在失败审计通道，避免无效消耗请求。
+                    if result.get("retryable"):
+                        next_pending.append((item, all_attempts))
                 continue
             failure = {
                 "projectName": project_name,
@@ -1931,6 +2288,10 @@ def main() -> int:
                 "url": primary_url(item),
                 "urls": item_urls(item),
                 "error": str(exc) if exc else "未知错误",
+                "failureClass": (
+                    "network" if attempts and attempts[-1].get("retryable") else "structure"
+                ),
+                "retryable": bool(attempts and attempts[-1].get("retryable")),
                 "validationRounds": validation_round,
                 "retryAttempts": max(0, len(all_attempts) - 1),
                 "attemptCount": len(all_attempts),
@@ -1944,7 +2305,8 @@ def main() -> int:
                 file=sys.stderr,
                 flush=True,
             )
-            next_pending.append((item, all_attempts))
+            if failure["retryable"]:
+                next_pending.append((item, all_attempts))
         if next_pending:
             failed_names = "、".join(
                 str(item.get("dashboardName") or item.get("name") or "")
