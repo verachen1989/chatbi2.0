@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22 11:46:38",
+  "generatedAt": "2026-07-24 10:00:16",
   "scope": "页面全部已匹配住建委项目 + 页面未覆盖的新开盘住宅补充项目；取证时间按住建委预售许可证发证日期；总套数/剩余套数/累计已售取自住建委楼盘表房源状态。",
   "fields": {
     "projectName": "项目名称",
@@ -69,7 +69,7 @@
       "bookedSuites": 0,
       "signedStatsSuites": 39,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:22:49",
+      "fetchedAt": "2026-07-24 09:45:32",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211285&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211285&systemID=2&srcId=1"
@@ -168,15 +168,8 @@
           "buildingName": "3#住宅楼",
           "approvedSuites": 66,
           "parsedSuites": 66,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 66,
             "booked": 0,
@@ -223,15 +216,8 @@
           "buildingName": "5#住宅楼",
           "approvedSuites": 71,
           "parsedSuites": 71,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 70,
             "booked": 0,
@@ -344,7 +330,7 @@
       },
       "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共202套，绿色可售75套，已预订2套，已签约2套，网上联机备案97套，未知状态26套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约118套，已签约面积12274.48㎡，成交均价52223.45元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:09:28",
+      "latestFailureAt": "2026-07-24 09:31:37",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -384,7 +370,7 @@
       },
       "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共572套，绿色可售154套，已预订1套，已签约0套，网上联机备案140套，未知状态277套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约189套，已签约面积22041.88㎡，成交均价59393.28元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:20:32",
+      "latestFailureAt": "2026-07-24 09:44:43",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -426,7 +412,7 @@
       },
       "auditNote": "住建委楼盘表9栋住宅楼房源状态复核：共508套，绿色可售38套，已预订0套，已签约0套，网上联机备案30套，未知状态440套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约31套，已签约面积2569.25㎡，成交均价44997.68元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:28:09",
+      "latestFailureAt": "2026-07-24 09:49:10",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -470,7 +456,7 @@
       },
       "auditNote": "住建委楼盘表18栋住宅楼房源状态复核：共1443套，绿色可售82套，已预订17套，已签约2套，网上联机备案425套，未知状态917套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约1336套，已签约面积177262.2㎡，成交均价62092.42元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:10:28",
+      "latestFailureAt": "2026-07-24 09:32:42",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -512,7 +498,7 @@
       },
       "auditNote": "住建委楼盘表17栋住宅楼房源状态复核：共590套，绿色可售137套，已预订34套，已签约11套，网上联机备案101套，未知状态307套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约223套，已签约面积26133.36㎡，成交均价89341.91元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:17:16",
+      "latestFailureAt": "2026-07-24 09:37:37",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -633,13 +619,13 @@
       "missingPermitBatches": [],
       "remainingSuites": 885,
       "cumulativeSoldSuites": 271,
-      "contractSignedSuites": 17,
-      "filedSuites": 254,
+      "contractSignedSuites": 16,
+      "filedSuites": 255,
       "soldOutSuites": 0,
       "bookedSuites": 11,
       "signedStatsSuites": 259,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 11:16:43",
+      "fetchedAt": "2026-07-24 09:36:53",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8079201&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8079201&systemID=2&srcId=1",
@@ -650,8 +636,8 @@
       "statusCounts": {
         "available": 885,
         "booked": 11,
-        "contractSigned": 17,
-        "filed": 254,
+        "contractSigned": 16,
+        "filed": 255,
         "soldOut": 0,
         "qualification": 0,
         "mortgage": 0,
@@ -669,21 +655,8 @@
           "buildingName": "1#住宅楼",
           "approvedSuites": 30,
           "parsedSuites": 30,
-          "retryAttempts": 2,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            },
-            {
-              "attempt": 1,
-              "sample": 3,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 30,
             "booked": 0,
@@ -706,15 +679,8 @@
           "buildingName": "1#住宅楼",
           "approvedSuites": 156,
           "parsedSuites": 156,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 156,
             "booked": 0,
@@ -766,8 +732,8 @@
           "statusCounts": {
             "available": 8,
             "booked": 1,
-            "contractSigned": 1,
-            "filed": 58,
+            "contractSigned": 0,
+            "filed": 59,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -905,15 +871,8 @@
           "buildingName": "2#住宅楼",
           "approvedSuites": 156,
           "parsedSuites": 156,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 156,
             "booked": 0,
@@ -984,15 +943,8 @@
           "buildingName": "4#住宅楼",
           "approvedSuites": 12,
           "parsedSuites": 12,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 12,
             "booked": 0,
@@ -1015,15 +967,8 @@
           "buildingName": "4#住宅楼",
           "approvedSuites": 68,
           "parsedSuites": 68,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 68,
             "booked": 0,
@@ -1142,21 +1087,8 @@
           "buildingName": "9#住宅楼",
           "approvedSuites": 78,
           "parsedSuites": 78,
-          "retryAttempts": 2,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            },
-            {
-              "attempt": 1,
-              "sample": 3,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 48,
             "booked": 1,
@@ -1181,7 +1113,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8079201&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表19栋住宅楼房源状态复核：共1167套，绿色可售885套，已预订11套，已签约17套，网上联机备案254套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约259套，已签约面积40124.58㎡，成交均价103635.35元/㎡。"
+      "auditNote": "住建委楼盘表19栋住宅楼房源状态复核：共1167套，绿色可售885套，已预订11套，已签约16套，网上联机备案255套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约259套，已签约面积40124.58㎡，成交均价103635.35元/㎡。"
     },
     {
       "projectName": "中海安澜北京",
@@ -1219,7 +1151,7 @@
       },
       "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共268套，绿色可售103套，已预订1套，已签约1套，网上联机备案64套，未知状态99套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约82套，已签约面积20354.61㎡，成交均价145755.08元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:48:06",
+      "latestFailureAt": "2026-07-24 09:13:18",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -1263,7 +1195,7 @@
       },
       "auditNote": "住建委楼盘表6栋住宅楼房源状态复核：共986套，绿色可售73套，已预订38套，已签约0套，网上联机备案190套，未知状态685套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约974套，已签约面积111489.82㎡，成交均价60312.03元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:47:33",
+      "latestFailureAt": "2026-07-24 09:54:12",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -1346,7 +1278,7 @@
           "unknown": 0,
           "buildingCount": 1,
           "buildingKeys": [
-            "8203797|577224"
+            "8203797|no-detail|5#住宅楼"
           ],
           "errors": [],
           "coverageStatus": "complete",
@@ -1355,14 +1287,14 @@
       ],
       "missingPermitBatches": [],
       "remainingSuites": 12,
-      "cumulativeSoldSuites": 243,
+      "cumulativeSoldSuites": 214,
       "contractSignedSuites": 0,
-      "filedSuites": 243,
-      "soldOutSuites": 322,
-      "bookedSuites": 1,
-      "signedStatsSuites": 565,
+      "filedSuites": 214,
+      "soldOutSuites": 352,
+      "bookedSuites": 0,
+      "signedStatsSuites": 566,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:28:42",
+      "fetchedAt": "2026-07-24 09:48:30",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8173128&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8173128&systemID=2&srcId=1",
@@ -1371,10 +1303,10 @@
       ],
       "statusCounts": {
         "available": 12,
-        "booked": 1,
+        "booked": 0,
         "contractSigned": 0,
-        "filed": 243,
-        "soldOut": 322,
+        "filed": 214,
+        "soldOut": 352,
         "qualification": 0,
         "mortgage": 0,
         "nonSale": 0,
@@ -1441,15 +1373,8 @@
           "buildingName": "3#住宅楼",
           "approvedSuites": 66,
           "parsedSuites": 66,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 1,
             "booked": 0,
@@ -1490,28 +1415,29 @@
           "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8185588&systemID=2&srcId=1"
         },
         {
-          "buildingId": "577224",
+          "buildingId": "",
           "salePermitId": "8203797",
           "permitBatchKey": "京房售证字(2026)40号",
-          "buildingKey": "8203797|577224",
+          "buildingKey": "8203797|no-detail|5#住宅楼",
           "buildingName": "5#住宅楼",
           "approvedSuites": 30,
           "parsedSuites": 30,
           "retryAttempts": 0,
           "attempts": [],
+          "statusSource": "项目详情页销售状态=已售完；住建委未提供楼盘表链接",
           "statusCounts": {
             "available": 0,
-            "booked": 1,
+            "booked": 0,
             "contractSigned": 0,
-            "filed": 29,
-            "soldOut": 0,
+            "filed": 0,
+            "soldOut": 30,
             "qualification": 0,
             "mortgage": 0,
             "nonSale": 0,
             "unknown": 0,
             "total": 30
           },
-          "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320833&systemId=2&categoryId=1&salePermitId=8203797&buildingId=577224"
+          "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203797&systemID=2&srcId=1"
         },
         {
           "buildingId": "",
@@ -1621,7 +1547,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8173128&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表9栋住宅楼房源状态复核：共578套，绿色可售12套，已预订1套，已签约0套，网上联机备案243套，整栋已售完（无楼盘表链接）322套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约565套，已签约面积52809.39㎡，成交均价50928.01元/㎡。"
+      "auditNote": "住建委楼盘表9栋住宅楼房源状态复核：共578套，绿色可售12套，已预订0套，已签约0套，网上联机备案214套，整栋已售完（无楼盘表链接）352套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约566套，已签约面积52911.58㎡，成交均价50922.28元/㎡。"
     },
     {
       "projectName": "中海萬吉玖序",
@@ -1719,13 +1645,13 @@
       "missingPermitBatches": [],
       "remainingSuites": 155,
       "cumulativeSoldSuites": 275,
-      "contractSignedSuites": 14,
-      "filedSuites": 261,
+      "contractSignedSuites": 13,
+      "filedSuites": 262,
       "soldOutSuites": 30,
       "bookedSuites": 7,
       "signedStatsSuites": 292,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:53:00",
+      "fetchedAt": "2026-07-24 09:17:51",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8078140&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8078140&systemID=2&srcId=1",
@@ -1735,8 +1661,8 @@
       "statusCounts": {
         "available": 155,
         "booked": 7,
-        "contractSigned": 14,
-        "filed": 261,
+        "contractSigned": 13,
+        "filed": 262,
         "soldOut": 30,
         "qualification": 0,
         "mortgage": 0,
@@ -1754,8 +1680,15 @@
           "buildingName": "1#住宅楼",
           "approvedSuites": 10,
           "parsedSuites": 10,
-          "retryAttempts": 0,
-          "attempts": [],
+          "retryAttempts": 1,
+          "attempts": [
+            {
+              "attempt": 1,
+              "sample": 2,
+              "timeout": 8,
+              "error": "timed out"
+            }
+          ],
           "statusCounts": {
             "available": 8,
             "booked": 0,
@@ -1778,21 +1711,8 @@
           "buildingName": "1#住宅楼",
           "approvedSuites": 26,
           "parsedSuites": 26,
-          "retryAttempts": 2,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            },
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 2,
             "booked": 1,
@@ -1815,8 +1735,15 @@
           "buildingName": "2#住宅楼",
           "approvedSuites": 9,
           "parsedSuites": 9,
-          "retryAttempts": 0,
-          "attempts": [],
+          "retryAttempts": 1,
+          "attempts": [
+            {
+              "attempt": 1,
+              "sample": 1,
+              "timeout": 8,
+              "error": "timed out"
+            }
+          ],
           "statusCounts": {
             "available": 6,
             "booked": 0,
@@ -1863,8 +1790,15 @@
           "buildingName": "3#住宅楼",
           "approvedSuites": 6,
           "parsedSuites": 6,
-          "retryAttempts": 0,
-          "attempts": [],
+          "retryAttempts": 1,
+          "attempts": [
+            {
+              "attempt": 1,
+              "sample": 1,
+              "timeout": 8,
+              "error": "timed out"
+            }
+          ],
           "statusCounts": {
             "available": 6,
             "booked": 0,
@@ -1911,15 +1845,8 @@
           "buildingName": "4#住宅楼",
           "approvedSuites": 9,
           "parsedSuites": 9,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 9,
             "booked": 0,
@@ -1990,21 +1917,8 @@
           "buildingName": "5#住宅楼",
           "approvedSuites": 91,
           "parsedSuites": 91,
-          "retryAttempts": 2,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            },
-            {
-              "attempt": 1,
-              "sample": 3,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 23,
             "booked": 0,
@@ -2075,15 +1989,8 @@
           "buildingName": "7#住宅楼",
           "approvedSuites": 18,
           "parsedSuites": 18,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 12,
             "booked": 0,
@@ -2106,20 +2013,13 @@
           "buildingName": "7#住宅楼",
           "approvedSuites": 84,
           "parsedSuites": 84,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 7,
             "booked": 1,
-            "contractSigned": 2,
-            "filed": 74,
+            "contractSigned": 1,
+            "filed": 75,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -2188,7 +2088,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8078140&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表16栋住宅楼房源状态复核：共467套，绿色可售155套，已预订7套，已签约14套，网上联机备案261套，整栋已售完（无楼盘表链接）30套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约292套，已签约面积61201.48㎡，成交均价111954.5元/㎡。"
+      "auditNote": "住建委楼盘表16栋住宅楼房源状态复核：共467套，绿色可售155套，已预订7套，已签约13套，网上联机备案262套，整栋已售完（无楼盘表链接）30套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约292套，已签约面积61201.48㎡，成交均价111954.5元/㎡。"
     },
     {
       "projectName": "中海长安源境",
@@ -2231,7 +2131,7 @@
       },
       "auditNote": "住建委楼盘表14栋住宅楼房源状态复核：共424套，绿色可售157套，已预订6套，已签约2套，网上联机备案26套，未知状态233套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约256套，已签约面积30843.76㎡，成交均价58192.46元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:24:53",
+      "latestFailureAt": "2026-07-24 10:00:16",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -2287,7 +2187,7 @@
       "bookedSuites": 0,
       "signedStatsSuites": 1,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:35:24",
+      "fetchedAt": "2026-07-24 09:51:24",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8186681&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8186681&systemID=2&srcId=1"
@@ -2423,7 +2323,7 @@
       "bookedSuites": 2,
       "signedStatsSuites": 44,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:19:28",
+      "fetchedAt": "2026-07-24 09:44:22",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7870806&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7870806&systemID=2&srcId=1"
@@ -2474,21 +2374,8 @@
           "buildingName": "2#住宅楼",
           "approvedSuites": 60,
           "parsedSuites": 60,
-          "retryAttempts": 2,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            },
-            {
-              "attempt": 1,
-              "sample": 3,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 53,
             "booked": 0,
@@ -2535,21 +2422,8 @@
           "buildingName": "4#住宅楼",
           "approvedSuites": 44,
           "parsedSuites": 44,
-          "retryAttempts": 2,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            },
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 28,
             "booked": 1,
@@ -2685,7 +2559,7 @@
       },
       "auditNote": "住建委楼盘表15栋住宅楼房源状态复核：共639套，绿色可售81套，已预订1套，已签约1套，网上联机备案140套，未知状态416套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约397套，已签约面积36957.97㎡，成交均价39091.02元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:53:09",
+      "latestFailureAt": "2026-07-24 09:18:00",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -2752,7 +2626,7 @@
       "bookedSuites": 2,
       "signedStatsSuites": 269,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:59:25",
+      "fetchedAt": "2026-07-24 09:24:26",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8081196&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8081196&systemID=2&srcId=1",
@@ -2780,8 +2654,15 @@
           "buildingName": "1#住宅楼",
           "approvedSuites": 11,
           "parsedSuites": 11,
-          "retryAttempts": 0,
-          "attempts": [],
+          "retryAttempts": 1,
+          "attempts": [
+            {
+              "attempt": 1,
+              "sample": 2,
+              "timeout": 8,
+              "error": "timed out"
+            }
+          ],
           "statusCounts": {
             "available": 4,
             "booked": 0,
@@ -2804,15 +2685,8 @@
           "buildingName": "1#住宅楼",
           "approvedSuites": 93,
           "parsedSuites": 93,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 3,
             "booked": 1,
@@ -2859,8 +2733,15 @@
           "buildingName": "3#住宅楼",
           "approvedSuites": 24,
           "parsedSuites": 24,
-          "retryAttempts": 0,
-          "attempts": [],
+          "retryAttempts": 1,
+          "attempts": [
+            {
+              "attempt": 1,
+              "sample": 1,
+              "timeout": 8,
+              "error": "timed out"
+            }
+          ],
           "statusCounts": {
             "available": 20,
             "booked": 0,
@@ -2959,7 +2840,7 @@
           "attempts": [
             {
               "attempt": 1,
-              "sample": 1,
+              "sample": 2,
               "timeout": 8,
               "error": "timed out"
             }
@@ -3034,8 +2915,15 @@
           "buildingName": "7#住宅楼",
           "approvedSuites": 19,
           "parsedSuites": 19,
-          "retryAttempts": 0,
-          "attempts": [],
+          "retryAttempts": 1,
+          "attempts": [
+            {
+              "attempt": 1,
+              "sample": 2,
+              "timeout": 8,
+              "error": "timed out"
+            }
+          ],
           "statusCounts": {
             "available": 11,
             "booked": 0,
@@ -3125,7 +3013,7 @@
       },
       "auditNote": "住建委楼盘表17栋住宅楼房源状态复核：共850套，绿色可售120套，已预订1套，已签约3套，网上联机备案422套，未知状态304套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约662套，已签约面积70329.47㎡，成交均价52024.28元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:45:56",
+      "latestFailureAt": "2026-07-24 09:08:06",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -3166,7 +3054,7 @@
       },
       "auditNote": "住建委楼盘表12栋住宅楼房源状态复核：共799套，绿色可售28套，已预订0套，已签约0套，网上联机备案47套，未知状态724套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约582套，已签约面积97143.32㎡，成交均价110348.36元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:30:30",
+      "latestFailureAt": "2026-07-24 09:16:28",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -3209,7 +3097,7 @@
       },
       "auditNote": "住建委楼盘表14栋住宅楼房源状态复核：共643套，绿色可售106套，已预订1套，已签约0套，网上联机备案188套，未知状态348套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约489套，已签约面积56003.71㎡，成交均价56806.33元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:11:23",
+      "latestFailureAt": "2026-07-24 09:33:15",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -3250,7 +3138,7 @@
       },
       "auditNote": "住建委楼盘表13栋住宅楼房源状态复核：共824套，绿色可售267套，已预订1套，已签约3套，网上联机备案47套，未知状态506套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约268套，已签约面积35344.13㎡，成交均价75649.93元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:58:02",
+      "latestFailureAt": "2026-07-24 09:23:20",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -3324,23 +3212,23 @@
         }
       ],
       "missingPermitBatches": [],
-      "remainingSuites": 273,
+      "remainingSuites": 272,
       "cumulativeSoldSuites": 204,
       "contractSignedSuites": 7,
       "filedSuites": 197,
       "soldOutSuites": 0,
-      "bookedSuites": 2,
+      "bookedSuites": 3,
       "signedStatsSuites": 204,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 11:14:19",
+      "fetchedAt": "2026-07-24 09:35:01",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8101108&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8101108&systemID=2&srcId=1",
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8028609&systemID=2&srcId=1"
       ],
       "statusCounts": {
-        "available": 273,
-        "booked": 2,
+        "available": 272,
+        "booked": 3,
         "contractSigned": 7,
         "filed": 197,
         "soldOut": 0,
@@ -3579,8 +3467,8 @@
           "retryAttempts": 0,
           "attempts": [],
           "statusCounts": {
-            "available": 24,
-            "booked": 1,
+            "available": 23,
+            "booked": 2,
             "contractSigned": 1,
             "filed": 28,
             "soldOut": 0,
@@ -3602,7 +3490,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8101108&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表10栋住宅楼房源状态复核：共479套，绿色可售273套，已预订2套，已签约7套，网上联机备案197套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约204套，已签约面积24203.06㎡，成交均价76628.82元/㎡。"
+      "auditNote": "住建委楼盘表10栋住宅楼房源状态复核：共479套，绿色可售272套，已预订3套，已签约7套，网上联机备案197套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约204套，已签约面积24203.06㎡，成交均价76628.82元/㎡。"
     },
     {
       "projectName": "北投栖澐湾",
@@ -3674,24 +3562,24 @@
         }
       ],
       "missingPermitBatches": [],
-      "remainingSuites": 187,
-      "cumulativeSoldSuites": 163,
-      "contractSignedSuites": 34,
+      "remainingSuites": 186,
+      "cumulativeSoldSuites": 164,
+      "contractSignedSuites": 35,
       "filedSuites": 129,
       "soldOutSuites": 0,
       "bookedSuites": 0,
-      "signedStatsSuites": 163,
+      "signedStatsSuites": 164,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:31:30",
+      "fetchedAt": "2026-07-24 09:49:34",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8181215&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8181215&systemID=2&srcId=1",
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8213569&systemID=2&srcId=1"
       ],
       "statusCounts": {
-        "available": 187,
+        "available": 186,
         "booked": 0,
-        "contractSigned": 34,
+        "contractSigned": 35,
         "filed": 129,
         "soldOut": 0,
         "qualification": 0,
@@ -3710,19 +3598,12 @@
           "buildingName": "03-1#住宅楼",
           "approvedSuites": 88,
           "parsedSuites": 88,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
-            "available": 73,
+            "available": 72,
             "booked": 0,
-            "contractSigned": 15,
+            "contractSigned": 16,
             "filed": 0,
             "soldOut": 0,
             "qualification": 0,
@@ -3765,15 +3646,8 @@
           "buildingName": "03-11#住宅楼",
           "approvedSuites": 74,
           "parsedSuites": 74,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 28,
             "booked": 0,
@@ -3796,15 +3670,8 @@
           "buildingName": "03-12#住宅楼",
           "approvedSuites": 44,
           "parsedSuites": 44,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 5,
             "booked": 0,
@@ -3851,15 +3718,8 @@
           "buildingName": "03-4#住宅楼",
           "approvedSuites": 16,
           "parsedSuites": 16,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 11,
             "booked": 0,
@@ -3930,21 +3790,8 @@
           "buildingName": "03-7#住宅楼",
           "approvedSuites": 36,
           "parsedSuites": 36,
-          "retryAttempts": 2,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            },
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 24,
             "booked": 0,
@@ -3993,7 +3840,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8181215&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表10栋住宅楼房源状态复核：共350套，绿色可售187套，已预订0套，已签约34套，网上联机备案129套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约163套，已签约面积16054.64㎡，成交均价36322.13元/㎡。"
+      "auditNote": "住建委楼盘表10栋住宅楼房源状态复核：共350套，绿色可售186套，已预订0套，已签约35套，网上联机备案129套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约164套，已签约面积16130.64㎡，成交均价36324.48元/㎡。"
     },
     {
       "projectName": "半壁店地块 保利熙瑞",
@@ -4034,7 +3881,7 @@
       },
       "auditNote": "住建委楼盘表10栋住宅楼房源状态复核：共323套，绿色可售186套，已预订0套，已签约0套，网上联机备案0套，未知状态137套；剩余套数按绿色可售住宅房源计。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:23:15",
+      "latestFailureAt": "2026-07-24 09:41:38",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -4077,7 +3924,7 @@
       },
       "auditNote": "住建委楼盘表12栋住宅楼房源状态复核：共1346套，绿色可售52套，已预订5套，已签约0套，网上联机备案120套，未知状态1169套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约224套，已签约面积74509.42㎡，成交均价72949.28元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:56:58",
+      "latestFailureAt": "2026-07-24 09:21:41",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -4488,7 +4335,7 @@
       },
       "auditNote": "住建委楼盘表14栋住宅楼房源状态复核：共521套，绿色可售285套，已预订4套，已签约19套，网上联机备案213套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约232套，已签约面积42294.07㎡，成交均价122238.66元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:46:31"
+      "latestFailureAt": "2026-07-24 09:11:15"
     },
     {
       "projectName": "和樾望雲",
@@ -4527,7 +4374,7 @@
       },
       "auditNote": "住建委楼盘表11栋住宅楼房源状态复核：共944套，绿色可售50套，已预订0套，已签约6套，网上联机备案209套，未知状态679套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约681套，已签约面积89541.56㎡，成交均价105116.91元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:43:56",
+      "latestFailureAt": "2026-07-24 07:55:25",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -4568,7 +4415,7 @@
       },
       "auditNote": "住建委楼盘表5栋住宅楼房源状态复核：共685套，绿色可售54套，已预订0套，已签约0套，网上联机备案123套，未知状态508套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约407套，已签约面积65063.85㎡，成交均价104392.31元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:44:27",
+      "latestFailureAt": "2026-07-24 08:06:32",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -4610,7 +4457,7 @@
       },
       "auditNote": "住建委楼盘表23栋住宅楼房源状态复核：共1524套，绿色可售447套，已预订3套，已签约13套，网上联机备案225套，未知状态836套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约354套，已签约面积37053.02㎡，成交均价81496.15元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:42:20",
+      "latestFailureAt": "2026-07-24 07:06:05",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -4683,24 +4530,24 @@
         }
       ],
       "missingPermitBatches": [],
-      "remainingSuites": 133,
-      "cumulativeSoldSuites": 235,
-      "contractSignedSuites": 7,
+      "remainingSuites": 134,
+      "cumulativeSoldSuites": 237,
+      "contractSignedSuites": 9,
       "filedSuites": 228,
       "soldOutSuites": 0,
-      "bookedSuites": 72,
-      "signedStatsSuites": 235,
+      "bookedSuites": 69,
+      "signedStatsSuites": 237,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:26:15",
+      "fetchedAt": "2026-07-24 09:47:16",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157580&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157580&systemID=2&srcId=1",
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8228442&systemID=2&srcId=1"
       ],
       "statusCounts": {
-        "available": 133,
-        "booked": 72,
-        "contractSigned": 7,
+        "available": 134,
+        "booked": 69,
+        "contractSigned": 9,
         "filed": 228,
         "soldOut": 0,
         "qualification": 0,
@@ -4719,21 +4566,8 @@
           "buildingName": "1#住宅楼",
           "approvedSuites": 103,
           "parsedSuites": 103,
-          "retryAttempts": 2,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            },
-            {
-              "attempt": 1,
-              "sample": 3,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 49,
             "booked": 19,
@@ -4804,25 +4638,12 @@
           "buildingName": "3#住宅楼",
           "approvedSuites": 36,
           "parsedSuites": 36,
-          "retryAttempts": 2,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            },
-            {
-              "attempt": 1,
-              "sample": 3,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 3,
-            "booked": 6,
-            "contractSigned": 1,
+            "booked": 5,
+            "contractSigned": 2,
             "filed": 26,
             "soldOut": 0,
             "qualification": 0,
@@ -4841,15 +4662,8 @@
           "buildingName": "4#住宅楼",
           "approvedSuites": 64,
           "parsedSuites": 64,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 28,
             "booked": 13,
@@ -4896,19 +4710,12 @@
           "buildingName": "6#住宅楼",
           "approvedSuites": 68,
           "parsedSuites": 68,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
-            "available": 10,
-            "booked": 19,
-            "contractSigned": 0,
+            "available": 11,
+            "booked": 17,
+            "contractSigned": 1,
             "filed": 39,
             "soldOut": 0,
             "qualification": 0,
@@ -4977,7 +4784,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157580&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表9栋住宅楼房源状态复核：共440套，绿色可售133套，已预订72套，已签约7套，网上联机备案228套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约235套，已签约面积28704.94㎡，成交均价78066.05元/㎡。"
+      "auditNote": "住建委楼盘表9栋住宅楼房源状态复核：共440套，绿色可售134套，已预订69套，已签约9套，网上联机备案228套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约237套，已签约面积28946.96㎡，成交均价78057.96元/㎡。"
     },
     {
       "projectName": "嘉棠雅序",
@@ -5029,24 +4836,24 @@
         }
       ],
       "missingPermitBatches": [],
-      "remainingSuites": 262,
-      "cumulativeSoldSuites": 170,
-      "contractSignedSuites": 20,
-      "filedSuites": 150,
+      "remainingSuites": 260,
+      "cumulativeSoldSuites": 174,
+      "contractSignedSuites": 22,
+      "filedSuites": 152,
       "soldOutSuites": 0,
-      "bookedSuites": 14,
-      "signedStatsSuites": 213,
+      "bookedSuites": 12,
+      "signedStatsSuites": 217,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:23:40",
+      "fetchedAt": "2026-07-24 09:45:51",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1"
       ],
       "statusCounts": {
-        "available": 262,
-        "booked": 14,
-        "contractSigned": 20,
-        "filed": 150,
+        "available": 260,
+        "booked": 12,
+        "contractSigned": 22,
+        "filed": 152,
         "soldOut": 0,
         "qualification": 0,
         "mortgage": 0,
@@ -5064,19 +4871,12 @@
           "buildingName": "1#住宅楼",
           "approvedSuites": 108,
           "parsedSuites": 108,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
-            "available": 65,
+            "available": 64,
             "booked": 1,
-            "contractSigned": 6,
+            "contractSigned": 7,
             "filed": 36,
             "soldOut": 0,
             "qualification": 0,
@@ -5095,15 +4895,8 @@
           "buildingName": "10#住宅楼",
           "approvedSuites": 28,
           "parsedSuites": 28,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 18,
             "booked": 1,
@@ -5150,26 +4943,13 @@
           "buildingName": "2#住宅楼",
           "approvedSuites": 143,
           "parsedSuites": 143,
-          "retryAttempts": 2,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            },
-            {
-              "attempt": 1,
-              "sample": 3,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
-            "available": 83,
+            "available": 82,
             "booked": 4,
             "contractSigned": 3,
-            "filed": 53,
+            "filed": 54,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -5190,10 +4970,10 @@
           "retryAttempts": 0,
           "attempts": [],
           "statusCounts": {
-            "available": 49,
-            "booked": 3,
-            "contractSigned": 3,
-            "filed": 13,
+            "available": 50,
+            "booked": 2,
+            "contractSigned": 2,
+            "filed": 14,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -5216,8 +4996,8 @@
           "statusCounts": {
             "available": 6,
             "booked": 1,
-            "contractSigned": 1,
-            "filed": 8,
+            "contractSigned": 0,
+            "filed": 9,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -5238,10 +5018,10 @@
           "retryAttempts": 0,
           "attempts": [],
           "statusCounts": {
-            "available": 8,
-            "booked": 2,
-            "contractSigned": 2,
-            "filed": 12,
+            "available": 7,
+            "booked": 1,
+            "contractSigned": 5,
+            "filed": 11,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -5285,7 +5065,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8211283&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共446套，绿色可售262套，已预订14套，已签约20套，网上联机备案150套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约213套，已签约面积23080.77㎡，成交均价69512.17元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共446套，绿色可售260套，已预订12套，已签约22套，网上联机备案152套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约217套，已签约面积23551.56㎡，成交均价69545.31元/㎡。"
     },
     {
       "projectName": "国樾天颂府",
@@ -5338,22 +5118,22 @@
       ],
       "missingPermitBatches": [],
       "remainingSuites": 300,
-      "cumulativeSoldSuites": 13,
-      "contractSignedSuites": 13,
+      "cumulativeSoldSuites": 14,
+      "contractSignedSuites": 14,
       "filedSuites": 0,
       "soldOutSuites": 0,
-      "bookedSuites": 1,
-      "signedStatsSuites": 18,
+      "bookedSuites": 0,
+      "signedStatsSuites": 19,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:37:43",
+      "fetchedAt": "2026-07-24 09:52:38",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8227940&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8227940&systemID=2&srcId=1"
       ],
       "statusCounts": {
         "available": 300,
-        "booked": 1,
-        "contractSigned": 13,
+        "booked": 0,
+        "contractSigned": 14,
         "filed": 0,
         "soldOut": 0,
         "qualification": 0,
@@ -5424,8 +5204,8 @@
           "attempts": [],
           "statusCounts": {
             "available": 63,
-            "booked": 1,
-            "contractSigned": 8,
+            "booked": 0,
+            "contractSigned": 9,
             "filed": 0,
             "soldOut": 0,
             "qualification": 0,
@@ -5566,7 +5346,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8227940&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共314套，绿色可售300套，已预订1套，已签约13套，网上联机备案0套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约18套，已签约面积1710.9㎡，成交均价23794.92元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共314套，绿色可售300套，已预订0套，已签约14套，网上联机备案0套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约19套，已签约面积1799.5㎡，成交均价23766.74元/㎡。"
     },
     {
       "projectName": "国誉星城",
@@ -5650,7 +5430,7 @@
       "bookedSuites": 67,
       "signedStatsSuites": 178,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:49:12",
+      "fetchedAt": "2026-07-24 09:14:31",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8158008&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8158008&systemID=2&srcId=1",
@@ -5678,8 +5458,15 @@
           "buildingName": "1-1#住宅楼",
           "approvedSuites": 7,
           "parsedSuites": 7,
-          "retryAttempts": 0,
-          "attempts": [],
+          "retryAttempts": 1,
+          "attempts": [
+            {
+              "attempt": 1,
+              "sample": 2,
+              "timeout": 8,
+              "error": "timed out"
+            }
+          ],
           "statusCounts": {
             "available": 7,
             "booked": 0,
@@ -5726,8 +5513,15 @@
           "buildingName": "1-2#住宅楼",
           "approvedSuites": 8,
           "parsedSuites": 8,
-          "retryAttempts": 0,
-          "attempts": [],
+          "retryAttempts": 1,
+          "attempts": [
+            {
+              "attempt": 1,
+              "sample": 1,
+              "timeout": 8,
+              "error": "timed out"
+            }
+          ],
           "statusCounts": {
             "available": 8,
             "booked": 0,
@@ -5774,8 +5568,15 @@
           "buildingName": "1-3#住宅楼",
           "approvedSuites": 7,
           "parsedSuites": 7,
-          "retryAttempts": 0,
-          "attempts": [],
+          "retryAttempts": 1,
+          "attempts": [
+            {
+              "attempt": 1,
+              "sample": 2,
+              "timeout": 8,
+              "error": "timed out"
+            }
+          ],
           "statusCounts": {
             "available": 7,
             "booked": 0,
@@ -6386,7 +6187,7 @@
       },
       "auditNote": "住建委楼盘表12栋住宅楼房源状态复核：共828套，绿色可售825套，已预订3套，已签约0套，网上联机备案0套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:29:11"
+      "latestFailureAt": "2026-07-24 07:05:35"
     },
     {
       "projectName": "国贤府PARK",
@@ -6424,7 +6225,7 @@
       },
       "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共832套，绿色可售124套，已预订0套，已签约15套，网上联机备案69套，未知状态624套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约533套，已签约面积55914.43㎡，成交均价55586.31元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:27:09",
+      "latestFailureAt": "2026-07-24 09:47:39",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -6489,15 +6290,15 @@
         }
       ],
       "missingPermitBatches": [],
-      "remainingSuites": 239,
-      "cumulativeSoldSuites": 349,
-      "contractSignedSuites": 6,
-      "filedSuites": 343,
+      "remainingSuites": 237,
+      "cumulativeSoldSuites": 353,
+      "contractSignedSuites": 11,
+      "filedSuites": 342,
       "soldOutSuites": 0,
-      "bookedSuites": 4,
-      "signedStatsSuites": 351,
+      "bookedSuites": 2,
+      "signedStatsSuites": 355,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 11:06:46",
+      "fetchedAt": "2026-07-24 09:29:14",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8141265&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8141265&systemID=2&srcId=1",
@@ -6506,10 +6307,10 @@
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7995685&systemID=2&srcId=1"
       ],
       "statusCounts": {
-        "available": 239,
-        "booked": 4,
-        "contractSigned": 6,
-        "filed": 343,
+        "available": 237,
+        "booked": 2,
+        "contractSigned": 11,
+        "filed": 342,
         "soldOut": 0,
         "qualification": 0,
         "mortgage": 0,
@@ -6531,8 +6332,8 @@
           "attempts": [],
           "statusCounts": {
             "available": 24,
-            "booked": 1,
-            "contractSigned": 0,
+            "booked": 0,
+            "contractSigned": 1,
             "filed": 19,
             "soldOut": 0,
             "qualification": 0,
@@ -6579,9 +6380,9 @@
           "attempts": [],
           "statusCounts": {
             "available": 12,
-            "booked": 1,
-            "contractSigned": 0,
-            "filed": 31,
+            "booked": 0,
+            "contractSigned": 2,
+            "filed": 30,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -6626,9 +6427,9 @@
           "retryAttempts": 0,
           "attempts": [],
           "statusCounts": {
-            "available": 9,
+            "available": 8,
             "booked": 0,
-            "contractSigned": 1,
+            "contractSigned": 2,
             "filed": 34,
             "soldOut": 0,
             "qualification": 0,
@@ -6671,15 +6472,8 @@
           "buildingName": "08-8#住宅楼",
           "approvedSuites": 42,
           "parsedSuites": 42,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 29,
             "booked": 0,
@@ -6873,9 +6667,9 @@
           "retryAttempts": 0,
           "attempts": [],
           "statusCounts": {
-            "available": 4,
+            "available": 3,
             "booked": 0,
-            "contractSigned": 0,
+            "contractSigned": 1,
             "filed": 18,
             "soldOut": 0,
             "qualification": 0,
@@ -6920,7 +6714,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8141265&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表16栋住宅楼房源状态复核：共592套，绿色可售239套，已预订4套，已签约6套，网上联机备案343套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约351套，已签约面积38692.02㎡，成交均价42504.64元/㎡。"
+      "auditNote": "住建委楼盘表16栋住宅楼房源状态复核：共592套，绿色可售237套，已预订2套，已签约11套，网上联机备案342套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约355套，已签约面积39152.36㎡，成交均价42428.87元/㎡。"
     },
     {
       "projectName": "大兴西片区0003等地块 大兴发展梧桐府",
@@ -6959,7 +6753,7 @@
       },
       "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共366套，绿色可售148套，已预订2套，已签约0套，网上联机备案15套，未知状态201套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约45套，已签约面积8295.55㎡，成交均价40709.69元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:19:20",
+      "latestFailureAt": "2026-07-24 09:39:29",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -6999,7 +6793,7 @@
       },
       "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共396套，绿色可售72套，已预订11套，已签约66套，网上联机备案98套，未知状态149套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约270套，已签约面积31328.64㎡，成交均价83537.58元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:23:37",
+      "latestFailureAt": "2026-07-24 09:42:05",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -7040,7 +6834,7 @@
       },
       "auditNote": "住建委楼盘表9栋住宅楼房源状态复核：共442套，绿色可售137套，已预订32套，已签约10套，网上联机备案126套，未知状态137套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约217套，已签约面积27554.59㎡，成交均价85346.38元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:24:19",
+      "latestFailureAt": "2026-07-24 09:42:35",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -7081,7 +6875,7 @@
       },
       "auditNote": "住建委楼盘表12栋住宅楼房源状态复核：共604套，绿色可售1套，已预订1套，已签约12套，网上联机备案174套，未知状态337套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约348套，已签约面积75549.62㎡，成交均价134910.84元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:46:37",
+      "latestFailureAt": "2026-07-24 09:11:45",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -7122,7 +6916,7 @@
       },
       "auditNote": "住建委楼盘表12栋住宅楼房源状态复核：共594套，绿色可售56套，已预订3套，已签约0套，网上联机备案167套，未知状态368套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约415套，已签约面积52181.75㎡，成交均价78436.21元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:15:02",
+      "latestFailureAt": "2026-07-24 09:35:46",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -7176,24 +6970,24 @@
         }
       ],
       "missingPermitBatches": [],
-      "remainingSuites": 915,
-      "cumulativeSoldSuites": 20,
+      "remainingSuites": 914,
+      "cumulativeSoldSuites": 21,
       "contractSignedSuites": 0,
-      "filedSuites": 20,
+      "filedSuites": 21,
       "soldOutSuites": 0,
       "bookedSuites": 88,
-      "signedStatsSuites": 25,
+      "signedStatsSuites": 26,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:34:46",
+      "fetchedAt": "2026-07-24 09:51:01",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157959&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157959&systemID=2&srcId=1"
       ],
       "statusCounts": {
-        "available": 915,
+        "available": 914,
         "booked": 88,
         "contractSigned": 0,
-        "filed": 20,
+        "filed": 21,
         "soldOut": 0,
         "qualification": 0,
         "mortgage": 0,
@@ -7235,21 +7029,8 @@
           "buildingName": "南11#住宅楼",
           "approvedSuites": 142,
           "parsedSuites": 142,
-          "retryAttempts": 2,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            },
-            {
-              "attempt": 1,
-              "sample": 3,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 139,
             "booked": 1,
@@ -7275,10 +7056,10 @@
           "retryAttempts": 0,
           "attempts": [],
           "statusCounts": {
-            "available": 118,
+            "available": 117,
             "booked": 23,
             "contractSigned": 0,
-            "filed": 3,
+            "filed": 4,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -7296,21 +7077,8 @@
           "buildingName": "南13#住宅楼",
           "approvedSuites": 72,
           "parsedSuites": 72,
-          "retryAttempts": 2,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            },
-            {
-              "attempt": 1,
-              "sample": 3,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 69,
             "booked": 1,
@@ -7333,8 +7101,15 @@
           "buildingName": "南14#住宅楼",
           "approvedSuites": 150,
           "parsedSuites": 150,
-          "retryAttempts": 0,
-          "attempts": [],
+          "retryAttempts": 1,
+          "attempts": [
+            {
+              "attempt": 1,
+              "sample": 1,
+              "timeout": 8,
+              "error": "timed out"
+            }
+          ],
           "statusCounts": {
             "available": 148,
             "booked": 0,
@@ -7381,15 +7156,8 @@
           "buildingName": "南16#住宅楼",
           "approvedSuites": 70,
           "parsedSuites": 70,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 41,
             "booked": 29,
@@ -7438,7 +7206,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157959&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共1023套，绿色可售915套，已预订88套，已签约0套，网上联机备案20套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约25套，已签约面积3560.35㎡，成交均价57757.69元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共1023套，绿色可售914套，已预订88套，已签约0套，网上联机备案21套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约26套，已签约面积3685.89㎡，成交均价57433.73元/㎡。"
     },
     {
       "projectName": "御璟星城元启",
@@ -7476,7 +7244,7 @@
       },
       "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共1065套，绿色可售179套，已预订2套，已签约4套，网上联机备案206套，未知状态674套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约587套，已签约面积60969.39㎡，成交均价51518.85元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 09:53:18",
+      "latestFailureAt": "2026-07-24 09:38:41",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -7516,7 +7284,7 @@
       },
       "auditNote": "住建委楼盘表4栋住宅楼房源状态复核：共842套，绿色可售115套，已预订0套，已签约0套，网上联机备案13套，未知状态714套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约107套，已签约面积29958.69㎡，成交均价60394.49元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:54:35",
+      "latestFailureAt": "2026-07-24 09:19:15",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -7556,7 +7324,7 @@
       },
       "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共456套，绿色可售368套，已预订0套，已签约0套，网上联机备案0套，未知状态88套；剩余套数按绿色可售住宅房源计。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:57:27",
+      "latestFailureAt": "2026-07-24 09:22:16",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -7597,7 +7365,7 @@
       },
       "auditNote": "住建委楼盘表1栋住宅楼房源状态复核：共32套，绿色可售1套，已预订0套，已签约0套，网上联机备案30套，未知状态1套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约365套，已签约面积34719.19㎡，成交均价55057.08元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:34:22",
+      "latestFailureAt": "2026-07-24 09:29:27",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -7691,15 +7459,15 @@
         }
       ],
       "missingPermitBatches": [],
-      "remainingSuites": 335,
-      "cumulativeSoldSuites": 340,
-      "contractSignedSuites": 6,
-      "filedSuites": 334,
+      "remainingSuites": 331,
+      "cumulativeSoldSuites": 344,
+      "contractSignedSuites": 4,
+      "filedSuites": 340,
       "soldOutSuites": 0,
       "bookedSuites": 10,
-      "signedStatsSuites": 340,
+      "signedStatsSuites": 344,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 11:12:43",
+      "fetchedAt": "2026-07-24 09:33:55",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8087751&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8087751&systemID=2&srcId=1",
@@ -7707,10 +7475,10 @@
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8038353&systemID=2&srcId=1"
       ],
       "statusCounts": {
-        "available": 335,
+        "available": 331,
         "booked": 10,
-        "contractSigned": 6,
-        "filed": 334,
+        "contractSigned": 4,
+        "filed": 340,
         "soldOut": 0,
         "qualification": 0,
         "mortgage": 0,
@@ -7728,15 +7496,8 @@
           "buildingName": "1#住宅楼",
           "approvedSuites": 72,
           "parsedSuites": 72,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 24,
             "booked": 1,
@@ -7810,10 +7571,10 @@
           "retryAttempts": 0,
           "attempts": [],
           "statusCounts": {
-            "available": 43,
+            "available": 41,
             "booked": 1,
-            "contractSigned": 2,
-            "filed": 26,
+            "contractSigned": 1,
+            "filed": 29,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -7879,20 +7640,13 @@
           "buildingName": "3#住宅楼",
           "approvedSuites": 72,
           "parsedSuites": 72,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
-            "available": 32,
+            "available": 31,
             "booked": 2,
             "contractSigned": 1,
-            "filed": 37,
+            "filed": 38,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -7910,15 +7664,8 @@
           "buildingName": "4#住宅楼",
           "approvedSuites": 44,
           "parsedSuites": 44,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 10,
             "booked": 0,
@@ -7965,15 +7712,8 @@
           "buildingName": "6#住宅楼",
           "approvedSuites": 16,
           "parsedSuites": 16,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 16,
             "booked": 0,
@@ -8047,10 +7787,10 @@
           "retryAttempts": 0,
           "attempts": [],
           "statusCounts": {
-            "available": 22,
+            "available": 21,
             "booked": 1,
-            "contractSigned": 2,
-            "filed": 45,
+            "contractSigned": 1,
+            "filed": 47,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -8070,7 +7810,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8087751&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表13栋住宅楼房源状态复核：共685套，绿色可售335套，已预订10套，已签约6套，网上联机备案334套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约340套，已签约面积37156.81㎡，成交均价67827.56元/㎡。"
+      "auditNote": "住建委楼盘表13栋住宅楼房源状态复核：共685套，绿色可售331套，已预订10套，已签约4套，网上联机备案340套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约344套，已签约面积37606.44㎡，成交均价67798.7元/㎡。"
     },
     {
       "projectName": "招商朝棠揽阅",
@@ -8116,7 +7856,7 @@
       },
       "auditNote": "住建委楼盘表3栋住宅楼房源状态复核：共938套，绿色可售4套，已预订0套，已签约2套，网上联机备案0套，未知状态932套；剩余套数按绿色可售住宅房源计。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:09:05",
+      "latestFailureAt": "2026-07-24 09:30:59",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -8156,7 +7896,7 @@
       },
       "auditNote": "住建委楼盘表6栋住宅楼房源状态复核：共864套，绿色可售9套，已预订0套，已签约0套，网上联机备案147套，未知状态708套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约677套，已签约面积58189.92㎡，成交均价34106.72元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:54:09",
+      "latestFailureAt": "2026-07-24 09:18:50",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -8196,7 +7936,7 @@
       },
       "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共647套，绿色可售72套，已预订67套，已签约5套，网上联机备案113套，未知状态390套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约306套，已签约面积28625.3㎡，成交均价51699.11元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:27:57",
+      "latestFailureAt": "2026-07-24 09:47:58",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -8237,7 +7977,7 @@
       },
       "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共485套，绿色可售19套，已预订0套，已签约0套，网上联机备案11套，未知状态455套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约3套，已签约面积509.01㎡，成交均价80933.95元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:18:27",
+      "latestFailureAt": "2026-07-24 09:38:11",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -8295,7 +8035,7 @@
       "bookedSuites": 150,
       "signedStatsSuites": null,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:36:03",
+      "fetchedAt": "2026-07-24 09:51:40",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191996&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191996&systemID=2&srcId=1"
@@ -8459,7 +8199,7 @@
       },
       "auditNote": "住建委楼盘表1栋住宅楼房源状态复核：共20套，绿色可售5套，已预订3套，已签约0套，网上联机备案11套，未知状态1套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约12套，已签约面积2232.24㎡，成交均价72555.36元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:32:09",
+      "latestFailureAt": "2026-07-24 09:56:37",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -8501,7 +8241,7 @@
       },
       "auditNote": "住建委楼盘表6栋住宅楼房源状态复核：共573套，绿色可售23套，已预订0套，已签约0套，网上联机备案55套，未知状态495套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约130套，已签约面积21389.56㎡，成交均价73856.66元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:51:36",
+      "latestFailureAt": "2026-07-24 09:16:39",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -8554,24 +8294,24 @@
         }
       ],
       "missingPermitBatches": [],
-      "remainingSuites": 152,
-      "cumulativeSoldSuites": 225,
+      "remainingSuites": 150,
+      "cumulativeSoldSuites": 226,
       "contractSignedSuites": 12,
-      "filedSuites": 213,
+      "filedSuites": 214,
       "soldOutSuites": 0,
-      "bookedSuites": 2,
-      "signedStatsSuites": 225,
+      "bookedSuites": 3,
+      "signedStatsSuites": 226,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:36:39",
+      "fetchedAt": "2026-07-24 09:51:53",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195341&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195341&systemID=2&srcId=1"
       ],
       "statusCounts": {
-        "available": 152,
-        "booked": 2,
+        "available": 150,
+        "booked": 3,
         "contractSigned": 12,
-        "filed": 213,
+        "filed": 214,
         "soldOut": 0,
         "qualification": 0,
         "mortgage": 0,
@@ -8594,8 +8334,8 @@
           "statusCounts": {
             "available": 41,
             "booked": 0,
-            "contractSigned": 3,
-            "filed": 44,
+            "contractSigned": 2,
+            "filed": 45,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -8664,9 +8404,9 @@
           "retryAttempts": 0,
           "attempts": [],
           "statusCounts": {
-            "available": 4,
+            "available": 3,
             "booked": 1,
-            "contractSigned": 2,
+            "contractSigned": 3,
             "filed": 33,
             "soldOut": 0,
             "qualification": 0,
@@ -8712,8 +8452,8 @@
           "retryAttempts": 0,
           "attempts": [],
           "statusCounts": {
-            "available": 41,
-            "booked": 1,
+            "available": 40,
+            "booked": 2,
             "contractSigned": 0,
             "filed": 21,
             "soldOut": 0,
@@ -8759,7 +8499,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8195341&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共379套，绿色可售152套，已预订2套，已签约12套，网上联机备案213套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约225套，已签约面积22230.03㎡，成交均价61185.32元/㎡。"
+      "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共379套，绿色可售150套，已预订3套，已签约12套，网上联机备案214套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约226套，已签约面积22352.48㎡，成交均价61180.36元/㎡。"
     },
     {
       "projectName": "璟贤瑞庭",
@@ -8798,7 +8538,7 @@
       },
       "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共1021套，绿色可售148套，已预订0套，已签约2套，网上联机备案269套，未知状态602套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约517套，已签约面积54717.9㎡，成交均价31832.35元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:22:20",
+      "latestFailureAt": "2026-07-24 09:41:13",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -8853,7 +8593,7 @@
       "bookedSuites": 2,
       "signedStatsSuites": 14,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:35:07",
+      "fetchedAt": "2026-07-24 09:51:18",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176579&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8176579&systemID=2&srcId=1"
@@ -8952,7 +8692,7 @@
       },
       "auditNote": "住建委楼盘表16栋住宅楼房源状态复核：共819套，绿色可售110套，已预订53套，已签约7套，网上联机备案415套，未知状态234套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约568套，已签约面积59934.24㎡，成交均价62067.59元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:46:38",
+      "latestFailureAt": "2026-07-24 09:56:28",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -9012,7 +8752,7 @@
       "bookedSuites": 0,
       "signedStatsSuites": 115,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:32:59",
+      "fetchedAt": "2026-07-24 09:50:18",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8161845&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8161845&systemID=2&srcId=1"
@@ -9087,21 +8827,8 @@
           "buildingName": "2-4#住宅楼",
           "approvedSuites": 61,
           "parsedSuites": 61,
-          "retryAttempts": 2,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            },
-            {
-              "attempt": 1,
-              "sample": 3,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 17,
             "booked": 0,
@@ -9124,15 +8851,8 @@
           "buildingName": "2-5#住宅楼",
           "approvedSuites": 44,
           "parsedSuites": 44,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 18,
             "booked": 0,
@@ -9244,7 +8964,7 @@
       },
       "auditNote": "住建委楼盘表16栋住宅楼房源状态复核：共1312套，绿色可售291套，已预订0套，已签约6套，网上联机备案331套，未知状态684套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约306套，已签约面积30890.64㎡，成交均价52309.83元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:43:10",
+      "latestFailureAt": "2026-07-24 07:54:58",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -9286,7 +9006,7 @@
       },
       "auditNote": "住建委楼盘表11栋住宅楼房源状态复核：共693套，绿色可售16套，已预订0套，已签约0套，网上联机备案51套，未知状态626套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约104套，已签约面积13628.67㎡，成交均价72376.62元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:32:45",
+      "latestFailureAt": "2026-07-24 09:25:48",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -9327,7 +9047,7 @@
       },
       "auditNote": "住建委楼盘表6栋住宅楼房源状态复核：共338套，绿色可售28套，已预订1套，已签约2套，网上联机备案219套，未知状态88套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约337套，已签约面积41695.42㎡，成交均价51575.87元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:08:23",
+      "latestFailureAt": "2026-07-24 09:30:09",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -9381,23 +9101,23 @@
         }
       ],
       "missingPermitBatches": [],
-      "remainingSuites": 317,
-      "cumulativeSoldSuites": 56,
-      "contractSignedSuites": 31,
+      "remainingSuites": 313,
+      "cumulativeSoldSuites": 58,
+      "contractSignedSuites": 33,
       "filedSuites": 25,
       "soldOutSuites": 0,
-      "bookedSuites": 10,
-      "signedStatsSuites": 77,
+      "bookedSuites": 12,
+      "signedStatsSuites": 81,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:37:12",
+      "fetchedAt": "2026-07-24 09:52:13",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8207359&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8207359&systemID=2&srcId=1"
       ],
       "statusCounts": {
-        "available": 317,
-        "booked": 10,
-        "contractSigned": 31,
+        "available": 313,
+        "booked": 12,
+        "contractSigned": 33,
         "filed": 25,
         "soldOut": 0,
         "qualification": 0,
@@ -9419,9 +9139,9 @@
           "retryAttempts": 0,
           "attempts": [],
           "statusCounts": {
-            "available": 47,
+            "available": 46,
             "booked": 1,
-            "contractSigned": 3,
+            "contractSigned": 4,
             "filed": 3,
             "soldOut": 0,
             "qualification": 0,
@@ -9467,9 +9187,9 @@
           "retryAttempts": 0,
           "attempts": [],
           "statusCounts": {
-            "available": 33,
+            "available": 32,
             "booked": 4,
-            "contractSigned": 8,
+            "contractSigned": 9,
             "filed": 9,
             "soldOut": 0,
             "qualification": 0,
@@ -9515,8 +9235,8 @@
           "retryAttempts": 0,
           "attempts": [],
           "statusCounts": {
-            "available": 44,
-            "booked": 0,
+            "available": 42,
+            "booked": 2,
             "contractSigned": 6,
             "filed": 7,
             "soldOut": 0,
@@ -9610,7 +9330,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8207359&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共383套，绿色可售317套，已预订10套，已签约31套，网上联机备案25套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约77套，已签约面积7708.11㎡，成交均价37700.87元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共383套，绿色可售313套，已预订12套，已签约33套，网上联机备案25套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约81套，已签约面积8066.08㎡，成交均价37657.59元/㎡。"
     },
     {
       "projectName": "长安华曦府",
@@ -9649,7 +9369,7 @@
       },
       "auditNote": "住建委楼盘表6栋住宅楼房源状态复核：共676套，绿色可售7套，已预订0套，已签约1套，网上联机备案157套，未知状态511套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约313套，已签约面积32682.33㎡，成交均价47158.1元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:27:00",
+      "latestFailureAt": "2026-07-24 09:45:11",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -9711,7 +9431,7 @@
       "bookedSuites": 0,
       "signedStatsSuites": 8,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:32:13",
+      "fetchedAt": "2026-07-24 09:49:54",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157960&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8157960&systemID=2&srcId=1"
@@ -9992,24 +9712,24 @@
         }
       ],
       "missingPermitBatches": [],
-      "remainingSuites": 287,
-      "cumulativeSoldSuites": 97,
-      "contractSignedSuites": 29,
-      "filedSuites": 68,
+      "remainingSuites": 281,
+      "cumulativeSoldSuites": 99,
+      "contractSignedSuites": 11,
+      "filedSuites": 88,
       "soldOutSuites": 0,
-      "bookedSuites": 16,
-      "signedStatsSuites": 97,
+      "bookedSuites": 20,
+      "signedStatsSuites": 99,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:24:11",
+      "fetchedAt": "2026-07-24 09:46:33",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1"
       ],
       "statusCounts": {
-        "available": 287,
-        "booked": 16,
-        "contractSigned": 29,
-        "filed": 68,
+        "available": 281,
+        "booked": 20,
+        "contractSigned": 11,
+        "filed": 88,
         "soldOut": 0,
         "qualification": 0,
         "mortgage": 0,
@@ -10030,10 +9750,10 @@
           "retryAttempts": 0,
           "attempts": [],
           "statusCounts": {
-            "available": 48,
-            "booked": 3,
-            "contractSigned": 7,
-            "filed": 4,
+            "available": 47,
+            "booked": 4,
+            "contractSigned": 3,
+            "filed": 8,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -10056,8 +9776,8 @@
           "statusCounts": {
             "available": 67,
             "booked": 3,
-            "contractSigned": 7,
-            "filed": 11,
+            "contractSigned": 2,
+            "filed": 16,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -10080,8 +9800,8 @@
           "statusCounts": {
             "available": 33,
             "booked": 3,
-            "contractSigned": 6,
-            "filed": 24,
+            "contractSigned": 4,
+            "filed": 26,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -10104,8 +9824,8 @@
           "statusCounts": {
             "available": 31,
             "booked": 0,
-            "contractSigned": 2,
-            "filed": 7,
+            "contractSigned": 1,
+            "filed": 8,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -10123,8 +9843,15 @@
           "buildingName": "04-5-1#住宅楼",
           "approvedSuites": 52,
           "parsedSuites": 52,
-          "retryAttempts": 0,
-          "attempts": [],
+          "retryAttempts": 1,
+          "attempts": [
+            {
+              "attempt": 1,
+              "sample": 2,
+              "timeout": 8,
+              "error": "timed out"
+            }
+          ],
           "statusCounts": {
             "available": 50,
             "booked": 0,
@@ -10147,13 +9874,20 @@
           "buildingName": "04-5-2#住宅楼",
           "approvedSuites": 20,
           "parsedSuites": 20,
-          "retryAttempts": 0,
-          "attempts": [],
+          "retryAttempts": 1,
+          "attempts": [
+            {
+              "attempt": 1,
+              "sample": 2,
+              "timeout": 8,
+              "error": "timed out"
+            }
+          ],
           "statusCounts": {
             "available": 12,
-            "booked": 1,
-            "contractSigned": 2,
-            "filed": 5,
+            "booked": 0,
+            "contractSigned": 0,
+            "filed": 8,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -10171,13 +9905,20 @@
           "buildingName": "04-6-1#住宅楼",
           "approvedSuites": 20,
           "parsedSuites": 20,
-          "retryAttempts": 0,
-          "attempts": [],
+          "retryAttempts": 1,
+          "attempts": [
+            {
+              "attempt": 1,
+              "sample": 1,
+              "timeout": 8,
+              "error": "timed out"
+            }
+          ],
           "statusCounts": {
             "available": 9,
-            "booked": 3,
+            "booked": 2,
             "contractSigned": 1,
-            "filed": 7,
+            "filed": 8,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -10198,10 +9939,10 @@
           "retryAttempts": 0,
           "attempts": [],
           "statusCounts": {
-            "available": 37,
-            "booked": 3,
-            "contractSigned": 4,
-            "filed": 8,
+            "available": 32,
+            "booked": 8,
+            "contractSigned": 0,
+            "filed": 12,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -10221,7 +9962,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8224769&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共400套，绿色可售287套，已预订16套，已签约29套，网上联机备案68套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约97套，已签约面积9831.31㎡，成交均价54558.4元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共400套，绿色可售281套，已预订20套，已签约11套，网上联机备案88套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约99套，已签约面积10024.13㎡，成交均价54514.56元/㎡。"
     },
     {
       "projectName": "颐海澐颂",
@@ -10260,7 +10001,7 @@
       },
       "auditNote": "住建委楼盘表13栋住宅楼房源状态复核：共1047套，绿色可售135套，已预订1套，已签约11套，网上联机备案219套，未知状态681套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约620套，已签约面积80276.82㎡，成交均价90313.97元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:39:58",
+      "latestFailureAt": "2026-07-24 09:53:56",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -10300,7 +10041,7 @@
       },
       "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共634套，绿色可售177套，已预订2套，已签约3套，网上联机备案36套，未知状态416套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约122套，已签约面积12482.95㎡，成交均价30285.58元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:03:00",
+      "latestFailureAt": "2026-07-24 09:40:31",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -10340,7 +10081,7 @@
       },
       "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共700套，绿色可售226套，已预订0套，已签约1套，网上联机备案154套，未知状态319套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约324套，已签约面积33414.66㎡，成交均价60406.34元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:25:28",
+      "latestFailureAt": "2026-07-24 09:43:17",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -10383,7 +10124,7 @@
       },
       "auditNote": "住建委楼盘表17栋住宅楼房源状态复核：共497套，绿色可售167套，已预订1套，已签约3套，网上联机备案164套，未知状态162套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约276套，已签约面积47740.17㎡，成交均价99902.11元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:34:16",
+      "latestFailureAt": "2026-07-24 09:28:14",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -10425,7 +10166,7 @@
       },
       "auditNote": "住建委楼盘表22栋住宅楼房源状态复核：共886套，绿色可售444套，已预订8套，已签约10套，网上联机备案200套，未知状态224套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约314套，已签约面积51541.0㎡，成交均价97628.79元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 11:03:07",
+      "latestFailureAt": "2026-07-24 09:26:56",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -10479,24 +10220,24 @@
         }
       ],
       "missingPermitBatches": [],
-      "remainingSuites": 70,
-      "cumulativeSoldSuites": 505,
-      "contractSignedSuites": 18,
-      "filedSuites": 487,
+      "remainingSuites": 67,
+      "cumulativeSoldSuites": 508,
+      "contractSignedSuites": 11,
+      "filedSuites": 497,
       "soldOutSuites": 0,
       "bookedSuites": 19,
-      "signedStatsSuites": 710,
+      "signedStatsSuites": 713,
       "retryAttempts": 0,
-      "fetchedAt": "2026-07-22 10:25:13",
+      "fetchedAt": "2026-07-24 09:46:51",
       "evidenceUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1",
       "evidenceUrls": [
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1"
       ],
       "statusCounts": {
-        "available": 70,
+        "available": 67,
         "booked": 19,
-        "contractSigned": 18,
-        "filed": 487,
+        "contractSigned": 11,
+        "filed": 497,
         "soldOut": 0,
         "qualification": 0,
         "mortgage": 0,
@@ -10518,9 +10259,9 @@
           "attempts": [],
           "statusCounts": {
             "available": 2,
-            "booked": 3,
-            "contractSigned": 4,
-            "filed": 61,
+            "booked": 2,
+            "contractSigned": 2,
+            "filed": 64,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -10543,8 +10284,8 @@
           "statusCounts": {
             "available": 6,
             "booked": 7,
-            "contractSigned": 1,
-            "filed": 50,
+            "contractSigned": 0,
+            "filed": 51,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -10565,8 +10306,8 @@
           "retryAttempts": 0,
           "attempts": [],
           "statusCounts": {
-            "available": 11,
-            "booked": 0,
+            "available": 10,
+            "booked": 1,
             "contractSigned": 1,
             "filed": 52,
             "soldOut": 0,
@@ -10591,8 +10332,8 @@
           "statusCounts": {
             "available": 5,
             "booked": 0,
-            "contractSigned": 2,
-            "filed": 45,
+            "contractSigned": 0,
+            "filed": 47,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -10613,10 +10354,10 @@
           "retryAttempts": 0,
           "attempts": [],
           "statusCounts": {
-            "available": 7,
+            "available": 6,
             "booked": 2,
             "contractSigned": 2,
-            "filed": 94,
+            "filed": 95,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -10634,25 +10375,12 @@
           "buildingName": "3#住宅楼",
           "approvedSuites": 104,
           "parsedSuites": 104,
-          "retryAttempts": 2,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            },
-            {
-              "attempt": 1,
-              "sample": 2,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
-            "available": 24,
+            "available": 23,
             "booked": 1,
-            "contractSigned": 4,
+            "contractSigned": 5,
             "filed": 75,
             "soldOut": 0,
             "qualification": 0,
@@ -10676,8 +10404,8 @@
           "statusCounts": {
             "available": 10,
             "booked": 0,
-            "contractSigned": 3,
-            "filed": 58,
+            "contractSigned": 1,
+            "filed": 60,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -10695,20 +10423,13 @@
           "buildingName": "5#住宅楼",
           "approvedSuites": 64,
           "parsedSuites": 64,
-          "retryAttempts": 1,
-          "attempts": [
-            {
-              "attempt": 1,
-              "sample": 1,
-              "timeout": 8,
-              "error": "timed out"
-            }
-          ],
+          "retryAttempts": 0,
+          "attempts": [],
           "statusCounts": {
             "available": 5,
             "booked": 6,
-            "contractSigned": 1,
-            "filed": 52,
+            "contractSigned": 0,
+            "filed": 53,
             "soldOut": 0,
             "qualification": 0,
             "mortgage": 0,
@@ -10728,7 +10449,7 @@
         "项目详情页": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8203707&systemID=2&srcId=1",
         "截图字段说明": "对应页面项目详情卡片字段，可按项目详情页重新截图追溯。"
       },
-      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共594套，绿色可售70套，已预订19套，已签约18套，网上联机备案487套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约710套，已签约面积67784.99㎡，成交均价54268.75元/㎡。"
+      "auditNote": "住建委楼盘表8栋住宅楼房源状态复核：共594套，绿色可售67套，已预订19套，已签约11套，网上联机备案497套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约713套，已签约面积68126.87㎡，成交均价54260.61元/㎡。"
     },
     {
       "projectName": "龙湖宸翰",
@@ -10766,7 +10487,7 @@
       },
       "auditNote": "住建委楼盘表7栋住宅楼房源状态复核：共551套，绿色可售48套，已预订0套，已签约1套，网上联机备案173套，未知状态329套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约386套，已签约面积45322.6㎡，成交均价40382.79元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:55:17",
+      "latestFailureAt": "2026-07-24 09:19:52",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -10807,7 +10528,7 @@
       },
       "auditNote": "住建委楼盘表12栋住宅楼房源状态复核：共536套，绿色可售132套，已预订0套，已签约14套，网上联机备案26套，未知状态364套；剩余套数按绿色可售住宅房源计。 期房签约统计住宅已签约119套，已签约面积10640.32㎡，成交均价39913.96元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:50:04",
+      "latestFailureAt": "2026-07-24 09:15:16",
       "coverageStatus": "legacy",
       "coverageNote": "沿用旧版历史快照，尚未按新版逐证/逐楼栋闭合门禁复核"
     },
@@ -11251,7 +10972,7 @@
       },
       "auditNote": "住建委楼盘表15栋住宅楼房源状态复核：共950套，绿色可售74套，已预订6套，已签约2套，网上联机备案717套，整栋已售完（无楼盘表链接）151套；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。 期房签约统计住宅已签约793套，已签约面积81991.63㎡，成交均价53680.35元/㎡。",
       "preservedFromPrevious": true,
-      "latestFailureAt": "2026-07-22 10:38:51"
+      "latestFailureAt": "2026-07-24 09:53:20"
     }
   ],
   "failures": [
@@ -11276,8 +10997,8 @@
         "residentialTotal": 158,
         "approvedResidentialTotal": 158,
         "roomStatusTotal": 158,
-        "availableSuites": 73,
-        "signedSuites": 85,
+        "availableSuites": 72,
+        "signedSuites": 86,
         "buildingCount": 6,
         "buildingStatusErrors": [],
         "failureClass": "structure",
@@ -11327,12 +11048,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:09:28"
+      "fetchedAt": "2026-07-24 09:31:37"
     },
     {
       "projectName": "中建和颂九里",
@@ -11353,8 +11074,8 @@
         "residentialTotal": 508,
         "approvedResidentialTotal": 508,
         "roomStatusTotal": 508,
-        "availableSuites": 353,
-        "signedSuites": 152,
+        "availableSuites": 348,
+        "signedSuites": 154,
         "buildingCount": 8,
         "buildingStatusErrors": [],
         "failureClass": "metric",
@@ -11394,7 +11115,7 @@
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:20:32"
+      "fetchedAt": "2026-07-24 09:44:43"
     },
     {
       "projectName": "中建方程国贤府",
@@ -11417,7 +11138,7 @@
         "residentialTotal": 352,
         "approvedResidentialTotal": 352,
         "roomStatusTotal": 352,
-        "availableSuites": 82,
+        "availableSuites": 81,
         "signedSuites": 154,
         "buildingCount": 17,
         "buildingStatusErrors": [],
@@ -11498,12 +11219,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:28:09"
+      "fetchedAt": "2026-07-24 09:49:10"
     },
     {
       "projectName": "中建花鄕壹号 中建壹品花香壹号",
@@ -11526,8 +11247,8 @@
       "error": "coverageStatus=unavailable: 项目详情页9个URL不可用: http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25219099&systemID=3&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25219101&systemID=3&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25219166&systemID=3&srcId=1",
       "coverageStatus": "unavailable",
       "coverageNote": "项目详情页9个URL不可用: http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25219099&systemID=3&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25219101&systemID=3&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=424476&projectID=25219166&systemID=3&srcId=1",
-      "failureClass": "network",
-      "retryable": true,
+      "failureClass": "structure",
+      "retryable": false,
       "partialResult": {
         "residentialTotal": 0,
         "approvedResidentialTotal": 0,
@@ -11536,8 +11257,8 @@
         "signedSuites": 0,
         "buildingCount": 0,
         "buildingStatusErrors": [],
-        "failureClass": "network",
-        "retryable": true,
+        "failureClass": "structure",
+        "retryable": false,
         "permitCoverage": [
           {
             "permit": "京房售证字(2024)46号",
@@ -11571,12 +11292,12 @@
           "京房售证字(2024)46号"
         ]
       },
-      "validationRounds": 5,
+      "validationRounds": 2,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": false,
-      "fetchedAt": "2026-07-22 11:43:48"
+      "fetchedAt": "2026-07-24 09:54:40"
     },
     {
       "projectName": "中建运河玖院",
@@ -11707,12 +11428,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:10:28"
+      "fetchedAt": "2026-07-24 09:32:42"
     },
     {
       "projectName": "中海丽泽叁號院",
@@ -11735,8 +11456,8 @@
         "residentialTotal": 458,
         "approvedResidentialTotal": 458,
         "roomStatusTotal": 458,
-        "availableSuites": 194,
-        "signedSuites": 227,
+        "availableSuites": 192,
+        "signedSuites": 229,
         "buildingCount": 10,
         "buildingStatusErrors": [],
         "failureClass": "structure",
@@ -11791,12 +11512,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:17:16"
+      "fetchedAt": "2026-07-24 09:37:37"
     },
     {
       "projectName": "中海安澜北京",
@@ -11853,12 +11574,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:48:06"
+      "fetchedAt": "2026-07-24 09:13:18"
     },
     {
       "projectName": "中海未来之境",
@@ -11928,7 +11649,7 @@
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:47:33"
+      "fetchedAt": "2026-07-24 09:54:12"
     },
     {
       "projectName": "中海长安源境",
@@ -11945,113 +11666,108 @@
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8129234&systemID=2&srcId=1",
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8092297&systemID=2&srcId=1"
       ],
-      "error": "coverageStatus=unavailable: 项目详情页2个URL不可用: http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7913560&systemID=2&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8129234&systemID=2&srcId=1",
+      "error": "coverageStatus=unavailable: 项目详情页6个URL不可用: http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8057513&systemID=2&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7972843&systemID=2&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7913560&systemID=2&srcId=1",
       "coverageStatus": "unavailable",
-      "coverageNote": "项目详情页2个URL不可用: http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7913560&systemID=2&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8129234&systemID=2&srcId=1",
-      "failureClass": "structure",
-      "retryable": false,
+      "coverageNote": "项目详情页6个URL不可用: http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8057513&systemID=2&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7972843&systemID=2&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7913560&systemID=2&srcId=1",
+      "failureClass": "shell",
+      "retryable": true,
       "partialResult": {
-        "residentialTotal": 350,
-        "approvedResidentialTotal": 350,
-        "roomStatusTotal": 350,
-        "availableSuites": 245,
-        "signedSuites": 44,
-        "buildingCount": 11,
+        "residentialTotal": 0,
+        "approvedResidentialTotal": 0,
+        "roomStatusTotal": 0,
+        "availableSuites": 0,
+        "signedSuites": 0,
+        "buildingCount": 0,
         "buildingStatusErrors": [],
-        "failureClass": "structure",
-        "retryable": false,
+        "failureClass": "shell",
+        "retryable": true,
         "permitCoverage": [
           {
             "permit": "京房售证字(2024)129号",
             "issueDate": "2026-02-13",
-            "detailUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7972843&systemID=2&srcId=1",
-            "detailUrls": [
-              "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7972843&systemID=2&srcId=1"
-            ],
-            "detailStatus": "complete",
+            "detailUrl": "",
+            "detailUrls": [],
+            "detailStatus": "unavailable",
             "approvedSuites": 0,
             "roomStatusTotal": 0,
             "unknown": 0,
             "buildingCount": 0,
             "buildingKeys": [],
-            "errors": [],
-            "coverageStatus": "complete",
-            "coverageNote": "预售证批次已完成逐栋闭合"
+            "errors": [
+              "未获得可验证的详情页响应"
+            ],
+            "coverageStatus": "unavailable",
+            "coverageNote": "未获得可验证的详情页响应",
+            "error": "未获得可验证的详情页响应"
           },
           {
             "permit": "京房售证字(2025)69号",
             "issueDate": "2026-02-13",
-            "detailUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8057513&systemID=2&srcId=1",
-            "detailUrls": [
-              "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8057513&systemID=2&srcId=1"
-            ],
-            "detailStatus": "complete",
-            "approvedSuites": 48,
-            "roomStatusTotal": 48,
+            "detailUrl": "",
+            "detailUrls": [],
+            "detailStatus": "unavailable",
+            "approvedSuites": 0,
+            "roomStatusTotal": 0,
             "unknown": 0,
-            "buildingCount": 1,
-            "buildingKeys": [
-              "8057513|no-detail|1#住宅楼"
+            "buildingCount": 0,
+            "buildingKeys": [],
+            "errors": [
+              "未获得可验证的详情页响应"
             ],
-            "errors": [],
-            "coverageStatus": "complete",
-            "coverageNote": "预售证批次已完成逐栋闭合"
+            "coverageStatus": "unavailable",
+            "coverageNote": "未获得可验证的详情页响应",
+            "error": "未获得可验证的详情页响应"
           },
           {
             "permit": "京房售证字(2025)89号",
             "issueDate": "2026-02-13",
-            "detailUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8092297&systemID=2&srcId=1",
-            "detailUrls": [
-              "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8092297&systemID=2&srcId=1"
-            ],
-            "detailStatus": "complete",
-            "approvedSuites": 208,
-            "roomStatusTotal": 208,
+            "detailUrl": "",
+            "detailUrls": [],
+            "detailStatus": "unavailable",
+            "approvedSuites": 0,
+            "roomStatusTotal": 0,
             "unknown": 0,
-            "buildingCount": 3,
-            "buildingKeys": [
-              "8092297|569972",
-              "8092297|569999",
-              "8092297|569976"
+            "buildingCount": 0,
+            "buildingKeys": [],
+            "errors": [
+              "未获得可验证的详情页响应"
             ],
-            "errors": [],
-            "coverageStatus": "complete",
-            "coverageNote": "预售证批次已完成逐栋闭合"
+            "coverageStatus": "unavailable",
+            "coverageNote": "未获得可验证的详情页响应",
+            "error": "未获得可验证的详情页响应"
           },
           {
             "permit": "京房售证字(2026)12号",
             "issueDate": "2026-02-13",
-            "detailUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8168122&systemID=2&srcId=1",
-            "detailUrls": [
-              "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8168122&systemID=2&srcId=1"
-            ],
-            "detailStatus": "complete",
-            "approvedSuites": 94,
-            "roomStatusTotal": 94,
+            "detailUrl": "",
+            "detailUrls": [],
+            "detailStatus": "unavailable",
+            "approvedSuites": 0,
+            "roomStatusTotal": 0,
             "unknown": 0,
-            "buildingCount": 7,
-            "buildingKeys": [
-              "8168122|569972",
-              "8168122|569979",
-              "8168122|569978",
-              "8168122|569977",
-              "8168122|569973",
-              "8168122|569999",
-              "8168122|569976"
+            "buildingCount": 0,
+            "buildingKeys": [],
+            "errors": [
+              "未获得可验证的详情页响应"
             ],
-            "errors": [],
-            "coverageStatus": "complete",
-            "coverageNote": "预售证批次已完成逐栋闭合"
+            "coverageStatus": "unavailable",
+            "coverageNote": "未获得可验证的详情页响应",
+            "error": "未获得可验证的详情页响应"
           }
         ],
-        "missingPermitBatches": []
+        "missingPermitBatches": [
+          "京房售证字(2024)129号",
+          "京房售证字(2025)69号",
+          "京房售证字(2025)89号",
+          "京房售证字(2026)12号"
+        ]
       },
-      "validationRounds": 2,
+      "validationRounds": 5,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:24:53"
+      "fetchedAt": "2026-07-24 10:00:16"
     },
     {
       "projectName": "住总清樾府",
@@ -12161,7 +11877,7 @@
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": false,
-      "fetchedAt": "2026-07-22 10:38:32"
+      "fetchedAt": "2026-07-24 09:53:07"
     },
     {
       "projectName": "住总芳华里",
@@ -12245,12 +11961,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:53:09"
+      "fetchedAt": "2026-07-24 09:18:00"
     },
     {
       "projectName": "北京国贤府贰期",
@@ -12274,8 +11990,8 @@
         "residentialTotal": 558,
         "approvedResidentialTotal": 558,
         "roomStatusTotal": 558,
-        "availableSuites": 119,
-        "signedSuites": 438,
+        "availableSuites": 116,
+        "signedSuites": 439,
         "buildingCount": 16,
         "buildingStatusErrors": [],
         "failureClass": "structure",
@@ -12336,12 +12052,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:45:56"
+      "fetchedAt": "2026-07-24 09:08:06"
     },
     {
       "projectName": "北京宸园",
@@ -12423,12 +12139,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 3,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:30:30"
+      "fetchedAt": "2026-07-24 09:16:28"
     },
     {
       "projectName": "北京润府",
@@ -12452,8 +12168,8 @@
         "residentialTotal": 685,
         "approvedResidentialTotal": 685,
         "roomStatusTotal": 685,
-        "availableSuites": 204,
-        "signedSuites": 369,
+        "availableSuites": 200,
+        "signedSuites": 373,
         "buildingCount": 9,
         "buildingStatusErrors": [],
         "failureClass": "structure",
@@ -12527,12 +12243,12 @@
           "京房售证字(2025)开6号"
         ]
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:11:23"
+      "fetchedAt": "2026-07-24 09:33:15"
     },
     {
       "projectName": "北京隅东序",
@@ -12596,12 +12312,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:58:02"
+      "fetchedAt": "2026-07-24 09:23:20"
     },
     {
       "projectName": "半壁店地块 保利熙瑞",
@@ -12699,12 +12415,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:23:15"
+      "fetchedAt": "2026-07-24 09:41:38"
     },
     {
       "projectName": "华润北美乡间 北京润园",
@@ -12838,12 +12554,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:56:58"
+      "fetchedAt": "2026-07-24 09:21:41"
     },
     {
       "projectName": "华润臻澐",
@@ -12864,8 +12580,8 @@
         "residentialTotal": 334,
         "approvedResidentialTotal": 334,
         "roomStatusTotal": 334,
-        "availableSuites": 181,
-        "signedSuites": 148,
+        "availableSuites": 180,
+        "signedSuites": 150,
         "buildingCount": 8,
         "buildingStatusErrors": [],
         "failureClass": "metric",
@@ -12900,12 +12616,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:46:31"
+      "fetchedAt": "2026-07-24 09:11:15"
     },
     {
       "projectName": "和樾望雲",
@@ -12989,12 +12705,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:43:56"
+      "fetchedAt": "2026-07-24 07:55:25"
     },
     {
       "projectName": "和樾玉鸣",
@@ -13061,12 +12777,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:44:27"
+      "fetchedAt": "2026-07-24 08:06:32"
     },
     {
       "projectName": "嘉华天珺",
@@ -13089,8 +12805,8 @@
         "residentialTotal": 886,
         "approvedResidentialTotal": 886,
         "roomStatusTotal": 886,
-        "availableSuites": 588,
-        "signedSuites": 296,
+        "availableSuites": 589,
+        "signedSuites": 295,
         "buildingCount": 16,
         "buildingStatusErrors": [],
         "failureClass": "structure",
@@ -13151,12 +12867,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:42:20"
+      "fetchedAt": "2026-07-24 07:06:05"
     },
     {
       "projectName": "国誉燕园朗润",
@@ -13213,12 +12929,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 3,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:29:11"
+      "fetchedAt": "2026-07-24 07:05:35"
     },
     {
       "projectName": "国贤府PARK",
@@ -13239,8 +12955,8 @@
         "residentialTotal": 436,
         "approvedResidentialTotal": 436,
         "roomStatusTotal": 436,
-        "availableSuites": 215,
-        "signedSuites": 200,
+        "availableSuites": 209,
+        "signedSuites": 203,
         "buildingCount": 8,
         "buildingStatusErrors": [],
         "failureClass": "metric",
@@ -13280,7 +12996,7 @@
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:27:09"
+      "fetchedAt": "2026-07-24 09:47:39"
     },
     {
       "projectName": "大兴西片区0003等地块 大兴发展梧桐府",
@@ -13302,7 +13018,7 @@
         "residentialTotal": 278,
         "approvedResidentialTotal": 278,
         "roomStatusTotal": 278,
-        "availableSuites": 254,
+        "availableSuites": 257,
         "signedSuites": 21,
         "buildingCount": 10,
         "buildingStatusErrors": [],
@@ -13358,12 +13074,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:19:20"
+      "fetchedAt": "2026-07-24 09:39:29"
     },
     {
       "projectName": "宝山0016地块 海宸元境",
@@ -13384,7 +13100,7 @@
         "residentialTotal": 298,
         "approvedResidentialTotal": 298,
         "roomStatusTotal": 298,
-        "availableSuites": 73,
+        "availableSuites": 75,
         "signedSuites": 213,
         "buildingCount": 8,
         "buildingStatusErrors": [],
@@ -13420,12 +13136,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:23:37"
+      "fetchedAt": "2026-07-24 09:42:05"
     },
     {
       "projectName": "宝山0017地块 北京隅海岄",
@@ -13448,7 +13164,7 @@
         "approvedResidentialTotal": 314,
         "roomStatusTotal": 314,
         "availableSuites": 140,
-        "signedSuites": 147,
+        "signedSuites": 148,
         "buildingCount": 9,
         "buildingStatusErrors": [],
         "failureClass": "metric",
@@ -13502,12 +13218,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:24:19"
+      "fetchedAt": "2026-07-24 09:42:35"
     },
     {
       "projectName": "建发海晏",
@@ -13523,7 +13239,7 @@
       "error": "海晏雅苑 住宅楼栋批准套数无效：10#住宅楼",
       "failureClass": "structure",
       "retryable": false,
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 1,
       "attempts": [
@@ -13533,11 +13249,11 @@
           "maxWorkers": 3,
           "retryable": false,
           "error": "海晏雅苑 住宅楼栋批准套数无效：10#住宅楼",
-          "validationRound": 2
+          "validationRound": 1
         }
       ],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:46:37"
+      "fetchedAt": "2026-07-24 09:11:45"
     },
     {
       "projectName": "建发金茂观宸",
@@ -13559,7 +13275,7 @@
         "residentialTotal": 425,
         "approvedResidentialTotal": 425,
         "roomStatusTotal": 425,
-        "availableSuites": 91,
+        "availableSuites": 90,
         "signedSuites": 307,
         "buildingCount": 15,
         "buildingStatusErrors": [],
@@ -13603,12 +13319,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:15:02"
+      "fetchedAt": "2026-07-24 09:35:46"
     },
     {
       "projectName": "御璟星城元启",
@@ -13629,8 +13345,8 @@
         "residentialTotal": 517,
         "approvedResidentialTotal": 517,
         "roomStatusTotal": 517,
-        "availableSuites": 195,
-        "signedSuites": 318,
+        "availableSuites": 194,
+        "signedSuites": 319,
         "buildingCount": 8,
         "buildingStatusErrors": [],
         "failureClass": "metric",
@@ -13670,7 +13386,7 @@
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 09:53:18"
+      "fetchedAt": "2026-07-24 09:38:41"
     },
     {
       "projectName": "懋源云纪",
@@ -13725,12 +13441,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:54:35"
+      "fetchedAt": "2026-07-24 09:19:15"
     },
     {
       "projectName": "懋源薛大人庄 懋源骊橒臺",
@@ -13787,12 +13503,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:57:27"
+      "fetchedAt": "2026-07-24 09:22:16"
     },
     {
       "projectName": "招商云璟揽阅",
@@ -13852,12 +13568,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 3,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:34:22"
+      "fetchedAt": "2026-07-24 09:29:27"
     },
     {
       "projectName": "招商朝棠揽阅",
@@ -13886,8 +13602,8 @@
         "residentialTotal": 270,
         "approvedResidentialTotal": 270,
         "roomStatusTotal": 270,
-        "availableSuites": 8,
-        "signedSuites": 243,
+        "availableSuites": 7,
+        "signedSuites": 244,
         "buildingCount": 9,
         "buildingStatusErrors": [],
         "failureClass": "structure",
@@ -14012,12 +13728,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:09:05"
+      "fetchedAt": "2026-07-24 09:30:59"
     },
     {
       "projectName": "星宸和煦",
@@ -14033,7 +13749,7 @@
       "error": "coverageStatus=unavailable: 项目详情页2个URL不可用: http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7931668&systemID=2&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7879582&systemID=2&srcId=1",
       "coverageStatus": "unavailable",
       "coverageNote": "项目详情页2个URL不可用: http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7931668&systemID=2&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=7879582&systemID=2&srcId=1",
-      "failureClass": "network",
+      "failureClass": "shell",
       "retryable": true,
       "partialResult": {
         "residentialTotal": 0,
@@ -14043,7 +13759,7 @@
         "signedSuites": 0,
         "buildingCount": 0,
         "buildingStatusErrors": [],
-        "failureClass": "network",
+        "failureClass": "shell",
         "retryable": true,
         "permitCoverage": [
           {
@@ -14074,7 +13790,7 @@
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": false,
-      "fetchedAt": "2026-07-22 11:42:48"
+      "fetchedAt": "2026-07-24 09:59:08"
     },
     {
       "projectName": "星悦时光",
@@ -14131,12 +13847,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:54:09"
+      "fetchedAt": "2026-07-24 09:18:50"
     },
     {
       "projectName": "未来城星寰时代",
@@ -14198,7 +13914,7 @@
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:27:57"
+      "fetchedAt": "2026-07-24 09:47:58"
     },
     {
       "projectName": "槐新02地块 建发金茂观宸二期",
@@ -14281,12 +13997,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:18:27"
+      "fetchedAt": "2026-07-24 09:38:11"
     },
     {
       "projectName": "玉章苑",
@@ -14357,12 +14073,12 @@
           "京房售证字(2026)36号"
         ]
       },
-      "validationRounds": 1,
+      "validationRounds": 2,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:32:09"
+      "fetchedAt": "2026-07-24 09:56:37"
     },
     {
       "projectName": "璞园PARK",
@@ -14438,12 +14154,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:51:36"
+      "fetchedAt": "2026-07-24 09:16:39"
     },
     {
       "projectName": "璟贤瑞庭",
@@ -14508,12 +14224,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:22:20"
+      "fetchedAt": "2026-07-24 09:41:13"
     },
     {
       "projectName": "翠湖玖章",
@@ -14588,7 +14304,7 @@
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": false,
-      "fetchedAt": "2026-07-22 10:37:50"
+      "fetchedAt": "2026-07-24 09:52:42"
     },
     {
       "projectName": "西红门6030地块",
@@ -14611,7 +14327,7 @@
       "error": "coverageStatus=unavailable: 项目详情页6个URL不可用: http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=925187&systemID=2&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=748177&systemID=2&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=659034&systemID=2&srcId=1",
       "coverageStatus": "unavailable",
       "coverageNote": "项目详情页6个URL不可用: http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=925187&systemID=2&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=748177&systemID=2&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=659034&systemID=2&srcId=1",
-      "failureClass": "network",
+      "failureClass": "shell",
       "retryable": true,
       "partialResult": {
         "residentialTotal": 0,
@@ -14621,7 +14337,7 @@
         "signedSuites": 0,
         "buildingCount": 0,
         "buildingStatusErrors": [],
-        "failureClass": "network",
+        "failureClass": "shell",
         "retryable": true,
         "permitCoverage": [
           {
@@ -14651,7 +14367,7 @@
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": false,
-      "fetchedAt": "2026-07-22 11:45:51"
+      "fetchedAt": "2026-07-24 09:59:54"
     },
     {
       "projectName": "西黄村地块 中海瑞文里",
@@ -14674,18 +14390,18 @@
       "error": "coverageStatus=unavailable: 项目详情页7个URL不可用: http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191696&systemID=2&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8102776&systemID=2&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191695&systemID=2&srcId=1",
       "coverageStatus": "unavailable",
       "coverageNote": "项目详情页7个URL不可用: http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191696&systemID=2&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8102776&systemID=2&srcId=1、http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8191695&systemID=2&srcId=1",
-      "failureClass": "network",
-      "retryable": true,
+      "failureClass": "structure",
+      "retryable": false,
       "partialResult": {
         "residentialTotal": 116,
         "approvedResidentialTotal": 116,
         "roomStatusTotal": 116,
-        "availableSuites": 63,
+        "availableSuites": 62,
         "signedSuites": 36,
         "buildingCount": 2,
         "buildingStatusErrors": [],
-        "failureClass": "network",
-        "retryable": true,
+        "failureClass": "structure",
+        "retryable": false,
         "permitCoverage": [
           {
             "permit": "京房售证字(2026)4号",
@@ -14728,12 +14444,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 5,
+      "validationRounds": 2,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:46:38"
+      "fetchedAt": "2026-07-24 09:56:28"
     },
     {
       "projectName": "越秀星耀未来",
@@ -14746,35 +14462,34 @@
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8083301&systemID=2&srcId=1",
         "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8017587&systemID=2&srcId=1"
       ],
-      "error": "coverageStatus=mismatch: 覆盖不足668套(批准644 vs 预期1312)",
-      "coverageStatus": "mismatch",
-      "coverageNote": "覆盖不足668套(批准644 vs 预期1312)",
-      "failureClass": "metric",
+      "error": "coverageStatus=unavailable: 项目详情页1个URL不可用: http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8017587&systemID=2&srcId=1",
+      "coverageStatus": "unavailable",
+      "coverageNote": "项目详情页1个URL不可用: http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8017587&systemID=2&srcId=1",
+      "failureClass": "structure",
       "retryable": false,
       "partialResult": {
-        "residentialTotal": 644,
-        "approvedResidentialTotal": 644,
-        "roomStatusTotal": 644,
-        "availableSuites": 291,
-        "signedSuites": 353,
-        "buildingCount": 16,
+        "residentialTotal": 198,
+        "approvedResidentialTotal": 198,
+        "roomStatusTotal": 198,
+        "availableSuites": 72,
+        "signedSuites": 126,
+        "buildingCount": 8,
         "buildingStatusErrors": [],
-        "failureClass": "metric",
+        "failureClass": "structure",
         "retryable": false,
         "permitCoverage": [
           {
             "permit": "京房售证字(2025)30号",
             "issueDate": "",
-            "detailUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8017587&systemID=2&srcId=1",
+            "detailUrl": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8083301&systemID=2&srcId=1",
             "detailUrls": [
-              "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8017587&systemID=2&srcId=1",
               "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8083301&systemID=2&srcId=1"
             ],
             "detailStatus": "complete",
-            "approvedSuites": 644,
-            "roomStatusTotal": 644,
+            "approvedSuites": 198,
+            "roomStatusTotal": 198,
             "unknown": 0,
-            "buildingCount": 16,
+            "buildingCount": 8,
             "buildingKeys": [
               "8083301|565871",
               "8083301|565817",
@@ -14783,15 +14498,7 @@
               "8083301|565820",
               "8083301|565821",
               "8083301|565882",
-              "8083301|565883",
-              "8017587|565871",
-              "8017587|565817",
-              "8017587|565818",
-              "8017587|565819",
-              "8017587|565820",
-              "8017587|565821",
-              "8017587|565882",
-              "8017587|565883"
+              "8083301|565883"
             ],
             "errors": [],
             "coverageStatus": "complete",
@@ -14800,12 +14507,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:43:10"
+      "fetchedAt": "2026-07-24 07:54:58"
     },
     {
       "projectName": "金茂满曜",
@@ -14850,6 +14557,14 @@
             "unknown": 0,
             "buildingCount": 20,
             "buildingKeys": [
+              "8102492|568572",
+              "8102492|567713",
+              "8102492|567714",
+              "8102492|568573",
+              "8102492|568574",
+              "8102492|568575",
+              "8102492|567715",
+              "8102492|567716",
               "8073237|568572",
               "8073237|568573",
               "8073237|568574",
@@ -14861,15 +14576,7 @@
               "8048434|no-detail|17#住宅楼",
               "8048434|567717",
               "8048434|no-detail|19#住宅楼",
-              "8048434|567706",
-              "8102492|568572",
-              "8102492|567713",
-              "8102492|567714",
-              "8102492|568573",
-              "8102492|568574",
-              "8102492|568575",
-              "8102492|567715",
-              "8102492|567716"
+              "8048434|567706"
             ],
             "errors": [],
             "coverageStatus": "complete",
@@ -14878,12 +14585,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 3,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:32:45"
+      "fetchedAt": "2026-07-24 09:25:48"
     },
     {
       "projectName": "金隅花溪云锦",
@@ -14946,12 +14653,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:08:23"
+      "fetchedAt": "2026-07-24 09:30:09"
     },
     {
       "projectName": "长安华曦府",
@@ -14994,20 +14701,20 @@
             "unknown": 0,
             "buildingCount": 14,
             "buildingKeys": [
-              "7962637|563077",
-              "7962637|563008",
-              "7962637|563074",
-              "7962637|563078",
-              "7962637|no-detail|B-5#住宅楼",
-              "7962637|563010",
-              "7962637|563011",
               "7976630|563522",
               "7976630|563517",
               "7976630|563516",
               "7976630|no-detail|A-3#住宅楼",
               "7976630|563514",
               "7976630|563513",
-              "7976630|563512"
+              "7976630|563512",
+              "7962637|563077",
+              "7962637|563008",
+              "7962637|563074",
+              "7962637|563078",
+              "7962637|no-detail|B-5#住宅楼",
+              "7962637|563010",
+              "7962637|563011"
             ],
             "errors": [],
             "coverageStatus": "complete",
@@ -15016,12 +14723,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:27:00"
+      "fetchedAt": "2026-07-24 09:45:11"
     },
     {
       "projectName": "颐海澐颂",
@@ -15092,7 +14799,7 @@
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:39:58"
+      "fetchedAt": "2026-07-24 09:53:56"
     },
     {
       "projectName": "颐知筑",
@@ -15113,8 +14820,8 @@
         "residentialTotal": 284,
         "approvedResidentialTotal": 284,
         "roomStatusTotal": 284,
-        "availableSuites": 220,
-        "signedSuites": 63,
+        "availableSuites": 217,
+        "signedSuites": 65,
         "buildingCount": 8,
         "buildingStatusErrors": [],
         "failureClass": "metric",
@@ -15154,7 +14861,7 @@
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:03:00"
+      "fetchedAt": "2026-07-24 09:40:31"
     },
     {
       "projectName": "首钢璟悦长安",
@@ -15211,12 +14918,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:25:28"
+      "fetchedAt": "2026-07-24 09:43:17"
     },
     {
       "projectName": "黄衫木店（璞樾）",
@@ -15240,8 +14947,8 @@
         "residentialTotal": 479,
         "approvedResidentialTotal": 479,
         "roomStatusTotal": 479,
-        "availableSuites": 198,
-        "signedSuites": 280,
+        "availableSuites": 197,
+        "signedSuites": 281,
         "buildingCount": 16,
         "buildingStatusErrors": [],
         "failureClass": "structure",
@@ -15320,12 +15027,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 3,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:34:16"
+      "fetchedAt": "2026-07-24 09:28:14"
     },
     {
       "projectName": "黄衫木店（紫京宸园）",
@@ -15348,8 +15055,8 @@
         "residentialTotal": 632,
         "approvedResidentialTotal": 632,
         "roomStatusTotal": 632,
-        "availableSuites": 448,
-        "signedSuites": 181,
+        "availableSuites": 445,
+        "signedSuites": 184,
         "buildingCount": 16,
         "buildingStatusErrors": [],
         "failureClass": "structure",
@@ -15410,12 +15117,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 11:03:07"
+      "fetchedAt": "2026-07-24 09:26:56"
     },
     {
       "projectName": "龙湖宸翰",
@@ -15437,7 +15144,7 @@
         "approvedResidentialTotal": 277,
         "roomStatusTotal": 277,
         "availableSuites": 48,
-        "signedSuites": 179,
+        "signedSuites": 180,
         "buildingCount": 8,
         "buildingStatusErrors": [],
         "failureClass": "metric",
@@ -15472,12 +15179,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:55:17"
+      "fetchedAt": "2026-07-24 09:19:52"
     },
     {
       "projectName": "龙湖恩祥凌雲颂",
@@ -15540,12 +15247,12 @@
         ],
         "missingPermitBatches": []
       },
-      "validationRounds": 2,
+      "validationRounds": 1,
       "retryAttempts": 0,
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:50:04"
+      "fetchedAt": "2026-07-24 09:15:16"
     },
     {
       "projectName": "龙湖观萃",
@@ -15606,7 +15313,7 @@
       "attemptCount": 0,
       "attempts": [],
       "oldValueRetained": true,
-      "fetchedAt": "2026-07-22 10:38:51"
+      "fetchedAt": "2026-07-24 09:53:20"
     }
   ]
 }
