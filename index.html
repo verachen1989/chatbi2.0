@@ -1403,17 +1403,9 @@ function projectOfficialSignedStatSuites(p) {
   return officialInventoryValue(p.officialSignedSuites, p);
 }
 function projectOfficialDisplayTotal(p) {
-  const approved = officialInventoryValue(p.officialResidentialTotal, p);
-  const unsigned = officialInventoryValue(p.officialUnsignedSuites, p);
-  const officialSigned = projectOfficialSignedStatSuites(p);
-  const cumulativeSold = cleanCount(p.suitesAll);
-  const candidates = [];
-  if (approved !== null) candidates.push(approved);
-  if (unsigned !== null && officialSigned !== null) candidates.push(unsigned + officialSigned);
-  if (unsigned !== null && cumulativeSold !== null) candidates.push(unsigned + cumulativeSold);
-  if (officialSigned !== null) candidates.push(officialSigned);
-  const valid = candidates.filter(value => Number.isFinite(value));
-  return valid.length ? Math.max(...valid) : null;
+  const officialTotal = officialInventoryValue(p.officialResidentialTotal, p);
+  if (officialTotal !== null) return officialTotal;
+  return officialInventoryValue(p.approvedTotalSuites, p);
 }
 function projectOfficialDisplayUnsigned(p) {
   const unsigned = officialInventoryValue(p.officialUnsignedSuites, p);
