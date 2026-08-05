@@ -16,7 +16,7 @@ from openpyxl import load_workbook
 
 
 DATA_RE = re.compile(
-    r"const DATA = (.*?);\n(const LAUNCH_OFFICIAL_INVENTORY_OVERRIDES|const DEFAULT_PERIODS)",
+    r"const DATA = (.*?);\n(const PROJECT_METADATA_OVERRIDES|const LAUNCH_OFFICIAL_INVENTORY_OVERRIDES|const DEFAULT_PERIODS)",
     re.S,
 )
 PROJECT_ALIASES_RE = re.compile(r"const PROJECT_NAME_ALIASES = \{(.*?)\};", re.S)
@@ -128,6 +128,7 @@ def detail_paths(folder: Path) -> list[Path]:
     return [
         path for path in sorted(folder.glob("*.xlsx"))
         if path.is_file() and not path.name.startswith(("~", ".~"))
+        and "汇总" not in path.stem
     ]
 
 
@@ -408,7 +409,7 @@ def build_detail_payload(
         if key not in used_keys and detail["summary"]["suites"]
     ]
     payload = {
-        "source": str(detail_dir),
+        "source": f"{detail_dir.name}（排除汇总表）",
         "sheet": "CRIC-北京-项目详情.交易.项目累计.成交明细",
         "scope": "普通住宅/别墅，已排除车库/车位",
         "month": month_full_label(month),
@@ -531,8 +532,8 @@ def main() -> None:
 
     refresh_aggregates(data)
     policy = data.setdefault("sourcePolicy", {})
-    policy[month_full_label(args.month)] = "克尔瑞项目成交明细按项目聚合（普通住宅/别墅）"
-    policy[f"{args.month}成交明细"] = "克尔瑞项目成交明细（普通住宅/别墅）"
+    policy[month_full_label(args.month)] = "克尔瑞项目成交明细逐套聚合（普通住宅/别墅，不读取汇总表）"
+    policy[f"{args.month}成交明细"] = "克尔瑞项目成交明细（普通住宅/别墅，不读取汇总表）"
 
     payload, unmatched_detail = build_detail_payload(data, details, alias_groups, args.month, args.detail_dir)
     global_name = f"{code.upper()}_TRANSACTION_DETAILS"
