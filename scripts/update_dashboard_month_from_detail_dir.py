@@ -20,6 +20,7 @@ DATA_RE = re.compile(
     re.S,
 )
 PROJECT_ALIASES_RE = re.compile(r"const PROJECT_NAME_ALIASES = \{(.*?)\};", re.S)
+ZJW_NEW_LAUNCH_RE = re.compile(r"const ZJW_OFFICIAL_NEW_LAUNCH_PROJECTS = (\[.*?\]);", re.S)
 SCRIPT_TAG_RE = re.compile(r'(<script src="june_transaction_details\.js[^"]*"></script>)')
 ALLOWED_PROPERTY_TYPES = {"普通住宅", "别墅"}
 
@@ -240,6 +241,54 @@ def load_details(folder: Path, month: str) -> tuple[dict[str, dict[str, Any]], d
     return grouped, stats
 
 
+def refresh_detail_summary(group: dict[str, Any]) -> None:
+    rows = group["rows"]
+    rows.sort(key=lambda item: item["date"], reverse=True)
+    area = sum(number(row["area"]) for row in rows)
+    amount = sum(number(row["totalWan"]) for row in rows)
+    group["summary"] = {
+        "suites": len(rows),
+        "area": rounded(area, 2),
+        "amountWan": rounded(amount, 2),
+        "avgPrice": calc_price(amount, area),
+    }
+    group["sourceFiles"] = sorted(set(group.get("sourceFiles") or []))
+
+
+def merge_details_by_alias_groups(
+    details: dict[str, dict[str, Any]],
+    alias_groups: list[list[str]],
+) -> list[dict[str, Any]]:
+    merged: list[dict[str, Any]] = []
+    for group in alias_groups:
+        normalized_names = [normalize_name(name) for name in group if normalize_name(name)]
+        present_keys = [key for key in normalized_names if key in details]
+        if len(present_keys) < 2:
+            continue
+        target_key = normalized_names[0] if normalized_names[0] in details else present_keys[0]
+        target = details[target_key]
+        consumed: list[str] = []
+        for key in present_keys:
+            if key == target_key or key not in details:
+                continue
+            source = details.pop(key)
+            target["rows"].extend(source.get("rows") or [])
+            target["sourceFiles"] = [
+                *(target.get("sourceFiles") or []),
+                *(source.get("sourceFiles") or []),
+            ]
+            consumed.append(source.get("sourceProject") or key)
+        if consumed:
+            refresh_detail_summary(target)
+            merged.append({
+                "canonical": group[0],
+                "targetDetailProject": target.get("sourceProject"),
+                "mergedDetailProjects": consumed,
+                "suites": target["summary"]["suites"],
+            })
+    return merged
+
+
 def parse_alias_groups(html: str) -> list[list[str]]:
     match = PROJECT_ALIASES_RE.search(html)
     if not match:
@@ -293,6 +342,164 @@ def all_dashboard_projects(data: dict[str, Any]) -> list[dict[str, Any]]:
                 seen.add(marker)
                 projects.append(project)
     return projects
+
+
+def parse_official_new_launch_items(html: str) -> list[dict[str, Any]]:
+    match = ZJW_NEW_LAUNCH_RE.search(html)
+    if not match:
+        return []
+    return json.loads(match.group(1), strict=False)
+
+
+def official_new_launch_records(item: dict[str, Any]) -> list[dict[str, str]]:
+    permits = item.get("permits") or []
+    issue_dates = item.get("issueDates") or []
+    return [
+        {
+            "name": clean(item.get("officialProjectName")),
+            "permit": clean(permit),
+            "date": clean(issue_dates[index] if index < len(issue_dates) else (issue_dates[0] if issue_dates else "")),
+        }
+        for index, permit in enumerate(permits)
+    ]
+
+
+def official_new_launch_project_id(item: dict[str, Any], index: int) -> str:
+    first_permit = clean((item.get("permits") or [""])[0])
+    match = re.search(r"\d{4}\)?\d+", first_permit)
+    return f"zjw-launch-{match.group(0) if match else normalize_name(item.get('officialProjectName')) or index}"
+
+
+def official_new_launch_residential_total(item: dict[str, Any]) -> int:
+    return int(
+        number(item.get("residentialTotal"))
+        or number(item.get("approvedResidentialSuites"))
+        or number(item.get("approvedTotalSuites"))
+        or 0
+    )
+
+
+def project_presale_match_names(project: dict[str, Any], alias_groups: list[list[str]]) -> list[str]:
+    return [normalize_name(name) for name in project_candidate_names(project, alias_groups) if len(normalize_name(name)) >= 3]
+
+
+def presale_record_matches_project(record: dict[str, Any], project: dict[str, Any], alias_groups: list[list[str]]) -> bool:
+    record_name = normalize_name(record.get("name"))
+    project_names = project_presale_match_names(project, alias_groups)
+    permit_text = clean(project.get("summaryPresalePermit"))
+    if record.get("permit") and clean(record.get("permit")) in permit_text:
+        return True
+    return bool(
+        record_name
+        and any(
+            name == record_name
+            or (len(name) >= 4 and len(record_name) >= 4 and (name in record_name or record_name in name))
+            for name in project_names
+        )
+    )
+
+
+def build_official_new_launch_project(
+    item: dict[str, Any],
+    index: int,
+    months: list[str],
+    display_name: str,
+    detail_source_name: str,
+) -> dict[str, Any]:
+    records = official_new_launch_records(item)
+    issue_dates = sorted({record["date"] for record in records if record.get("date")})
+    official_name = clean(item.get("officialProjectName"))
+    monthly = {month: {"suites": 0, "area": 0, "price": 0, "amount": 0} for month in months}
+    detail_urls = item.get("detailUrls") or []
+    return {
+        "id": official_new_launch_project_id(item, index),
+        "group": item.get("group", ""),
+        "plate": item.get("plate", ""),
+        "project": display_name or official_name,
+        "landDate": item.get("landDate", ""),
+        "status": "新取证",
+        "x": 50,
+        "y": 50,
+        "lat": number(item.get("lat")),
+        "lng": number(item.get("lng")),
+        "monthly": monthly,
+        "source": "zjwNewLaunch",
+        "suites34": 0,
+        "area34": 0,
+        "amount34": 0,
+        "price4": 0,
+        "amountAll": 0,
+        "suitesAll": 0,
+        "district": item.get("district", ""),
+        "address": item.get("address", ""),
+        "coordSource": "住建委坐落位置 + 业务板块近似定位",
+        "coordSourceUrl": detail_urls[0] if detail_urls else "",
+        "coordConfidence": item.get("coordConfidence", "低"),
+        "coordSystem": "GCJ-02近似板块中心",
+        "matchedName": detail_source_name or display_name or official_name,
+        "summaryRecordName": official_name,
+        "summaryPresalePermit": " / ".join(clean(permit) for permit in (item.get("permits") or []) if clean(permit)),
+        "summaryDeveloper": item.get("developer", "住建委项目详情页"),
+        "cricProjectName": detail_source_name or display_name,
+        "officialProjectName": official_name,
+        "officialResidentialTotal": official_new_launch_residential_total(item),
+        "officialUnsignedSuites": None,
+        "officialAvailableSuites": None,
+        "officialUnsignedBlueSuites": 0,
+        "officialBookedSuites": None,
+        "officialContractSignedSuites": None,
+        "officialFilingSuites": None,
+        "officialSignedStatsSuites": None,
+        "officialSignedStatsArea": None,
+        "officialSignedStatsAvgPrice": None,
+        "officialSignedSuites": None,
+        "officialDetailSignedSuites": None,
+        "officialInventoryEvidenceUrl": "\n".join(detail_urls),
+        "officialInventoryFetchedAt": "",
+        "officialInventoryMatchStatus": "住建委新发预售证项目；飞书映射表补充克而瑞案名",
+        "officialInventoryTotalAuditNote": item.get("inventoryNote", ""),
+        "approvedTotalSuites": item.get("approvedTotalSuites"),
+        "presaleIssueRecords": records,
+        "presaleIssueDates": issue_dates,
+    }
+
+
+def append_matching_official_new_launch_projects(
+    data: dict[str, Any],
+    html: str,
+    details: dict[str, dict[str, Any]],
+    alias_groups: list[list[str]],
+) -> list[dict[str, Any]]:
+    appended: list[dict[str, Any]] = []
+    existing = all_dashboard_projects(data)
+    launch_projects = data.setdefault("launchProjects", [])
+    for index, item in enumerate(parse_official_new_launch_items(html)):
+        if official_new_launch_residential_total(item) <= 0:
+            continue
+        records = official_new_launch_records(item)
+        if any(any(presale_record_matches_project(record, project, alias_groups) for record in records) for project in existing):
+            continue
+        probe = build_official_new_launch_project(item, index, data["months"], clean(item.get("officialProjectName")), "")
+        detail_key, detail, matched_by = match_detail(details, probe, alias_groups)
+        if not detail:
+            continue
+        project = build_official_new_launch_project(
+            item,
+            index,
+            data["months"],
+            detail.get("sourceProject") or matched_by or clean(item.get("officialProjectName")),
+            detail.get("sourceProject") or matched_by,
+        )
+        launch_projects.append(project)
+        existing.append(project)
+        appended.append({
+            "project": project["project"],
+            "officialProjectName": project["officialProjectName"],
+            "matchedBy": matched_by,
+            "detailProject": detail.get("sourceProject"),
+            "suites": detail["summary"]["suites"],
+        })
+    return appended
 
 
 def match_detail(details: dict[str, Any], project: dict[str, Any], alias_groups: list[list[str]]) -> tuple[str, dict[str, Any] | None, str]:
@@ -497,9 +704,11 @@ def main() -> None:
     data = json.loads(match.group(1), strict=False)
     alias_groups = parse_alias_groups(html)
     details, stats = load_details(args.detail_dir, args.month)
+    alias_detail_merges = merge_details_by_alias_groups(details, alias_groups)
 
     if args.month not in data["months"]:
         data["months"].append(args.month)
+    appended_launch_projects = append_matching_official_new_launch_projects(data, html, details, alias_groups)
 
     code = month_code(args.month)
     matched: list[dict[str, Any]] = []
@@ -545,6 +754,8 @@ def main() -> None:
     diff = {
         "month": args.month,
         "detailStats": stats,
+        "appendedLaunchProjects": appended_launch_projects,
+        "aliasDetailMerges": alias_detail_merges,
         "matchedProjects": matched,
         "zeroedProjects": zeroed,
         "unmatchedDetail": unmatched_detail,
@@ -555,6 +766,8 @@ def main() -> None:
     print(json.dumps({
         "month": args.month,
         "matchedProjects": len(matched),
+        "appendedLaunchProjects": len(appended_launch_projects),
+        "aliasDetailMerges": len(alias_detail_merges),
         "unmatchedDetail": len(unmatched_detail),
         "detailStats": stats,
         "dashboardMonthTotal": diff["dashboardMonthTotal"],
