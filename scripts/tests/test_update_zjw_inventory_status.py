@@ -46,6 +46,31 @@ class PermitBatchModelTests(unittest.TestCase):
             [[], []],
         )
 
+    def test_split_permits_expands_year_shorthand_and_ignores_placeholder(self) -> None:
+        self.assertEqual(
+            scraper.split_permits("京房售证字(2026)4号 / 31号 / 待核"),
+            ["京房售证字(2026)4号", "京房售证字(2026)31号"],
+        )
+        self.assertEqual(scraper.split_permits("待核"), [])
+
+    def test_permit_registry_record_is_not_dropped_when_detail_url_is_missing(self) -> None:
+        item = {
+            "dashboardName": "测试项目",
+            "permits": ["京房售证字(2026)53号"],
+            "presaleIssueRecords": [
+                {"permit": "京房售证字(2026)5号", "date": "2026-01-28"},
+                {"permit": "京房售证字(2026)53号", "date": "2026-06-30"},
+            ],
+            "urls": ["http://example.test/detail?projectID=8228442"],
+        }
+
+        specs = build_permit_batch_specs(item)
+
+        self.assertEqual(
+            [spec["permit"] for spec in specs],
+            ["京房售证字(2026)53号", "京房售证字(2026)5号"],
+        )
+
     def test_matches_detail_page_by_permit_text_not_url_order(self) -> None:
         page = "<td>预售许可证</td><td>京房售证字(2026)53号</td>"
 
@@ -301,6 +326,116 @@ class PermitBatchModelTests(unittest.TestCase):
         self.assertEqual(second["coverageStatus"], "complete")
         second_fetch.assert_not_called()
         second_status.assert_not_called()
+
+
+class InventoryClosureTests(unittest.TestCase):
+    def test_missing_permit_batch_blocks_project_inventory_closure(self) -> None:
+        gate = scraper.inventory_closure_gate(
+            expected_permits=["京房售证字(2026)5号", "京房售证字(2026)53号"],
+            permit_coverage=[
+                {
+                    "permit": "京房售证字(2026)53号",
+                    "coverageStatus": "complete",
+                }
+            ],
+            coverage_complete=True,
+        )
+
+        self.assertFalse(gate["canClose"])
+        self.assertEqual(gate["missingPermits"], ["京房售证字(2026)5号"])
+
+    def test_all_known_permits_must_be_independently_closed(self) -> None:
+        gate = scraper.inventory_closure_gate(
+            expected_permits=["京房售证字(2026)5号", "京房售证字(2026)53号"],
+            permit_coverage=[
+                {
+                    "permit": "京房售证字(2026)5号",
+                    "coverageStatus": "complete",
+                },
+                {
+                    "permit": "京房售证字(2026)53号",
+                    "coverageStatus": "complete",
+                },
+            ],
+            coverage_complete=True,
+        )
+
+        self.assertTrue(gate["canClose"])
+        self.assertEqual(gate["missingPermits"], [])
+
+    def test_sold_out_buildings_are_included_in_cumulative_sold(self) -> None:
+        metrics = scraper.closed_inventory_metrics(
+            16,
+            {
+                "available": 0,
+                "booked": 0,
+                "contractSigned": 0,
+                "filed": 0,
+                "soldOut": 16,
+            },
+        )
+
+        self.assertEqual(metrics["cumulativeSoldSuites"], 16)
+        self.assertEqual(metrics["remainingSuites"], 0)
+
+    def test_remaining_is_total_minus_cumulative_sold_not_green_available(self) -> None:
+        metrics = scraper.closed_inventory_metrics(
+            446,
+            {
+                "available": 286,
+                "booked": 11,
+                "contractSigned": 141,
+                "filed": 0,
+                "soldOut": 0,
+                "unknown": 8,
+            },
+        )
+
+        self.assertEqual(metrics["availableSuites"], 286)
+        self.assertEqual(metrics["cumulativeSoldSuites"], 141)
+        self.assertEqual(metrics["remainingSuites"], 305)
+        self.assertEqual(
+            446,
+            metrics["remainingSuites"] + metrics["cumulativeSoldSuites"],
+        )
+
+    def test_invalid_total_or_over_sold_does_not_fake_a_closed_value(self) -> None:
+        self.assertIsNone(
+            scraper.closed_inventory_metrics(0, {"filed": 0})["remainingSuites"]
+        )
+        self.assertIsNone(
+            scraper.closed_inventory_metrics(
+                10,
+                {"contractSigned": 8, "filed": 3, "soldOut": 0},
+            )["remainingSuites"]
+        )
+
+    def test_snapshot_uses_closed_metrics_and_keeps_available_separate(self) -> None:
+        result = {
+            "dashboardName": "测试项目",
+            "officialProjectName": "测试备案名",
+            "residentialTotal": 100,
+            "expectedResidentialTotal": 100,
+            "approvedResidentialTotal": 100,
+            "roomStatusTotal": 100,
+            "coverageComplete": True,
+            "contractSignedSuites": 20,
+            "filedSuites": 30,
+            "soldOutSuites": 10,
+            "availableSuites": 25,
+            "bookedSuites": 5,
+            "signedStatsSuites": 55,
+            "fetchedAt": "2026-08-07 10:00:00",
+            "url": "http://example.test/project",
+            "screenshotInfo": {},
+            "auditNote": "测试",
+        }
+
+        snapshot = scraper.project_snapshot(result)
+
+        self.assertEqual(snapshot["cumulativeSoldSuites"], 60)
+        self.assertEqual(snapshot["remainingSuites"], 40)
+        self.assertEqual(snapshot["availableSuites"], 25)
 
 
 if __name__ == "__main__":
