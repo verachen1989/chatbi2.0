@@ -338,23 +338,8 @@ def urls_from_value(value: Any) -> list[str]:
 
 def split_permits(value: Any) -> list[str]:
     text = str(value or "")
-    permits: list[str] = []
-    active_year = ""
-    for part in re.split(r"[/、；;\n]+", text):
-        token = part.strip().replace("（", "(").replace("）", ")")
-        full = re.search(r"京房售证字\((\d{4})\)(开?)(\d+)号", token)
-        if full:
-            active_year = full.group(1)
-            permits.append(
-                f"京房售证字({active_year}){full.group(2)}{full.group(3)}号"
-            )
-            continue
-        short = re.fullmatch(r"(开?)(\d+)号", token)
-        if short and active_year:
-            permits.append(
-                f"京房售证字({active_year}){short.group(1)}{short.group(2)}号"
-            )
-    return list(dict.fromkeys(permits))
+    permits = re.findall(r"京房售证字[（(]\d{4}[）)](?:开)?\d+号", text)
+    return permits or [item.strip() for item in re.split(r"[/、；;\n]+", text) if item.strip()]
 
 
 def issue_dates_from_project(project: dict[str, Any]) -> list[str]:
@@ -402,20 +387,9 @@ def normalize_permit_text(value: Any) -> str:
 
 def build_permit_batch_specs(item: dict[str, Any]) -> list[dict[str, Any]]:
     """Build independent permit batches without assuming URL order is permit order."""
-    permits = [
-        permit
-        for raw_permit in (item.get("permits") or [])
-        for permit in split_permits(raw_permit)
-    ]
+    permits = list(item.get("permits") or [])
     if not permits:
         permits = split_permits(item.get("presalePermitText"))
-    known_permit_keys = {normalize_permit_text(permit) for permit in permits if permit}
-    for record in item.get("presaleIssueRecords") or []:
-        for permit in split_permits(record.get("permit")):
-            permit_key = normalize_permit_text(permit)
-            if permit_key and permit_key not in known_permit_keys:
-                permits.append(permit)
-                known_permit_keys.add(permit_key)
     records = {
         normalize_permit_text(record.get("permit")): str(record.get("date") or "")
         for record in (item.get("presaleIssueRecords") or [])
@@ -524,36 +498,6 @@ def aggregate_permit_coverage(
         "unknown": unknown_total,
         "missingPermits": missing_permits,
         "duplicateBuildingKeys": duplicate_keys,
-    }
-
-
-def inventory_closure_gate(
-    expected_permits: list[str],
-    permit_coverage: list[dict[str, Any]],
-    coverage_complete: bool,
-) -> dict[str, Any]:
-    """Require every known presale permit batch before project-level closure."""
-    covered = {
-        normalize_permit_text(batch.get("permit"))
-        for batch in permit_coverage
-        if batch.get("permit") and batch.get("coverageStatus") == COVERAGE_COMPLETE
-    }
-    missing = [
-        permit
-        for permit in expected_permits
-        if normalize_permit_text(permit) not in covered
-    ]
-    can_close = bool(expected_permits) and coverage_complete and not missing
-    return {
-        "canClose": can_close,
-        "expectedPermitCount": len(expected_permits),
-        "closedPermitCount": len(covered),
-        "missingPermits": missing,
-        "note": (
-            f"已知{len(expected_permits)}张住宅预售证均完成逐证、逐楼栋闭合"
-            if can_close
-            else "已知预售证未全部完成独立闭合"
-        ),
     }
 
 
@@ -925,33 +869,6 @@ def merge_counts(items: list[dict[str, int]]) -> dict[str, int]:
     return merged
 
 
-def closed_inventory_metrics(total: Any, counts: dict[str, Any]) -> dict[str, Any]:
-    """Return same-scope residential inventory metrics that can be reconciled."""
-    residential_total = int(total or 0)
-    sold_keys = ("contractSigned", "filed", "soldOut")
-    has_sold_evidence = any(key in counts and counts.get(key) is not None for key in sold_keys)
-    cumulative_sold = (
-        sum(int(counts.get(key) or 0) for key in sold_keys)
-        if has_sold_evidence
-        else None
-    )
-    remaining = None
-    if (
-        residential_total > 0
-        and cumulative_sold is not None
-        and 0 <= cumulative_sold <= residential_total
-    ):
-        remaining = residential_total - cumulative_sold
-    available = counts.get("available")
-    return {
-        "totalSuites": residential_total if residential_total > 0 else None,
-        "cumulativeSoldSuites": cumulative_sold,
-        "remainingSuites": remaining,
-        "availableSuites": int(available) if available is not None else None,
-        "closed": remaining is not None,
-    }
-
-
 def merge_presell_stats(stats_items: list[dict[str, Any]]) -> dict[str, Any]:
     suites = sum(int(item.get("signedStatsSuites") or 0) for item in stats_items)
     area = sum(float(item.get("signedStatsArea") or 0) for item in stats_items)
@@ -985,17 +902,7 @@ def build_audit_note(building_count: int, total: int, counts: dict[str, int], st
         parts.append(f"{STATUS_LABELS['nonSale']}{counts['nonSale']}套")
     if counts.get("soldOut", 0):
         parts.append(f"{STATUS_LABELS['soldOut']}{counts['soldOut']}套")
-    sold = int(
-        counts.get("contractSigned", 0)
-        + counts.get("filed", 0)
-        + counts.get("soldOut", 0)
-    )
-    remaining = max(total - sold, 0)
-    note = (
-        "，".join(parts)
-        + f"；逐栋批准套数与房源状态数已完整闭合，累计已售{sold}套，"
-        + f"剩余{remaining}套=住宅总套数{total}套-累计已售{sold}套；绿色可售仅作为房源状态明细。"
-    )
+    note = "，".join(parts) + "；逐栋批准套数与房源状态数已完整闭合，绿色可售套数按绿色房源计。"
     signed_stats = stats.get("signedStatsSuites")
     if signed_stats is not None:
         stat_parts = [f"期房签约统计住宅已签约{signed_stats}套"]
@@ -1554,17 +1461,9 @@ def scrape_project(
         coverage_note = (
             f"楼栋批准{approved_total}套，状态合计{status_total}套，差额{approved_total - status_total}套"
         )
-    permit_gate = inventory_closure_gate(
-        [str(spec.get("permit") or "") for spec in permit_specs if spec.get("permit")],
-        permit_batches,
-        coverage_status == COVERAGE_COMPLETE,
-    )
-    if coverage_status == COVERAGE_COMPLETE and not permit_gate["canClose"]:
-        coverage_status = COVERAGE_UNAVAILABLE
-        coverage_note = permit_gate["note"]
     residential_total = approved_total
     stats = merge_presell_stats(presell_stats_items)
-    inventory_metrics = closed_inventory_metrics(residential_total, counts)
+    sold_from_status = int(counts.get("contractSigned", 0) + counts.get("filed", 0))
     failure_texts = [coverage_note]
     failure_texts.extend(
         str(error.get("error") or "") for error in building_status_errors
@@ -1617,15 +1516,14 @@ def scrape_project(
         "retryable": retryable,
         "permitCoverage": permit_batches,
         "missingPermitBatches": permit_summary.get("missingPermits") or [],
-        "permitClosureGate": permit_gate,
-        "unsignedSuites": inventory_metrics["remainingSuites"],
+        "unsignedSuites": int(counts.get("available", 0)),
         "availableSuites": int(counts.get("available", 0)),
         "bookedSuites": int(counts.get("booked", 0)),
         "contractSignedSuites": int(counts.get("contractSigned", 0)),
         "filedSuites": int(counts.get("filed", 0)),
         "soldOutSuites": int(counts.get("soldOut", 0)),
         "qualificationSuites": int(counts.get("qualification", 0)),
-        "signedSuites": inventory_metrics["cumulativeSoldSuites"],
+        "signedSuites": sold_from_status,
         "statusCounts": counts,
         "buildingStatusErrors": building_status_errors,
         "buildingCount": len(residential_buildings),
@@ -1907,12 +1805,6 @@ def update_history(path: Path, results: list[dict[str, Any]]) -> None:
 
 
 def project_snapshot(result: dict[str, Any]) -> dict[str, Any]:
-    status_counts = dict(result.get("statusCounts") or {})
-    status_counts.setdefault("available", result.get("availableSuites"))
-    status_counts.setdefault("contractSigned", result.get("contractSignedSuites"))
-    status_counts.setdefault("filed", result.get("filedSuites"))
-    status_counts.setdefault("soldOut", result.get("soldOutSuites"))
-    metrics = closed_inventory_metrics(result.get("residentialTotal"), status_counts)
     return {
         "projectName": result["dashboardName"],
         "officialProjectName": result["officialProjectName"],
@@ -1936,10 +1828,8 @@ def project_snapshot(result: dict[str, Any]) -> dict[str, Any]:
         "retryable": bool(result.get("retryable")),
         "permitCoverage": result.get("permitCoverage") or [],
         "missingPermitBatches": result.get("missingPermitBatches") or [],
-        "permitClosureGate": result.get("permitClosureGate") or {},
-        "remainingSuites": metrics["remainingSuites"],
-        "availableSuites": metrics["availableSuites"],
-        "cumulativeSoldSuites": metrics["cumulativeSoldSuites"],
+        "remainingSuites": result["unsignedSuites"],
+        "cumulativeSoldSuites": result["signedSuites"],
         "contractSignedSuites": result["contractSignedSuites"],
         "filedSuites": result["filedSuites"],
         "soldOutSuites": result.get("soldOutSuites", 0),
@@ -1992,15 +1882,14 @@ def write_snapshot(path: Path, results: list[dict[str, Any]], failures: list[dic
             failure_by_name[project_name]["oldValueRetained"] = True
     snapshot = {
         "generatedAt": generated_at,
-        "scope": "页面全部已匹配住建委项目 + 页面未覆盖的新开盘住宅补充项目；取证时间按住建委预售许可证发证日期；总套数/累计已售取自同一住建委住宅楼盘表范围，剩余套数=住宅总套数-累计已售。",
+        "scope": "页面全部已匹配住建委项目 + 页面未覆盖的新开盘住宅补充项目；取证时间按住建委预售许可证发证日期；总套数/剩余套数/累计已售取自住建委楼盘表房源状态。",
         "fields": {
             "projectName": "项目名称",
             "firstIssueDate": "首次取证时间",
             "latestIssueDate": "最新取证时间",
             "totalSuites": "住宅总套数",
-            "remainingSuites": "剩余套数（住宅总套数-累计已售）",
-            "availableSuites": "绿色可售套数（房源状态明细）",
-            "cumulativeSoldSuites": "累计已售（已签约+网上联机备案+整栋已售完）",
+            "remainingSuites": "剩余套数（绿色可售）",
+            "cumulativeSoldSuites": "累计已售（已签约+网上联机备案）",
             "screenshotInfo": "项目详情截图字段和证据链接信息",
         },
         "projects": [projects_by_name[name] for name in sorted(projects_by_name)],
@@ -2088,13 +1977,10 @@ def patch_dashboard_project(project: dict[str, Any], result: dict[str, Any]) -> 
     project["officialContractSignedSuites"] = result["contractSignedSuites"]
     project["officialFilingSuites"] = result["filedSuites"]
     project["officialSoldOutSuites"] = result.get("soldOutSuites", 0)
-    permit_gate = result.get("permitClosureGate") or {}
-    project["officialPermitClosureComplete"] = bool(permit_gate.get("canClose"))
-    project["officialMissingPermitBatches"] = permit_gate.get("missingPermits") or []
     project["officialSignedStatsSuites"] = result.get("signedStatsSuites")
     project["officialSignedStatsArea"] = result.get("signedStatsArea")
     project["officialSignedStatsAvgPrice"] = result.get("signedStatsAvgPrice")
-    project["officialSignedSuites"] = result["signedSuites"]
+    project["officialSignedSuites"] = result.get("signedStatsSuites") if result.get("signedStatsSuites") is not None else result["signedSuites"]
     project["officialDetailSignedSuites"] = result["signedSuites"]
     project["officialInventoryEvidenceUrl"] = "\n".join(result.get("urls") or [result["url"]])
     project["officialInventoryFetchedAt"] = result["fetchedAt"]
@@ -2149,7 +2035,6 @@ def update_data_json(text: str, results: list[dict[str, Any]]) -> str:
 
 
 def render_override_entry(result: dict[str, Any]) -> str:
-    permit_gate = result.get("permitClosureGate") or {}
     lines = [
         f'  "{result["dashboardName"]}": {{',
         f"    unsignedSuites: {result['unsignedSuites']},",
@@ -2158,8 +2043,6 @@ def render_override_entry(result: dict[str, Any]) -> str:
         f"    contractSignedSuites: {result['contractSignedSuites']},",
         f"    filedSuites: {result['filedSuites']},",
         f"    soldOutSuites: {result.get('soldOutSuites', 0)},",
-        f"    permitClosureComplete: {js_string(bool(permit_gate.get('canClose')))},",
-        f"    missingPermitBatches: {js_string(permit_gate.get('missingPermits') or [])},",
         f"    signedSuites: {result['signedSuites']},",
         f"    signedStatsSuites: {result.get('signedStatsSuites', 0)},",
         f"    signedStatsArea: {result.get('signedStatsArea', 0)},",
@@ -2174,7 +2057,6 @@ def render_override_entry(result: dict[str, Any]) -> str:
 def render_launch_override_entry(result: dict[str, Any]) -> str:
     summary_name = result.get("summaryRecordName") or result.get("officialProjectName") or result["dashboardName"]
     developer = result.get("developer") or result.get("summaryDeveloper") or ""
-    permit_gate = result.get("permitClosureGate") or {}
     lines = [
         f'  "{result["dashboardId"]}": {{',
         f"    summaryRecordName: {js_string(summary_name)},",
@@ -2190,8 +2072,6 @@ def render_launch_override_entry(result: dict[str, Any]) -> str:
         f"    officialContractSignedSuites: {result['contractSignedSuites']},",
         f"    officialFilingSuites: {result['filedSuites']},",
         f"    officialSoldOutSuites: {result.get('soldOutSuites', 0)},",
-        f"    officialPermitClosureComplete: {js_string(bool(permit_gate.get('canClose')))},",
-        f"    officialMissingPermitBatches: {js_string(permit_gate.get('missingPermits') or [])},",
         f"    officialInventoryEvidenceUrl: {js_string(chr(10).join(result.get('urls') or [result['url']]))},",
         f"    officialInventoryFetchedAt: {js_string(result['fetchedAt'])},",
         '    officialInventoryMatchStatus: "住建委楼盘表每日抓取",',

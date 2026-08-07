@@ -1220,9 +1220,6 @@ function buildOfficialNewLaunchProject(item, index) {
     officialBookedSuites: inventoryStatus.bookedSuites ?? null,
     officialContractSignedSuites: inventoryStatus.contractSignedSuites ?? null,
     officialFilingSuites: inventoryStatus.filedSuites ?? null,
-    officialSoldOutSuites: inventoryStatus.soldOutSuites ?? null,
-    officialPermitClosureComplete: inventoryStatus.permitClosureComplete ?? null,
-    officialMissingPermitBatches: inventoryStatus.missingPermitBatches ?? [],
     officialSignedStatsSuites: inventoryStatus.signedStatsSuites ?? null,
     officialSignedStatsArea: inventoryStatus.signedStatsArea ?? null,
     officialSignedStatsAvgPrice: inventoryStatus.signedStatsAvgPrice ?? null,
@@ -1506,76 +1503,24 @@ function officialInventoryValue(value, p) {
   const numeric = cleanCount(value);
   return isPendingOfficialInventory(p, numeric) ? null : numeric;
 }
-function projectKnownPresalePermits(p) {
-  const permits = new Set();
-  let activeYear = "";
-  const addPermitText = value => {
-    String(value || "").split(/[；;、/\n]+/).forEach(part => {
-      const token = part.trim().replace(/（/g, "(").replace(/）/g, ")");
-      const full = token.match(/京房售证字\((\d{4})\)(开?)(\d+)号/);
-      if (full) {
-        activeYear = full[1];
-        permits.add(`京房售证字(${activeYear})${full[2]}${full[3]}号`);
-        return;
-      }
-      const short = token.match(/^(开?)(\d+)号$/);
-      if (short && activeYear) permits.add(`京房售证字(${activeYear})${short[1]}${short[2]}号`);
-    });
-  };
-  addPermitText(p?.summaryPresalePermit);
-  (p?.presaleIssueRecords || []).forEach(record => {
-    if (record?.permit) addPermitText(record.permit);
-  });
-  return [...permits];
-}
-function projectOfficialPermitCoverage(p) {
-  const knownPermits = projectKnownPresalePermits(p);
-  const evidenceUrls = officialInventoryUrls(p);
-  const permitEvidenceUrls = evidenceUrls.filter(url => /[?&]pageId=320794(?:&|$)/.test(url));
-  const explicitMissing = Array.isArray(p?.officialMissingPermitBatches)
-    ? p.officialMissingPermitBatches.filter(Boolean)
-    : [];
-  const countGap = knownPermits.length > 0 && permitEvidenceUrls.length < knownPermits.length;
-  const registryUnknown = knownPermits.length === 0;
-  return {
-    complete: p?.officialPermitClosureComplete !== false && !explicitMissing.length && !countGap && !registryUnknown,
-    knownPermitCount: knownPermits.length,
-    evidencePageCount: permitEvidenceUrls.length,
-    missingPermits: explicitMissing,
-    reason: explicitMissing.length
-      ? `缺少预售证批次：${explicitMissing.join("、")}`
-      : (countGap
-        ? `已知${knownPermits.length}张预售证，当前仅覆盖${permitEvidenceUrls.length}个住建委预售证详情页`
-        : (registryUnknown ? "缺少独立的预售证清单，无法判断是否少证" : ""))
-  };
-}
 function projectOfficialSignedStatSuites(p) {
-  const total = projectOfficialDisplayTotal(p);
-  if (total === null) return null;
-  const soldOut = officialInventoryValue(p.officialSoldOutSuites, p) ?? 0;
-  const contractSigned = officialInventoryValue(p.officialContractSignedSuites, p);
-  const filing = officialInventoryValue(p.officialFilingSuites, p);
-  let sold = null;
-  if (contractSigned !== null && filing !== null) {
-    sold = contractSigned + filing + soldOut;
-  } else {
-    const detailSigned = officialInventoryValue(p.officialDetailSignedSuites, p);
-    if (detailSigned !== null) sold = detailSigned + soldOut;
-  }
-  if (sold === null || sold < 0 || sold > total) return null;
-  return sold;
+  const detailSigned = officialInventoryValue(p.officialDetailSignedSuites, p);
+  if (detailSigned !== null) return detailSigned;
+  const statsSigned = officialInventoryValue(p.officialSignedStatsSuites, p);
+  if (statsSigned !== null) return statsSigned;
+  return officialInventoryValue(p.officialSignedSuites, p);
 }
 function projectOfficialDisplayTotal(p) {
-  if (!projectOfficialPermitCoverage(p).complete) return null;
   const officialTotal = officialInventoryValue(p.officialResidentialTotal, p);
-  if (officialTotal !== null && officialTotal > 0) return officialTotal;
-  const approvedTotal = officialInventoryValue(p.approvedTotalSuites, p);
-  return approvedTotal !== null && approvedTotal > 0 ? approvedTotal : null;
+  if (officialTotal !== null) return officialTotal;
+  return officialInventoryValue(p.approvedTotalSuites, p);
 }
 function projectOfficialDisplayUnsigned(p) {
+  const unsigned = officialInventoryValue(p.officialUnsignedSuites, p);
+  if (unsigned !== null) return unsigned;
   const total = projectOfficialDisplayTotal(p);
   const sold = projectOfficialSignedStatSuites(p);
-  if (total !== null && sold !== null) return total - sold;
+  if (total !== null && sold !== null) return Math.max(total - sold, 0);
   return null;
 }
 function projectMapMetrics(p) {
@@ -3084,8 +3029,8 @@ function drawerTrendTableStyle(monthList) {
 function monthGroupHeaders(monthList=DATA.months) {
   return monthList.map(month => `<th class="month-head" colspan="4">${month}</th>`).join("");
 }
-const INVENTORY_TOTAL_SCOPE_NOTE = "总套数取住建委全部已知住宅预售证/楼盘表批准套数；每张证必须有预售证详情页并完成逐栋闭合，多张住宅预售证合并，车位、车库、库房、商办等非住宅不计入。证据页不齐时显示待核。";
-const INVENTORY_UNSIGNED_SCOPE_NOTE = "剩余套数=同一住建委住宅楼盘表范围内的住宅总套数-累计已售；累计已售含已签约、网上联机备案和整栋已售完。绿色可售、已预订及其他尚未计入累计已售的状态均包含在剩余套数内。";
+const INVENTORY_TOTAL_SCOPE_NOTE = "总套数优先取住建委预售证/楼盘表住宅批准套数；多张住宅预售证合并，车位、车库、库房、商办等非住宅不计入。";
+const INVENTORY_UNSIGNED_SCOPE_NOTE = "剩余套数优先取住建委楼盘表绿色可售住宅房源；无楼盘表复核时显示待核或缺失，不等同月度成交套数。";
 function tableSortButton(label, key, options={}) {
   const month = options.month || "";
   const metric = options.metric || "";
@@ -3104,19 +3049,17 @@ function trendColGroup(monthList=DATA.months) {
   return `<colgroup><col class="project-sticky"><col class="base-col"><col class="base-col"><col class="base-col"><col class="status-col"><col class="date-col"><col class="date-col"><col class="date-col"><col class="inventory-col"><col class="inventory-col">${monthCols}</colgroup>`;
 }
 function officialInventoryUrls(p) {
-  return [...new Set(String(p.officialInventoryEvidenceUrl || "").split(/\s+/).filter(value => /^https?:\/\//.test(value)))];
+  return String(p.officialInventoryEvidenceUrl || "").split(/\s+/).filter(value => /^https?:\/\//.test(value));
 }
 function officialInventoryPrimaryUrl(p) {
   return officialInventoryUrls(p)[0] || "";
 }
 function officialInventoryPendingText(p, label) {
   const hasOfficialEvidence = Boolean(p?.officialInventoryEvidenceUrl);
-  const text = p?.source === "recentLaunch" ? "待补" : "待核";
+  const text = p?.source === "recentLaunch" ? "待补" : (p?.source === "zjwNewLaunch" || p?.isNewFromJuneCric || hasOfficialEvidence ? "待核" : "-");
   const url = officialInventoryPrimaryUrl(p);
   if (!url) return text;
-  const permitCoverage = projectOfficialPermitCoverage(p);
-  const reason = permitCoverage.complete ? "待补充官方库存数" : permitCoverage.reason;
-  const title = `打开住建委页面：${p.officialProjectName || p.summaryRecordName || p.project} ${label}待核；${reason}`;
+  const title = `打开住建委页面：${p.officialProjectName || p.summaryRecordName || p.project} ${label}待补；待补充官方库存数`;
   return `<a class="official-inventory-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" title="${escapeHtml(title)}">${text}</a>`;
 }
 function officialInventoryLink(p, value, label) {
@@ -3127,10 +3070,7 @@ function officialInventoryLink(p, value, label) {
   if (!url) return text;
   const sourceCount = officialInventoryUrls(p).length;
   const multiUrlNote = sourceCount > 1 ? `；该项目合并${sourceCount}个住建委页面，点击打开第一张证` : "";
-  const scopeNote = label === "剩余套数"
-    ? INVENTORY_UNSIGNED_SCOPE_NOTE
-    : (label === "累计已售" ? officialCumulativeSoldNote(p) : p.officialInventoryTotalAuditNote);
-  const note = scopeNote ? `；${scopeNote}` : "；打开住建委项目详情页，查看项目公示和销售统计信息";
+  const note = p.officialInventoryTotalAuditNote ? `；${p.officialInventoryTotalAuditNote}` : "；打开住建委项目详情页，查看项目公示和销售统计信息";
   const title = `打开住建委页面：${p.officialProjectName || p.summaryRecordName || p.project} ${label}${multiUrlNote}${note}`;
   return `<a class="official-inventory-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" title="${escapeHtml(title)}">${text}</a>`;
 }
@@ -3138,13 +3078,21 @@ function officialCumulativeSoldSuites(p) {
   return projectOfficialSignedStatSuites(p);
 }
 function officialCumulativeSoldNote(p) {
+  const statsSigned = officialInventoryValue(p.officialSignedStatsSuites, p);
+  if (statsSigned !== null) {
+    const area = cleanCount(p.officialSignedStatsArea);
+    const price = cleanCount(p.officialSignedStatsAvgPrice);
+    const parts = [`住建委期房签约统计：住宅已签约 ${fmt.format(statsSigned)} 套`];
+    if (area !== null) parts.push(`已签约面积 ${fmt1.format(area)} ㎡`);
+    if (price !== null) parts.push(`成交均价 ${fmt.format(price)} 元/㎡`);
+    return `${parts.join("，")}。`;
+  }
   const contractSigned = officialInventoryValue(p.officialContractSignedSuites, p);
   const filing = officialInventoryValue(p.officialFilingSuites, p);
-  const soldOut = officialInventoryValue(p.officialSoldOutSuites, p) ?? 0;
   if (contractSigned !== null && filing !== null) {
-    return `住建委楼盘表累计已售 = 已签约 ${fmt.format(contractSigned)} 套 + 网上联机备案 ${fmt.format(filing)} 套 + 整栋已售完 ${fmt.format(soldOut)} 套；不含已预订、资格核验中和绿色可售房源。`;
+    return `住建委楼盘表累计已售 = 已签约 ${fmt.format(contractSigned)} 套 + 网上联机备案 ${fmt.format(filing)} 套；不含已预订、资格核验中和绿色可售房源。`;
   }
-  return "住建委楼盘表累计已售按同一住宅范围的已签约、网上联机备案和整栋已售完状态汇总；不含已预订、资格核验中和绿色可售房源。";
+  return "住建委楼盘表累计已售按已签约/网上联机备案房源状态汇总；不含已预订、资格核验中和绿色可售房源。";
 }
 function projectCumulativeSummary(p) {
   const transactionSuites = cleanCount(p.suitesAll) || 0;
