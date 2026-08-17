@@ -1,0 +1,1731 @@
+{
+  "source": "/Users/verachen/Downloads/项目成交明细.xlsx",
+  "stats": {
+    "sheet": "Sheet1",
+    "rawRows": 25119,
+    "usedRows": 18936,
+    "historicalUsedRows": 25119,
+    "skippedBeforeJuly2025": 6183,
+    "excludedRows": 0,
+    "duplicateMd5Rows": 0,
+    "months": [
+      "25年7月",
+      "25年8月",
+      "25年9月",
+      "25年10月",
+      "25年11月",
+      "25年12月",
+      "26年1月",
+      "26年2月",
+      "26年3月",
+      "26年4月",
+      "26年5月",
+      "26年6月",
+      "26年7月",
+      "26年8月"
+    ],
+    "mappedProjects": 75,
+    "sourceProjects": {
+      "云溪花园小区": [
+        "万科弗农小镇"
+      ],
+      "万象茗筑": [
+        "万象茗筑"
+      ],
+      "中建运河九院": [
+        "中建·运河玖院"
+      ],
+      "北京国贤府二期": [
+        "中建北京国贤府贰期"
+      ],
+      "中建和颂九里": [
+        "中建和颂九里"
+      ],
+      "中建花乡一号中建一品花香一号": [
+        "中建壹品·花香壹号"
+      ],
+      "宝山0016地块海宸元境": [
+        "中建壹品海宸元境"
+      ],
+      "璞园park": [
+        "中建璞园PARK"
+      ],
+      "中海丽泽三号院": [
+        "中海·丽泽叁號院"
+      ],
+      "中海九树满和": [
+        "中海·九树满和"
+      ],
+      "中海万吉九序": [
+        "中海·萬吉玖序"
+      ],
+      "翠湖九章": [
+        "中海中旅·西山观复"
+      ],
+      "中海丽金府": [
+        "中海丽金府"
+      ],
+      "中海未来之境": [
+        "中海未来之境"
+      ],
+      "玉章苑": [
+        "中海玉華玖章"
+      ],
+      "西黄村地块中海瑞文里": [
+        "中海瑞文里"
+      ],
+      "中海长安源境": [
+        "中海长安源境"
+      ],
+      "熙区嘉园": [
+        "京投发展·北熙区"
+      ],
+      "京能西贤府": [
+        "京能·西贤府"
+      ],
+      "住总清樾府": [
+        "住总·清樾府"
+      ],
+      "住总芳华里": [
+        "住总·芳华里"
+      ],
+      "嘉华天珺": [
+        "保利建工·嘉华天珺"
+      ],
+      "星宸和煦": [
+        "保利建工·星宸和煦"
+      ],
+      "保利朝观天珺": [
+        "保利朝观天珺"
+      ],
+      "城建国誉颂": [
+        "北京城建·国誉颂"
+      ],
+      "国誉燕园朗润": [
+        "北京城建国誉燕园"
+      ],
+      "北京宸园": [
+        "北京宸园"
+      ],
+      "御林湾苑": [
+        "北京御林湾"
+      ],
+      "北京润府": [
+        "北京润府"
+      ],
+      "北京隅东序": [
+        "北京隅·东序"
+      ],
+      "北京隅西颂": [
+        "北京隅·西颂"
+      ],
+      "宝山0017地块北京隅海岄": [
+        "北京隅海岄"
+      ],
+      "北投栖云湾": [
+        "北投·云帆汀澜"
+      ],
+      "华润北美乡间北京润园": [
+        "华润北京润园"
+      ],
+      "华润臻云": [
+        "华润臻澐"
+      ],
+      "和樾望云": [
+        "和樾望雲"
+      ],
+      "和樾玉鸣": [
+        "和樾玉鳴"
+      ],
+      "嘉棠璟樾": [
+        "嘉棠璟樾"
+      ],
+      "嘉棠雅序": [
+        "嘉棠雅序"
+      ],
+      "国樾天颂府": [
+        "国樾天颂"
+      ],
+      "国誉星城、誉淙家园": [
+        "国誉星城"
+      ],
+      "国贤府park": [
+        "国贤府PARK"
+      ],
+      "颐知筑": [
+        "城建颐知筑"
+      ],
+      "御璟星城元启": [
+        "壹品兴创·御璟星城·元启"
+      ],
+      "一兴雅苑": [
+        "壹品兴创·颐和公馆"
+      ],
+      "大兴西片区0003等地块大兴发展梧桐府": [
+        "大兴发展·梧桐府"
+      ],
+      "中海安澜北京": [
+        "安澜北京"
+      ],
+      "建发海晏": [
+        "建发海晏"
+      ],
+      "建发金茂观宸": [
+        "建发金茂·观宸"
+      ],
+      "槐新02地块建发金茂观宸二期": [
+        "建发金茂·观宸二期"
+      ],
+      "懋源薛大人庄懋源骊橒台": [
+        "懋源·骊橒臺"
+      ],
+      "懋源云纪": [
+        "懋源云纪"
+      ],
+      "招商云璟揽阅": [
+        "招商·云璟揽阅"
+      ],
+      "招商序": [
+        "招商序"
+      ],
+      "招商朝棠揽阅": [
+        "招商朝棠揽阅"
+      ],
+      "中建方程国贤府": [
+        "方程国贤府"
+      ],
+      "星悦时光": [
+        "星悦时光"
+      ],
+      "越秀星耀未来": [
+        "星耀未来"
+      ],
+      "未来城星寰时代": [
+        "未来城·星寰时代"
+      ],
+      "颐海云颂": [
+        "海开颐海澐颂"
+      ],
+      "黄衫木店璞樾": [
+        "璞樾"
+      ],
+      "璟贤瑞庭": [
+        "璟贤瑞庭"
+      ],
+      "黄衫木店紫京宸园": [
+        "紫京宸园"
+      ],
+      "中国铁建花语璟云": [
+        "花语璟云"
+      ],
+      "金茂满曜": [
+        "金茂满曜"
+      ],
+      "金隅花溪云锦": [
+        "金隅·花溪云锦"
+      ],
+      "长安华曦府": [
+        "长安华曦府"
+      ],
+      "长河花园": [
+        "长河玉墅一期"
+      ],
+      "青云国樾": [
+        "青雲国樾"
+      ],
+      "首钢璟悦长安": [
+        "首钢璟悦长安"
+      ],
+      "璟瑞家园": [
+        "首钢璟瑞长安"
+      ],
+      "龍樾海序": [
+        "龍樾海序"
+      ],
+      "龙湖观萃": [
+        "龙湖·观萃"
+      ],
+      "龙湖宸翰": [
+        "龙湖宸翰"
+      ],
+      "龙湖恩祥凌云颂": [
+        "龙湖恩祥凌雲颂"
+      ]
+    },
+    "historicalMetrics": {
+      "云溪花园小区": {
+        "suites": 93,
+        "area": 17569.49,
+        "amountWan": 34137.6407,
+        "firstDate": "2025/01/14",
+        "lastDate": "2026/07/24",
+        "mappedName": "云溪花园小区"
+      },
+      "万象茗筑": {
+        "suites": 45,
+        "area": 4251.41,
+        "amountWan": 20941.0246,
+        "firstDate": "2026/06/07",
+        "lastDate": "2026/08/04",
+        "mappedName": "万象茗筑"
+      },
+      "中建运河九院": {
+        "suites": 1377,
+        "area": 184249.71,
+        "amountWan": 1147343.5863,
+        "firstDate": "2025/09/20",
+        "lastDate": "2026/08/01",
+        "mappedName": "中建运河玖院"
+      },
+      "北京国贤府二期": {
+        "suites": 695,
+        "area": 73860.97,
+        "amountWan": 383913.3997,
+        "firstDate": "2025/05/01",
+        "lastDate": "2026/08/08",
+        "mappedName": "北京国贤府贰期"
+      },
+      "中建和颂九里": {
+        "suites": 198,
+        "area": 23271.76,
+        "amountWan": 138043.3444,
+        "firstDate": "2025/01/08",
+        "lastDate": "2026/07/31",
+        "mappedName": "中建和颂九里"
+      },
+      "中建花乡一号中建一品花香一号": {
+        "suites": 389,
+        "area": 40192.11,
+        "amountWan": 212870.9775,
+        "firstDate": "2025/01/01",
+        "lastDate": "2026/08/06",
+        "mappedName": "中建花鄕壹号 中建壹品花香壹号"
+      },
+      "宝山0016地块海宸元境": {
+        "suites": 287,
+        "area": 33347.79,
+        "amountWan": 278224.7855,
+        "firstDate": "2025/12/12",
+        "lastDate": "2026/07/31",
+        "mappedName": "宝山0016地块 海宸元境"
+      },
+      "璞园park": {
+        "suites": 291,
+        "area": 45396.39,
+        "amountWan": 331381.4598,
+        "firstDate": "2025/01/01",
+        "lastDate": "2026/06/25",
+        "mappedName": "璞园PARK"
+      },
+      "中海丽泽三号院": {
+        "suites": 242,
+        "area": 28289.69,
+        "amountWan": 252023.3611,
+        "firstDate": "2025/06/09",
+        "lastDate": "2026/07/29",
+        "mappedName": "中海丽泽叁號院"
+      },
+      "中海九树满和": {
+        "suites": 574,
+        "area": 53628.21,
+        "amountWan": 272809.1893,
+        "firstDate": "2026/03/27",
+        "lastDate": "2026/08/02",
+        "mappedName": "中海玖樹满和"
+      },
+      "中海万吉九序": {
+        "suites": 294,
+        "area": 61548.56,
+        "amountWan": 690231.0582,
+        "firstDate": "2025/06/01",
+        "lastDate": "2026/07/31",
+        "mappedName": "中海萬吉玖序"
+      },
+      "翠湖九章": {
+        "suites": 67,
+        "area": 9831.52,
+        "amountWan": 70144.8783,
+        "firstDate": "2025/01/16",
+        "lastDate": "2026/07/23",
+        "mappedName": "翠湖玖章"
+      },
+      "中海丽金府": {
+        "suites": 275,
+        "area": 42669.51,
+        "amountWan": 442312.0029,
+        "firstDate": "2025/05/13",
+        "lastDate": "2026/07/29",
+        "mappedName": "中海丽金府"
+      },
+      "中海未来之境": {
+        "suites": 215,
+        "area": 24025.51,
+        "amountWan": 142330.0128,
+        "firstDate": "2025/07/31",
+        "lastDate": "2026/08/01",
+        "mappedName": "中海未来之境"
+      },
+      "玉章苑": {
+        "suites": 62,
+        "area": 11141.27,
+        "amountWan": 80223.7373,
+        "firstDate": "2025/10/21",
+        "lastDate": "2026/07/30",
+        "mappedName": "玉章苑"
+      },
+      "西黄村地块中海瑞文里": {
+        "suites": 602,
+        "area": 63746.98,
+        "amountWan": 395593.6629,
+        "firstDate": "2025/09/27",
+        "lastDate": "2026/08/02",
+        "mappedName": "西黄村地块 中海瑞文里"
+      },
+      "中海长安源境": {
+        "suites": 232,
+        "area": 28025.3,
+        "amountWan": 160090.8533,
+        "firstDate": "2025/01/01",
+        "lastDate": "2026/08/07",
+        "mappedName": "中海长安源境"
+      },
+      "熙区嘉园": {
+        "suites": 23,
+        "area": 2435.04,
+        "amountWan": 18521.9117,
+        "firstDate": "2025/01/01",
+        "lastDate": "2026/08/02",
+        "mappedName": "熙区嘉园"
+      },
+      "京能西贤府": {
+        "suites": 40,
+        "area": 5686.27,
+        "amountWan": 38866.0679,
+        "firstDate": "2025/01/07",
+        "lastDate": "2026/07/15",
+        "mappedName": "京能西贤府"
+      },
+      "住总清樾府": {
+        "suites": 280,
+        "area": 26236.36,
+        "amountWan": 111323.9999,
+        "firstDate": "2025/01/15",
+        "lastDate": "2026/08/05",
+        "mappedName": "住总清樾府"
+      },
+      "住总芳华里": {
+        "suites": 306,
+        "area": 28448.68,
+        "amountWan": 111555.3772,
+        "firstDate": "2025/01/09",
+        "lastDate": "2026/07/16",
+        "mappedName": "住总芳华里"
+      },
+      "嘉华天珺": {
+        "suites": 378,
+        "area": 39717.63,
+        "amountWan": 323583.9518,
+        "firstDate": "2025/01/21",
+        "lastDate": "2026/07/31",
+        "mappedName": "嘉华天珺"
+      },
+      "星宸和煦": {
+        "suites": 25,
+        "area": 3299.93,
+        "amountWan": 19678.6006,
+        "firstDate": "2025/01/04",
+        "lastDate": "2025/12/09",
+        "mappedName": "星宸和煦"
+      },
+      "保利朝观天珺": {
+        "suites": 290,
+        "area": 38562.73,
+        "amountWan": 308440.2913,
+        "firstDate": "2025/06/13",
+        "lastDate": "2026/08/02",
+        "mappedName": "保利朝观天珺"
+      },
+      "城建国誉颂": {
+        "suites": 380,
+        "area": 41823.19,
+        "amountWan": 176748.4361,
+        "firstDate": "2025/04/09",
+        "lastDate": "2026/08/01",
+        "mappedName": "城建国誉颂"
+      },
+      "国誉燕园朗润": {
+        "suites": 202,
+        "area": 19069.71,
+        "amountWan": 59108.458,
+        "firstDate": "2025/02/11",
+        "lastDate": "2026/07/28",
+        "mappedName": "国誉燕园朗润"
+      },
+      "北京宸园": {
+        "suites": 332,
+        "area": 54629.18,
+        "amountWan": 598708.2607,
+        "firstDate": "2025/01/06",
+        "lastDate": "2026/06/18",
+        "mappedName": "北京宸园"
+      },
+      "御林湾苑": {
+        "suites": 41,
+        "area": 5916.62,
+        "amountWan": 35077.281,
+        "firstDate": "2026/03/30",
+        "lastDate": "2026/08/01",
+        "mappedName": "御林湾苑"
+      },
+      "北京润府": {
+        "suites": 797,
+        "area": 93806.9,
+        "amountWan": 533796.5322,
+        "firstDate": "2025/01/03",
+        "lastDate": "2026/08/09",
+        "mappedName": "北京润府"
+      },
+      "北京隅东序": {
+        "suites": 210,
+        "area": 28755.77,
+        "amountWan": 217556.4967,
+        "firstDate": "2025/01/04",
+        "lastDate": "2026/07/25",
+        "mappedName": "北京隅东序"
+      },
+      "北京隅西颂": {
+        "suites": 217,
+        "area": 25748.45,
+        "amountWan": 196872.5645,
+        "firstDate": "2025/05/13",
+        "lastDate": "2026/07/31",
+        "mappedName": "北京隅西颂"
+      },
+      "宝山0017地块北京隅海岄": {
+        "suites": 248,
+        "area": 31606.69,
+        "amountWan": 269694.2823,
+        "firstDate": "2025/12/06",
+        "lastDate": "2026/08/02",
+        "mappedName": "宝山0017地块 北京隅海岄"
+      },
+      "北投栖云湾": {
+        "suites": 169,
+        "area": 16643.85,
+        "amountWan": 60521.6972,
+        "firstDate": "2026/03/29",
+        "lastDate": "2026/08/09",
+        "mappedName": "北投栖澐湾"
+      },
+      "华润北美乡间北京润园": {
+        "suites": 345,
+        "area": 114303.65,
+        "amountWan": 825941.3784,
+        "firstDate": "2025/12/03",
+        "lastDate": "2026/07/29",
+        "mappedName": "华润北美乡间 北京润园"
+      },
+      "华润臻云": {
+        "suites": 239,
+        "area": 43455.78,
+        "amountWan": 530728.0997,
+        "firstDate": "2025/07/11",
+        "lastDate": "2026/07/28",
+        "mappedName": "华润臻澐"
+      },
+      "和樾望云": {
+        "suites": 700,
+        "area": 92238.35,
+        "amountWan": 969127.7904,
+        "firstDate": "2025/03/21",
+        "lastDate": "2026/07/25",
+        "mappedName": "和樾望雲"
+      },
+      "和樾玉鸣": {
+        "suites": 422,
+        "area": 67385.78,
+        "amountWan": 703351.2074,
+        "firstDate": "2025/04/01",
+        "lastDate": "2026/07/30",
+        "mappedName": "和樾玉鸣"
+      },
+      "嘉棠璟樾": {
+        "suites": 247,
+        "area": 30233.52,
+        "amountWan": 235929.5668,
+        "firstDate": "2026/03/25",
+        "lastDate": "2026/08/01",
+        "mappedName": "嘉棠璟樾"
+      },
+      "嘉棠雅序": {
+        "suites": 253,
+        "area": 27526.63,
+        "amountWan": 191181.3559,
+        "firstDate": "2026/06/28",
+        "lastDate": "2026/08/09",
+        "mappedName": "嘉棠雅序"
+      },
+      "国樾天颂府": {
+        "suites": 20,
+        "area": 1888.1,
+        "amountWan": 4483.4714,
+        "firstDate": "2026/07/09",
+        "lastDate": "2026/08/01",
+        "mappedName": "国樾天颂府"
+      },
+      "国誉星城、誉淙家园": {
+        "suites": 308,
+        "area": 29305.48,
+        "amountWan": 151266.1175,
+        "firstDate": "2025/10/30",
+        "lastDate": "2026/08/09",
+        "mappedName": "国誉星城、誉淙家园"
+      },
+      "国贤府park": {
+        "suites": 572,
+        "area": 60240.8,
+        "amountWan": 335295.9297,
+        "firstDate": "2026/04/01",
+        "lastDate": "2026/08/09",
+        "mappedName": "国贤府PARK"
+      },
+      "颐知筑": {
+        "suites": 143,
+        "area": 14603.96,
+        "amountWan": 43946.1682,
+        "firstDate": "2025/05/01",
+        "lastDate": "2026/08/01",
+        "mappedName": "颐知筑"
+      },
+      "御璟星城元启": {
+        "suites": 610,
+        "area": 63362.14,
+        "amountWan": 326258.4671,
+        "firstDate": "2025/08/06",
+        "lastDate": "2026/07/30",
+        "mappedName": "御璟星城元启"
+      },
+      "一兴雅苑": {
+        "suites": 433,
+        "area": 48170.99,
+        "amountWan": 213399.2918,
+        "firstDate": "2025/01/03",
+        "lastDate": "2026/07/31",
+        "mappedName": "壹兴雅苑"
+      },
+      "大兴西片区0003等地块大兴发展梧桐府": {
+        "suites": 45,
+        "area": 8295.55,
+        "amountWan": 33770.9233,
+        "firstDate": "2025/07/27",
+        "lastDate": "2026/07/05",
+        "mappedName": "大兴西片区0003等地块 大兴发展梧桐府"
+      },
+      "中海安澜北京": {
+        "suites": 85,
+        "area": 21210.43,
+        "amountWan": 309705.34,
+        "firstDate": "2026/02/11",
+        "lastDate": "2026/07/31",
+        "mappedName": "中海安澜北京"
+      },
+      "建发海晏": {
+        "suites": 360,
+        "area": 78256.81,
+        "amountWan": 1056194.5872,
+        "firstDate": "2025/06/16",
+        "lastDate": "2026/06/30",
+        "mappedName": "建发海晏"
+      },
+      "建发金茂观宸": {
+        "suites": 420,
+        "area": 52813.85,
+        "amountWan": 414312.7115,
+        "firstDate": "2025/03/31",
+        "lastDate": "2026/06/26",
+        "mappedName": "建发金茂观宸"
+      },
+      "槐新02地块建发金茂观宸二期": {
+        "suites": 184,
+        "area": 22926.6,
+        "amountWan": 171787.5554,
+        "firstDate": "2025/10/13",
+        "lastDate": "2026/07/14",
+        "mappedName": "槐新02地块 建发金茂观宸二期"
+      },
+      "懋源薛大人庄懋源骊橒台": {
+        "suites": 95,
+        "area": 17676.62,
+        "amountWan": 133683.6681,
+        "firstDate": "2026/01/10",
+        "lastDate": "2026/08/02",
+        "mappedName": "懋源薛大人庄 懋源骊橒臺"
+      },
+      "懋源云纪": {
+        "suites": 110,
+        "area": 31336,
+        "amountWan": 189039.9014,
+        "firstDate": "2025/07/12",
+        "lastDate": "2026/08/02",
+        "mappedName": "懋源云纪"
+      },
+      "招商云璟揽阅": {
+        "suites": 376,
+        "area": 35788.67,
+        "amountWan": 197019.5261,
+        "firstDate": "2025/03/17",
+        "lastDate": "2026/07/30",
+        "mappedName": "招商云璟揽阅"
+      },
+      "招商序": {
+        "suites": 376,
+        "area": 41249.12,
+        "amountWan": 280438.3458,
+        "firstDate": "2025/06/07",
+        "lastDate": "2026/08/01",
+        "mappedName": "招商序"
+      },
+      "招商朝棠揽阅": {
+        "suites": 928,
+        "area": 87057.74,
+        "amountWan": 489035.1458,
+        "firstDate": "2025/07/25",
+        "lastDate": "2026/08/02",
+        "mappedName": "招商朝棠揽阅"
+      },
+      "中建方程国贤府": {
+        "suites": 502,
+        "area": 47080.16,
+        "amountWan": 213866.4023,
+        "firstDate": "2026/04/15",
+        "lastDate": "2026/07/30",
+        "mappedName": "中建方程国贤府"
+      },
+      "星悦时光": {
+        "suites": 629,
+        "area": 54145.71,
+        "amountWan": 184798.0924,
+        "firstDate": "2025/01/03",
+        "lastDate": "2026/08/09",
+        "mappedName": "星悦时光"
+      },
+      "越秀星耀未来": {
+        "suites": 329,
+        "area": 33194.37,
+        "amountWan": 172259.7506,
+        "firstDate": "2025/04/08",
+        "lastDate": "2026/08/02",
+        "mappedName": "越秀星耀未来"
+      },
+      "未来城星寰时代": {
+        "suites": 344,
+        "area": 32226.95,
+        "amountWan": 166300.6924,
+        "firstDate": "2026/04/01",
+        "lastDate": "2026/08/09",
+        "mappedName": "未来城星寰时代"
+      },
+      "颐海云颂": {
+        "suites": 630,
+        "area": 81639.88,
+        "amountWan": 737356.2443,
+        "firstDate": "2025/03/21",
+        "lastDate": "2026/07/30",
+        "mappedName": "颐海澐颂"
+      },
+      "黄衫木店璞樾": {
+        "suites": 294,
+        "area": 51358.06,
+        "amountWan": 513229.1587,
+        "firstDate": "2025/10/20",
+        "lastDate": "2026/07/31",
+        "mappedName": "黄衫木店（璞樾）"
+      },
+      "璟贤瑞庭": {
+        "suites": 515,
+        "area": 54824.54,
+        "amountWan": 174507.3803,
+        "firstDate": "2025/01/01",
+        "lastDate": "2026/08/04",
+        "mappedName": "璟贤瑞庭"
+      },
+      "黄衫木店紫京宸园": {
+        "suites": 350,
+        "area": 57229.55,
+        "amountWan": 557120.8986,
+        "firstDate": "2025/10/17",
+        "lastDate": "2026/08/02",
+        "mappedName": "黄衫木店（紫京宸园）"
+      },
+      "中国铁建花语璟云": {
+        "suites": 137,
+        "area": 14262.58,
+        "amountWan": 73941.9809,
+        "firstDate": "2025/08/25",
+        "lastDate": "2026/08/02",
+        "mappedName": "中国铁建花语璟云"
+      },
+      "金茂满曜": {
+        "suites": 601,
+        "area": 76415.4,
+        "amountWan": 569686.8623,
+        "firstDate": "2025/06/20",
+        "lastDate": "2026/08/01",
+        "mappedName": "金茂满曜"
+      },
+      "金隅花溪云锦": {
+        "suites": 354,
+        "area": 43953.49,
+        "amountWan": 226621.6361,
+        "firstDate": "2025/05/27",
+        "lastDate": "2026/07/31",
+        "mappedName": "金隅花溪云锦"
+      },
+      "长安华曦府": {
+        "suites": 581,
+        "area": 60934.79,
+        "amountWan": 275603.8297,
+        "firstDate": "2025/01/04",
+        "lastDate": "2026/07/31",
+        "mappedName": "长安华曦府"
+      },
+      "长河花园": {
+        "suites": 46,
+        "area": 23722.04,
+        "amountWan": 71312.4532,
+        "firstDate": "2025/04/03",
+        "lastDate": "2026/04/08",
+        "mappedName": "长河花园"
+      },
+      "青云国樾": {
+        "suites": 114,
+        "area": 11583.82,
+        "amountWan": 62989.1703,
+        "firstDate": "2026/06/30",
+        "lastDate": "2026/07/31",
+        "mappedName": "青雲国樾"
+      },
+      "首钢璟悦长安": {
+        "suites": 349,
+        "area": 36091.08,
+        "amountWan": 217476.2445,
+        "firstDate": "2025/07/12",
+        "lastDate": "2026/08/01",
+        "mappedName": "首钢璟悦长安"
+      },
+      "璟瑞家园": {
+        "suites": 232,
+        "area": 22894.69,
+        "amountWan": 139908.5215,
+        "firstDate": "2026/04/28",
+        "lastDate": "2026/07/31",
+        "mappedName": "璟瑞家园"
+      },
+      "龍樾海序": {
+        "suites": 748,
+        "area": 71338.53,
+        "amountWan": 386596.5084,
+        "firstDate": "2026/05/23",
+        "lastDate": "2026/08/02",
+        "mappedName": "龍樾海序"
+      },
+      "龙湖观萃": {
+        "suites": 671,
+        "area": 69526.67,
+        "amountWan": 367059.5118,
+        "firstDate": "2025/01/01",
+        "lastDate": "2026/07/27",
+        "mappedName": "龙湖观萃"
+      },
+      "龙湖宸翰": {
+        "suites": 413,
+        "area": 49003.32,
+        "amountWan": 197982.2421,
+        "firstDate": "2025/10/15",
+        "lastDate": "2026/07/31",
+        "mappedName": "龙湖宸翰"
+      },
+      "龙湖恩祥凌云颂": {
+        "suites": 133,
+        "area": 11877.16,
+        "amountWan": 47177.7307,
+        "firstDate": "2025/12/19",
+        "lastDate": "2026/08/02",
+        "mappedName": "龙湖恩祥凌雲颂"
+      }
+    },
+    "historicalDateRange": [
+      "2025/01/01",
+      "2026/08/09"
+    ]
+  },
+  "matchedMappedProjects": 75,
+  "matchedRows": 18936,
+  "matchedHistoricalRows": 25119,
+  "promotedOfficialProjects": [],
+  "unmatched": [],
+  "ambiguous": [],
+  "replacementMonths": [
+    "25年7月",
+    "25年8月",
+    "25年9月",
+    "25年10月",
+    "25年11月",
+    "25年12月",
+    "26年1月",
+    "26年2月",
+    "26年3月",
+    "26年4月",
+    "26年5月",
+    "26年6月",
+    "26年7月",
+    "26年8月"
+  ],
+  "monthTotals": [
+    {
+      "month": "25年7月",
+      "rows": 1074,
+      "projects": 42
+    },
+    {
+      "month": "25年8月",
+      "rows": 1160,
+      "projects": 45
+    },
+    {
+      "month": "25年9月",
+      "rows": 1529,
+      "projects": 47
+    },
+    {
+      "month": "25年10月",
+      "rows": 1284,
+      "projects": 53
+    },
+    {
+      "month": "25年11月",
+      "rows": 989,
+      "projects": 52
+    },
+    {
+      "month": "25年12月",
+      "rows": 1294,
+      "projects": 58
+    },
+    {
+      "month": "26年1月",
+      "rows": 888,
+      "projects": 55
+    },
+    {
+      "month": "26年2月",
+      "rows": 440,
+      "projects": 53
+    },
+    {
+      "month": "26年3月",
+      "rows": 1833,
+      "projects": 61
+    },
+    {
+      "month": "26年4月",
+      "rows": 2582,
+      "projects": 67
+    },
+    {
+      "month": "26年5月",
+      "rows": 2234,
+      "projects": 65
+    },
+    {
+      "month": "26年6月",
+      "rows": 2059,
+      "projects": 69
+    },
+    {
+      "month": "26年7月",
+      "rows": 1451,
+      "projects": 69
+    },
+    {
+      "month": "26年8月",
+      "rows": 119,
+      "projects": 36
+    }
+  ],
+  "closureIssues": [],
+  "remainingSuitesAudit": {
+    "projects": 79,
+    "closedProjects": 73,
+    "issues": [
+      {
+        "project": "和樾望雲",
+        "plannedHouseholds": 693,
+        "historicalSoldSuites": 700,
+        "calculatedRemainingSuites": null,
+        "status": "累计成交超过规划总户数",
+        "historyStartDate": "2025/03/21",
+        "historyEndDate": "2026/07/25"
+      },
+      {
+        "project": "招商云璟揽阅",
+        "plannedHouseholds": 367,
+        "historicalSoldSuites": 376,
+        "calculatedRemainingSuites": null,
+        "status": "累计成交超过规划总户数",
+        "historyStartDate": "2025/03/17",
+        "historyEndDate": "2026/07/30"
+      },
+      {
+        "project": "西红门6030地块",
+        "plannedHouseholds": null,
+        "historicalSoldSuites": null,
+        "calculatedRemainingSuites": null,
+        "status": "历史明细未匹配",
+        "historyStartDate": "",
+        "historyEndDate": ""
+      },
+      {
+        "project": "大兴经济开发区DX00-0302-0021、0022地块",
+        "plannedHouseholds": null,
+        "historicalSoldSuites": null,
+        "calculatedRemainingSuites": null,
+        "status": "历史明细未匹配",
+        "historyStartDate": "",
+        "historyEndDate": ""
+      },
+      {
+        "project": "房山区长阳镇FS00-0101-0002、0003地块",
+        "plannedHouseholds": null,
+        "historicalSoldSuites": null,
+        "calculatedRemainingSuites": null,
+        "status": "历史明细未匹配",
+        "historyStartDate": "",
+        "historyEndDate": ""
+      },
+      {
+        "project": "半壁店地块 保利熙瑞",
+        "plannedHouseholds": null,
+        "historicalSoldSuites": null,
+        "calculatedRemainingSuites": null,
+        "status": "历史明细未匹配",
+        "historyStartDate": "",
+        "historyEndDate": ""
+      }
+    ],
+    "rows": [
+      {
+        "project": "翠湖玖章",
+        "plannedHouseholds": 322,
+        "historicalSoldSuites": 67,
+        "calculatedRemainingSuites": 255,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/16",
+        "historyEndDate": "2026/07/23"
+      },
+      {
+        "project": "住总清樾府",
+        "plannedHouseholds": 1392,
+        "historicalSoldSuites": 280,
+        "calculatedRemainingSuites": 1112,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/15",
+        "historyEndDate": "2026/08/05"
+      },
+      {
+        "project": "龙湖观萃",
+        "plannedHouseholds": 857,
+        "historicalSoldSuites": 671,
+        "calculatedRemainingSuites": 186,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/01",
+        "historyEndDate": "2026/07/27"
+      },
+      {
+        "project": "颐海澐颂",
+        "plannedHouseholds": 752,
+        "historicalSoldSuites": 630,
+        "calculatedRemainingSuites": 122,
+        "status": "已闭合",
+        "historyStartDate": "2025/03/21",
+        "historyEndDate": "2026/07/30"
+      },
+      {
+        "project": "国誉燕园朗润",
+        "plannedHouseholds": 1788,
+        "historicalSoldSuites": 202,
+        "calculatedRemainingSuites": 1586,
+        "status": "已闭合",
+        "historyStartDate": "2025/02/11",
+        "historyEndDate": "2026/07/28"
+      },
+      {
+        "project": "嘉华天珺",
+        "plannedHouseholds": 1276,
+        "historicalSoldSuites": 378,
+        "calculatedRemainingSuites": 898,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/21",
+        "historyEndDate": "2026/07/31"
+      },
+      {
+        "project": "越秀星耀未来",
+        "plannedHouseholds": 978,
+        "historicalSoldSuites": 329,
+        "calculatedRemainingSuites": 649,
+        "status": "已闭合",
+        "historyStartDate": "2025/04/08",
+        "historyEndDate": "2026/08/02"
+      },
+      {
+        "project": "和樾望雲",
+        "plannedHouseholds": 693,
+        "historicalSoldSuites": 700,
+        "calculatedRemainingSuites": null,
+        "status": "累计成交超过规划总户数",
+        "historyStartDate": "2025/03/21",
+        "historyEndDate": "2026/07/25"
+      },
+      {
+        "project": "和樾玉鸣",
+        "plannedHouseholds": 444,
+        "historicalSoldSuites": 422,
+        "calculatedRemainingSuites": 22,
+        "status": "已闭合",
+        "historyStartDate": "2025/04/01",
+        "historyEndDate": "2026/07/30"
+      },
+      {
+        "project": "北京国贤府贰期",
+        "plannedHouseholds": 850,
+        "historicalSoldSuites": 695,
+        "calculatedRemainingSuites": 155,
+        "status": "已闭合",
+        "historyStartDate": "2025/05/01",
+        "historyEndDate": "2026/08/08"
+      },
+      {
+        "project": "华润臻澐",
+        "plannedHouseholds": 800,
+        "historicalSoldSuites": 239,
+        "calculatedRemainingSuites": 561,
+        "status": "已闭合",
+        "historyStartDate": "2025/07/11",
+        "historyEndDate": "2026/07/28"
+      },
+      {
+        "project": "建发海晏",
+        "plannedHouseholds": 431,
+        "historicalSoldSuites": 360,
+        "calculatedRemainingSuites": 71,
+        "status": "已闭合",
+        "historyStartDate": "2025/06/16",
+        "historyEndDate": "2026/06/30"
+      },
+      {
+        "project": "中海未来之境",
+        "plannedHouseholds": 342,
+        "historicalSoldSuites": 215,
+        "calculatedRemainingSuites": 127,
+        "status": "已闭合",
+        "historyStartDate": "2025/07/31",
+        "historyEndDate": "2026/08/01"
+      },
+      {
+        "project": "中海安澜北京",
+        "plannedHouseholds": 278,
+        "historicalSoldSuites": 85,
+        "calculatedRemainingSuites": 193,
+        "status": "已闭合",
+        "historyStartDate": "2026/02/11",
+        "historyEndDate": "2026/07/31"
+      },
+      {
+        "project": "国誉星城",
+        "plannedHouseholds": 703,
+        "historicalSoldSuites": 308,
+        "calculatedRemainingSuites": 395,
+        "status": "已闭合",
+        "historyStartDate": "2025/10/30",
+        "historyEndDate": "2026/08/09"
+      },
+      {
+        "project": "龙湖恩祥凌雲颂",
+        "plannedHouseholds": 580,
+        "historicalSoldSuites": 133,
+        "calculatedRemainingSuites": 447,
+        "status": "已闭合",
+        "historyStartDate": "2025/12/19",
+        "historyEndDate": "2026/08/02"
+      },
+      {
+        "project": "北京宸园",
+        "plannedHouseholds": 606,
+        "historicalSoldSuites": 332,
+        "calculatedRemainingSuites": 274,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/06",
+        "historyEndDate": "2026/06/18"
+      },
+      {
+        "project": "璞园PARK",
+        "plannedHouseholds": 442,
+        "historicalSoldSuites": 291,
+        "calculatedRemainingSuites": 151,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/01",
+        "historyEndDate": "2026/06/25"
+      },
+      {
+        "project": "中海萬吉玖序",
+        "plannedHouseholds": 370,
+        "historicalSoldSuites": 294,
+        "calculatedRemainingSuites": 76,
+        "status": "已闭合",
+        "historyStartDate": "2025/06/01",
+        "historyEndDate": "2026/07/31"
+      },
+      {
+        "project": "住总芳华里",
+        "plannedHouseholds": 580,
+        "historicalSoldSuites": 306,
+        "calculatedRemainingSuites": 274,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/09",
+        "historyEndDate": "2026/07/16"
+      },
+      {
+        "project": "星宸和煦",
+        "plannedHouseholds": 270,
+        "historicalSoldSuites": 25,
+        "calculatedRemainingSuites": 245,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/04",
+        "historyEndDate": "2025/12/09"
+      },
+      {
+        "project": "星悦时光",
+        "plannedHouseholds": 864,
+        "historicalSoldSuites": 629,
+        "calculatedRemainingSuites": 235,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/03",
+        "historyEndDate": "2026/08/09"
+      },
+      {
+        "project": "懋源云纪",
+        "plannedHouseholds": 588,
+        "historicalSoldSuites": 110,
+        "calculatedRemainingSuites": 478,
+        "status": "已闭合",
+        "historyStartDate": "2025/07/12",
+        "historyEndDate": "2026/08/02"
+      },
+      {
+        "project": "龙湖宸翰",
+        "plannedHouseholds": 524,
+        "historicalSoldSuites": 413,
+        "calculatedRemainingSuites": 111,
+        "status": "已闭合",
+        "historyStartDate": "2025/10/15",
+        "historyEndDate": "2026/07/31"
+      },
+      {
+        "project": "华润北美乡间 北京润园",
+        "plannedHouseholds": 483,
+        "historicalSoldSuites": 345,
+        "calculatedRemainingSuites": 138,
+        "status": "已闭合",
+        "historyStartDate": "2025/12/03",
+        "historyEndDate": "2026/07/29"
+      },
+      {
+        "project": "懋源薛大人庄 懋源骊橒臺",
+        "plannedHouseholds": 202,
+        "historicalSoldSuites": 95,
+        "calculatedRemainingSuites": 107,
+        "status": "已闭合",
+        "historyStartDate": "2026/01/10",
+        "historyEndDate": "2026/08/02"
+      },
+      {
+        "project": "北京隅东序",
+        "plannedHouseholds": 824,
+        "historicalSoldSuites": 210,
+        "calculatedRemainingSuites": 614,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/04",
+        "historyEndDate": "2026/07/25"
+      },
+      {
+        "project": "保利朝观天珺",
+        "plannedHouseholds": 541,
+        "historicalSoldSuites": 290,
+        "calculatedRemainingSuites": 251,
+        "status": "已闭合",
+        "historyStartDate": "2025/06/13",
+        "historyEndDate": "2026/08/02"
+      },
+      {
+        "project": "金茂满曜",
+        "plannedHouseholds": 719,
+        "historicalSoldSuites": 601,
+        "calculatedRemainingSuites": 118,
+        "status": "已闭合",
+        "historyStartDate": "2025/06/20",
+        "historyEndDate": "2026/08/01"
+      },
+      {
+        "project": "黄衫木店（紫京宸园）",
+        "plannedHouseholds": 840,
+        "historicalSoldSuites": 350,
+        "calculatedRemainingSuites": 490,
+        "status": "已闭合",
+        "historyStartDate": "2025/10/17",
+        "historyEndDate": "2026/08/02"
+      },
+      {
+        "project": "黄衫木店（璞樾）",
+        "plannedHouseholds": 424,
+        "historicalSoldSuites": 294,
+        "calculatedRemainingSuites": 130,
+        "status": "已闭合",
+        "historyStartDate": "2025/10/20",
+        "historyEndDate": "2026/07/31"
+      },
+      {
+        "project": "城建国誉颂",
+        "plannedHouseholds": 686,
+        "historicalSoldSuites": 380,
+        "calculatedRemainingSuites": 306,
+        "status": "已闭合",
+        "historyStartDate": "2025/04/09",
+        "historyEndDate": "2026/08/01"
+      },
+      {
+        "project": "招商云璟揽阅",
+        "plannedHouseholds": 367,
+        "historicalSoldSuites": 376,
+        "calculatedRemainingSuites": null,
+        "status": "累计成交超过规划总户数",
+        "historyStartDate": "2025/03/17",
+        "historyEndDate": "2026/07/30"
+      },
+      {
+        "project": "金隅花溪云锦",
+        "plannedHouseholds": 366,
+        "historicalSoldSuites": 354,
+        "calculatedRemainingSuites": 12,
+        "status": "已闭合",
+        "historyStartDate": "2025/05/27",
+        "historyEndDate": "2026/07/31"
+      },
+      {
+        "project": "招商朝棠揽阅",
+        "plannedHouseholds": 934,
+        "historicalSoldSuites": 928,
+        "calculatedRemainingSuites": 6,
+        "status": "已闭合",
+        "historyStartDate": "2025/07/25",
+        "historyEndDate": "2026/08/02"
+      },
+      {
+        "project": "中国铁建花语璟云",
+        "plannedHouseholds": 202,
+        "historicalSoldSuites": 137,
+        "calculatedRemainingSuites": 65,
+        "status": "已闭合",
+        "historyStartDate": "2025/08/25",
+        "historyEndDate": "2026/08/02"
+      },
+      {
+        "project": "中建运河玖院",
+        "plannedHouseholds": 1480,
+        "historicalSoldSuites": 1377,
+        "calculatedRemainingSuites": 103,
+        "status": "已闭合",
+        "historyStartDate": "2025/09/20",
+        "historyEndDate": "2026/08/01"
+      },
+      {
+        "project": "北京润府",
+        "plannedHouseholds": 1412,
+        "historicalSoldSuites": 797,
+        "calculatedRemainingSuites": 615,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/03",
+        "historyEndDate": "2026/08/09"
+      },
+      {
+        "project": "招商序",
+        "plannedHouseholds": 685,
+        "historicalSoldSuites": 376,
+        "calculatedRemainingSuites": 309,
+        "status": "已闭合",
+        "historyStartDate": "2025/06/07",
+        "historyEndDate": "2026/08/01"
+      },
+      {
+        "project": "中建花鄕壹号 中建壹品花香壹号",
+        "plannedHouseholds": 542,
+        "historicalSoldSuites": 389,
+        "calculatedRemainingSuites": 153,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/01",
+        "historyEndDate": "2026/08/06"
+      },
+      {
+        "project": "北京隅西颂",
+        "plannedHouseholds": 439,
+        "historicalSoldSuites": 217,
+        "calculatedRemainingSuites": 222,
+        "status": "已闭合",
+        "historyStartDate": "2025/05/13",
+        "historyEndDate": "2026/07/31"
+      },
+      {
+        "project": "建发金茂观宸",
+        "plannedHouseholds": 479,
+        "historicalSoldSuites": 420,
+        "calculatedRemainingSuites": 59,
+        "status": "已闭合",
+        "historyStartDate": "2025/03/31",
+        "historyEndDate": "2026/06/26"
+      },
+      {
+        "project": "中海丽金府",
+        "plannedHouseholds": 1060,
+        "historicalSoldSuites": 275,
+        "calculatedRemainingSuites": 785,
+        "status": "已闭合",
+        "historyStartDate": "2025/05/13",
+        "historyEndDate": "2026/07/29"
+      },
+      {
+        "project": "中海丽泽叁號院",
+        "plannedHouseholds": 530,
+        "historicalSoldSuites": 242,
+        "calculatedRemainingSuites": 288,
+        "status": "已闭合",
+        "historyStartDate": "2025/06/09",
+        "historyEndDate": "2026/07/29"
+      },
+      {
+        "project": "槐新02地块 建发金茂观宸二期",
+        "plannedHouseholds": 395,
+        "historicalSoldSuites": 184,
+        "calculatedRemainingSuites": 211,
+        "status": "已闭合",
+        "historyStartDate": "2025/10/13",
+        "historyEndDate": "2026/07/14"
+      },
+      {
+        "project": "御璟星城元启",
+        "plannedHouseholds": 1065,
+        "historicalSoldSuites": 610,
+        "calculatedRemainingSuites": 455,
+        "status": "已闭合",
+        "historyStartDate": "2025/08/06",
+        "historyEndDate": "2026/07/30"
+      },
+      {
+        "project": "大兴西片区0003等地块 大兴发展梧桐府",
+        "plannedHouseholds": 404,
+        "historicalSoldSuites": 45,
+        "calculatedRemainingSuites": 359,
+        "status": "已闭合",
+        "historyStartDate": "2025/07/27",
+        "historyEndDate": "2026/07/05"
+      },
+      {
+        "project": "西红门6030地块",
+        "plannedHouseholds": null,
+        "historicalSoldSuites": null,
+        "calculatedRemainingSuites": null,
+        "status": "历史明细未匹配",
+        "historyStartDate": "",
+        "historyEndDate": ""
+      },
+      {
+        "project": "大兴经济开发区DX00-0302-0021、0022地块",
+        "plannedHouseholds": null,
+        "historicalSoldSuites": null,
+        "calculatedRemainingSuites": null,
+        "status": "历史明细未匹配",
+        "historyStartDate": "",
+        "historyEndDate": ""
+      },
+      {
+        "project": "颐知筑",
+        "plannedHouseholds": 1368,
+        "historicalSoldSuites": 143,
+        "calculatedRemainingSuites": 1225,
+        "status": "已闭合",
+        "historyStartDate": "2025/05/01",
+        "historyEndDate": "2026/08/01"
+      },
+      {
+        "project": "房山区长阳镇FS00-0101-0002、0003地块",
+        "plannedHouseholds": null,
+        "historicalSoldSuites": null,
+        "calculatedRemainingSuites": null,
+        "status": "历史明细未匹配",
+        "historyStartDate": "",
+        "historyEndDate": ""
+      },
+      {
+        "project": "璟贤瑞庭",
+        "plannedHouseholds": 762,
+        "historicalSoldSuites": 515,
+        "calculatedRemainingSuites": 247,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/01",
+        "historyEndDate": "2026/08/04"
+      },
+      {
+        "project": "半壁店地块 保利熙瑞",
+        "plannedHouseholds": null,
+        "historicalSoldSuites": null,
+        "calculatedRemainingSuites": null,
+        "status": "历史明细未匹配",
+        "historyStartDate": "",
+        "historyEndDate": ""
+      },
+      {
+        "project": "宝山0016地块 海宸元境",
+        "plannedHouseholds": 414,
+        "historicalSoldSuites": 287,
+        "calculatedRemainingSuites": 127,
+        "status": "已闭合",
+        "historyStartDate": "2025/12/12",
+        "historyEndDate": "2026/07/31"
+      },
+      {
+        "project": "宝山0017地块 北京隅海岄",
+        "plannedHouseholds": 458,
+        "historicalSoldSuites": 248,
+        "calculatedRemainingSuites": 210,
+        "status": "已闭合",
+        "historyStartDate": "2025/12/06",
+        "historyEndDate": "2026/08/02"
+      },
+      {
+        "project": "中海长安源境",
+        "plannedHouseholds": 664,
+        "historicalSoldSuites": 232,
+        "calculatedRemainingSuites": 432,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/01",
+        "historyEndDate": "2026/08/07"
+      },
+      {
+        "project": "首钢璟悦长安",
+        "plannedHouseholds": 700,
+        "historicalSoldSuites": 349,
+        "calculatedRemainingSuites": 351,
+        "status": "已闭合",
+        "historyStartDate": "2025/07/12",
+        "historyEndDate": "2026/08/01"
+      },
+      {
+        "project": "西黄村地块 中海瑞文里",
+        "plannedHouseholds": 819,
+        "historicalSoldSuites": 602,
+        "calculatedRemainingSuites": 217,
+        "status": "已闭合",
+        "historyStartDate": "2025/09/27",
+        "historyEndDate": "2026/08/02"
+      },
+      {
+        "project": "京能西贤府",
+        "plannedHouseholds": 428,
+        "historicalSoldSuites": 40,
+        "calculatedRemainingSuites": 388,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/07",
+        "historyEndDate": "2026/07/15"
+      },
+      {
+        "project": "中建和颂九里",
+        "plannedHouseholds": 572,
+        "historicalSoldSuites": 198,
+        "calculatedRemainingSuites": 374,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/08",
+        "historyEndDate": "2026/07/31"
+      },
+      {
+        "project": "长安华曦府",
+        "plannedHouseholds": 581,
+        "historicalSoldSuites": 581,
+        "calculatedRemainingSuites": 0,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/04",
+        "historyEndDate": "2026/07/31"
+      },
+      {
+        "project": "万象茗筑",
+        "plannedHouseholds": 555,
+        "historicalSoldSuites": 45,
+        "calculatedRemainingSuites": 510,
+        "status": "已闭合",
+        "historyStartDate": "2026/06/07",
+        "historyEndDate": "2026/08/04"
+      },
+      {
+        "project": "嘉棠雅序",
+        "plannedHouseholds": 545,
+        "historicalSoldSuites": 253,
+        "calculatedRemainingSuites": 292,
+        "status": "已闭合",
+        "historyStartDate": "2026/06/28",
+        "historyEndDate": "2026/08/09"
+      },
+      {
+        "project": "青雲国樾",
+        "plannedHouseholds": 778,
+        "historicalSoldSuites": 114,
+        "calculatedRemainingSuites": 664,
+        "status": "已闭合",
+        "historyStartDate": "2026/06/30",
+        "historyEndDate": "2026/07/31"
+      },
+      {
+        "project": "龍樾海序",
+        "plannedHouseholds": 837,
+        "historicalSoldSuites": 748,
+        "calculatedRemainingSuites": 89,
+        "status": "已闭合",
+        "historyStartDate": "2026/05/23",
+        "historyEndDate": "2026/08/02"
+      },
+      {
+        "project": "嘉棠璟樾",
+        "plannedHouseholds": 440,
+        "historicalSoldSuites": 247,
+        "calculatedRemainingSuites": 193,
+        "status": "已闭合",
+        "historyStartDate": "2026/03/25",
+        "historyEndDate": "2026/08/01"
+      },
+      {
+        "project": "国贤府PARK",
+        "plannedHouseholds": 832,
+        "historicalSoldSuites": 572,
+        "calculatedRemainingSuites": 260,
+        "status": "已闭合",
+        "historyStartDate": "2026/04/01",
+        "historyEndDate": "2026/08/09"
+      },
+      {
+        "project": "未来城星寰时代",
+        "plannedHouseholds": 647,
+        "historicalSoldSuites": 344,
+        "calculatedRemainingSuites": 303,
+        "status": "已闭合",
+        "historyStartDate": "2026/04/01",
+        "historyEndDate": "2026/08/09"
+      },
+      {
+        "project": "中海玖樹满和",
+        "plannedHouseholds": 578,
+        "historicalSoldSuites": 574,
+        "calculatedRemainingSuites": 4,
+        "status": "已闭合",
+        "historyStartDate": "2026/03/27",
+        "historyEndDate": "2026/08/02"
+      },
+      {
+        "project": "中建方程国贤府",
+        "plannedHouseholds": 508,
+        "historicalSoldSuites": 502,
+        "calculatedRemainingSuites": 6,
+        "status": "已闭合",
+        "historyStartDate": "2026/04/15",
+        "historyEndDate": "2026/07/30"
+      },
+      {
+        "project": "北投栖澐湾",
+        "plannedHouseholds": 971,
+        "historicalSoldSuites": 169,
+        "calculatedRemainingSuites": 802,
+        "status": "已闭合",
+        "historyStartDate": "2026/03/29",
+        "historyEndDate": "2026/08/09"
+      },
+      {
+        "project": "中海玉華玖章",
+        "plannedHouseholds": 104,
+        "historicalSoldSuites": 62,
+        "calculatedRemainingSuites": 42,
+        "status": "已闭合",
+        "historyStartDate": "2025/10/21",
+        "historyEndDate": "2026/07/30"
+      },
+      {
+        "project": "北京御林湾",
+        "plannedHouseholds": 1563,
+        "historicalSoldSuites": 41,
+        "calculatedRemainingSuites": 1522,
+        "status": "已闭合",
+        "historyStartDate": "2026/03/30",
+        "historyEndDate": "2026/08/01"
+      },
+      {
+        "project": "万科弗农小镇",
+        "plannedHouseholds": 2002,
+        "historicalSoldSuites": 93,
+        "calculatedRemainingSuites": 1909,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/14",
+        "historyEndDate": "2026/07/24"
+      },
+      {
+        "project": "京投发展·北熙区",
+        "plannedHouseholds": 3073,
+        "historicalSoldSuites": 23,
+        "calculatedRemainingSuites": 3050,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/01",
+        "historyEndDate": "2026/08/02"
+      },
+      {
+        "project": "首钢璟瑞长安",
+        "plannedHouseholds": 379,
+        "historicalSoldSuites": 232,
+        "calculatedRemainingSuites": 147,
+        "status": "已闭合",
+        "historyStartDate": "2026/04/28",
+        "historyEndDate": "2026/07/31"
+      },
+      {
+        "project": "国樾天颂",
+        "plannedHouseholds": 446,
+        "historicalSoldSuites": 20,
+        "calculatedRemainingSuites": 426,
+        "status": "已闭合",
+        "historyStartDate": "2026/07/09",
+        "historyEndDate": "2026/08/01"
+      },
+      {
+        "project": "壹品兴创·颐和公馆",
+        "plannedHouseholds": 752,
+        "historicalSoldSuites": 433,
+        "calculatedRemainingSuites": 319,
+        "status": "已闭合",
+        "historyStartDate": "2025/01/03",
+        "historyEndDate": "2026/07/31"
+      },
+      {
+        "project": "长河花园",
+        "plannedHouseholds": 409,
+        "historicalSoldSuites": 46,
+        "calculatedRemainingSuites": 363,
+        "status": "已闭合",
+        "historyStartDate": "2025/04/03",
+        "historyEndDate": "2026/04/08"
+      }
+    ]
+  },
+  "maxTradeDate": "2026/08/09"
+}
