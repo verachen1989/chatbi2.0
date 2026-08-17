@@ -17,6 +17,13 @@ def load_module():
 
 
 class ReplaceTransactionHistoryTests(unittest.TestCase):
+    def test_dashboard_shows_historical_sold_instead_of_remaining_inventory(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn('tableSortButton("2025年1月至今已售套数", "historicalSold"', html)
+        self.assertIn('labelLines:["25年1月至今", "已售套数"]', html)
+        self.assertNotIn('tableSortButton("剩余套数"', html)
+        self.assertNotIn("projectCalculatedRemainingSuites", html)
+
     def test_month_label_uses_natural_month(self):
         module = load_module()
         self.assertEqual(module.month_label(datetime(2026, 8, 9)), "26年8月")
@@ -42,11 +49,24 @@ class ReplaceTransactionHistoryTests(unittest.TestCase):
         module = load_module()
         self.assertEqual(module.trade_amount_wan(59317429), 5931.7429)
 
-    def test_remaining_suites_closes_against_historical_sales(self):
+    def test_historical_house_key_deduplicates_resignings(self):
         module = load_module()
-        self.assertEqual(module.remaining_suites(446, 174), 272)
-        self.assertIsNone(module.remaining_suites(100, 101))
-        self.assertIsNone(module.remaining_suites(None, 10))
+        first = {
+            "project_name": "和樾玉鳴",
+            "pre_permit": "京房售证字(2025)1号",
+            "building_name": "1#住宅楼",
+            "unit_number": "1单元",
+            "room_number": "101",
+            "md5_str": "old",
+        }
+        latest = dict(first, md5_str="new")
+        self.assertEqual(module.historical_house_key(first), module.historical_house_key(latest))
+
+    def test_historical_house_key_keeps_unknown_rooms_separate(self):
+        module = load_module()
+        first = {"project_name": "项目", "room_number": "", "md5_str": "one"}
+        second = {"project_name": "项目", "room_number": "", "md5_str": "two"}
+        self.assertNotEqual(module.historical_house_key(first), module.historical_house_key(second))
 
     def test_normalized_aliases_match_traditional_and_punctuation(self):
         module = load_module()

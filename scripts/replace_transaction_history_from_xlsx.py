@@ -94,14 +94,6 @@ def trade_amount_wan(value: Any) -> int | float:
     return rounded(number(value) / 10000, 4)
 
 
-def remaining_suites(planned_households: Any, historical_sales: Any) -> int | None:
-    planned = number(planned_households)
-    sold = number(historical_sales)
-    if planned <= 0 or sold < 0 or sold > planned:
-        return None
-    return int(round(planned - sold))
-
-
 def month_label(value: Any) -> str:
     if isinstance(value, datetime):
         value = value.date()
@@ -128,6 +120,20 @@ def date_text(value: Any) -> str:
     if isinstance(value, date):
         return value.strftime("%Y/%m/%d")
     return clean(value).split(" ", 1)[0].replace("-", "/")
+
+
+def historical_house_key(row: dict[str, Any]) -> tuple[str, ...]:
+    building = clean(row.get("building_name"))
+    room = clean(row.get("room_number"))
+    if building and room:
+        return (
+            clean(row.get("project_name")),
+            clean(row.get("pre_permit")),
+            building,
+            clean(row.get("unit_number")),
+            room,
+        )
+    return ("md5", clean(row.get("md5_str")) or repr(sorted(row.items())))
 
 
 def summarize_rows(rows: list[dict[str, Any]]) -> dict[str, int | float]:
@@ -315,9 +321,10 @@ def read_workbook(path: Path) -> tuple[dict[str, dict[str, list[dict[str, Any]]]
         duplicate_md5_rows = 0
         seen_md5: set[str] = set()
         source_projects: dict[str, set[str]] = defaultdict(set)
-        historical_metrics: dict[str, dict[str, Any]] = defaultdict(
-            lambda: {"suites": 0, "area": 0.0, "amountWan": 0.0, "firstDate": "", "lastDate": "", "mappedName": ""}
+        historical_meta: dict[str, dict[str, Any]] = defaultdict(
+            lambda: {"recordRows": 0, "firstDate": "", "lastDate": "", "mappedName": ""}
         )
+        historical_houses: dict[str, dict[tuple[str, ...], dict[str, Any]]] = defaultdict(dict)
 
         for values in sheet.iter_rows(min_row=2, values_only=True):
             row = dict(zip(headers, values))
@@ -344,15 +351,21 @@ def read_workbook(path: Path) -> tuple[dict[str, dict[str, list[dict[str, Any]]]
             mapped_key = normalize_name(mapped_name)
             source_projects[mapped_key].add(source_name)
             trade_date = date_text(row.get("trade_day"))
-            history = historical_metrics[mapped_key]
-            history["suites"] += 1
-            history["area"] += number(row.get("trade_area"))
-            history["amountWan"] += number(row.get("trade_amount")) / 10000
+            history = historical_meta[mapped_key]
+            history["recordRows"] += 1
             history["mappedName"] = mapped_name
             if trade_date and (not history["firstDate"] or trade_date < history["firstDate"]):
                 history["firstDate"] = trade_date
             if trade_date and trade_date > history["lastDate"]:
                 history["lastDate"] = trade_date
+            house_key = historical_house_key(row)
+            existing_house = historical_houses[mapped_key].get(house_key)
+            if not existing_house or trade_date >= existing_house["date"]:
+                historical_houses[mapped_key][house_key] = {
+                    "date": trade_date,
+                    "area": number(row.get("trade_area")),
+                    "amountWan": number(row.get("trade_amount")) / 10000,
+                }
             if not is_replacement_month(month):
                 skipped_before_start += 1
                 continue
@@ -376,17 +389,19 @@ def read_workbook(path: Path) -> tuple[dict[str, dict[str, list[dict[str, Any]]]
             for rows in month_groups.values():
                 rows.sort(key=lambda item: item["date"], reverse=True)
 
-        normalized_history = {
-            key: {
-                "suites": int(value["suites"]),
-                "area": rounded(value["area"], 2),
-                "amountWan": rounded(value["amountWan"], 4),
-                "firstDate": value["firstDate"],
-                "lastDate": value["lastDate"],
-                "mappedName": value["mappedName"],
+        normalized_history = {}
+        for key, meta in historical_meta.items():
+            houses = list(historical_houses[key].values())
+            normalized_history[key] = {
+                "suites": len(houses),
+                "recordRows": int(meta["recordRows"]),
+                "duplicateHouseRows": int(meta["recordRows"]) - len(houses),
+                "area": rounded(sum(value["area"] for value in houses), 2),
+                "amountWan": rounded(sum(value["amountWan"] for value in houses), 4),
+                "firstDate": meta["firstDate"],
+                "lastDate": meta["lastDate"],
+                "mappedName": meta["mappedName"],
             }
-            for key, value in historical_metrics.items()
-        }
         history_dates = [
             value[date_key]
             for value in normalized_history.values()
@@ -397,7 +412,9 @@ def read_workbook(path: Path) -> tuple[dict[str, dict[str, list[dict[str, Any]]]
             "sheet": sheet.title,
             "rawRows": raw_rows,
             "usedRows": used_rows,
-            "historicalUsedRows": sum(value["suites"] for value in normalized_history.values()),
+            "historicalUsedRows": sum(value["recordRows"] for value in normalized_history.values()),
+            "historicalUniqueHouseRows": sum(value["suites"] for value in normalized_history.values()),
+            "historicalDuplicateHouseRows": sum(value["duplicateHouseRows"] for value in normalized_history.values()),
             "skippedBeforeJuly2025": skipped_before_start,
             "excludedRows": excluded_rows,
             "duplicateMd5Rows": duplicate_md5_rows,
@@ -473,10 +490,14 @@ def attach_historical_sales(
 ) -> None:
     field_names = (
         "historicalTransactionSoldSuites",
+        "historicalTransactionRecordRows",
+        "historicalTransactionDuplicateRows",
         "historicalTransactionArea",
         "historicalTransactionAmountWan",
         "historicalTransactionStartDate",
         "historicalTransactionEndDate",
+        "historicalTransactionCoverageStartDate",
+        "historicalTransactionCoverageEndDate",
         "historicalTransactionSource",
         "historicalTransactionScope",
         "historicalTransactionMappedNames",
@@ -494,6 +515,8 @@ def attach_historical_sales(
         target = aggregated.setdefault(marker, {
             "project": project,
             "suites": 0,
+            "recordRows": 0,
+            "duplicateRows": 0,
             "area": 0.0,
             "amountWan": 0.0,
             "firstDate": "",
@@ -501,6 +524,8 @@ def attach_historical_sales(
             "mappedNames": [],
         })
         target["suites"] += int(history.get("suites") or 0)
+        target["recordRows"] += int(history.get("recordRows") or 0)
+        target["duplicateRows"] += int(history.get("duplicateHouseRows") or 0)
         target["area"] += number(history.get("area"))
         target["amountWan"] += number(history.get("amountWan"))
         first_date = clean(history.get("firstDate"))
@@ -516,59 +541,43 @@ def attach_historical_sales(
     for target in aggregated.values():
         project = target["project"]
         project["historicalTransactionSoldSuites"] = int(target["suites"])
+        project["historicalTransactionRecordRows"] = int(target["recordRows"])
+        project["historicalTransactionDuplicateRows"] = int(target["duplicateRows"])
         project["historicalTransactionArea"] = rounded(target["area"], 2)
         project["historicalTransactionAmountWan"] = rounded(target["amountWan"], 4)
         project["historicalTransactionStartDate"] = target["firstDate"]
         project["historicalTransactionEndDate"] = target["lastDate"]
+        coverage = stats.get("historicalDateRange", [])
+        project["historicalTransactionCoverageStartDate"] = coverage[0] if coverage else ""
+        project["historicalTransactionCoverageEndDate"] = coverage[-1] if coverage else ""
         project["historicalTransactionSource"] = source_file
-        project["historicalTransactionScope"] = "普通住宅/别墅；按逐套历史成交明细去重计数"
+        project["historicalTransactionScope"] = "仅统计2025年1月至今普通住宅/别墅；同一房源多次成交按最新一笔去重计数"
         project["historicalTransactionMappedNames"] = target["mappedNames"]
 
 
-def audit_historical_remaining(
-    data: dict[str, Any],
-    basic_rows: list[dict[str, Any]],
-    alias_groups: list[list[str]],
-) -> dict[str, Any]:
-    basic_index: dict[str, dict[str, Any]] = {}
-    for row in basic_rows:
-        for name in (row.get("dehuaProjectName"), row.get("cricProjectName")):
-            key = normalize_name(name)
-            if key and key not in basic_index:
-                basic_index[key] = row
-
+def audit_historical_sales(data: dict[str, Any]) -> dict[str, Any]:
     rows: list[dict[str, Any]] = []
     for project in all_projects(data):
-        candidates = [
-            *project_names(project, alias_groups),
-            *(project.get("historicalTransactionMappedNames") or []),
-        ]
-        basic = next((basic_index.get(normalize_name(name)) for name in candidates if basic_index.get(normalize_name(name))), None)
-        planned = int(number(basic.get("plannedHouseholds"))) if basic and number(basic.get("plannedHouseholds")) > 0 else None
         sold = project.get("historicalTransactionSoldSuites")
         sold = int(number(sold)) if sold is not None else None
-        remaining = remaining_suites(planned, sold) if sold is not None else None
-        if sold is None:
-            status = "历史明细未匹配"
-        elif planned is None:
-            status = "规划总户数未匹配"
-        elif remaining is None:
-            status = "累计成交超过规划总户数"
-        else:
-            status = "已闭合"
+        record_rows = int(number(project.get("historicalTransactionRecordRows")))
+        duplicate_rows = int(number(project.get("historicalTransactionDuplicateRows")))
         rows.append({
             "project": project.get("project"),
-            "plannedHouseholds": planned,
             "historicalSoldSuites": sold,
-            "calculatedRemainingSuites": remaining,
-            "status": status,
+            "historicalRecordRows": record_rows,
+            "duplicateHouseRows": duplicate_rows,
+            "status": "已匹配" if sold is not None else "历史明细未匹配",
             "historyStartDate": project.get("historicalTransactionStartDate", ""),
             "historyEndDate": project.get("historicalTransactionEndDate", ""),
         })
     return {
         "projects": len(rows),
-        "closedProjects": sum(row["status"] == "已闭合" for row in rows),
-        "issues": [row for row in rows if row["status"] != "已闭合"],
+        "matchedProjects": sum(row["status"] == "已匹配" for row in rows),
+        "uniqueSoldSuites": sum(row["historicalSoldSuites"] or 0 for row in rows),
+        "recordRows": sum(row["historicalRecordRows"] for row in rows),
+        "duplicateHouseRows": sum(row["duplicateHouseRows"] for row in rows),
+        "issues": [row for row in rows if row["status"] != "已匹配"],
         "rows": rows,
     }
 
@@ -727,7 +736,8 @@ def refresh_data(
     policy = data.setdefault("sourcePolicy", {})
     policy["成交明细口径"] = "普通住宅/别墅；2025年7月起以项目成交明细.xlsx为唯一事实源"
     policy["成交校验"] = "月度套数、面积、金额和均价均由逐套明细重算并闭合"
-    policy["剩余套数口径"] = "规划总户数－项目成交明细.xlsx历史累计成交套数；累计成交超过规划总户数时显示待核"
+    policy.pop("剩余套数口径", None)
+    policy["历史已售口径"] = "仅统计2025年1月至今；普通住宅/别墅；同一房源多次成交按最新一笔去重计数"
     for month in replacement_months:
         full = month_tuple(month)
         policy[f"{full[0]}年{full[1]}月"] = "克而瑞项目成交明细逐套聚合（新明细全量替换）"
@@ -799,7 +809,6 @@ def main() -> None:
     parser.add_argument("--html", type=Path, default=Path("index.html"))
     parser.add_argument("--detail-js", type=Path, default=Path("transaction_details.js"))
     parser.add_argument("--report", type=Path, default=Path("transaction_history_replace_report.json"))
-    parser.add_argument("--project-basic-info", type=Path, default=Path("project_basic_info.js"))
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--allow-unmatched", action="store_true")
     args = parser.parse_args()
@@ -825,11 +834,7 @@ def main() -> None:
     payload = build_transaction_payload(grouped, matches, alias_groups, args.xlsx.name)
     refresh_data(data, payload, matches)
     closure_issues = closure_report(data, payload)
-    remaining_audit = audit_historical_remaining(
-        data,
-        parse_project_basic_info(args.project_basic_info),
-        alias_groups,
-    )
+    historical_sales_audit = audit_historical_sales(data)
     max_date = max(
         row["date"]
         for month_data in payload["months"].values()
@@ -841,8 +846,16 @@ def main() -> None:
         "stats": stats,
         "matchedMappedProjects": len(matches),
         "matchedRows": payload["summary"]["rows"],
-        "matchedHistoricalRows": sum(
+        "matchedHistoricalUniqueHouses": sum(
             stats.get("historicalMetrics", {}).get(key, {}).get("suites", 0)
+            for key in matches
+        ),
+        "matchedHistoricalRecordRows": sum(
+            stats.get("historicalMetrics", {}).get(key, {}).get("recordRows", 0)
+            for key in matches
+        ),
+        "matchedHistoricalDuplicateHouseRows": sum(
+            stats.get("historicalMetrics", {}).get(key, {}).get("duplicateHouseRows", 0)
             for key in matches
         ),
         "promotedOfficialProjects": promoted_projects,
@@ -858,7 +871,7 @@ def main() -> None:
             for month, month_data in payload["months"].items()
         ],
         "closureIssues": closure_issues,
-        "remainingSuitesAudit": remaining_audit,
+        "historicalSalesAudit": historical_sales_audit,
         "maxTradeDate": max_date,
     }
     args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
