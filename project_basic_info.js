@@ -1,7 +1,7 @@
 // 由 scripts/import_project_basic_info.mjs 自动生成，请勿手工编辑。
 window.PROJECT_BASIC_INFO = {
   "sourceFile": "项目基本信息清单.xlsx",
-  "generatedAt": "2026-08-14T08:41:47.260Z",
+  "generatedAt": "2026-09-04T00:00:00.000+08:00",
   "rows": [
     {
       "cricProjectName": "万科弗农小镇",
@@ -527,6 +527,20 @@ window.PROJECT_BASIC_INFO = {
       "earliestLaunchDate": "2025-11-01",
       "latestLaunchDate": "2026-01-20",
       "plannedHouseholds": 580
+    },
+    {
+      "cricProjectName": "北投和璟",
+      "dehuaProjectName": "北投和璟",
+      "earliestLaunchDate": "2026-08-23",
+      "latestLaunchDate": "2026-08-23",
+      "plannedHouseholds": 866
+    },
+    {
+      "cricProjectName": "朗月和风",
+      "dehuaProjectName": "北京朗月和风",
+      "earliestLaunchDate": "2026-08-22",
+      "latestLaunchDate": "2026-08-22",
+      "plannedHouseholds": 388
     }
   ]
 };
