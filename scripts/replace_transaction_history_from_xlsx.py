@@ -35,6 +35,8 @@ PROJECT_FIELDS = (
     "junCricProjectName",
     "julMatchedName",
     "julCricProjectName",
+    "augMatchedName",
+    "augCricProjectName",
 )
 
 
