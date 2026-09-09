@@ -42,7 +42,7 @@ class ConfirmedTransactionRepairTests(unittest.TestCase):
                 with self.subTest(month=month, project=project_name):
                     self.assertEqual(len({row_signature(row) for row in rows}), len(rows))
                     self.assertEqual(project["summary"]["suites"], len(rows))
-        self.assertEqual(checked_rows, 18936)
+        self.assertEqual(checked_rows, 20255)
 
     def test_observation_phases_keep_separate_authoritative_rows(self) -> None:
         dashboard = load_dashboard(ROOT / "index.html")
