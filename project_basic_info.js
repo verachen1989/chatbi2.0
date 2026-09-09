@@ -1,7 +1,7 @@
 // 由 scripts/import_project_basic_info.mjs 自动生成，请勿手工编辑。
 window.PROJECT_BASIC_INFO = {
   "sourceFile": "项目基本信息清单.xlsx",
-  "generatedAt": "2026-09-04T00:00:00.000+08:00",
+  "generatedAt": "2026-09-09T00:00:00.000+08:00",
   "rows": [
     {
       "cricProjectName": "万科弗农小镇",
@@ -541,6 +541,22 @@ window.PROJECT_BASIC_INFO = {
       "earliestLaunchDate": "2026-08-22",
       "latestLaunchDate": "2026-08-22",
       "plannedHouseholds": 388
+    },
+    {
+      "cricProjectName": "保利熙瑞",
+      "dehuaProjectName": "半壁店地块 保利熙瑞",
+      "earliestLaunchDate": "2026-06-27",
+      "latestLaunchDate": "2026-06-29",
+      "plannedHouseholds": 500,
+      "sourceFile": "SR问数·外部数据-项目清单（19995，克而瑞）",
+      "sourceDatasetCode": "19995",
+      "sourceProjectId": "5B30509F-E232-46D0-8340-E3C11BC094EE",
+      "sourceFields": {
+        "earliestLaunchDate": "EARLIEST_OPEN_DATE",
+        "latestLaunchDate": "LASTEST_OPEN_DATE",
+        "plannedHouseholds": "PLAN_UNITS"
+      },
+      "verifiedAt": "2026-09-09"
     }
   ]
 };

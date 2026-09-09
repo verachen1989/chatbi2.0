@@ -64,6 +64,19 @@ class SeptemberTransactionSupplementTests(unittest.TestCase):
             self.assertEqual(project["historicalTransactionDuplicateRows"], 0)
             self.assertIn("北清润府&保利熙瑞.xlsx", project["transactionDetailSource"])
 
+    def test_verified_poly_launch_basics_use_the_database_fields(self):
+        rows = dashboard.base.parse_project_basic_info(ROOT / "project_basic_info.js")
+        matches = [row for row in rows if row["cricProjectName"] == "保利熙瑞"]
+        self.assertEqual(len(matches), 1)
+        row = matches[0]
+        self.assertEqual(row["earliestLaunchDate"], "2026-06-27")
+        self.assertEqual(row["latestLaunchDate"], "2026-06-29")
+        self.assertEqual(row["plannedHouseholds"], 500)
+        self.assertEqual(row["sourceProjectId"], "5B30509F-E232-46D0-8340-E3C11BC094EE")
+        self.assertEqual(row["sourceDatasetCode"], "19995")
+        self.assertEqual(row["sourceFields"]["latestLaunchDate"], "LASTEST_OPEN_DATE")
+        self.assertFalse(any(row["cricProjectName"] == "北清润府" for row in rows))
+
 
 if __name__ == "__main__":
     unittest.main()
