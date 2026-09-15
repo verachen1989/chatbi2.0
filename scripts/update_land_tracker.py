@@ -390,6 +390,9 @@ def run(args):
         write_report(report, report_dir)
     print(json.dumps({k: report.get(k) for k in ("status", "mode", "listed", "before", "after", "matched")}, ensure_ascii=False))
     print(f"Added: {len(report['added'])}; updated: {len(report['updated'])}; report: {report_dir / 'report.md'}")
+    for error in report["errors"]:
+        message = json.dumps(error, ensure_ascii=False).replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+        print("::error title=Land tracker validation::" + message)
     return 0 if report["status"] == "passed" else 1
 
 
