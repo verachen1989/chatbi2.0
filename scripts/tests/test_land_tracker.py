@@ -107,6 +107,7 @@ class LandTrackerTests(unittest.TestCase):
                 self.assertTrue(fetcher.use_curl)
                 self.assertNotIn("--insecure", curl.call_args[0][0])
                 self.assertNotIn("-k", curl.call_args[0][0])
+                self.assertIn("prime256v1", curl.call_args[0][0])
 
     def test_historical_conflict_fails(self):
         for changed in (dict(self.row, amount=100), dict(self.row, floorPrice=100), dict(self.row, dealDate="26/09/09")):
