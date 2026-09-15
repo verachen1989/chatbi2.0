@@ -1,0 +1,690 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>北京市公共资源交易服务平台</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+<meta charset = "utf-8"/>
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand"> 
+<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+<meta http-equiv="SiteName" content="北京市公共资源交易服务平台">
+<meta http-equiv="SiteDomain" content="https://ggzyfw.beijing.gov.cn">
+<meta http-equiv="SiteIDCode" content="1100000239">
+<meta http-equiv="ColumnName" content="成交宗地">
+<meta http-equiv="ColumnDescription" content="">
+<meta http-equiv="ColumnKeywords" content="">
+<meta http-equiv="ColumnType" content="成交宗地">
+
+<link rel="stylesheet" type="text/css" media="screen and (min-width: 720px)" href="/r/cms/cn.gov.bjggzyfw.www/css/style.css">
+<link rel="stylesheet" type="text/css" media="screen and (max-width: 719px)" href="/r/cms/cn.gov.bjggzyfw.www/css/style-m.css">
+
+<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" media="all" href="/cmsbj/r/cms/cn.gov.bjggzyfw.www/css/style.css"/>
+<![endif]-->
+
+
+<link rel="stylesheet" type="text/css" media="screen and (max-width: 719px)" href="/r/cms/cn.gov.bjggzyfw.www/css/mobile.css" />
+<script type="text/javascript" src="/r/cms/cn.gov.bjggzyfw.www/js/jquery.min.js"></script>
+<script type="text/javascript" src="/r/cms/cn.gov.bjggzyfw.www/js/jquery.format.js"></script>
+<script type="text/javascript" src="/r/cms/cn.gov.bjggzyfw.www/js/header.js"></script>
+
+<script type="text/javascript" src="/r/cms/cn.gov.bjggzyfw.www/js/video.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/r/cms/cn.gov.bjggzyfw.www/css/video-js.min.css" />
+
+
+<script type="text/javascript" src="/r/cms/cn.gov.bjggzyfw.www/js/jquery.hiSlider.js"></script>
+<script type="text/javascript" src="/r/cms/cn.gov.bjggzyfw.www/js/controller.js"></script>
+<script type="text/javascript" src="/r/cms/ckplayer/ckplayer.js" ></script>
+<script src="/r/cms/ckplayer/offlights.js" type="text/javascript"></script>
+<script type="text/javascript" src="/r/cms/front.js"></script>
+<script type="text/javascript">
+$(function () {
+    if ($('.hotWordBanner').length > 0) {
+        var hotWordBanner = (function (externalO) {
+            var externalGo = true, _index = 0, externalO = '.' + externalO;
+            $(externalO).hide().children().hide();
+            function inside() {
+                $(externalO).eq(_index).children().first().fadeIn(function play() {
+                    $(this).next().fadeIn(play);
+                    if ($(this).index() == $(externalO).eq(_index).children().length - 1) {
+                        _index++;
+                        externalGo = true;
+                        setTimeout(playGo, 3000);
+                    }
+                    return 'slow';
+                })
+            }
+            function external() {
+                $(externalO).eq(_index).fadeIn('fast').siblings(externalO).hide(function () {
+                    externalGo = false;
+                    inside();
+                    return 0;
+                }).children().hide();
+
+            }
+            function playGo() {
+                if (externalGo == true) {
+                    _index >= $(externalO).length ? _index = 0 : "";
+                    external();
+                }
+            }
+            return playGo();
+        })('hotWordBanner');
+    }
+}
+)
+var selectDate='';
+var _vaq = _vaq || [];
+			_vaq.push(["setCookieDomain", "auto"]);
+			_vaq.push(['setPingTime',3000]);
+			_vaq.push(['enableHeat']);
+			_vaq.push(['trackPageView']);
+			(function() {
+			_vaq.push(['setSiteId',9080]);
+			var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+			g.defer=true; g.async=true; g.src='https://yhxw.tj.beijing.gov.cn/vas.js'; s.parentNode.insertBefore(g,s);
+			})();
+			
+			$(".btn-search").on("click", function() {
+			
+			
+			
+			var q = $(".searchAll").val();
+				var htmlRegExp = /<\[^>]*>/g;
+				if(htmlRegExp.test(q)){
+					alert("查询内容不能包含非法字符！");
+					return ;
+				}
+				if(q == "" || q == null || q == undefined){
+					alert("查询内容不能为空！");
+					return ;
+				}
+				
+//alert(selectDate)
+				if(selectDate==2){
+					var url ="http://www.beijing.gov.cn/so/s?tab=all&sourceCode=1100000239";
+					document.getElementById("search-form").action = url;
+					$(".searchAll").val($(".searchAll").val().trim().replace(/\s/g,""));
+					_vaq.push(['trackSiteSearch', $('.searchAll').val(), 'search', '1']);
+					$("#search-form").submit();
+				}else{
+				    
+					var url ="https://ggzyfw.beijing.gov.cn/elasticsearch/index.jsp";
+					document.getElementById("search-form").action = url;
+					$(".searchAll").val($(".searchAll").val().trim().replace(/\s/g,""));
+					_vaq.push(['trackSiteSearch', $('.searchAll').val(), 'search', '1']);
+					$("#search-form").submit();
+				}
+				
+			})
+			$(".searchAll").on("keydown", function(event) {
+				if (event.keyCode == 13) {
+					$(".btn-search").click();
+					return false;
+				}
+			})
+			
+			
+      function searchDo(the){
+        console.log(the.parentNode.querySelector('input').value)
+        console.log(selectDate)
+        // the.parentNode.querySelector('input').value;
+      }
+      function csShow(the){
+        if (the.querySelector('.cs_selectBox').style.display=='block') {
+          the.querySelector('.cs_selectBox').style.display='none';
+        }else{
+          the.querySelector('.cs_selectBox').style.display='block'
+        }
+        
+      }
+      // 获取下拉值
+      function csSelect(the,value,key){
+		the.parentNode.parentNode.parentNode.querySelector('span').innerText=the.innerText;
+        
+        selectDate=key;
+		
+      }
+
+// 导航展开收起
+// document.querySelector('.cs_mobile_nav')
+function navGo(item,key){
+  console.log('item',item.classList)
+  if (item.classList.value.indexOf('cs_mobile_nav_close')>-1) {
+    item.classList.remove('cs_mobile_nav_close');
+    item.classList.add('cs_mobile_nav_open');
+  }else{
+    item.classList.remove('cs_mobile_nav_open');
+    item.classList.add('cs_mobile_nav_close');
+  }
+  console.log('key',key)
+}
+
+
+	// 导航展开收起
+	function turnFn(){
+	  var doc=document.querySelector('.cs_mobile_height')
+	  if (doc.classList.value.indexOf('cs_mobile_nav_close')>-1) {
+	    doc.classList.remove('cs_mobile_nav_close');
+	    doc.classList.add('cs_mobile_nav_open');
+	  }else{
+	    doc.classList.remove('cs_mobile_nav_open');
+	    doc.classList.add('cs_mobile_nav_close');
+	  }
+	}
+</script>
+
+</head>
+<body>
+
+	<!--header---开始-->
+	 
+	<!--header---结束-->
+
+
+
+
+
+				 <!-- 1级栏目  -->
+				 <!-- 2级栏目 -->
+				 <!-- 3级栏目 -->
+				 <!-- 4级栏目 -->
+<script type="text/javascript" src="/r/cms/cn.gov.bjggzyfw.www/js/query.js"></script>
+<script type="text/javascript">
+	$(function() {
+		Cms.channelViewCount("https://ggzyfw.beijing.gov.cn/cmsbj","486");
+		Cms.siteFlow("https://ggzyfw.beijing.gov.cn/cmsbj", location.href, document.referrer,"true");
+		$("#cmsContent").css("display","block");
+		$("#esContents").css("display","none");
+	});
+</script>
+<!--主体内容--开始-->
+<div class="content clearfix">
+	<div class="panel-search">
+		<ul class="xwzx-nav panel-search-jrgg">
+			<li class="nav01 on" val="xwzx1"> <a href="/jyxxggjtbyqs/index.html">公告公示</a></li>
+			<li class="nav02" val="xwzx2"> <a href="/jrkb01/index.html">今日开标</a></li>  			
+			<li class="nav03" val="xwzx3"> <a href="/xmcgxqgg/index.html">政府集中采购</a></li> 
+		</ul>
+		<script>
+			$(".xwzx-nav li").on("click", function() {
+				$(this).siblings().removeClass("on");
+				$(this).addClass("on");
+			})
+		</script>
+		<div class="sxtj_selected" >
+			<span class="sxtj_sub_title">业务类型：</span>
+			<ul class="panel-tab" style="overflow: hidden">
+				<li data-var="tab-gcjs"  class="tab-gcjs"  data-href="/jyxxggjtbyqs/index.html">
+					工程建设
+				</li>
+				<li data-var="tab-zfcg"   class="tab-zfcg" data-href="/jyxxcggg/index.html">
+					政府采购
+				</li>
+				<li data-var="tab-tdkyq"   class="tab-tdkyq on"  class="tab-tdkyq" data-href="/zpgcrgg/index.html">
+					土地使用权
+				</li>
+				<li data-var="tab-gycq"   class="tab-gycq" data-href="/jyxxswzcgpplxx/index.html">
+					国有产权
+				</li>
+				<li data-var="tab-kyq"   class="tab-kyq" data-href="/jyxxkyqcrgg/index.html">
+					矿业权
+				</li>
+				<li data-var="tab-tpf"  class="tab-tpf" data-href="/jyxxtpfjyjg/index.html">
+					碳排放权
+				</li>
+				<li data-var="tab-nccq"  class="tab-nccq" data-href="/jyxxnccqzbgg/index.html">
+					农村产权
+				</li>
+				<!-- <li data-var="tab-rjxx"   class="tab-rjxx" data-href="/jyxxrjxxzbgg/index.html" >
+					软件和信息服务
+				</li> -->
+				<li data-var="tab-gkbx"  class="tab-gkbx" data-href="/bxggktbx/index.html" >
+					比选采购
+				</li>
+				 <li data-var="tab-qt"   class="tab-yycg" data-href="/jyxxqtjygg/index.html" style="margin-right: 0 !important;">
+					其他
+				</li>
+			</ul>
+		</div>
+		<ul class="panel-tab2 clearfix" >
+			<li id="tab-tdkyq" style="border-bottom: 1px dashed #CCCCCC;">
+				<div class="title">项目类型：</div>
+				<ul class="panel-search2" >
+					<li  class="on" val='zpgcrgg'><a href="/zpgcrgg/index.html">招拍挂出让</a></li>
+					<li  class="" val='xycrcrgg'><a href="/xycrcrgg/index.html">协议出让</a></li>
+					<li  class="" val='hbcjzd'><a href="/hbcjzd/index.html">划拨</a></li>
+					<!--<li  class="" val='qtcrgg'><a href="/qtcrgg/index.html">其他</a></li>-->
+					<!-- <li class=" disabled"  val='kyq'><a href="/jyxxcrgg/index.html">矿业权</a></li>-->
+				</ul>
+			</li>
+			
+			
+			<li style="border-bottom: 1px dashed #CCCCCC;">
+					<div class="title">公示类型：</div>
+				<ul class="panel-search2">
+								<li class=""  >
+					 <a href="/zpgcrgg/index.html">出让公告</a></li> 
+								<li class="on"  >
+					 <a href="/zpgcjzd/index.html">成交宗地</a></li> 
+				</ul>
+			</li>
+			
+			
+			<li style="border-bottom: 1px dashed #CCCCCC;display: none;" id="glId">
+				<div class="title">公路类型：</div>
+				<ul class="panel-search2" id="extId4">
+					<li  val='1'>公路建设</li>
+					<li  val='2'>公路养护</li>
+					<li  val='3'>城市道路养护</li>
+					<!-- 2023年4月3日16:30:03  宣培确认隐藏掉 -->
+					<!--<li  val='4'>路网设施建设与运维</li>
+					<li  val='9'>其他</li> -->
+				</ul>
+			</li>
+			
+			<!-- 碳排放去掉时间选项 -->
+				<li id="tab-zfcg" style="border-bottom: 1px dashed #CCCCCC;">
+				    <div class="title">发布时间：</div>
+				    <ul class="panel-search2" id="extId3">
+					     <li  val='3'>近三天</li>
+					     <li  val='7'>近七天</li>
+					     <li  val='30'>近三十天</li>
+			     	</ul>
+			    </li>
+		</ul>
+		<script>
+			$(".panel-search li").on("click", function(e) {
+				e.stopPropagation();
+				if($(this).hasClass("disabled")){
+					return false;
+				}
+				$(this).siblings().removeClass("on");
+				$(this).addClass("on");
+				$(this).parent().siblings().removeClass("on");
+				
+			})
+			$(".panel-tab >li").on("click", function(e) {
+				e.stopPropagation();
+				if($(this).hasClass("disabled")){
+					return false;
+				}
+				var url=$(this).attr("data-href");
+				window.location.href=url;
+			})
+			
+		</script>
+		<form action="https://ggzyfw.beijing.gov.cn/elasticsearch/index.jsp" id="qform" method="get" target="_blank">
+			<input type="hidden" name="c1" value="jyxx" />
+			<input type="hidden" name="c2" id="c2" value="tdkyq"/>
+			<input type="hidden" name="c3" id="c3" value="tdsyqzpgcr"/>
+			<input type="hidden" name="c4" id="c4" value="zpgcjzd"/>
+			<input type="hidden" name="e" id="e" value=""  />
+			<input type="hidden" name="ext8" id="ext8" value=""  />
+			<input type="hidden" name="inDates" id="inDates" value=""  />
+			<input type="hidden" id="channelId" name="channelId" value="486"/>
+	        <div class="content-search">
+	            <input class="content-search1" placeholder="请输入关键字"  type="text" id="queryString" name="q"  value="" > 
+	            <div class="content-search2"  id="search_btn">检索</div>
+	        </div>
+		</form>
+	</div>
+	<div class="panel-search-m" >
+		<div class="panel-search-m-scroll">
+			<ul class="xwzx-nav panel-search-jrgg xwzx-nav-common">
+				<li class="nav04 on" val="xwzx1"> <a href="/jyxxggjtbyqs/index.html">公告公示</a></li>
+				<li class="nav02" val="xwzx2"> <a href="/jrkb01/index.html">今日开标</a></li>  			
+				<li class="nav03" val="xwzx3"> <a href="/xmcgxqgg/index.html">政府集中采购</a></li> 
+			</ul>
+		</div>
+		<script>
+			$(".xwzx-nav li").on("click", function() {
+				$(this).siblings().removeClass("on");
+				$(this).addClass("on");
+			})
+		</script>
+		<div>
+			<label>行业类型 :</label>
+			<select id="selHylx">
+				<option  value="/jyxxggjtbyqs/index.html">工程建设</option>
+				<option  value="/jyxxcggg/index.html">政府采购</option>
+				<option  selected="selected"  value="/zpgcrgg/index.html">土地使用权</option>
+				<option  value="/jyxxswzcgpplxx/index.html">国有产权</option>
+				<option  value="/jyxxkyqcrgg/index.html">矿业权</option>
+				<!-- <option  value="/jyxxrjxxzbgg/index.html">软件和信息化服务</option> -->
+				<option  value="/jyxxnccqzbgg/index.html">农村产权</option>
+				<option  value="/bxggktbx/index.html">比选采购</option>
+				<option  value="/jyxxqtjygg/index.html">其他</option>
+				
+			</select>
+		</div>
+			<!-- 土地矿业权 -->
+				<div>
+					<label>项目大类:</label>
+					<select id="selGslx">
+							<option   selected  value='/zpgcrgg/index.html'>招拍挂出让</option>
+							<option  value='/xycrcrgg/index.html'>协议出让</option>
+							<option  value='/hbcjzd/index.html'>划拨</option>
+							<!--<option  value='/jyxxcrgg/index.html'>矿业权</option>-->
+					</select>
+				</div>
+				<!-- 二级栏目-土地及矿业权 -->
+										<div>
+						<label>公示类型 :</label>
+					<select id="selGslx">
+
+							<option value="/zpgcrgg/index.html"> 出让公告</option> 
+							<option selected="selected" value="/zpgcjzd/index.html"> 成交宗地</option> 
+					</select>
+				</div>
+			
+		<!--  -->
+		<div>
+			<form action="https://ggzyfw.beijing.gov.cn/cmsbj/queryContent_jyxx.jspx" id="qform-m" target="_self"  method="get">
+			<div class="content-search">
+				<input class="content-search1" type="text"
+					id="title-m" name="title" placeholder="请输入关键字" >
+				<div class="content-search2" id="search_btn-m">检索</div>
+				<input type="hidden" id="channelId-m" name="channelId"
+					value="486" />
+				<input type="hidden" value="" name="e" id="e-m" />
+			</div>
+			</form>
+		</div>
+	</div>
+	<div class="sitemap">
+		<a href="/index.html"><img class="home"
+			src="/r/cms/cn.gov.bjggzyfw.www/images/home.png" />首页</a> > 公告公示 > 招拍挂出让  > 成交宗地
+		<script>
+			$(function() {
+				var path = "jyxx";
+				$(".mainbar li").removeClass("on");
+				$("#menu-" + path).addClass("on");
+			})
+			$("#search_btn").on("click", function() {
+				$("#qform").attr("action","https://ggzyfw.beijing.gov.cn/elasticsearch/index.jsp");
+				$("#qform").attr("target","_blank");
+				if(validate()){
+					$("#qform").submit();
+				}
+			});
+			function validate(){
+				var channelId=$("#channelId").val();
+				var c1 = $("#c1").val();
+				var c2 = $("#c2").val();
+				var c3 = $("#c3").val();
+				var c4 = $("#c4").val();
+				var e = $("#e").val();
+				var ext8 = $("#ext8").val();
+				//验证栏目Id
+				if(!isChannelId(channelId)){
+					alert("channelId参数值非法！");
+					return false;
+				}
+				if(c1!=""&&!isEnglish(c1)){
+					alert("c1参数值非法！");
+					return false;
+				}
+				if(c2!=""&&!isEnglish(c2)){
+					alert("c2参数值非法！");
+					return false;
+				}
+				if(c3!=""&&!isEnglish(c3)){
+					alert("c3参数值非法！");
+					return false;
+				}
+				if(c4!=""&&!isEnglish(c4)){
+					alert("c4参数值非法！");
+					return false;
+				}
+				if(e!=""&&!isEnglish(e)){
+					alert("e参数值非法！");
+					return false;
+				}
+				if(ext8!=""&&!isEnglish(ext8)){
+					alert("ext8参数值非法！");
+					return false;
+				}
+				var queryString = $("#queryString").val();
+				var htmlRegExp = /<[^>]+>/g;
+				if(htmlRegExp.test(queryString)){
+					alert("查询内容不能包含无效字符！");
+					return false;
+				}
+				return true;
+			}
+			function isChannelId(str) {
+			    var reg=/^[0-9]+$/;   /*定义验证表达式*/
+			    return reg.test(str);     /*进行验证*/
+			}
+			function isEnglish(str){
+				var reg=/^[A-Za-z0-9]+$/;
+				 return reg.test(str);
+			}
+			$(".content-search1").on("keydown", function(event) {
+				if (event.keyCode == 13) {
+					$("#search_btn").click();
+					return false;
+				}
+			})
+			
+			$("#extId li,#extId2 li,#extId5 li").click(function(){
+				
+				if($(this).hasClass("disabled")){
+					return;
+				}
+				$(this).siblings().removeClass("on");
+				$(this).addClass("on");
+				$("#e").val($(this).attr("val")); 
+				if("A03" == $("#e").val()){
+					$("#inDates").val("500"); 
+					if($("#channelId").val()!="284"){
+						$("#glId").css("display","block");
+					}else{
+						$("#glId").css("display","none");
+					}
+				}else{
+					$("#inDates").val(""); 
+					$("#glId").css("display","none");
+				}
+				
+				$("#ext8").val(""); 
+				$("#extId4 li").siblings().removeClass("on");
+				
+				
+				$("#extId3 li").siblings().removeClass("on");
+				getData();
+			});
+			$("#extId3 li").click(function(){
+				
+				if($(this).hasClass("disabled")){
+					return;
+				}
+				$(this).siblings().removeClass("on");
+				$(this).addClass("on");
+				$("#inDates").val($(this).attr("val")); 
+				
+				getData();
+			});
+			
+			$("#extId4 li").click(function(){
+				if($(this).hasClass("disabled")){
+					return;
+				}
+				$(this).siblings().removeClass("on");
+				$(this).addClass("on");
+				$("#ext8").val($(this).attr("val")); 
+				
+				$("#inDates").val("500"); 
+				$("#extId3 li").siblings().removeClass("on");
+				
+				getData();
+			});
+			
+			$("#selHylx,#selGslx").on("change",function(){
+				location.href=$(this).val();
+			})
+			$("#selXmlx").on("change",function(){
+				$("#e-m").val($(this).val()); 
+				$("#qform-m").submit();
+			})
+			$("#search_btn-m").on("click", function() {
+				var channelId=$("#channelId-m").val();
+				var title = $("#title-m").val();
+				var e = $("#e-m").val();
+				//验证栏目Id
+				if(!isChannelId(channelId)){
+					alert("channelId参数值非法！");
+					return ;
+				}
+				if(e!=""&&!isEnglish(e)){
+					alert("e参数值非法！");
+					return false;
+				}
+				var htmlRegExp = /<[^>]+>/g;
+				if(htmlRegExp.test(title)){
+					alert("查询内容不能包含无效字符！");
+					return ;
+				}
+				$("#qform-m").submit();
+			}); 
+			
+			
+		</script>
+	</div>
+	<div class="content-list" id="cmsContent">
+		<div class="content-title2">公告公示</div>
+		<ul class="article-listjy2">
+		
+				<div class="tr-jyxmmc">项目名称</div>
+				<!-- <div class="tr-jysc">公告首次发布日期</div> -->
+				<div class="tr-jyfbrq">发布日期</div>
+				<hr style="text-align:left !important;position:relative;width: 100%;border-bottom: 1px;">
+			<li>
+				<a target="_blank" href="/zpgcjzd/20260908/5702539.html" title="北京市通州区宋庄镇TZ01-0101-0002地块B1商业用地" class="divtitlejy">
+				<span style="overflow: auto;text-overflow: ellipsis;"><p style="float: left;">【通州区】[S110000C008018183]</p >
+				北京市通州区宋庄镇TZ01-0101-0002地块B1商业用地</a>
+				</span>
+				<div class="list-times1" style="width: 100px;text-indent: 30px;text-align: right;"><p style="float: right;">2026-09-08</p></div>
+							
+			</li>
+			<li>
+				<a target="_blank" href="/zpgcjzd/20260908/5702538.html" title="北京市通州区宋庄镇TZ01-0101-0001地块R2二类居住用地" class="divtitlejy">
+				<span style="overflow: auto;text-overflow: ellipsis;"><p style="float: left;">【通州区】[S110000C008018182]</p >
+				北京市通州区宋庄镇TZ01-0101-0001地块R2二类居住用地</a>
+				</span>
+				<div class="list-times1" style="width: 100px;text-indent: 30px;text-align: right;"><p style="float: right;">2026-09-08</p></div>
+							
+			</li>
+			<li>
+				<a target="_blank" href="/zpgcjzd/20260908/5702347.html" title="北京市丰台区南苑湿地城中村改造项目A区FT00-2301-0001地块B4综合性商业金融服务业用地" class="divtitlejy">
+				<span style="overflow: auto;text-overflow: ellipsis;"><p style="float: left;">【丰台区】[S110000C008018175]</p >
+				北京市丰台区南苑湿地城中村改造项目A区FT00-2301-0001地块B4综合性商业金融服务业用地</a>
+				</span>
+				<div class="list-times1" style="width: 100px;text-indent: 30px;text-align: right;"><p style="float: right;">2026-09-08</p></div>
+							
+			</li>
+			<li>
+				<a target="_blank" href="/zpgcjzd/20260903/5696731.html" title="北京市顺义区后沙峪镇温榆河生态走廊周边用地土地一级开发项目SY00-2101-2001、2002地块二类城镇住宅用地、其他商业服务业用地" class="divtitlejy">
+				<span style="overflow: auto;text-overflow: ellipsis;"><p style="float: left;">【顺义区】[S110000C008018168]</p >
+				北京市顺义区后沙峪镇温榆河生态走廊周边用地土地一级开发项目SY00-2101-2001、2002地块二类城镇住宅用地、其他商业服务业用地</a>
+				</span>
+				<div class="list-times1" style="width: 100px;text-indent: 30px;text-align: right;"><p style="float: right;">2026-09-03</p></div>
+							
+			</li>
+			<li>
+				<a target="_blank" href="/zpgcjzd/20260827/5687413.html" title="北京市通州区老城平房棚户区改造项目一期土桥东西地块FZX-0306-6037地块R2二类居住用地" class="divtitlejy">
+				<span style="overflow: auto;text-overflow: ellipsis;"><p style="float: left;">【通州区】[S110000C008018134]</p >
+				北京市通州区老城平房棚户区改造项目一期土桥东西地块FZX-0306-6037地块R2二类居住用地</a>
+				</span>
+				<div class="list-times1" style="width: 100px;text-indent: 30px;text-align: right;"><p style="float: right;">2026-08-27</p></div>
+							
+			</li>
+			<li>
+				<a target="_blank" href="/zpgcjzd/20260820/5676648.html" title="北京市昌平区昌平新城东区十期土地一级开发项目CP00-1101-0052、0054地块其他多功能用地" class="divtitlejy">
+				<span style="overflow: auto;text-overflow: ellipsis;"><p style="float: left;">【昌平区】[S110000C008018112]</p >
+				北京市昌平区昌平新城东区十期土地一级开发项目CP00-1101-0052、0054地块其他多功能用地</a>
+				</span>
+				<div class="list-times1" style="width: 100px;text-indent: 30px;text-align: right;"><p style="float: right;">2026-08-20</p></div>
+							
+			</li>
+			<li>
+				<a target="_blank" href="/zpgcjzd/20260812/5666217.html" title="北京市石景山区苹果园交通枢纽商务区土地一级开发项目1604-631-1地块二类居住用地" class="divtitlejy">
+				<span style="overflow: auto;text-overflow: ellipsis;"><p style="float: left;">【石景山区】[S110000C008018086]</p >
+				北京市石景山区苹果园交通枢纽商务区土地一级开发项目1604-631-1地块二类居住用地</a>
+				</span>
+				<div class="list-times1" style="width: 100px;text-indent: 30px;text-align: right;"><p style="float: right;">2026-08-12</p></div>
+							
+			</li>
+			<li>
+				<a target="_blank" href="/zpgcjzd/20260812/5666069.html" title="北京市海淀区四季青镇西郊机场周边及沿线（西冉、田村、常青片区）城中村改造项目HD00-1408-0034、0049、0040地块二类城镇住宅用地、商业服务业用地" class="divtitlejy">
+				<span style="overflow: auto;text-overflow: ellipsis;"><p style="float: left;">【海淀区】[S110000C008018087]</p >
+				北京市海淀区四季青镇西郊机场周边及沿线（西冉、田村、常青片区）城中村改造项目HD00-1408-0034、0049、0040地块二类城镇住宅用地、商业服务业用地</a>
+				</span>
+				<div class="list-times1" style="width: 100px;text-indent: 30px;text-align: right;"><p style="float: right;">2026-08-12</p></div>
+							
+			</li>
+			<li>
+				<a target="_blank" href="/zpgcjzd/20260812/5665768.html" title="北京市石景山区刘娘府综合改造A1地块土地一级开发项目1604-674地块二类居住用地" class="divtitlejy">
+				<span style="overflow: auto;text-overflow: ellipsis;"><p style="float: left;">【石景山区】[S110000C008018085]</p >
+				北京市石景山区刘娘府综合改造A1地块土地一级开发项目1604-674地块二类居住用地</a>
+				</span>
+				<div class="list-times1" style="width: 100px;text-indent: 30px;text-align: right;"><p style="float: right;">2026-08-12</p></div>
+							
+			</li>
+			<li>
+				<a target="_blank" href="/zpgcjzd/20260812/5665769.html" title="北京市大兴区大兴新城西片区一期B组团土地一级开发项目DX00-0407-0019地块B1商业用地" class="divtitlejy">
+				<span style="overflow: auto;text-overflow: ellipsis;"><p style="float: left;">【大兴区】[S110000C008018088]</p >
+				北京市大兴区大兴新城西片区一期B组团土地一级开发项目DX00-0407-0019地块B1商业用地</a>
+				</span>
+				<div class="list-times1" style="width: 100px;text-indent: 30px;text-align: right;"><p style="float: right;">2026-08-12</p></div>
+							
+			</li>
+		</ul>
+		<div class="clear-10"></div>
+		<div class="pagesite">
+<div class="pages">
+
+<ul class="pages-list">
+ 	
+		<li style="background: none !important;"><a href="###" style="color:#666;">共47条记录 1/5页</a></li>
+	 		
+          <!--  			
+ -->
+
+           		<li><a href="###" onclick="location.href=encodeURI('index_2.html');">下一页</a></li>
+           <li style="background: none !important;color:#666;">
+				&nbsp;第<select onChange="if(this.value==1){location.href=encodeURI('index.html')}else{location.href=encodeURI('index_'+this.value+'.html')}this.disabled='disabled'">
+			  <option value="1" selected="selected">1</option>
+			  <option value="2" >2</option>
+			  <option value="3" >3</option>
+			  <option value="4" >4</option>
+			  <option value="5" >5</option>
+			</select>页
+			</li>
+ </ul>
+
+</div>
+<script>
+	$(".pages-list li").each(function() {
+		var eachChild = $(this);
+		if(eachChild.text()==1) {
+			eachChild.addClass("selected");
+		}
+	});
+</script>
+
+
+</div>
+	</div>
+	<!-- 全文检索列表页 -->
+	<div class="content-list" id="esContents">
+		<div id="esContent"></div>
+		<div class="clear-10"></div>
+		<div class="pagesite" id="pagesiteId"></div>		
+	</div>
+	</div>
+﻿<!--footer---开始-->
+<script type="text/javascript" src="/r/cms/cn.gov.bjggzyfw.www/js/footer.js"></script>
+</body></html>
