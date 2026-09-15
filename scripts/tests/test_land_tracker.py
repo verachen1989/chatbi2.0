@@ -1,5 +1,7 @@
 import argparse
 import copy
+import contextlib
+import io
 import json
 import sys
 import tempfile
@@ -152,7 +154,7 @@ class LandTrackerTests(unittest.TestCase):
             source = '<strong id="tableCount">1 条</strong><script>const LAND_ROWS = ' + json.dumps([self.old]) + ';</script>'
             page.write_text(source)
             args = argparse.Namespace(root=root, report_dir=root / "report", snapshot_dir=None, apply=True)
-            with patch.object(land.Fetcher, "get", side_effect=land.ValidationError("network failed")):
+            with contextlib.redirect_stdout(io.StringIO()), patch.object(land.Fetcher, "get", side_effect=land.ValidationError("network failed")):
                 self.assertEqual(land.run(args), 1)
             self.assertEqual(page.read_text(), source)
             self.assertFalse((root / land.SOURCES).exists())

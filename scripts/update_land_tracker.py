@@ -272,15 +272,15 @@ class Fetcher:
                 if urlparse(response.url).hostname != "ggzyfw.beijing.gov.cn":
                     raise ValidationError("Official page redirected to a different host")
                 content = response.content.decode("utf-8-sig")
-            except requests.exceptions.SSLError:
+            except (requests.exceptions.ConnectionError, requests.exceptions.Timeout):
                 self.use_curl = True
-                # Some local OpenSSL builds reject this site's EC handshake.
-                # curl uses the system TLS stack; certificate verification stays on.
-                result = subprocess.run(["curl", "--fail", "--silent", "--show-error", "--proto", "=https",
+                # System TLS and IPv4 also handle EC/IPv6 failures on some runners.
+                # Certificate verification stays on; no proxy or guessed IP is used.
+                result = subprocess.run(["curl", "--ipv4", "--fail", "--silent", "--show-error", "--proto", "=https",
                                          "--connect-timeout", "10", "--max-time", "45", "--retry", "2", url],
                                         capture_output=True, timeout=150)
                 if result.returncode:
-                    raise ValidationError("TLS fallback failed: " + result.stderr.decode(errors="replace"))
+                    raise ValidationError("IPv4/system TLS fallback failed: " + result.stderr.decode(errors="replace"))
                 content = result.stdout.decode("utf-8-sig")
         self.output.mkdir(parents=True, exist_ok=True)
         (self.output / (name + suffix)).write_text(content, encoding="utf-8")
