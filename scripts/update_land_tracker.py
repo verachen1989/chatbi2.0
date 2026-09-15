@@ -277,7 +277,7 @@ class Fetcher:
                 # System TLS and IPv4 also handle EC/IPv6 failures on some runners.
                 # Certificate verification stays on; no proxy or guessed IP is used.
                 result = subprocess.run(["curl", "--ipv4", "--curves", "prime256v1", "--fail", "--silent", "--show-error", "--proto", "=https",
-                                         "--connect-timeout", "10", "--max-time", "45", "--retry", "2", url],
+                                         "--connect-timeout", "10", "--max-time", "45", "--retry", "2", "--retry-all-errors", url],
                                         capture_output=True, timeout=150)
                 if result.returncode:
                     raise ValidationError("IPv4/system TLS fallback failed: " + result.stderr.decode(errors="replace"))
