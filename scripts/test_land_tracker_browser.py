@@ -31,6 +31,21 @@ def main():
                        if field != "projectName" and r.get(field) and item.get("status") == "conflict")
         assert page.locator(".evidence-link").count() == confirmed
         assert page.locator(".review-flag").count() == conflicts
+        preview = next((r for r in expected if r.get("fieldEvidence", {}).get("planningPermit", {}).get("record")
+                        and r["fieldEvidence"]["planningPermit"]["status"] == "confirmed"), None)
+        if preview:
+            page.locator(f'[data-evidence-seq="{preview["seq"]}"]').click()
+            assert page.locator("#evidenceDialog").is_visible()
+            assert page.locator("#evidenceContent").inner_text().find(preview["fieldEvidence"]["planningPermit"]["record"]["permit"]) >= 0
+            assert page.url == args.page.resolve().as_uri()
+            page.screenshot(path=str(args.output / "permit-desktop.png"))
+            page.set_viewport_size({"width": 390, "height": 844})
+            assert page.locator("#evidenceClose").is_visible()
+            assert page.locator("#evidenceDialog").evaluate("el => el.scrollWidth <= el.clientWidth")
+            page.screenshot(path=str(args.output / "permit-mobile.png"))
+            page.keyboard.press("Escape")
+            assert not page.locator("#evidenceDialog").is_visible()
+            page.set_viewport_size({"width": 1440, "height": 900})
         dates = page.locator("#tableBody tr td:nth-child(7)").all_text_contents()
         assert dates == sorted(dates, reverse=True)
         page.locator("#dealDateSort").click()

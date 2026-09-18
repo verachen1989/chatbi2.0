@@ -68,6 +68,24 @@ class EnrichmentTests(unittest.TestCase):
         self.assertEqual(changes, [])
         self.assertEqual(len(review), 2)
 
+    def test_planning_preview_keeps_official_record_not_old_display(self):
+        row = dict(self.row, planningPermit="26/01/05")
+        record = dict(self.record, raw={"fzjg": "通州分局", "jianZhuGuiMo": "83354.849平方米"})
+        result, _, _, _ = e.reconcile([row], [record], date(2026, 9, 18))
+        preview = result[0]["fieldEvidence"]["planningPermit"]
+        self.assertEqual(preview["status"], "conflict")
+        self.assertEqual(preview["record"]["date"], "26/02/06")
+        self.assertEqual(preview["record"]["name"], record["name"])
+        self.assertEqual(preview["record"]["developer"], record["developer"])
+        self.assertEqual(preview["record"]["issuer"], "通州分局")
+        self.assertEqual(preview["url"], record["url"])
+        self.assertEqual(result[0]["planningPermit"], "26/01/05")
+
+    def test_empty_planning_evidence_has_no_invented_preview(self):
+        preview = e.page_evidence("planningPermit", {"status": "legacy_unverified", "records": [], "value": "26/02/06"})
+        self.assertNotIn("record", preview)
+        self.assertEqual(preview["url"], "")
+
     def test_preserve_old_conflict_and_mark_it(self):
         row = dict(self.row, planningPermit="26/01/05")
         result, changes, review, proof = e.reconcile([row], [self.record], date(2026, 9, 18))

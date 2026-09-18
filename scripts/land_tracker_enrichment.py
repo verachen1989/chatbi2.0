@@ -445,6 +445,20 @@ def collect_identities(client, manifest, rows, report):
     return records
 
 
+def page_evidence(field, item):
+    record = next(iter(item.get("records", [])), {})
+    result = {"status": item["status"], "candidate": item.get("value", "") if record else "",
+              "url": record.get("url", ""), "permit": record.get("permit", "")}
+    if field == "projectName":
+        result["nameType"] = item.get("nameType", "")
+    if field == "planningPermit" and record:
+        result["record"] = {key: record.get(key, "") for key in ("name", "developer", "district", "location", "permit")}
+        result["record"].update(date=parse_date(record["date"]).strftime("%y/%m/%d"),
+                                issuer=record.get("raw", {}).get("fzjg", ""),
+                                area=record.get("raw", {}).get("jianZhuGuiMo", ""))
+    return result
+
+
 def reconcile(rows, records, today, previous=None):
     result = copy.deepcopy(rows)
     changes, review, evidence = [], [], {}
@@ -503,11 +517,7 @@ def reconcile(rows, records, today, previous=None):
                 fields.setdefault(field, {})["status"] = "conflict"
                 review.append({"landCode": key, "field": field, "reason": "存量节点早于成交，不能视为已核实", "before": old})
         evidence[key] = {"fields": fields}
-        row["fieldEvidence"] = {field: {"status": item["status"], "candidate": item.get("value", "") if item.get("records") else "",
-                                        "url": item.get("records", [{}])[0].get("url", "") if item.get("records") else "",
-                                        "permit": item.get("records", [{}])[0].get("permit", "") if item.get("records") else "",
-                                        **({"nameType": item.get("nameType", "")} if field == "projectName" else {})}
-                                for field, item in fields.items()}
+        row["fieldEvidence"] = {field: page_evidence(field, item) for field, item in fields.items()}
     return result, changes, review, evidence
 
 
