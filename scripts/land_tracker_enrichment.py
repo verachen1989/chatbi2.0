@@ -503,6 +503,11 @@ def reconcile(rows, records, today, previous=None):
                     # Official names are retained as aliases, not used to erase marketing names.
                     if field == "projectName":
                         item["status"] = "alias_confirmed"
+                    elif field in SOURCE_FIELDS.values():
+                        row[field] = value
+                        changes.append({"landCode": key, "field": field, "before": old, "after": value,
+                                        "reason": "以已匹配的有效住宅官方记录日期为准",
+                                        "urls": [r["url"] for r in item["records"]]})
                     else:
                         item["status"] = "conflict"
                         review.append({"landCode": key, "field": field, "reason": "旧值与官方候选不一致，保留旧值待核", "before": old, "candidate": value, "urls": [r["url"] for r in item["records"]]})
@@ -513,9 +518,10 @@ def reconcile(rows, records, today, previous=None):
             elif old:
                 old_evidence = previous.get(key, {}).get("fields", {}).get(field, {})
                 fields[field] = dict(old_evidence, status="not_reconfirmed") if old_evidence.get("records") else {"value": old, "displayValue": old, "status": "legacy_unverified", "records": []}
-            if old and field in SOURCE_FIELDS.values() and parse_date(old) < deal:
+            current = row.get(field, "")
+            if current and field in SOURCE_FIELDS.values() and parse_date(current) < deal:
                 fields.setdefault(field, {})["status"] = "conflict"
-                review.append({"landCode": key, "field": field, "reason": "存量节点早于成交，不能视为已核实", "before": old})
+                review.append({"landCode": key, "field": field, "reason": "存量节点早于成交，不能视为已核实", "before": current})
         evidence[key] = {"fields": fields}
         row["fieldEvidence"] = {field: page_evidence(field, item) for field, item in fields.items()}
     return result, changes, review, evidence
@@ -547,13 +553,13 @@ def enrich(rows, root, report_dir, today, replay=None, resume=None):
     report_dir.mkdir(parents=True, exist_ok=True)
     (report_dir / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
     (report_dir / "candidates.json").write_text(json.dumps(records, ensure_ascii=False, indent=2) + "\n")
-    lines = ["# 项目与证照采集报告", "", f"状态：{report['status']}；候选 {len(records)} 条；匹配 {report['matchedCount']} 条；补填 {len(report['changes'])} 项；待核 {len(report['review'])} 项；错误 {len(report['errors'])} 项", ""]
+    lines = ["# 项目与证照采集报告", "", f"状态：{report['status']}；候选 {len(records)} 条；匹配 {report['matchedCount']} 条；更新 {len(report['changes'])} 项；待核 {len(report['review'])} 项；错误 {len(report['errors'])} 项", ""]
     labels = dict(zip(FIELDS, ("项目名称", "品牌", "规划许可", "建设方案", "施工许可", "首个预售", "首个竣工备案")))
-    lines += ["| 字段 | 已有值 | 本轮补填 | 确认一致 | 官方别名 | 冲突 | 未重新核实 |", "| --- | ---: | ---: | ---: | ---: | ---: | ---: |"]
+    lines += ["| 字段 | 已有值 | 本轮更新 | 官方已确认 | 官方别名 | 冲突 | 未重新核实 |", "| --- | ---: | ---: | ---: | ---: | ---: | ---: |"]
     for field, counts in report["fieldCoverage"].items():
         lines.append(f"| {labels[field]} | {counts['filled']} | {counts['added']} | {counts['confirmed']} | {counts['alias_confirmed']} | {counts['conflict']} | {counts['legacy_unverified'] + counts['not_reconfirmed']} |")
     lines += ["", "‘已有值’包含历史值，不代表全部已核实。待核列表也包含非住宅等排除记录，不等于冲突字段数。", ""]
-    for title, key in (("补填", "changes"), ("待核", "review"), ("采集错误", "errors")):
+    for title, key in (("更新（补填或按官方日期修正）", "changes"), ("待核", "review"), ("采集错误", "errors")):
         lines += ["## " + title, ""] + ["- " + json.dumps(item, ensure_ascii=False) for item in report[key]] + [""]
     (report_dir / "report.md").write_text("\n".join(lines), encoding="utf-8")
     payload = {"schemaVersion": 1, "collectionMode": mode, "checkedAt": datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds"), "records": evidence}

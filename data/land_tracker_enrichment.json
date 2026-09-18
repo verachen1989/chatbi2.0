@@ -2556,7 +2556,7 @@
           "value": "25/07/10"
         },
         "planningPermit": {
-          "displayValue": "25/04/09",
+          "displayValue": "26/02/12",
           "records": [
             {
               "amendments": {
@@ -2618,7 +2618,7 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "26/02/12"
         },
         "projectName": {
@@ -5030,7 +5030,7 @@
           "value": "中海"
         },
         "constructionPermit": {
-          "displayValue": "25/10/23",
+          "displayValue": "25/11/10",
           "records": [
             {
               "date": "2025-11-10",
@@ -5067,7 +5067,7 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "25/11/10"
         },
         "constructionPlan": {
@@ -5104,7 +5104,7 @@
           "value": "25/05/29"
         },
         "firstPresale": {
-          "displayValue": "24/03/16",
+          "displayValue": "25/06/30",
           "records": [
             {
               "approvedPart": "1#住宅楼1层至18层全部住宅；2#住宅楼1层至18层全部住宅；3#住宅楼1层至18层全部住宅；4#住宅楼1层至9层全部住宅；5#住宅楼1层至11层全部住宅；6#住宅楼1层至8层全部住宅",
@@ -5163,7 +5163,7 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "25/06/30"
         },
         "planningPermit": {
@@ -6831,7 +6831,7 @@
           "value": "26/03/21"
         },
         "planningPermit": {
-          "displayValue": "26/02/13",
+          "displayValue": "26/02/14",
           "records": [
             {
               "amendments": {
@@ -6952,7 +6952,7 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "26/02/14"
         },
         "projectName": {
@@ -7588,7 +7588,7 @@
           "value": "26/03/21"
         },
         "planningPermit": {
-          "displayValue": "26/02/12",
+          "displayValue": "26/02/11",
           "records": [
             {
               "amendments": {
@@ -7650,7 +7650,7 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "26/02/11"
         },
         "projectName": {
@@ -8442,7 +8442,7 @@
           "value": "保利"
         },
         "constructionPermit": {
-          "displayValue": "25/06/25",
+          "displayValue": "25/06/12",
           "records": [
             {
               "date": "2025-06-12",
@@ -8513,7 +8513,7 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "25/06/12"
         },
         "constructionPlan": {
@@ -8575,7 +8575,7 @@
           "value": "25/05/16"
         },
         "firstPresale": {
-          "displayValue": "25/05/30",
+          "displayValue": "25/05/23",
           "records": [
             {
               "approvedPart": "1#住宅楼1层至16层全部住宅、3#住宅楼1层至25层全部住宅、5#住宅楼1层至11层全部住宅、6#住宅楼1层至11全部住宅、7#住宅楼1层至11全部住宅",
@@ -8870,7 +8870,7 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "25/05/23"
         },
         "planningPermit": {
@@ -11707,7 +11707,7 @@
           "value": "建发"
         },
         "constructionPermit": {
-          "displayValue": "25/05/06",
+          "displayValue": "25/05/08",
           "records": [
             {
               "date": "2025-05-08",
@@ -11744,7 +11744,7 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "25/05/08"
         },
         "constructionPlan": {
@@ -12539,7 +12539,7 @@
           "value": "保利"
         },
         "constructionPermit": {
-          "displayValue": "25/12/24",
+          "displayValue": "26/05/14",
           "records": [
             {
               "date": "2026-05-14",
@@ -12610,7 +12610,7 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "26/05/14"
         },
         "constructionPlan": {
@@ -13636,7 +13636,7 @@
           "value": "25/09/30"
         },
         "firstPresale": {
-          "displayValue": "26/06/06",
+          "displayValue": "25/11/27",
           "records": [
             {
               "approvedPart": "1#住宅楼1层至9层全部住宅；2#住宅楼1层至9层全部住宅；3#住宅楼1层至9层全部住宅；4#住宅楼1层至10层全部住宅；5#住宅楼1层至10层全部住宅；6#住宅楼1层至10层全部住宅；7#住宅楼1层至11层全部住宅；8#住宅楼1层至11层全部住宅；10#住宅楼1层至10层全部住宅；11#住宅楼1层至10层全部住宅；12#住宅楼1层至6层全部住宅；13#住宅楼1层至11层全部住宅",
@@ -13807,7 +13807,7 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "25/11/27"
         },
         "planningPermit": {
@@ -14098,7 +14098,7 @@
           "value": "26/07/28"
         },
         "constructionPlan": {
-          "displayValue": "26/06/05",
+          "displayValue": "26/07/14",
           "records": [
             {
               "date": "2026-07-14",
@@ -14124,7 +14124,7 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "26/07/14"
         },
         "firstPresale": {
@@ -15292,7 +15292,7 @@
           "value": "25/09/22"
         },
         "planningPermit": {
-          "displayValue": "25/08/22",
+          "displayValue": "25/07/30",
           "records": [
             {
               "amendments": {
@@ -15472,7 +15472,7 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "25/07/30"
         },
         "projectName": {
@@ -16447,7 +16447,7 @@
           "value": "25/06/03"
         },
         "firstPresale": {
-          "displayValue": "25/10/25",
+          "displayValue": "25/06/26",
           "records": [
             {
               "approvedPart": "1-1#住宅楼1层至11层全部住宅、1-3#住宅楼1层至18层全部住宅、1-5#住宅楼1层至11层全部住宅、1-6#住宅楼1层至11层全部住宅、1-7#住宅楼1层至11层全部住宅",
@@ -16798,11 +16798,11 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "25/06/26"
         },
         "planningPermit": {
-          "displayValue": "25/08/15",
+          "displayValue": "25/05/30",
           "records": [
             {
               "amendments": {
@@ -16923,7 +16923,7 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "25/05/30"
         },
         "projectName": {
@@ -20652,7 +20652,7 @@
     "京土储挂(顺)[2025]004号": {
       "fields": {
         "constructionPermit": {
-          "displayValue": "26/01/15",
+          "displayValue": "25/09/01",
           "records": [
             {
               "date": "2025-09-01",
@@ -20723,11 +20723,11 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "25/09/01"
         },
         "constructionPlan": {
-          "displayValue": "26/01/08",
+          "displayValue": "25/09/04",
           "records": [
             {
               "date": "2025-09-04",
@@ -20782,7 +20782,7 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "25/09/04"
         },
         "firstPresale": {
@@ -20922,7 +20922,7 @@
           "value": "25/09/13"
         },
         "planningPermit": {
-          "displayValue": "25/12/31",
+          "displayValue": "25/07/29",
           "records": [
             {
               "amendments": {
@@ -21102,7 +21102,7 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "25/07/29"
         },
         "projectName": {
@@ -21361,7 +21361,7 @@
           "value": "25/09/30"
         },
         "firstPresale": {
-          "displayValue": "26/06/15",
+          "displayValue": "25/11/27",
           "records": [
             {
               "approvedPart": "1#住宅楼-2层至11层全部房屋； 2#住宅楼-2层至11层全部房屋；3#住宅楼-2层至11层全部房屋；4#住宅楼-2层至11层全部房屋；5#住宅楼-2层至11层全部房屋；6#住宅楼-2层至8层全部房屋；7#住宅楼-2层至11层全部房屋；8#住宅楼-2层至11层全部房屋；9#住宅楼-2层至7层全部房屋；10#住宅楼-2层至9层全部房屋；地下车库-2层-1001至-1203",
@@ -21428,7 +21428,7 @@
               "valid": true
             }
           ],
-          "status": "conflict",
+          "status": "confirmed",
           "value": "25/11/27"
         },
         "planningPermit": {

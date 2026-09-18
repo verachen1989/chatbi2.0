@@ -68,30 +68,65 @@ class EnrichmentTests(unittest.TestCase):
         self.assertEqual(changes, [])
         self.assertEqual(len(review), 2)
 
-    def test_planning_preview_keeps_official_record_not_old_display(self):
+    def test_planning_preview_and_table_use_official_date(self):
         row = dict(self.row, planningPermit="26/01/05")
         record = dict(self.record, raw={"fzjg": "通州分局", "jianZhuGuiMo": "83354.849平方米"})
         result, _, _, _ = e.reconcile([row], [record], date(2026, 9, 18))
         preview = result[0]["fieldEvidence"]["planningPermit"]
-        self.assertEqual(preview["status"], "conflict")
+        self.assertEqual(preview["status"], "confirmed")
         self.assertEqual(preview["record"]["date"], "26/02/06")
         self.assertEqual(preview["record"]["name"], record["name"])
         self.assertEqual(preview["record"]["developer"], record["developer"])
         self.assertEqual(preview["record"]["issuer"], "通州分局")
         self.assertEqual(preview["url"], record["url"])
-        self.assertEqual(result[0]["planningPermit"], "26/01/05")
+        self.assertEqual(result[0]["planningPermit"], "26/02/06")
 
     def test_empty_planning_evidence_has_no_invented_preview(self):
         preview = e.page_evidence("planningPermit", {"status": "legacy_unverified", "records": [], "value": "26/02/06"})
         self.assertNotIn("record", preview)
         self.assertEqual(preview["url"], "")
 
-    def test_preserve_old_conflict_and_mark_it(self):
+    def test_official_dates_replace_earlier_or_later_legacy_values(self):
+        for kind, field in e.SOURCE_FIELDS.items():
+            for old in ("26/01/05", "26/03/05", "24/03/16"):
+                with self.subTest(field=field, old=old):
+                    row = dict(self.row, **{field: old})
+                    record = dict(self.record, kind=kind)
+                    result, changes, review, proof = e.reconcile([row], [record], date(2026, 9, 18))
+                    self.assertEqual(result[0][field], "26/02/06")
+                    change = next(c for c in changes if c["field"] == field)
+                    self.assertEqual(change["before"], old)
+                    self.assertEqual(change["after"], "26/02/06")
+                    self.assertEqual(change["urls"], [record["url"]])
+                    self.assertEqual(review, [])
+                    item = proof[e.code_key(row["landCode"])]["fields"][field]
+                    self.assertEqual(item["status"], "confirmed")
+                    self.assertEqual(item["displayValue"], item["value"])
+                    self.assertEqual(row[field], old)
+                    again = e.reconcile(result, [record], date(2026, 9, 18), proof)
+                    self.assertEqual(again[1], [])
+                    self.assertEqual(again[0], result)
+
+    def test_ineligible_official_records_cannot_replace_legacy_date(self):
         row = dict(self.row, planningPermit="26/01/05")
-        result, changes, review, proof = e.reconcile([row], [self.record], date(2026, 9, 18))
-        self.assertEqual(result[0]["planningPermit"], "26/01/05")
+        cases = [dict(self.record, valid=False), dict(self.record, residential=False),
+                 dict(self.record, date="2025-01-01"), dict(self.record, date="2027-01-01"),
+                 dict(self.record, landCode="another-land")]
+        for record in cases:
+            with self.subTest(record=record):
+                result, changes, _, _ = e.reconcile([row], [record], date(2026, 9, 18))
+                self.assertEqual(result[0]["planningPermit"], row["planningPermit"])
+                self.assertEqual(changes, [])
+                self.assertNotEqual(result[0]["fieldEvidence"]["planningPermit"]["status"], "confirmed")
+
+    def test_missing_official_record_does_not_clear_date_or_reconfirm_old_candidate(self):
+        row = dict(self.row, planningPermit="26/01/05")
+        previous = {self.record["landCode"]: {"fields": {"planningPermit": {
+            "status": "conflict", "value": "26/02/06", "records": [self.record]}}}}
+        result, changes, _, _ = e.reconcile([row], [], date(2026, 9, 18), previous)
+        self.assertEqual(result[0]["planningPermit"], row["planningPermit"])
         self.assertEqual(changes, [])
-        self.assertEqual(proof[e.code_key(row["landCode"])]["fields"]["planningPermit"]["status"], "conflict")
+        self.assertEqual(result[0]["fieldEvidence"]["planningPermit"]["status"], "not_reconfirmed")
 
     def test_official_alias_does_not_erase_marketing_name(self):
         row = dict(self.row, projectName="中海九树满和")
