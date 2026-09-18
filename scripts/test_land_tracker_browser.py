@@ -25,6 +25,12 @@ def main():
         page.goto(args.page.resolve().as_uri())
         rows = page.locator("#tableBody tr")
         assert rows.count() == len(expected)
+        confirmed = sum(1 for r in expected for field, item in r.get("fieldEvidence", {}).items()
+                        if field != "projectName" and r.get(field) and item.get("status") == "confirmed" and item.get("url"))
+        conflicts = sum(1 for r in expected for field, item in r.get("fieldEvidence", {}).items()
+                       if field != "projectName" and r.get(field) and item.get("status") == "conflict")
+        assert page.locator(".evidence-link").count() == confirmed
+        assert page.locator(".review-flag").count() == conflicts
         dates = page.locator("#tableBody tr td:nth-child(7)").all_text_contents()
         assert dates == sorted(dates, reverse=True)
         page.locator("#dealDateSort").click()

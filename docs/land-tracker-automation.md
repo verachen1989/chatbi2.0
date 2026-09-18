@@ -4,7 +4,7 @@
 
 入口：[北京市公共资源交易服务平台 / 招拍挂出让 / 成交宗地](https://ggzyfw.beijing.gov.cn/zpgcjzd/index.html)。公开查询不需要登录综合交易系统。
 
-每日检查当前公开列表的所有分页，逐条读取详情。自动更新地块名称、地块编号、行政区、成交日期、竞得人、成交金额和综合楼面价。项目名称、板块、品牌及五类工程证照节点沿用现有页面，需通过其他官方来源另外核验，本程序不推断。
+每日检查当前公开列表的所有分页，逐条读取详情。成交采集阶段自动更新地块名称、地块编号、行政区、成交日期、竞得人、成交金额和综合楼面价。独立的补充采集阶段核对项目名称、品牌及五类工程证照节点，规则见[项目与证照补充采集](land-tracker-enrichment.md)。板块仍保留人工口径，不自动推断。
 
 现有 HTML 的 `LAND_ROWS` 是历史台账及人工补充字段的基准；`data/land_tracker_sources.json` 保存采集到的官方来源和原始字段。页面仍可直接用本地文件打开，地图仍依赖联网。
 
@@ -36,7 +36,7 @@
 
 每天北京时间 08:30 自动执行，GitHub 调度可能延迟。更新采集代码时也会运行一次。默认分支需包含该工作流，GitHub Actions 需保持启用。公开仓库长期无活动时，GitHub 可能暂停定时任务，需在 Actions 中重新启用。
 
-流程：安装依赖 → 解析/合并测试 → 联网采集并校验 → 浏览器回归 → 提交页面和来源 → 请求 Pages 构建 → 对比线上 HTML 摘要。
+流程：安装依赖 → 解析/合并测试 → 成交采集并校验 → 项目与证照补充采集并校验 → 浏览器回归 → 提交页面和来源 → 请求 Pages 构建 → 对比线上 HTML 摘要。任一采集阶段失败均不提交、不发布。
 
 进入 Actions，选择工作流，点击 **Run workflow**：勾选 `dry_run` 只生成报告，取消勾选会在全部校验通过后更新。每次运行的 Summary 展示新增、修改、待核和错误；Artifacts 中保存原始 HTML、差异报告、拟更新页与桌面/手机截图，保留 30 天。
 
@@ -47,8 +47,9 @@
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -r scripts/requirements-land-tracker.txt
-.venv/bin/python -m unittest discover -s scripts/tests -p test_land_tracker.py -v
+.venv/bin/python -m unittest discover -s scripts/tests -p 'test_land_tracker*.py' -v
 .venv/bin/python scripts/update_land_tracker.py --dry-run
+.venv/bin/python scripts/update_land_tracker_enrichment.py --page reports/land-tracker/proposed.html --dry-run
 ```
 
 查看 `reports/land-tracker/report.md`，逐条点击来源核对；`report.json` 包含完整原始字段。

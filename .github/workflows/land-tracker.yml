@@ -17,7 +17,11 @@ on:
       - 'scripts/*land_tracker*.py'
       - 'scripts/requirements-land-tracker.txt'
       - 'scripts/tests/test_land_tracker.py'
+      - 'scripts/tests/test_land_tracker_enrichment.py'
+      - 'scripts/tests/test_land_tracker_ui.cjs'
       - 'scripts/tests/fixtures/land_tracker/**'
+      - 'scripts/tests/fixtures/land_tracker_enrichment/**'
+      - 'data/land_tracker_identity_sources.json'
 
 permissions:
   contents: read
@@ -29,7 +33,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 90
     permissions:
       contents: write
       pages: write
@@ -49,7 +53,9 @@ jobs:
           python -m pip install playwright==1.55.0
           python -m playwright install --with-deps chromium
       - name: Run parser and merge tests
-        run: python -m unittest discover -s scripts/tests -p test_land_tracker.py -v
+        run: python -m unittest discover -s scripts/tests -p 'test_land_tracker*.py' -v
+      - name: Test JavaScript syntax and evidence rendering
+        run: node scripts/tests/test_land_tracker_ui.cjs
       - name: Test current page
         run: python scripts/test_land_tracker_browser.py
       - name: Collect and validate
@@ -61,6 +67,15 @@ jobs:
           else
             python scripts/update_land_tracker.py --apply
           fi
+      - name: Collect project identities and permit milestones
+        env:
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+        run: |
+          if [ "$DRY_RUN" = true ]; then
+            python scripts/update_land_tracker_enrichment.py --page reports/land-tracker/proposed.html --dry-run
+          else
+            python scripts/update_land_tracker_enrichment.py --page reports/land-tracker/proposed.html --apply
+          fi
       - name: Test generated page
         run: python scripts/test_land_tracker_browser.py --page reports/land-tracker/proposed.html
       - name: Commit data changes
@@ -68,7 +83,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add land_tracker_dashboard_20260614/index.html data/land_tracker_sources.json
+          git add land_tracker_dashboard_20260614/index.html data/land_tracker_sources.json data/land_tracker_enrichment.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update official Beijing land transactions'
             git push origin HEAD:main
@@ -83,6 +98,9 @@ jobs:
         run: |
           if [ -f reports/land-tracker/report.md ]; then
             cat reports/land-tracker/report.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [ -f reports/land-tracker/enrichment/report.md ]; then
+            cat reports/land-tracker/enrichment/report.md >> "$GITHUB_STEP_SUMMARY"
           fi
       - name: Save evidence and test artifacts
         if: always()

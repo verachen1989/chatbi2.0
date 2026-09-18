@@ -340,7 +340,7 @@ def write_report(report, directory):
     lines = ["# 地块自动采集核对报告", "", f"运行时间：{report['checkedAt']}", f"状态：{report['status']}；模式：{report['mode']}", "",
              f"官网列表：{report.get('listed', 0)} 条 / {report.get('pages', 0)} 页", f"原有：{report.get('before', 0)}；生成后：{report.get('after', 0)}；新增：{len(report['added'])}；更新：{len(report['updated'])}",
              f"排除非住宅：{len(report['excluded'])}；用途待核：{len(report['review'])}；错误：{len(report['errors'])}", "",
-             "官网列表为当前公开窗口，历史记录保留。证照和品牌字段本轮不自动补全。", "", "## 新增", ""]
+             "官网列表为当前公开窗口，历史记录保留。本成交采集阶段不修改项目、品牌和证照，后续由独立核验阶段处理。", "", "## 新增", ""]
     for row in report["added"]:
         evidence = next(e for e in report["evidence"] if e.get("rawFields", {}).get("交易文件编号") == row["landCode"])
         lines.append(f"- [{row['landName']}]({evidence['url']})：{row['dealDate']}，{row['amount']} 亿元，{row['floorPrice']} 元/㎡，{row['bidder']}")

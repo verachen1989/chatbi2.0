@@ -1,2 +1,3 @@
 # Preserve the original whitespace in official HTML test evidence.
 scripts/tests/fixtures/land_tracker/*.html -whitespace
+scripts/tests/fixtures/land_tracker_enrichment/*.html -whitespace
