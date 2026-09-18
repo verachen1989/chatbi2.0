@@ -5,6 +5,8 @@ const vm = require("node:vm");
 
 const page = process.argv[2] || path.resolve(__dirname, "../../land_tracker_dashboard_20260614/index.html");
 const source = fs.readFileSync(page, "utf8");
+assert.doesNotMatch(source, /evidenceRaw|原始数据（JSON）/);
+assert.match(source, /href="https:\/\/yewu\.ghzrzyw\.beijing\.gov\.cn\/gwxxfb\/cxghjsgcgh\/jsgcgh\.html"[^>]*>官网证照查询<\/a>/);
 for (const match of source.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)) {
   new vm.Script(match[1]);
 }
@@ -58,14 +60,13 @@ assert.equal(context.isPlanningSource(planningUrl.replace("yewu.ghzrzyw.beijing.
 assert.equal(context.isPlanningSource("javascript:alert(1)"), false);
 let opened = 0;
 const elements = {
-  evidenceContent: {}, evidenceRaw: {},
+  evidenceContent: {},
   evidenceDialog: { open: false, showModal() { this.open = true; opened += 1; } }
 };
 context.document = { getElementById: id => elements[id] };
 row.fieldEvidence.planningPermit.status = "confirmed";
 context.openPlanningEvidence(row);
 assert.equal(opened, 1);
-assert.equal(elements.evidenceRaw.href, planningUrl);
 assert.match(elements.evidenceContent.innerHTML, /住宅楼/);
 context.openPlanningEvidence(row);
 assert.equal(opened, 1);

@@ -209,7 +209,6 @@ button.evidence-link { font-size:inherit; line-height:inherit; }
   </div>
   <footer class="evidence-footer">
     <a href="https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html" target="_blank" rel="noopener noreferrer">官网证照查询</a>
-    <a id="evidenceRaw" target="_blank" rel="noopener noreferrer">原始数据（JSON）</a>
   </footer>
 </dialog>
 <div id="mapModal" class="map-modal" aria-hidden="true">
@@ -394,7 +393,6 @@ function openPlanningEvidence(row) {
   const item = row?.fieldEvidence?.planningPermit;
   if (!item || !["confirmed", "conflict"].includes(item.status) || !isPlanningSource(item.url)) return;
   document.getElementById("evidenceContent").innerHTML = planningEvidenceContent(row, item);
-  document.getElementById("evidenceRaw").href = item.url;
   const dialog = document.getElementById("evidenceDialog");
   if (!dialog.open) dialog.showModal();
 }
