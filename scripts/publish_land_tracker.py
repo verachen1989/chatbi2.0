@@ -19,7 +19,10 @@ def main():
     revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
     response = api.post(endpoint, timeout=30)
     response.raise_for_status()
-    expected = hashlib.sha256((ROOT / "land_tracker_dashboard_20260614/index.html").read_bytes()).hexdigest()
+    expected = {
+        filename: hashlib.sha256((ROOT / "land_tracker_dashboard_20260614" / filename).read_bytes()).hexdigest()
+        for filename in ("index.html", "feishu-feed.json")
+    }
     for _ in range(40):
         status = api.get(endpoint + "/latest", timeout=30)
         status.raise_for_status()
@@ -29,10 +32,13 @@ def main():
             raise RuntimeError(f"Pages build failed: {result.get('error')}")
         if result.get("status") == "built" and result.get("commit") == revision:
             # The public request deliberately uses a separate, unauthenticated client.
-            page = requests.get(PUBLIC, params={"v": revision}, timeout=30)
-            page.raise_for_status()
-            if hashlib.sha256(page.content).hexdigest() == expected:
-                print("Public page verified: " + PUBLIC)
+            matches = []
+            for filename, digest in expected.items():
+                page = requests.get(PUBLIC + filename, params={"v": revision}, timeout=30)
+                page.raise_for_status()
+                matches.append(hashlib.sha256(page.content).hexdigest() == digest)
+            if all(matches):
+                print("Public page and Feishu feed verified: " + PUBLIC)
                 return
         time.sleep(10)
     raise RuntimeError("Pages build/public HTML verification timed out; repository data is retained")
