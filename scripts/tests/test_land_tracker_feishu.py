@@ -115,6 +115,12 @@ class FeishuFeedTests(unittest.TestCase):
                 self.assertNotEqual(field['field_name'], '人工备注')
         self.assertEqual(steps['update']['data']['field_values'][-1]['value'],
                          [{'value_type': 'date', 'value': 'now'}])
+        incoming = {}
+        for step in steps.values():
+            targets = [step.get('next')] + [edge['to'] for edge in step.get('children', {}).get('links', [])]
+            for target in filter(None, targets):
+                incoming[target] = incoming.get(target, 0) + 1
+        self.assertTrue(all(count == 1 for count in incoming.values()), incoming)
 
 
 if __name__ == '__main__':

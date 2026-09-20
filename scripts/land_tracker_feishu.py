@@ -198,7 +198,7 @@ def build_workflow(feed, table_name, owner_open_id, start_time, state_expiry_id,
         condition('$.http.body.recordCount', 'isGreater', value('number', 0)),
         condition('$.http.body.recordCount', 'isLessEqual', value('number', 1000)),
         condition('$.http.body.updateCount', 'isLessEqual', value('number', 1000)),
-        condition('$.http.body.rows', 'isNotEmpty')], 'source_dates', 'state_invalid')
+        condition('$.http.body.rows', 'isNotEmpty')], 'source_dates', 'state_invalid_version')
     convert_date('source_dates', '$.http.body.checkedAtLocal', 'state_loaded')
     step('state_loaded', 'SetRecordAction', '记录快照核验时间及有效期', {
         'table_name': state_table, 'ref_info': {'step_id': 'state_start'},
@@ -209,13 +209,14 @@ def build_workflow(feed, table_name, owner_open_id, start_time, state_expiry_id,
             {'field_name': '快照标识', 'value': [value('ref', '$.http.body.snapshotId')]}]}, 'fresh')
     branch('fresh', '只接收48小时内成功核验的数据',
            [condition('$.state_loaded.' + state_expiry_id, 'isGreater', value('ref', '$.timer.scheduleTime'))],
-           'rows', 'state_invalid')
-    step('state_invalid', 'SetRecordAction', '记录数据异常，不更新地块表', {
-        'table_name': state_table, 'ref_info': {'step_id': 'state_start'},
-        'field_values': [
-            {'field_name': '状态', 'value': [value('text', '数据异常或过期，已停止同步')]},
-            {'field_name': '结束时间', 'value': [value('date', 'now')]}]}, 'invalid')
-    notify('invalid', '数据接口异常或超过48小时未成功核验，本次未更新地块表，请检查上游采集。')
+           'rows', 'state_invalid_expiry')
+    for reason in ('version', 'expiry'):
+        step('state_invalid_' + reason, 'SetRecordAction', '记录数据异常，不更新地块表', {
+            'table_name': state_table, 'ref_info': {'step_id': 'state_start'},
+            'field_values': [
+                {'field_name': '状态', 'value': [value('text', '数据异常或过期，已停止同步')]},
+                {'field_name': '结束时间', 'value': [value('date', 'now')]}]}, 'invalid_' + reason)
+        notify('invalid_' + reason, '数据接口异常或超过48小时未成功核验，本次未更新地块表，请检查上游采集。')
     step('rows', 'Loop', '逐宗地块同步（失败即停止）',
          {'loop_mode': 'end', 'max_loop_times': 1000,
           'data': [value('ref', '$.http.body.rows')]},
