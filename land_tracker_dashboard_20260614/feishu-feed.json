@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "status": "ready",
-  "checkedAt": 1789883220000,
-  "checkedAtText": "2026-09-20T13:47:00+08:00",
-  "checkedAtLocal": "2026/09/20 13:47:00",
-  "expiresAt": 1790056020000,
+  "checkedAt": 1789970803000,
+  "checkedAtText": "2026-09-21T14:06:43+08:00",
+  "checkedAtLocal": "2026/09/21 14:06:43",
+  "expiresAt": 1790143603000,
   "recordCount": 75,
   "rows": [
     {
@@ -6390,5 +6390,5 @@
     }
   ],
   "updateCount": 410,
-  "snapshotId": "4a660fcf43b297baab58324b75f39b6c087e36e0a8d869562e148619c0e2ff4c"
+  "snapshotId": "bcc41c05143decda9a4005eb93ecff4612c67974912f11abfe1a5009f63d0d91"
 }
