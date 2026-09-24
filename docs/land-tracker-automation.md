@@ -34,11 +34,22 @@
 
 [GitHub Actions：Update land tracker](https://github.com/verachen1989/chatbi2.0/actions/workflows/land-tracker.yml)
 
-每天北京时间 08:30 自动执行，GitHub 调度可能延迟。更新采集代码时也会运行一次。默认分支需包含该工作流，GitHub Actions 需保持启用。公开仓库长期无活动时，GitHub 可能暂停定时任务，需在 Actions 中重新启用。
+每天北京时间 08:30 主采集，11:17、14:17 提供两次恢复机会，GitHub 调度可能延迟。当日已有合格快照时，定时补跑跳过重复采集，但仍检查并补发 Pages。手动运行和采集代码更新始终执行采集。默认分支需包含该工作流，GitHub Actions 需保持启用。公开仓库长期无活动时，GitHub 可能暂停定时任务，需在 Actions 中重新启用。
 
 流程：安装依赖 → 解析/合并测试 → 成交采集并校验 → 项目与证照补充采集并校验 → 浏览器回归 → 提交页面和来源 → 请求 Pages 构建 → 对比线上 HTML 摘要。任一采集阶段失败均不提交、不发布。
 
 进入 Actions，选择工作流，点击 **Run workflow**：勾选 `dry_run` 只生成报告，取消勾选会在全部校验通过后更新。每次运行的 Summary 展示新增、修改、待核和错误；Artifacts 中保存原始 HTML、差异报告、拟更新页与桌面/手机截图，保留 30 天。
+
+### 失败恢复规则（2026-09-24）
+
+- 成交采集遇到连接失败或超时，整轮最多尝试三次，间隔 60 秒、180 秒。字段缺失、解析异常、历史数值冲突等不盲目重试；证书验证不会关闭。每次尝试的原文和报告单独保存在 `reports/land-tracker/transaction-attempts/`。
+- 证照阶段最多运行 120 分钟，任务总上限 150 分钟，为保存已完成查询和发布预留时间。时间上限不是成功保证。
+- 同一查询的所有分页、详情解析及匹配成功后，才提交该查询的请求检查点。中断或失败的部分查询不提交；恢复时仍重新解析、重新匹配，不复用未校验的业务结果。
+- 检查点保存在 GitHub Actions Cache，按北京时间日期和采集代码版本隔离。单条原文超过六小时、跨北京时间零点、来自未来、格式损坏或摘要不符时重新联网抓取。检查点本身不提交到 Git。
+- 恢复后的快照记为 `live_checkpoint`。`checkedAt` 保留本轮使用原文中最早的观察时间，`completedAt` 记录整轮结束时间；不能用结束时间把旧原文伪装成新采集。生成 feed 时再次检查日期和六小时时限。原有 `--resume-dir` 和离线重放仍不能生成线上 feed。
+- 数据提交遇到远端新增提交，最多三次重新拉取并检查。只有无关文件改动才自动 rebase；若涉及页面、来源数据、采集脚本或工作流，则停止发布并要求从新版本重跑。绝不强制推送或覆盖人工修改。
+- 保存检查点使用 `always()`，证照步骤超时后仍尝试保存；GitHub 强制终止整个任务、缓存服务故障等情况可能无法保存，下次从头采集。
+- 恢复只增加成功机会，不绕过全量校验。最后一轮补跑仍失败时，保留上次合格快照并在 Actions 明确报错。
 
 ## 本地复现
 
@@ -48,8 +59,8 @@
 python3 -m venv .venv
 .venv/bin/pip install -r scripts/requirements-land-tracker.txt
 .venv/bin/python -m unittest discover -s scripts/tests -p 'test_land_tracker*.py' -v
-.venv/bin/python scripts/update_land_tracker.py --dry-run
-.venv/bin/python scripts/update_land_tracker_enrichment.py --page reports/land-tracker/proposed.html --dry-run
+.venv/bin/python scripts/land_tracker_recovery.py collect --dry-run
+.venv/bin/python scripts/update_land_tracker_enrichment.py --page reports/land-tracker/proposed.html --checkpoint-dir .cache/land-tracker --dry-run
 ```
 
 查看 `reports/land-tracker/report.md`，逐条点击来源核对；`report.json` 包含完整原始字段。
@@ -57,7 +68,7 @@ python3 -m venv .venv
 ```bash
 # 使用同一次采集的原文重放，不受官网后续变化影响
 .venv/bin/python scripts/update_land_tracker.py --dry-run \
-  --snapshot-dir reports/land-tracker/raw --report-dir reports/land-replay
+  --snapshot-dir reports/land-tracker/transaction-attempts/1/raw --report-dir reports/land-replay
 
 # 再次联网核验，通过后更新本地页面（此命令本身不提交或推送 Git）
 .venv/bin/python scripts/update_land_tracker.py --apply

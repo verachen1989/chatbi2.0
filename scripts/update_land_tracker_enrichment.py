@@ -16,7 +16,8 @@ def run(args):
     today = datetime.now(ZoneInfo("Asia/Shanghai")).date()
     rows = read_rows(page)[0]
     validate_rows(rows, today)
-    proposed, evidence, report = enrich(rows, args.root, args.report_dir / "enrichment", today, args.snapshot_dir, args.resume_dir)
+    proposed, evidence, report = enrich(rows, args.root, args.report_dir / "enrichment", today,
+                                       args.snapshot_dir, args.resume_dir, getattr(args, 'checkpoint_dir', None))
     validate_rows(proposed, today)
     output = embed_rows(page, proposed)
     if page_path.read_text(encoding="utf-8") != page:
@@ -36,6 +37,7 @@ if __name__ == "__main__":
     parser.add_argument("--report-dir", type=Path, default=ROOT / "reports/land-tracker")
     parser.add_argument("--snapshot-dir", type=Path, help="Replay enrichment/raw without network")
     parser.add_argument("--resume-dir", type=Path, help="Reuse explicitly selected snapshots, fetching missing requests")
+    parser.add_argument("--checkpoint-dir", type=Path, help="Reuse same-day validated queries (maximum age six hours)")
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--apply", action="store_true")
     mode.add_argument("--dry-run", action="store_true")

@@ -72,7 +72,17 @@ def build_feed(rows, evidence, sources, now):
         raise ValidationError('Feed must contain 1..1000 land records')
     validate_rows(rows, now.astimezone(TZ).date())
     checked = datetime.fromisoformat(evidence['checkedAt'])
-    if (checked.tzinfo is None or evidence.get('collectionMode') != 'live'
+    mode = evidence.get('collectionMode')
+    if mode == 'live_checkpoint':
+        completed = datetime.fromisoformat(evidence['completedAt'])
+        if (checked.tzinfo is None or completed.tzinfo is None
+                or evidence.get('checkpointVersion') != 1
+                or not isinstance(evidence.get('reusedRequests'), int) or evidence['reusedRequests'] <= 0
+                or not checked <= completed <= now + timedelta(minutes=5)
+                or not timedelta(0) <= now - checked <= timedelta(hours=6)
+                or checked.astimezone(TZ).date() != now.astimezone(TZ).date()):
+            raise ValidationError('Feed checkpoint is not a validated same-day observation')
+    if (checked.tzinfo is None or mode not in ('live', 'live_checkpoint')
             or checked > now + timedelta(minutes=5)
             or checked < now - timedelta(hours=48)):
         raise ValidationError('Feed requires a recent successful live collection')

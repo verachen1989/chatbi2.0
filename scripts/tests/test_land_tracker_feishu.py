@@ -66,6 +66,17 @@ class FeishuFeedTests(unittest.TestCase):
         with self.assertRaises(ValidationError):
             self.feed(rows)
 
+    def test_same_day_checkpoint_keeps_oldest_observation_not_finish_time(self):
+        proof = dict(self.proof, collectionMode='live_checkpoint', checkpointVersion=1,
+                     reusedRequests=10, checkedAt='2026-09-20T09:00:00+08:00',
+                     completedAt=self.now.isoformat())
+        feed = self.feed(proof=proof)
+        self.assertEqual(feed['checkedAtText'], proof['checkedAt'])
+        for changed in (dict(proof, checkedAt=self.proof['checkedAt']),
+                        dict(proof, checkpointVersion=0), dict(proof, reusedRequests=0)):
+            with self.assertRaises(ValidationError):
+                self.feed(proof=changed)
+
     def test_sorted_snapshot_is_deterministic_and_preserves_matching_code(self):
         old = dict(self.row, landCode='京土储挂（丰） [2026]021号', dealDate='26/04/01')
         one = self.feed([old, self.row])

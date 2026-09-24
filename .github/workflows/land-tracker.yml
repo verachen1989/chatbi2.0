@@ -4,6 +4,8 @@ on:
   schedule:
     # UTC 00:30 = Asia/Shanghai 08:30. GitHub may delay scheduled jobs.
     - cron: '30 0 * * *'
+    # Recovery windows: Asia/Shanghai 11:17 and 14:17; skip a completed day.
+    - cron: '17 3,6 * * *'
   workflow_dispatch:
     inputs:
       dry_run:
@@ -16,9 +18,7 @@ on:
       - '.github/workflows/land-tracker.yml'
       - 'scripts/*land_tracker*.py'
       - 'scripts/requirements-land-tracker.txt'
-      - 'scripts/tests/test_land_tracker.py'
-      - 'scripts/tests/test_land_tracker_enrichment.py'
-      - 'scripts/tests/test_land_tracker_feishu.py'
+      - 'scripts/tests/test_land_tracker*.py'
       - 'scripts/tests/test_land_tracker_ui.cjs'
       - 'scripts/tests/fixtures/land_tracker/**'
       - 'scripts/tests/fixtures/land_tracker_enrichment/**'
@@ -34,7 +34,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 150
     permissions:
       contents: write
       pages: write
@@ -49,49 +49,73 @@ jobs:
           cache: pip
           cache-dependency-path: scripts/requirements-land-tracker.txt
       - name: Install dependencies
+        run: python -m pip install -r scripts/requirements-land-tracker.txt
+      - name: Decide whether collection is needed
+        id: plan
+        run: python scripts/land_tracker_recovery.py plan --github-output "$GITHUB_OUTPUT"
+      - name: Install browser tests
+        if: steps.plan.outputs.should_run == 'true'
         run: |
-          python -m pip install -r scripts/requirements-land-tracker.txt
           python -m pip install playwright==1.55.0
           python -m playwright install --with-deps chromium
       - name: Run parser and merge tests
+        if: steps.plan.outputs.should_run == 'true'
         run: python -m unittest discover -s scripts/tests -p 'test_land_tracker*.py' -v
       - name: Test JavaScript syntax and evidence rendering
+        if: steps.plan.outputs.should_run == 'true'
         run: node scripts/tests/test_land_tracker_ui.cjs
       - name: Test current page
+        if: steps.plan.outputs.should_run == 'true'
         run: python scripts/test_land_tracker_browser.py
+      - name: Restore same-day validated checkpoints
+        if: steps.plan.outputs.should_run == 'true'
+        id: checkpoint
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/land-tracker
+          key: land-checkpoint-v1-${{ steps.plan.outputs.date }}-${{ hashFiles('scripts/*land_tracker*.py', 'scripts/requirements-land-tracker.txt') }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            land-checkpoint-v1-${{ steps.plan.outputs.date }}-${{ hashFiles('scripts/*land_tracker*.py', 'scripts/requirements-land-tracker.txt') }}-
       - name: Collect and validate
+        if: steps.plan.outputs.should_run == 'true'
+        timeout-minutes: 15
         env:
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
         run: |
           if [ "$DRY_RUN" = true ]; then
-            python scripts/update_land_tracker.py --dry-run
+            python scripts/land_tracker_recovery.py collect --dry-run
           else
-            python scripts/update_land_tracker.py --apply
+            python scripts/land_tracker_recovery.py collect --apply
           fi
       - name: Collect project identities and permit milestones
+        if: steps.plan.outputs.should_run == 'true'
+        timeout-minutes: 120
         env:
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
         run: |
           if [ "$DRY_RUN" = true ]; then
-            python scripts/update_land_tracker_enrichment.py --page reports/land-tracker/proposed.html --dry-run
+            python scripts/update_land_tracker_enrichment.py --page reports/land-tracker/proposed.html --checkpoint-dir .cache/land-tracker --dry-run
           else
-            python scripts/update_land_tracker_enrichment.py --page reports/land-tracker/proposed.html --apply
+            python scripts/update_land_tracker_enrichment.py --page reports/land-tracker/proposed.html --checkpoint-dir .cache/land-tracker --apply
           fi
+      - name: Preserve completed queries even after collection failure
+        if: always() && steps.plan.outputs.should_run == 'true' && hashFiles('.cache/land-tracker/*.json') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/land-tracker
+          key: ${{ steps.checkpoint.outputs.cache-primary-key }}
       - name: Test generated page
+        if: steps.plan.outputs.should_run == 'true'
         run: python scripts/test_land_tracker_browser.py --page reports/land-tracker/proposed.html
       - name: Generate validated Feishu feed
-        if: github.event_name != 'workflow_dispatch' || !inputs.dry_run
+        if: steps.plan.outputs.should_run == 'true' && (github.event_name != 'workflow_dispatch' || !inputs.dry_run)
         run: python scripts/land_tracker_feishu.py
       - name: Commit data changes
-        if: github.event_name != 'workflow_dispatch' || !inputs.dry_run
+        if: steps.plan.outputs.should_run == 'true' && (github.event_name != 'workflow_dispatch' || !inputs.dry_run)
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add land_tracker_dashboard_20260614/index.html land_tracker_dashboard_20260614/feishu-feed.json data/land_tracker_sources.json data/land_tracker_enrichment.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'Update official Beijing land transactions'
-            git push origin HEAD:main
-          fi
+          python scripts/commit_land_tracker.py
       - name: Rebuild Pages and verify public HTML
         if: github.event_name != 'workflow_dispatch' || !inputs.dry_run
         env:

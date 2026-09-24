@@ -40,6 +40,25 @@ class ValidationError(ValueError):
     pass
 
 
+class SourceUnavailable(ValidationError):
+    pass
+
+
+class IncompleteCrawl(ValidationError):
+    pass
+
+
+def is_transient(error):
+    if isinstance(error, requests.exceptions.SSLError):
+        return False
+    if isinstance(error, (SourceUnavailable, requests.exceptions.Timeout,
+                          requests.exceptions.ConnectionError, subprocess.TimeoutExpired)):
+        return True
+    if isinstance(error, requests.exceptions.HTTPError) and error.response is not None:
+        return error.response.status_code == 429 or 500 <= error.response.status_code < 600
+    return False
+
+
 def clean(value):
     return re.sub(r"\s+", "", unicodedata.normalize("NFKC", str(value)))
 
@@ -280,7 +299,8 @@ class Fetcher:
                                          "--connect-timeout", "10", "--max-time", "45", "--retry", "2", "--retry-all-errors", url],
                                         capture_output=True, timeout=150)
                 if result.returncode:
-                    raise ValidationError("IPv4/system TLS fallback failed: " + result.stderr.decode(errors="replace"))
+                    error_type = SourceUnavailable if result.returncode in (5, 6, 7, 18, 28, 52, 55, 56) else ValidationError
+                    raise error_type("IPv4/system TLS fallback failed: " + result.stderr.decode(errors="replace"))
                 content = result.stdout.decode("utf-8-sig")
         self.output.mkdir(parents=True, exist_ok=True)
         (self.output / (name + suffix)).write_text(content, encoding="utf-8")
@@ -318,12 +338,12 @@ def crawl(fetcher, today, report):
             else:
                 report[status].append(evidence)
         except (ValidationError, requests.RequestException, OSError, UnicodeError, subprocess.SubprocessError) as error:
-            report["errors"].append({"url": entry["url"], "error": str(error)})
+            report["errors"].append({"url": entry["url"], "error": str(error), "retryable": is_transient(error)})
     again, count, current, last_ = parse_list(fetcher.get(INDEX_URL, ".end"), INDEX_URL)
     if (again, count, current, last_) != (first, total, 1, last):
         raise ValidationError("Official list changed while fetching; retry the run")
     if report["errors"] or not incoming:
-        raise ValidationError("Incomplete crawl; see errors in report.json")
+        raise IncompleteCrawl("Incomplete crawl; see errors in report.json")
     return incoming, sources
 
 
@@ -385,6 +405,9 @@ def run(args):
             atomic_write(page_path, output)
         report["status"] = "passed"
     except (ValidationError, requests.RequestException, OSError, ValueError, KeyError, subprocess.SubprocessError) as error:
+        previous_transient = all(e.get('retryable') for e in report['errors'])
+        report['retryable'] = previous_transient and (
+            bool(report['errors']) if isinstance(error, IncompleteCrawl) else is_transient(error))
         report["errors"].append({"error": str(error)})
     finally:
         write_report(report, report_dir)

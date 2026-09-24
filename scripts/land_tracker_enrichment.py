@@ -15,6 +15,7 @@ from zoneinfo import ZoneInfo
 from bs4 import BeautifulSoup
 
 from update_land_tracker import ValidationError, clean, code_key, parse_date
+import land_tracker_checkpoint as checkpoints
 
 ZJW = "http://bjjs.zjw.beijing.gov.cn"
 PLANNING = "https://yewu.ghzrzyw.beijing.gov.cn/zkdncms/cxghspjggsszjsjsgcghxkz"
@@ -82,10 +83,34 @@ def iso(value):
 
 
 class PublicClient:
-    def __init__(self, directory, replay=None, delay=0.5, resume=None):
+    def __init__(self, directory, replay=None, delay=0.5, resume=None, checkpoint_dir=None):
+        if checkpoint_dir and (replay or resume):
+            raise ValidationError('Checkpoints cannot be combined with unverified snapshots')
         self.directory, self.replay, self.delay, self.resume = Path(directory), replay, delay, resume
         self.memory = {}
+        self.observations = {}
+        self.query_keys = set()
+        self.reused_keys = set()
+        self.checkpoints = checkpoints.CheckpointStore(checkpoint_dir) if checkpoint_dir else None
         self.directory.mkdir(parents=True, exist_ok=True)
+
+    @property
+    def reused_requests(self):
+        return len(self.reused_keys)
+
+    @property
+    def oldest_observation(self):
+        return min(self.observations.values()) if self.observations else None
+
+    def finish_query(self, success):
+        if self.checkpoints:
+            self.checkpoints.finish(success)
+        if not success:
+            for key in self.query_keys:
+                self.memory.pop(key, None)
+                self.observations.pop(key, None)
+                self.reused_keys.discard(key)
+        self.query_keys.clear()
 
     def get(self, url, data=None):
         parsed = urlparse(url)
@@ -94,13 +119,21 @@ class PublicClient:
             raise ValidationError("Unapproved public source: " + url)
         request = {"url": url, "data": data}
         key = hashlib.sha256(json.dumps(request, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+        self.query_keys.add(key)
         if key in self.memory:
+            if self.checkpoints:
+                self.checkpoints.stage(key, self.memory[key], self.observations[key])
             return self.memory[key]
         filename = key + ".txt"
+        cached = self.checkpoints.load(key) if self.checkpoints else None
+        observed = checkpoints.now()
         if self.replay:
             text = (Path(self.replay) / filename).read_text(encoding="utf-8")
         elif self.resume and (Path(self.resume) / filename).exists():
             text = (Path(self.resume) / filename).read_text(encoding="utf-8")
+        elif cached:
+            text, observed = cached
+            self.reused_keys.add(key)
         else:
             time.sleep(self.delay)
             cmd = ["curl", "--ipv4", "--curves", "P-256", "--fail", "--silent", "--show-error", "--connect-timeout", "10", "--max-time", "30", "--retry", "2", "--retry-all-errors"]
@@ -118,6 +151,9 @@ class PublicClient:
         (self.directory / filename).write_text(text, encoding="utf-8")
         (self.directory / (key + ".request.json")).write_text(json.dumps(request, ensure_ascii=False, indent=2), encoding="utf-8")
         self.memory[key] = text
+        self.observations[key] = observed
+        if self.checkpoints:
+            self.checkpoints.stage(key, text, observed)
         return text
 
 
@@ -414,8 +450,10 @@ class Collector:
         developers, links = copy.deepcopy(self.developers), copy.deepcopy(self.planning_links)
         try:
             fn()
+            self.client.finish_query(True)
             self.report["queries"].append({"source": kind, "query": query, "status": "passed"})
         except (ValueError, KeyError, OSError, subprocess.SubprocessError) as error:
+            self.client.finish_query(False)
             self.records, self.developers, self.planning_links = before, developers, links
             self.report["errors"].append({"source": kind, "query": query, "error": str(error)})
         (self.client.directory.parent / "progress.json").write_text(json.dumps(self.report, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -440,7 +478,11 @@ def collect_identities(client, manifest, rows, report):
             records.append({"kind": "identity", "landCode": code_key(target["landCode"]), "name": source.get("projectName", ""), "brand": source.get("brand", ""),
                             "developer": "", "date": source["published"], "url": source["url"], "permit": "", "valid": True, "residential": True,
                             "matchBasis": ["企业官方公告明确所填名称/品牌", "公告包含精确规划地块编号"], "requiredText": source["requiredText"]})
+            if hasattr(client, 'finish_query'):
+                client.finish_query(True)
         except (ValueError, KeyError, OSError, StopIteration, subprocess.SubprocessError) as error:
+            if hasattr(client, 'finish_query'):
+                client.finish_query(False)
             report["errors"].append({"source": "identity", "url": source["url"], "error": str(error)})
     return records
 
@@ -527,15 +569,18 @@ def reconcile(rows, records, today, previous=None):
     return result, changes, review, evidence
 
 
-def enrich(rows, root, report_dir, today, replay=None, resume=None):
+def enrich(rows, root, report_dir, today, replay=None, resume=None, checkpoint_dir=None):
     mode = "snapshot" if replay else "resume" if resume else "live"
     report = {"status": "failed", "collectionMode": mode, "queries": [], "errors": [], "changes": [], "review": []}
-    client = PublicClient(report_dir / "raw", replay, resume=resume)
+    client = PublicClient(report_dir / "raw", replay, resume=resume, checkpoint_dir=checkpoint_dir)
     collector = Collector(client, rows, report)
     records = collector.run()
     manifest_path = root / "data/land_tracker_identity_sources.json"
     manifest = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
     records.extend(collect_identities(client, manifest, rows, report))
+    if client.reused_requests:
+        mode = 'live_checkpoint'
+    report.update(collectionMode=mode, reusedRequests=client.reused_requests)
     previous_path = root / "data/land_tracker_enrichment.json"
     previous = json.loads(previous_path.read_text()).get("records", {}) if previous_path.exists() else {}
     proposed, report["changes"], report["review"], evidence = reconcile(rows, records, today, previous)
@@ -562,7 +607,12 @@ def enrich(rows, root, report_dir, today, replay=None, resume=None):
     for title, key in (("更新（补填或按官方日期修正）", "changes"), ("待核", "review"), ("采集错误", "errors")):
         lines += ["## " + title, ""] + ["- " + json.dumps(item, ensure_ascii=False) for item in report[key]] + [""]
     (report_dir / "report.md").write_text("\n".join(lines), encoding="utf-8")
-    payload = {"schemaVersion": 1, "collectionMode": mode, "checkedAt": datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds"), "records": evidence}
+    completed = checkpoints.now()
+    observed = client.oldest_observation or completed
+    payload = {"schemaVersion": 1, "collectionMode": mode, "checkedAt": observed.isoformat(timespec="seconds"),
+               "completedAt": completed.isoformat(timespec="seconds"), "records": evidence}
+    if client.reused_requests:
+        payload.update(checkpointVersion=1, reusedRequests=client.reused_requests)
     (report_dir / "proposed_enrichment.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
     if report["errors"]:
         raise ValidationError(f"Enrichment incomplete ({len(report['errors'])} errors); see {report_dir / 'report.json'}")
