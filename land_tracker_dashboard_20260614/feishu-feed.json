@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "status": "ready",
-  "checkedAt": 1790141748000,
-  "checkedAtText": "2026-09-23T13:35:48+08:00",
-  "checkedAtLocal": "2026/09/23 13:35:48",
-  "expiresAt": 1790314548000,
+  "checkedAt": 1790231647000,
+  "checkedAtText": "2026-09-24T14:34:07+08:00",
+  "checkedAtLocal": "2026/09/24 14:34:07",
+  "expiresAt": 1790404447000,
   "recordCount": 76,
   "rows": [
     {
@@ -177,7 +177,7 @@
       "amount": 9.56,
       "floorPrice": 13370.59,
       "dealDateText": "2026/08/11 00:00:00",
-      "notes": "已匹配官方记录：建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
+      "notes": "已匹配官方记录：建设方案、建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
       "patches": [
         {
           "field": "planningPermit",
@@ -186,8 +186,14 @@
           "dateValue": 1788364800000
         },
         {
+          "field": "constructionPlan",
+          "textValue": "",
+          "dateText": "2026/09/23 00:00:00",
+          "dateValue": 1790092800000
+        },
+        {
           "field": "sources",
-          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260811/5663810.html)\n[建设工程规划许可证 2026规自（房）建字0027号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
+          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260811/5663810.html)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/fsqxmjsfags/53620422/index.shtml)\n[建设工程规划许可证 2026规自（房）建字0027号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
           "dateText": "2026/08/11 00:00:00",
           "dateValue": 0
         }
@@ -3614,8 +3620,15 @@
       "landCode": "京土储挂（房）[2026]036号"
     },
     {
+      "field": "constructionPlan",
+      "textValue": "",
+      "dateText": "2026/09/23 00:00:00",
+      "dateValue": 1790092800000,
+      "landCode": "京土储挂（房）[2026]036号"
+    },
+    {
       "field": "sources",
-      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260811/5663810.html)\n[建设工程规划许可证 2026规自（房）建字0027号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
+      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260811/5663810.html)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/fsqxmjsfags/53620422/index.shtml)\n[建设工程规划许可证 2026规自（房）建字0027号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
       "dateText": "2026/08/11 00:00:00",
       "dateValue": 0,
       "landCode": "京土储挂（房）[2026]036号"
@@ -6442,6 +6455,6 @@
       "landCode": "京土储挂（海）[2024]051号"
     }
   ],
-  "updateCount": 413,
-  "snapshotId": "c36626bfdcd736b8f7388ac84c81ffed75ebcfe7e0af5eeca97abe51a4e6d6fa"
+  "updateCount": 414,
+  "snapshotId": "ab4ba08c8fd272958d8e7edacec970512bfce7159682ed8c2dbbd24e02893ff7"
 }

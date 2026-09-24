@@ -1,6 +1,7 @@
 {
-  "checkedAt": "2026-09-23T13:35:48+08:00",
+  "checkedAt": "2026-09-24T14:34:07+08:00",
   "collectionMode": "live",
+  "completedAt": "2026-09-24T15:23:21+08:00",
   "records": {
     "京土储挂(东)[2025]037号": {
       "fields": {
@@ -4926,6 +4927,41 @@
     },
     "京土储挂(房)[2026]036号": {
       "fields": {
+        "constructionPlan": {
+          "displayValue": "26/09/23",
+          "records": [
+            {
+              "date": "2026-09-23",
+              "developer": "北京海赋丰业房地产开发有限公司",
+              "kind": "plan",
+              "landCode": "京土储挂(房)[2026]036号",
+              "location": "",
+              "matchBasis": [
+                "规划地块编号:FS00-0120-0028,FS00-0120-0029",
+                "行政区/建设位置一致"
+              ],
+              "name": "北京市房山区良乡大学城主园区FS00-0120-0029、0028地块二类城镇住宅用地、商业用地建设方案",
+              "permit": "",
+              "planningRefs": [
+                "2026规自(房)建字0027号",
+                "2026规自(房)建字0028号",
+                "2026规自(房)建字0029号",
+                "2026规自(房)简建字6002号"
+              ],
+              "raw": {
+                "developer": "北京海赋丰业房地产开发有限公司",
+                "published": "2026年09月23日",
+                "residentialArea": "56036.3",
+                "title": "北京市房山区良乡大学城主园区FS00-0120-0029、0028地块二类城镇住宅用地、商业用地建设方案"
+              },
+              "residential": true,
+              "url": "http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/fsqxmjsfags/53620422/index.shtml",
+              "valid": true
+            }
+          ],
+          "status": "confirmed",
+          "value": "26/09/23"
+        },
         "planningPermit": {
           "displayValue": "26/09/03",
           "records": [
