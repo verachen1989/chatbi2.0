@@ -1,8 +1,7 @@
 {
-  "checkedAt": "2026-09-24T14:34:07+08:00",
-  "checkpointVersion": 1,
-  "collectionMode": "live_checkpoint",
-  "completedAt": "2026-09-24T15:26:47+08:00",
+  "checkedAt": "2026-09-25T13:11:21+08:00",
+  "collectionMode": "live",
+  "completedAt": "2026-09-25T13:58:33+08:00",
   "records": {
     "京土储挂(东)[2025]037号": {
       "fields": {
@@ -2096,6 +2095,77 @@
           "status": "confirmed",
           "value": "26/09/22"
         },
+        "firstPresale": {
+          "displayValue": "26/09/25",
+          "records": [
+            {
+              "approvedPart": "2#住宅楼2层至25层全部住宅、3#住宅楼1层至17层全部住宅、4#住宅楼2层至25层全部住宅、5#住宅楼1层至17层全部住宅、6#住宅楼2层至25层全部住宅、7#住宅楼3层至17层全部住宅、8#住宅楼1层至17层全部住宅、9#住宅楼2层至23层全部住宅、10#住宅楼1层至17层全部住宅、11#住宅楼1层至17层全部住宅",
+              "buildings": [
+                {
+                  "name": "10#住宅楼",
+                  "suites": 34
+                },
+                {
+                  "name": "11#住宅楼",
+                  "suites": 34
+                },
+                {
+                  "name": "2#住宅楼",
+                  "suites": 48
+                },
+                {
+                  "name": "3#住宅楼",
+                  "suites": 66
+                },
+                {
+                  "name": "4#住宅楼",
+                  "suites": 48
+                },
+                {
+                  "name": "5#住宅楼",
+                  "suites": 64
+                },
+                {
+                  "name": "6#住宅楼",
+                  "suites": 48
+                },
+                {
+                  "name": "7#住宅楼",
+                  "suites": 30
+                }
+              ],
+              "date": "2026-09-25",
+              "developer": "北京澜鑫置业有限公司",
+              "kind": "presale",
+              "landCode": "京土储挂(丰)[2026]014号",
+              "location": "丰台区万泉寺村棚户区改造土地开发项目FT00-0613-0007地块",
+              "matchBasis": [
+                "规划许可证号完全一致",
+                "开发企业与规划建设单位一致"
+              ],
+              "name": "润泉嘉园",
+              "permit": "京房售证字(2026)88号",
+              "planningRefs": [
+                "2026规自(丰)建字0035号"
+              ],
+              "planningRefsComplete": true,
+              "raw": {
+                "发证日期": "2026/9/25",
+                "坐落位置": "丰台区万泉寺村棚户区改造土地开发项目FT00-0613-0007地块",
+                "建设工程规划许可证编号": "2026规自(丰)建字0035号",
+                "开发企业": "北京澜鑫置业有限公司",
+                "批准预售部位": "2#住宅楼2层至25层全部住宅、3#住宅楼1层至17层全部住宅、4#住宅楼2层至25层全部住宅、5#住宅楼1层至17层全部住宅、6#住宅楼2层至25层全部住宅、7#住宅楼3层至17层全部住宅、8#住宅楼1层至17层全部住宅、9#住宅楼2层至23层全部住宅、10#住宅楼1层至17层全部住宅、11#住宅楼1层至17层全部住宅",
+                "项目名称": "润泉嘉园",
+                "预售许可证编号": "京房售证字(2026)88号"
+              },
+              "residential": true,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8278375&systemID=2&srcId=1",
+              "valid": true
+            }
+          ],
+          "status": "confirmed",
+          "value": "26/09/25"
+        },
         "planningPermit": {
           "displayValue": "26/08/28",
           "records": [
@@ -2202,6 +2272,78 @@
           ],
           "status": "confirmed",
           "value": "26/08/28"
+        },
+        "projectName": {
+          "displayValue": "润泉嘉园",
+          "nameType": "official",
+          "records": [
+            {
+              "approvedPart": "2#住宅楼2层至25层全部住宅、3#住宅楼1层至17层全部住宅、4#住宅楼2层至25层全部住宅、5#住宅楼1层至17层全部住宅、6#住宅楼2层至25层全部住宅、7#住宅楼3层至17层全部住宅、8#住宅楼1层至17层全部住宅、9#住宅楼2层至23层全部住宅、10#住宅楼1层至17层全部住宅、11#住宅楼1层至17层全部住宅",
+              "buildings": [
+                {
+                  "name": "10#住宅楼",
+                  "suites": 34
+                },
+                {
+                  "name": "11#住宅楼",
+                  "suites": 34
+                },
+                {
+                  "name": "2#住宅楼",
+                  "suites": 48
+                },
+                {
+                  "name": "3#住宅楼",
+                  "suites": 66
+                },
+                {
+                  "name": "4#住宅楼",
+                  "suites": 48
+                },
+                {
+                  "name": "5#住宅楼",
+                  "suites": 64
+                },
+                {
+                  "name": "6#住宅楼",
+                  "suites": 48
+                },
+                {
+                  "name": "7#住宅楼",
+                  "suites": 30
+                }
+              ],
+              "date": "2026-09-25",
+              "developer": "北京澜鑫置业有限公司",
+              "kind": "presale",
+              "landCode": "京土储挂(丰)[2026]014号",
+              "location": "丰台区万泉寺村棚户区改造土地开发项目FT00-0613-0007地块",
+              "matchBasis": [
+                "规划许可证号完全一致",
+                "开发企业与规划建设单位一致"
+              ],
+              "name": "润泉嘉园",
+              "permit": "京房售证字(2026)88号",
+              "planningRefs": [
+                "2026规自(丰)建字0035号"
+              ],
+              "planningRefsComplete": true,
+              "raw": {
+                "发证日期": "2026/9/25",
+                "坐落位置": "丰台区万泉寺村棚户区改造土地开发项目FT00-0613-0007地块",
+                "建设工程规划许可证编号": "2026规自(丰)建字0035号",
+                "开发企业": "北京澜鑫置业有限公司",
+                "批准预售部位": "2#住宅楼2层至25层全部住宅、3#住宅楼1层至17层全部住宅、4#住宅楼2层至25层全部住宅、5#住宅楼1层至17层全部住宅、6#住宅楼2层至25层全部住宅、7#住宅楼3层至17层全部住宅、8#住宅楼1层至17层全部住宅、9#住宅楼2层至23层全部住宅、10#住宅楼1层至17层全部住宅、11#住宅楼1层至17层全部住宅",
+                "项目名称": "润泉嘉园",
+                "预售许可证编号": "京房售证字(2026)88号"
+              },
+              "residential": true,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8278375&systemID=2&srcId=1",
+              "valid": true
+            }
+          ],
+          "status": "confirmed",
+          "value": "润泉嘉园"
         }
       }
     },
@@ -8321,6 +8463,77 @@
           "status": "confirmed",
           "value": "26/08/17"
         },
+        "firstPresale": {
+          "displayValue": "26/09/25",
+          "records": [
+            {
+              "approvedPart": "1#住宅楼2至18层全部住宅；2#住宅楼1至18层全部住宅；3#住宅楼1至18层全部住宅；4#住宅楼2至8层全部住宅；5#住宅楼1至11层全部住宅；6#住宅楼1至9层全部住宅；7#住宅楼1至11层全部住宅；8#住宅楼1至8层全部住宅",
+              "buildings": [
+                {
+                  "name": "1#住宅楼",
+                  "suites": 68
+                },
+                {
+                  "name": "2#住宅楼",
+                  "suites": 70
+                },
+                {
+                  "name": "3#住宅楼",
+                  "suites": 36
+                },
+                {
+                  "name": "4#住宅楼",
+                  "suites": 26
+                },
+                {
+                  "name": "5#住宅楼",
+                  "suites": 44
+                },
+                {
+                  "name": "6#住宅楼",
+                  "suites": 18
+                },
+                {
+                  "name": "7#住宅楼",
+                  "suites": 44
+                },
+                {
+                  "name": "8#住宅楼",
+                  "suites": 16
+                }
+              ],
+              "date": "2026-09-25",
+              "developer": "北京未来科技城昌信置业有限公司",
+              "kind": "presale",
+              "landCode": "京土储挂(昌)[2026]024号",
+              "location": "昌平区朱辛庄新区（0055地块）",
+              "matchBasis": [
+                "规划许可证号完全一致",
+                "开发企业与规划建设单位一致"
+              ],
+              "name": "寰锦佳苑",
+              "permit": "京房售证字(2026)87号",
+              "planningRefs": [
+                "2026规自(昌)建字0046号"
+              ],
+              "planningRefsComplete": true,
+              "raw": {
+                "发证日期": "2026/9/25",
+                "坐落位置": "昌平区朱辛庄新区（0055地块）",
+                "建设工程规划许可证编号": "2026规自(昌)建字0046号",
+                "开发企业": "北京未来科技城昌信置业有限公司",
+                "批准预售部位": "1#住宅楼2至18层全部住宅；2#住宅楼1至18层全部住宅；3#住宅楼1至18层全部住宅；4#住宅楼2至8层全部住宅；5#住宅楼1至11层全部住宅；6#住宅楼1至9层全部住宅；7#住宅楼1至11层全部住宅；8#住宅楼1至8层全部住宅",
+                "项目名称": "寰锦佳苑",
+                "预售许可证编号": "京房售证字(2026)87号"
+              },
+              "residential": true,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8278504&systemID=2&srcId=1",
+              "valid": true
+            }
+          ],
+          "status": "confirmed",
+          "value": "26/09/25"
+        },
         "planningPermit": {
           "displayValue": "26/08/05",
           "records": [
@@ -8386,6 +8599,78 @@
           ],
           "status": "confirmed",
           "value": "26/08/05"
+        },
+        "projectName": {
+          "displayValue": "寰锦佳苑",
+          "nameType": "official",
+          "records": [
+            {
+              "approvedPart": "1#住宅楼2至18层全部住宅；2#住宅楼1至18层全部住宅；3#住宅楼1至18层全部住宅；4#住宅楼2至8层全部住宅；5#住宅楼1至11层全部住宅；6#住宅楼1至9层全部住宅；7#住宅楼1至11层全部住宅；8#住宅楼1至8层全部住宅",
+              "buildings": [
+                {
+                  "name": "1#住宅楼",
+                  "suites": 68
+                },
+                {
+                  "name": "2#住宅楼",
+                  "suites": 70
+                },
+                {
+                  "name": "3#住宅楼",
+                  "suites": 36
+                },
+                {
+                  "name": "4#住宅楼",
+                  "suites": 26
+                },
+                {
+                  "name": "5#住宅楼",
+                  "suites": 44
+                },
+                {
+                  "name": "6#住宅楼",
+                  "suites": 18
+                },
+                {
+                  "name": "7#住宅楼",
+                  "suites": 44
+                },
+                {
+                  "name": "8#住宅楼",
+                  "suites": 16
+                }
+              ],
+              "date": "2026-09-25",
+              "developer": "北京未来科技城昌信置业有限公司",
+              "kind": "presale",
+              "landCode": "京土储挂(昌)[2026]024号",
+              "location": "昌平区朱辛庄新区（0055地块）",
+              "matchBasis": [
+                "规划许可证号完全一致",
+                "开发企业与规划建设单位一致"
+              ],
+              "name": "寰锦佳苑",
+              "permit": "京房售证字(2026)87号",
+              "planningRefs": [
+                "2026规自(昌)建字0046号"
+              ],
+              "planningRefsComplete": true,
+              "raw": {
+                "发证日期": "2026/9/25",
+                "坐落位置": "昌平区朱辛庄新区（0055地块）",
+                "建设工程规划许可证编号": "2026规自(昌)建字0046号",
+                "开发企业": "北京未来科技城昌信置业有限公司",
+                "批准预售部位": "1#住宅楼2至18层全部住宅；2#住宅楼1至18层全部住宅；3#住宅楼1至18层全部住宅；4#住宅楼2至8层全部住宅；5#住宅楼1至11层全部住宅；6#住宅楼1至9层全部住宅；7#住宅楼1至11层全部住宅；8#住宅楼1至8层全部住宅",
+                "项目名称": "寰锦佳苑",
+                "预售许可证编号": "京房售证字(2026)87号"
+              },
+              "residential": true,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8278504&systemID=2&srcId=1",
+              "valid": true
+            }
+          ],
+          "status": "confirmed",
+          "value": "寰锦佳苑"
         }
       }
     },
@@ -8527,6 +8812,65 @@
               },
               "residential": true,
               "url": "https://yewu.ghzrzyw.beijing.gov.cn/zkdncms/cxghspjggsszjsjsgcghxkz/esSearchDetail/01cb3cd4c5adcb4bbb25387aed336590",
+              "valid": true
+            },
+            {
+              "amendments": {
+                "listBg": [],
+                "listYq": [],
+                "listZx": []
+              },
+              "date": "2026-09-24",
+              "developer": "北京兆晏房地产开发有限公司",
+              "district": "昌平区",
+              "id": "98e9201d92747ec1d8a0b3ac6971b5f3",
+              "kind": "planning",
+              "landCode": "京土储挂(昌)[2026]034号",
+              "location": "昌平区东小口镇",
+              "matchBasis": [
+                "规划地块编号:CP02-0405-0002",
+                "行政区/建设位置一致"
+              ],
+              "name": "北京市昌平区东小口镇CP02-0405-0002地块R2二类居住用地项目(二期）（1#住宅楼等26项）",
+              "permit": "2026规自（昌）建字0057号",
+              "raw": {
+                "barcodevalue": "J8CWEZ56WVOG",
+                "createDateTime": "1790298001000",
+                "crtUserId": 3122,
+                "deleted": 0,
+                "faWenHao": "2026规自（昌）建字0057号",
+                "faWenRiQi": "1790242062000",
+                "fuTuJiFuJianMingCheng": "本工程建设工程规划许可证附件及设计总平面图一份。",
+                "fzjg": "北京市规划和自然资源委员会昌平分局",
+                "id": "98e9201d92747ec1d8a0b3ac6971b5f3",
+                "jianSheDanWei": "北京兆晏房地产开发有限公司",
+                "jianSheDiQu": "昌平区",
+                "jianSheWeiZhi": "昌平区东小口镇",
+                "jianZhuGuiMo": "97043.37平方米，850.4米",
+                "jingBanChuShi": "昌平分局",
+                "nodeId": 111,
+                "objuuid": "f03faf50-04fe-48b3-be4f-9e42280ae927",
+                "oldId": "5C453C5EC0F502CEE063C0A3010CD180",
+                "opDigNumGather": "9120260704",
+                "opNum": "346",
+                "opNumGather": "2026分社建字0346",
+                "opState": "8",
+                "opTypeCode": "91",
+                "opYear": "2026",
+                "params": {},
+                "publishStatus": "0",
+                "publishTime": "1790298001000",
+                "publishUser": "3122",
+                "scgsrq": "1790329762000",
+                "shiFouFaZhengBen": "1",
+                "source": "3",
+                "syncDataGuid": "5C453C5EC0F402CEE063C0A3010CD180",
+                "tongYiBianHao": "1101142026GG0197675",
+                "typeId": 61,
+                "xiangMuMingCheng": "北京市昌平区东小口镇CP02-0405-0002地块R2二类居住用地项目(二期）（1#住宅楼等26项）"
+              },
+              "residential": true,
+              "url": "https://yewu.ghzrzyw.beijing.gov.cn/zkdncms/cxghspjggsszjsjsgcghxkz/esSearchDetail/98e9201d92747ec1d8a0b3ac6971b5f3",
               "valid": true
             }
           ],
@@ -22636,6 +22980,5 @@
       "fields": {}
     }
   },
-  "reusedRequests": 1057,
   "schemaVersion": 1
 }

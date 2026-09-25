@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "status": "ready",
-  "checkedAt": 1790231647000,
-  "checkedAtText": "2026-09-24T14:34:07+08:00",
-  "checkedAtLocal": "2026/09/24 14:34:07",
-  "expiresAt": 1790404447000,
+  "checkedAt": 1790313081000,
+  "checkedAtText": "2026-09-25T13:11:21+08:00",
+  "checkedAtLocal": "2026/09/25 13:11:21",
+  "expiresAt": 1790485881000,
   "recordCount": 76,
   "rows": [
     {
@@ -471,8 +471,14 @@
       "amount": 9.09,
       "floorPrice": 17055.11,
       "dealDateText": "2026/06/11 00:00:00",
-      "notes": "已匹配官方记录：施工证时间、建设方案、建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
+      "notes": "已匹配官方记录：项目名称、施工证时间、建设方案、首个预售证、建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
       "patches": [
+        {
+          "field": "projectName",
+          "textValue": "寰锦佳苑",
+          "dateText": "2026/06/11 00:00:00",
+          "dateValue": 0
+        },
         {
           "field": "plate",
           "textValue": "回龙观",
@@ -498,8 +504,14 @@
           "dateValue": 1786636800000
         },
         {
+          "field": "firstPresale",
+          "textValue": "",
+          "dateText": "2026/09/25 00:00:00",
+          "dateValue": 1790265600000
+        },
+        {
           "field": "sources",
-          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260611/5569414.html)\n[施工证时间 110114202608140201](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202608072002)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/cpqxmjsfags/53620309/index.shtml)\n[建设工程规划许可证 2026规自（昌）建字0046号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
+          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260611/5569414.html)\n[项目名称 京房售证字(2026)87号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8278504&systemID=2&srcId=1)\n[施工证时间 110114202608140201](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202608072002)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/cpqxmjsfags/53620309/index.shtml)\n[首个预售证 京房售证字(2026)87号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8278504&systemID=2&srcId=1)\n[建设工程规划许可证 2026规自（昌）建字0046号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
           "dateText": "2026/06/11 00:00:00",
           "dateValue": 0
         }
@@ -823,8 +835,14 @@
       "amount": 57.711,
       "floorPrice": 58500.17,
       "dealDateText": "2026/04/30 00:00:00",
-      "notes": "已匹配官方记录：施工证时间、建设方案、建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
+      "notes": "已匹配官方记录：项目名称、施工证时间、建设方案、首个预售证、建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
       "patches": [
+        {
+          "field": "projectName",
+          "textValue": "润泉嘉园",
+          "dateText": "2026/04/30 00:00:00",
+          "dateValue": 0
+        },
         {
           "field": "planningPermit",
           "textValue": "",
@@ -844,8 +862,14 @@
           "dateValue": 1788192000000
         },
         {
+          "field": "firstPresale",
+          "textValue": "",
+          "dateText": "2026/09/25 00:00:00",
+          "dateValue": 1790265600000
+        },
+        {
           "field": "sources",
-          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260430/5516509.html)\n[施工证时间 110106202609010401](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202608312029)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/ftqxmjsfags/53620410/index.shtml)\n[建设工程规划许可证 2026规自（丰）建字0035号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
+          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260430/5516509.html)\n[项目名称 京房售证字(2026)88号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8278375&systemID=2&srcId=1)\n[施工证时间 110106202609010401](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202608312029)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/ftqxmjsfags/53620410/index.shtml)\n[首个预售证 京房售证字(2026)88号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8278375&systemID=2&srcId=1)\n[建设工程规划许可证 2026规自（丰）建字0035号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
           "dateText": "2026/04/30 00:00:00",
           "dateValue": 0
         }
@@ -3809,6 +3833,13 @@
       "landCode": "京土储挂（丰）[2026]026号"
     },
     {
+      "field": "projectName",
+      "textValue": "寰锦佳苑",
+      "dateText": "2026/06/11 00:00:00",
+      "dateValue": 0,
+      "landCode": "京土储挂（昌）[2026]024号"
+    },
+    {
       "field": "plate",
       "textValue": "回龙观",
       "dateText": "2026/06/11 00:00:00",
@@ -3837,8 +3868,15 @@
       "landCode": "京土储挂（昌）[2026]024号"
     },
     {
+      "field": "firstPresale",
+      "textValue": "",
+      "dateText": "2026/09/25 00:00:00",
+      "dateValue": 1790265600000,
+      "landCode": "京土储挂（昌）[2026]024号"
+    },
+    {
       "field": "sources",
-      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260611/5569414.html)\n[施工证时间 110114202608140201](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202608072002)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/cpqxmjsfags/53620309/index.shtml)\n[建设工程规划许可证 2026规自（昌）建字0046号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
+      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260611/5569414.html)\n[项目名称 京房售证字(2026)87号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8278504&systemID=2&srcId=1)\n[施工证时间 110114202608140201](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202608072002)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/cpqxmjsfags/53620309/index.shtml)\n[首个预售证 京房售证字(2026)87号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8278504&systemID=2&srcId=1)\n[建设工程规划许可证 2026规自（昌）建字0046号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
       "dateText": "2026/06/11 00:00:00",
       "dateValue": 0,
       "landCode": "京土储挂（昌）[2026]024号"
@@ -4089,6 +4127,13 @@
       "landCode": "京土储挂（昌）[2026]015号"
     },
     {
+      "field": "projectName",
+      "textValue": "润泉嘉园",
+      "dateText": "2026/04/30 00:00:00",
+      "dateValue": 0,
+      "landCode": "京土储挂（丰）[2026]014号"
+    },
+    {
       "field": "planningPermit",
       "textValue": "",
       "dateText": "2026/08/28 00:00:00",
@@ -4110,8 +4155,15 @@
       "landCode": "京土储挂（丰）[2026]014号"
     },
     {
+      "field": "firstPresale",
+      "textValue": "",
+      "dateText": "2026/09/25 00:00:00",
+      "dateValue": 1790265600000,
+      "landCode": "京土储挂（丰）[2026]014号"
+    },
+    {
       "field": "sources",
-      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260430/5516509.html)\n[施工证时间 110106202609010401](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202608312029)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/ftqxmjsfags/53620410/index.shtml)\n[建设工程规划许可证 2026规自（丰）建字0035号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
+      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260430/5516509.html)\n[项目名称 京房售证字(2026)88号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8278375&systemID=2&srcId=1)\n[施工证时间 110106202609010401](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202608312029)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/ftqxmjsfags/53620410/index.shtml)\n[首个预售证 京房售证字(2026)88号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8278375&systemID=2&srcId=1)\n[建设工程规划许可证 2026规自（丰）建字0035号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
       "dateText": "2026/04/30 00:00:00",
       "dateValue": 0,
       "landCode": "京土储挂（丰）[2026]014号"
@@ -6455,6 +6507,6 @@
       "landCode": "京土储挂（海）[2024]051号"
     }
   ],
-  "updateCount": 414,
-  "snapshotId": "ab4ba08c8fd272958d8e7edacec970512bfce7159682ed8c2dbbd24e02893ff7"
+  "updateCount": 418,
+  "snapshotId": "5ed91617f8ac9529ba14bf704e024012299371b06b14c90ae9c5a75d9320345f"
 }
