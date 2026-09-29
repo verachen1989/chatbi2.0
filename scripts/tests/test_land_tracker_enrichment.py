@@ -68,6 +68,12 @@ class EnrichmentTests(unittest.TestCase):
         self.assertEqual(changes, [])
         self.assertEqual(len(review), 2)
 
+    def test_enrichment_keeps_manually_confirmed_project_links(self):
+        projects = [{"projectName": "已确认项目", "projectCode": "P3852"}]
+        row = dict(self.row, linkedProjects=projects)
+        result, _, _, _ = e.reconcile([row], [self.record], date(2026, 9, 18))
+        self.assertEqual(result[0]["linkedProjects"], projects)
+
     def test_planning_preview_and_table_use_official_date(self):
         row = dict(self.row, planningPermit="26/01/05")
         record = dict(self.record, raw={"fzjg": "通州分局", "jianZhuGuiMo": "83354.849平方米"})

@@ -20,6 +20,7 @@ on:
       - 'scripts/requirements-land-tracker.txt'
       - 'scripts/tests/test_land_tracker*.py'
       - 'scripts/tests/test_land_tracker_ui.cjs'
+      - 'scripts/tests/test_land_project_links.cjs'
       - 'scripts/tests/fixtures/land_tracker/**'
       - 'scripts/tests/fixtures/land_tracker_enrichment/**'
       - 'data/land_tracker_identity_sources.json'
@@ -64,7 +65,10 @@ jobs:
       - name: Test JavaScript syntax and evidence rendering
         if: steps.plan.outputs.should_run == 'true'
         run: node scripts/tests/test_land_tracker_ui.cjs
-      - name: Test current page
+      - name: Test independent project links
+        if: steps.plan.outputs.should_run == 'true'
+        run: node scripts/tests/test_land_project_links.cjs
+      - name: Test current page in browser
         if: steps.plan.outputs.should_run == 'true'
         run: python scripts/test_land_tracker_browser.py
       - name: Restore same-day validated checkpoints

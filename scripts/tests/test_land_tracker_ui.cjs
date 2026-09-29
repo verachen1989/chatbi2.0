@@ -75,3 +75,31 @@ row.fieldEvidence.planningPermit.url = "javascript:alert(1)";
 context.openPlanningEvidence(row);
 assert.equal(opened, 1);
 console.log("Land tracker JavaScript syntax and evidence rendering: passed");
+
+// AMap moves asynchronously by default; the info window may interrupt that move.
+// Assert that our renderer has positioned the map before opening the window.
+elements.mapStatus = {};
+context.mapMarker = null;
+context.mapCircle = null;
+context.mapInfoWindow = null;
+context.mapInstance = {
+  center: [116.407387, 39.904179],
+  add() {}, remove() {},
+  setZoomAndCenter(zoom, point, immediately) {
+    if (immediately) this.center = [...point];
+  }
+};
+let centerAtOpen;
+context.AMap = {
+  Circle: class {}, Marker: class {}, Pixel: class {},
+  InfoWindow: class {
+    open(map) { centerAtOpen = [...map.center]; }
+    close() {}
+  }
+};
+vm.runInContext(section("function setMapStatus(", "function buildMapQuery(") + section("function clearMapOverlay(", "function geocodeAddress("), context);
+context.drawLandPoint(row, [116.231, 40.22], "approximate");
+assert.deepEqual(centerAtOpen, [116.231, 40.22], "First click must position the map before the popup can auto-pan");
+context.drawLandPoint(row, [116.754, 39.969], "approximate");
+assert.deepEqual(centerAtOpen, [116.754, 39.969], "Switching land must not open a popup over the previous map center");
+console.log("Land tracker first-click map positioning: passed");

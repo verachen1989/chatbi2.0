@@ -89,6 +89,15 @@ class LandTrackerTests(unittest.TestCase):
         with self.assertRaises(land.ValidationError):
             land.merge_rows([self.old], [self.row, self.row], TODAY)
 
+    def test_collection_preserves_manual_project_links(self):
+        linked = [{"projectName": "项目甲", "projectCode": "P3852"},
+                  {"projectName": "项目乙", "projectCode": "P9002"}]
+        old = dict(self.old, linkedProjects=linked)
+        rows, _, _ = land.merge_rows([old], [dict(self.row, bidder="更正竞得人")], TODAY)
+        self.assertEqual(rows[0]["linkedProjects"], linked)
+        rows[0]["linkedProjects"][0]["projectName"] = "改名"
+        self.assertEqual(old["linkedProjects"][0]["projectName"], "项目甲")
+
     def test_shortened_official_title_retains_complete_title(self):
         warnings = []
         rows, _, updates = land.merge_rows([self.old], [dict(self.row, landName=self.row["landName"][:-1])], TODAY, warnings)
