@@ -46,7 +46,7 @@ for (const actual of actualRows) {
     listeners.get("tableBody:click")({ button: 0, preventDefault() { prevented = true; },
       target: { closest(selector) { return selector === "[data-project-seq]" ? { dataset: { projectSeq: String(actual.seq), projectIndex: String(index) } } : null; } } });
     const message = messages.at(-1);
-    assert.equal(message.origin, "https://om.gtcloud.cn");
+    assert.equal(message.origin, "*");
     assert.equal(message.payload.type, "chatbi2:open-project-detail");
     assert.equal(message.payload.projectCode, project.projectCode);
     assert.equal(message.payload.url, href);
@@ -92,7 +92,7 @@ const button = { dataset: { projectSeq: "1", projectIndex: "1" } };
 const event = { button: 0, preventDefault() { prevented += 1; }, target: { closest(selector) { return selector === "[data-project-seq]" ? button : null; } } };
 listeners.get("tableBody:click")(event);
 assert.equal(messages.length, 1);
-assert.equal(messages[0].origin, "https://om.gtcloud.cn");
+assert.equal(messages[0].origin, "*");
 assert.equal(messages[0].payload.projectCode, "P9002");
 assert.equal(messages[0].payload.url, "https://om.gtcloud.cn/#/region/invest/external-data?projectCode=P9002");
 assert.equal(prevented, 1);

@@ -127,7 +127,7 @@ python scripts/sync_land_tracker_project_links.py --refresh-source --apply --lar
 }
 ```
 
-`targetOrigin` 固定为 `https://om.gtcloud.cn`。消息内的 `url` 仅为兼容已有协议保留的路由元数据，子页面不执行该 URL。母工程应核验发送方 origin、iframe window、消息类型及编码，然后跳转路由并将编码传给外部数据 iframe。修改或联调真实母工程、外部项目详情接收端不在本次改动内。
+`postMessage` 的 `targetOrigin` 使用 `"*"`，不在子页面指定母工程地址。消息内的 `url` 仅为兼容已有协议保留的路由元数据，子页面不执行该 URL。母工程应核验发送方 origin、iframe window、消息类型及编码，然后跳转路由并将编码传给外部数据 iframe。修改或联调真实母工程、外部项目详情接收端不在本次改动内。
 
 ## 验证与当前状态
 

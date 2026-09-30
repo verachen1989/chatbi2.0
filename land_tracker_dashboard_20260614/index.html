@@ -235,6 +235,7 @@ const fmtAmount = new Intl.NumberFormat("zh-CN", { minimumFractionDigits: 2, max
 const fmtInt = new Intl.NumberFormat("zh-CN", { maximumFractionDigits: 0 });
 const state = { search:"", district:"", plate:"", brand:"", landYear:"", node:"", dealSort:"desc" };
 const EXTERNAL_PROJECT_ORIGIN = "https://om.gtcloud.cn";
+const PROJECT_MESSAGE_TARGET_ORIGIN = "*";
 const fields = [
   "seq","landName","landCode","projectName","district","plate","dealDate","bidder","brand",
   "amount","floorPrice","planningPermit","constructionPlan","constructionPermit","firstPresale","firstCompletion"
@@ -386,7 +387,7 @@ function openProjectInDashboard(row, project) {
     landName: row.landName || "",
     source: "land_tracker_dashboard_20260614"
   };
-  window.parent.postMessage(payload, EXTERNAL_PROJECT_ORIGIN);
+  window.parent.postMessage(payload, PROJECT_MESSAGE_TARGET_ORIGIN);
   return true;
 }
 function isPlanningSource(url) {
