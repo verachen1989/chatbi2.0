@@ -366,7 +366,7 @@ function projectDisplay(row) {
   return '<ul class="project-list">' + projects.map((project, index) => {
     const url = projectDashboardUrl(project);
     const name = html(project.projectName);
-    return '<li>' + (url ? '<a class="project-link" href="' + html(url) + '" target="_blank" rel="noopener noreferrer" data-project-seq="' + html(row.seq) + '" data-project-index="' + index + '" title="打开项目详情：' + name + '">' + name + '</a>' : '<span class="project-name">' + name + '</span>') + '</li>';
+    return '<li>' + (url ? '<button class="project-link" type="button" data-project-seq="' + html(row.seq) + '" data-project-index="' + index + '" title="打开项目详情：' + name + '">' + name + '</button>' : '<span class="project-name">' + name + '</span>') + '</li>';
   }).join("") + '</ul>';
 }
 function openProjectInDashboard(row, project) {
@@ -609,10 +609,11 @@ document.getElementById("tableBody").addEventListener("click", event => {
   }
   const projectButton = event.target.closest("[data-project-seq]");
   if (projectButton) {
-    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button > 0) return;
+    event.preventDefault();
+    if (event.button > 0) return;
     const row = LAND_ROWS.find(item => String(item.seq) === projectButton.dataset.projectSeq);
     const project = row && projectEntries(row)[Number(projectButton.dataset.projectIndex)];
-    if (project && openProjectInDashboard(row, project)) event.preventDefault();
+    if (project) openProjectInDashboard(row, project);
     return;
   }
   const button = event.target.closest("[data-land-seq]");

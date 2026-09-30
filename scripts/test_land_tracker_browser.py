@@ -1,6 +1,7 @@
 """Browser regression test, including offline operation and mobile viewport."""
 import argparse
 import json
+import sys
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright
@@ -84,10 +85,13 @@ def main():
             render();
         }""")
         project_cell = page.locator("#tableBody tr").first.locator("td").nth(3)
-        project_links = project_cell.locator("a.project-link")
+        project_links = project_cell.locator("button.project-link")
         assert project_links.count() == 2
-        assert project_links.nth(0).get_attribute("href") == "https://om.gtcloud.cn/#/region/invest/external-data?projectCode=TEST_A"
-        assert project_links.nth(1).get_attribute("href") == "https://om.gtcloud.cn/#/region/invest/external-data?projectCode=TEST_B"
+        assert project_cell.locator("a").count() == 0
+        for action in project_links.all():
+            assert action.get_attribute("type") == "button"
+            assert action.get_attribute("href") is None
+            assert action.get_attribute("target") is None
         assert project_cell.locator(".project-name").inner_text() == "未提供编码的测试项目"
         for width in (1440, 390):
             page.set_viewport_size({"width": width, "height": 900})
@@ -98,10 +102,25 @@ def main():
             boxes = project_cell.locator("li").evaluate_all("els => els.map(el => ({top: el.getBoundingClientRect().top, bottom: el.getBoundingClientRect().bottom}))")
             assert all(a["bottom"] <= b["top"] for a, b in zip(boxes, boxes[1:]))
             assert project_links.nth(1).evaluate("el => { const r=el.getBoundingClientRect(); return r.right <= innerWidth && r.left >= 0; }")
-            assert project_links.nth(1).evaluate("el => { const r=el.getBoundingClientRect(); return document.elementFromPoint(r.left+2, r.top+5)?.closest('a.project-link') === el; }"), "A frozen column covers the project link"
+            assert project_links.nth(1).evaluate("el => { const r=el.getBoundingClientRect(); return document.elementFromPoint(r.left+2, r.top+5)?.closest('button.project-link') === el; }"), "A frozen column covers the project button"
             page.screenshot(path=str(args.output / f"multiple-projects-test-{width}.png"))
         page.locator("#searchInput").fill("TEST_B")
         assert rows.count() == 1
+        page.set_viewport_size({"width": 1440, "height": 900})
+        popups = []
+        page.on("popup", lambda popup: popups.append(popup))
+        standalone_url = page.url
+        page.evaluate('window.projectMessages=[]; addEventListener("message", e => window.projectMessages.push(e.data));')
+        for modifiers in ([], ["Control"], ["Meta"], ["Shift"], ["Alt"]):
+            project_links.nth(1).click(modifiers=modifiers)
+            if sys.platform == "darwin" and modifiers == ["Control"]:
+                page.keyboard.press("Escape")
+        project_links.nth(1).click(button="middle")
+        for key in ("Enter", "Space"):
+            project_links.nth(1).press(key)
+        assert page.url == standalone_url
+        assert not popups, "Standalone project actions must not open a new tab"
+        assert not page.evaluate("window.projectMessages"), "Standalone pages have no parent receiver"
 
         # This test shell exercises the cross-origin message contract, not the live OM application.
         shell = browser.new_page()
@@ -116,18 +135,39 @@ def main():
             else:
                 route.abort()
         shell.route("**/*", offline_shell)
+        shell.on("popup", lambda popup: popups.append(popup))
         shell.goto("https://om.gtcloud.cn/")
         frame = shell.frames[1]
         frame.wait_for_selector("#tableBody tr")
         frame.evaluate("""() => { LAND_ROWS[0].linkedProjects = [
             {projectName:'测试甲', projectCode:'TEST_A'}, {projectName:'测试乙', projectCode:'TEST_B'}
         ]; render(); }""")
-        frame.locator("#tableBody tr").first.locator("a.project-link").nth(1).click()
-        shell.wait_for_function("window.requests.length === 1")
-        request = shell.evaluate("window.requests[0]")
-        assert request["projectCode"] == "TEST_B"
-        assert request["url"] == "https://om.gtcloud.cn/#/region/invest/external-data?projectCode=TEST_B"
+        action = frame.locator("#tableBody tr").first.locator("button.project-link").nth(1)
+        count = 0
+        for modifiers in ([], ["Control"], ["Meta"], ["Shift"], ["Alt"]):
+            action.click(modifiers=modifiers)
+            # macOS treats Control-click as a context-menu action, not a click.
+            if sys.platform == "darwin" and modifiers == ["Control"]:
+                shell.keyboard.press("Escape")
+                assert shell.evaluate("window.requests.length") == count
+                continue
+            count += 1
+            shell.wait_for_function("n => window.requests.length === n", arg=count)
+        for key in ("Enter", "Space"):
+            action.press(key)
+            count += 1
+            shell.wait_for_function("n => window.requests.length === n", arg=count)
+        action.click(button="middle")
+        requests = shell.evaluate("window.requests")
+        assert len(requests) == count
+        for request in requests:
+            assert request["type"] == "chatbi2:open-project-detail"
+            assert request["projectCode"] == "TEST_B"
+            assert request["url"] == "https://om.gtcloud.cn/#/region/invest/external-data?projectCode=TEST_B"
+        assert shell.url == "https://om.gtcloud.cn/"
         assert frame.url == child_url
+        assert not popups, "Embedded project actions must not open a new tab"
+        shell.screenshot(path=str(args.output / "message-only-test-shell.png"))
         shell.close()
         assert not errors, errors
         browser.close()

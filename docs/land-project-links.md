@@ -110,9 +110,9 @@ python scripts/sync_land_tracker_project_links.py --refresh-source --apply --lar
 
 ## 页面跳转约定
 
-每个项目链接为 `https://om.gtcloud.cn/#/region/invest/external-data?projectCode=<真实编码>`。独立打开网页时使用真实 `<a>` 链接，新标签页打开，支持复制链接以及 Ctrl/Command 点击。
+项目名保持蓝色下划线外观，但使用 `type="button"` 的按钮，不再生成带 `href`、`target` 的项目链接。所有项目点击只请求母工程处理，不直接跳转、不打开新标签页、不做延时跳转兜底。证照来源链接和地块地图按钮不受影响。
 
-在已识别的 `https://om.gtcloud.cn` 母工程 iframe 内，普通点击发送以下消息并交由母工程处理，不再在 260ms 后把 iframe 重定向到名称模糊匹配页面：
+在已识别的 `https://om.gtcloud.cn` 母工程 iframe 内，鼠标主键点击（含 Ctrl/Command/Shift/Alt 修饰的 click 事件）以及 Enter/空格激活发送以下消息；中键、右键和 macOS 的 Control+点击上下文菜单不激活。独立打开网页、未能识别母工程或母工程来源不匹配时不发送、不跳转。没有真实编码的项目仍只显示普通文字。
 
 ```json
 {
@@ -127,7 +127,7 @@ python scripts/sync_land_tracker_project_links.py --refresh-source --apply --lar
 }
 ```
 
-`targetOrigin` 固定为 `https://om.gtcloud.cn`。母工程应核验发送方 origin、iframe window、消息类型及编码，然后跳转路由并将编码传给外部数据 iframe。修改或联调真实母工程、外部项目详情接收端不在本次改动内。
+`targetOrigin` 固定为 `https://om.gtcloud.cn`。消息内的 `url` 仅为兼容已有协议保留的路由元数据，子页面不执行该 URL。母工程应核验发送方 origin、iframe window、消息类型及编码，然后跳转路由并将编码传给外部数据 iframe。修改或联调真实母工程、外部项目详情接收端不在本次改动内。
 
 ## 验证与当前状态
 
