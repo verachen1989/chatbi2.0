@@ -100,6 +100,45 @@ class CheckpointTests(unittest.TestCase):
         self.assertEqual(second.reused_requests, 1)
         self.assertEqual(second.oldest_observation, self.now)
 
+    def test_refresh_replaces_bad_cached_response_and_provenance(self):
+        url = enrichment.ZJW + '/test'
+        client = enrichment.PublicClient(self.root / 'raw', delay=0, checkpoint_dir=self.root / 'cache')
+        with patch('land_tracker_checkpoint.now', return_value=self.now), patch.object(
+                enrichment.subprocess, 'run', return_value=SimpleNamespace(returncode=0, stdout=b'bad\n200')):
+            client.get(url)
+            client.finish_query(True)
+        refreshed = enrichment.PublicClient(self.root / 'refreshed', delay=0, checkpoint_dir=self.root / 'cache')
+        with patch('land_tracker_checkpoint.now', return_value=self.now + timedelta(minutes=1)):
+            self.assertEqual(refreshed.get(url), 'bad')
+            with patch.object(enrichment.subprocess, 'run', return_value=SimpleNamespace(returncode=0, stdout=b'good\n200')):
+                self.assertEqual(refreshed.get(url, refresh=True), 'good')
+            refreshed.finish_query(True)
+        self.assertEqual(refreshed.reused_requests, 0)
+        self.assertEqual(refreshed.oldest_observation, self.now + timedelta(minutes=1))
+        subsequent = enrichment.PublicClient(self.root / 'subsequent', delay=0, checkpoint_dir=self.root / 'cache')
+        with patch('land_tracker_checkpoint.now', return_value=self.now + timedelta(minutes=2)), patch.object(
+                enrichment.subprocess, 'run', side_effect=AssertionError('Network should not be used')):
+            self.assertEqual(subsequent.get(url), 'good')
+
+    def test_failed_plan_response_is_not_committed_after_fallback(self):
+        client = enrichment.PublicClient(self.root / 'raw', delay=0, checkpoint_dir=self.root / 'cache')
+        bad_url = enrichment.PLAN_SEARCH + '&currentPage=1'
+        bad_data = {'filter_LIKE_TITLE': 'FZX-0302-6017', 'filter_LIKE_KEYWORDS': '', 'filter_LIKE_CONTENT': ''}
+        good_data = dict(bad_data, filter_LIKE_TITLE='FZX-0302-601')
+        with patch('land_tracker_checkpoint.now', return_value=self.now), patch.object(
+                enrichment.subprocess, 'run', side_effect=[
+                    SimpleNamespace(returncode=0, stdout=b'bad\n200'),
+                    SimpleNamespace(returncode=0, stdout=b'good\n200')]):
+            client.get(bad_url, bad_data)
+            client.forget(bad_url, bad_data)
+            client.get(bad_url, good_data)
+            client.finish_query(True)
+        self.assertEqual(len(list((self.root / 'cache').glob('*.json'))), 1)
+        with patch('land_tracker_checkpoint.now', return_value=self.now), patch.object(
+                enrichment.subprocess, 'run', side_effect=AssertionError('Network should not be used')):
+            fresh = enrichment.PublicClient(self.root / 'other', checkpoint_dir=self.root / 'cache')
+            self.assertEqual(fresh.get(bad_url, good_data), 'good')
+
     def test_enrichment_payload_preserves_checkpoint_provenance(self):
         def query(collector):
             collector.client.get(enrichment.ZJW + '/test')

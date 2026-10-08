@@ -273,6 +273,39 @@ class EnrichmentTests(unittest.TestCase):
         self.assertEqual(len(collector.records), 1)
         self.assertIsNone(next(iter(collector.records.values()))["landCode"])
 
+    def test_plan_list_structure_error_retries_a_fresh_response(self):
+        client = SimpleNamespace(get=lambda *args, **kwargs: "", replay=None, resume=None)
+        collector = e.Collector(client, [self.row], {})
+        valid = '<html><input name="filter_LIKE_TITLE" value="FZX-0302-6017"><div>共1页</div></html>'
+        with patch.object(client, "get", side_effect=["<html>temporary error</html>", valid]) as get:
+            collector.plans(self.row)
+        self.assertEqual(get.call_count, 2)
+        self.assertEqual(get.call_args_list[0].kwargs, {})
+        self.assertTrue(get.call_args_list[1].kwargs["refresh"])
+
+    def test_plan_list_structure_error_still_fails_after_retry(self):
+        client = SimpleNamespace(get=lambda *args, **kwargs: "<html>temporary error</html>", replay=None, resume=None)
+        collector = e.Collector(client, [self.row], {})
+        with patch.object(client, "get", wraps=client.get) as get:
+            with self.assertRaisesRegex(e.ValidationError, "Construction-plan search structure changed"):
+                collector.plans(self.row)
+        self.assertEqual(get.call_count, 6)
+
+    def test_plan_list_falls_back_to_superset_prefix_only(self):
+        term = "FZX-0302-6017"
+        prefix = term[:-1]
+        valid = f'<html><input name="filter_LIKE_TITLE" value="{prefix}"><div>共1页</div></html>'
+        client = SimpleNamespace(get=lambda *args, **kwargs: "", replay=None, resume=None)
+        collector = e.Collector(client, [self.row], {})
+        with patch.object(client, "get", side_effect=["<html>official error</html>"] * 3 + [valid]) as get:
+            collector.plans(self.row)
+        self.assertEqual([call.args[1]["filter_LIKE_TITLE"] for call in get.call_args_list], [term] * 3 + [prefix])
+
+    def test_plan_list_rejects_wrong_query_echo(self):
+        wrong = '<html><input name="filter_LIKE_TITLE" value="another parcel"><div>共1页</div></html>'
+        with self.assertRaisesRegex(e.ValidationError, "Construction-plan search structure changed"):
+            e.parse_plan_list(wrong, e.PLAN_SEARCH, "FZX-0302-6017")
+
     def test_disappeared_source_is_not_still_confirmed(self):
         first = e.reconcile([self.row], [self.record], date(2026, 9, 18))
         result, changes, _, proof = e.reconcile(first[0], [], date(2026, 9, 18), first[3])

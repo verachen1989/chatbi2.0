@@ -112,7 +112,18 @@ class PublicClient:
                 self.reused_keys.discard(key)
         self.query_keys.clear()
 
-    def get(self, url, data=None):
+    def forget(self, url, data=None):
+        request = {"url": url, "data": data}
+        key = hashlib.sha256(json.dumps(request, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+        self.memory.pop(key, None)
+        self.observations.pop(key, None)
+        self.query_keys.discard(key)
+        self.reused_keys.discard(key)
+        if self.checkpoints:
+            self.checkpoints.pending.pop(key, None)
+            self.checkpoints.path(key).unlink(missing_ok=True)
+
+    def get(self, url, data=None, refresh=False):
         parsed = urlparse(url)
         allowed = parsed.hostname in {"bjjs.zjw.beijing.gov.cn", "zjw.beijing.gov.cn", "yewu.ghzrzyw.beijing.gov.cn", "www.shougang.com.cn", "www.bcegc.com"}
         if not allowed or parsed.scheme not in {"http", "https"} or parsed.username:
@@ -120,12 +131,12 @@ class PublicClient:
         request = {"url": url, "data": data}
         key = hashlib.sha256(json.dumps(request, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
         self.query_keys.add(key)
-        if key in self.memory:
+        if key in self.memory and not refresh:
             if self.checkpoints:
                 self.checkpoints.stage(key, self.memory[key], self.observations[key])
             return self.memory[key]
         filename = key + ".txt"
-        cached = self.checkpoints.load(key) if self.checkpoints else None
+        cached = self.checkpoints.load(key) if self.checkpoints and not refresh else None
         observed = checkpoints.now()
         if self.replay:
             text = (Path(self.replay) / filename).read_text(encoding="utf-8")
@@ -135,6 +146,7 @@ class PublicClient:
             text, observed = cached
             self.reused_keys.add(key)
         else:
+            self.reused_keys.discard(key)
             time.sleep(self.delay)
             cmd = ["curl", "--ipv4", "--curves", "P-256", "--fail", "--silent", "--show-error", "--connect-timeout", "10", "--max-time", "30", "--retry", "2", "--retry-all-errors"]
             if data is not None:
@@ -243,10 +255,12 @@ def parse_presale(text, entry):
             "valid": not bool(re.search(r"已注销|已撤销|已作废", soup.get_text())), "approvedPart": fields["批准预售部位"], "buildings": buildings, "raw": fields}
 
 
-def parse_plan_list(text, url):
+def parse_plan_list(text, url, expected_term=None):
     soup = BeautifulSoup(text, "html.parser")
     pages = re.search(r"共\s*(\d+)\s*页", soup.get_text(" ", strip=True))
-    if not pages or not soup.find("input", {"name": "filter_LIKE_TITLE"}):
+    search_input = soup.find("input", {"name": "filter_LIKE_TITLE"})
+    if (not pages or not search_input or
+            (expected_term is not None and search_input.get("value") != expected_term)):
         raise ValidationError("Construction-plan search structure changed")
     records = []
     for link in soup.select("li a[title][href]"):
@@ -374,29 +388,50 @@ class Collector:
 
     def plans(self, row):
         for term in query_terms(row):
-            pages, seen = None, set()
-            for page in range(1, 21):
-                url = PLAN_SEARCH + "&currentPage=" + str(page)
-                text = self.client.get(url, {"filter_LIKE_TITLE": term, "filter_LIKE_KEYWORDS": "", "filter_LIKE_CONTENT": ""})
-                entries, count = parse_plan_list(text, url)
-                if pages is not None and pages != count:
-                    raise ValidationError("Plan pagination changed")
-                pages = count
-                for entry in entries:
-                    if entry["url"] in seen:
-                        raise ValidationError("Plan pagination repeated")
-                    seen.add(entry["url"])
-                    if parse_date(entry["date"]) < min(parse_date(r["dealDate"]) for r in self.rows):
-                        continue
-                    key, basis = direct_match(entry, self.rows)
-                    if key:
-                        self.keep(parse_plan(self.client.get(entry["url"]), entry), key, basis)
-                    else:
-                        self.keep(dict(entry, valid=False, residential=False, developer="", permit="", note="标题未匹配主表地块，未采详情"))
-                if page >= pages:
+            try:
+                self.plan_pages(term)
+            except ValidationError as error:
+                if (str(error) != "Construction-plan search structure changed" or
+                        not term[-1:].isdigit() or len(term) < 8 or
+                        self.client.replay or self.client.resume):
+                    raise
+                # A one-character-shorter LIKE query covers every exact-term hit.
+                self.plan_pages(term[:-1])
+
+    def plan_pages(self, term):
+        pages, seen = None, set()
+        for page in range(1, 21):
+            url = PLAN_SEARCH + "&currentPage=" + str(page)
+            data = {"filter_LIKE_TITLE": term, "filter_LIKE_KEYWORDS": "", "filter_LIKE_CONTENT": ""}
+            for attempt in range(3):
+                text = self.client.get(url, data, refresh=True) if attempt else self.client.get(url, data)
+                try:
+                    entries, count = parse_plan_list(text, url, term)
                     break
-            else:
-                raise ValidationError("Plan page limit reached")
+                except ValidationError as error:
+                    if (str(error) != "Construction-plan search structure changed" or
+                            attempt == 2 or self.client.replay or self.client.resume):
+                        if str(error) == "Construction-plan search structure changed" and hasattr(self.client, "forget"):
+                            self.client.forget(url, data)
+                        raise
+            if pages is not None and pages != count:
+                raise ValidationError("Plan pagination changed")
+            pages = count
+            for entry in entries:
+                if entry["url"] in seen:
+                    raise ValidationError("Plan pagination repeated")
+                seen.add(entry["url"])
+                if parse_date(entry["date"]) < min(parse_date(r["dealDate"]) for r in self.rows):
+                    continue
+                key, basis = direct_match(entry, self.rows)
+                if key:
+                    self.keep(parse_plan(self.client.get(entry["url"]), entry), key, basis)
+                else:
+                    self.keep(dict(entry, valid=False, residential=False, developer="", permit="", note="标题未匹配主表地块，未采详情"))
+            if page >= pages:
+                break
+        else:
+            raise ValidationError("Plan page limit reached")
 
     def portal(self, kind, developer):
         page_ids = {"presale": "307670&isTrue=0", "construction": "53618592", "completion": "53618638"}
