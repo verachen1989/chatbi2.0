@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-10-08T13:50:56+08:00",
+  "checkedAt": "2026-10-09T14:27:05+08:00",
   "checkpointVersion": 1,
   "collectionMode": "live_checkpoint",
-  "completedAt": "2026-10-08T14:49:59+08:00",
+  "completedAt": "2026-10-09T18:40:20+08:00",
   "records": {
     "京土储挂(东)[2025]037号": {
       "fields": {
@@ -17185,7 +17185,38 @@
       }
     },
     "京土储挂(石)[2026]039号": {
-      "fields": {}
+      "fields": {
+        "constructionPlan": {
+          "displayValue": "26/10/09",
+          "records": [
+            {
+              "date": "2026-10-09",
+              "developer": "北京鑫安兴业房地产开发有限公司",
+              "kind": "plan",
+              "landCode": "京土储挂(石)[2026]039号",
+              "location": "",
+              "matchBasis": [
+                "规划地块编号:1604-674",
+                "行政区/建设位置一致"
+              ],
+              "name": "北京市石景山区刘娘府综合改造A1地块土地一级开发项目1604-674地块二类居住用地建设方案",
+              "permit": "",
+              "planningRefs": [],
+              "raw": {
+                "developer": "北京鑫安兴业房地产开发有限公司",
+                "published": "2026年10月09日",
+                "residentialArea": "58165.8",
+                "title": "北京市石景山区刘娘府综合改造A1地块土地一级开发项目1604-674地块二类居住用地建设方案"
+              },
+              "residential": true,
+              "url": "http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/sjsqxmjsfags/53620448/index.shtml",
+              "valid": true
+            }
+          ],
+          "status": "confirmed",
+          "value": "26/10/09"
+        }
+      }
     },
     "京土储挂(石)[2026]040号": {
       "fields": {}
@@ -23470,12 +23501,79 @@
       "fields": {}
     },
     "京土储挂(顺)[2026]037号": {
-      "fields": {}
+      "fields": {
+        "planningPermit": {
+          "displayValue": "26/10/08",
+          "records": [
+            {
+              "amendments": {
+                "listBg": [],
+                "listYq": [],
+                "listZx": []
+              },
+              "date": "2026-10-08",
+              "developer": "北京银盛泛美房地产开发有限公司",
+              "district": "顺义区",
+              "id": "e792136f12ababfdc1742819b3d4824c",
+              "kind": "planning",
+              "landCode": "京土储挂(顺)[2026]037号",
+              "location": "顺义区后沙峪镇",
+              "matchBasis": [
+                "规划地块编号:SY00-1801-0503",
+                "行政区/建设位置一致"
+              ],
+              "name": "北京市顺义区马头庄村剩余地块综合改造土地一级开发项目二期SY00-1801-0503地块二类城镇住宅用地（1#住宅楼等22项）",
+              "permit": "2026规自（顺）建字0034号",
+              "raw": {
+                "barcodevalue": "J8CWG930BXIU",
+                "createDateTime": "1791507600000",
+                "crtUserId": 3122,
+                "deleted": 0,
+                "faWenHao": "2026规自（顺）建字0034号",
+                "faWenRiQi": "1791454117000",
+                "fuTuJiFuJianMingCheng": "本工程建设工程规划许可证附件及设计总平面图一份。",
+                "fzjg": "北京市规划和自然资源委员会顺义分局",
+                "id": "e792136f12ababfdc1742819b3d4824c",
+                "jianSheDanWei": "北京银盛泛美房地产开发有限公司",
+                "jianSheDiQu": "顺义区",
+                "jianSheWeiZhi": "顺义区后沙峪镇",
+                "jianZhuGuiMo": "53738.77平方米，666.8米",
+                "jingBanChuShi": "顺义分局",
+                "nodeId": 111,
+                "objuuid": "590a14d4-b69d-4691-9057-968d69d830fb",
+                "oldId": "5D5EDE2878BD00CEE063C0A3010BA00D",
+                "opDigNumGather": "9120260726",
+                "opNum": "356",
+                "opNumGather": "2026分社建字0356",
+                "opState": "8",
+                "opTypeCode": "91",
+                "opYear": "2026",
+                "params": {},
+                "publishStatus": "0",
+                "publishTime": "1791507600000",
+                "publishUser": "3122",
+                "scgsrq": "1791541327000",
+                "shiFouFaZhengBen": "1",
+                "source": "3",
+                "syncDataGuid": "5D5EDE2878BC00CEE063C0A3010BA00D",
+                "tongYiBianHao": "1100002026GG0468639",
+                "typeId": 61,
+                "xiangMuMingCheng": "北京市顺义区马头庄村剩余地块综合改造土地一级开发项目二期SY00-1801-0503地块二类城镇住宅用地（1#住宅楼等22项）"
+              },
+              "residential": true,
+              "url": "https://yewu.ghzrzyw.beijing.gov.cn/zkdncms/cxghspjggsszjsjsgcghxkz/esSearchDetail/e792136f12ababfdc1742819b3d4824c",
+              "valid": true
+            }
+          ],
+          "status": "confirmed",
+          "value": "26/10/08"
+        }
+      }
     },
     "京土储挂(顺)[2026]045号": {
       "fields": {}
     }
   },
-  "reusedRequests": 1067,
+  "reusedRequests": 1061,
   "schemaVersion": 1
 }
