@@ -1,8 +1,7 @@
 {
-  "checkedAt": "2026-10-09T14:27:05+08:00",
-  "checkpointVersion": 1,
-  "collectionMode": "live_checkpoint",
-  "completedAt": "2026-10-09T18:40:20+08:00",
+  "checkedAt": "2026-10-10T14:09:03+08:00",
+  "collectionMode": "live",
+  "completedAt": "2026-10-10T14:52:27+08:00",
   "records": {
     "京土储挂(东)[2025]037号": {
       "fields": {
@@ -3445,6 +3444,47 @@
     },
     "京土储挂(兴)[2026]029号": {
       "fields": {
+        "constructionPermit": {
+          "displayValue": "26/10/09",
+          "records": [
+            {
+              "date": "2026-10-09",
+              "developer": "北京招融房地产开发有限公司",
+              "district": "大兴区",
+              "kind": "construction",
+              "landCode": "京土储挂(兴)[2026]029号",
+              "location": "大兴区大兴新城东组团DX00-0201-0209地块",
+              "matchBasis": [
+                "规划地块编号:DX00-0201-0209",
+                "行政区/建设位置一致"
+              ],
+              "name": "大兴区大兴新城东组团DX00-0201-0209地块R2二类居住用地项目（1#住宅楼等21项）",
+              "permit": "110115202610090101",
+              "raw": {
+                "发证日期": "2026-10-09",
+                "工程名称": "大兴区大兴新城东组团DX00-0201-0209地块R2二类居住用地项目（1#住宅楼等21项）",
+                "工程规模(平方米)": "57407.05",
+                "建设单位": "北京招融房地产开发有限公司",
+                "建设地址": "大兴区大兴新城东组团DX00-0201-0209地块",
+                "所在区县": "大兴区",
+                "施工单位": "正威科技集团有限公司",
+                "施工许可证号": "110115202610090101",
+                "法定代表人姓名": "李昂",
+                "监理单位": "北京方恒基业工程咨询有限公司",
+                "行政相对人代码": "91110109MAKGJH8D58",
+                "许可有效期限": "本证自发证之日起三个月内应予施工，逾期应办理延期手续，不办理延期或延期次数、时间超过法定时间的，本证自行废止。",
+                "许可机关": "大兴区住房和城乡建设委员会",
+                "设计单位": "基准方中建筑设计股份有限公司",
+                "证书状态": "有效"
+              },
+              "residential": true,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202609032022",
+              "valid": true
+            }
+          ],
+          "status": "confirmed",
+          "value": "26/10/09"
+        },
         "constructionPlan": {
           "displayValue": "26/08/20",
           "records": [
@@ -17186,6 +17226,47 @@
     },
     "京土储挂(石)[2026]039号": {
       "fields": {
+        "constructionPermit": {
+          "displayValue": "26/10/09",
+          "records": [
+            {
+              "date": "2026-10-09",
+              "developer": "北京鑫安兴业房地产开发有限公司",
+              "district": "石景山区",
+              "kind": "construction",
+              "landCode": "京土储挂(石)[2026]039号",
+              "location": "石景山区刘娘府1604-674 地块",
+              "matchBasis": [
+                "规划地块编号:1604-674",
+                "行政区/建设位置一致"
+              ],
+              "name": "北京市石景山区刘娘府综合改造A1地块土地一级开发项目1604-674地块二类居住用地项目（3#住宅楼等7项）",
+              "permit": "110107202610090101",
+              "raw": {
+                "发证日期": "2026-10-09",
+                "工程名称": "北京市石景山区刘娘府综合改造A1地块土地一级开发项目1604-674地块二类居住用地项目（3#住宅楼等7项）",
+                "工程规模(平方米)": "53830.75",
+                "建设单位": "北京鑫安兴业房地产开发有限公司",
+                "建设地址": "石景山区刘娘府1604-674 地块",
+                "所在区县": "石景山区",
+                "施工单位": "中建宏达建筑有限公司",
+                "施工许可证号": "110107202610090101",
+                "法定代表人姓名": "付熙嵬",
+                "监理单位": "建研凯勃建设工程咨询有限公司",
+                "行政相对人代码": "91110107MA01Q46P38",
+                "许可有效期限": "本证自发证之日起三个月内应予施工，逾期应办理延期手续，不办理延期或延期次数、时间超过法定时间的，本证自行废止。",
+                "许可机关": "石景山区住房和城市建设委员会",
+                "设计单位": "上海联创设计集团股份有限公司",
+                "证书状态": "有效"
+              },
+              "residential": true,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202609302029",
+              "valid": true
+            }
+          ],
+          "status": "confirmed",
+          "value": "26/10/09"
+        },
         "constructionPlan": {
           "displayValue": "26/10/09",
           "records": [
@@ -17210,6 +17291,72 @@
               },
               "residential": true,
               "url": "http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/sjsqxmjsfags/53620448/index.shtml",
+              "valid": true
+            }
+          ],
+          "status": "confirmed",
+          "value": "26/10/09"
+        },
+        "planningPermit": {
+          "displayValue": "26/10/09",
+          "records": [
+            {
+              "amendments": {
+                "listBg": [],
+                "listYq": [],
+                "listZx": []
+              },
+              "date": "2026-10-09",
+              "developer": "北京鑫安兴业房地产开发有限公司",
+              "district": "石景山区",
+              "id": "147c87907012041e4623cb53a71ce871",
+              "kind": "planning",
+              "landCode": "京土储挂(石)[2026]039号",
+              "location": "石景山区刘娘府1604-674 地块",
+              "matchBasis": [
+                "规划地块编号:1604-674",
+                "行政区/建设位置一致"
+              ],
+              "name": "北京市石景山区刘娘府综合改造A1地块土地一级开发项目1604-674地块二类居住用地项目（3#住宅楼等7项）",
+              "permit": "2026规自（石）建字0016号",
+              "raw": {
+                "barcodevalue": "J8CWHJ0TQZCR",
+                "createDateTime": "1791594001000",
+                "crtUserId": 3122,
+                "deleted": 0,
+                "faWenHao": "2026规自（石）建字0016号",
+                "faWenRiQi": "1791535410000",
+                "fuTuJiFuJianMingCheng": "本工程建设工程规划许可证附件及设计总平面图一份。",
+                "fzjg": "北京市规划和自然资源委员会石景山分局",
+                "id": "147c87907012041e4623cb53a71ce871",
+                "jianSheDanWei": "北京鑫安兴业房地产开发有限公司",
+                "jianSheDiQu": "石景山区",
+                "jianSheWeiZhi": "石景山区刘娘府1604-674 地块",
+                "jianZhuGuiMo": "53830.75平方米",
+                "jingBanChuShi": "石景山分局",
+                "nodeId": 111,
+                "objuuid": "f0b5906c-2ec0-432c-a1d3-b3ea859e544c",
+                "oldId": "5D72FBF9CA91016CE063C0A3010B0CBC",
+                "opDigNumGather": "9120260731",
+                "opNum": "358",
+                "opNumGather": "2026分社建字0358",
+                "opState": "8",
+                "opTypeCode": "91",
+                "opYear": "2026",
+                "params": {},
+                "publishStatus": "0",
+                "publishTime": "1791594001000",
+                "publishUser": "3122",
+                "scgsrq": "1791623186000",
+                "shiFouFaZhengBen": "1",
+                "source": "3",
+                "syncDataGuid": "5D72FBF9CA90016CE063C0A3010B0CBC",
+                "tongYiBianHao": "1101072026GG0073634",
+                "typeId": 61,
+                "xiangMuMingCheng": "北京市石景山区刘娘府综合改造A1地块土地一级开发项目1604-674地块二类居住用地项目（3#住宅楼等7项）"
+              },
+              "residential": true,
+              "url": "https://yewu.ghzrzyw.beijing.gov.cn/zkdncms/cxghspjggsszjsjsgcghxkz/esSearchDetail/147c87907012041e4623cb53a71ce871",
               "valid": true
             }
           ],
@@ -21370,6 +21517,72 @@
           ],
           "status": "confirmed",
           "value": "26/09/29"
+        },
+        "planningPermit": {
+          "displayValue": "26/10/09",
+          "records": [
+            {
+              "amendments": {
+                "listBg": [],
+                "listYq": [],
+                "listZx": []
+              },
+              "date": "2026-10-09",
+              "developer": "北京隅通置业有限公司",
+              "district": "通州区",
+              "id": "63f5932c99a6521c8a93fe7e48a28a0c",
+              "kind": "planning",
+              "landCode": "京土储挂(通)[2026]043号",
+              "location": "通州区梨园镇FZX-0306-6037地块",
+              "matchBasis": [
+                "规划地块编号:FZX-0306-6037",
+                "行政区/建设位置一致"
+              ],
+              "name": "北京市通州区老城平房棚户区改造项目一期土桥东西地块FZX-0306-6037地块R2二类居住用地项目（1#住宅楼等18项）",
+              "permit": "2026规自（通）建字0049号",
+              "raw": {
+                "barcodevalue": "J8CWHJ0TQZCO",
+                "createDateTime": "1791594001000",
+                "crtUserId": 3122,
+                "deleted": 0,
+                "faWenHao": "2026规自（通）建字0049号",
+                "faWenRiQi": "1791528029000",
+                "fuTuJiFuJianMingCheng": "本工程建设工程规划许可证附件及设计总平面图一份。",
+                "fzjg": "北京市规划和自然资源委员会通州分局",
+                "id": "63f5932c99a6521c8a93fe7e48a28a0c",
+                "jianSheDanWei": "北京隅通置业有限公司",
+                "jianSheDiQu": "通州区",
+                "jianSheWeiZhi": "通州区梨园镇FZX-0306-6037地块",
+                "jianZhuGuiMo": "54353.66平方米",
+                "jingBanChuShi": "通州分局",
+                "nodeId": 111,
+                "objuuid": "a62f9479-1b59-4392-82e5-e208ca070643",
+                "oldId": "5D72FBF9CA85016CE063C0A3010B0CBC",
+                "opDigNumGather": "9120260728",
+                "opNum": "357",
+                "opNumGather": "2026分社建字0357",
+                "opState": "8",
+                "opTypeCode": "91",
+                "opYear": "2026",
+                "params": {},
+                "publishStatus": "0",
+                "publishTime": "1791594001000",
+                "publishUser": "3122",
+                "scgsrq": "1791618498000",
+                "shiFouFaZhengBen": "1",
+                "source": "3",
+                "syncDataGuid": "5D72FBF9CA84016CE063C0A3010B0CBC",
+                "tongYiBianHao": "1100002026GG0469614",
+                "typeId": 61,
+                "xiangMuMingCheng": "北京市通州区老城平房棚户区改造项目一期土桥东西地块FZX-0306-6037地块R2二类居住用地项目（1#住宅楼等18项）"
+              },
+              "residential": true,
+              "url": "https://yewu.ghzrzyw.beijing.gov.cn/zkdncms/cxghspjggsszjsjsgcghxkz/esSearchDetail/63f5932c99a6521c8a93fe7e48a28a0c",
+              "valid": true
+            }
+          ],
+          "status": "confirmed",
+          "value": "26/10/09"
         }
       }
     },
@@ -23502,6 +23715,47 @@
     },
     "京土储挂(顺)[2026]037号": {
       "fields": {
+        "constructionPermit": {
+          "displayValue": "26/10/09",
+          "records": [
+            {
+              "date": "2026-10-09",
+              "developer": "北京银盛泛美房地产开发有限公司",
+              "district": "顺义区",
+              "kind": "construction",
+              "landCode": "京土储挂(顺)[2026]037号",
+              "location": "顺义区后沙峪镇",
+              "matchBasis": [
+                "规划地块编号:SY00-1801-0503",
+                "行政区/建设位置一致"
+              ],
+              "name": "北京市顺义区马头庄村剩余地块综合改造土地-级开发项目二期SY00-1801-0503地块二类城镇住宅用地(1#住宅楼等22项)",
+              "permit": "110113202610090101",
+              "raw": {
+                "发证日期": "2026-10-09",
+                "工程名称": "北京市顺义区马头庄村剩余地块综合改造土地-级开发项目二期SY00-1801-0503地块二类城镇住宅用地(1#住宅楼等22项)",
+                "工程规模(平方米)": "53738.77",
+                "建设单位": "北京银盛泛美房地产开发有限公司",
+                "建设地址": "顺义区后沙峪镇",
+                "所在区县": "顺义区",
+                "施工单位": "辽宁省丰隆建设工程有限公司",
+                "施工许可证号": "110113202610090101",
+                "法定代表人姓名": "张世强",
+                "监理单位": "中和德汇工程技术有限公司",
+                "行政相对人代码": "91110113MAKGCRX232",
+                "许可有效期限": "本证自发证之日起三个月内应予施工，逾期应办理延期手续，不办理延期或延期次数、时间超过法定时间的，本证自行废止。",
+                "许可机关": "顺义区住房和城乡建设委员会",
+                "设计单位": "基准方中建设设计股份有限公司",
+                "证书状态": "有效"
+              },
+              "residential": true,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202610092001",
+              "valid": true
+            }
+          ],
+          "status": "confirmed",
+          "value": "26/10/09"
+        },
         "planningPermit": {
           "displayValue": "26/10/08",
           "records": [
@@ -23574,6 +23828,5 @@
       "fields": {}
     }
   },
-  "reusedRequests": 1061,
   "schemaVersion": 1
 }

@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "status": "ready",
-  "checkedAt": 1791527225000,
-  "checkedAtText": "2026-10-09T14:27:05+08:00",
-  "checkedAtLocal": "2026/10/09 14:27:05",
-  "expiresAt": 1791700025000,
+  "checkedAt": 1791612543000,
+  "checkedAtText": "2026-10-10T14:09:03+08:00",
+  "checkedAtLocal": "2026/10/10 14:09:03",
+  "expiresAt": 1791785343000,
   "recordCount": 76,
   "rows": [
     {
@@ -77,8 +77,14 @@
       "amount": 8.7,
       "floorPrice": 26951.29,
       "dealDateText": "2026/08/27 00:00:00",
-      "notes": "已匹配官方记录：建设方案。\n空白表示尚未收录，不等于尚未取证。",
+      "notes": "已匹配官方记录：建设方案、建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
       "patches": [
+        {
+          "field": "planningPermit",
+          "textValue": "",
+          "dateText": "2026/10/09 00:00:00",
+          "dateValue": 1791475200000
+        },
         {
           "field": "constructionPlan",
           "textValue": "",
@@ -87,7 +93,7 @@
         },
         {
           "field": "sources",
-          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260827/5687413.html)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/tzqxmjsfags/53620430/index.shtml)",
+          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260827/5687413.html)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/tzqxmjsfags/53620430/index.shtml)\n[建设工程规划许可证 2026规自（通）建字0049号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
           "dateText": "2026/08/27 00:00:00",
           "dateValue": 0
         }
@@ -123,8 +129,14 @@
       "amount": 25.0,
       "floorPrice": 42329.83,
       "dealDateText": "2026/08/12 00:00:00",
-      "notes": "已匹配官方记录：建设方案。\n空白表示尚未收录，不等于尚未取证。",
+      "notes": "已匹配官方记录：施工证时间、建设方案、建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
       "patches": [
+        {
+          "field": "planningPermit",
+          "textValue": "",
+          "dateText": "2026/10/09 00:00:00",
+          "dateValue": 1791475200000
+        },
         {
           "field": "constructionPlan",
           "textValue": "",
@@ -132,8 +144,14 @@
           "dateValue": 1791475200000
         },
         {
+          "field": "constructionPermit",
+          "textValue": "",
+          "dateText": "2026/10/09 00:00:00",
+          "dateValue": 1791475200000
+        },
+        {
           "field": "sources",
-          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260812/5665768.html)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/sjsqxmjsfags/53620448/index.shtml)",
+          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260812/5665768.html)\n[施工证时间 110107202610090101](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202609302029)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/sjsqxmjsfags/53620448/index.shtml)\n[建设工程规划许可证 2026规自（石）建字0016号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
           "dateText": "2026/08/12 00:00:00",
           "dateValue": 0
         }
@@ -169,7 +187,7 @@
       "amount": 7.07,
       "floorPrice": 22312.67,
       "dealDateText": "2026/08/11 00:00:00",
-      "notes": "已匹配官方记录：建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
+      "notes": "已匹配官方记录：施工证时间、建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
       "patches": [
         {
           "field": "planningPermit",
@@ -178,8 +196,14 @@
           "dateValue": 1791388800000
         },
         {
+          "field": "constructionPermit",
+          "textValue": "",
+          "dateText": "2026/10/09 00:00:00",
+          "dateValue": 1791475200000
+        },
+        {
           "field": "sources",
-          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260811/5663811.html)\n[建设工程规划许可证 2026规自（顺）建字0034号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
+          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260811/5663811.html)\n[施工证时间 110113202610090101](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202610092001)\n[建设工程规划许可证 2026规自（顺）建字0034号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
           "dateText": "2026/08/11 00:00:00",
           "dateValue": 0
         }
@@ -381,7 +405,7 @@
       "amount": 7.2,
       "floorPrice": 20005.53,
       "dealDateText": "2026/07/22 00:00:00",
-      "notes": "已匹配官方记录：建设方案、建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
+      "notes": "已匹配官方记录：施工证时间、建设方案、建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
       "patches": [
         {
           "field": "planningPermit",
@@ -396,8 +420,14 @@
           "dateValue": 1787155200000
         },
         {
+          "field": "constructionPermit",
+          "textValue": "",
+          "dateText": "2026/10/09 00:00:00",
+          "dateValue": 1791475200000
+        },
+        {
           "field": "sources",
-          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260722/5633945.html)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/dxqxmjsfags/53620329/index.shtml)\n[建设工程规划许可证 2026规自（大）建字0027号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
+          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260722/5633945.html)\n[施工证时间 110115202610090101](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202609032022)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/dxqxmjsfags/53620329/index.shtml)\n[建设工程规划许可证 2026规自（大）建字0027号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
           "dateText": "2026/07/22 00:00:00",
           "dateValue": 0
         }
@@ -3632,6 +3662,13 @@
       "landCode": "京土储挂（顺）[2026]045号"
     },
     {
+      "field": "planningPermit",
+      "textValue": "",
+      "dateText": "2026/10/09 00:00:00",
+      "dateValue": 1791475200000,
+      "landCode": "京土储挂（通）[2026]043号"
+    },
+    {
       "field": "constructionPlan",
       "textValue": "",
       "dateText": "2026/09/29 00:00:00",
@@ -3640,7 +3677,7 @@
     },
     {
       "field": "sources",
-      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260827/5687413.html)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/tzqxmjsfags/53620430/index.shtml)",
+      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260827/5687413.html)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/tzqxmjsfags/53620430/index.shtml)\n[建设工程规划许可证 2026规自（通）建字0049号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
       "dateText": "2026/08/27 00:00:00",
       "dateValue": 0,
       "landCode": "京土储挂（通）[2026]043号"
@@ -3653,6 +3690,13 @@
       "landCode": "京土储挂（石）[2026]040号"
     },
     {
+      "field": "planningPermit",
+      "textValue": "",
+      "dateText": "2026/10/09 00:00:00",
+      "dateValue": 1791475200000,
+      "landCode": "京土储挂（石）[2026]039号"
+    },
+    {
       "field": "constructionPlan",
       "textValue": "",
       "dateText": "2026/10/09 00:00:00",
@@ -3660,8 +3704,15 @@
       "landCode": "京土储挂（石）[2026]039号"
     },
     {
+      "field": "constructionPermit",
+      "textValue": "",
+      "dateText": "2026/10/09 00:00:00",
+      "dateValue": 1791475200000,
+      "landCode": "京土储挂（石）[2026]039号"
+    },
+    {
       "field": "sources",
-      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260812/5665768.html)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/sjsqxmjsfags/53620448/index.shtml)",
+      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260812/5665768.html)\n[施工证时间 110107202610090101](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202609302029)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/sjsqxmjsfags/53620448/index.shtml)\n[建设工程规划许可证 2026规自（石）建字0016号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
       "dateText": "2026/08/12 00:00:00",
       "dateValue": 0,
       "landCode": "京土储挂（石）[2026]039号"
@@ -3681,8 +3732,15 @@
       "landCode": "京土储挂（顺）[2026]037号"
     },
     {
+      "field": "constructionPermit",
+      "textValue": "",
+      "dateText": "2026/10/09 00:00:00",
+      "dateValue": 1791475200000,
+      "landCode": "京土储挂（顺）[2026]037号"
+    },
+    {
       "field": "sources",
-      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260811/5663811.html)\n[建设工程规划许可证 2026规自（顺）建字0034号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
+      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260811/5663811.html)\n[施工证时间 110113202610090101](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202610092001)\n[建设工程规划许可证 2026规自（顺）建字0034号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
       "dateText": "2026/08/11 00:00:00",
       "dateValue": 0,
       "landCode": "京土储挂（顺）[2026]037号"
@@ -3821,8 +3879,15 @@
       "landCode": "京土储挂（兴）[2026]029号"
     },
     {
+      "field": "constructionPermit",
+      "textValue": "",
+      "dateText": "2026/10/09 00:00:00",
+      "dateValue": 1791475200000,
+      "landCode": "京土储挂（兴）[2026]029号"
+    },
+    {
       "field": "sources",
-      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260722/5633945.html)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/dxqxmjsfags/53620329/index.shtml)\n[建设工程规划许可证 2026规自（大）建字0027号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
+      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260722/5633945.html)\n[施工证时间 110115202610090101](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202609032022)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/dxqxmjsfags/53620329/index.shtml)\n[建设工程规划许可证 2026规自（大）建字0027号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
       "dateText": "2026/07/22 00:00:00",
       "dateValue": 0,
       "landCode": "京土储挂（兴）[2026]029号"
@@ -6572,6 +6637,6 @@
       "landCode": "京土储挂（海）[2024]051号"
     }
   ],
-  "updateCount": 423,
-  "snapshotId": "f77b7604664ac4309359ee495a8dd8cb7ba8aad59f186d75f469b0818b849223"
+  "updateCount": 428,
+  "snapshotId": "094d63d358b4dde9c40c35889d37733ad9971ec7d50e81d3419c46dbe9b6c77b"
 }
