@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "status": "ready",
-  "checkedAt": 1791785805000,
-  "checkedAtText": "2026-10-12T14:16:45+08:00",
-  "checkedAtLocal": "2026/10/12 14:16:45",
-  "expiresAt": 1791958605000,
+  "checkedAt": 1792126135000,
+  "checkedAtText": "2026-10-16T12:48:55+08:00",
+  "checkedAtLocal": "2026/10/16 12:48:55",
+  "expiresAt": 1792298935000,
   "recordCount": 76,
   "rows": [
     {
@@ -373,7 +373,7 @@
       "amount": 46.814,
       "floorPrice": 81063.2,
       "dealDateText": "2026/07/28 00:00:00",
-      "notes": "已匹配官方记录：建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
+      "notes": "已匹配官方记录：建设方案、建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
       "patches": [
         {
           "field": "plate",
@@ -388,8 +388,14 @@
           "dateValue": 1790697600000
         },
         {
+          "field": "constructionPlan",
+          "textValue": "",
+          "dateText": "2026/10/16 00:00:00",
+          "dateValue": 1792080000000
+        },
+        {
           "field": "sources",
-          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260728/5645911.html)\n[建设工程规划许可证 2026规自（朝）建字0031号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
+          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260728/5645911.html)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/cyqxmjsfags/53620466/index.shtml)\n[建设工程规划许可证 2026规自（朝）建字0031号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
           "dateText": "2026/07/28 00:00:00",
           "dateValue": 0
         }
@@ -2046,8 +2052,14 @@
       "amount": 4.46,
       "floorPrice": 58777.02,
       "dealDateText": "2025/09/05 00:00:00",
-      "notes": "已匹配官方记录：建设方案、建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
+      "notes": "已匹配官方记录：项目名称、建设方案、首个预售证、建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
       "patches": [
+        {
+          "field": "projectName",
+          "textValue": "尊礼嘉苑",
+          "dateText": "2025/09/05 00:00:00",
+          "dateValue": 0
+        },
         {
           "field": "planningPermit",
           "textValue": "",
@@ -2061,8 +2073,14 @@
           "dateValue": 1782057600000
         },
         {
+          "field": "firstPresale",
+          "textValue": "",
+          "dateText": "2026/10/14 00:00:00",
+          "dateValue": 1791907200000
+        },
+        {
           "field": "sources",
-          "textValue": "[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/cyqxmjsfags/53620106/index.shtml)\n[建设工程规划许可证 2026规自（朝）建字0017号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
+          "textValue": "[项目名称 京房售证字(2026)94号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8292042&systemID=2&srcId=1)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/cyqxmjsfags/53620106/index.shtml)\n[首个预售证 京房售证字(2026)94号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8292042&systemID=2&srcId=1)\n[建设工程规划许可证 2026规自（朝）建字0017号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
           "dateText": "2025/09/05 00:00:00",
           "dateValue": 0
         }
@@ -3858,8 +3876,15 @@
       "landCode": "京土储挂（朝）[2026]030号"
     },
     {
+      "field": "constructionPlan",
+      "textValue": "",
+      "dateText": "2026/10/16 00:00:00",
+      "dateValue": 1792080000000,
+      "landCode": "京土储挂（朝）[2026]030号"
+    },
+    {
       "field": "sources",
-      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260728/5645911.html)\n[建设工程规划许可证 2026规自（朝）建字0031号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
+      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260728/5645911.html)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/cyqxmjsfags/53620466/index.shtml)\n[建设工程规划许可证 2026规自（朝）建字0031号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
       "dateText": "2026/07/28 00:00:00",
       "dateValue": 0,
       "landCode": "京土储挂（朝）[2026]030号"
@@ -5209,6 +5234,13 @@
       "landCode": "京土储挂（朝）[2025] 029号"
     },
     {
+      "field": "projectName",
+      "textValue": "尊礼嘉苑",
+      "dateText": "2025/09/05 00:00:00",
+      "dateValue": 0,
+      "landCode": "京土储挂（朝）[2025] 027号"
+    },
+    {
       "field": "planningPermit",
       "textValue": "",
       "dateText": "2026/06/12 00:00:00",
@@ -5223,8 +5255,15 @@
       "landCode": "京土储挂（朝）[2025] 027号"
     },
     {
+      "field": "firstPresale",
+      "textValue": "",
+      "dateText": "2026/10/14 00:00:00",
+      "dateValue": 1791907200000,
+      "landCode": "京土储挂（朝）[2025] 027号"
+    },
+    {
       "field": "sources",
-      "textValue": "[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/cyqxmjsfags/53620106/index.shtml)\n[建设工程规划许可证 2026规自（朝）建字0017号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
+      "textValue": "[项目名称 京房售证字(2026)94号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8292042&systemID=2&srcId=1)\n[建设方案](http://bjjs.zjw.beijing.gov.cn/bjjs/sy/zwfw66/cxzx-sjzt/gcjsl/xmjsfa/cyqxmjsfags/53620106/index.shtml)\n[首个预售证 京房售证字(2026)94号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8292042&systemID=2&srcId=1)\n[建设工程规划许可证 2026规自（朝）建字0017号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
       "dateText": "2025/09/05 00:00:00",
       "dateValue": 0,
       "landCode": "京土储挂（朝）[2025] 027号"
@@ -6637,6 +6676,6 @@
       "landCode": "京土储挂（海）[2024]051号"
     }
   ],
-  "updateCount": 428,
-  "snapshotId": "66988c68fe3e5c611305c559e41f53eab4542fb3b084d959571af682d3687dc3"
+  "updateCount": 431,
+  "snapshotId": "447b440f21ee66b8adb3acf47692c1b23548eff663027ade90bc631b7e9f43a1"
 }
