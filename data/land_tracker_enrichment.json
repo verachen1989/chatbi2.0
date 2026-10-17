@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-16T12:48:55+08:00",
+  "checkedAt": "2026-10-17T12:47:46+08:00",
   "collectionMode": "live",
-  "completedAt": "2026-10-16T13:40:52+08:00",
+  "completedAt": "2026-10-17T13:31:14+08:00",
   "records": {
     "京土储挂(东)[2025]037号": {
       "fields": {
@@ -17476,6 +17476,65 @@
               },
               "residential": true,
               "url": "https://yewu.ghzrzyw.beijing.gov.cn/zkdncms/cxghspjggsszjsjsgcghxkz/esSearchDetail/147c87907012041e4623cb53a71ce871",
+              "valid": true
+            },
+            {
+              "amendments": {
+                "listBg": [],
+                "listYq": [],
+                "listZx": []
+              },
+              "date": "2026-10-16",
+              "developer": "北京鑫安兴业房地产开发有限公司",
+              "district": "石景山区",
+              "id": "52ff7c7d87c65b0e616967407a2b04ca",
+              "kind": "planning",
+              "landCode": "京土储挂(石)[2026]039号",
+              "location": "石景山区刘娘府1604-674 地块",
+              "matchBasis": [
+                "规划地块编号:1604-674",
+                "行政区/建设位置一致"
+              ],
+              "name": "北京市石景山区刘娘府综合改造A1地块土地一级开发项目1604-674地块二类居住用地项目（1#住宅楼等13项）",
+              "permit": "2026规自（石）建字0018号",
+              "raw": {
+                "barcodevalue": "J8CWLCUA04UO",
+                "createDateTime": "1792198802000",
+                "crtUserId": 3122,
+                "deleted": 0,
+                "faWenHao": "2026规自（石）建字0018号",
+                "faWenRiQi": "1792142158000",
+                "fuTuJiFuJianMingCheng": "本工程建设工程规划许可证附件及设计总平面图一份。",
+                "fzjg": "北京市规划和自然资源委员会石景山分局",
+                "id": "52ff7c7d87c65b0e616967407a2b04ca",
+                "jianSheDanWei": "北京鑫安兴业房地产开发有限公司",
+                "jianSheDiQu": "石景山区",
+                "jianSheWeiZhi": "石景山区刘娘府1604-674 地块",
+                "jianZhuGuiMo": "23709.11平方米",
+                "jingBanChuShi": "石景山分局",
+                "nodeId": 111,
+                "objuuid": "75da42d6-e669-4d5b-a776-39ed6513d134",
+                "oldId": "5DFFCCFD41B602DCE063C0A3010B18A1",
+                "opDigNumGather": "9120260752",
+                "opNum": "371",
+                "opNumGather": "2026分社建字0371",
+                "opState": "8",
+                "opTypeCode": "91",
+                "opYear": "2026",
+                "params": {},
+                "publishStatus": "0",
+                "publishTime": "1792198802000",
+                "publishUser": "3122",
+                "scgsrq": "1792232812000",
+                "shiFouFaZhengBen": "1",
+                "source": "3",
+                "syncDataGuid": "5DFFCCFD41B502DCE063C0A3010B18A1",
+                "tongYiBianHao": "1101072026GG0079662",
+                "typeId": 61,
+                "xiangMuMingCheng": "北京市石景山区刘娘府综合改造A1地块土地一级开发项目1604-674地块二类居住用地项目（1#住宅楼等13项）"
+              },
+              "residential": true,
+              "url": "https://yewu.ghzrzyw.beijing.gov.cn/zkdncms/cxghspjggsszjsjsgcghxkz/esSearchDetail/52ff7c7d87c65b0e616967407a2b04ca",
               "valid": true
             }
           ],
