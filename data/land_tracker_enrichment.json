@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-17T12:47:46+08:00",
+  "checkedAt": "2026-10-18T12:54:00+08:00",
   "collectionMode": "live",
-  "completedAt": "2026-10-17T13:31:14+08:00",
+  "completedAt": "2026-10-18T13:40:30+08:00",
   "records": {
     "京土储挂(东)[2025]037号": {
       "fields": {
@@ -11428,7 +11428,7 @@
               "valid": true
             }
           ],
-          "status": "confirmed",
+          "status": "not_reconfirmed",
           "value": "26/06/15"
         },
         "planningPermit": {
@@ -11626,7 +11626,7 @@
               "valid": true
             }
           ],
-          "status": "confirmed",
+          "status": "not_reconfirmed",
           "value": "橒颂雅园"
         }
       }
