@@ -14,6 +14,11 @@ import update_land_tracker as transaction
 
 
 class RecoveryTests(unittest.TestCase):
+    def test_browser_runner_is_pinned_to_supported_ubuntu(self):
+        workflow = (Path(__file__).resolve().parents[2] / '.github/workflows/land-tracker.yml').read_text()
+        self.assertIn('runs-on: ubuntu-24.04', workflow)
+        self.assertNotIn('runs-on: ubuntu-latest', workflow)
+
     def setUp(self):
         self.assertIsNotNone(importlib.util.find_spec('land_tracker_recovery'), 'Recovery runner is missing')
         self.module = importlib.import_module('land_tracker_recovery')

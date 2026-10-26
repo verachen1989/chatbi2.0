@@ -34,7 +34,8 @@ concurrency:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    # Playwright 1.55 supports Ubuntu 24.04, not the rolling latest image.
+    runs-on: ubuntu-24.04
     timeout-minutes: 150
     permissions:
       contents: write
