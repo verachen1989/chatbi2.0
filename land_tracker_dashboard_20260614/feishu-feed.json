@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "status": "ready",
-  "checkedAt": 1793167357000,
-  "checkedAtText": "2026-10-28T14:02:37+08:00",
-  "checkedAtLocal": "2026/10/28 14:02:37",
-  "expiresAt": 1793340157000,
+  "checkedAt": 1793254171000,
+  "checkedAtText": "2026-10-29T14:09:31+08:00",
+  "checkedAtLocal": "2026/10/29 14:09:31",
+  "expiresAt": 1793426971000,
   "recordCount": 76,
   "rows": [
     {
@@ -713,7 +713,7 @@
         },
         {
           "field": "sources",
-          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260528/5550319.html)\n[项目名称 京房售证字(2026)85号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8272818&systemID=2&srcId=1)\n[施工证时间 110107202606130301](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202606122033)\n[首个预售证 京房售证字(2026)85号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8272818&systemID=2&srcId=1)\n[建设工程规划许可证 2026规自（石）建字0008号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
+          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260528/5550319.html)\n[项目名称 京房售证字(2026)99号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8300484&systemID=2&srcId=1)\n[施工证时间 110107202606130301](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202606122033)\n[首个预售证 京房售证字(2026)85号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8272818&systemID=2&srcId=1)\n[建设工程规划许可证 2026规自（石）建字0008号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
           "dateText": "2026/05/28 00:00:00",
           "dateValue": 0
         }
@@ -4193,7 +4193,7 @@
     },
     {
       "field": "sources",
-      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260528/5550319.html)\n[项目名称 京房售证字(2026)85号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8272818&systemID=2&srcId=1)\n[施工证时间 110107202606130301](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202606122033)\n[首个预售证 京房售证字(2026)85号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8272818&systemID=2&srcId=1)\n[建设工程规划许可证 2026规自（石）建字0008号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
+      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260528/5550319.html)\n[项目名称 京房售证字(2026)99号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8300484&systemID=2&srcId=1)\n[施工证时间 110107202606130301](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202606122033)\n[首个预售证 京房售证字(2026)85号](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8272818&systemID=2&srcId=1)\n[建设工程规划许可证 2026规自（石）建字0008号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
       "dateText": "2026/05/28 00:00:00",
       "dateValue": 0,
       "landCode": "京土储挂（石）[2026]020号"
@@ -6755,5 +6755,5 @@
     }
   ],
   "updateCount": 437,
-  "snapshotId": "2b8d7b87f1cbab3032f5822b2ab3cba0d2800e78fe34b1363a84f669a1af8a18"
+  "snapshotId": "90ad00765d66cb10fecd32a7ba380edaecefa32378463c049e83d2ddf824dac9"
 }
