@@ -1,8 +1,7 @@
 {
-  "checkedAt": "2026-10-29T14:09:31+08:00",
-  "checkpointVersion": 1,
-  "collectionMode": "live_checkpoint",
-  "completedAt": "2026-10-29T18:04:33+08:00",
+  "checkedAt": "2026-10-31T14:03:57+08:00",
+  "collectionMode": "live",
+  "completedAt": "2026-10-31T14:36:36+08:00",
   "records": {
     "京土储挂(东)[2025]037号": {
       "fields": {
@@ -2276,7 +2275,7 @@
               "date": "2026-08-28",
               "developer": "保利（北京）房地产开发有限公司",
               "district": "丰台区",
-              "id": "c809f749522e0f6a3f40be9ab6b45818",
+              "id": "499e38ab8f73125f264d6bfbc77a3bf5",
               "kind": "planning",
               "landCode": "京土储挂(丰)[2026]017号",
               "location": "丰台区太平桥街道",
@@ -2288,22 +2287,23 @@
               "permit": "2026规自（丰）建字0034号",
               "raw": {
                 "barcodevalue": "J8CW4RMNKH03",
-                "createDateTime": "1787965201000",
+                "createDateTime": "1793257002000",
                 "crtUserId": 3122,
                 "deleted": 0,
                 "faWenHao": "2026规自（丰）建字0034号",
                 "faWenRiQi": "1787924834000",
                 "fuTuJiFuJianMingCheng": "本工程建设工程规划许可证附件及设计总平面图一份。",
                 "fzjg": "北京市规划和自然资源委员会丰台分局",
-                "id": "c809f749522e0f6a3f40be9ab6b45818",
+                "id": "499e38ab8f73125f264d6bfbc77a3bf5",
                 "jianSheDanWei": "保利（北京）房地产开发有限公司",
                 "jianSheDiQu": "丰台区",
                 "jianSheWeiZhi": "丰台区太平桥街道",
                 "jianZhuGuiMo": "116990.2平方米，664.59米",
                 "jingBanChuShi": "丰台分局",
+                "kwnrxq": "    本证照于2026年10月29日进行过勘误，将5#住宅楼地上高度由“65.25”改为“62.25”，将1#景观廊架高度由“9.7”改为“9.75”。有关内容以此证照为准。",
                 "nodeId": 111,
-                "objuuid": "316926f6-381a-4231-9170-bdfbcf85a6d1",
-                "oldId": "5A257C773A5F0188E063C0A3010C5D8F",
+                "objuuid": "ef7f7011-c198-474e-8c28-e2e9d605e5ce",
+                "oldId": "5EF5EE6EF8590078E063C0A3010C1195",
                 "opDigNumGather": "9120260627",
                 "opNum": "306",
                 "opNumGather": "2026分社建字0306",
@@ -2312,18 +2312,19 @@
                 "opYear": "2026",
                 "params": {},
                 "publishStatus": "0",
-                "publishTime": "1787965201000",
+                "publishTime": "1793257002000",
                 "publishUser": "3122",
                 "scgsrq": "1788013326000",
+                "sfsjzbscnr": "0",
                 "shiFouFaZhengBen": "1",
                 "source": "3",
-                "syncDataGuid": "5A257C773A5E0188E063C0A3010C5D8F",
+                "syncDataGuid": "5EF5EE6EF8580078E063C0A3010C1195",
                 "tongYiBianHao": "1101062026GG0169617",
                 "typeId": 61,
                 "xiangMuMingCheng": "丰台区太平桥城中村改造项目A区FT00-0608-0001地块R2二类居住用地项目（1#住宅楼等26项）"
               },
               "residential": true,
-              "url": "https://yewu.ghzrzyw.beijing.gov.cn/zkdncms/cxghspjggsszjsjsgcghxkz/esSearchDetail/c809f749522e0f6a3f40be9ab6b45818",
+              "url": "https://yewu.ghzrzyw.beijing.gov.cn/zkdncms/cxghspjggsszjsjsgcghxkz/esSearchDetail/499e38ab8f73125f264d6bfbc77a3bf5",
               "valid": true
             }
           ],
@@ -8801,6 +8802,40 @@
               "residential": true,
               "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202609022030",
               "valid": true
+            },
+            {
+              "date": "2026-10-30",
+              "developer": "北京兆晏房地产开发有限公司",
+              "district": "昌平区",
+              "kind": "construction",
+              "landCode": "京土储挂(昌)[2026]034号",
+              "location": "昌平区东小口镇",
+              "matchBasis": [
+                "规划地块编号:CP02-0405-0002",
+                "行政区/建设位置一致"
+              ],
+              "name": "北京市昌平区东小口镇CP02-0405-0002地块R2二类居住用地项目（二期）（1#住宅楼等26项）",
+              "permit": "110114202610300201",
+              "raw": {
+                "发证日期": "2026-10-30",
+                "工程名称": "北京市昌平区东小口镇CP02-0405-0002地块R2二类居住用地项目（二期）（1#住宅楼等26项）",
+                "工程规模(平方米)": "97043.37",
+                "建设单位": "北京兆晏房地产开发有限公司",
+                "建设地址": "昌平区东小口镇",
+                "所在区县": "昌平区",
+                "施工单位": "北京中天北方建设有限公司",
+                "施工许可证号": "110114202610300201",
+                "法定代表人姓名": "华晓巍",
+                "监理单位": "建发合诚工程咨询股份有限公司",
+                "行政相对人代码": "91350901MA8TEXTF15",
+                "许可有效期限": "本证自发证之日起三个月内应予施工，逾期应办理延期手续，不办理延期或延期次数、时间超过法定时间的，本证自行废止。",
+                "许可机关": "昌平区住房和城乡建设委员会",
+                "设计单位": "北京天鸿圆方建筑设计有限责任公司",
+                "证书状态": "有效"
+              },
+              "residential": true,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202610282041",
+              "valid": true
             }
           ],
           "status": "confirmed",
@@ -11969,6 +12004,55 @@
               "residential": true,
               "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8248005&systemID=2&srcId=1",
               "valid": true
+            },
+            {
+              "approvedPart": "1#住宅楼地上1层至17层全部住宅，6#住宅楼地下戊类库房：-01至-16、-101，7#住宅楼地下戊类库房：-01至-02、-101至-106，地下车库-1层-1001至-1290",
+              "buildings": [
+                {
+                  "name": "1#住宅楼",
+                  "suites": 67
+                },
+                {
+                  "name": "6#住宅楼",
+                  "suites": 17
+                },
+                {
+                  "name": "7#住宅楼",
+                  "suites": 8
+                },
+                {
+                  "name": "地下车库",
+                  "suites": 290
+                }
+              ],
+              "date": "2026-10-30",
+              "developer": "北京东茂置业有限公司",
+              "kind": "presale",
+              "landCode": "京土储挂(朝)[2026]016号",
+              "location": "朝阳区东坝乡单店区域平房区城中村改造项目1105-01地块",
+              "matchBasis": [
+                "规划许可证号完全一致",
+                "开发企业与规划建设单位一致"
+              ],
+              "name": "满茂文苑",
+              "permit": "京房售证字(2026)102号",
+              "planningRefs": [
+                "2026规自(朝)建字0014号",
+                "2026规自(朝)建字0016号"
+              ],
+              "planningRefsComplete": true,
+              "raw": {
+                "发证日期": "2026/10/30",
+                "坐落位置": "朝阳区东坝乡单店区域平房区城中村改造项目1105-01地块",
+                "建设工程规划许可证编号": "2026规自(朝)建字0016号,2026规自(朝)建字0014号",
+                "开发企业": "北京东茂置业有限公司",
+                "批准预售部位": "1#住宅楼地上1层至17层全部住宅，6#住宅楼地下戊类库房：-01至-16、-101，7#住宅楼地下戊类库房：-01至-02、-101至-106，地下车库-1层-1001至-1290",
+                "项目名称": "满茂文苑",
+                "预售许可证编号": "京房售证字(2026)102号"
+              },
+              "residential": true,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8301755&systemID=2&srcId=1",
+              "valid": true
             }
           ],
           "status": "confirmed",
@@ -12103,6 +12187,55 @@
           "displayValue": "满茂文苑",
           "nameType": "official",
           "records": [
+            {
+              "approvedPart": "1#住宅楼地上1层至17层全部住宅，6#住宅楼地下戊类库房：-01至-16、-101，7#住宅楼地下戊类库房：-01至-02、-101至-106，地下车库-1层-1001至-1290",
+              "buildings": [
+                {
+                  "name": "1#住宅楼",
+                  "suites": 67
+                },
+                {
+                  "name": "6#住宅楼",
+                  "suites": 17
+                },
+                {
+                  "name": "7#住宅楼",
+                  "suites": 8
+                },
+                {
+                  "name": "地下车库",
+                  "suites": 290
+                }
+              ],
+              "date": "2026-10-30",
+              "developer": "北京东茂置业有限公司",
+              "kind": "presale",
+              "landCode": "京土储挂(朝)[2026]016号",
+              "location": "朝阳区东坝乡单店区域平房区城中村改造项目1105-01地块",
+              "matchBasis": [
+                "规划许可证号完全一致",
+                "开发企业与规划建设单位一致"
+              ],
+              "name": "满茂文苑",
+              "permit": "京房售证字(2026)102号",
+              "planningRefs": [
+                "2026规自(朝)建字0014号",
+                "2026规自(朝)建字0016号"
+              ],
+              "planningRefsComplete": true,
+              "raw": {
+                "发证日期": "2026/10/30",
+                "坐落位置": "朝阳区东坝乡单店区域平房区城中村改造项目1105-01地块",
+                "建设工程规划许可证编号": "2026规自(朝)建字0016号,2026规自(朝)建字0014号",
+                "开发企业": "北京东茂置业有限公司",
+                "批准预售部位": "1#住宅楼地上1层至17层全部住宅，6#住宅楼地下戊类库房：-01至-16、-101，7#住宅楼地下戊类库房：-01至-02、-101至-106，地下车库-1层-1001至-1290",
+                "项目名称": "满茂文苑",
+                "预售许可证编号": "京房售证字(2026)102号"
+              },
+              "residential": true,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=8301755&systemID=2&srcId=1",
+              "valid": true
+            },
             {
               "approvedPart": "2#住宅楼地上1层至17层全部住宅、3#住宅楼地上1层至14层全部住宅、4#住宅楼地上1层至13层全部住宅、5#住宅楼地上1层至12层全部住宅、6#住宅楼地上1层至17层全部住宅、7#住宅楼地上1层至14层全部住宅、8#住宅楼地上1层至12层全部住宅",
               "buildings": [
@@ -24439,6 +24572,5 @@
       "fields": {}
     }
   },
-  "reusedRequests": 1094,
   "schemaVersion": 1
 }
