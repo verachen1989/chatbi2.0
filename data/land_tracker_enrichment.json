@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-11-03T15:05:59+08:00",
+  "checkedAt": "2026-11-04T14:48:49+08:00",
   "checkpointVersion": 1,
   "collectionMode": "live_checkpoint",
-  "completedAt": "2026-11-03T18:59:20+08:00",
+  "completedAt": "2026-11-04T19:02:09+08:00",
   "records": {
     "京土储挂(东)[2025]037号": {
       "fields": {
@@ -24576,6 +24576,6 @@
       "fields": {}
     }
   },
-  "reusedRequests": 1082,
+  "reusedRequests": 1085,
   "schemaVersion": 1
 }
