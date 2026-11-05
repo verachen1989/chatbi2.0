@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "status": "ready",
-  "checkedAt": 1793774929000,
-  "checkedAtText": "2026-11-04T14:48:49+08:00",
-  "checkedAtLocal": "2026/11/04 14:48:49",
-  "expiresAt": 1793947729000,
+  "checkedAt": 1793862530000,
+  "checkedAtText": "2026-11-05T15:08:50+08:00",
+  "checkedAtLocal": "2026/11/05 15:08:50",
+  "expiresAt": 1794035330000,
   "recordCount": 77,
   "rows": [
     {
@@ -37,11 +37,17 @@
       "amount": 17.0,
       "floorPrice": 18453.95,
       "dealDateText": "2026/09/22 00:00:00",
-      "notes": "空白表示尚未收录，不等于尚未取证。",
+      "notes": "已匹配官方记录：建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
       "patches": [
         {
+          "field": "planningPermit",
+          "textValue": "",
+          "dateText": "2026/11/03 00:00:00",
+          "dateValue": 1793635200000
+        },
+        {
           "field": "sources",
-          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260922/5723444.html)",
+          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260922/5723444.html)\n[建设工程规划许可证 2026规自（昌）建字0064号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
           "dateText": "2026/09/22 00:00:00",
           "dateValue": 0
         }
@@ -291,7 +297,7 @@
       "amount": 8.308,
       "floorPrice": 19148.3,
       "dealDateText": "2026/07/30 00:00:00",
-      "notes": "空白表示尚未收录，不等于尚未取证。",
+      "notes": "已匹配官方记录：施工证时间、建设工程规划许可证。\n空白表示尚未收录，不等于尚未取证。",
       "patches": [
         {
           "field": "plate",
@@ -300,8 +306,20 @@
           "dateValue": 0
         },
         {
+          "field": "planningPermit",
+          "textValue": "",
+          "dateText": "2026/11/03 00:00:00",
+          "dateValue": 1793635200000
+        },
+        {
+          "field": "constructionPermit",
+          "textValue": "",
+          "dateText": "2026/11/04 00:00:00",
+          "dateValue": 1793721600000
+        },
+        {
           "field": "sources",
-          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260730/5649502.html)",
+          "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260730/5649502.html)\n[施工证时间 110113202611040101](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202611032028)\n[建设工程规划许可证 2026规自（顺）建字0036号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
           "dateText": "2026/07/30 00:00:00",
           "dateValue": 0
         }
@@ -3722,8 +3740,15 @@
       "landCode": "京土储挂（昌）[2026]054号"
     },
     {
+      "field": "planningPermit",
+      "textValue": "",
+      "dateText": "2026/11/03 00:00:00",
+      "dateValue": 1793635200000,
+      "landCode": "京土储挂（昌）[2026]051号"
+    },
+    {
       "field": "sources",
-      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260922/5723444.html)",
+      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260922/5723444.html)\n[建设工程规划许可证 2026规自（昌）建字0064号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
       "dateText": "2026/09/22 00:00:00",
       "dateValue": 0,
       "landCode": "京土储挂（昌）[2026]051号"
@@ -3862,8 +3887,22 @@
       "landCode": "京土储挂（顺）[2026]031号"
     },
     {
+      "field": "planningPermit",
+      "textValue": "",
+      "dateText": "2026/11/03 00:00:00",
+      "dateValue": 1793635200000,
+      "landCode": "京土储挂（顺）[2026]031号"
+    },
+    {
+      "field": "constructionPermit",
+      "textValue": "",
+      "dateText": "2026/11/04 00:00:00",
+      "dateValue": 1793721600000,
+      "landCode": "京土储挂（顺）[2026]031号"
+    },
+    {
       "field": "sources",
-      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260730/5649502.html)",
+      "textValue": "[成交公告](https://ggzyfw.beijing.gov.cn/zpgcjzd/20260730/5649502.html)\n[施工证时间 110113202611040101](http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202611032028)\n[建设工程规划许可证 2026规自（顺）建字0036号](https://yewu.ghzrzyw.beijing.gov.cn/gwxxfb/cxghjsgcgh/jsgcgh.html)",
       "dateText": "2026/07/30 00:00:00",
       "dateValue": 0,
       "landCode": "京土储挂（顺）[2026]031号"
@@ -6781,6 +6820,6 @@
       "landCode": "京土储挂（海）[2024]051号"
     }
   ],
-  "updateCount": 438,
-  "snapshotId": "5dcd8193cab0173c485c1667968f89db02cc2794bd8359cf5b8b392d4f754df7"
+  "updateCount": 441,
+  "snapshotId": "91f39589940feee36823e69aa108571aeca7c4a6d5fd5d2ef5e95b2019886218"
 }

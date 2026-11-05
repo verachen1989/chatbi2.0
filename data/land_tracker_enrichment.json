@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-11-04T14:48:49+08:00",
+  "checkedAt": "2026-11-05T15:08:50+08:00",
   "checkpointVersion": 1,
   "collectionMode": "live_checkpoint",
-  "completedAt": "2026-11-04T19:02:09+08:00",
+  "completedAt": "2026-11-05T19:03:12+08:00",
   "records": {
     "京土储挂(东)[2025]037号": {
       "fields": {
@@ -9150,7 +9150,74 @@
       }
     },
     "京土储挂(昌)[2026]051号": {
-      "fields": {}
+      "fields": {
+        "planningPermit": {
+          "displayValue": "26/11/03",
+          "records": [
+            {
+              "amendments": {
+                "listBg": [],
+                "listYq": [],
+                "listZx": []
+              },
+              "date": "2026-11-03",
+              "developer": "北京城建兴昌置业有限公司",
+              "district": "昌平区",
+              "id": "f22c5cd5c1f55ee4f8169b10129b462f",
+              "kind": "planning",
+              "landCode": "京土储挂(昌)[2026]051号",
+              "location": "昌平区城北街道",
+              "matchBasis": [
+                "规划地块编号:CP00-0902-0008,CP00-0902-0009",
+                "行政区/建设位置一致"
+              ],
+              "name": "北京市昌平区昌平新城东沙河西岸局部地区土地一级开发项目CP00-0902-0008、0009地块二类居住用地（1-1#住宅楼等42项）",
+              "permit": "2026规自（昌）建字0064号",
+              "raw": {
+                "barcodevalue": "J8CWQGLJOC6V",
+                "createDateTime": "1793840400000",
+                "crtUserId": 3122,
+                "deleted": 0,
+                "faWenHao": "2026规自（昌）建字0064号",
+                "faWenRiQi": "1793692826000",
+                "fuTuJiFuJianMingCheng": "本工程建设工程规划许可证附件及设计总平面图一份。",
+                "fzjg": "北京市规划和自然资源委员会昌平分局",
+                "id": "f22c5cd5c1f55ee4f8169b10129b462f",
+                "jianSheDanWei": "北京城建兴昌置业有限公司",
+                "jianSheDiQu": "昌平区",
+                "jianSheWeiZhi": "昌平区城北街道",
+                "jianZhuGuiMo": "147486.52平方米，502.9米",
+                "jingBanChuShi": "昌平分局",
+                "nodeId": 111,
+                "objuuid": "59467f3c-9eef-4371-8197-cafdc7579a1e",
+                "oldId": "5F7E03D77EF6018CE063C0A3010C61E3",
+                "opDigNumGather": "9120260791",
+                "opNum": "384",
+                "opNumGather": "2026分社建字0384",
+                "opState": "8",
+                "opTypeCode": "91",
+                "opYear": "2026",
+                "params": {},
+                "publishStatus": "0",
+                "publishTime": "1793840400000",
+                "publishUser": "3122",
+                "scgsrq": "1793847224000",
+                "shiFouFaZhengBen": "1",
+                "source": "3",
+                "syncDataGuid": "5F7E03D77EF5018CE063C0A3010C61E3",
+                "tongYiBianHao": "1101142026GG0228660",
+                "typeId": 61,
+                "xiangMuMingCheng": "北京市昌平区昌平新城东沙河西岸局部地区土地一级开发项目CP00-0902-0008、0009地块二类居住用地（1-1#住宅楼等42项）"
+              },
+              "residential": true,
+              "url": "https://yewu.ghzrzyw.beijing.gov.cn/zkdncms/cxghspjggsszjsjsgcghxkz/esSearchDetail/f22c5cd5c1f55ee4f8169b10129b462f",
+              "valid": true
+            }
+          ],
+          "status": "confirmed",
+          "value": "26/11/03"
+        }
+      }
     },
     "京土储挂(昌)[2026]054号": {
       "fields": {}
@@ -24459,7 +24526,115 @@
       "fields": {}
     },
     "京土储挂(顺)[2026]031号": {
-      "fields": {}
+      "fields": {
+        "constructionPermit": {
+          "displayValue": "26/11/04",
+          "records": [
+            {
+              "date": "2026-11-04",
+              "developer": "北京宸光筑家房地产开发有限公司",
+              "district": "顺义区",
+              "kind": "construction",
+              "landCode": "京土储挂(顺)[2026]031号",
+              "location": "仁和镇",
+              "matchBasis": [
+                "规划地块编号:SY00-0101-0318-1",
+                "行政区/建设位置一致"
+              ],
+              "name": "北京市顺义区M15号线顺西路-府前街站土地一级开发项目SY00-0101-0318-1地块二类城镇住宅用地项目（1#住宅楼等26项）",
+              "permit": "110113202611040101",
+              "raw": {
+                "发证日期": "2026-11-04",
+                "工程名称": "北京市顺义区M15号线顺西路-府前街站土地一级开发项目SY00-0101-0318-1地块二类城镇住宅用地项目（1#住宅楼等26项）",
+                "工程规模(平方米)": "70014.34",
+                "建设单位": "北京宸光筑家房地产开发有限公司",
+                "建设地址": "仁和镇",
+                "所在区县": "顺义区",
+                "施工单位": "江苏国峰建设有限公司",
+                "施工许可证号": "110113202611040101",
+                "法定代表人姓名": "兰航",
+                "监理单位": "北京市顺金盛建设工程监理有限责任公司",
+                "行政相对人代码": "91110113MAKLKE3090",
+                "许可有效期限": "本证自发证之日起三个月内应予施工，逾期应办理延期手续，不办理延期或延期次数、时间超过法定时间的，本证自行废止。",
+                "许可机关": "顺义区住房和城乡建设委员会",
+                "设计单位": "上海天华建筑设计有限公司",
+                "证书状态": "有效"
+              },
+              "residential": true,
+              "url": "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=53618592&t=toDetail&gcbm=202611032028",
+              "valid": true
+            }
+          ],
+          "status": "confirmed",
+          "value": "26/11/04"
+        },
+        "planningPermit": {
+          "displayValue": "26/11/03",
+          "records": [
+            {
+              "amendments": {
+                "listBg": [],
+                "listYq": [],
+                "listZx": []
+              },
+              "date": "2026-11-03",
+              "developer": "北京宸光筑家房地产开发有限公司",
+              "district": "顺义区",
+              "id": "b3f04eccc6571cfde30ba01926dcc2c8",
+              "kind": "planning",
+              "landCode": "京土储挂(顺)[2026]031号",
+              "location": "顺义区仁和镇",
+              "matchBasis": [
+                "规划地块编号:SY00-0101-0318-1",
+                "行政区/建设位置一致"
+              ],
+              "name": "北京市顺义区M15号线顺西路-府前街站土地一级开发项目SY00-0101-0318-1地块二类城镇住宅用地项目（1#住宅楼等26项）",
+              "permit": "2026规自（顺）建字0036号",
+              "raw": {
+                "barcodevalue": "J8CWRQJD3E0R",
+                "createDateTime": "1793840400000",
+                "crtUserId": 3122,
+                "deleted": 0,
+                "faWenHao": "2026规自（顺）建字0036号",
+                "faWenRiQi": "1793707321000",
+                "fuTuJiFuJianMingCheng": "本工程建设工程规划许可证附件及设计总平面图一份。",
+                "fzjg": "北京市规划和自然资源委员会顺义分局",
+                "id": "b3f04eccc6571cfde30ba01926dcc2c8",
+                "jianSheDanWei": "北京宸光筑家房地产开发有限公司",
+                "jianSheDiQu": "顺义区",
+                "jianSheWeiZhi": "顺义区仁和镇",
+                "jianZhuGuiMo": "70014.34平方米，967.3米",
+                "jingBanChuShi": "顺义分局",
+                "nodeId": 111,
+                "objuuid": "e5264439-26a5-4659-a940-d97652c63066",
+                "oldId": "5F7E03D77EFE018CE063C0A3010C61E3",
+                "opDigNumGather": "9120260795",
+                "opNum": "387",
+                "opNumGather": "2026分社建字0387",
+                "opState": "8",
+                "opTypeCode": "91",
+                "opYear": "2026",
+                "params": {},
+                "publishStatus": "0",
+                "publishTime": "1793840400000",
+                "publishUser": "3122",
+                "scgsrq": "1793844585000",
+                "shiFouFaZhengBen": "1",
+                "source": "3",
+                "syncDataGuid": "5F7E03D77EFD018CE063C0A3010C61E3",
+                "tongYiBianHao": "1101132026GG0169611",
+                "typeId": 61,
+                "xiangMuMingCheng": "北京市顺义区M15号线顺西路-府前街站土地一级开发项目SY00-0101-0318-1地块二类城镇住宅用地项目（1#住宅楼等26项）"
+              },
+              "residential": true,
+              "url": "https://yewu.ghzrzyw.beijing.gov.cn/zkdncms/cxghspjggsszjsjsgcghxkz/esSearchDetail/b3f04eccc6571cfde30ba01926dcc2c8",
+              "valid": true
+            }
+          ],
+          "status": "confirmed",
+          "value": "26/11/03"
+        }
+      }
     },
     "京土储挂(顺)[2026]037号": {
       "fields": {
@@ -24576,6 +24751,6 @@
       "fields": {}
     }
   },
-  "reusedRequests": 1085,
+  "reusedRequests": 1094,
   "schemaVersion": 1
 }
