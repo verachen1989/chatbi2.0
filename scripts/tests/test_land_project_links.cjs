@@ -73,7 +73,23 @@ assert.doesNotMatch(markup, /旧名称 \/ 别名/);
 assert.equal(context.projectDashboardUrl({ projectName: "只有名称" }), "");
 assert.equal(context.projectDashboardUrl({ projectCode: "x&projectCode=P3852" }), "");
 assert.doesNotMatch(render({ ...row, linkedProjects: [], projectCode: "" }), /class="project-link"/);
-assert.match(render({ ...row, linkedProjects: [], projectCode: "" }), /旧名称 \/ 别名/);
+const unlinked = { ...row, linkedProjects: [], projectCode: "" };
+assert.doesNotMatch(render(unlinked), /旧名称 \/ 别名/);
+assert.match(render(unlinked), /尚未核实对应项目/);
+const official = { status: "alias_confirmed", nameType: "official", candidate: "官方备案项目", permit: "官方预售证", url: "http://bjjs.zjw.beijing.gov.cn/eportal/ui?pageId=320794&projectID=123" };
+const officialRow = { ...unlinked, fieldEvidence: { projectName: official } };
+markup = render(officialRow);
+assert.match(markup, /官方备案项目/);
+assert.match(markup, /class="project-source"/);
+assert.doesNotMatch(markup, /class="project-link"|旧名称 \/ 别名/);
+for (const invalid of [
+  { ...official, status: "legacy_unverified" },
+  { ...official, nameType: "marketing" },
+  { ...official, url: "https://untrusted.example/project" },
+  { ...official, url: "javascript:alert(1)" }
+]) {
+  assert.doesNotMatch(render({ ...unlinked, fieldEvidence: { projectName: invalid } }), /官方备案项目|旧名称 \/ 别名/);
+}
 assert.match(render({ ...row, linkedProjects: [{ projectName: '<img src=x onerror="alert(1)">', projectCode: "P9002" }] }), /&lt;img/);
 assert.doesNotMatch(element("tableBody").innerHTML, /<img/);
 
